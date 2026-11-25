@@ -1,0 +1,196 @@
+[
+  {
+    "stage": "triage_root_cause",
+    "answers": {
+      "is_incident_confirmed": {
+        "type": "noul",
+        "noul": 0.9914146646386482
+      },
+      "root_cause_service": {
+        "type": "choice",
+        "choice": "checkout-svc",
+        "probabilities": {
+          "checkout-svc": 1
+        },
+        "confidence": 1
+      },
+      "failure_mechanism": {
+        "type": "choice",
+        "choice": "connection_pool_exhaustion",
+        "probabilities": {
+          "connection_pool_exhaustion": 0.9711379456781838,
+          "cache_stampede": 0.003958484215792046,
+          "auth_token_mismatch": 0.000528944228275404,
+          "upstream_timeout": 0.022647543567107013,
+          "memory_exhaustion": 0.0017270823106418376
+        },
+        "confidence": 0.9639224320977297
+      },
+      "operational_severity": {
+        "type": "score",
+        "score": 1.8270867461606934,
+        "legend": {
+          "0": "Low",
+          "1": "Medium",
+          "2": "High"
+        },
+        "probabilities": {
+          "0": 0.01441369793201404,
+          "1": 0.1440858579752786,
+          "2": 0.8415004440927074
+        },
+        "confidence": 0.8270867461606933
+      }
+    },
+    "trace": {
+      "stage": "triage_root_cause",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 424.95,
+      "retries": 0,
+      "context_items_sent": 2,
+      "input_tokens": 390,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795631545-mEgDpMQHFVkuceDQZFHq",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "is_incident_confirmed",
+          "question_type": "noul",
+          "instructions": "Does the telemetry state confirm an active production incident or service outage?",
+          "answer": 0.9914146646386482,
+          "confidence": 0.9914146646386482,
+          "probabilities": null
+        },
+        {
+          "question_key": "root_cause_service",
+          "question_type": "choice",
+          "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
+          "answer": "checkout-svc",
+          "confidence": 1.0,
+          "probabilities": {
+            "checkout-svc": 1.0
+          }
+        },
+        {
+          "question_key": "failure_mechanism",
+          "question_type": "choice",
+          "instructions": "Which failure mechanism caused this incident?",
+          "answer": "connection_pool_exhaustion",
+          "confidence": 0.9639224320977297,
+          "probabilities": {
+            "connection_pool_exhaustion": 0.9711379456781838,
+            "cache_stampede": 0.003958484215792046,
+            "auth_token_mismatch": 0.000528944228275404,
+            "upstream_timeout": 0.022647543567107013,
+            "memory_exhaustion": 0.0017270823106418376
+          }
+        },
+        {
+          "question_key": "operational_severity",
+          "question_type": "score",
+          "instructions": "Rate the severity of this incident based on error volume and latency impact.",
+          "answer": 1.8270867461606934,
+          "confidence": 0.8270867461606933,
+          "probabilities": {
+            "0": 0.01441369793201404,
+            "1": 0.1440858579752786,
+            "2": 0.8415004440927074
+          }
+        }
+      ]
+    }
+  },
+  {
+    "stage": "evidence_attribution",
+    "answers": {
+      "primary_trigger_evidence": {
+        "type": "choice",
+        "choice": "EVENT-0001",
+        "probabilities": {
+          "EVENT-0001": 0.9647517819606992,
+          "LOG-0001": 0.03524821803930078
+        },
+        "confidence": 0.9295035639213984
+      },
+      "trigger_is_causal": {
+        "type": "noul",
+        "noul": 0.6121686202364752
+      },
+      "metric_corroboration": {
+        "type": "noul",
+        "noul": 0.9880820023360635
+      },
+      "evidence_strength": {
+        "type": "score",
+        "score": 1.5903275837687958,
+        "legend": {
+          "0": "Weak",
+          "1": "Moderate",
+          "2": "Strong"
+        },
+        "probabilities": {
+          "0": 0.07797072038923775,
+          "1": 0.2537309754527284,
+          "2": 0.6682983041580337
+        },
+        "confidence": 0.5903275837687961
+      }
+    },
+    "trace": {
+      "stage": "evidence_attribution",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 483.85,
+      "retries": 0,
+      "context_items_sent": 2,
+      "input_tokens": 477,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795631545-dqQGpE2EhOawnFhqmnzc",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "primary_trigger_evidence",
+          "question_type": "choice",
+          "instructions": "Select the exact evidence item that captures the initial trigger or config change on checkout-svc.",
+          "answer": "EVENT-0001",
+          "confidence": 0.9295035639213984,
+          "probabilities": {
+            "EVENT-0001": 0.9647517819606992,
+            "LOG-0001": 0.03524821803930078
+          }
+        },
+        {
+          "question_key": "trigger_is_causal",
+          "question_type": "noul",
+          "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
+          "answer": 0.6121686202364752,
+          "confidence": 0.6121686202364752,
+          "probabilities": null
+        },
+        {
+          "question_key": "metric_corroboration",
+          "question_type": "noul",
+          "instructions": "Do the metric spikes corroborate the log/trace failure?",
+          "answer": 0.9880820023360635,
+          "confidence": 0.9880820023360635,
+          "probabilities": null
+        },
+        {
+          "question_key": "evidence_strength",
+          "question_type": "score",
+          "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
+          "answer": 1.5903275837687958,
+          "confidence": 0.5903275837687961,
+          "probabilities": {
+            "0": 0.07797072038923775,
+            "1": 0.2537309754527284,
+            "2": 0.6682983041580337
+          }
+        }
+      ]
+    }
+  }
+]

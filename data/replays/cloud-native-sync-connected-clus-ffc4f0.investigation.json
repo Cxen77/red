@@ -1,0 +1,431 @@
+{
+  "incident_id": "cloud-native-sync-connected-clus-ffc4f0",
+  "title": "Cloud-Native Sync: connected-cluster",
+  "mode": "live",
+  "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+  "opened_at": "2026-11-25T17:47:30Z",
+  "investigated_at": "2026-11-25T18:29:15Z",
+  "severity": "critical",
+  "status": "resolved",
+  "root_cause_summary": "Database connection pool exhaustion / misconfiguration in test-shop-checkout (verified by 3/4 findings).",
+  "root_cause_chain": [
+    "Root cause on test-shop-checkout (connection pool exhaustion): deploy v1.0.0 started config db_pool_max=50",
+    "Error burst triggered on test-shop-checkout: order=ord-200 HikariPool-1 connection timeout after 3000ms active=2/2",
+    "Downstream cascade impacted test-shop-payment: order=ord-200 downstream checkout callback failed status=504"
+  ],
+  "raw_items_total": 34,
+  "filtered_items_sent": 4,
+  "noise_reduction_pct": 88.24,
+  "redacted_secrets_count": 0,
+  "tool_trace": [
+    {
+      "tool": "get_timeline_window",
+      "arguments": {
+        "start_ts": null,
+        "end_ts": null,
+        "flagged_only": true,
+        "limit": 40
+      },
+      "returned": 12,
+      "elapsed_ms": 0.009
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "deploy",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 4,
+      "elapsed_ms": 0.009
+    },
+    {
+      "tool": "get_metric_series",
+      "arguments": {
+        "metric_name": null,
+        "anomalies_only": true
+      },
+      "returned": 0,
+      "elapsed_ms": 0.003
+    },
+    {
+      "tool": "get_trace",
+      "arguments": {
+        "trace_id": null,
+        "outliers_only": true,
+        "limit": 15
+      },
+      "returned": 0,
+      "elapsed_ms": 0.002
+    },
+    {
+      "tool": "get_service_events",
+      "arguments": {
+        "service": "test-shop-checkout",
+        "level": null,
+        "limit": 20
+      },
+      "returned": 20,
+      "elapsed_ms": 0.027
+    }
+  ],
+  "decision_traces": [
+    {
+      "stage": "triage_root_cause",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 847.13,
+      "retries": 0,
+      "context_items_sent": 4,
+      "input_tokens": 549,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795631364-DhMr75NIx3PMcXEBJsGn",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "is_incident_confirmed",
+          "question_type": "noul",
+          "instructions": "Does the telemetry state confirm an active production incident or service outage?",
+          "answer": 0.899631272984193,
+          "confidence": 0.899631272984193,
+          "probabilities": null
+        },
+        {
+          "question_key": "root_cause_service",
+          "question_type": "choice",
+          "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
+          "answer": "test-shop-checkout",
+          "confidence": 0.992617900064507,
+          "probabilities": {
+            "test-shop-checkout": 0.9963089500322535,
+            "test-shop-payment": 0.0036910499677464998
+          }
+        },
+        {
+          "question_key": "failure_mechanism",
+          "question_type": "choice",
+          "instructions": "Which failure mechanism caused this incident?",
+          "answer": "connection_pool_exhaustion",
+          "confidence": 0.9277635179723875,
+          "probabilities": {
+            "connection_pool_exhaustion": 0.9422108143779101,
+            "cache_stampede": 0.0022578664885791583,
+            "auth_token_mismatch": 0.0007719303506880303,
+            "upstream_timeout": 0.053139525294988055,
+            "memory_exhaustion": 0.001619863487834658
+          }
+        },
+        {
+          "question_key": "operational_severity",
+          "question_type": "score",
+          "instructions": "Rate the severity of this incident based on error volume and latency impact.",
+          "answer": 1.4529749825081515,
+          "confidence": 0.45297498250815127,
+          "probabilities": {
+            "0": 0.04430076281689843,
+            "1": 0.4584234918580518,
+            "2": 0.4972757453250498
+          }
+        }
+      ]
+    },
+    {
+      "stage": "evidence_attribution",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 452.47,
+      "retries": 0,
+      "context_items_sent": 6,
+      "input_tokens": 1081,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795631365-nqpctXhIqh2yYlgLN3t0",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "primary_trigger_evidence",
+          "question_type": "choice",
+          "instructions": "Select the exact evidence item that captures the initial trigger or config change on test-shop-checkout.",
+          "answer": "LOG-0001",
+          "confidence": 0.4892706505294697,
+          "probabilities": {
+            "LOG-0001": 0.5743922087745581,
+            "LOG-0006": 0.4175796429680528,
+            "LOG-0002": 0.0048163055001950485,
+            "LOG-0007": 0.0011350156959488227,
+            "LOG-0003": 0.0009751730619186777,
+            "LOG-0004": 0.0011016539993265362
+          }
+        },
+        {
+          "question_key": "trigger_is_causal",
+          "question_type": "noul",
+          "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
+          "answer": 0.8592776487149205,
+          "confidence": 0.8592776487149205,
+          "probabilities": null
+        },
+        {
+          "question_key": "metric_corroboration",
+          "question_type": "noul",
+          "instructions": "Do the metric spikes corroborate the log/trace failure?",
+          "answer": 0.9407037363797577,
+          "confidence": 0.9407037363797577,
+          "probabilities": null
+        },
+        {
+          "question_key": "evidence_strength",
+          "question_type": "score",
+          "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
+          "answer": 1.598961186235444,
+          "confidence": 0.5989611862354441,
+          "probabilities": {
+            "0": 0.05845851181209304,
+            "1": 0.28412179014036976,
+            "2": 0.6574196980475372
+          }
+        }
+      ]
+    }
+  ],
+  "image_assessment": null,
+  "conclusions": [
+    {
+      "id": "F-01",
+      "claim": "Root cause on test-shop-checkout (connection pool exhaustion): deploy v1.0.0 started config db_pool_max=50",
+      "claim_type": "root_cause",
+      "evidence_ids": [
+        "LOG-0001"
+      ],
+      "quote": "deploy v1.0.0 started config db_pool_max=50",
+      "confidence": 0.926,
+      "kind": "conclusion",
+      "service": "test-shop-checkout",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "root_cause_service": "test-shop-checkout",
+        "service_confidence": 0.993,
+        "trigger_is_causal": 0.859,
+        "failure_mechanism": "connection_pool_exhaustion"
+      }
+    },
+    {
+      "id": "F-02",
+      "claim": "Error burst triggered on test-shop-checkout: order=ord-200 HikariPool-1 connection timeout after 3000ms active=2/2",
+      "claim_type": "error",
+      "evidence_ids": [
+        "LOG-0002"
+      ],
+      "quote": "order=ord-200 HikariPool-1 connection timeout after 3000ms active=2/2",
+      "confidence": 0.9,
+      "kind": "conclusion",
+      "service": "test-shop-checkout",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "is_incident_confirmed": 0.9
+      }
+    },
+    {
+      "id": "F-05",
+      "claim": "Downstream cascade impacted test-shop-payment: order=ord-200 downstream checkout callback failed status=504",
+      "claim_type": "error",
+      "evidence_ids": [
+        "LOG-0007"
+      ],
+      "quote": "order=ord-200 downstream checkout callback failed status=504",
+      "confidence": 0.837,
+      "kind": "conclusion",
+      "service": "test-shop-payment",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "cascade_from": "test-shop-checkout"
+      }
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "F-06",
+      "claim": "Alternative hypothesis (upstream timeout): Transient network packet loss or noisy-neighbor CPU contention coincided with the error window.",
+      "claim_type": "correlation",
+      "evidence_ids": [],
+      "quote": "",
+      "confidence": 0.12,
+      "kind": "hypothesis",
+      "service": "test-shop-checkout",
+      "demotion_reason": "No supporting evidence cited",
+      "verification_passed": false,
+      "decider_signals": {
+        "runner_up_probability": 0.0531
+      }
+    }
+  ],
+  "proposed_actions": [
+    {
+      "id": "ACT-01",
+      "title": "Restore test-shop-checkout DB pool configuration (db_pool_max=50)",
+      "target_service": "test-shop-checkout",
+      "command": "kubectl set env deployment/test-shop-checkout DB_POOL_MAX=50 --dry-run=server",
+      "risk_level": "medium",
+      "dry_run_preview": "Dry-run diff for deployment/test-shop-checkout: DB_POOL_MAX 5 -> 50 (referenced in LOG-0001). Estimated recovery: ~25s.",
+      "status": "pending_approval",
+      "execution_result": null,
+      "decided_at": null,
+      "decided_note": null
+    },
+    {
+      "id": "ACT-02",
+      "title": "Roll back test-shop-checkout to previous stable deployment",
+      "target_service": "test-shop-checkout",
+      "command": "kubectl rollout undo deployment/test-shop-checkout --dry-run=server",
+      "risk_level": "high",
+      "dry_run_preview": "Dry-run: deployment/test-shop-checkout would roll back revision 14 -> 13. Zero pod eviction conflicts.",
+      "status": "pending_approval",
+      "execution_result": null,
+      "decided_at": null,
+      "decided_note": null
+    }
+  ],
+  "human_review": {
+    "decision": "pending",
+    "corrected_root_cause": null,
+    "note": null,
+    "reviewed_at": null
+  },
+  "recovery_check": {
+    "verified": true,
+    "checked_at": "2026-11-25T18:29:34Z",
+    "target": "http://127.0.0.1:9001",
+    "detail": "Live probe passed: GET /health=200, POST /checkout=200 ({'ok': True, 'order_id': 'verify-probe', 'status': 'confirmed', 'pool_max': 50})"
+  },
+  "verification": {
+    "total_findings": 4,
+    "conclusions_count": 3,
+    "hypotheses_count": 1,
+    "citation_validity_rate": 1.0,
+    "checks": [
+      {
+        "finding_id": "F-01",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0001"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-02",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0002"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-05",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0007"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-06",
+        "passed": false,
+        "kind": "hypothesis",
+        "evidence_ids": [],
+        "failures": [
+          "No supporting evidence cited"
+        ]
+      }
+    ]
+  },
+  "evidence_map": {
+    "LOG-0001": {
+      "id": "LOG-0001",
+      "ts": "2026-11-25T17:47:30Z",
+      "source": "app.log",
+      "service": "test-shop-checkout",
+      "kind": "log",
+      "raw": "2026-11-25T17:47:30Z test-shop-checkout INFO deploy v1.0.0 started config db_pool_max=50",
+      "template_id": "TPL-001",
+      "template": "deploy v1.0.0 started config db_pool_max=50",
+      "level": "INFO",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "CONFIG_OR_DEPLOY_EVENT",
+          "severity": "info",
+          "label": "Deploy / config event",
+          "detail": "Deployment or configuration change recorded on test-shop-checkout.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        }
+      ]
+    },
+    "LOG-0002": {
+      "id": "LOG-0002",
+      "ts": "2026-11-25T17:47:51Z",
+      "source": "app.log",
+      "service": "test-shop-checkout",
+      "kind": "log",
+      "raw": "2026-11-25T17:47:51Z test-shop-checkout ERROR order=ord-200 HikariPool-1 connection timeout after 3000ms active=2/2",
+      "template_id": "TPL-003",
+      "template": "order=ord-200 HikariPool-1 connection timeout after 3000ms active=2/2",
+      "level": "ERROR",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "FIRST_ERROR_OCCURRENCE",
+          "severity": "warning",
+          "label": "First error occurrence",
+          "detail": "First appearance of error template TPL-003 on test-shop-checkout.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        }
+      ]
+    },
+    "LOG-0007": {
+      "id": "LOG-0007",
+      "ts": "2026-11-25T17:47:51Z",
+      "source": "app.log",
+      "service": "test-shop-payment",
+      "kind": "log",
+      "raw": "2026-11-25T17:47:51Z test-shop-payment ERROR order=ord-200 downstream checkout callback failed status=504",
+      "template_id": "TPL-004",
+      "template": "order=ord-200 downstream checkout callback failed status=504",
+      "level": "ERROR",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "FIRST_ERROR_OCCURRENCE",
+          "severity": "warning",
+          "label": "First error occurrence",
+          "detail": "First appearance of error template TPL-004 on test-shop-payment.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        }
+      ]
+    }
+  }
+}

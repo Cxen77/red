@@ -13,7 +13,7 @@ from pydantic import BaseModel, Field
 
 from backend.agent.chat import answer_incident_question
 from backend.agent.llm import DeciderGateway
-from backend.config import ARTIFACTS_DIR, OPENROUTER_MODEL
+from backend.config import ARTIFACTS_DIR, DATA_DIR, OPENROUTER_MODEL
 from backend.models import (
     ChatRequest,
     ChatResponse,
@@ -119,7 +119,19 @@ class ConnectorConfig(BaseModel):
     poll_interval_sec: int = 30
 
 
-_CONNECTOR_CFG = ConnectorConfig()
+_CONNECTOR_CFG_PATH = DATA_DIR / "connector_config.json"
+
+
+def _load_connector_cfg() -> ConnectorConfig:
+    if _CONNECTOR_CFG_PATH.exists():
+        try:
+            return ConnectorConfig.model_validate_json(_CONNECTOR_CFG_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return ConnectorConfig()
+
+
+_CONNECTOR_CFG = _load_connector_cfg()
 
 
 @app.get("/health")
@@ -370,6 +382,8 @@ def get_connector_config() -> ConnectorConfig:
 def save_connector_config(cfg: ConnectorConfig) -> ConnectorConfig:
     global _CONNECTOR_CFG
     _CONNECTOR_CFG = cfg
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    _CONNECTOR_CFG_PATH.write_text(cfg.model_dump_json(indent=2), encoding="utf-8")
     return _CONNECTOR_CFG
 
 

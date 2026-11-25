@@ -83,11 +83,12 @@ export function IncidentListView({
       .catch(() => {});
   }, []);
 
-  async function handleStopPolling() {
+  async function handleToggleTracking() {
     if (!connectorCfg) return;
-    const updated = await saveConnectorConfig({ ...connectorCfg, enabled: false });
+    const nextEnabled = !connectorCfg.enabled;
+    const updated = await saveConnectorConfig({ ...connectorCfg, enabled: nextEnabled });
     setConnectorCfg(updated);
-    setAutoMsg("Live tracking stopped.");
+    setAutoMsg(nextEnabled ? `Live tracking started (${updated.poll_interval_sec}s).` : "Live tracking stopped.");
   }
   const [title, setTitle] = useState("");
   const [severity, setSeverity] = useState<SeverityLevel>("high");
@@ -290,14 +291,25 @@ export function IncidentListView({
         </div>
 
         <div className="flex flex-wrap items-center gap-2 shrink-0">
-          {connectorCfg?.enabled && (
+          {connectorCfg && (
             <button
               type="button"
-              onClick={() => void handleStopPolling()}
-              className="px-3 py-2 rounded border border-[#FECACA] bg-[#FEF2F2] hover:bg-[#FEE2E2] text-[#B91C1C] text-[13px] font-medium flex items-center gap-1.5"
+              onClick={() => void handleToggleTracking()}
+              className={`px-3 py-2 rounded border text-[13px] font-medium flex items-center gap-1.5 ${
+                connectorCfg.enabled
+                  ? "border-[#FECACA] bg-[#FEF2F2] hover:bg-[#FEE2E2] text-[#B91C1C]"
+                  : "border-[#E7E5E4] bg-white hover:bg-[#F5F5F4] text-[#57534E]"
+              }`}
+              title={
+                connectorCfg.enabled
+                  ? "Click to stop automatic background tracking"
+                  : "Tracking is currently paused (click to start)"
+              }
             >
               <PauseCircle className="w-3.5 h-3.5" strokeWidth={1.75} />
-              Stop tracking ({connectorCfg.poll_interval_sec}s)
+              {connectorCfg.enabled
+                ? `Stop tracking (${connectorCfg.poll_interval_sec}s)`
+                : "Tracking: Off (Start)"}
             </button>
           )}
           <ConnectSystemModal

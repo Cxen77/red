@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "prometheus_url": "",
+  "k8s_namespace": "prod",
+  "log_file_path": "",
+  "poll_interval_sec": 20
+}
