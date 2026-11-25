@@ -108,6 +108,39 @@ export function scanDropzone(): Promise<{ imported_ids: string[]; count: number 
   return jsonFetch(`${BASE}/dropzone/scan`, { method: "POST" });
 }
 
+export interface ConnectorConfig {
+  enabled: boolean;
+  prometheus_url: string;
+  k8s_namespace: string;
+  log_file_path: string;
+  poll_interval_sec: number;
+}
+
+export function fetchConnectorConfig(): Promise<ConnectorConfig> {
+  return jsonFetch<ConnectorConfig>(`${BASE}/connectors/config`);
+}
+
+export function saveConnectorConfig(cfg: ConnectorConfig): Promise<ConnectorConfig> {
+  return jsonFetch<ConnectorConfig>(`${BASE}/connectors/config`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(cfg),
+  });
+}
+
+export function syncConnectorsNow(cfg: ConnectorConfig): Promise<{
+  ingested: boolean;
+  reason?: string;
+  incident_id?: string;
+  meta?: IncidentMetadata;
+}> {
+  return jsonFetch(`${BASE}/connectors/sync`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(cfg),
+  });
+}
+
 export async function createIncident(params: {
   title: string;
   severity: SeverityLevel;

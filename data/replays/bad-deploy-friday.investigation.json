@@ -4,7 +4,7 @@
   "mode": "replay",
   "model": "perplexity/pplx-decider-flash-v1.3-20261112",
   "opened_at": "2026-11-25T14:04:00Z",
-  "investigated_at": "2026-11-25T17:30:39Z",
+  "investigated_at": "2026-11-25T17:34:51Z",
   "severity": "critical",
   "status": "verified",
   "root_cause_summary": "Database connection pool exhaustion / misconfiguration in checkout-svc (verified by 5/6 findings).",
@@ -29,7 +29,7 @@
         "limit": 40
       },
       "returned": 40,
-      "elapsed_ms": 0.106
+      "elapsed_ms": 0.1
     },
     {
       "tool": "search_logs",
@@ -39,7 +39,7 @@
         "limit": 10
       },
       "returned": 1,
-      "elapsed_ms": 0.313
+      "elapsed_ms": 0.324
     },
     {
       "tool": "get_metric_series",
@@ -48,7 +48,7 @@
         "anomalies_only": true
       },
       "returned": 38,
-      "elapsed_ms": 0.012
+      "elapsed_ms": 0.011
     },
     {
       "tool": "get_trace",
@@ -58,7 +58,7 @@
         "limit": 15
       },
       "returned": 15,
-      "elapsed_ms": 0.093
+      "elapsed_ms": 0.09
     },
     {
       "tool": "get_service_events",
@@ -68,7 +68,7 @@
         "limit": 20
       },
       "returned": 20,
-      "elapsed_ms": 0.105
+      "elapsed_ms": 0.11
     }
   ],
   "decision_traces": [
@@ -343,8 +343,8 @@
       "command": "kubectl set env deployment/checkout-svc DB_POOL_MAX=50 --dry-run=server",
       "risk_level": "medium",
       "dry_run_preview": "Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in LOG-1021). Estimated recovery: ~25s.",
-      "status": "pending_approval",
-      "decided_at": null,
+      "status": "dry_run_passed",
+      "decided_at": "2026-11-25T17:34:51Z",
       "decided_note": null
     },
     {
@@ -360,10 +360,10 @@
     }
   ],
   "human_review": {
-    "decision": "pending",
+    "decision": "confirmed",
     "corrected_root_cause": null,
-    "note": null,
-    "reviewed_at": null
+    "note": "Verified in test",
+    "reviewed_at": "2026-11-25T17:34:51Z"
   },
   "verification": {
     "total_findings": 6,

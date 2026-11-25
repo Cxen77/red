@@ -8,6 +8,7 @@ import {
 } from "@tanstack/react-table";
 import { Plus, RefreshCw, Radio, Search, Upload, X } from "lucide-react";
 import { createIncident, scanDropzone, simulateLiveAlert } from "../api";
+import { ConnectSystemModal } from "./ConnectSystemModal";
 import type { IncidentMetadata, SeverityLevel } from "../types";
 
 interface IncidentListViewProps {
@@ -232,6 +233,8 @@ export function IncidentListView({
         </div>
 
         <div className="flex flex-wrap items-center gap-2 shrink-0">
+          <ConnectSystemModal onIncidentIngested={onIncidentCreated} />
+
           <button
             type="button"
             disabled={scanningDropzone}

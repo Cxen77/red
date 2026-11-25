@@ -197,3 +197,16 @@ def test_api_endpoints_replay_and_report() -> None:
     )
     assert am_res.status_code == 200
     assert "[Alertmanager] HighCheckoutErrors" in am_res.json()["meta"]["title"]
+
+    cfg_res = client.post(
+        "/api/connectors/config",
+        json={
+            "enabled": False,
+            "prometheus_url": "",
+            "k8s_namespace": "prod",
+            "log_file_path": "",
+            "poll_interval_sec": 20,
+        },
+    )
+    assert cfg_res.status_code == 200
+    assert cfg_res.json()["k8s_namespace"] == "prod"

@@ -35,10 +35,15 @@ async def lifespan(_app: FastAPI):
         while not stop_event.is_set():
             try:
                 get_store().scan_dropzone(auto_investigate=True)
+                if _CONNECTOR_CFG.enabled:
+                    _run_connector_sync(_CONNECTOR_CFG)
             except Exception:
                 pass
             try:
-                await asyncio.wait_for(stop_event.wait(), timeout=5.0)
+                await asyncio.wait_for(
+                    stop_event.wait(),
+                    timeout=float(max(5, _CONNECTOR_CFG.poll_interval_sec if _CONNECTOR_CFG.enabled else 5)),
+                )
             except asyncio.TimeoutError:
                 continue
 
@@ -104,6 +109,17 @@ class ReviewSubmission(BaseModel):
 class ActionDecisionRequest(BaseModel):
     decision: Literal["dry_run", "approve", "block"]
     note: str | None = None
+
+
+class ConnectorConfig(BaseModel):
+    enabled: bool = False
+    prometheus_url: str = ""
+    k8s_namespace: str = "default"
+    log_file_path: str = ""
+    poll_interval_sec: int = 30
+
+
+_CONNECTOR_CFG = ConnectorConfig()
 
 
 @app.get("/health")
@@ -299,6 +315,58 @@ def ingest_otel_payload(payload: dict[str, Any]) -> dict[str, Any]:
     )
     inv = store.investigate(rec.meta.id, mode="live")
     return {"meta": rec.meta, "investigation": inv}
+
+
+def _run_connector_sync(cfg: ConnectorConfig) -> dict[str, Any]:
+    from connectors.cloud_native_agent import (
+        fetch_k8s_events,
+        fetch_prometheus_metrics,
+        tail_log_errors,
+    )
+
+    logs_text, err_count = tail_log_errors(cfg.log_file_path) if cfg.log_file_path else ("", 0)
+    k8s_events = fetch_k8s_events(cfg.k8s_namespace) if cfg.k8s_namespace else []
+    metrics_csv = fetch_prometheus_metrics(cfg.prometheus_url) if cfg.prometheus_url else ""
+
+    has_warning = any(
+        "fail" in (e.get("message") or "").lower() or "backoff" in (e.get("event_type") or "").lower()
+        for e in k8s_events
+    )
+    if not logs_text and not k8s_events and not metrics_csv:
+        return {"ingested": False, "reason": "No live telemetry reachable from configured sources."}
+
+    if err_count < 1 and not has_warning and not metrics_csv:
+        return {"ingested": False, "reason": "Sources healthy; no error burst detected."}
+
+    store = get_store()
+    svc = k8s_events[-1]["service"] if k8s_events else "connected-cluster"
+    rec = store.create_incident(
+        title=f"Cloud-Native Sync: {svc}",
+        severity="critical" if err_count >= 10 else "high",
+        logs_text=logs_text or None,
+        metrics_text=metrics_csv or None,
+        events_text=json.dumps(k8s_events) if k8s_events else None,
+    )
+    inv = store.investigate(rec.meta.id, mode="live")
+    return {"ingested": True, "incident_id": rec.meta.id, "meta": rec.meta, "investigation": inv}
+
+
+@app.get("/api/connectors/config", response_model=ConnectorConfig)
+def get_connector_config() -> ConnectorConfig:
+    return _CONNECTOR_CFG
+
+
+@app.post("/api/connectors/config", response_model=ConnectorConfig)
+def save_connector_config(cfg: ConnectorConfig) -> ConnectorConfig:
+    global _CONNECTOR_CFG
+    _CONNECTOR_CFG = cfg
+    return _CONNECTOR_CFG
+
+
+@app.post("/api/connectors/sync")
+def sync_connectors(cfg: ConnectorConfig | None = None) -> dict[str, Any]:
+    target = cfg or _CONNECTOR_CFG
+    return _run_connector_sync(target)
 
 
 @app.get("/incidents/{incident_id}")
