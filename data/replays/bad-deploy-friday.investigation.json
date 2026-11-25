@@ -4,12 +4,12 @@
   "mode": "replay",
   "model": "perplexity/pplx-decider-flash-v1.3-20261112",
   "opened_at": "2026-11-25T14:04:00Z",
-  "investigated_at": "2026-11-25T18:14:01Z",
+  "investigated_at": "2026-11-25T18:19:50Z",
   "severity": "critical",
   "status": "verified",
   "root_cause_summary": "Database connection pool exhaustion / misconfiguration in checkout-svc (verified by 5/6 findings).",
   "root_cause_chain": [
-    "Root cause on checkout-svc (connection pool exhaustion): deploy v2.4.1 applied config db_pool_max=5 (prev=50) commit=a91f4c2",
+    "Root cause on checkout-svc (connection pool exhaustion): actor=ci-cd-bot commit=a91f4c2 Updated checkout-config: db_pool_max changed from 50 -> 5",
     "Error burst triggered on checkout-svc: req-11080 HikariPool-1 connection acquisition timeout after 3000ms active=5/5 waiting=33",
     "Anomalous metric spike on checkout-svc for latency_ms=3938.52 (z=795.84).",
     "Trace span sp-0072 on payment-svc breached latency/error threshold (4558.4ms).",
@@ -29,7 +29,7 @@
         "limit": 40
       },
       "returned": 40,
-      "elapsed_ms": 0.169
+      "elapsed_ms": 0.094
     },
     {
       "tool": "search_logs",
@@ -39,7 +39,7 @@
         "limit": 10
       },
       "returned": 1,
-      "elapsed_ms": 0.357
+      "elapsed_ms": 0.291
     },
     {
       "tool": "get_metric_series",
@@ -48,7 +48,7 @@
         "anomalies_only": true
       },
       "returned": 38,
-      "elapsed_ms": 0.013
+      "elapsed_ms": 0.01
     },
     {
       "tool": "get_trace",
@@ -58,7 +58,7 @@
         "limit": 15
       },
       "returned": 15,
-      "elapsed_ms": 0.108
+      "elapsed_ms": 0.082
     },
     {
       "tool": "get_service_events",
@@ -68,7 +68,7 @@
         "limit": 20
       },
       "returned": 20,
-      "elapsed_ms": 0.158
+      "elapsed_ms": 0.099
     }
   ],
   "decision_traces": [
@@ -79,18 +79,18 @@
       "latency_ms": 0.5,
       "retries": 0,
       "context_items_sent": 13,
-      "input_tokens": 1400,
+      "input_tokens": 1415,
       "output_tokens": 6,
       "cost": 0.0,
-      "request_id": "gen-dec-1795626704-wz0N4QXr7asP0K4CdySN",
+      "request_id": "gen-dec-1795630689-3MmXs2HBWn5Mdtr5KtwC",
       "error": null,
       "questions": [
         {
           "question_key": "is_incident_confirmed",
           "question_type": "noul",
           "instructions": "Does the telemetry state confirm an active production incident or service outage?",
-          "answer": 0.9954178175650501,
-          "confidence": 0.9954178175650501,
+          "answer": 0.9955783986942346,
+          "confidence": 0.9955783986942346,
           "probabilities": null
         },
         {
@@ -98,12 +98,12 @@
           "question_type": "choice",
           "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
           "answer": "checkout-svc",
-          "confidence": 0.9929469599913573,
+          "confidence": 0.9933718736670003,
           "probabilities": {
-            "api-gateway": 0.002205440701339602,
-            "auth-svc": 0.00064352891069703,
-            "checkout-svc": 0.9947102199935179,
-            "payment-svc": 0.002440810394445566
+            "api-gateway": 0.002343176532188654,
+            "auth-svc": 0.0006917910580727251,
+            "checkout-svc": 0.9950289052502502,
+            "payment-svc": 0.0019361271594883806
           }
         },
         {
@@ -111,33 +111,33 @@
           "question_type": "choice",
           "instructions": "Which failure mechanism caused this incident?",
           "answer": "connection_pool_exhaustion",
-          "confidence": 0.9901852305618388,
+          "confidence": 0.9873319821411536,
           "probabilities": {
-            "connection_pool_exhaustion": 0.9921481844494711,
-            "cache_stampede": 0.0016446385265677793,
-            "auth_token_mismatch": 0.0002644933439153323,
-            "upstream_timeout": 0.005478608449812948,
-            "memory_exhaustion": 0.0004640752302326263
+            "connection_pool_exhaustion": 0.9898655857129229,
+            "cache_stampede": 0.0016931025480353627,
+            "auth_token_mismatch": 0.00027920358329426505,
+            "upstream_timeout": 0.0075798912258805695,
+            "memory_exhaustion": 0.0005822169298668402
           }
         },
         {
           "question_key": "operational_severity",
           "question_type": "score",
           "instructions": "Rate the severity of this incident based on error volume and latency impact.",
-          "answer": 1.8924853303437323,
-          "confidence": 0.8924853303437323,
+          "answer": 1.8960258101263248,
+          "confidence": 0.8960258101263248,
           "probabilities": {
-            "0": 0.009562169056773855,
-            "1": 0.08839033154272,
-            "2": 0.9020474994005062
+            "0": 0.008511051289157329,
+            "1": 0.08695208729536055,
+            "2": 0.9045368614154821
           }
         },
         {
           "question_key": "image_matches_telemetry",
           "question_type": "noul",
           "instructions": "Does the attached dashboard chart image show an anomaly consistent with the telemetry?",
-          "answer": 0.924184797280754,
-          "confidence": 0.924184797280754,
+          "answer": 0.9458510639607897,
+          "confidence": 0.9458510639607897,
           "probabilities": null
         },
         {
@@ -145,11 +145,11 @@
           "question_type": "choice",
           "instructions": "What visual pattern appears in the attached dashboard chart?",
           "answer": "sharp_spike",
-          "confidence": 0.970635113222287,
+          "confidence": 0.9766968083864075,
           "probabilities": {
-            "sharp_spike": 0.9804234088148581,
-            "gradual_drift": 0.014720578753551473,
-            "flat_baseline": 0.004856012431590447
+            "sharp_spike": 0.9844645389242718,
+            "gradual_drift": 0.01149118504519931,
+            "flat_baseline": 0.004044276030528971
           }
         }
       ]
@@ -161,82 +161,82 @@
       "latency_ms": 0.5,
       "retries": 0,
       "context_items_sent": 14,
-      "input_tokens": 2045,
+      "input_tokens": 2060,
       "output_tokens": 4,
       "cost": 0.0,
-      "request_id": "gen-dec-1795626705-PPakXtNt4cHrIGP2ZVPx",
+      "request_id": "gen-dec-1795630690-QcCaMBK7hJCcvTR5lRxk",
       "error": null,
       "questions": [
         {
           "question_key": "primary_trigger_evidence",
           "question_type": "choice",
           "instructions": "Select the exact evidence item that captures the initial trigger or config change on checkout-svc.",
-          "answer": "LOG-1021",
-          "confidence": 0.9953592086718445,
+          "answer": "EVENT-0001",
+          "confidence": 0.988347934318109,
           "probabilities": {
-            "LOG-1021": 0.9957459412825241,
-            "LOG-1030": 0.0010091455141326238,
-            "LOG-1040": 0.0013334041152595491,
-            "LOG-1067": 0.00013664516941764006,
-            "LOG-1086": 0.00016973636268097396,
-            "MET-0065": 0.00012264316496745178,
-            "MET-0086": 0.00007996503598073239,
-            "MET-0080": 0.00007406253340188448,
-            "MET-0068": 0.00016453962088051272,
-            "TRACE-0071": 0.0008101434589291726,
-            "MET-0001": 0.00016904898776105333,
-            "MET-0002": 0.00018472475406442596
+            "EVENT-0001": 0.9893189397915999,
+            "EVENT-0002": 0.004807218626761381,
+            "LOG-1040": 0.003125062020201977,
+            "LOG-1067": 0.0002443160862990557,
+            "LOG-1086": 0.0003538120983477029,
+            "MET-0065": 0.00023769535903748196,
+            "MET-0086": 0.00016247448992264766,
+            "MET-0080": 0.0001439540298645245,
+            "MET-0068": 0.0002709029213796529,
+            "TRACE-0071": 0.0006461630288296958,
+            "MET-0001": 0.00034589072009320095,
+            "MET-0002": 0.00034357082766251764
           }
         },
         {
           "question_key": "trigger_is_causal",
           "question_type": "noul",
           "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
-          "answer": 0.996439503087061,
-          "confidence": 0.996439503087061,
+          "answer": 0.9962865407619589,
+          "confidence": 0.9962865407619589,
           "probabilities": null
         },
         {
           "question_key": "metric_corroboration",
           "question_type": "noul",
           "instructions": "Do the metric spikes corroborate the log/trace failure?",
-          "answer": 0.9988327317940161,
-          "confidence": 0.9988327317940161,
+          "answer": 0.9988075892973227,
+          "confidence": 0.9988075892973227,
           "probabilities": null
         },
         {
           "question_key": "evidence_strength",
           "question_type": "score",
           "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
-          "answer": 1.9443577614443213,
-          "confidence": 0.9443577614443215,
+          "answer": 1.9367010704461483,
+          "confidence": 0.9367010704461484,
           "probabilities": {
-            "0": 0.005888187263373431,
-            "1": 0.04386586402893164,
-            "2": 0.9502459487076949
+            "0": 0.0071264868807289815,
+            "1": 0.049045955792393625,
+            "2": 0.9438275573268773
           }
         }
       ]
     }
   ],
   "image_assessment": {
-    "matches_telemetry": 0.924184797280754,
+    "matches_telemetry": 0.9458510639607897,
     "visual_pattern": "sharp_spike",
     "visual_probabilities": {
-      "sharp_spike": 0.9804234088148581,
-      "gradual_drift": 0.014720578753551473,
-      "flat_baseline": 0.004856012431590447
+      "sharp_spike": 0.9844645389242718,
+      "gradual_drift": 0.01149118504519931,
+      "flat_baseline": 0.004044276030528971
     }
   },
   "conclusions": [
     {
       "id": "F-01",
-      "claim": "Root cause on checkout-svc (connection pool exhaustion): deploy v2.4.1 applied config db_pool_max=5 (prev=50) commit=a91f4c2",
+      "claim": "Root cause on checkout-svc (connection pool exhaustion): actor=ci-cd-bot commit=a91f4c2 Updated checkout-config: db_pool_max changed from 50 -> 5",
       "claim_type": "root_cause",
       "evidence_ids": [
-        "LOG-1021"
+        "EVENT-0001"
       ],
-      "quote": "deploy v2.4.1 applied config db_pool_max=5 (prev=50) commit=a91f4c2",
+      "quote": "actor=ci-cd-bot commit=a91f4c2 Updated checkout-config: db_pool_max changed from 50 -> 5",
       "confidence": 0.99,
       "kind": "conclusion",
       "service": "checkout-svc",
@@ -263,7 +263,7 @@
       "demotion_reason": null,
       "verification_passed": true,
       "decider_signals": {
-        "is_incident_confirmed": 0.995
+        "is_incident_confirmed": 0.996
       }
     },
     {
@@ -331,7 +331,7 @@
       "demotion_reason": "No supporting evidence cited",
       "verification_passed": false,
       "decider_signals": {
-        "runner_up_probability": 0.0055
+        "runner_up_probability": 0.0076
       }
     }
   ],
@@ -342,10 +342,10 @@
       "target_service": "checkout-svc",
       "command": "kubectl set env deployment/checkout-svc DB_POOL_MAX=50 --dry-run=server",
       "risk_level": "medium",
-      "dry_run_preview": "Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in LOG-1021). Estimated recovery: ~25s.",
-      "status": "dry_run_passed",
-      "execution_result": "Dry-run validated: Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in LOG-1021). Estimated recovery: ~25s.",
-      "decided_at": "2026-11-25T18:14:01Z",
+      "dry_run_preview": "Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in EVENT-0001). Estimated recovery: ~25s.",
+      "status": "pending_approval",
+      "execution_result": null,
+      "decided_at": null,
       "decided_note": null
     },
     {
@@ -362,10 +362,10 @@
     }
   ],
   "human_review": {
-    "decision": "confirmed",
+    "decision": "pending",
     "corrected_root_cause": null,
-    "note": "Verified in test",
-    "reviewed_at": "2026-11-25T18:14:01Z"
+    "note": null,
+    "reviewed_at": null
   },
   "recovery_check": null,
   "verification": {
@@ -379,7 +379,7 @@
         "passed": true,
         "kind": "conclusion",
         "evidence_ids": [
-          "LOG-1021"
+          "EVENT-0001"
         ],
         "failures": []
       },
@@ -431,15 +431,15 @@
     ]
   },
   "evidence_map": {
-    "LOG-1021": {
-      "id": "LOG-1021",
-      "ts": "2026-11-25T14:02:00Z",
-      "source": "app.log",
+    "EVENT-0001": {
+      "id": "EVENT-0001",
+      "ts": "2026-11-25T14:01:58Z",
+      "source": "events.json",
       "service": "checkout-svc",
-      "kind": "log",
-      "raw": "2026-11-25T14:02:00Z checkout-svc INFO deploy v2.4.1 applied config db_pool_max=5 (prev=50) commit=a91f4c2",
-      "template_id": "TPL-005",
-      "template": "deploy v2.4.1 applied config db_pool_max=5 (prev=50) commit=a91f4c2",
+      "kind": "event",
+      "raw": "2026-11-25T14:01:58Z checkout-svc ConfigMapUpdated actor=ci-cd-bot commit=a91f4c2 Updated checkout-config: db_pool_max changed from 50 -> 5",
+      "template_id": null,
+      "template": null,
       "level": "INFO",
       "duration_ms": null,
       "trace_id": null,
@@ -450,7 +450,7 @@
         {
           "code": "CONFIG_OR_DEPLOY_EVENT",
           "severity": "info",
-          "label": "Deploy / config event",
+          "label": "Deploy / change event",
           "detail": "Deployment or configuration change recorded on checkout-svc.",
           "metric_name": null,
           "z_score": null,

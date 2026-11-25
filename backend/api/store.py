@@ -285,7 +285,7 @@ class IncidentStore:
         # Guarded execution against connected local test-shop-app if present
         test_cfg_path = Path(r"C:\Users\Dev\Desktop\test-shop-app\config.json")
         test_log_path = Path(r"C:\Users\Dev\Desktop\test-shop-app\app.log")
-        if target.target_service == "test-shop-checkout" and test_cfg_path.exists():
+        if target.target_service in {"test-shop-checkout", "checkout-svc"} and test_cfg_path.exists():
             cfg_data = json.loads(test_cfg_path.read_text(encoding="utf-8"))
             cur_pool = cfg_data.get("db_pool_max")
             if decision == "dry_run":
