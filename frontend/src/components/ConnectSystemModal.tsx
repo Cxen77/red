@@ -11,9 +11,13 @@ import type { IncidentMetadata } from "../types";
 
 interface ConnectSystemModalProps {
   onIncidentIngested: (meta: IncidentMetadata) => void;
+  onConfigChanged?: (cfg: ConnectorConfig) => void;
 }
 
-export function ConnectSystemModal({ onIncidentIngested }: ConnectSystemModalProps) {
+export function ConnectSystemModal({
+  onIncidentIngested,
+  onConfigChanged,
+}: ConnectSystemModalProps) {
   const [open, setOpen] = useState(false);
   const [cfg, setCfg] = useState<ConnectorConfig>({
     enabled: false,
@@ -64,6 +68,7 @@ export function ConnectSystemModal({ onIncidentIngested }: ConnectSystemModalPro
     try {
       const saved = await saveConnectorConfig(cfg);
       setCfg(saved);
+      onConfigChanged?.(saved);
       setStatusMsg(
         saved.enabled
           ? `Auto-polling enabled every ${saved.poll_interval_sec}s.`

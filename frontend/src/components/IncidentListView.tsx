@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import {
   createColumnHelper,
@@ -6,8 +6,15 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { Plus, RefreshCw, Radio, Search, Upload, X } from "lucide-react";
-import { createIncident, scanDropzone, simulateLiveAlert } from "../api";
+import { PauseCircle, Plus, RefreshCw, Radio, Search, Upload, X } from "lucide-react";
+import {
+  createIncident,
+  fetchConnectorConfig,
+  saveConnectorConfig,
+  scanDropzone,
+  simulateLiveAlert,
+  type ConnectorConfig,
+} from "../api";
 import { ConnectSystemModal } from "./ConnectSystemModal";
 import type { IncidentMetadata, SeverityLevel, SourceType } from "../types";
 
@@ -68,6 +75,20 @@ export function IncidentListView({
   const [scanningDropzone, setScanningDropzone] = useState(false);
   const [autoMsg, setAutoMsg] = useState<string | null>(null);
   const [sourceFilter, setSourceFilter] = useState<"all" | SourceType>("all");
+  const [connectorCfg, setConnectorCfg] = useState<ConnectorConfig | null>(null);
+
+  useEffect(() => {
+    fetchConnectorConfig()
+      .then(setConnectorCfg)
+      .catch(() => {});
+  }, []);
+
+  async function handleStopPolling() {
+    if (!connectorCfg) return;
+    const updated = await saveConnectorConfig({ ...connectorCfg, enabled: false });
+    setConnectorCfg(updated);
+    setAutoMsg("Background polling stopped.");
+  }
   const [title, setTitle] = useState("");
   const [severity, setSeverity] = useState<SeverityLevel>("high");
   const [logsText, setLogsText] = useState("");
@@ -269,7 +290,20 @@ export function IncidentListView({
         </div>
 
         <div className="flex flex-wrap items-center gap-2 shrink-0">
-          <ConnectSystemModal onIncidentIngested={onIncidentCreated} />
+          {connectorCfg?.enabled && (
+            <button
+              type="button"
+              onClick={() => void handleStopPolling()}
+              className="px-3 py-2 rounded border border-[#FECACA] bg-[#FEF2F2] hover:bg-[#FEE2E2] text-[#B91C1C] text-[13px] font-medium flex items-center gap-1.5"
+            >
+              <PauseCircle className="w-3.5 h-3.5" strokeWidth={1.75} />
+              Stop taking ({connectorCfg.poll_interval_sec}s)
+            </button>
+          )}
+          <ConnectSystemModal
+            onIncidentIngested={onIncidentCreated}
+            onConfigChanged={setConnectorCfg}
+          />
 
           <button
             type="button"
