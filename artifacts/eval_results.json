@@ -6,7 +6,7 @@
   "root_cause_accuracy": 1.0,
   "avg_citation_validity_rate": 1.0,
   "verifier_demotion_guard_passed": true,
-  "median_latency_ms": 1410.97,
+  "median_latency_ms": 941.9,
   "results": [
     {
       "scenario_id": "auth-jwks-rotation",
@@ -18,7 +18,7 @@
       "conclusions_count": 5,
       "hypotheses_demoted": 1,
       "citation_validity_rate": 1.0,
-      "elapsed_ms": 1674.02
+      "elapsed_ms": 941.9
     },
     {
       "scenario_id": "bad-deploy-friday",
@@ -30,7 +30,7 @@
       "conclusions_count": 5,
       "hypotheses_demoted": 1,
       "citation_validity_rate": 1.0,
-      "elapsed_ms": 996.82
+      "elapsed_ms": 888.57
     },
     {
       "scenario_id": "cache-stampede-rcaeval",
@@ -42,7 +42,7 @@
       "conclusions_count": 5,
       "hypotheses_demoted": 1,
       "citation_validity_rate": 1.0,
-      "elapsed_ms": 1410.97
+      "elapsed_ms": 1012.96
     }
   ]
 }

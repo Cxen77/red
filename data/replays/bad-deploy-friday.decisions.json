@@ -4,77 +4,77 @@
     "answers": {
       "is_incident_confirmed": {
         "type": "noul",
-        "noul": 0.9939969306073939
+        "noul": 0.9938130701069057
       },
       "root_cause_service": {
         "type": "choice",
         "choice": "checkout-svc",
         "probabilities": {
-          "api-gateway": 0.002299851597211122,
-          "auth-svc": 0.0006983091782365282,
-          "checkout-svc": 0.993868588264834,
-          "payment-svc": 0.003133250959718268
+          "api-gateway": 0.002534910266520276,
+          "auth-svc": 0.0006415613803557518,
+          "checkout-svc": 0.9946046095340542,
+          "payment-svc": 0.0022189188190698808
         },
-        "confidence": 0.991824784353112
+        "confidence": 0.9928061460454055
       },
       "failure_mechanism": {
         "type": "choice",
         "choice": "connection_pool_exhaustion",
         "probabilities": {
-          "connection_pool_exhaustion": 0.9909418231410313,
-          "cache_stampede": 0.0019195393593364723,
-          "auth_token_mismatch": 0.000272554726302314,
-          "upstream_timeout": 0.006364274955717732,
-          "memory_exhaustion": 0.0005018078176122012
+          "connection_pool_exhaustion": 0.9916879003891074,
+          "cache_stampede": 0.0017163883192835958,
+          "auth_token_mismatch": 0.00027624833491272726,
+          "upstream_timeout": 0.005785605959797837,
+          "memory_exhaustion": 0.0005338569968982883
         },
-        "confidence": 0.988677278926289
+        "confidence": 0.9896098754863841
       },
       "operational_severity": {
         "type": "score",
-        "score": 1.8994038100298185,
+        "score": 1.8996542595515242,
         "legend": {
           "0": "Low",
           "1": "Medium",
           "2": "High"
         },
         "probabilities": {
-          "0": 0.009138473520884469,
-          "1": 0.08231924292841272,
-          "2": 0.9085422835507029
+          "0": 0.009199795474264007,
+          "1": 0.08194614949994777,
+          "2": 0.9088540550257882
         },
-        "confidence": 0.8994038100298183
+        "confidence": 0.8996542595515242
       },
       "image_matches_telemetry": {
         "type": "noul",
-        "noul": 0.9210973364826109
+        "noul": 0.9189036027370531
       },
       "visual_pattern": {
         "type": "choice",
         "choice": "sharp_spike",
         "probabilities": {
-          "sharp_spike": 0.9788726673319356,
-          "gradual_drift": 0.01607557803747006,
-          "flat_baseline": 0.005051754630594312
+          "sharp_spike": 0.9812109695650656,
+          "gradual_drift": 0.013625362926343603,
+          "flat_baseline": 0.005163667508590848
         },
-        "confidence": 0.9683090009979032
+        "confidence": 0.9718164543475982
       }
     },
     "trace": {
       "stage": "triage_root_cause",
       "model": "perplexity/pplx-decider-flash-v1.3-20261112",
       "mode": "live",
-      "latency_ms": 513.16,
+      "latency_ms": 426.58,
       "input_tokens": 1400,
       "output_tokens": 6,
       "cost": 0.0,
-      "request_id": "gen-dec-1795624967-Q8hAQUQvkqdFeHZnNzUH",
+      "request_id": "gen-dec-1795625187-ToSnBbQQlJLHSzX5hjs6",
       "questions": [
         {
           "question_key": "is_incident_confirmed",
           "question_type": "noul",
           "instructions": "Does the telemetry state confirm an active production incident or service outage?",
-          "answer": 0.9939969306073939,
-          "confidence": 0.9939969306073939,
+          "answer": 0.9938130701069057,
+          "confidence": 0.9938130701069057,
           "probabilities": null
         },
         {
@@ -82,12 +82,12 @@
           "question_type": "choice",
           "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
           "answer": "checkout-svc",
-          "confidence": 0.991824784353112,
+          "confidence": 0.9928061460454055,
           "probabilities": {
-            "api-gateway": 0.002299851597211122,
-            "auth-svc": 0.0006983091782365282,
-            "checkout-svc": 0.993868588264834,
-            "payment-svc": 0.003133250959718268
+            "api-gateway": 0.002534910266520276,
+            "auth-svc": 0.0006415613803557518,
+            "checkout-svc": 0.9946046095340542,
+            "payment-svc": 0.0022189188190698808
           }
         },
         {
@@ -95,33 +95,33 @@
           "question_type": "choice",
           "instructions": "Which failure mechanism caused this incident?",
           "answer": "connection_pool_exhaustion",
-          "confidence": 0.988677278926289,
+          "confidence": 0.9896098754863841,
           "probabilities": {
-            "connection_pool_exhaustion": 0.9909418231410313,
-            "cache_stampede": 0.0019195393593364723,
-            "auth_token_mismatch": 0.000272554726302314,
-            "upstream_timeout": 0.006364274955717732,
-            "memory_exhaustion": 0.0005018078176122012
+            "connection_pool_exhaustion": 0.9916879003891074,
+            "cache_stampede": 0.0017163883192835958,
+            "auth_token_mismatch": 0.00027624833491272726,
+            "upstream_timeout": 0.005785605959797837,
+            "memory_exhaustion": 0.0005338569968982883
           }
         },
         {
           "question_key": "operational_severity",
           "question_type": "score",
           "instructions": "Rate the severity of this incident based on error volume and latency impact.",
-          "answer": 1.8994038100298185,
-          "confidence": 0.8994038100298183,
+          "answer": 1.8996542595515242,
+          "confidence": 0.8996542595515242,
           "probabilities": {
-            "0": 0.009138473520884469,
-            "1": 0.08231924292841272,
-            "2": 0.9085422835507029
+            "0": 0.009199795474264007,
+            "1": 0.08194614949994777,
+            "2": 0.9088540550257882
           }
         },
         {
           "question_key": "image_matches_telemetry",
           "question_type": "noul",
           "instructions": "Does the attached dashboard chart image show an anomaly consistent with the telemetry?",
-          "answer": 0.9210973364826109,
-          "confidence": 0.9210973364826109,
+          "answer": 0.9189036027370531,
+          "confidence": 0.9189036027370531,
           "probabilities": null
         },
         {
@@ -129,11 +129,11 @@
           "question_type": "choice",
           "instructions": "What visual pattern appears in the attached dashboard chart?",
           "answer": "sharp_spike",
-          "confidence": 0.9683090009979032,
+          "confidence": 0.9718164543475982,
           "probabilities": {
-            "sharp_spike": 0.9788726673319356,
-            "gradual_drift": 0.01607557803747006,
-            "flat_baseline": 0.005051754630594312
+            "sharp_spike": 0.9812109695650656,
+            "gradual_drift": 0.013625362926343603,
+            "flat_baseline": 0.005163667508590848
           }
         }
       ]
@@ -146,102 +146,102 @@
         "type": "choice",
         "choice": "LOG-1021",
         "probabilities": {
-          "LOG-1021": 0.9949939251614602,
-          "LOG-1030": 0.0011063449995364482,
-          "LOG-1040": 0.0016377249207500445,
-          "LOG-1067": 0.00017358081139628407,
-          "LOG-1086": 0.0002112927586410882,
-          "MET-0068": 0.00014914868878715873,
-          "MET-0074": 9.71808080491673e-05,
-          "MET-0080": 8.108949821181907e-05,
-          "MET-0089": 0.0001568288603418257,
-          "TRACE-0071": 0.0009787321380049334,
-          "MET-0001": 0.00019722157756552704,
-          "MET-0002": 0.00021692977725561657
+          "LOG-1021": 0.9954534654824755,
+          "LOG-1030": 0.0010303988762042303,
+          "LOG-1040": 0.0014611683518162826,
+          "LOG-1067": 0.0001568301578911884,
+          "LOG-1086": 0.00018733523365893046,
+          "MET-0068": 0.0001433480124269266,
+          "MET-0074": 9.386528535908598e-05,
+          "MET-0080": 7.379412396909941e-05,
+          "MET-0089": 0.00014825649456635048,
+          "TRACE-0071": 0.0008956931829241051,
+          "MET-0001": 0.00015938299554238403,
+          "MET-0002": 0.0001964618031657477
         },
-        "confidence": 0.9945388274488657
+        "confidence": 0.9950401441627005
       },
       "trigger_is_causal": {
         "type": "noul",
-        "noul": 0.9966293148466537
+        "noul": 0.9964660303034654
       },
       "metric_corroboration": {
         "type": "noul",
-        "noul": 0.9986165453270999
+        "noul": 0.9987153823632493
       },
       "evidence_strength": {
         "type": "score",
-        "score": 1.9418405741818876,
+        "score": 1.9434307838803695,
         "legend": {
           "0": "Weak",
           "1": "Moderate",
           "2": "Strong"
         },
         "probabilities": {
-          "0": 0.0063815345579932535,
-          "1": 0.045396356702125856,
-          "2": 0.9482221087398809
+          "0": 0.005963540305262987,
+          "1": 0.04464213550910442,
+          "2": 0.9493943241856325
         },
-        "confidence": 0.9418405741818876
+        "confidence": 0.9434307838803696
       }
     },
     "trace": {
       "stage": "evidence_attribution",
       "model": "perplexity/pplx-decider-flash-v1.3-20261112",
       "mode": "live",
-      "latency_ms": 445.2,
+      "latency_ms": 424.76,
       "input_tokens": 2045,
       "output_tokens": 4,
       "cost": 0.0,
-      "request_id": "gen-dec-1795624967-nDyXV8GJk9OxJjail3CE",
+      "request_id": "gen-dec-1795625188-mhIjVQi1ifZuNyN4uqLc",
       "questions": [
         {
           "question_key": "primary_trigger_evidence",
           "question_type": "choice",
           "instructions": "Select the exact evidence item that captures the initial trigger or config change on checkout-svc.",
           "answer": "LOG-1021",
-          "confidence": 0.9945388274488657,
+          "confidence": 0.9950401441627005,
           "probabilities": {
-            "LOG-1021": 0.9949939251614602,
-            "LOG-1030": 0.0011063449995364482,
-            "LOG-1040": 0.0016377249207500445,
-            "LOG-1067": 0.00017358081139628407,
-            "LOG-1086": 0.0002112927586410882,
-            "MET-0068": 0.00014914868878715873,
-            "MET-0074": 9.71808080491673e-05,
-            "MET-0080": 8.108949821181907e-05,
-            "MET-0089": 0.0001568288603418257,
-            "TRACE-0071": 0.0009787321380049334,
-            "MET-0001": 0.00019722157756552704,
-            "MET-0002": 0.00021692977725561657
+            "LOG-1021": 0.9954534654824755,
+            "LOG-1030": 0.0010303988762042303,
+            "LOG-1040": 0.0014611683518162826,
+            "LOG-1067": 0.0001568301578911884,
+            "LOG-1086": 0.00018733523365893046,
+            "MET-0068": 0.0001433480124269266,
+            "MET-0074": 9.386528535908598e-05,
+            "MET-0080": 7.379412396909941e-05,
+            "MET-0089": 0.00014825649456635048,
+            "TRACE-0071": 0.0008956931829241051,
+            "MET-0001": 0.00015938299554238403,
+            "MET-0002": 0.0001964618031657477
           }
         },
         {
           "question_key": "trigger_is_causal",
           "question_type": "noul",
           "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
-          "answer": 0.9966293148466537,
-          "confidence": 0.9966293148466537,
+          "answer": 0.9964660303034654,
+          "confidence": 0.9964660303034654,
           "probabilities": null
         },
         {
           "question_key": "metric_corroboration",
           "question_type": "noul",
           "instructions": "Do the metric spikes corroborate the log/trace failure?",
-          "answer": 0.9986165453270999,
-          "confidence": 0.9986165453270999,
+          "answer": 0.9987153823632493,
+          "confidence": 0.9987153823632493,
           "probabilities": null
         },
         {
           "question_key": "evidence_strength",
           "question_type": "score",
           "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
-          "answer": 1.9418405741818876,
-          "confidence": 0.9418405741818876,
+          "answer": 1.9434307838803695,
+          "confidence": 0.9434307838803696,
           "probabilities": {
-            "0": 0.0063815345579932535,
-            "1": 0.045396356702125856,
-            "2": 0.9482221087398809
+            "0": 0.005963540305262987,
+            "1": 0.04464213550910442,
+            "2": 0.9493943241856325
           }
         }
       ]

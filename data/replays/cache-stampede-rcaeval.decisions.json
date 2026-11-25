@@ -63,11 +63,11 @@
       "stage": "triage_root_cause",
       "model": "perplexity/pplx-decider-flash-v1.3-20261112",
       "mode": "live",
-      "latency_ms": 921.94,
+      "latency_ms": 480.46,
       "input_tokens": 1283,
       "output_tokens": 6,
       "cost": 0.0,
-      "request_id": "gen-dec-1795624968-O5hbXWhkbz7ALlARWVNI",
+      "request_id": "gen-dec-1795625188-31mRlz1XzFoz4OvXjXK2",
       "questions": [
         {
           "question_key": "is_incident_confirmed",
@@ -189,11 +189,11 @@
       "stage": "evidence_attribution",
       "model": "perplexity/pplx-decider-flash-v1.3-20261112",
       "mode": "live",
-      "latency_ms": 462.96,
+      "latency_ms": 504.31,
       "input_tokens": 2033,
       "output_tokens": 4,
       "cost": 0.0,
-      "request_id": "gen-dec-1795624969-Y69FmV5mmtmp9exk9dnp",
+      "request_id": "gen-dec-1795625189-G9ldVI2zQWP7C4kERDP6",
       "questions": [
         {
           "question_key": "primary_trigger_evidence",

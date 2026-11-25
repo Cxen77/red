@@ -58,7 +58,7 @@ def test_verifier_enforces_citations_quotes_and_claim_types() -> None:
             claim="Metric spike observed",
             claim_type="spike",
             evidence_ids=[spike_met.id],
-            quote=spike_met.raw.split(" ", 3)[3],
+            quote=spike_met.raw.split(" ")[-1],
             confidence=0.92,
         ),
         Finding(
