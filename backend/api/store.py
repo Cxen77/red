@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Literal
 
 from backend.agent.investigator import investigate_incident
-from backend.config import OPENROUTER_MODEL, REPLAYS_DIR, SCENARIOS_DIR, UPLOADS_DIR
+from backend.config import DATA_DIR, OPENROUTER_MODEL, REPLAYS_DIR, SCENARIOS_DIR, UPLOADS_DIR
 from backend.ingest.pipeline import (
     ingest_incident_dir_with_stats,
     ingest_incident_payloads_with_stats,
@@ -122,6 +122,7 @@ class IncidentStore:
         logs_text: str | None = None,
         traces_text: str | None = None,
         metrics_text: str | None = None,
+        events_text: str | None = None,
         image_bytes: bytes | None = None,
     ) -> IncidentRecord:
         slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:32] or "incident"
@@ -130,7 +131,7 @@ class IncidentStore:
         inc_dir.mkdir(parents=True, exist_ok=True)
 
         items, redacted_count = ingest_incident_payloads_with_stats(
-            logs_text, traces_text, metrics_text
+            logs_text, traces_text, metrics_text, events_text
         )
         # Store redacted telemetry only (never write raw unredacted secrets to disk)
         if logs_text:
@@ -141,6 +142,8 @@ class IncidentStore:
             (inc_dir / "traces.json").write_text(traces_text, encoding="utf-8")
         if metrics_text:
             (inc_dir / "metrics.csv").write_text(metrics_text, encoding="utf-8")
+        if events_text:
+            (inc_dir / "events.json").write_text(events_text, encoding="utf-8")
         if image_bytes:
             (inc_dir / "dashboard.png").write_bytes(image_bytes)
 
@@ -172,6 +175,39 @@ class IncidentStore:
         )
         self.records[inc_id] = rec
         return rec
+
+    def scan_dropzone(self, auto_investigate: bool = True) -> list[str]:
+        """Automatically ingest any new folder placed in data/dropzone/ by log collectors."""
+        dropzone = DATA_DIR / "dropzone"
+        dropzone.mkdir(parents=True, exist_ok=True)
+        imported: list[str] = []
+        for child in sorted(dropzone.iterdir()):
+            if not child.is_dir() or (child / ".ingested").exists():
+                continue
+            logs_p = child / "logs.log"
+            traces_p = child / "traces.json"
+            metrics_p = child / "metrics.csv"
+            events_p = child / "events.json"
+            if not any(p.exists() for p in (logs_p, traces_p, metrics_p, events_p)):
+                continue
+            meta_p = child / "meta.json"
+            raw_meta = json.loads(meta_p.read_text(encoding="utf-8")) if meta_p.exists() else {}
+            rec = self.create_incident(
+                title=raw_meta.get("title") or f"Auto-collected: {child.name}",
+                severity=raw_meta.get("severity", "high"),
+                logs_text=logs_p.read_text(encoding="utf-8") if logs_p.exists() else None,
+                traces_text=traces_p.read_text(encoding="utf-8") if traces_p.exists() else None,
+                metrics_text=metrics_p.read_text(encoding="utf-8") if metrics_p.exists() else None,
+                events_text=events_p.read_text(encoding="utf-8") if events_p.exists() else None,
+            )
+            if auto_investigate:
+                try:
+                    self.investigate(rec.meta.id, mode="live")
+                except Exception:
+                    pass
+            (child / ".ingested").write_text(rec.meta.id, encoding="utf-8")
+            imported.append(rec.meta.id)
+        return imported
 
     def investigate(
         self,

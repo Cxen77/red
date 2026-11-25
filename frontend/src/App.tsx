@@ -139,7 +139,9 @@ export default function App() {
         activeScreen={screen}
         onNavigate={handleNavigate}
         hasAnyIncident={incidents.length > 0}
-        activeTitle={activeMeta?.title}
+        incidents={incidents}
+        activeIncidentId={activeMeta?.id}
+        onSelectIncident={(id) => void openIncident(id, screen === "report" ? "report" : "investigation")}
       />
 
       {screen === "incidents" && (
@@ -148,6 +150,7 @@ export default function App() {
           loading={loadingList}
           onSelectIncident={(id) => void openIncident(id)}
           onIncidentCreated={(c) => void handleIncidentCreated(c)}
+          onRefreshList={() => void loadIncidents()}
         />
       )}
 
@@ -164,7 +167,15 @@ export default function App() {
         />
       )}
 
-      {screen === "report" && <ReportView investigation={investigation} />}
+      {screen === "report" && (
+        <ReportView
+          investigation={investigation}
+          activeMeta={activeMeta}
+          incidents={incidents}
+          onSelectIncident={(id) => void openIncident(id, "report")}
+          onRunInvestigation={(mode) => void handleRunInvestigation(mode)}
+        />
+      )}
 
       {screen === "probe" && <DeciderProbeView />}
     </div>

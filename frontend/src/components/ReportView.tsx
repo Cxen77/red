@@ -1,13 +1,23 @@
 import { useEffect, useState } from "react";
-import { Download, Printer } from "lucide-react";
+import { Download, Play, Printer } from "lucide-react";
 import { fetchEvals, fetchReportJson } from "../api";
-import type { InvestigationResult } from "../types";
+import type { IncidentMetadata, InvestigationResult } from "../types";
 
 interface ReportViewProps {
   investigation: InvestigationResult | null;
+  activeMeta: IncidentMetadata | null;
+  incidents: IncidentMetadata[];
+  onSelectIncident: (id: string) => void;
+  onRunInvestigation: (mode: "live" | "replay") => void;
 }
 
-export function ReportView({ investigation }: ReportViewProps) {
+export function ReportView({
+  investigation,
+  activeMeta,
+  incidents,
+  onSelectIncident,
+  onRunInvestigation,
+}: ReportViewProps) {
   const [evals, setEvals] = useState<Record<string, unknown> | null>(null);
 
   useEffect(() => {
@@ -18,8 +28,45 @@ export function ReportView({ investigation }: ReportViewProps) {
 
   if (!investigation) {
     return (
-      <main className="max-w-4xl mx-auto px-6 py-10 text-[13px] text-[#78716C]">
-        Run an investigation first to view and export its evidence report.
+      <main className="max-w-4xl mx-auto px-6 py-10 bg-white min-h-[calc(100vh-48px)] border-x border-[#E7E5E4] space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#E7E5E4]">
+          <div>
+            <h1 className="text-[18px] font-semibold text-[#1C1917]">
+              Report — {activeMeta?.title || "Select an incident"}
+            </h1>
+            {activeMeta && (
+              <div className="font-mono text-[12px] text-[#78716C]">
+                Incident ID: {activeMeta.id} · Status: {activeMeta.status}
+              </div>
+            )}
+          </div>
+          {incidents.length > 0 && (
+            <select
+              value={activeMeta?.id || incidents[0]?.id}
+              onChange={(e) => onSelectIncident(e.target.value)}
+              className="border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[13px] bg-white"
+            >
+              {incidents.map((inc) => (
+                <option key={inc.id} value={inc.id}>
+                  {inc.title} ({inc.id})
+                </option>
+              ))}
+            </select>
+          )}
+        </div>
+        <p className="text-[13px] text-[#78716C]">
+          No investigation has been executed yet for{" "}
+          <span className="font-mono text-[#1C1917]">{activeMeta?.id}</span>. Run an
+          investigation to generate its cited evidence report.
+        </p>
+        <button
+          type="button"
+          onClick={() => onRunInvestigation("live")}
+          className="px-3.5 py-2 rounded bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium inline-flex items-center gap-1.5"
+        >
+          <Play className="w-3.5 h-3.5" strokeWidth={1.75} />
+          Investigate now
+        </button>
       </main>
     );
   }
@@ -44,17 +91,46 @@ export function ReportView({ investigation }: ReportViewProps) {
     <main className="max-w-4xl mx-auto px-6 py-8 bg-white min-h-[calc(100vh-48px)] border-x border-[#E7E5E4]">
       <div className="flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-[#E7E5E4]">
         <div>
+          <div className="text-[12px] font-medium text-[#C81E1E] mb-1">
+            Incident Evidence Report · {investigation.incident_id}
+          </div>
           <h1 className="text-[20px] font-semibold text-[#1C1917]">
-            Evidence Report — {investigation.title}
+            {investigation.title}
           </h1>
           <div className="font-mono text-[12px] text-[#78716C] mt-1">
-            ID: {investigation.incident_id} · Severity: {investigation.severity} · Review:{" "}
+            Opened: {investigation.opened_at} · Severity: {investigation.severity} · Review:{" "}
             {investigation.human_review.decision} · Noise reduction:{" "}
             {investigation.noise_reduction_pct.toFixed(1)}%
           </div>
+          {activeMeta && activeMeta.services.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-2">
+              {activeMeta.services.map((svc) => (
+                <span
+                  key={svc}
+                  className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-[#F5F5F4] text-[#57534E] border border-[#E7E5E4]"
+                >
+                  {svc}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
-        <div className="no-print flex items-center gap-2">
+        <div className="no-print flex flex-wrap items-center gap-2">
+          {incidents.length > 0 && (
+            <select
+              aria-label="Switch incident report"
+              value={investigation.incident_id}
+              onChange={(e) => onSelectIncident(e.target.value)}
+              className="border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[12px] bg-white max-w-[240px]"
+            >
+              {incidents.map((inc) => (
+                <option key={inc.id} value={inc.id}>
+                  {inc.title} ({inc.id})
+                </option>
+              ))}
+            </select>
+          )}
           <button
             type="button"
             onClick={handleExportJson}
@@ -210,7 +286,7 @@ export function ReportView({ investigation }: ReportViewProps) {
       {evals && baseline && (
         <section className="mt-6">
           <h2 className="text-[14px] font-semibold text-[#1C1917] mb-2">
-            Evaluation Suite vs Named Baselines ({String(evals.scenarios_total)} faults)
+            Global Benchmark Suite vs Named Baselines ({String(evals.scenarios_total)} faults)
           </h2>
           <div className="border border-[#E7E5E4] rounded p-3 text-[12px] space-y-1.5 bg-[#FAFAF9] mb-3">
             <div>

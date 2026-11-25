@@ -53,6 +53,20 @@ class CreateIncidentJson(BaseModel):
     logs: str | None = None
     traces: str | None = None
     metrics: str | None = None
+    events: str | None = None
+    auto_investigate: bool = True
+
+
+class WebhookAlertPayload(BaseModel):
+    alert_name: str = Field(..., min_length=2)
+    service: str = "checkout-svc"
+    severity: SeverityLevel = "high"
+    source: str = "alertmanager"
+    logs: str | None = None
+    traces: str | None = None
+    metrics: str | None = None
+    events: str | None = None
+    auto_investigate: bool = True
 
 
 class ReviewSubmission(BaseModel):
@@ -112,16 +126,95 @@ async def create_incident(
 
 @app.post("/api/incidents/json", response_model=IncidentMetadata)
 def create_incident_json(payload: CreateIncidentJson) -> IncidentMetadata:
-    if not any([payload.logs, payload.traces, payload.metrics]):
+    if not any([payload.logs, payload.traces, payload.metrics, payload.events]):
         raise HTTPException(status_code=400, detail="Provide at least one telemetry input.")
-    rec = get_store().create_incident(
+    store = get_store()
+    rec = store.create_incident(
         title=payload.title,
         severity=payload.severity,
         logs_text=payload.logs,
         traces_text=payload.traces,
         metrics_text=payload.metrics,
+        events_text=payload.events,
     )
+    if payload.auto_investigate:
+        store.investigate(rec.meta.id, mode="live")
     return rec.meta
+
+
+@app.post("/api/webhooks/alert")
+def webhook_auto_ingest(payload: WebhookAlertPayload) -> dict[str, Any]:
+    """Automated webhook receiver (Alertmanager / Grafana / Log forwarder):
+    automatically ingests telemetry, redacts secrets, builds timeline, and runs investigation."""
+    store = get_store()
+    if not any([payload.logs, payload.traces, payload.metrics, payload.events]):
+        raise HTTPException(status_code=400, detail="Webhook payload must include telemetry.")
+    rec = store.create_incident(
+        title=f"[{payload.source}] {payload.alert_name}",
+        severity=payload.severity,
+        logs_text=payload.logs,
+        traces_text=payload.traces,
+        metrics_text=payload.metrics,
+        events_text=payload.events,
+    )
+    investigation = None
+    if payload.auto_investigate:
+        investigation = store.investigate(rec.meta.id, mode="live")
+    return {"meta": rec.meta, "investigation": investigation}
+
+
+@app.post("/api/incidents/simulate-live")
+def simulate_live_alert() -> dict[str, Any]:
+    """Simulate an automated webhook alert arriving from a live cluster and investigate it immediately."""
+    from datetime import datetime, timezone
+    now = datetime.now(timezone.utc)
+    t0 = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    logs = "\n".join([
+        f"{t0} api-gateway INFO req-9001 HTTP 200 GET /health latency_ms=9",
+        f"{t0} payment-svc INFO deploy v4.2.0 applied config timeout_ms=250 (prev=5000)",
+        f"{t0} payment-svc ERROR req-9002 upstream gateway timeout after 250ms provider=stripe",
+        f"{t0} payment-svc ERROR req-9003 upstream gateway timeout after 250ms provider=stripe",
+        f"{t0} payment-svc ERROR req-9004 upstream gateway timeout after 250ms provider=stripe",
+        f"{t0} payment-svc ERROR req-9005 upstream gateway timeout after 250ms provider=stripe",
+        f"{t0} checkout-svc ERROR req-9005 payment authorization failed status=504",
+    ])
+    metrics = "\n".join([
+        "ts,service,metric,value",
+        f"{t0},payment-svc,latency_ms,48.0",
+        f"{t0},payment-svc,latency_ms,52.0",
+        f"{t0},payment-svc,latency_ms,49.0",
+        f"{t0},payment-svc,latency_ms,3180.0",
+        f"{t0},payment-svc,error_rate_pct,0.2",
+        f"{t0},payment-svc,error_rate_pct,0.3",
+        f"{t0},payment-svc,error_rate_pct,0.2",
+        f"{t0},payment-svc,error_rate_pct,38.4",
+    ])
+    events = json.dumps([
+        {
+            "ts": t0,
+            "service": "payment-svc",
+            "event_type": "ConfigMapUpdated",
+            "actor": "argocd-sync",
+            "commit": "f48c91d",
+            "message": "Updated payment-svc timeout_ms 5000 -> 250",
+        }
+    ])
+    store = get_store()
+    rec = store.create_incident(
+        title="Auto-Alert: Payment Timeout Regression",
+        severity="critical",
+        logs_text=logs,
+        metrics_text=metrics,
+        events_text=events,
+    )
+    inv = store.investigate(rec.meta.id, mode="live")
+    return {"meta": rec.meta, "investigation": inv}
+
+
+@app.post("/api/dropzone/scan")
+def scan_dropzone(auto_investigate: bool = True) -> dict[str, Any]:
+    imported = get_store().scan_dropzone(auto_investigate=auto_investigate)
+    return {"imported_ids": imported, "count": len(imported)}
 
 
 @app.get("/incidents/{incident_id}")

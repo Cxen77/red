@@ -167,3 +167,17 @@ def test_api_endpoints_replay_and_report() -> None:
     chat_data = chat_res.json()
     assert "checkout-svc" in chat_data["reply"].lower()
     assert len(chat_data["citations"]) >= 1
+
+    wh_res = client.post(
+        "/api/webhooks/alert",
+        json={
+            "alert_name": "Test Auto Webhook",
+            "service": "payment-svc",
+            "severity": "high",
+            "auto_investigate": False,
+            "logs": "2026-11-25T16:00:00Z payment-svc ERROR req-1 upstream timeout 504",
+            "metrics": "ts,service,metric,value\n2026-11-25T16:00:00Z,payment-svc,latency_ms,2500.0",
+        },
+    )
+    assert wh_res.status_code == 200
+    assert "[alertmanager] Test Auto Webhook" in wh_res.json()["meta"]["title"]

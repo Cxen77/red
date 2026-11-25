@@ -1,4 +1,5 @@
 import { Activity, FileText, GitBranch, LayoutList, SlidersHorizontal } from "lucide-react";
+import type { IncidentMetadata } from "../types";
 
 export type Screen = "incidents" | "investigation" | "report" | "probe";
 
@@ -6,14 +7,18 @@ interface TopBarProps {
   activeScreen: Screen;
   onNavigate: (screen: Screen) => void;
   hasAnyIncident: boolean;
-  activeTitle?: string;
+  incidents: IncidentMetadata[];
+  activeIncidentId?: string;
+  onSelectIncident: (id: string) => void;
 }
 
 export function TopBar({
   activeScreen,
   onNavigate,
   hasAnyIncident,
-  activeTitle,
+  incidents,
+  activeIncidentId,
+  onSelectIncident,
 }: TopBarProps) {
   const navItems: Array<{
     id: Screen;
@@ -79,13 +84,22 @@ export function TopBar({
         </nav>
       </div>
 
-      <div className="hidden lg:flex items-center gap-3 text-[12px] text-stone-400 shrink-0">
-        {activeTitle && activeScreen !== "incidents" && (
-          <span className="truncate max-w-[220px] text-stone-300">
-            {activeTitle}
-          </span>
+      <div className="flex items-center gap-2.5 shrink-0">
+        {(activeScreen === "investigation" || activeScreen === "report") && incidents.length > 0 && (
+          <select
+            aria-label="Active incident selector"
+            value={activeIncidentId || incidents[0]?.id}
+            onChange={(e) => onSelectIncident(e.target.value)}
+            className="bg-stone-800 text-stone-100 border border-stone-700 rounded px-2 py-1 text-[12px] max-w-[260px] focus:outline-none focus:border-[#C81E1E]"
+          >
+            {incidents.map((inc) => (
+              <option key={inc.id} value={inc.id}>
+                {inc.title} ({inc.id})
+              </option>
+            ))}
+          </select>
         )}
-        <span className="font-mono text-[11px] bg-stone-800 text-stone-300 px-2 py-0.5 rounded border border-stone-700">
+        <span className="hidden xl:inline font-mono text-[11px] bg-stone-800 text-stone-300 px-2 py-0.5 rounded border border-stone-700">
           perplexity/pplx-decider-flash-v1.3:free
         </span>
       </div>

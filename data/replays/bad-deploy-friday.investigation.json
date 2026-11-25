@@ -4,7 +4,7 @@
   "mode": "replay",
   "model": "perplexity/pplx-decider-flash-v1.3-20261112",
   "opened_at": "2026-11-25T14:04:00Z",
-  "investigated_at": "2026-11-25T17:23:16Z",
+  "investigated_at": "2026-11-25T17:28:14Z",
   "severity": "critical",
   "status": "verified",
   "root_cause_summary": "Database connection pool exhaustion / misconfiguration in checkout-svc (verified by 5/6 findings).",
@@ -29,7 +29,7 @@
         "limit": 40
       },
       "returned": 40,
-      "elapsed_ms": 0.099
+      "elapsed_ms": 0.096
     },
     {
       "tool": "search_logs",
@@ -39,7 +39,7 @@
         "limit": 10
       },
       "returned": 1,
-      "elapsed_ms": 0.311
+      "elapsed_ms": 0.3
     },
     {
       "tool": "get_metric_series",
@@ -48,7 +48,7 @@
         "anomalies_only": true
       },
       "returned": 38,
-      "elapsed_ms": 0.012
+      "elapsed_ms": 0.016
     },
     {
       "tool": "get_trace",
@@ -58,7 +58,7 @@
         "limit": 15
       },
       "returned": 15,
-      "elapsed_ms": 0.098
+      "elapsed_ms": 0.09
     },
     {
       "tool": "get_service_events",

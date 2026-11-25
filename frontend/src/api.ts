@@ -97,6 +97,17 @@ export function sendIncidentChat(
   );
 }
 
+export function simulateLiveAlert(): Promise<{
+  meta: IncidentMetadata;
+  investigation: InvestigationResult;
+}> {
+  return jsonFetch(`${BASE}/incidents/simulate-live`, { method: "POST" });
+}
+
+export function scanDropzone(): Promise<{ imported_ids: string[]; count: number }> {
+  return jsonFetch(`${BASE}/dropzone/scan`, { method: "POST" });
+}
+
 export async function createIncident(params: {
   title: string;
   severity: SeverityLevel;

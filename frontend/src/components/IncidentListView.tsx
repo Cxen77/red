@@ -6,8 +6,8 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { Plus, X, Upload, Search } from "lucide-react";
-import { createIncident } from "../api";
+import { Plus, RefreshCw, Radio, Search, Upload, X } from "lucide-react";
+import { createIncident, scanDropzone, simulateLiveAlert } from "../api";
 import type { IncidentMetadata, SeverityLevel } from "../types";
 
 interface IncidentListViewProps {
@@ -15,6 +15,7 @@ interface IncidentListViewProps {
   loading: boolean;
   onSelectIncident: (id: string) => void;
   onIncidentCreated: (created: IncidentMetadata) => void;
+  onRefreshList: () => void;
 }
 
 const SEVERITY_DOT: Record<SeverityLevel, string> = {
@@ -52,8 +53,12 @@ export function IncidentListView({
   loading,
   onSelectIncident,
   onIncidentCreated,
+  onRefreshList,
 }: IncidentListViewProps) {
   const [modalOpen, setModalOpen] = useState(false);
+  const [simulating, setSimulating] = useState(false);
+  const [scanningDropzone, setScanningDropzone] = useState(false);
+  const [autoMsg, setAutoMsg] = useState<string | null>(null);
   const [title, setTitle] = useState("");
   const [severity, setSeverity] = useState<SeverityLevel>("high");
   const [logsText, setLogsText] = useState("");
@@ -187,26 +192,76 @@ export function IncidentListView({
     }
   }
 
+  async function handleSimulateLive() {
+    setSimulating(true);
+    setAutoMsg(null);
+    try {
+      const res = await simulateLiveAlert();
+      onIncidentCreated(res.meta);
+    } catch (err) {
+      setAutoMsg(err instanceof Error ? err.message : "Failed to trigger live alert");
+    } finally {
+      setSimulating(false);
+    }
+  }
+
+  async function handleScanDropzone() {
+    setScanningDropzone(true);
+    setAutoMsg(null);
+    try {
+      const res = await scanDropzone();
+      onRefreshList();
+      setAutoMsg(
+        res.count > 0
+          ? `Imported ${res.count} incident(s) from data/dropzone/.`
+          : "No new folders found in data/dropzone/."
+      );
+    } finally {
+      setScanningDropzone(false);
+    }
+  }
+
   return (
     <main className="max-w-[1360px] mx-auto px-6 py-6">
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
         <div className="min-w-0">
           <h1 className="text-[20px] font-semibold text-[#1C1917]">Incidents</h1>
           <p className="text-[13px] text-[#78716C] mt-0.5">
-            Select an incident row to inspect its deterministic timeline, verified conclusions, and evidence citations.
+            Select an incident row to inspect its timeline, findings, and report, or ingest automatically via webhook / dropzone.
           </p>
         </div>
 
-        <Dialog.Root open={modalOpen} onOpenChange={setModalOpen}>
-          <Dialog.Trigger asChild>
-            <button
-              type="button"
-              className="shrink-0 bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium px-3.5 py-2 rounded flex items-center gap-1.5 transition-colors duration-150"
-            >
-              <Plus className="w-4 h-4" strokeWidth={1.75} />
-              New investigation
-            </button>
-          </Dialog.Trigger>
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
+          <button
+            type="button"
+            disabled={scanningDropzone}
+            onClick={() => void handleScanDropzone()}
+            className="px-3 py-2 rounded border border-[#E7E5E4] bg-white hover:bg-[#F5F5F4] text-[#1C1917] text-[13px] flex items-center gap-1.5 disabled:opacity-50"
+          >
+            <RefreshCw className="w-3.5 h-3.5 text-[#78716C]" strokeWidth={1.5} />
+            {scanningDropzone ? "Scanning..." : "Scan dropzone"}
+          </button>
+
+          <button
+            type="button"
+            disabled={simulating}
+            onClick={() => void handleSimulateLive()}
+            className="px-3 py-2 rounded border border-[#E7E5E4] bg-white hover:bg-[#F5F5F4] text-[#1C1917] text-[13px] font-medium flex items-center gap-1.5 disabled:opacity-50"
+          >
+            <Radio className="w-3.5 h-3.5 text-[#C81E1E]" strokeWidth={1.75} />
+            {simulating ? "Receiving alert..." : "Simulate live webhook"}
+          </button>
+
+          <Dialog.Root open={modalOpen} onOpenChange={setModalOpen}>
+            <Dialog.Trigger asChild>
+              <button
+                type="button"
+                className="shrink-0 bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium px-3.5 py-2 rounded flex items-center gap-1.5 transition-colors duration-150"
+              >
+                <Plus className="w-4 h-4" strokeWidth={1.75} />
+                New investigation
+              </button>
+            </Dialog.Trigger>
 
           <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 bg-stone-900/35 z-40" />
@@ -387,6 +442,16 @@ export function IncidentListView({
             </Dialog.Content>
           </Dialog.Portal>
         </Dialog.Root>
+        </div>
+      </div>
+
+      <div className="mb-3 px-3.5 py-2 bg-white border border-[#E7E5E4] rounded-md flex flex-wrap items-center justify-between gap-2 text-[12px] text-[#57534E]">
+        <div>
+          <strong className="font-medium text-[#1C1917]">Automated ingestion:</strong>{" "}
+          Send alerts to <code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">POST /api/webhooks/alert</code>{" "}
+          or place telemetry folders in <code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">data/dropzone/</code>.
+        </div>
+        {autoMsg && <span className="font-mono text-[11px] text-[#15803D]">{autoMsg}</span>}
       </div>
 
       <div className="bg-white border border-[#E7E5E4] rounded-md overflow-x-auto">
