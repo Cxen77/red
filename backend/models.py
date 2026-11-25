@@ -169,3 +169,34 @@ class IncidentMetadata(BaseModel):
     anomaly_count: int = 0
     redacted_secrets_count: int = 0
     model: str = "perplexity/pplx-decider-flash-v1.3:free"
+
+
+class ChatMessageInput(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str
+
+
+class ChatRequest(BaseModel):
+    message: str = Field(..., min_length=1)
+    history: list[ChatMessageInput] = Field(default_factory=list)
+
+
+class ChatCitation(BaseModel):
+    id: str
+    service: str
+    ts: str
+    kind: EvidenceKind
+    quote: str
+    summary: str
+
+
+class ChatResponse(BaseModel):
+    reply: str
+    intent: str
+    focus_service: str
+    confidence: float
+    answerable_prob: float
+    citations: list[ChatCitation] = Field(default_factory=list)
+    suggested_followups: list[str] = Field(default_factory=list)
+    model: str
+    latency_ms: float

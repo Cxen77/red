@@ -150,3 +150,12 @@ def test_api_endpoints_replay_and_report() -> None:
     eval_res = client.get("/api/evals")
     assert eval_res.status_code == 200
     assert eval_res.json()["scenarios_total"] == 10
+
+    chat_res = client.post(
+        "/api/incidents/bad-deploy-friday/chat",
+        json={"message": "What went wrong and where did it fail?", "history": []},
+    )
+    assert chat_res.status_code == 200
+    chat_data = chat_res.json()
+    assert "checkout-svc" in chat_data["reply"].lower()
+    assert len(chat_data["citations"]) >= 1

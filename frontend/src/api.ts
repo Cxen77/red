@@ -1,4 +1,5 @@
 import type {
+  ChatResponse,
   IncidentMetadata,
   InvestigationResult,
   RemediationAction,
@@ -79,6 +80,21 @@ export function fetchReportJson(id: string): Promise<Record<string, unknown>> {
 
 export function fetchEvals(): Promise<Record<string, unknown>> {
   return jsonFetch<Record<string, unknown>>(`${BASE}/evals`);
+}
+
+export function sendIncidentChat(
+  id: string,
+  message: string,
+  history: Array<{ role: "user" | "assistant"; content: string }>
+): Promise<ChatResponse> {
+  return jsonFetch<ChatResponse>(
+    `${BASE}/incidents/${encodeURIComponent(id)}/chat`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message, history }),
+    }
+  );
 }
 
 export async function createIncident(params: {

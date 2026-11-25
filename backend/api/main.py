@@ -9,9 +9,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, JSONResponse, PlainTextResponse, Response
 from pydantic import BaseModel, Field
 
+from backend.agent.chat import answer_incident_question
 from backend.agent.llm import DeciderGateway
 from backend.config import ARTIFACTS_DIR, OPENROUTER_MODEL
 from backend.models import (
+    ChatRequest,
+    ChatResponse,
     IncidentMetadata,
     InvestigationResult,
     RemediationAction,
@@ -214,6 +217,23 @@ def get_report(
     if format == "html":
         return HTMLResponse(build_html_report(rec.investigation))
     return JSONResponse(build_json_report(rec.investigation))
+
+
+@app.post("/incidents/{incident_id}/chat", response_model=ChatResponse)
+@app.post("/api/incidents/{incident_id}/chat", response_model=ChatResponse)
+def chat_with_incident(incident_id: str, payload: ChatRequest) -> ChatResponse:
+    store = get_store()
+    rec = store.get(incident_id)
+    if not rec:
+        raise HTTPException(status_code=404, detail="Incident not found")
+    if not rec.investigation:
+        rec.investigation = store.investigate(incident_id, mode="live")
+    return answer_incident_question(
+        message=payload.message,
+        timeline=rec.timeline,
+        investigation=rec.investigation,
+        history=[m.model_dump() for m in payload.history],
+    )
 
 
 @app.get("/api/evals")

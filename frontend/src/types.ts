@@ -172,3 +172,24 @@ export interface IncidentMetadata {
   redacted_secrets_count: number;
   model: string;
 }
+
+export interface ChatCitation {
+  id: string;
+  service: string;
+  ts: string;
+  kind: EvidenceKind;
+  quote: string;
+  summary: string;
+}
+
+export interface ChatResponse {
+  reply: string;
+  intent: string;
+  focus_service: string;
+  confidence: number;
+  answerable_prob: number;
+  citations: ChatCitation[];
+  suggested_followups: string[];
+  model: string;
+  latency_ms: number;
+}

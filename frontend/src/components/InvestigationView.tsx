@@ -7,15 +7,18 @@ import {
   Download,
   FileSearch,
   Image as ImageIcon,
+  MessageSquare,
   Play,
   RotateCcw,
   ShieldAlert,
   Terminal,
   X,
 } from "lucide-react";
+import { IncidentChatDrawer } from "./IncidentChatDrawer";
 import { MetricsStrip } from "./MetricsStrip";
 import type {
   ActionStatus,
+  ChatCitation,
   EvidenceItem,
   Finding,
   IncidentMetadata,
@@ -90,6 +93,7 @@ export function InvestigationView({
     findingId?: string;
   } | null>(null);
   const [showImagePanel, setShowImagePanel] = useState<boolean>(false);
+  const [chatOpen, setChatOpen] = useState<boolean>(true);
   const [editingCorrection, setEditingCorrection] = useState<boolean>(false);
   const [correctedText, setCorrectedText] = useState<string>("");
   const [reviewNote, setReviewNote] = useState<string>("");
@@ -140,6 +144,18 @@ export function InvestigationView({
       quote: finding?.quote,
       findingId: finding?.id,
     });
+    setChatOpen(false);
+  }
+
+  function handleChatCitationClick(cit: ChatCitation) {
+    const item = evidenceLookup[cit.id];
+    if (!item) return;
+    setSelectedEvidence({
+      item,
+      quote: cit.quote,
+      findingId: "Chat",
+    });
+    setChatOpen(false);
   }
 
   return (
@@ -199,6 +215,21 @@ export function InvestigationView({
           >
             <Play className="w-3.5 h-3.5" strokeWidth={1.75} />
             {investigating ? "Investigating..." : "Investigate live"}
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setChatOpen((v) => !v);
+              setSelectedEvidence(null);
+            }}
+            className={`px-3 py-1.5 rounded border text-[13px] flex items-center gap-1.5 ${
+              chatOpen
+                ? "bg-[#1C1917] text-white border-[#1C1917]"
+                : "border-[#E7E5E4] text-[#1C1917] bg-white hover:bg-[#F5F5F4]"
+            }`}
+          >
+            <MessageSquare className="w-3.5 h-3.5" strokeWidth={1.5} />
+            Ask incident
           </button>
           {investigation && (
             <button
@@ -311,7 +342,10 @@ export function InvestigationView({
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => setSelectedEvidence({ item })}
+                    onClick={() => {
+                      setSelectedEvidence({ item });
+                      setChatOpen(false);
+                    }}
                     className={`w-full text-left px-3 py-2.5 flex items-start gap-2.5 transition-colors duration-100 ${
                       isSelected ? "bg-[#FEF2F2]" : "hover:bg-[#FAFAF9]"
                     }`}
@@ -705,14 +739,26 @@ export function InvestigationView({
                   {selectedEvidence.item.source} · {selectedEvidence.item.service}
                 </div>
               </div>
-              <button
-                type="button"
-                onClick={() => setSelectedEvidence(null)}
-                className="p-1 rounded text-[#78716C] hover:text-[#1C1917]"
-                aria-label="Close evidence drawer"
-              >
-                <X className="w-4 h-4" strokeWidth={1.5} />
-              </button>
+              <div className="flex items-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedEvidence(null);
+                    setChatOpen(true);
+                  }}
+                  className="text-[11px] px-2 py-1 rounded border border-[#E7E5E4] text-[#57534E] hover:text-[#1C1917]"
+                >
+                  Back to chat
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSelectedEvidence(null)}
+                  className="p-1 rounded text-[#78716C] hover:text-[#1C1917]"
+                  aria-label="Close evidence drawer"
+                >
+                  <X className="w-4 h-4" strokeWidth={1.5} />
+                </button>
+              </div>
             </div>
 
             <div className="p-4 space-y-4 overflow-y-auto flex-1">
@@ -781,6 +827,16 @@ export function InvestigationView({
               </div>
             </div>
           </aside>
+        )}
+
+        {/* RIGHT (380px, Drawer): Incident Chatbot */}
+        {chatOpen && (
+          <IncidentChatDrawer
+            incidentId={meta.id}
+            incidentTitle={meta.title}
+            onSelectCitation={handleChatCitationClick}
+            onClose={() => setChatOpen(false)}
+          />
         )}
       </div>
     </div>
