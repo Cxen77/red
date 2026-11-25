@@ -693,6 +693,12 @@ export function InvestigationView({
                           {act.dry_run_preview}
                         </div>
 
+                        {act.execution_result && (
+                          <div className="font-mono text-[11px] bg-[#FAFAF9] border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[#1C1917]">
+                            {act.execution_result}
+                          </div>
+                        )}
+
                         <div className="flex items-center gap-2 pt-1">
                           <button
                             type="button"

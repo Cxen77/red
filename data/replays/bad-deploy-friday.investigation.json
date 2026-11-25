@@ -4,7 +4,7 @@
   "mode": "replay",
   "model": "perplexity/pplx-decider-flash-v1.3-20261112",
   "opened_at": "2026-11-25T14:04:00Z",
-  "investigated_at": "2026-11-25T17:34:51Z",
+  "investigated_at": "2026-11-25T18:05:53Z",
   "severity": "critical",
   "status": "verified",
   "root_cause_summary": "Database connection pool exhaustion / misconfiguration in checkout-svc (verified by 5/6 findings).",
@@ -29,7 +29,7 @@
         "limit": 40
       },
       "returned": 40,
-      "elapsed_ms": 0.1
+      "elapsed_ms": 0.178
     },
     {
       "tool": "search_logs",
@@ -39,7 +39,7 @@
         "limit": 10
       },
       "returned": 1,
-      "elapsed_ms": 0.324
+      "elapsed_ms": 0.422
     },
     {
       "tool": "get_metric_series",
@@ -48,7 +48,7 @@
         "anomalies_only": true
       },
       "returned": 38,
-      "elapsed_ms": 0.011
+      "elapsed_ms": 0.012
     },
     {
       "tool": "get_trace",
@@ -58,7 +58,7 @@
         "limit": 15
       },
       "returned": 15,
-      "elapsed_ms": 0.09
+      "elapsed_ms": 0.198
     },
     {
       "tool": "get_service_events",
@@ -68,7 +68,7 @@
         "limit": 20
       },
       "returned": 20,
-      "elapsed_ms": 0.11
+      "elapsed_ms": 0.138
     }
   ],
   "decision_traces": [
@@ -344,7 +344,8 @@
       "risk_level": "medium",
       "dry_run_preview": "Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in LOG-1021). Estimated recovery: ~25s.",
       "status": "dry_run_passed",
-      "decided_at": "2026-11-25T17:34:51Z",
+      "execution_result": "Dry-run validated: Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in LOG-1021). Estimated recovery: ~25s.",
+      "decided_at": "2026-11-25T18:05:53Z",
       "decided_note": null
     },
     {
@@ -355,6 +356,7 @@
       "risk_level": "high",
       "dry_run_preview": "Dry-run: deployment/checkout-svc would roll back revision 14 -> 13. Zero pod eviction conflicts.",
       "status": "pending_approval",
+      "execution_result": null,
       "decided_at": null,
       "decided_note": null
     }
@@ -363,7 +365,7 @@
     "decision": "confirmed",
     "corrected_root_cause": null,
     "note": "Verified in test",
-    "reviewed_at": "2026-11-25T17:34:51Z"
+    "reviewed_at": "2026-11-25T18:05:53Z"
   },
   "verification": {
     "total_findings": 6,

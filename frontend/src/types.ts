@@ -109,6 +109,7 @@ export interface RemediationAction {
   risk_level: "low" | "medium" | "high";
   dry_run_preview: string;
   status: ActionStatus;
+  execution_result?: string | null;
   decided_at?: string | null;
   decided_note?: string | null;
 }

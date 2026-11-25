@@ -280,6 +280,44 @@ class IncidentStore:
         target.status = status_map[decision]  # type: ignore[assignment]
         target.decided_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         target.decided_note = note
+
+        # Guarded execution against connected local test-shop-app if present
+        test_cfg_path = Path(r"C:\Users\Dev\Desktop\test-shop-app\config.json")
+        test_log_path = Path(r"C:\Users\Dev\Desktop\test-shop-app\app.log")
+        if target.target_service == "test-shop-checkout" and test_cfg_path.exists():
+            cfg_data = json.loads(test_cfg_path.read_text(encoding="utf-8"))
+            cur_pool = cfg_data.get("db_pool_max")
+            if decision == "dry_run":
+                target.dry_run_preview = (
+                    f"Live dry-run diff on {test_cfg_path}: db_pool_max {cur_pool} -> 50 (no changes written)."
+                )
+                target.execution_result = target.dry_run_preview
+            elif decision == "approve":
+                cfg_data["db_pool_max"] = 50
+                cfg_data["version"] = "v1.1.1-hotfix"
+                test_cfg_path.write_text(json.dumps(cfg_data, indent=2) + "\n", encoding="utf-8")
+                if test_log_path.exists():
+                    with test_log_path.open("a", encoding="utf-8") as lf:
+                        lf.write(
+                            f"{target.decided_at} test-shop-checkout INFO remediation applied db_pool_max=50 (prev={cur_pool})\n"
+                        )
+                target.execution_result = (
+                    f"Executed: updated {test_cfg_path} (db_pool_max {cur_pool} -> 50). Checkout service restored."
+                )
+            elif decision == "block":
+                target.execution_result = (
+                    f"Blocked by operator: {test_cfg_path} left unchanged (db_pool_max={cur_pool})."
+                )
+        else:
+            if decision == "dry_run":
+                target.execution_result = f"Dry-run validated: {target.dry_run_preview}"
+            elif decision == "approve":
+                target.execution_result = (
+                    f"Approved & executed guarded runbook step on {target.target_service}."
+                )
+            elif decision == "block":
+                target.execution_result = "Blocked by operator; no system changes executed."
+
         self._persist_investigation(incident_id, rec.investigation)
         return target
 

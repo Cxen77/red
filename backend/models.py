@@ -117,6 +117,7 @@ class RemediationAction(BaseModel):
     risk_level: Literal["low", "medium", "high"] = "medium"
     dry_run_preview: str
     status: ActionStatus = "pending_approval"
+    execution_result: str | None = None
     decided_at: str | None = None
     decided_note: str | None = None
 
