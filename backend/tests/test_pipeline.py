@@ -181,3 +181,19 @@ def test_api_endpoints_replay_and_report() -> None:
     )
     assert wh_res.status_code == 200
     assert "[alertmanager] Test Auto Webhook" in wh_res.json()["meta"]["title"]
+
+    am_res = client.post(
+        "/api/webhooks/alertmanager",
+        json={
+            "alerts": [
+                {
+                    "status": "firing",
+                    "startsAt": "2026-11-25T16:05:00Z",
+                    "labels": {"alertname": "HighCheckoutErrors", "service": "checkout-svc", "severity": "critical"},
+                    "annotations": {"summary": "HikariPool-1 connection timeout rate > 20%"},
+                }
+            ]
+        },
+    )
+    assert am_res.status_code == 200
+    assert "[Alertmanager] HighCheckoutErrors" in am_res.json()["meta"]["title"]

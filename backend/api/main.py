@@ -1,7 +1,9 @@
 """M5 FastAPI service for IncidentLens."""
 from __future__ import annotations
 
+import asyncio
 import json
+from contextlib import asynccontextmanager
 from typing import Any, Literal
 
 from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
@@ -25,10 +27,34 @@ from backend.models import (
 from backend.verify.report import build_html_report, build_json_report, build_markdown_report
 from .store import get_store
 
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    stop_event = asyncio.Event()
+
+    async def _dropzone_loop() -> None:
+        while not stop_event.is_set():
+            try:
+                get_store().scan_dropzone(auto_investigate=True)
+            except Exception:
+                pass
+            try:
+                await asyncio.wait_for(stop_event.wait(), timeout=5.0)
+            except asyncio.TimeoutError:
+                continue
+
+    task = asyncio.create_task(_dropzone_loop())
+    try:
+        yield
+    finally:
+        stop_event.set()
+        task.cancel()
+
+
 app = FastAPI(
     title="IncidentLens API",
-    version="1.1.0",
-    description="Incident investigation with deterministic citation verification, human review controls, and guarded remediation.",
+    version="1.2.0",
+    description="Incident investigation with automated Alertmanager/OTLP ingestion, deterministic citation verification, human review controls, and guarded remediation.",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -215,6 +241,64 @@ def simulate_live_alert() -> dict[str, Any]:
 def scan_dropzone(auto_investigate: bool = True) -> dict[str, Any]:
     imported = get_store().scan_dropzone(auto_investigate=auto_investigate)
     return {"imported_ids": imported, "count": len(imported)}
+
+
+@app.post("/api/webhooks/alertmanager")
+def alertmanager_webhook(payload: dict[str, Any]) -> dict[str, Any]:
+    """Native Prometheus Alertmanager webhook receiver for automatic cloud-native ingestion."""
+    alerts = payload.get("alerts", [])
+    if not alerts:
+        raise HTTPException(status_code=400, detail="Alertmanager payload contains no alerts.")
+
+    first = alerts[0]
+    labels = first.get("labels", {})
+    annotations = first.get("annotations", {})
+    alert_name = labels.get("alertname") or "AlertmanagerFiring"
+    service = labels.get("service") or labels.get("job") or "cloud-service"
+    sev_raw = str(labels.get("severity") or "high").lower()
+    severity: SeverityLevel = sev_raw if sev_raw in {"critical", "high", "medium", "low"} else "high"
+
+    log_lines = []
+    event_list = []
+    for a in alerts:
+        lbl = a.get("labels", {})
+        ann = a.get("annotations", {})
+        ts = a.get("startsAt") or "2026-11-25T14:00:00Z"
+        svc = lbl.get("service") or lbl.get("job") or service
+        summary = ann.get("summary") or ann.get("description") or lbl.get("alertname") or "Alert firing"
+        log_lines.append(f"{ts} {svc} ERROR alert={lbl.get('alertname', alert_name)} {summary}")
+        event_list.append({
+            "ts": ts,
+            "service": svc,
+            "event_type": "AlertmanagerFiring",
+            "actor": "prometheus-alertmanager",
+            "message": summary,
+        })
+
+    store = get_store()
+    rec = store.create_incident(
+        title=f"[Alertmanager] {alert_name} ({service})",
+        severity=severity,
+        logs_text="\n".join(log_lines),
+        events_text=json.dumps(event_list),
+    )
+    inv = store.investigate(rec.meta.id, mode="live")
+    return {"meta": rec.meta, "investigation": inv}
+
+
+@app.post("/api/ingest/otel")
+def ingest_otel_payload(payload: dict[str, Any]) -> dict[str, Any]:
+    """Direct OTLP HTTP JSON receiver for OpenTelemetry Collector resourceSpans."""
+    if "resourceSpans" not in payload:
+        raise HTTPException(status_code=400, detail="Expected OTLP resourceSpans payload.")
+    store = get_store()
+    rec = store.create_incident(
+        title="OTLP Live Trace Anomaly",
+        severity="high",
+        traces_text=json.dumps(payload),
+    )
+    inv = store.investigate(rec.meta.id, mode="live")
+    return {"meta": rec.meta, "investigation": inv}
 
 
 @app.get("/incidents/{incident_id}")

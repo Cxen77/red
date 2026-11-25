@@ -1,0 +1,477 @@
+{
+  "incident_id": "auto-alert-payment-timeout-regre-816b51",
+  "title": "Auto-Alert: Payment Timeout Regression",
+  "mode": "live",
+  "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+  "opened_at": "2026-11-25T17:29:10Z",
+  "investigated_at": "2026-11-25T17:29:11Z",
+  "severity": "critical",
+  "status": "verified",
+  "root_cause_summary": "External dependency or downstream service timeout in payment-svc (verified by 4/5 findings).",
+  "root_cause_chain": [
+    "Root cause on payment-svc (upstream timeout): actor=argocd-sync commit=f48c91d Updated payment-svc timeout_ms 5000 -> 250",
+    "Error burst triggered on payment-svc: req-9002 upstream gateway timeout after 250ms provider=stripe",
+    "Anomalous metric spike on payment-svc for error_rate_pct=38.4 (z=76.33).",
+    "Downstream cascade impacted checkout-svc: req-9005 payment authorization failed status=504"
+  ],
+  "raw_items_total": 16,
+  "filtered_items_sent": 5,
+  "noise_reduction_pct": 68.75,
+  "redacted_secrets_count": 0,
+  "tool_trace": [
+    {
+      "tool": "get_timeline_window",
+      "arguments": {
+        "start_ts": null,
+        "end_ts": null,
+        "flagged_only": true,
+        "limit": 40
+      },
+      "returned": 5,
+      "elapsed_ms": 0.01
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "deploy",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 1,
+      "elapsed_ms": 0.008
+    },
+    {
+      "tool": "get_metric_series",
+      "arguments": {
+        "metric_name": null,
+        "anomalies_only": true
+      },
+      "returned": 1,
+      "elapsed_ms": 0.012
+    },
+    {
+      "tool": "get_trace",
+      "arguments": {
+        "trace_id": null,
+        "outliers_only": true,
+        "limit": 15
+      },
+      "returned": 0,
+      "elapsed_ms": 0.003
+    },
+    {
+      "tool": "get_service_events",
+      "arguments": {
+        "service": "payment-svc",
+        "level": null,
+        "limit": 20
+      },
+      "returned": 14,
+      "elapsed_ms": 0.014
+    }
+  ],
+  "decision_traces": [
+    {
+      "stage": "triage_root_cause",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 483.64,
+      "retries": 0,
+      "context_items_sent": 5,
+      "input_tokens": 634,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795627760-ivDxzBIvMKGOYFP5sFcH",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "is_incident_confirmed",
+          "question_type": "noul",
+          "instructions": "Does the telemetry state confirm an active production incident or service outage?",
+          "answer": 0.9956788789973147,
+          "confidence": 0.9956788789973147,
+          "probabilities": null
+        },
+        {
+          "question_key": "root_cause_service",
+          "question_type": "choice",
+          "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
+          "answer": "payment-svc",
+          "confidence": 0.9842514849762017,
+          "probabilities": {
+            "api-gateway": 0.0017007031841647555,
+            "checkout-svc": 0.008798306831700724,
+            "payment-svc": 0.9895009899841345
+          }
+        },
+        {
+          "question_key": "failure_mechanism",
+          "question_type": "choice",
+          "instructions": "Which failure mechanism caused this incident?",
+          "answer": "upstream_timeout",
+          "confidence": 0.9963203897396034,
+          "probabilities": {
+            "connection_pool_exhaustion": 0.0006706874481324375,
+            "cache_stampede": 0.0009161695628812854,
+            "auth_token_mismatch": 0.00048280032517375806,
+            "upstream_timeout": 0.9970563117916826,
+            "memory_exhaustion": 0.0008740308721299511
+          }
+        },
+        {
+          "question_key": "operational_severity",
+          "question_type": "score",
+          "instructions": "Rate the severity of this incident based on error volume and latency impact.",
+          "answer": 1.8732919221832098,
+          "confidence": 0.8732919221832101,
+          "probabilities": {
+            "0": 0.0067720656912735565,
+            "1": 0.11316394643424277,
+            "2": 0.8800639878744836
+          }
+        }
+      ]
+    },
+    {
+      "stage": "evidence_attribution",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 520.69,
+      "retries": 0,
+      "context_items_sent": 7,
+      "input_tokens": 1207,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795627761-quPtmReOjsJjFMIJ5tR5",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "primary_trigger_evidence",
+          "question_type": "choice",
+          "instructions": "Select the exact evidence item that captures the initial trigger or config change on payment-svc.",
+          "answer": "EVENT-0001",
+          "confidence": 0.9409424535476563,
+          "probabilities": {
+            "EVENT-0001": 0.949379245897991,
+            "LOG-0007": 0.03686567195743956,
+            "LOG-0002": 0.0012587327837242526,
+            "LOG-0003": 0.010338439335747192,
+            "MET-0004": 0.0009859881384408715,
+            "LOG-0004": 0.0005675509470848861,
+            "LOG-0005": 0.0006043709395722217
+          }
+        },
+        {
+          "question_key": "trigger_is_causal",
+          "question_type": "noul",
+          "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
+          "answer": 0.8554087900992937,
+          "confidence": 0.8554087900992937,
+          "probabilities": null
+        },
+        {
+          "question_key": "metric_corroboration",
+          "question_type": "noul",
+          "instructions": "Do the metric spikes corroborate the log/trace failure?",
+          "answer": 0.9984777878905386,
+          "confidence": 0.9984777878905386,
+          "probabilities": null
+        },
+        {
+          "question_key": "evidence_strength",
+          "question_type": "score",
+          "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
+          "answer": 1.526031637593801,
+          "confidence": 0.5260316375938009,
+          "probabilities": {
+            "0": 0.08553680571441445,
+            "1": 0.3028947509773702,
+            "2": 0.6115684433082154
+          }
+        }
+      ]
+    }
+  ],
+  "image_assessment": null,
+  "conclusions": [
+    {
+      "id": "F-01",
+      "claim": "Root cause on payment-svc (upstream timeout): actor=argocd-sync commit=f48c91d Updated payment-svc timeout_ms 5000 -> 250",
+      "claim_type": "root_cause",
+      "evidence_ids": [
+        "EVENT-0001"
+      ],
+      "quote": "actor=argocd-sync commit=f48c91d Updated payment-svc timeout_ms 5000 -> 250",
+      "confidence": 0.92,
+      "kind": "conclusion",
+      "service": "payment-svc",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "root_cause_service": "payment-svc",
+        "service_confidence": 0.984,
+        "trigger_is_causal": 0.855,
+        "failure_mechanism": "upstream_timeout"
+      }
+    },
+    {
+      "id": "F-02",
+      "claim": "Error burst triggered on payment-svc: req-9002 upstream gateway timeout after 250ms provider=stripe",
+      "claim_type": "error",
+      "evidence_ids": [
+        "LOG-0003"
+      ],
+      "quote": "req-9002 upstream gateway timeout after 250ms provider=stripe",
+      "confidence": 0.98,
+      "kind": "conclusion",
+      "service": "payment-svc",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "is_incident_confirmed": 0.996
+      }
+    },
+    {
+      "id": "F-03",
+      "claim": "Anomalous metric spike on payment-svc for error_rate_pct=38.4 (z=76.33).",
+      "claim_type": "spike",
+      "evidence_ids": [
+        "MET-0004"
+      ],
+      "quote": "2026-11-25T17:29:10Z payment-svc error_rate_pct=38.40",
+      "confidence": 0.99,
+      "kind": "conclusion",
+      "service": "payment-svc",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "metric_corroboration": 0.998
+      }
+    },
+    {
+      "id": "F-05",
+      "claim": "Downstream cascade impacted checkout-svc: req-9005 payment authorization failed status=504",
+      "claim_type": "error",
+      "evidence_ids": [
+        "LOG-0002"
+      ],
+      "quote": "req-9005 payment authorization failed status=504",
+      "confidence": 0.926,
+      "kind": "conclusion",
+      "service": "checkout-svc",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "cascade_from": "payment-svc"
+      }
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "F-06",
+      "claim": "Alternative hypothesis (cache stampede): Transient network packet loss or noisy-neighbor CPU contention coincided with the error window.",
+      "claim_type": "correlation",
+      "evidence_ids": [],
+      "quote": "",
+      "confidence": 0.12,
+      "kind": "hypothesis",
+      "service": "payment-svc",
+      "demotion_reason": "No supporting evidence cited",
+      "verification_passed": false,
+      "decider_signals": {
+        "runner_up_probability": 0.0009
+      }
+    }
+  ],
+  "proposed_actions": [
+    {
+      "id": "ACT-01",
+      "title": "Enable circuit breaker & inspect upstream dependencies for payment-svc",
+      "target_service": "payment-svc",
+      "command": "kubectl annotate svc/payment-svc retry-budget=10pct --overwrite --dry-run=server",
+      "risk_level": "low",
+      "dry_run_preview": "Dry-run: caps retry amplification on payment-svc while preserving healthy traffic.",
+      "status": "pending_approval",
+      "decided_at": null,
+      "decided_note": null
+    }
+  ],
+  "human_review": {
+    "decision": "pending",
+    "corrected_root_cause": null,
+    "note": null,
+    "reviewed_at": null
+  },
+  "verification": {
+    "total_findings": 5,
+    "conclusions_count": 4,
+    "hypotheses_count": 1,
+    "citation_validity_rate": 1.0,
+    "checks": [
+      {
+        "finding_id": "F-01",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "EVENT-0001"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-02",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0003"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-03",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "MET-0004"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-05",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0002"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-06",
+        "passed": false,
+        "kind": "hypothesis",
+        "evidence_ids": [],
+        "failures": [
+          "No supporting evidence cited"
+        ]
+      }
+    ]
+  },
+  "evidence_map": {
+    "EVENT-0001": {
+      "id": "EVENT-0001",
+      "ts": "2026-11-25T17:29:10Z",
+      "source": "events.json",
+      "service": "payment-svc",
+      "kind": "event",
+      "raw": "2026-11-25T17:29:10Z payment-svc ConfigMapUpdated actor=argocd-sync commit=f48c91d Updated payment-svc timeout_ms 5000 -> 250",
+      "template_id": null,
+      "template": null,
+      "level": "INFO",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "CONFIG_OR_DEPLOY_EVENT",
+          "severity": "info",
+          "label": "Deploy / change event",
+          "detail": "Deployment or configuration change recorded on payment-svc.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        }
+      ]
+    },
+    "LOG-0003": {
+      "id": "LOG-0003",
+      "ts": "2026-11-25T17:29:10Z",
+      "source": "app.log",
+      "service": "payment-svc",
+      "kind": "log",
+      "raw": "2026-11-25T17:29:10Z payment-svc ERROR req-9002 upstream gateway timeout after 250ms provider=stripe",
+      "template_id": "TPL-003",
+      "template": "req-9002 upstream gateway timeout after 250ms provider=stripe",
+      "level": "ERROR",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "FIRST_ERROR_OCCURRENCE",
+          "severity": "warning",
+          "label": "First error occurrence",
+          "detail": "First appearance of error template TPL-003 on payment-svc.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        },
+        {
+          "code": "ERROR_BURST",
+          "severity": "critical",
+          "label": "Error burst",
+          "detail": "4 errors/min on payment-svc (baseline mean=4.0, threshold=4.0).",
+          "metric_name": null,
+          "z_score": null,
+          "value": 4.0
+        }
+      ]
+    },
+    "MET-0004": {
+      "id": "MET-0004",
+      "ts": "2026-11-25T17:29:10Z",
+      "source": "metrics.csv",
+      "service": "payment-svc",
+      "kind": "metric",
+      "raw": "2026-11-25T17:29:10Z payment-svc error_rate_pct=38.40",
+      "template_id": null,
+      "template": null,
+      "level": null,
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": "error_rate_pct",
+      "metric_value": 38.4,
+      "flags": [
+        {
+          "code": "METRIC_SPIKE",
+          "severity": "critical",
+          "label": "Metric spike (error_rate_pct)",
+          "detail": "error_rate_pct=38.40 on payment-svc (z=76.33, baseline=0.23).",
+          "metric_name": "error_rate_pct",
+          "z_score": 76.33,
+          "value": 38.4
+        }
+      ]
+    },
+    "LOG-0002": {
+      "id": "LOG-0002",
+      "ts": "2026-11-25T17:29:10Z",
+      "source": "app.log",
+      "service": "checkout-svc",
+      "kind": "log",
+      "raw": "2026-11-25T17:29:10Z checkout-svc ERROR req-9005 payment authorization failed status=504",
+      "template_id": "TPL-004",
+      "template": "req-9005 payment authorization failed status=504",
+      "level": "ERROR",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "FIRST_ERROR_OCCURRENCE",
+          "severity": "warning",
+          "label": "First error occurrence",
+          "detail": "First appearance of error template TPL-004 on checkout-svc.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        }
+      ]
+    }
+  }
+}

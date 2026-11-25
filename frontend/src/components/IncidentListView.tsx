@@ -447,9 +447,11 @@ export function IncidentListView({
 
       <div className="mb-3 px-3.5 py-2 bg-white border border-[#E7E5E4] rounded-md flex flex-wrap items-center justify-between gap-2 text-[12px] text-[#57534E]">
         <div>
-          <strong className="font-medium text-[#1C1917]">Automated ingestion:</strong>{" "}
-          Send alerts to <code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">POST /api/webhooks/alert</code>{" "}
-          or place telemetry folders in <code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">data/dropzone/</code>.
+          <strong className="font-medium text-[#1C1917]">Automated cloud-native ingestion:</strong>{" "}
+          Connect Prometheus Alertmanager (<code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">POST /api/webhooks/alertmanager</code>),{" "}
+          OTel Collector (<code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">POST /api/ingest/otel</code>),{" "}
+          custom alerts (<code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">POST /api/webhooks/alert</code>),{" "}
+          or drop files into <code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">data/dropzone/</code> (auto-watched every 5s).
         </div>
         {autoMsg && <span className="font-mono text-[11px] text-[#15803D]">{autoMsg}</span>}
       </div>

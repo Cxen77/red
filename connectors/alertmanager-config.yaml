@@ -1,0 +1,19 @@
+# Example Prometheus Alertmanager + OpenTelemetry Collector integration for IncidentLens
+# Point your cluster's Alertmanager webhook receiver directly at IncidentLens:
+
+route:
+  receiver: incidentlens-auto
+  group_wait: 10s
+  group_interval: 1m
+  repeat_interval: 15m
+
+receivers:
+  - name: incidentlens-auto
+    webhook_configs:
+      - url: "http://<INCIDENTLENS_HOST>:8000/api/webhooks/alertmanager"
+        send_resolved: false
+---
+# Example OpenTelemetry Collector exporter sending OTLP JSON spans straight to IncidentLens:
+# exporters:
+#   otlphttp/incidentlens:
+#     traces_endpoint: "http://<INCIDENTLENS_HOST>:8000/api/ingest/otel"
