@@ -1,0 +1,14 @@
+{
+  "name": "incidentlens-decider-sdk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenRouter @openrouter/sdk integration for IncidentLens using perplexity/pplx-decider-flash-v1.3:free",
+  "scripts": {
+    "decide": "node decider_cli.mjs"
+  },
+  "dependencies": {
+    "@openrouter/sdk": "latest",
+    "dotenv": "^16.4.5"
+  }
+}

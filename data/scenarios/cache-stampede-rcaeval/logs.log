@@ -1,0 +1,1243 @@
+2026-11-24T09:10:00Z api-gateway INFO cat-2000 cache_hit=true latency_ms=12
+2026-11-24T09:10:01Z catalog-svc INFO cat-2001 cache_hit=true latency_ms=10
+2026-11-24T09:10:02Z redis-proxy INFO cat-2002 cache_hit=true latency_ms=20
+2026-11-24T09:10:03Z cart-svc INFO cat-2003 cache_hit=true latency_ms=16
+2026-11-24T09:10:04Z api-gateway INFO cat-2004 cache_hit=true latency_ms=20
+2026-11-24T09:10:05Z catalog-svc INFO cat-2005 cache_hit=true latency_ms=14
+2026-11-24T09:10:06Z redis-proxy INFO cat-2006 cache_hit=true latency_ms=10
+2026-11-24T09:10:07Z cart-svc INFO cat-2007 cache_hit=true latency_ms=17
+2026-11-24T09:10:08Z api-gateway INFO cat-2008 cache_hit=true latency_ms=14
+2026-11-24T09:10:09Z catalog-svc INFO cat-2009 cache_hit=true latency_ms=13
+2026-11-24T09:10:10Z redis-proxy INFO cat-2010 cache_hit=true latency_ms=14
+2026-11-24T09:10:11Z cart-svc INFO cat-2011 cache_hit=true latency_ms=18
+2026-11-24T09:10:12Z api-gateway INFO cat-2012 cache_hit=true latency_ms=14
+2026-11-24T09:10:13Z catalog-svc INFO cat-2013 cache_hit=true latency_ms=11
+2026-11-24T09:10:14Z redis-proxy INFO cat-2014 cache_hit=true latency_ms=14
+2026-11-24T09:10:15Z cart-svc INFO cat-2015 cache_hit=true latency_ms=10
+2026-11-24T09:10:16Z api-gateway INFO cat-2016 cache_hit=true latency_ms=25
+2026-11-24T09:10:17Z catalog-svc INFO cat-2017 cache_hit=true latency_ms=21
+2026-11-24T09:10:18Z redis-proxy INFO cat-2018 cache_hit=true latency_ms=11
+2026-11-24T09:10:19Z cart-svc INFO cat-2019 cache_hit=true latency_ms=25
+2026-11-24T09:10:20Z api-gateway INFO cat-2020 cache_hit=true latency_ms=18
+2026-11-24T09:10:21Z catalog-svc INFO cat-2021 cache_hit=true latency_ms=20
+2026-11-24T09:10:22Z redis-proxy INFO cat-2022 cache_hit=true latency_ms=14
+2026-11-24T09:10:23Z cart-svc INFO cat-2023 cache_hit=true latency_ms=28
+2026-11-24T09:10:24Z api-gateway INFO cat-2024 cache_hit=true latency_ms=27
+2026-11-24T09:10:25Z catalog-svc INFO cat-2025 cache_hit=true latency_ms=28
+2026-11-24T09:10:26Z redis-proxy INFO cat-2026 cache_hit=true latency_ms=9
+2026-11-24T09:10:27Z cart-svc INFO cat-2027 cache_hit=true latency_ms=26
+2026-11-24T09:10:28Z api-gateway INFO cat-2028 cache_hit=true latency_ms=22
+2026-11-24T09:10:29Z catalog-svc INFO cat-2029 cache_hit=true latency_ms=9
+2026-11-24T09:10:30Z redis-proxy INFO cat-2030 cache_hit=true latency_ms=19
+2026-11-24T09:10:31Z cart-svc INFO cat-2031 cache_hit=true latency_ms=18
+2026-11-24T09:10:32Z api-gateway INFO cat-2032 cache_hit=true latency_ms=28
+2026-11-24T09:10:33Z catalog-svc INFO cat-2033 cache_hit=true latency_ms=15
+2026-11-24T09:10:34Z redis-proxy INFO cat-2034 cache_hit=true latency_ms=14
+2026-11-24T09:10:35Z cart-svc INFO cat-2035 cache_hit=true latency_ms=24
+2026-11-24T09:10:36Z api-gateway INFO cat-2036 cache_hit=true latency_ms=23
+2026-11-24T09:10:37Z catalog-svc INFO cat-2037 cache_hit=true latency_ms=14
+2026-11-24T09:10:38Z redis-proxy INFO cat-2038 cache_hit=true latency_ms=8
+2026-11-24T09:10:39Z cart-svc INFO cat-2039 cache_hit=true latency_ms=10
+2026-11-24T09:10:40Z api-gateway INFO cat-2040 cache_hit=true latency_ms=23
+2026-11-24T09:10:41Z catalog-svc INFO cat-2041 cache_hit=true latency_ms=26
+2026-11-24T09:10:42Z redis-proxy INFO cat-2042 cache_hit=true latency_ms=11
+2026-11-24T09:10:43Z cart-svc INFO cat-2043 cache_hit=true latency_ms=20
+2026-11-24T09:10:44Z api-gateway INFO cat-2044 cache_hit=true latency_ms=13
+2026-11-24T09:10:45Z catalog-svc INFO cat-2045 cache_hit=true latency_ms=18
+2026-11-24T09:10:46Z redis-proxy INFO cat-2046 cache_hit=true latency_ms=15
+2026-11-24T09:10:47Z cart-svc INFO cat-2047 cache_hit=true latency_ms=22
+2026-11-24T09:10:48Z api-gateway INFO cat-2048 cache_hit=true latency_ms=28
+2026-11-24T09:10:49Z catalog-svc INFO cat-2049 cache_hit=true latency_ms=8
+2026-11-24T09:10:50Z redis-proxy INFO cat-2050 cache_hit=true latency_ms=19
+2026-11-24T09:10:51Z cart-svc INFO cat-2051 cache_hit=true latency_ms=13
+2026-11-24T09:10:52Z api-gateway INFO cat-2052 cache_hit=true latency_ms=15
+2026-11-24T09:10:53Z catalog-svc INFO cat-2053 cache_hit=true latency_ms=27
+2026-11-24T09:10:54Z redis-proxy INFO cat-2054 cache_hit=true latency_ms=19
+2026-11-24T09:10:55Z cart-svc INFO cat-2055 cache_hit=true latency_ms=25
+2026-11-24T09:10:56Z api-gateway INFO cat-2056 cache_hit=true latency_ms=13
+2026-11-24T09:10:57Z catalog-svc INFO cat-2057 cache_hit=true latency_ms=8
+2026-11-24T09:10:58Z redis-proxy INFO cat-2058 cache_hit=true latency_ms=15
+2026-11-24T09:10:59Z cart-svc INFO cat-2059 cache_hit=true latency_ms=26
+2026-11-24T09:11:00Z api-gateway INFO cat-2060 cache_hit=true latency_ms=23
+2026-11-24T09:11:01Z catalog-svc INFO cat-2061 cache_hit=true latency_ms=23
+2026-11-24T09:11:02Z redis-proxy INFO cat-2062 cache_hit=true latency_ms=14
+2026-11-24T09:11:03Z cart-svc INFO cat-2063 cache_hit=true latency_ms=11
+2026-11-24T09:11:04Z api-gateway INFO cat-2064 cache_hit=true latency_ms=24
+2026-11-24T09:11:05Z catalog-svc INFO cat-2065 cache_hit=true latency_ms=28
+2026-11-24T09:11:06Z redis-proxy INFO cat-2066 cache_hit=true latency_ms=12
+2026-11-24T09:11:07Z cart-svc INFO cat-2067 cache_hit=true latency_ms=9
+2026-11-24T09:11:08Z api-gateway INFO cat-2068 cache_hit=true latency_ms=27
+2026-11-24T09:11:09Z catalog-svc INFO cat-2069 cache_hit=true latency_ms=13
+2026-11-24T09:11:10Z redis-proxy INFO cat-2070 cache_hit=true latency_ms=26
+2026-11-24T09:11:11Z cart-svc INFO cat-2071 cache_hit=true latency_ms=12
+2026-11-24T09:11:12Z api-gateway INFO cat-2072 cache_hit=true latency_ms=18
+2026-11-24T09:11:13Z catalog-svc INFO cat-2073 cache_hit=true latency_ms=16
+2026-11-24T09:11:14Z redis-proxy INFO cat-2074 cache_hit=true latency_ms=8
+2026-11-24T09:11:15Z cart-svc INFO cat-2075 cache_hit=true latency_ms=10
+2026-11-24T09:11:16Z api-gateway INFO cat-2076 cache_hit=true latency_ms=28
+2026-11-24T09:11:17Z catalog-svc INFO cat-2077 cache_hit=true latency_ms=18
+2026-11-24T09:11:18Z redis-proxy INFO cat-2078 cache_hit=true latency_ms=12
+2026-11-24T09:11:19Z cart-svc INFO cat-2079 cache_hit=true latency_ms=20
+2026-11-24T09:11:20Z api-gateway INFO cat-2080 cache_hit=true latency_ms=9
+2026-11-24T09:11:21Z catalog-svc INFO cat-2081 cache_hit=true latency_ms=22
+2026-11-24T09:11:22Z redis-proxy INFO cat-2082 cache_hit=true latency_ms=20
+2026-11-24T09:11:23Z cart-svc INFO cat-2083 cache_hit=true latency_ms=18
+2026-11-24T09:11:24Z api-gateway INFO cat-2084 cache_hit=true latency_ms=16
+2026-11-24T09:11:25Z catalog-svc INFO cat-2085 cache_hit=true latency_ms=25
+2026-11-24T09:11:26Z redis-proxy INFO cat-2086 cache_hit=true latency_ms=23
+2026-11-24T09:11:27Z cart-svc INFO cat-2087 cache_hit=true latency_ms=10
+2026-11-24T09:11:28Z api-gateway INFO cat-2088 cache_hit=true latency_ms=17
+2026-11-24T09:11:29Z catalog-svc INFO cat-2089 cache_hit=true latency_ms=24
+2026-11-24T09:11:30Z redis-proxy INFO cat-2090 cache_hit=true latency_ms=20
+2026-11-24T09:11:31Z cart-svc INFO cat-2091 cache_hit=true latency_ms=9
+2026-11-24T09:11:32Z api-gateway INFO cat-2092 cache_hit=true latency_ms=20
+2026-11-24T09:11:33Z catalog-svc INFO cat-2093 cache_hit=true latency_ms=22
+2026-11-24T09:11:34Z redis-proxy INFO cat-2094 cache_hit=true latency_ms=13
+2026-11-24T09:11:35Z cart-svc INFO cat-2095 cache_hit=true latency_ms=13
+2026-11-24T09:11:36Z api-gateway INFO cat-2096 cache_hit=true latency_ms=13
+2026-11-24T09:11:37Z catalog-svc INFO cat-2097 cache_hit=true latency_ms=14
+2026-11-24T09:11:38Z redis-proxy INFO cat-2098 cache_hit=true latency_ms=25
+2026-11-24T09:11:39Z cart-svc INFO cat-2099 cache_hit=true latency_ms=28
+2026-11-24T09:11:40Z api-gateway INFO cat-2100 cache_hit=true latency_ms=26
+2026-11-24T09:11:41Z catalog-svc INFO cat-2101 cache_hit=true latency_ms=12
+2026-11-24T09:11:42Z redis-proxy INFO cat-2102 cache_hit=true latency_ms=20
+2026-11-24T09:11:43Z cart-svc INFO cat-2103 cache_hit=true latency_ms=15
+2026-11-24T09:11:44Z api-gateway INFO cat-2104 cache_hit=true latency_ms=8
+2026-11-24T09:11:45Z catalog-svc INFO cat-2105 cache_hit=true latency_ms=18
+2026-11-24T09:11:46Z redis-proxy INFO cat-2106 cache_hit=true latency_ms=10
+2026-11-24T09:11:47Z cart-svc INFO cat-2107 cache_hit=true latency_ms=17
+2026-11-24T09:11:48Z api-gateway INFO cat-2108 cache_hit=true latency_ms=20
+2026-11-24T09:11:49Z catalog-svc INFO cat-2109 cache_hit=true latency_ms=11
+2026-11-24T09:11:50Z redis-proxy INFO cat-2110 cache_hit=true latency_ms=22
+2026-11-24T09:11:51Z cart-svc INFO cat-2111 cache_hit=true latency_ms=10
+2026-11-24T09:11:52Z api-gateway INFO cat-2112 cache_hit=true latency_ms=25
+2026-11-24T09:11:53Z catalog-svc INFO cat-2113 cache_hit=true latency_ms=14
+2026-11-24T09:11:54Z redis-proxy INFO cat-2114 cache_hit=true latency_ms=12
+2026-11-24T09:11:55Z cart-svc INFO cat-2115 cache_hit=true latency_ms=28
+2026-11-24T09:11:56Z api-gateway INFO cat-2116 cache_hit=true latency_ms=24
+2026-11-24T09:11:57Z catalog-svc INFO cat-2117 cache_hit=true latency_ms=9
+2026-11-24T09:11:58Z redis-proxy INFO cat-2118 cache_hit=true latency_ms=11
+2026-11-24T09:11:59Z cart-svc INFO cat-2119 cache_hit=true latency_ms=25
+2026-11-24T09:12:00Z api-gateway INFO cat-2120 cache_hit=true latency_ms=28
+2026-11-24T09:12:01Z catalog-svc INFO cat-2121 cache_hit=true latency_ms=24
+2026-11-24T09:12:02Z redis-proxy INFO cat-2122 cache_hit=true latency_ms=11
+2026-11-24T09:12:03Z cart-svc INFO cat-2123 cache_hit=true latency_ms=10
+2026-11-24T09:12:04Z api-gateway INFO cat-2124 cache_hit=true latency_ms=19
+2026-11-24T09:12:05Z catalog-svc INFO cat-2125 cache_hit=true latency_ms=22
+2026-11-24T09:12:06Z redis-proxy INFO cat-2126 cache_hit=true latency_ms=21
+2026-11-24T09:12:07Z cart-svc INFO cat-2127 cache_hit=true latency_ms=21
+2026-11-24T09:12:08Z api-gateway INFO cat-2128 cache_hit=true latency_ms=20
+2026-11-24T09:12:09Z catalog-svc INFO cat-2129 cache_hit=true latency_ms=28
+2026-11-24T09:12:10Z redis-proxy INFO cat-2130 cache_hit=true latency_ms=18
+2026-11-24T09:12:11Z cart-svc INFO cat-2131 cache_hit=true latency_ms=11
+2026-11-24T09:12:12Z api-gateway INFO cat-2132 cache_hit=true latency_ms=27
+2026-11-24T09:12:13Z catalog-svc INFO cat-2133 cache_hit=true latency_ms=13
+2026-11-24T09:12:14Z redis-proxy INFO cat-2134 cache_hit=true latency_ms=25
+2026-11-24T09:12:15Z cart-svc INFO cat-2135 cache_hit=true latency_ms=27
+2026-11-24T09:12:16Z api-gateway INFO cat-2136 cache_hit=true latency_ms=21
+2026-11-24T09:12:17Z catalog-svc INFO cat-2137 cache_hit=true latency_ms=8
+2026-11-24T09:12:18Z redis-proxy INFO cat-2138 cache_hit=true latency_ms=27
+2026-11-24T09:12:19Z cart-svc INFO cat-2139 cache_hit=true latency_ms=23
+2026-11-24T09:12:20Z api-gateway INFO cat-2140 cache_hit=true latency_ms=12
+2026-11-24T09:12:21Z catalog-svc INFO cat-2141 cache_hit=true latency_ms=21
+2026-11-24T09:12:22Z redis-proxy INFO cat-2142 cache_hit=true latency_ms=27
+2026-11-24T09:12:23Z cart-svc INFO cat-2143 cache_hit=true latency_ms=11
+2026-11-24T09:12:24Z api-gateway INFO cat-2144 cache_hit=true latency_ms=25
+2026-11-24T09:12:25Z catalog-svc INFO cat-2145 cache_hit=true latency_ms=23
+2026-11-24T09:12:26Z redis-proxy INFO cat-2146 cache_hit=true latency_ms=28
+2026-11-24T09:12:27Z cart-svc INFO cat-2147 cache_hit=true latency_ms=10
+2026-11-24T09:12:28Z api-gateway INFO cat-2148 cache_hit=true latency_ms=10
+2026-11-24T09:12:29Z catalog-svc INFO cat-2149 cache_hit=true latency_ms=23
+2026-11-24T09:12:30Z redis-proxy INFO cat-2150 cache_hit=true latency_ms=14
+2026-11-24T09:12:31Z cart-svc INFO cat-2151 cache_hit=true latency_ms=27
+2026-11-24T09:12:32Z api-gateway INFO cat-2152 cache_hit=true latency_ms=10
+2026-11-24T09:12:33Z catalog-svc INFO cat-2153 cache_hit=true latency_ms=21
+2026-11-24T09:12:34Z redis-proxy INFO cat-2154 cache_hit=true latency_ms=20
+2026-11-24T09:12:35Z cart-svc INFO cat-2155 cache_hit=true latency_ms=25
+2026-11-24T09:12:36Z api-gateway INFO cat-2156 cache_hit=true latency_ms=28
+2026-11-24T09:12:37Z catalog-svc INFO cat-2157 cache_hit=true latency_ms=27
+2026-11-24T09:12:38Z redis-proxy INFO cat-2158 cache_hit=true latency_ms=28
+2026-11-24T09:12:39Z cart-svc INFO cat-2159 cache_hit=true latency_ms=25
+2026-11-24T09:12:40Z api-gateway INFO cat-2160 cache_hit=true latency_ms=11
+2026-11-24T09:12:41Z catalog-svc INFO cat-2161 cache_hit=true latency_ms=20
+2026-11-24T09:12:42Z redis-proxy INFO cat-2162 cache_hit=true latency_ms=27
+2026-11-24T09:12:43Z cart-svc INFO cat-2163 cache_hit=true latency_ms=21
+2026-11-24T09:12:44Z api-gateway INFO cat-2164 cache_hit=true latency_ms=25
+2026-11-24T09:12:45Z catalog-svc INFO cat-2165 cache_hit=true latency_ms=13
+2026-11-24T09:12:46Z redis-proxy INFO cat-2166 cache_hit=true latency_ms=24
+2026-11-24T09:12:47Z cart-svc INFO cat-2167 cache_hit=true latency_ms=22
+2026-11-24T09:12:48Z api-gateway INFO cat-2168 cache_hit=true latency_ms=28
+2026-11-24T09:12:49Z catalog-svc INFO cat-2169 cache_hit=true latency_ms=11
+2026-11-24T09:12:50Z redis-proxy INFO cat-2170 cache_hit=true latency_ms=13
+2026-11-24T09:12:51Z cart-svc INFO cat-2171 cache_hit=true latency_ms=10
+2026-11-24T09:12:52Z api-gateway INFO cat-2172 cache_hit=true latency_ms=20
+2026-11-24T09:12:53Z catalog-svc INFO cat-2173 cache_hit=true latency_ms=8
+2026-11-24T09:12:54Z redis-proxy INFO cat-2174 cache_hit=true latency_ms=9
+2026-11-24T09:12:55Z cart-svc INFO cat-2175 cache_hit=true latency_ms=25
+2026-11-24T09:12:56Z api-gateway INFO cat-2176 cache_hit=true latency_ms=13
+2026-11-24T09:12:57Z catalog-svc INFO cat-2177 cache_hit=true latency_ms=28
+2026-11-24T09:12:58Z redis-proxy INFO cat-2178 cache_hit=true latency_ms=20
+2026-11-24T09:12:59Z cart-svc INFO cat-2179 cache_hit=true latency_ms=13
+2026-11-24T09:13:00Z api-gateway INFO cat-2180 cache_hit=true latency_ms=9
+2026-11-24T09:13:01Z catalog-svc INFO cat-2181 cache_hit=true latency_ms=10
+2026-11-24T09:13:02Z redis-proxy INFO cat-2182 cache_hit=true latency_ms=16
+2026-11-24T09:13:03Z cart-svc INFO cat-2183 cache_hit=true latency_ms=8
+2026-11-24T09:13:04Z api-gateway INFO cat-2184 cache_hit=true latency_ms=9
+2026-11-24T09:13:05Z catalog-svc INFO cat-2185 cache_hit=true latency_ms=26
+2026-11-24T09:13:06Z redis-proxy INFO cat-2186 cache_hit=true latency_ms=17
+2026-11-24T09:13:07Z cart-svc INFO cat-2187 cache_hit=true latency_ms=20
+2026-11-24T09:13:08Z api-gateway INFO cat-2188 cache_hit=true latency_ms=9
+2026-11-24T09:13:09Z catalog-svc INFO cat-2189 cache_hit=true latency_ms=26
+2026-11-24T09:13:10Z redis-proxy INFO cat-2190 cache_hit=true latency_ms=15
+2026-11-24T09:13:11Z cart-svc INFO cat-2191 cache_hit=true latency_ms=22
+2026-11-24T09:13:12Z api-gateway INFO cat-2192 cache_hit=true latency_ms=9
+2026-11-24T09:13:13Z catalog-svc INFO cat-2193 cache_hit=true latency_ms=26
+2026-11-24T09:13:14Z redis-proxy INFO cat-2194 cache_hit=true latency_ms=16
+2026-11-24T09:13:15Z cart-svc INFO cat-2195 cache_hit=true latency_ms=22
+2026-11-24T09:13:16Z api-gateway INFO cat-2196 cache_hit=true latency_ms=14
+2026-11-24T09:13:17Z catalog-svc INFO cat-2197 cache_hit=true latency_ms=16
+2026-11-24T09:13:18Z redis-proxy INFO cat-2198 cache_hit=true latency_ms=9
+2026-11-24T09:13:19Z cart-svc INFO cat-2199 cache_hit=true latency_ms=15
+2026-11-24T09:13:20Z api-gateway INFO cat-2200 cache_hit=true latency_ms=20
+2026-11-24T09:13:21Z catalog-svc INFO cat-2201 cache_hit=true latency_ms=17
+2026-11-24T09:13:22Z redis-proxy INFO cat-2202 cache_hit=true latency_ms=27
+2026-11-24T09:13:23Z cart-svc INFO cat-2203 cache_hit=true latency_ms=21
+2026-11-24T09:13:24Z api-gateway INFO cat-2204 cache_hit=true latency_ms=18
+2026-11-24T09:13:25Z catalog-svc INFO cat-2205 cache_hit=true latency_ms=16
+2026-11-24T09:13:26Z redis-proxy INFO cat-2206 cache_hit=true latency_ms=24
+2026-11-24T09:13:27Z cart-svc INFO cat-2207 cache_hit=true latency_ms=9
+2026-11-24T09:13:28Z api-gateway INFO cat-2208 cache_hit=true latency_ms=13
+2026-11-24T09:13:29Z catalog-svc INFO cat-2209 cache_hit=true latency_ms=27
+2026-11-24T09:13:30Z redis-proxy INFO cat-2210 cache_hit=true latency_ms=8
+2026-11-24T09:13:31Z cart-svc INFO cat-2211 cache_hit=true latency_ms=12
+2026-11-24T09:13:32Z api-gateway INFO cat-2212 cache_hit=true latency_ms=19
+2026-11-24T09:13:33Z catalog-svc INFO cat-2213 cache_hit=true latency_ms=12
+2026-11-24T09:13:34Z redis-proxy INFO cat-2214 cache_hit=true latency_ms=8
+2026-11-24T09:13:35Z cart-svc INFO cat-2215 cache_hit=true latency_ms=26
+2026-11-24T09:13:36Z api-gateway INFO cat-2216 cache_hit=true latency_ms=13
+2026-11-24T09:13:37Z catalog-svc INFO cat-2217 cache_hit=true latency_ms=21
+2026-11-24T09:13:38Z redis-proxy INFO cat-2218 cache_hit=true latency_ms=20
+2026-11-24T09:13:39Z cart-svc INFO cat-2219 cache_hit=true latency_ms=22
+2026-11-24T09:13:40Z api-gateway INFO cat-2220 cache_hit=true latency_ms=25
+2026-11-24T09:13:41Z catalog-svc INFO cat-2221 cache_hit=true latency_ms=23
+2026-11-24T09:13:42Z redis-proxy INFO cat-2222 cache_hit=true latency_ms=24
+2026-11-24T09:13:43Z cart-svc INFO cat-2223 cache_hit=true latency_ms=20
+2026-11-24T09:13:44Z api-gateway INFO cat-2224 cache_hit=true latency_ms=13
+2026-11-24T09:13:45Z catalog-svc INFO cat-2225 cache_hit=true latency_ms=18
+2026-11-24T09:13:46Z redis-proxy INFO cat-2226 cache_hit=true latency_ms=17
+2026-11-24T09:13:47Z cart-svc INFO cat-2227 cache_hit=true latency_ms=18
+2026-11-24T09:13:48Z api-gateway INFO cat-2228 cache_hit=true latency_ms=11
+2026-11-24T09:13:49Z catalog-svc INFO cat-2229 cache_hit=true latency_ms=12
+2026-11-24T09:13:50Z redis-proxy INFO cat-2230 cache_hit=true latency_ms=17
+2026-11-24T09:13:51Z cart-svc INFO cat-2231 cache_hit=true latency_ms=14
+2026-11-24T09:13:52Z api-gateway INFO cat-2232 cache_hit=true latency_ms=11
+2026-11-24T09:13:53Z catalog-svc INFO cat-2233 cache_hit=true latency_ms=19
+2026-11-24T09:13:54Z redis-proxy INFO cat-2234 cache_hit=true latency_ms=25
+2026-11-24T09:13:55Z cart-svc INFO cat-2235 cache_hit=true latency_ms=19
+2026-11-24T09:13:56Z api-gateway INFO cat-2236 cache_hit=true latency_ms=23
+2026-11-24T09:13:57Z catalog-svc INFO cat-2237 cache_hit=true latency_ms=16
+2026-11-24T09:13:58Z redis-proxy INFO cat-2238 cache_hit=true latency_ms=26
+2026-11-24T09:13:59Z cart-svc INFO cat-2239 cache_hit=true latency_ms=17
+2026-11-24T09:14:00Z api-gateway INFO cat-2240 cache_hit=true latency_ms=10
+2026-11-24T09:14:01Z catalog-svc INFO cat-2241 cache_hit=true latency_ms=21
+2026-11-24T09:14:02Z redis-proxy INFO cat-2242 cache_hit=true latency_ms=28
+2026-11-24T09:14:03Z cart-svc INFO cat-2243 cache_hit=true latency_ms=15
+2026-11-24T09:14:04Z api-gateway INFO cat-2244 cache_hit=true latency_ms=8
+2026-11-24T09:14:05Z catalog-svc INFO cat-2245 cache_hit=true latency_ms=18
+2026-11-24T09:14:06Z redis-proxy INFO cat-2246 cache_hit=true latency_ms=28
+2026-11-24T09:14:07Z cart-svc INFO cat-2247 cache_hit=true latency_ms=21
+2026-11-24T09:14:08Z api-gateway INFO cat-2248 cache_hit=true latency_ms=27
+2026-11-24T09:14:09Z catalog-svc INFO cat-2249 cache_hit=true latency_ms=19
+2026-11-24T09:14:10Z redis-proxy INFO cat-2250 cache_hit=true latency_ms=9
+2026-11-24T09:14:11Z cart-svc INFO cat-2251 cache_hit=true latency_ms=25
+2026-11-24T09:14:12Z api-gateway INFO cat-2252 cache_hit=true latency_ms=14
+2026-11-24T09:14:13Z catalog-svc INFO cat-2253 cache_hit=true latency_ms=22
+2026-11-24T09:14:14Z redis-proxy INFO cat-2254 cache_hit=true latency_ms=12
+2026-11-24T09:14:15Z cart-svc INFO cat-2255 cache_hit=true latency_ms=21
+2026-11-24T09:14:16Z api-gateway INFO cat-2256 cache_hit=true latency_ms=23
+2026-11-24T09:14:17Z catalog-svc INFO cat-2257 cache_hit=true latency_ms=24
+2026-11-24T09:14:18Z redis-proxy INFO cat-2258 cache_hit=true latency_ms=28
+2026-11-24T09:14:19Z cart-svc INFO cat-2259 cache_hit=true latency_ms=20
+2026-11-24T09:14:20Z api-gateway INFO cat-2260 cache_hit=true latency_ms=11
+2026-11-24T09:14:21Z catalog-svc INFO cat-2261 cache_hit=true latency_ms=23
+2026-11-24T09:14:22Z redis-proxy INFO cat-2262 cache_hit=true latency_ms=17
+2026-11-24T09:14:23Z cart-svc INFO cat-2263 cache_hit=true latency_ms=22
+2026-11-24T09:14:24Z api-gateway INFO cat-2264 cache_hit=true latency_ms=16
+2026-11-24T09:14:25Z catalog-svc INFO cat-2265 cache_hit=true latency_ms=8
+2026-11-24T09:14:26Z redis-proxy INFO cat-2266 cache_hit=true latency_ms=21
+2026-11-24T09:14:27Z cart-svc INFO cat-2267 cache_hit=true latency_ms=28
+2026-11-24T09:14:28Z api-gateway INFO cat-2268 cache_hit=true latency_ms=18
+2026-11-24T09:14:29Z catalog-svc INFO cat-2269 cache_hit=true latency_ms=27
+2026-11-24T09:14:30Z redis-proxy INFO cat-2270 cache_hit=true latency_ms=27
+2026-11-24T09:14:31Z cart-svc INFO cat-2271 cache_hit=true latency_ms=23
+2026-11-24T09:14:32Z api-gateway INFO cat-2272 cache_hit=true latency_ms=11
+2026-11-24T09:14:33Z catalog-svc INFO cat-2273 cache_hit=true latency_ms=10
+2026-11-24T09:14:34Z redis-proxy INFO cat-2274 cache_hit=true latency_ms=26
+2026-11-24T09:14:35Z cart-svc INFO cat-2275 cache_hit=true latency_ms=8
+2026-11-24T09:14:36Z api-gateway INFO cat-2276 cache_hit=true latency_ms=24
+2026-11-24T09:14:37Z catalog-svc INFO cat-2277 cache_hit=true latency_ms=26
+2026-11-24T09:14:38Z redis-proxy INFO cat-2278 cache_hit=true latency_ms=15
+2026-11-24T09:14:39Z cart-svc INFO cat-2279 cache_hit=true latency_ms=27
+2026-11-24T09:14:40Z api-gateway INFO cat-2280 cache_hit=true latency_ms=8
+2026-11-24T09:14:41Z catalog-svc INFO cat-2281 cache_hit=true latency_ms=25
+2026-11-24T09:14:42Z redis-proxy INFO cat-2282 cache_hit=true latency_ms=10
+2026-11-24T09:14:43Z cart-svc INFO cat-2283 cache_hit=true latency_ms=19
+2026-11-24T09:14:44Z api-gateway INFO cat-2284 cache_hit=true latency_ms=21
+2026-11-24T09:14:45Z catalog-svc INFO cat-2285 cache_hit=true latency_ms=15
+2026-11-24T09:14:46Z redis-proxy INFO cat-2286 cache_hit=true latency_ms=11
+2026-11-24T09:14:47Z cart-svc INFO cat-2287 cache_hit=true latency_ms=12
+2026-11-24T09:14:48Z api-gateway INFO cat-2288 cache_hit=true latency_ms=20
+2026-11-24T09:14:49Z catalog-svc INFO cat-2289 cache_hit=true latency_ms=22
+2026-11-24T09:14:50Z redis-proxy INFO cat-2290 cache_hit=true latency_ms=18
+2026-11-24T09:14:51Z cart-svc INFO cat-2291 cache_hit=true latency_ms=28
+2026-11-24T09:14:52Z api-gateway INFO cat-2292 cache_hit=true latency_ms=10
+2026-11-24T09:14:53Z catalog-svc INFO cat-2293 cache_hit=true latency_ms=9
+2026-11-24T09:14:54Z redis-proxy INFO cat-2294 cache_hit=true latency_ms=16
+2026-11-24T09:14:55Z cart-svc INFO cat-2295 cache_hit=true latency_ms=24
+2026-11-24T09:14:56Z api-gateway INFO cat-2296 cache_hit=true latency_ms=26
+2026-11-24T09:14:57Z catalog-svc INFO cat-2297 cache_hit=true latency_ms=14
+2026-11-24T09:14:58Z redis-proxy INFO cat-2298 cache_hit=true latency_ms=16
+2026-11-24T09:14:59Z cart-svc INFO cat-2299 cache_hit=true latency_ms=16
+2026-11-24T09:15:00Z api-gateway INFO cat-2300 cache_hit=true latency_ms=28
+2026-11-24T09:15:01Z catalog-svc INFO cat-2301 cache_hit=true latency_ms=16
+2026-11-24T09:15:02Z redis-proxy INFO cat-2302 cache_hit=true latency_ms=17
+2026-11-24T09:15:03Z cart-svc INFO cat-2303 cache_hit=true latency_ms=22
+2026-11-24T09:15:04Z api-gateway INFO cat-2304 cache_hit=true latency_ms=13
+2026-11-24T09:15:05Z catalog-svc INFO cat-2305 cache_hit=true latency_ms=15
+2026-11-24T09:15:06Z redis-proxy INFO cat-2306 cache_hit=true latency_ms=8
+2026-11-24T09:15:07Z cart-svc INFO cat-2307 cache_hit=true latency_ms=19
+2026-11-24T09:15:08Z api-gateway INFO cat-2308 cache_hit=true latency_ms=23
+2026-11-24T09:15:09Z catalog-svc INFO cat-2309 cache_hit=true latency_ms=16
+2026-11-24T09:15:10Z redis-proxy INFO cat-2310 cache_hit=true latency_ms=23
+2026-11-24T09:15:11Z cart-svc INFO cat-2311 cache_hit=true latency_ms=14
+2026-11-24T09:15:12Z api-gateway INFO cat-2312 cache_hit=true latency_ms=11
+2026-11-24T09:15:13Z catalog-svc INFO cat-2313 cache_hit=true latency_ms=9
+2026-11-24T09:15:14Z redis-proxy INFO cat-2314 cache_hit=true latency_ms=21
+2026-11-24T09:15:15Z cart-svc INFO cat-2315 cache_hit=true latency_ms=17
+2026-11-24T09:15:16Z api-gateway INFO cat-2316 cache_hit=true latency_ms=10
+2026-11-24T09:15:17Z catalog-svc INFO cat-2317 cache_hit=true latency_ms=8
+2026-11-24T09:15:18Z redis-proxy INFO cat-2318 cache_hit=true latency_ms=14
+2026-11-24T09:15:19Z cart-svc INFO cat-2319 cache_hit=true latency_ms=16
+2026-11-24T09:15:20Z api-gateway INFO cat-2320 cache_hit=true latency_ms=16
+2026-11-24T09:15:21Z catalog-svc INFO cat-2321 cache_hit=true latency_ms=27
+2026-11-24T09:15:22Z redis-proxy INFO cat-2322 cache_hit=true latency_ms=10
+2026-11-24T09:15:23Z cart-svc INFO cat-2323 cache_hit=true latency_ms=28
+2026-11-24T09:15:24Z api-gateway INFO cat-2324 cache_hit=true latency_ms=12
+2026-11-24T09:15:25Z catalog-svc INFO cat-2325 cache_hit=true latency_ms=23
+2026-11-24T09:15:26Z redis-proxy INFO cat-2326 cache_hit=true latency_ms=15
+2026-11-24T09:15:27Z cart-svc INFO cat-2327 cache_hit=true latency_ms=13
+2026-11-24T09:15:28Z api-gateway INFO cat-2328 cache_hit=true latency_ms=26
+2026-11-24T09:15:29Z catalog-svc INFO cat-2329 cache_hit=true latency_ms=27
+2026-11-24T09:15:30Z redis-proxy INFO cat-2330 cache_hit=true latency_ms=21
+2026-11-24T09:15:31Z cart-svc INFO cat-2331 cache_hit=true latency_ms=21
+2026-11-24T09:15:32Z api-gateway INFO cat-2332 cache_hit=true latency_ms=24
+2026-11-24T09:15:33Z catalog-svc INFO cat-2333 cache_hit=true latency_ms=18
+2026-11-24T09:15:34Z redis-proxy INFO cat-2334 cache_hit=true latency_ms=15
+2026-11-24T09:15:35Z cart-svc INFO cat-2335 cache_hit=true latency_ms=19
+2026-11-24T09:15:36Z api-gateway INFO cat-2336 cache_hit=true latency_ms=25
+2026-11-24T09:15:37Z catalog-svc INFO cat-2337 cache_hit=true latency_ms=11
+2026-11-24T09:15:38Z redis-proxy INFO cat-2338 cache_hit=true latency_ms=17
+2026-11-24T09:15:39Z cart-svc INFO cat-2339 cache_hit=true latency_ms=22
+2026-11-24T09:15:40Z api-gateway INFO cat-2340 cache_hit=true latency_ms=26
+2026-11-24T09:15:41Z catalog-svc INFO cat-2341 cache_hit=true latency_ms=11
+2026-11-24T09:15:42Z redis-proxy INFO cat-2342 cache_hit=true latency_ms=18
+2026-11-24T09:15:43Z cart-svc INFO cat-2343 cache_hit=true latency_ms=16
+2026-11-24T09:15:44Z api-gateway INFO cat-2344 cache_hit=true latency_ms=25
+2026-11-24T09:15:45Z catalog-svc INFO cat-2345 cache_hit=true latency_ms=12
+2026-11-24T09:15:46Z redis-proxy INFO cat-2346 cache_hit=true latency_ms=13
+2026-11-24T09:15:47Z cart-svc INFO cat-2347 cache_hit=true latency_ms=18
+2026-11-24T09:15:48Z api-gateway INFO cat-2348 cache_hit=true latency_ms=9
+2026-11-24T09:15:49Z catalog-svc INFO cat-2349 cache_hit=true latency_ms=18
+2026-11-24T09:15:50Z redis-proxy INFO cat-2350 cache_hit=true latency_ms=24
+2026-11-24T09:15:51Z cart-svc INFO cat-2351 cache_hit=true latency_ms=23
+2026-11-24T09:15:52Z api-gateway INFO cat-2352 cache_hit=true latency_ms=13
+2026-11-24T09:15:53Z catalog-svc INFO cat-2353 cache_hit=true latency_ms=9
+2026-11-24T09:15:54Z redis-proxy INFO cat-2354 cache_hit=true latency_ms=22
+2026-11-24T09:15:55Z cart-svc INFO cat-2355 cache_hit=true latency_ms=18
+2026-11-24T09:15:56Z api-gateway INFO cat-2356 cache_hit=true latency_ms=22
+2026-11-24T09:15:57Z catalog-svc INFO cat-2357 cache_hit=true latency_ms=11
+2026-11-24T09:15:58Z redis-proxy INFO cat-2358 cache_hit=true latency_ms=27
+2026-11-24T09:15:59Z cart-svc INFO cat-2359 cache_hit=true latency_ms=13
+2026-11-24T09:16:00Z api-gateway INFO cat-2360 cache_hit=true latency_ms=20
+2026-11-24T09:16:01Z catalog-svc INFO cat-2361 cache_hit=true latency_ms=28
+2026-11-24T09:16:02Z redis-proxy INFO cat-2362 cache_hit=true latency_ms=20
+2026-11-24T09:16:03Z cart-svc INFO cat-2363 cache_hit=true latency_ms=15
+2026-11-24T09:16:04Z api-gateway INFO cat-2364 cache_hit=true latency_ms=12
+2026-11-24T09:16:05Z catalog-svc INFO cat-2365 cache_hit=true latency_ms=13
+2026-11-24T09:16:06Z redis-proxy INFO cat-2366 cache_hit=true latency_ms=25
+2026-11-24T09:16:07Z cart-svc INFO cat-2367 cache_hit=true latency_ms=23
+2026-11-24T09:16:08Z api-gateway INFO cat-2368 cache_hit=true latency_ms=15
+2026-11-24T09:16:09Z catalog-svc INFO cat-2369 cache_hit=true latency_ms=21
+2026-11-24T09:16:10Z redis-proxy INFO cat-2370 cache_hit=true latency_ms=17
+2026-11-24T09:16:11Z cart-svc INFO cat-2371 cache_hit=true latency_ms=19
+2026-11-24T09:16:12Z api-gateway INFO cat-2372 cache_hit=true latency_ms=20
+2026-11-24T09:16:13Z catalog-svc INFO cat-2373 cache_hit=true latency_ms=12
+2026-11-24T09:16:14Z redis-proxy INFO cat-2374 cache_hit=true latency_ms=18
+2026-11-24T09:16:15Z cart-svc INFO cat-2375 cache_hit=true latency_ms=13
+2026-11-24T09:16:16Z api-gateway INFO cat-2376 cache_hit=true latency_ms=24
+2026-11-24T09:16:17Z catalog-svc INFO cat-2377 cache_hit=true latency_ms=15
+2026-11-24T09:16:18Z redis-proxy INFO cat-2378 cache_hit=true latency_ms=27
+2026-11-24T09:16:19Z cart-svc INFO cat-2379 cache_hit=true latency_ms=13
+2026-11-24T09:16:20Z api-gateway INFO cat-2380 cache_hit=true latency_ms=24
+2026-11-24T09:16:21Z catalog-svc INFO cat-2381 cache_hit=true latency_ms=10
+2026-11-24T09:16:22Z redis-proxy INFO cat-2382 cache_hit=true latency_ms=22
+2026-11-24T09:16:23Z cart-svc INFO cat-2383 cache_hit=true latency_ms=11
+2026-11-24T09:16:24Z api-gateway INFO cat-2384 cache_hit=true latency_ms=15
+2026-11-24T09:16:25Z catalog-svc INFO cat-2385 cache_hit=true latency_ms=27
+2026-11-24T09:16:26Z redis-proxy INFO cat-2386 cache_hit=true latency_ms=17
+2026-11-24T09:16:27Z cart-svc INFO cat-2387 cache_hit=true latency_ms=21
+2026-11-24T09:16:28Z api-gateway INFO cat-2388 cache_hit=true latency_ms=14
+2026-11-24T09:16:29Z catalog-svc INFO cat-2389 cache_hit=true latency_ms=9
+2026-11-24T09:16:30Z redis-proxy INFO cat-2390 cache_hit=true latency_ms=19
+2026-11-24T09:16:31Z cart-svc INFO cat-2391 cache_hit=true latency_ms=16
+2026-11-24T09:16:32Z api-gateway INFO cat-2392 cache_hit=true latency_ms=9
+2026-11-24T09:16:33Z catalog-svc INFO cat-2393 cache_hit=true latency_ms=9
+2026-11-24T09:16:34Z redis-proxy INFO cat-2394 cache_hit=true latency_ms=19
+2026-11-24T09:16:35Z cart-svc INFO cat-2395 cache_hit=true latency_ms=17
+2026-11-24T09:16:36Z api-gateway INFO cat-2396 cache_hit=true latency_ms=23
+2026-11-24T09:16:37Z catalog-svc INFO cat-2397 cache_hit=true latency_ms=17
+2026-11-24T09:16:38Z redis-proxy INFO cat-2398 cache_hit=true latency_ms=9
+2026-11-24T09:16:39Z cart-svc INFO cat-2399 cache_hit=true latency_ms=21
+2026-11-24T09:16:40Z api-gateway INFO cat-2400 cache_hit=true latency_ms=26
+2026-11-24T09:16:41Z catalog-svc INFO cat-2401 cache_hit=true latency_ms=27
+2026-11-24T09:16:42Z redis-proxy INFO cat-2402 cache_hit=true latency_ms=24
+2026-11-24T09:16:43Z cart-svc INFO cat-2403 cache_hit=true latency_ms=27
+2026-11-24T09:16:44Z api-gateway INFO cat-2404 cache_hit=true latency_ms=18
+2026-11-24T09:16:45Z catalog-svc INFO cat-2405 cache_hit=true latency_ms=10
+2026-11-24T09:16:46Z redis-proxy INFO cat-2406 cache_hit=true latency_ms=19
+2026-11-24T09:16:47Z cart-svc INFO cat-2407 cache_hit=true latency_ms=18
+2026-11-24T09:16:48Z api-gateway INFO cat-2408 cache_hit=true latency_ms=15
+2026-11-24T09:16:49Z catalog-svc INFO cat-2409 cache_hit=true latency_ms=22
+2026-11-24T09:16:50Z redis-proxy INFO cat-2410 cache_hit=true latency_ms=10
+2026-11-24T09:16:51Z cart-svc INFO cat-2411 cache_hit=true latency_ms=15
+2026-11-24T09:16:52Z api-gateway INFO cat-2412 cache_hit=true latency_ms=28
+2026-11-24T09:16:53Z catalog-svc INFO cat-2413 cache_hit=true latency_ms=17
+2026-11-24T09:16:54Z redis-proxy INFO cat-2414 cache_hit=true latency_ms=10
+2026-11-24T09:16:55Z cart-svc INFO cat-2415 cache_hit=true latency_ms=12
+2026-11-24T09:16:56Z api-gateway INFO cat-2416 cache_hit=true latency_ms=25
+2026-11-24T09:16:57Z catalog-svc INFO cat-2417 cache_hit=true latency_ms=15
+2026-11-24T09:16:58Z redis-proxy INFO cat-2418 cache_hit=true latency_ms=22
+2026-11-24T09:16:59Z cart-svc INFO cat-2419 cache_hit=true latency_ms=23
+2026-11-24T09:17:00Z api-gateway INFO cat-2420 cache_hit=true latency_ms=27
+2026-11-24T09:17:01Z catalog-svc INFO cat-2421 cache_hit=true latency_ms=21
+2026-11-24T09:17:02Z redis-proxy INFO cat-2422 cache_hit=true latency_ms=8
+2026-11-24T09:17:03Z cart-svc INFO cat-2423 cache_hit=true latency_ms=14
+2026-11-24T09:17:04Z api-gateway INFO cat-2424 cache_hit=true latency_ms=18
+2026-11-24T09:17:05Z catalog-svc INFO cat-2425 cache_hit=true latency_ms=17
+2026-11-24T09:17:06Z redis-proxy INFO cat-2426 cache_hit=true latency_ms=15
+2026-11-24T09:17:07Z cart-svc INFO cat-2427 cache_hit=true latency_ms=12
+2026-11-24T09:17:08Z api-gateway INFO cat-2428 cache_hit=true latency_ms=18
+2026-11-24T09:17:09Z catalog-svc INFO cat-2429 cache_hit=true latency_ms=12
+2026-11-24T09:17:10Z redis-proxy INFO cat-2430 cache_hit=true latency_ms=12
+2026-11-24T09:17:11Z cart-svc INFO cat-2431 cache_hit=true latency_ms=16
+2026-11-24T09:17:12Z api-gateway INFO cat-2432 cache_hit=true latency_ms=19
+2026-11-24T09:17:13Z catalog-svc INFO cat-2433 cache_hit=true latency_ms=14
+2026-11-24T09:17:14Z redis-proxy INFO cat-2434 cache_hit=true latency_ms=17
+2026-11-24T09:17:15Z cart-svc INFO cat-2435 cache_hit=true latency_ms=14
+2026-11-24T09:17:16Z api-gateway INFO cat-2436 cache_hit=true latency_ms=26
+2026-11-24T09:17:17Z catalog-svc INFO cat-2437 cache_hit=true latency_ms=10
+2026-11-24T09:17:18Z redis-proxy INFO cat-2438 cache_hit=true latency_ms=19
+2026-11-24T09:17:19Z cart-svc INFO cat-2439 cache_hit=true latency_ms=28
+2026-11-24T09:17:20Z api-gateway INFO cat-2440 cache_hit=true latency_ms=24
+2026-11-24T09:17:21Z catalog-svc INFO cat-2441 cache_hit=true latency_ms=25
+2026-11-24T09:17:22Z redis-proxy INFO cat-2442 cache_hit=true latency_ms=24
+2026-11-24T09:17:23Z cart-svc INFO cat-2443 cache_hit=true latency_ms=28
+2026-11-24T09:17:24Z api-gateway INFO cat-2444 cache_hit=true latency_ms=26
+2026-11-24T09:17:25Z catalog-svc INFO cat-2445 cache_hit=true latency_ms=13
+2026-11-24T09:17:26Z redis-proxy INFO cat-2446 cache_hit=true latency_ms=13
+2026-11-24T09:17:27Z cart-svc INFO cat-2447 cache_hit=true latency_ms=20
+2026-11-24T09:17:28Z api-gateway INFO cat-2448 cache_hit=true latency_ms=18
+2026-11-24T09:17:29Z catalog-svc INFO cat-2449 cache_hit=true latency_ms=10
+2026-11-24T09:17:30Z redis-proxy INFO cat-2450 cache_hit=true latency_ms=18
+2026-11-24T09:17:31Z cart-svc INFO cat-2451 cache_hit=true latency_ms=21
+2026-11-24T09:17:32Z api-gateway INFO cat-2452 cache_hit=true latency_ms=24
+2026-11-24T09:17:33Z catalog-svc INFO cat-2453 cache_hit=true latency_ms=14
+2026-11-24T09:17:34Z redis-proxy INFO cat-2454 cache_hit=true latency_ms=28
+2026-11-24T09:17:35Z cart-svc INFO cat-2455 cache_hit=true latency_ms=24
+2026-11-24T09:17:36Z api-gateway INFO cat-2456 cache_hit=true latency_ms=18
+2026-11-24T09:17:37Z catalog-svc INFO cat-2457 cache_hit=true latency_ms=14
+2026-11-24T09:17:38Z redis-proxy INFO cat-2458 cache_hit=true latency_ms=16
+2026-11-24T09:17:39Z cart-svc INFO cat-2459 cache_hit=true latency_ms=12
+2026-11-24T09:17:40Z api-gateway INFO cat-2460 cache_hit=true latency_ms=13
+2026-11-24T09:17:41Z catalog-svc INFO cat-2461 cache_hit=true latency_ms=17
+2026-11-24T09:17:42Z redis-proxy INFO cat-2462 cache_hit=true latency_ms=20
+2026-11-24T09:17:43Z cart-svc INFO cat-2463 cache_hit=true latency_ms=22
+2026-11-24T09:17:44Z api-gateway INFO cat-2464 cache_hit=true latency_ms=9
+2026-11-24T09:17:45Z catalog-svc INFO cat-2465 cache_hit=true latency_ms=14
+2026-11-24T09:17:46Z redis-proxy INFO cat-2466 cache_hit=true latency_ms=26
+2026-11-24T09:17:47Z cart-svc INFO cat-2467 cache_hit=true latency_ms=19
+2026-11-24T09:17:48Z api-gateway INFO cat-2468 cache_hit=true latency_ms=21
+2026-11-24T09:17:49Z catalog-svc INFO cat-2469 cache_hit=true latency_ms=22
+2026-11-24T09:17:50Z redis-proxy INFO cat-2470 cache_hit=true latency_ms=28
+2026-11-24T09:17:51Z cart-svc INFO cat-2471 cache_hit=true latency_ms=26
+2026-11-24T09:17:52Z api-gateway INFO cat-2472 cache_hit=true latency_ms=15
+2026-11-24T09:17:53Z catalog-svc INFO cat-2473 cache_hit=true latency_ms=11
+2026-11-24T09:17:54Z redis-proxy INFO cat-2474 cache_hit=true latency_ms=11
+2026-11-24T09:17:55Z cart-svc INFO cat-2475 cache_hit=true latency_ms=26
+2026-11-24T09:17:56Z api-gateway INFO cat-2476 cache_hit=true latency_ms=25
+2026-11-24T09:17:57Z catalog-svc INFO cat-2477 cache_hit=true latency_ms=15
+2026-11-24T09:17:58Z redis-proxy INFO cat-2478 cache_hit=true latency_ms=13
+2026-11-24T09:17:59Z cart-svc INFO cat-2479 cache_hit=true latency_ms=27
+2026-11-24T09:18:00Z api-gateway INFO cat-2480 cache_hit=true latency_ms=8
+2026-11-24T09:18:01Z catalog-svc INFO cat-2481 cache_hit=true latency_ms=17
+2026-11-24T09:18:02Z redis-proxy INFO cat-2482 cache_hit=true latency_ms=21
+2026-11-24T09:18:03Z cart-svc INFO cat-2483 cache_hit=true latency_ms=23
+2026-11-24T09:18:04Z api-gateway INFO cat-2484 cache_hit=true latency_ms=18
+2026-11-24T09:18:05Z catalog-svc INFO cat-2485 cache_hit=true latency_ms=21
+2026-11-24T09:18:06Z redis-proxy INFO cat-2486 cache_hit=true latency_ms=10
+2026-11-24T09:18:07Z cart-svc INFO cat-2487 cache_hit=true latency_ms=24
+2026-11-24T09:18:08Z api-gateway INFO cat-2488 cache_hit=true latency_ms=8
+2026-11-24T09:18:09Z catalog-svc INFO cat-2489 cache_hit=true latency_ms=14
+2026-11-24T09:18:10Z redis-proxy INFO cat-2490 cache_hit=true latency_ms=10
+2026-11-24T09:18:11Z cart-svc INFO cat-2491 cache_hit=true latency_ms=22
+2026-11-24T09:18:12Z api-gateway INFO cat-2492 cache_hit=true latency_ms=28
+2026-11-24T09:18:13Z catalog-svc INFO cat-2493 cache_hit=true latency_ms=27
+2026-11-24T09:18:14Z redis-proxy INFO cat-2494 cache_hit=true latency_ms=16
+2026-11-24T09:18:15Z cart-svc INFO cat-2495 cache_hit=true latency_ms=15
+2026-11-24T09:18:16Z api-gateway INFO cat-2496 cache_hit=true latency_ms=17
+2026-11-24T09:18:17Z catalog-svc INFO cat-2497 cache_hit=true latency_ms=13
+2026-11-24T09:18:18Z redis-proxy INFO cat-2498 cache_hit=true latency_ms=19
+2026-11-24T09:18:19Z cart-svc INFO cat-2499 cache_hit=true latency_ms=8
+2026-11-24T09:18:20Z api-gateway INFO cat-2500 cache_hit=true latency_ms=17
+2026-11-24T09:18:21Z catalog-svc INFO cat-2501 cache_hit=true latency_ms=24
+2026-11-24T09:18:22Z redis-proxy INFO cat-2502 cache_hit=true latency_ms=13
+2026-11-24T09:18:23Z cart-svc INFO cat-2503 cache_hit=true latency_ms=8
+2026-11-24T09:18:24Z api-gateway INFO cat-2504 cache_hit=true latency_ms=11
+2026-11-24T09:18:25Z catalog-svc INFO cat-2505 cache_hit=true latency_ms=28
+2026-11-24T09:18:26Z redis-proxy INFO cat-2506 cache_hit=true latency_ms=20
+2026-11-24T09:18:27Z cart-svc INFO cat-2507 cache_hit=true latency_ms=12
+2026-11-24T09:18:28Z api-gateway INFO cat-2508 cache_hit=true latency_ms=18
+2026-11-24T09:18:29Z catalog-svc INFO cat-2509 cache_hit=true latency_ms=21
+2026-11-24T09:18:30Z redis-proxy INFO cat-2510 cache_hit=true latency_ms=14
+2026-11-24T09:18:31Z cart-svc INFO cat-2511 cache_hit=true latency_ms=16
+2026-11-24T09:18:32Z api-gateway INFO cat-2512 cache_hit=true latency_ms=14
+2026-11-24T09:18:33Z catalog-svc INFO cat-2513 cache_hit=true latency_ms=24
+2026-11-24T09:18:34Z redis-proxy INFO cat-2514 cache_hit=true latency_ms=23
+2026-11-24T09:18:35Z cart-svc INFO cat-2515 cache_hit=true latency_ms=11
+2026-11-24T09:18:36Z api-gateway INFO cat-2516 cache_hit=true latency_ms=8
+2026-11-24T09:18:37Z catalog-svc INFO cat-2517 cache_hit=true latency_ms=22
+2026-11-24T09:18:38Z redis-proxy INFO cat-2518 cache_hit=true latency_ms=12
+2026-11-24T09:18:39Z cart-svc INFO cat-2519 cache_hit=true latency_ms=13
+2026-11-24T09:18:40Z api-gateway INFO cat-2520 cache_hit=true latency_ms=28
+2026-11-24T09:18:41Z catalog-svc INFO cat-2521 cache_hit=true latency_ms=18
+2026-11-24T09:18:42Z redis-proxy INFO cat-2522 cache_hit=true latency_ms=15
+2026-11-24T09:18:43Z cart-svc INFO cat-2523 cache_hit=true latency_ms=10
+2026-11-24T09:18:44Z api-gateway INFO cat-2524 cache_hit=true latency_ms=18
+2026-11-24T09:18:45Z catalog-svc INFO cat-2525 cache_hit=true latency_ms=24
+2026-11-24T09:18:46Z redis-proxy INFO cat-2526 cache_hit=true latency_ms=22
+2026-11-24T09:18:47Z cart-svc INFO cat-2527 cache_hit=true latency_ms=23
+2026-11-24T09:18:48Z api-gateway INFO cat-2528 cache_hit=true latency_ms=16
+2026-11-24T09:18:49Z catalog-svc INFO cat-2529 cache_hit=true latency_ms=17
+2026-11-24T09:18:50Z redis-proxy INFO cat-2530 cache_hit=true latency_ms=28
+2026-11-24T09:18:51Z cart-svc INFO cat-2531 cache_hit=true latency_ms=12
+2026-11-24T09:18:52Z api-gateway INFO cat-2532 cache_hit=true latency_ms=8
+2026-11-24T09:18:53Z catalog-svc INFO cat-2533 cache_hit=true latency_ms=22
+2026-11-24T09:18:54Z redis-proxy INFO cat-2534 cache_hit=true latency_ms=22
+2026-11-24T09:18:55Z cart-svc INFO cat-2535 cache_hit=true latency_ms=16
+2026-11-24T09:18:56Z api-gateway INFO cat-2536 cache_hit=true latency_ms=21
+2026-11-24T09:18:57Z catalog-svc INFO cat-2537 cache_hit=true latency_ms=19
+2026-11-24T09:18:58Z redis-proxy INFO cat-2538 cache_hit=true latency_ms=27
+2026-11-24T09:18:59Z cart-svc INFO cat-2539 cache_hit=true latency_ms=24
+2026-11-24T09:19:00Z api-gateway INFO cat-2540 cache_hit=true latency_ms=16
+2026-11-24T09:19:01Z catalog-svc INFO cat-2541 cache_hit=true latency_ms=26
+2026-11-24T09:19:02Z redis-proxy INFO cat-2542 cache_hit=true latency_ms=18
+2026-11-24T09:19:03Z cart-svc INFO cat-2543 cache_hit=true latency_ms=16
+2026-11-24T09:19:04Z api-gateway INFO cat-2544 cache_hit=true latency_ms=10
+2026-11-24T09:19:05Z catalog-svc INFO cat-2545 cache_hit=true latency_ms=20
+2026-11-24T09:19:06Z redis-proxy INFO cat-2546 cache_hit=true latency_ms=19
+2026-11-24T09:19:07Z cart-svc INFO cat-2547 cache_hit=true latency_ms=21
+2026-11-24T09:19:08Z api-gateway INFO cat-2548 cache_hit=true latency_ms=23
+2026-11-24T09:19:09Z catalog-svc INFO cat-2549 cache_hit=true latency_ms=28
+2026-11-24T09:19:10Z redis-proxy INFO cat-2550 cache_hit=true latency_ms=25
+2026-11-24T09:19:11Z cart-svc INFO cat-2551 cache_hit=true latency_ms=14
+2026-11-24T09:19:12Z api-gateway INFO cat-2552 cache_hit=true latency_ms=27
+2026-11-24T09:19:13Z catalog-svc INFO cat-2553 cache_hit=true latency_ms=24
+2026-11-24T09:19:14Z redis-proxy INFO cat-2554 cache_hit=true latency_ms=21
+2026-11-24T09:19:15Z cart-svc INFO cat-2555 cache_hit=true latency_ms=27
+2026-11-24T09:19:16Z api-gateway INFO cat-2556 cache_hit=true latency_ms=11
+2026-11-24T09:19:17Z catalog-svc INFO cat-2557 cache_hit=true latency_ms=18
+2026-11-24T09:19:18Z redis-proxy INFO cat-2558 cache_hit=true latency_ms=13
+2026-11-24T09:19:19Z cart-svc INFO cat-2559 cache_hit=true latency_ms=22
+2026-11-24T09:19:20Z api-gateway INFO cat-2560 cache_hit=true latency_ms=27
+2026-11-24T09:19:21Z catalog-svc INFO cat-2561 cache_hit=true latency_ms=15
+2026-11-24T09:19:22Z redis-proxy INFO cat-2562 cache_hit=true latency_ms=18
+2026-11-24T09:19:23Z cart-svc INFO cat-2563 cache_hit=true latency_ms=25
+2026-11-24T09:19:24Z api-gateway INFO cat-2564 cache_hit=true latency_ms=13
+2026-11-24T09:19:25Z catalog-svc INFO cat-2565 cache_hit=true latency_ms=21
+2026-11-24T09:19:26Z redis-proxy INFO cat-2566 cache_hit=true latency_ms=25
+2026-11-24T09:19:27Z cart-svc INFO cat-2567 cache_hit=true latency_ms=14
+2026-11-24T09:19:28Z api-gateway INFO cat-2568 cache_hit=true latency_ms=25
+2026-11-24T09:19:29Z catalog-svc INFO cat-2569 cache_hit=true latency_ms=27
+2026-11-24T09:19:30Z redis-proxy INFO cat-2570 cache_hit=true latency_ms=13
+2026-11-24T09:19:31Z cart-svc INFO cat-2571 cache_hit=true latency_ms=13
+2026-11-24T09:19:32Z api-gateway INFO cat-2572 cache_hit=true latency_ms=9
+2026-11-24T09:19:33Z catalog-svc INFO cat-2573 cache_hit=true latency_ms=12
+2026-11-24T09:19:34Z redis-proxy INFO cat-2574 cache_hit=true latency_ms=20
+2026-11-24T09:19:35Z cart-svc INFO cat-2575 cache_hit=true latency_ms=27
+2026-11-24T09:19:36Z api-gateway INFO cat-2576 cache_hit=true latency_ms=26
+2026-11-24T09:19:37Z catalog-svc INFO cat-2577 cache_hit=true latency_ms=20
+2026-11-24T09:19:38Z redis-proxy INFO cat-2578 cache_hit=true latency_ms=23
+2026-11-24T09:19:39Z cart-svc INFO cat-2579 cache_hit=true latency_ms=10
+2026-11-24T09:19:40Z api-gateway INFO cat-2580 cache_hit=true latency_ms=12
+2026-11-24T09:19:41Z catalog-svc INFO cat-2581 cache_hit=true latency_ms=16
+2026-11-24T09:19:42Z redis-proxy INFO cat-2582 cache_hit=true latency_ms=24
+2026-11-24T09:19:43Z cart-svc INFO cat-2583 cache_hit=true latency_ms=11
+2026-11-24T09:19:44Z api-gateway INFO cat-2584 cache_hit=true latency_ms=12
+2026-11-24T09:19:45Z catalog-svc INFO cat-2585 cache_hit=true latency_ms=11
+2026-11-24T09:19:46Z redis-proxy INFO cat-2586 cache_hit=true latency_ms=25
+2026-11-24T09:19:47Z cart-svc INFO cat-2587 cache_hit=true latency_ms=18
+2026-11-24T09:19:48Z api-gateway INFO cat-2588 cache_hit=true latency_ms=27
+2026-11-24T09:19:49Z catalog-svc INFO cat-2589 cache_hit=true latency_ms=16
+2026-11-24T09:19:50Z redis-proxy INFO cat-2590 cache_hit=true latency_ms=19
+2026-11-24T09:19:51Z cart-svc INFO cat-2591 cache_hit=true latency_ms=24
+2026-11-24T09:19:52Z api-gateway INFO cat-2592 cache_hit=true latency_ms=8
+2026-11-24T09:19:53Z catalog-svc INFO cat-2593 cache_hit=true latency_ms=25
+2026-11-24T09:19:54Z redis-proxy INFO cat-2594 cache_hit=true latency_ms=15
+2026-11-24T09:19:55Z cart-svc INFO cat-2595 cache_hit=true latency_ms=12
+2026-11-24T09:19:56Z api-gateway INFO cat-2596 cache_hit=true latency_ms=28
+2026-11-24T09:19:57Z catalog-svc INFO cat-2597 cache_hit=true latency_ms=8
+2026-11-24T09:19:58Z redis-proxy INFO cat-2598 cache_hit=true latency_ms=16
+2026-11-24T09:19:59Z cart-svc INFO cat-2599 cache_hit=true latency_ms=9
+2026-11-24T09:20:00Z api-gateway INFO cat-2600 cache_hit=true latency_ms=11
+2026-11-24T09:20:01Z catalog-svc INFO cat-2601 cache_hit=true latency_ms=12
+2026-11-24T09:20:02Z redis-proxy INFO cat-2602 cache_hit=true latency_ms=8
+2026-11-24T09:20:03Z cart-svc INFO cat-2603 cache_hit=true latency_ms=27
+2026-11-24T09:20:04Z api-gateway INFO cat-2604 cache_hit=true latency_ms=10
+2026-11-24T09:20:05Z catalog-svc INFO cat-2605 cache_hit=true latency_ms=25
+2026-11-24T09:20:06Z redis-proxy INFO cat-2606 cache_hit=true latency_ms=26
+2026-11-24T09:20:07Z cart-svc INFO cat-2607 cache_hit=true latency_ms=22
+2026-11-24T09:20:08Z api-gateway INFO cat-2608 cache_hit=true latency_ms=9
+2026-11-24T09:20:09Z catalog-svc INFO cat-2609 cache_hit=true latency_ms=17
+2026-11-24T09:20:10Z redis-proxy INFO cat-2610 cache_hit=true latency_ms=13
+2026-11-24T09:20:11Z cart-svc INFO cat-2611 cache_hit=true latency_ms=21
+2026-11-24T09:20:12Z api-gateway INFO cat-2612 cache_hit=true latency_ms=23
+2026-11-24T09:20:13Z catalog-svc INFO cat-2613 cache_hit=true latency_ms=17
+2026-11-24T09:20:14Z redis-proxy INFO cat-2614 cache_hit=true latency_ms=9
+2026-11-24T09:20:15Z cart-svc INFO cat-2615 cache_hit=true latency_ms=14
+2026-11-24T09:20:16Z api-gateway INFO cat-2616 cache_hit=true latency_ms=25
+2026-11-24T09:20:17Z catalog-svc INFO cat-2617 cache_hit=true latency_ms=8
+2026-11-24T09:20:18Z redis-proxy INFO cat-2618 cache_hit=true latency_ms=16
+2026-11-24T09:20:19Z cart-svc INFO cat-2619 cache_hit=true latency_ms=12
+2026-11-24T09:20:20Z api-gateway INFO cat-2620 cache_hit=true latency_ms=19
+2026-11-24T09:20:21Z catalog-svc INFO cat-2621 cache_hit=true latency_ms=8
+2026-11-24T09:20:22Z redis-proxy INFO cat-2622 cache_hit=true latency_ms=10
+2026-11-24T09:20:23Z cart-svc INFO cat-2623 cache_hit=true latency_ms=17
+2026-11-24T09:20:24Z api-gateway INFO cat-2624 cache_hit=true latency_ms=25
+2026-11-24T09:20:25Z catalog-svc INFO cat-2625 cache_hit=true latency_ms=19
+2026-11-24T09:20:26Z redis-proxy INFO cat-2626 cache_hit=true latency_ms=27
+2026-11-24T09:20:27Z cart-svc INFO cat-2627 cache_hit=true latency_ms=18
+2026-11-24T09:20:28Z api-gateway INFO cat-2628 cache_hit=true latency_ms=23
+2026-11-24T09:20:29Z catalog-svc INFO cat-2629 cache_hit=true latency_ms=13
+2026-11-24T09:20:30Z redis-proxy INFO cat-2630 cache_hit=true latency_ms=19
+2026-11-24T09:20:31Z cart-svc INFO cat-2631 cache_hit=true latency_ms=13
+2026-11-24T09:20:32Z api-gateway INFO cat-2632 cache_hit=true latency_ms=11
+2026-11-24T09:20:33Z catalog-svc INFO cat-2633 cache_hit=true latency_ms=17
+2026-11-24T09:20:34Z redis-proxy INFO cat-2634 cache_hit=true latency_ms=13
+2026-11-24T09:20:35Z cart-svc INFO cat-2635 cache_hit=true latency_ms=23
+2026-11-24T09:20:36Z api-gateway INFO cat-2636 cache_hit=true latency_ms=9
+2026-11-24T09:20:37Z catalog-svc INFO cat-2637 cache_hit=true latency_ms=27
+2026-11-24T09:20:38Z redis-proxy INFO cat-2638 cache_hit=true latency_ms=19
+2026-11-24T09:20:39Z cart-svc INFO cat-2639 cache_hit=true latency_ms=24
+2026-11-24T09:20:40Z api-gateway INFO cat-2640 cache_hit=true latency_ms=17
+2026-11-24T09:20:41Z catalog-svc INFO cat-2641 cache_hit=true latency_ms=8
+2026-11-24T09:20:42Z redis-proxy INFO cat-2642 cache_hit=true latency_ms=26
+2026-11-24T09:20:43Z cart-svc INFO cat-2643 cache_hit=true latency_ms=19
+2026-11-24T09:20:44Z api-gateway INFO cat-2644 cache_hit=true latency_ms=13
+2026-11-24T09:20:45Z catalog-svc INFO cat-2645 cache_hit=true latency_ms=12
+2026-11-24T09:20:46Z redis-proxy INFO cat-2646 cache_hit=true latency_ms=28
+2026-11-24T09:20:47Z cart-svc INFO cat-2647 cache_hit=true latency_ms=25
+2026-11-24T09:20:48Z api-gateway INFO cat-2648 cache_hit=true latency_ms=11
+2026-11-24T09:20:49Z catalog-svc INFO cat-2649 cache_hit=true latency_ms=20
+2026-11-24T09:20:50Z redis-proxy INFO cat-2650 cache_hit=true latency_ms=27
+2026-11-24T09:20:51Z cart-svc INFO cat-2651 cache_hit=true latency_ms=9
+2026-11-24T09:20:52Z api-gateway INFO cat-2652 cache_hit=true latency_ms=23
+2026-11-24T09:20:53Z catalog-svc INFO cat-2653 cache_hit=true latency_ms=24
+2026-11-24T09:20:54Z redis-proxy INFO cat-2654 cache_hit=true latency_ms=14
+2026-11-24T09:20:55Z cart-svc INFO cat-2655 cache_hit=true latency_ms=28
+2026-11-24T09:20:56Z api-gateway INFO cat-2656 cache_hit=true latency_ms=17
+2026-11-24T09:20:57Z catalog-svc INFO cat-2657 cache_hit=true latency_ms=14
+2026-11-24T09:20:58Z redis-proxy INFO cat-2658 cache_hit=true latency_ms=9
+2026-11-24T09:20:59Z cart-svc INFO cat-2659 cache_hit=true latency_ms=18
+2026-11-24T09:21:00Z redis-proxy WARN admin_op ttl_flush executed namespace=product_catalog evicted_keys=48210
+2026-11-24T09:21:02Z catalog-svc ERROR cat-2662 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:03Z cart-svc ERROR cat-2663 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:04Z api-gateway INFO cat-2664 health probe ok
+2026-11-24T09:21:04Z catalog-svc ERROR cat-2664 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:06Z cart-svc ERROR cat-2666 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:06Z catalog-svc ERROR cat-2666 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:08Z api-gateway INFO cat-2668 health probe ok
+2026-11-24T09:21:08Z catalog-svc ERROR cat-2668 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:09Z cart-svc ERROR cat-2669 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:10Z catalog-svc ERROR cat-2670 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:12Z api-gateway INFO cat-2672 health probe ok
+2026-11-24T09:21:12Z cart-svc ERROR cat-2672 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:12Z catalog-svc ERROR cat-2672 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:14Z catalog-svc ERROR cat-2674 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:15Z cart-svc ERROR cat-2675 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:16Z api-gateway INFO cat-2676 health probe ok
+2026-11-24T09:21:16Z catalog-svc ERROR cat-2676 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:18Z cart-svc ERROR cat-2678 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:18Z catalog-svc ERROR cat-2678 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:20Z api-gateway INFO cat-2680 health probe ok
+2026-11-24T09:21:20Z catalog-svc ERROR cat-2680 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:21Z cart-svc ERROR cat-2681 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:22Z catalog-svc ERROR cat-2682 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:24Z api-gateway INFO cat-2684 health probe ok
+2026-11-24T09:21:24Z cart-svc ERROR cat-2684 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:24Z catalog-svc ERROR cat-2684 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:26Z catalog-svc ERROR cat-2686 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:27Z cart-svc ERROR cat-2687 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:28Z api-gateway INFO cat-2688 health probe ok
+2026-11-24T09:21:28Z catalog-svc ERROR cat-2688 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:30Z cart-svc ERROR cat-2690 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:30Z catalog-svc ERROR cat-2690 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:32Z api-gateway INFO cat-2692 health probe ok
+2026-11-24T09:21:32Z catalog-svc ERROR cat-2692 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:33Z cart-svc ERROR cat-2693 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:34Z catalog-svc ERROR cat-2694 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:36Z api-gateway INFO cat-2696 health probe ok
+2026-11-24T09:21:36Z cart-svc ERROR cat-2696 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:36Z catalog-svc ERROR cat-2696 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:38Z catalog-svc ERROR cat-2698 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:39Z cart-svc ERROR cat-2699 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:40Z api-gateway INFO cat-2700 health probe ok
+2026-11-24T09:21:40Z catalog-svc ERROR cat-2700 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:42Z cart-svc ERROR cat-2702 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:42Z catalog-svc ERROR cat-2702 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:44Z api-gateway INFO cat-2704 health probe ok
+2026-11-24T09:21:44Z catalog-svc ERROR cat-2704 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:45Z cart-svc ERROR cat-2705 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:46Z catalog-svc ERROR cat-2706 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:48Z api-gateway INFO cat-2708 health probe ok
+2026-11-24T09:21:48Z cart-svc ERROR cat-2708 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:48Z catalog-svc ERROR cat-2708 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:50Z catalog-svc ERROR cat-2710 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:51Z cart-svc ERROR cat-2711 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:52Z api-gateway INFO cat-2712 health probe ok
+2026-11-24T09:21:52Z catalog-svc ERROR cat-2712 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:54Z cart-svc ERROR cat-2714 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:54Z catalog-svc ERROR cat-2714 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:56Z api-gateway INFO cat-2716 health probe ok
+2026-11-24T09:21:56Z catalog-svc ERROR cat-2716 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:21:57Z cart-svc ERROR cat-2717 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:21:58Z catalog-svc ERROR cat-2718 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:00Z api-gateway INFO cat-2720 health probe ok
+2026-11-24T09:22:00Z cart-svc ERROR cat-2720 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:00Z catalog-svc ERROR cat-2720 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:02Z catalog-svc ERROR cat-2722 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:03Z cart-svc ERROR cat-2723 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:04Z api-gateway INFO cat-2724 health probe ok
+2026-11-24T09:22:04Z catalog-svc ERROR cat-2724 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:06Z cart-svc ERROR cat-2726 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:06Z catalog-svc ERROR cat-2726 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:08Z api-gateway INFO cat-2728 health probe ok
+2026-11-24T09:22:08Z catalog-svc ERROR cat-2728 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:09Z cart-svc ERROR cat-2729 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:10Z catalog-svc ERROR cat-2730 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:12Z api-gateway INFO cat-2732 health probe ok
+2026-11-24T09:22:12Z cart-svc ERROR cat-2732 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:12Z catalog-svc ERROR cat-2732 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:14Z catalog-svc ERROR cat-2734 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:15Z cart-svc ERROR cat-2735 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:16Z api-gateway INFO cat-2736 health probe ok
+2026-11-24T09:22:16Z catalog-svc ERROR cat-2736 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:18Z cart-svc ERROR cat-2738 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:18Z catalog-svc ERROR cat-2738 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:20Z api-gateway INFO cat-2740 health probe ok
+2026-11-24T09:22:20Z catalog-svc ERROR cat-2740 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:21Z cart-svc ERROR cat-2741 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:22Z catalog-svc ERROR cat-2742 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:24Z api-gateway INFO cat-2744 health probe ok
+2026-11-24T09:22:24Z cart-svc ERROR cat-2744 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:24Z catalog-svc ERROR cat-2744 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:26Z catalog-svc ERROR cat-2746 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:27Z cart-svc ERROR cat-2747 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:28Z api-gateway INFO cat-2748 health probe ok
+2026-11-24T09:22:28Z catalog-svc ERROR cat-2748 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:30Z cart-svc ERROR cat-2750 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:30Z catalog-svc ERROR cat-2750 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:32Z api-gateway INFO cat-2752 health probe ok
+2026-11-24T09:22:32Z catalog-svc ERROR cat-2752 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:33Z cart-svc ERROR cat-2753 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:34Z catalog-svc ERROR cat-2754 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:36Z api-gateway INFO cat-2756 health probe ok
+2026-11-24T09:22:36Z cart-svc ERROR cat-2756 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:36Z catalog-svc ERROR cat-2756 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:38Z catalog-svc ERROR cat-2758 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:39Z cart-svc ERROR cat-2759 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:40Z api-gateway INFO cat-2760 health probe ok
+2026-11-24T09:22:40Z catalog-svc ERROR cat-2760 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:42Z cart-svc ERROR cat-2762 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:42Z catalog-svc ERROR cat-2762 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:44Z api-gateway INFO cat-2764 health probe ok
+2026-11-24T09:22:44Z catalog-svc ERROR cat-2764 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:45Z cart-svc ERROR cat-2765 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:46Z catalog-svc ERROR cat-2766 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:48Z api-gateway INFO cat-2768 health probe ok
+2026-11-24T09:22:48Z cart-svc ERROR cat-2768 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:48Z catalog-svc ERROR cat-2768 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:50Z catalog-svc ERROR cat-2770 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:51Z cart-svc ERROR cat-2771 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:52Z api-gateway INFO cat-2772 health probe ok
+2026-11-24T09:22:52Z catalog-svc ERROR cat-2772 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:54Z cart-svc ERROR cat-2774 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:54Z catalog-svc ERROR cat-2774 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:56Z api-gateway INFO cat-2776 health probe ok
+2026-11-24T09:22:56Z catalog-svc ERROR cat-2776 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:22:57Z cart-svc ERROR cat-2777 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:22:58Z catalog-svc ERROR cat-2778 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:00Z api-gateway INFO cat-2780 health probe ok
+2026-11-24T09:23:00Z cart-svc ERROR cat-2780 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:00Z catalog-svc ERROR cat-2780 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:02Z catalog-svc ERROR cat-2782 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:03Z cart-svc ERROR cat-2783 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:04Z api-gateway INFO cat-2784 health probe ok
+2026-11-24T09:23:04Z catalog-svc ERROR cat-2784 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:06Z cart-svc ERROR cat-2786 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:06Z catalog-svc ERROR cat-2786 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:08Z api-gateway INFO cat-2788 health probe ok
+2026-11-24T09:23:08Z catalog-svc ERROR cat-2788 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:09Z cart-svc ERROR cat-2789 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:10Z catalog-svc ERROR cat-2790 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:12Z api-gateway INFO cat-2792 health probe ok
+2026-11-24T09:23:12Z cart-svc ERROR cat-2792 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:12Z catalog-svc ERROR cat-2792 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:14Z catalog-svc ERROR cat-2794 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:15Z cart-svc ERROR cat-2795 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:16Z api-gateway INFO cat-2796 health probe ok
+2026-11-24T09:23:16Z catalog-svc ERROR cat-2796 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:18Z cart-svc ERROR cat-2798 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:18Z catalog-svc ERROR cat-2798 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:20Z api-gateway INFO cat-2800 health probe ok
+2026-11-24T09:23:20Z catalog-svc ERROR cat-2800 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:21Z cart-svc ERROR cat-2801 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:22Z catalog-svc ERROR cat-2802 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:24Z api-gateway INFO cat-2804 health probe ok
+2026-11-24T09:23:24Z cart-svc ERROR cat-2804 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:24Z catalog-svc ERROR cat-2804 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:26Z catalog-svc ERROR cat-2806 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:27Z cart-svc ERROR cat-2807 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:28Z api-gateway INFO cat-2808 health probe ok
+2026-11-24T09:23:28Z catalog-svc ERROR cat-2808 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:30Z cart-svc ERROR cat-2810 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:30Z catalog-svc ERROR cat-2810 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:32Z api-gateway INFO cat-2812 health probe ok
+2026-11-24T09:23:32Z catalog-svc ERROR cat-2812 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:33Z cart-svc ERROR cat-2813 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:34Z catalog-svc ERROR cat-2814 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:36Z api-gateway INFO cat-2816 health probe ok
+2026-11-24T09:23:36Z cart-svc ERROR cat-2816 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:36Z catalog-svc ERROR cat-2816 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:38Z catalog-svc ERROR cat-2818 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:39Z cart-svc ERROR cat-2819 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:40Z api-gateway INFO cat-2820 health probe ok
+2026-11-24T09:23:40Z catalog-svc ERROR cat-2820 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:42Z cart-svc ERROR cat-2822 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:42Z catalog-svc ERROR cat-2822 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:44Z api-gateway INFO cat-2824 health probe ok
+2026-11-24T09:23:44Z catalog-svc ERROR cat-2824 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:45Z cart-svc ERROR cat-2825 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:46Z catalog-svc ERROR cat-2826 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:48Z api-gateway INFO cat-2828 health probe ok
+2026-11-24T09:23:48Z cart-svc ERROR cat-2828 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:48Z catalog-svc ERROR cat-2828 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:50Z catalog-svc ERROR cat-2830 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:51Z cart-svc ERROR cat-2831 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:52Z api-gateway INFO cat-2832 health probe ok
+2026-11-24T09:23:52Z catalog-svc ERROR cat-2832 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:54Z cart-svc ERROR cat-2834 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:54Z catalog-svc ERROR cat-2834 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:56Z api-gateway INFO cat-2836 health probe ok
+2026-11-24T09:23:56Z catalog-svc ERROR cat-2836 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:23:57Z cart-svc ERROR cat-2837 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:23:58Z catalog-svc ERROR cat-2838 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:00Z api-gateway INFO cat-2840 health probe ok
+2026-11-24T09:24:00Z cart-svc ERROR cat-2840 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:00Z catalog-svc ERROR cat-2840 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:02Z catalog-svc ERROR cat-2842 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:03Z cart-svc ERROR cat-2843 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:04Z api-gateway INFO cat-2844 health probe ok
+2026-11-24T09:24:04Z catalog-svc ERROR cat-2844 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:06Z cart-svc ERROR cat-2846 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:06Z catalog-svc ERROR cat-2846 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:08Z api-gateway INFO cat-2848 health probe ok
+2026-11-24T09:24:08Z catalog-svc ERROR cat-2848 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:09Z cart-svc ERROR cat-2849 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:10Z catalog-svc ERROR cat-2850 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:12Z api-gateway INFO cat-2852 health probe ok
+2026-11-24T09:24:12Z cart-svc ERROR cat-2852 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:12Z catalog-svc ERROR cat-2852 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:14Z catalog-svc ERROR cat-2854 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:15Z cart-svc ERROR cat-2855 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:16Z api-gateway INFO cat-2856 health probe ok
+2026-11-24T09:24:16Z catalog-svc ERROR cat-2856 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:18Z cart-svc ERROR cat-2858 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:18Z catalog-svc ERROR cat-2858 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:20Z api-gateway INFO cat-2860 health probe ok
+2026-11-24T09:24:20Z catalog-svc ERROR cat-2860 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:21Z cart-svc ERROR cat-2861 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:22Z catalog-svc ERROR cat-2862 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:24Z api-gateway INFO cat-2864 health probe ok
+2026-11-24T09:24:24Z cart-svc ERROR cat-2864 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:24Z catalog-svc ERROR cat-2864 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:26Z catalog-svc ERROR cat-2866 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:27Z cart-svc ERROR cat-2867 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:28Z api-gateway INFO cat-2868 health probe ok
+2026-11-24T09:24:28Z catalog-svc ERROR cat-2868 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:30Z cart-svc ERROR cat-2870 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:30Z catalog-svc ERROR cat-2870 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:32Z api-gateway INFO cat-2872 health probe ok
+2026-11-24T09:24:32Z catalog-svc ERROR cat-2872 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:33Z cart-svc ERROR cat-2873 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:34Z catalog-svc ERROR cat-2874 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:36Z api-gateway INFO cat-2876 health probe ok
+2026-11-24T09:24:36Z cart-svc ERROR cat-2876 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:36Z catalog-svc ERROR cat-2876 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:38Z catalog-svc ERROR cat-2878 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:39Z cart-svc ERROR cat-2879 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:40Z api-gateway INFO cat-2880 health probe ok
+2026-11-24T09:24:40Z catalog-svc ERROR cat-2880 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:42Z cart-svc ERROR cat-2882 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:42Z catalog-svc ERROR cat-2882 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:44Z api-gateway INFO cat-2884 health probe ok
+2026-11-24T09:24:44Z catalog-svc ERROR cat-2884 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:45Z cart-svc ERROR cat-2885 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:46Z catalog-svc ERROR cat-2886 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:48Z api-gateway INFO cat-2888 health probe ok
+2026-11-24T09:24:48Z cart-svc ERROR cat-2888 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:48Z catalog-svc ERROR cat-2888 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:50Z catalog-svc ERROR cat-2890 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:51Z cart-svc ERROR cat-2891 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:52Z api-gateway INFO cat-2892 health probe ok
+2026-11-24T09:24:52Z catalog-svc ERROR cat-2892 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:54Z cart-svc ERROR cat-2894 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:54Z catalog-svc ERROR cat-2894 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:56Z api-gateway INFO cat-2896 health probe ok
+2026-11-24T09:24:56Z catalog-svc ERROR cat-2896 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:24:57Z cart-svc ERROR cat-2897 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:24:58Z catalog-svc ERROR cat-2898 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:00Z api-gateway INFO cat-2900 health probe ok
+2026-11-24T09:25:00Z cart-svc ERROR cat-2900 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:00Z catalog-svc ERROR cat-2900 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:02Z catalog-svc ERROR cat-2902 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:03Z cart-svc ERROR cat-2903 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:04Z api-gateway INFO cat-2904 health probe ok
+2026-11-24T09:25:04Z catalog-svc ERROR cat-2904 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:06Z cart-svc ERROR cat-2906 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:06Z catalog-svc ERROR cat-2906 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:08Z api-gateway INFO cat-2908 health probe ok
+2026-11-24T09:25:08Z catalog-svc ERROR cat-2908 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:09Z cart-svc ERROR cat-2909 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:10Z catalog-svc ERROR cat-2910 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:12Z api-gateway INFO cat-2912 health probe ok
+2026-11-24T09:25:12Z cart-svc ERROR cat-2912 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:12Z catalog-svc ERROR cat-2912 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:14Z catalog-svc ERROR cat-2914 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:15Z cart-svc ERROR cat-2915 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:16Z api-gateway INFO cat-2916 health probe ok
+2026-11-24T09:25:16Z catalog-svc ERROR cat-2916 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:18Z cart-svc ERROR cat-2918 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:18Z catalog-svc ERROR cat-2918 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:20Z api-gateway INFO cat-2920 health probe ok
+2026-11-24T09:25:20Z catalog-svc ERROR cat-2920 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:21Z cart-svc ERROR cat-2921 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:22Z catalog-svc ERROR cat-2922 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:24Z api-gateway INFO cat-2924 health probe ok
+2026-11-24T09:25:24Z cart-svc ERROR cat-2924 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:24Z catalog-svc ERROR cat-2924 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:26Z catalog-svc ERROR cat-2926 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:27Z cart-svc ERROR cat-2927 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:28Z api-gateway INFO cat-2928 health probe ok
+2026-11-24T09:25:28Z catalog-svc ERROR cat-2928 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:30Z cart-svc ERROR cat-2930 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:30Z catalog-svc ERROR cat-2930 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:32Z api-gateway INFO cat-2932 health probe ok
+2026-11-24T09:25:32Z catalog-svc ERROR cat-2932 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:33Z cart-svc ERROR cat-2933 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:34Z catalog-svc ERROR cat-2934 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:36Z api-gateway INFO cat-2936 health probe ok
+2026-11-24T09:25:36Z cart-svc ERROR cat-2936 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:36Z catalog-svc ERROR cat-2936 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:38Z catalog-svc ERROR cat-2938 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:39Z cart-svc ERROR cat-2939 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:40Z api-gateway INFO cat-2940 health probe ok
+2026-11-24T09:25:40Z catalog-svc ERROR cat-2940 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:42Z cart-svc ERROR cat-2942 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:42Z catalog-svc ERROR cat-2942 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:44Z api-gateway INFO cat-2944 health probe ok
+2026-11-24T09:25:44Z catalog-svc ERROR cat-2944 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:45Z cart-svc ERROR cat-2945 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:46Z catalog-svc ERROR cat-2946 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:48Z api-gateway INFO cat-2948 health probe ok
+2026-11-24T09:25:48Z cart-svc ERROR cat-2948 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:48Z catalog-svc ERROR cat-2948 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:50Z catalog-svc ERROR cat-2950 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:51Z cart-svc ERROR cat-2951 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:52Z api-gateway INFO cat-2952 health probe ok
+2026-11-24T09:25:52Z catalog-svc ERROR cat-2952 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:54Z cart-svc ERROR cat-2954 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:54Z catalog-svc ERROR cat-2954 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:56Z api-gateway INFO cat-2956 health probe ok
+2026-11-24T09:25:56Z catalog-svc ERROR cat-2956 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:25:57Z cart-svc ERROR cat-2957 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:25:58Z catalog-svc ERROR cat-2958 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:00Z api-gateway INFO cat-2960 health probe ok
+2026-11-24T09:26:00Z cart-svc ERROR cat-2960 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:00Z catalog-svc ERROR cat-2960 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:02Z catalog-svc ERROR cat-2962 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:03Z cart-svc ERROR cat-2963 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:04Z api-gateway INFO cat-2964 health probe ok
+2026-11-24T09:26:04Z catalog-svc ERROR cat-2964 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:06Z cart-svc ERROR cat-2966 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:06Z catalog-svc ERROR cat-2966 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:08Z api-gateway INFO cat-2968 health probe ok
+2026-11-24T09:26:08Z catalog-svc ERROR cat-2968 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:09Z cart-svc ERROR cat-2969 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:10Z catalog-svc ERROR cat-2970 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:12Z api-gateway INFO cat-2972 health probe ok
+2026-11-24T09:26:12Z cart-svc ERROR cat-2972 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:12Z catalog-svc ERROR cat-2972 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:14Z catalog-svc ERROR cat-2974 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:15Z cart-svc ERROR cat-2975 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:16Z api-gateway INFO cat-2976 health probe ok
+2026-11-24T09:26:16Z catalog-svc ERROR cat-2976 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:18Z cart-svc ERROR cat-2978 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:18Z catalog-svc ERROR cat-2978 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:20Z api-gateway INFO cat-2980 health probe ok
+2026-11-24T09:26:20Z catalog-svc ERROR cat-2980 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:21Z cart-svc ERROR cat-2981 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:22Z catalog-svc ERROR cat-2982 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:24Z api-gateway INFO cat-2984 health probe ok
+2026-11-24T09:26:24Z cart-svc ERROR cat-2984 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:24Z catalog-svc ERROR cat-2984 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:26Z catalog-svc ERROR cat-2986 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:27Z cart-svc ERROR cat-2987 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:28Z api-gateway INFO cat-2988 health probe ok
+2026-11-24T09:26:28Z catalog-svc ERROR cat-2988 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:30Z cart-svc ERROR cat-2990 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:30Z catalog-svc ERROR cat-2990 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:32Z api-gateway INFO cat-2992 health probe ok
+2026-11-24T09:26:32Z catalog-svc ERROR cat-2992 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:33Z cart-svc ERROR cat-2993 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:34Z catalog-svc ERROR cat-2994 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:36Z api-gateway INFO cat-2996 health probe ok
+2026-11-24T09:26:36Z cart-svc ERROR cat-2996 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:36Z catalog-svc ERROR cat-2996 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:38Z catalog-svc ERROR cat-2998 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:39Z cart-svc ERROR cat-2999 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:40Z api-gateway INFO cat-3000 health probe ok
+2026-11-24T09:26:40Z catalog-svc ERROR cat-3000 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:42Z cart-svc ERROR cat-3002 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:42Z catalog-svc ERROR cat-3002 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:44Z api-gateway INFO cat-3004 health probe ok
+2026-11-24T09:26:44Z catalog-svc ERROR cat-3004 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:45Z cart-svc ERROR cat-3005 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:46Z catalog-svc ERROR cat-3006 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:48Z api-gateway INFO cat-3008 health probe ok
+2026-11-24T09:26:48Z cart-svc ERROR cat-3008 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:48Z catalog-svc ERROR cat-3008 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:50Z catalog-svc ERROR cat-3010 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:51Z cart-svc ERROR cat-3011 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:52Z api-gateway INFO cat-3012 health probe ok
+2026-11-24T09:26:52Z catalog-svc ERROR cat-3012 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:54Z cart-svc ERROR cat-3014 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:54Z catalog-svc ERROR cat-3014 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:56Z api-gateway INFO cat-3016 health probe ok
+2026-11-24T09:26:56Z catalog-svc ERROR cat-3016 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:26:57Z cart-svc ERROR cat-3017 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:26:58Z catalog-svc ERROR cat-3018 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:00Z api-gateway INFO cat-3020 health probe ok
+2026-11-24T09:27:00Z cart-svc ERROR cat-3020 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:00Z catalog-svc ERROR cat-3020 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:02Z catalog-svc ERROR cat-3022 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:03Z cart-svc ERROR cat-3023 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:04Z api-gateway INFO cat-3024 health probe ok
+2026-11-24T09:27:04Z catalog-svc ERROR cat-3024 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:06Z cart-svc ERROR cat-3026 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:06Z catalog-svc ERROR cat-3026 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:08Z api-gateway INFO cat-3028 health probe ok
+2026-11-24T09:27:08Z catalog-svc ERROR cat-3028 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:09Z cart-svc ERROR cat-3029 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:10Z catalog-svc ERROR cat-3030 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:12Z api-gateway INFO cat-3032 health probe ok
+2026-11-24T09:27:12Z cart-svc ERROR cat-3032 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:12Z catalog-svc ERROR cat-3032 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:14Z catalog-svc ERROR cat-3034 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:15Z cart-svc ERROR cat-3035 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:16Z api-gateway INFO cat-3036 health probe ok
+2026-11-24T09:27:16Z catalog-svc ERROR cat-3036 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:18Z cart-svc ERROR cat-3038 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:18Z catalog-svc ERROR cat-3038 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:20Z api-gateway INFO cat-3040 health probe ok
+2026-11-24T09:27:20Z catalog-svc ERROR cat-3040 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:21Z cart-svc ERROR cat-3041 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:22Z catalog-svc ERROR cat-3042 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:24Z api-gateway INFO cat-3044 health probe ok
+2026-11-24T09:27:24Z cart-svc ERROR cat-3044 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:24Z catalog-svc ERROR cat-3044 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:26Z catalog-svc ERROR cat-3046 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:27Z cart-svc ERROR cat-3047 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:28Z api-gateway INFO cat-3048 health probe ok
+2026-11-24T09:27:28Z catalog-svc ERROR cat-3048 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:30Z cart-svc ERROR cat-3050 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:30Z catalog-svc ERROR cat-3050 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:32Z api-gateway INFO cat-3052 health probe ok
+2026-11-24T09:27:32Z catalog-svc ERROR cat-3052 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:33Z cart-svc ERROR cat-3053 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:34Z catalog-svc ERROR cat-3054 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:36Z api-gateway INFO cat-3056 health probe ok
+2026-11-24T09:27:36Z cart-svc ERROR cat-3056 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:36Z catalog-svc ERROR cat-3056 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:38Z catalog-svc ERROR cat-3058 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:39Z cart-svc ERROR cat-3059 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:40Z api-gateway INFO cat-3060 health probe ok
+2026-11-24T09:27:40Z catalog-svc ERROR cat-3060 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:42Z cart-svc ERROR cat-3062 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:42Z catalog-svc ERROR cat-3062 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:44Z api-gateway INFO cat-3064 health probe ok
+2026-11-24T09:27:44Z catalog-svc ERROR cat-3064 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:45Z cart-svc ERROR cat-3065 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:46Z catalog-svc ERROR cat-3066 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:48Z api-gateway INFO cat-3068 health probe ok
+2026-11-24T09:27:48Z cart-svc ERROR cat-3068 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:48Z catalog-svc ERROR cat-3068 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:50Z catalog-svc ERROR cat-3070 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:51Z cart-svc ERROR cat-3071 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:52Z api-gateway INFO cat-3072 health probe ok
+2026-11-24T09:27:52Z catalog-svc ERROR cat-3072 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:54Z cart-svc ERROR cat-3074 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:54Z catalog-svc ERROR cat-3074 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:56Z api-gateway INFO cat-3076 health probe ok
+2026-11-24T09:27:56Z catalog-svc ERROR cat-3076 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:27:57Z cart-svc ERROR cat-3077 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:27:58Z catalog-svc ERROR cat-3078 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:00Z api-gateway INFO cat-3080 health probe ok
+2026-11-24T09:28:00Z cart-svc ERROR cat-3080 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:00Z catalog-svc ERROR cat-3080 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:02Z catalog-svc ERROR cat-3082 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:03Z cart-svc ERROR cat-3083 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:04Z api-gateway INFO cat-3084 health probe ok
+2026-11-24T09:28:04Z catalog-svc ERROR cat-3084 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:06Z cart-svc ERROR cat-3086 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:06Z catalog-svc ERROR cat-3086 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:08Z api-gateway INFO cat-3088 health probe ok
+2026-11-24T09:28:08Z catalog-svc ERROR cat-3088 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:09Z cart-svc ERROR cat-3089 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:10Z catalog-svc ERROR cat-3090 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:12Z api-gateway INFO cat-3092 health probe ok
+2026-11-24T09:28:12Z cart-svc ERROR cat-3092 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:12Z catalog-svc ERROR cat-3092 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:14Z catalog-svc ERROR cat-3094 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:15Z cart-svc ERROR cat-3095 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:16Z api-gateway INFO cat-3096 health probe ok
+2026-11-24T09:28:16Z catalog-svc ERROR cat-3096 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:18Z cart-svc ERROR cat-3098 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:18Z catalog-svc ERROR cat-3098 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:20Z api-gateway INFO cat-3100 health probe ok
+2026-11-24T09:28:20Z catalog-svc ERROR cat-3100 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:21Z cart-svc ERROR cat-3101 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:22Z catalog-svc ERROR cat-3102 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:24Z api-gateway INFO cat-3104 health probe ok
+2026-11-24T09:28:24Z cart-svc ERROR cat-3104 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:24Z catalog-svc ERROR cat-3104 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:26Z catalog-svc ERROR cat-3106 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:27Z cart-svc ERROR cat-3107 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:28Z api-gateway INFO cat-3108 health probe ok
+2026-11-24T09:28:28Z catalog-svc ERROR cat-3108 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:30Z cart-svc ERROR cat-3110 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:30Z catalog-svc ERROR cat-3110 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:32Z api-gateway INFO cat-3112 health probe ok
+2026-11-24T09:28:32Z catalog-svc ERROR cat-3112 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:33Z cart-svc ERROR cat-3113 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:34Z catalog-svc ERROR cat-3114 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:36Z api-gateway INFO cat-3116 health probe ok
+2026-11-24T09:28:36Z cart-svc ERROR cat-3116 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:36Z catalog-svc ERROR cat-3116 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:38Z catalog-svc ERROR cat-3118 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:39Z cart-svc ERROR cat-3119 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:40Z api-gateway INFO cat-3120 health probe ok
+2026-11-24T09:28:40Z catalog-svc ERROR cat-3120 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:42Z cart-svc ERROR cat-3122 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:42Z catalog-svc ERROR cat-3122 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:44Z api-gateway INFO cat-3124 health probe ok
+2026-11-24T09:28:44Z catalog-svc ERROR cat-3124 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:45Z cart-svc ERROR cat-3125 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:46Z catalog-svc ERROR cat-3126 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:48Z api-gateway INFO cat-3128 health probe ok
+2026-11-24T09:28:48Z cart-svc ERROR cat-3128 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:48Z catalog-svc ERROR cat-3128 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:50Z catalog-svc ERROR cat-3130 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:51Z cart-svc ERROR cat-3131 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:52Z api-gateway INFO cat-3132 health probe ok
+2026-11-24T09:28:52Z catalog-svc ERROR cat-3132 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:54Z cart-svc ERROR cat-3134 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:54Z catalog-svc ERROR cat-3134 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:56Z api-gateway INFO cat-3136 health probe ok
+2026-11-24T09:28:56Z catalog-svc ERROR cat-3136 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:28:57Z cart-svc ERROR cat-3137 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:28:58Z catalog-svc ERROR cat-3138 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:00Z api-gateway INFO cat-3140 health probe ok
+2026-11-24T09:29:00Z cart-svc ERROR cat-3140 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:00Z catalog-svc ERROR cat-3140 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:02Z catalog-svc ERROR cat-3142 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:03Z cart-svc ERROR cat-3143 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:04Z api-gateway INFO cat-3144 health probe ok
+2026-11-24T09:29:04Z catalog-svc ERROR cat-3144 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:06Z cart-svc ERROR cat-3146 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:06Z catalog-svc ERROR cat-3146 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:08Z api-gateway INFO cat-3148 health probe ok
+2026-11-24T09:29:08Z catalog-svc ERROR cat-3148 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:09Z cart-svc ERROR cat-3149 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:10Z catalog-svc ERROR cat-3150 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:12Z api-gateway INFO cat-3152 health probe ok
+2026-11-24T09:29:12Z cart-svc ERROR cat-3152 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:12Z catalog-svc ERROR cat-3152 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:14Z catalog-svc ERROR cat-3154 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:15Z cart-svc ERROR cat-3155 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:16Z api-gateway INFO cat-3156 health probe ok
+2026-11-24T09:29:16Z catalog-svc ERROR cat-3156 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:18Z cart-svc ERROR cat-3158 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:18Z catalog-svc ERROR cat-3158 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:20Z api-gateway INFO cat-3160 health probe ok
+2026-11-24T09:29:20Z catalog-svc ERROR cat-3160 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:21Z cart-svc ERROR cat-3161 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:22Z catalog-svc ERROR cat-3162 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:24Z api-gateway INFO cat-3164 health probe ok
+2026-11-24T09:29:24Z cart-svc ERROR cat-3164 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:24Z catalog-svc ERROR cat-3164 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:26Z catalog-svc ERROR cat-3166 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:27Z cart-svc ERROR cat-3167 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:28Z api-gateway INFO cat-3168 health probe ok
+2026-11-24T09:29:28Z catalog-svc ERROR cat-3168 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:30Z cart-svc ERROR cat-3170 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:30Z catalog-svc ERROR cat-3170 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:32Z api-gateway INFO cat-3172 health probe ok
+2026-11-24T09:29:32Z catalog-svc ERROR cat-3172 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:33Z cart-svc ERROR cat-3173 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:34Z catalog-svc ERROR cat-3174 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:36Z api-gateway INFO cat-3176 health probe ok
+2026-11-24T09:29:36Z cart-svc ERROR cat-3176 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:36Z catalog-svc ERROR cat-3176 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:38Z catalog-svc ERROR cat-3178 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:39Z cart-svc ERROR cat-3179 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:40Z api-gateway INFO cat-3180 health probe ok
+2026-11-24T09:29:40Z catalog-svc ERROR cat-3180 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:42Z cart-svc ERROR cat-3182 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:42Z catalog-svc ERROR cat-3182 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:44Z api-gateway INFO cat-3184 health probe ok
+2026-11-24T09:29:44Z catalog-svc ERROR cat-3184 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:45Z cart-svc ERROR cat-3185 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:46Z catalog-svc ERROR cat-3186 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:48Z api-gateway INFO cat-3188 health probe ok
+2026-11-24T09:29:48Z cart-svc ERROR cat-3188 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:48Z catalog-svc ERROR cat-3188 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:50Z catalog-svc ERROR cat-3190 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:51Z cart-svc ERROR cat-3191 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:52Z api-gateway INFO cat-3192 health probe ok
+2026-11-24T09:29:52Z catalog-svc ERROR cat-3192 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:54Z cart-svc ERROR cat-3194 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:54Z catalog-svc ERROR cat-3194 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:56Z api-gateway INFO cat-3196 health probe ok
+2026-11-24T09:29:56Z catalog-svc ERROR cat-3196 cache miss stampede db_cpu=98% query_timeout=2000ms
+2026-11-24T09:29:57Z cart-svc ERROR cat-3197 failed fetching item metadata from catalog-svc status=503
+2026-11-24T09:29:58Z catalog-svc ERROR cat-3198 cache miss stampede db_cpu=98% query_timeout=2000ms

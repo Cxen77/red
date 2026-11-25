@@ -1,0 +1,773 @@
+2026-11-23T18:00:00Z auth-svc INFO auth-3000 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:01Z api-gateway INFO auth-3001 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:02Z orders-svc INFO auth-3002 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:03Z auth-svc INFO auth-3003 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:04Z api-gateway INFO auth-3004 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:05Z orders-svc INFO auth-3005 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:06Z auth-svc INFO auth-3006 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:07Z api-gateway INFO auth-3007 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:08Z orders-svc INFO auth-3008 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:09Z auth-svc INFO auth-3009 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:10Z api-gateway INFO auth-3010 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:11Z orders-svc INFO auth-3011 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:12Z auth-svc INFO auth-3012 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:13Z api-gateway INFO auth-3013 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:14Z orders-svc INFO auth-3014 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:15Z auth-svc INFO auth-3015 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:16Z api-gateway INFO auth-3016 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:17Z orders-svc INFO auth-3017 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:18Z auth-svc INFO auth-3018 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:19Z api-gateway INFO auth-3019 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:20Z orders-svc INFO auth-3020 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:21Z auth-svc INFO auth-3021 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:22Z api-gateway INFO auth-3022 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:23Z orders-svc INFO auth-3023 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:24Z auth-svc INFO auth-3024 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:25Z api-gateway INFO auth-3025 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:26Z orders-svc INFO auth-3026 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:27Z auth-svc INFO auth-3027 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:28Z api-gateway INFO auth-3028 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:29Z orders-svc INFO auth-3029 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:30Z auth-svc INFO auth-3030 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:31Z api-gateway INFO auth-3031 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:32Z orders-svc INFO auth-3032 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:33Z auth-svc INFO auth-3033 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:34Z api-gateway INFO auth-3034 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:35Z orders-svc INFO auth-3035 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:36Z auth-svc INFO auth-3036 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:37Z api-gateway INFO auth-3037 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:38Z orders-svc INFO auth-3038 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:39Z auth-svc INFO auth-3039 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:40Z api-gateway INFO auth-3040 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:41Z orders-svc INFO auth-3041 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:42Z auth-svc INFO auth-3042 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:43Z api-gateway INFO auth-3043 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:44Z orders-svc INFO auth-3044 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:45Z auth-svc INFO auth-3045 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:46Z api-gateway INFO auth-3046 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:47Z orders-svc INFO auth-3047 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:48Z auth-svc INFO auth-3048 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:49Z api-gateway INFO auth-3049 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:50Z orders-svc INFO auth-3050 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:51Z auth-svc INFO auth-3051 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:52Z api-gateway INFO auth-3052 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:53Z orders-svc INFO auth-3053 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:54Z auth-svc INFO auth-3054 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:55Z api-gateway INFO auth-3055 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:56Z orders-svc INFO auth-3056 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:57Z auth-svc INFO auth-3057 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:58Z api-gateway INFO auth-3058 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:00:59Z orders-svc INFO auth-3059 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:00Z auth-svc INFO auth-3060 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:01Z api-gateway INFO auth-3061 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:02Z orders-svc INFO auth-3062 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:03Z auth-svc INFO auth-3063 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:04Z api-gateway INFO auth-3064 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:05Z orders-svc INFO auth-3065 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:06Z auth-svc INFO auth-3066 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:07Z api-gateway INFO auth-3067 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:08Z orders-svc INFO auth-3068 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:09Z auth-svc INFO auth-3069 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:10Z api-gateway INFO auth-3070 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:11Z orders-svc INFO auth-3071 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:12Z auth-svc INFO auth-3072 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:13Z api-gateway INFO auth-3073 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:14Z orders-svc INFO auth-3074 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:15Z auth-svc INFO auth-3075 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:16Z api-gateway INFO auth-3076 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:17Z orders-svc INFO auth-3077 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:18Z auth-svc INFO auth-3078 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:19Z api-gateway INFO auth-3079 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:20Z orders-svc INFO auth-3080 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:21Z auth-svc INFO auth-3081 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:22Z api-gateway INFO auth-3082 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:23Z orders-svc INFO auth-3083 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:24Z auth-svc INFO auth-3084 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:25Z api-gateway INFO auth-3085 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:26Z orders-svc INFO auth-3086 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:27Z auth-svc INFO auth-3087 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:28Z api-gateway INFO auth-3088 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:29Z orders-svc INFO auth-3089 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:30Z auth-svc INFO auth-3090 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:31Z api-gateway INFO auth-3091 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:32Z orders-svc INFO auth-3092 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:33Z auth-svc INFO auth-3093 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:34Z api-gateway INFO auth-3094 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:35Z orders-svc INFO auth-3095 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:36Z auth-svc INFO auth-3096 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:37Z api-gateway INFO auth-3097 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:38Z orders-svc INFO auth-3098 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:39Z auth-svc INFO auth-3099 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:40Z api-gateway INFO auth-3100 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:41Z orders-svc INFO auth-3101 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:42Z auth-svc INFO auth-3102 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:43Z api-gateway INFO auth-3103 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:44Z orders-svc INFO auth-3104 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:45Z auth-svc INFO auth-3105 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:46Z api-gateway INFO auth-3106 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:47Z orders-svc INFO auth-3107 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:48Z auth-svc INFO auth-3108 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:49Z api-gateway INFO auth-3109 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:50Z orders-svc INFO auth-3110 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:51Z auth-svc INFO auth-3111 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:52Z api-gateway INFO auth-3112 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:53Z orders-svc INFO auth-3113 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:54Z auth-svc INFO auth-3114 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:55Z api-gateway INFO auth-3115 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:56Z orders-svc INFO auth-3116 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:57Z auth-svc INFO auth-3117 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:58Z api-gateway INFO auth-3118 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:01:59Z orders-svc INFO auth-3119 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:00Z auth-svc INFO auth-3120 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:01Z api-gateway INFO auth-3121 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:02Z orders-svc INFO auth-3122 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:03Z auth-svc INFO auth-3123 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:04Z api-gateway INFO auth-3124 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:05Z orders-svc INFO auth-3125 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:06Z auth-svc INFO auth-3126 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:07Z api-gateway INFO auth-3127 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:08Z orders-svc INFO auth-3128 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:09Z auth-svc INFO auth-3129 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:10Z api-gateway INFO auth-3130 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:11Z orders-svc INFO auth-3131 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:12Z auth-svc INFO auth-3132 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:13Z api-gateway INFO auth-3133 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:14Z orders-svc INFO auth-3134 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:15Z auth-svc INFO auth-3135 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:16Z api-gateway INFO auth-3136 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:17Z orders-svc INFO auth-3137 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:18Z auth-svc INFO auth-3138 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:19Z api-gateway INFO auth-3139 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:20Z orders-svc INFO auth-3140 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:21Z auth-svc INFO auth-3141 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:22Z api-gateway INFO auth-3142 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:23Z orders-svc INFO auth-3143 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:24Z auth-svc INFO auth-3144 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:25Z api-gateway INFO auth-3145 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:26Z orders-svc INFO auth-3146 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:27Z auth-svc INFO auth-3147 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:28Z api-gateway INFO auth-3148 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:29Z orders-svc INFO auth-3149 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:30Z auth-svc INFO auth-3150 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:31Z api-gateway INFO auth-3151 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:32Z orders-svc INFO auth-3152 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:33Z auth-svc INFO auth-3153 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:34Z api-gateway INFO auth-3154 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:35Z orders-svc INFO auth-3155 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:36Z auth-svc INFO auth-3156 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:37Z api-gateway INFO auth-3157 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:38Z orders-svc INFO auth-3158 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:39Z auth-svc INFO auth-3159 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:40Z api-gateway INFO auth-3160 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:41Z orders-svc INFO auth-3161 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:42Z auth-svc INFO auth-3162 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:43Z api-gateway INFO auth-3163 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:44Z orders-svc INFO auth-3164 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:45Z auth-svc INFO auth-3165 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:46Z api-gateway INFO auth-3166 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:47Z orders-svc INFO auth-3167 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:48Z auth-svc INFO auth-3168 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:49Z api-gateway INFO auth-3169 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:50Z orders-svc INFO auth-3170 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:51Z auth-svc INFO auth-3171 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:52Z api-gateway INFO auth-3172 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:53Z orders-svc INFO auth-3173 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:54Z auth-svc INFO auth-3174 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:55Z api-gateway INFO auth-3175 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:56Z orders-svc INFO auth-3176 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:57Z auth-svc INFO auth-3177 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:58Z api-gateway INFO auth-3178 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:02:59Z orders-svc INFO auth-3179 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:00Z auth-svc INFO auth-3180 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:01Z api-gateway INFO auth-3181 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:02Z orders-svc INFO auth-3182 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:03Z auth-svc INFO auth-3183 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:04Z api-gateway INFO auth-3184 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:05Z orders-svc INFO auth-3185 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:06Z auth-svc INFO auth-3186 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:07Z api-gateway INFO auth-3187 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:08Z orders-svc INFO auth-3188 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:09Z auth-svc INFO auth-3189 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:10Z api-gateway INFO auth-3190 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:11Z orders-svc INFO auth-3191 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:12Z auth-svc INFO auth-3192 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:13Z api-gateway INFO auth-3193 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:14Z orders-svc INFO auth-3194 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:15Z auth-svc INFO auth-3195 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:16Z api-gateway INFO auth-3196 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:17Z orders-svc INFO auth-3197 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:18Z auth-svc INFO auth-3198 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:19Z api-gateway INFO auth-3199 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:20Z orders-svc INFO auth-3200 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:21Z auth-svc INFO auth-3201 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:22Z api-gateway INFO auth-3202 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:23Z orders-svc INFO auth-3203 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:24Z auth-svc INFO auth-3204 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:25Z api-gateway INFO auth-3205 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:26Z orders-svc INFO auth-3206 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:27Z auth-svc INFO auth-3207 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:28Z api-gateway INFO auth-3208 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:29Z orders-svc INFO auth-3209 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:30Z auth-svc INFO auth-3210 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:31Z api-gateway INFO auth-3211 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:32Z orders-svc INFO auth-3212 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:33Z auth-svc INFO auth-3213 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:34Z api-gateway INFO auth-3214 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:35Z orders-svc INFO auth-3215 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:36Z auth-svc INFO auth-3216 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:37Z api-gateway INFO auth-3217 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:38Z orders-svc INFO auth-3218 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:39Z auth-svc INFO auth-3219 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:40Z api-gateway INFO auth-3220 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:41Z orders-svc INFO auth-3221 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:42Z auth-svc INFO auth-3222 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:43Z api-gateway INFO auth-3223 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:44Z orders-svc INFO auth-3224 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:45Z auth-svc INFO auth-3225 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:46Z api-gateway INFO auth-3226 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:47Z orders-svc INFO auth-3227 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:48Z auth-svc INFO auth-3228 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:49Z api-gateway INFO auth-3229 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:50Z orders-svc INFO auth-3230 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:51Z auth-svc INFO auth-3231 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:52Z api-gateway INFO auth-3232 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:53Z orders-svc INFO auth-3233 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:54Z auth-svc INFO auth-3234 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:55Z api-gateway INFO auth-3235 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:56Z orders-svc INFO auth-3236 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:57Z auth-svc INFO auth-3237 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:58Z api-gateway INFO auth-3238 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:03:59Z orders-svc INFO auth-3239 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:00Z auth-svc INFO auth-3240 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:01Z api-gateway INFO auth-3241 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:02Z orders-svc INFO auth-3242 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:03Z auth-svc INFO auth-3243 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:04Z api-gateway INFO auth-3244 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:05Z orders-svc INFO auth-3245 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:06Z auth-svc INFO auth-3246 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:07Z api-gateway INFO auth-3247 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:08Z orders-svc INFO auth-3248 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:09Z auth-svc INFO auth-3249 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:10Z api-gateway INFO auth-3250 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:11Z orders-svc INFO auth-3251 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:12Z auth-svc INFO auth-3252 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:13Z api-gateway INFO auth-3253 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:14Z orders-svc INFO auth-3254 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:15Z auth-svc INFO auth-3255 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:16Z api-gateway INFO auth-3256 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:17Z orders-svc INFO auth-3257 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:18Z auth-svc INFO auth-3258 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:19Z api-gateway INFO auth-3259 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:20Z orders-svc INFO auth-3260 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:21Z auth-svc INFO auth-3261 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:22Z api-gateway INFO auth-3262 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:23Z orders-svc INFO auth-3263 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:24Z auth-svc INFO auth-3264 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:25Z api-gateway INFO auth-3265 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:26Z orders-svc INFO auth-3266 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:27Z auth-svc INFO auth-3267 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:28Z api-gateway INFO auth-3268 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:29Z orders-svc INFO auth-3269 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:30Z auth-svc INFO auth-3270 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:31Z api-gateway INFO auth-3271 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:32Z orders-svc INFO auth-3272 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:33Z auth-svc INFO auth-3273 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:34Z api-gateway INFO auth-3274 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:35Z orders-svc INFO auth-3275 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:36Z auth-svc INFO auth-3276 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:37Z api-gateway INFO auth-3277 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:38Z orders-svc INFO auth-3278 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:39Z auth-svc INFO auth-3279 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:40Z api-gateway INFO auth-3280 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:41Z orders-svc INFO auth-3281 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:42Z auth-svc INFO auth-3282 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:43Z api-gateway INFO auth-3283 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:44Z orders-svc INFO auth-3284 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:45Z auth-svc INFO auth-3285 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:46Z api-gateway INFO auth-3286 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:47Z orders-svc INFO auth-3287 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:48Z auth-svc INFO auth-3288 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:49Z api-gateway INFO auth-3289 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:50Z orders-svc INFO auth-3290 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:51Z auth-svc INFO auth-3291 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:52Z api-gateway INFO auth-3292 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:53Z orders-svc INFO auth-3293 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:54Z auth-svc INFO auth-3294 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:55Z api-gateway INFO auth-3295 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:56Z orders-svc INFO auth-3296 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:57Z auth-svc INFO auth-3297 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:58Z api-gateway INFO auth-3298 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:04:59Z orders-svc INFO auth-3299 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:00Z auth-svc INFO auth-3300 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:01Z api-gateway INFO auth-3301 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:02Z orders-svc INFO auth-3302 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:03Z auth-svc INFO auth-3303 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:04Z api-gateway INFO auth-3304 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:05Z orders-svc INFO auth-3305 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:06Z auth-svc INFO auth-3306 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:07Z api-gateway INFO auth-3307 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:08Z orders-svc INFO auth-3308 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:09Z auth-svc INFO auth-3309 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:10Z api-gateway INFO auth-3310 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:11Z orders-svc INFO auth-3311 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:12Z auth-svc INFO auth-3312 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:13Z api-gateway INFO auth-3313 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:14Z orders-svc INFO auth-3314 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:15Z auth-svc INFO auth-3315 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:16Z api-gateway INFO auth-3316 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:17Z orders-svc INFO auth-3317 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:18Z auth-svc INFO auth-3318 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:19Z api-gateway INFO auth-3319 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:20Z orders-svc INFO auth-3320 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:21Z auth-svc INFO auth-3321 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:22Z api-gateway INFO auth-3322 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:23Z orders-svc INFO auth-3323 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:24Z auth-svc INFO auth-3324 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:25Z api-gateway INFO auth-3325 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:26Z orders-svc INFO auth-3326 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:27Z auth-svc INFO auth-3327 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:28Z api-gateway INFO auth-3328 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:29Z orders-svc INFO auth-3329 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:30Z auth-svc INFO auth-3330 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:31Z api-gateway INFO auth-3331 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:32Z orders-svc INFO auth-3332 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:33Z auth-svc INFO auth-3333 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:34Z api-gateway INFO auth-3334 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:35Z orders-svc INFO auth-3335 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:36Z auth-svc INFO auth-3336 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:37Z api-gateway INFO auth-3337 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:38Z orders-svc INFO auth-3338 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:39Z auth-svc INFO auth-3339 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:40Z api-gateway INFO auth-3340 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:41Z orders-svc INFO auth-3341 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:42Z auth-svc INFO auth-3342 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:43Z api-gateway INFO auth-3343 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:44Z orders-svc INFO auth-3344 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:45Z auth-svc INFO auth-3345 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:46Z api-gateway INFO auth-3346 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:47Z orders-svc INFO auth-3347 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:48Z auth-svc INFO auth-3348 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:49Z api-gateway INFO auth-3349 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:50Z orders-svc INFO auth-3350 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:51Z auth-svc INFO auth-3351 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:52Z api-gateway INFO auth-3352 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:53Z orders-svc INFO auth-3353 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:54Z auth-svc INFO auth-3354 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:55Z api-gateway INFO auth-3355 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:56Z orders-svc INFO auth-3356 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:57Z auth-svc INFO auth-3357 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:58Z api-gateway INFO auth-3358 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:05:59Z orders-svc INFO auth-3359 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:00Z auth-svc INFO auth-3360 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:01Z api-gateway INFO auth-3361 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:02Z orders-svc INFO auth-3362 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:03Z auth-svc INFO auth-3363 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:04Z api-gateway INFO auth-3364 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:05Z orders-svc INFO auth-3365 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:06Z auth-svc INFO auth-3366 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:07Z api-gateway INFO auth-3367 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:08Z orders-svc INFO auth-3368 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:09Z auth-svc INFO auth-3369 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:10Z api-gateway INFO auth-3370 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:11Z orders-svc INFO auth-3371 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:12Z auth-svc INFO auth-3372 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:13Z api-gateway INFO auth-3373 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:14Z orders-svc INFO auth-3374 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:15Z auth-svc INFO auth-3375 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:16Z api-gateway INFO auth-3376 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:17Z orders-svc INFO auth-3377 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:18Z auth-svc INFO auth-3378 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:19Z api-gateway INFO auth-3379 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:20Z orders-svc INFO auth-3380 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:21Z auth-svc INFO auth-3381 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:22Z api-gateway INFO auth-3382 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:23Z orders-svc INFO auth-3383 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:24Z auth-svc INFO auth-3384 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:25Z api-gateway INFO auth-3385 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:26Z orders-svc INFO auth-3386 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:27Z auth-svc INFO auth-3387 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:28Z api-gateway INFO auth-3388 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:29Z orders-svc INFO auth-3389 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:30Z auth-svc INFO auth-3390 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:31Z api-gateway INFO auth-3391 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:32Z orders-svc INFO auth-3392 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:33Z auth-svc INFO auth-3393 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:34Z api-gateway INFO auth-3394 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:35Z orders-svc INFO auth-3395 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:36Z auth-svc INFO auth-3396 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:37Z api-gateway INFO auth-3397 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:38Z orders-svc INFO auth-3398 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:39Z auth-svc INFO auth-3399 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:40Z api-gateway INFO auth-3400 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:41Z orders-svc INFO auth-3401 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:42Z auth-svc INFO auth-3402 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:43Z api-gateway INFO auth-3403 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:44Z orders-svc INFO auth-3404 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:45Z auth-svc INFO auth-3405 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:46Z api-gateway INFO auth-3406 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:47Z orders-svc INFO auth-3407 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:48Z auth-svc INFO auth-3408 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:49Z api-gateway INFO auth-3409 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:50Z orders-svc INFO auth-3410 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:51Z auth-svc INFO auth-3411 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:52Z api-gateway INFO auth-3412 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:53Z orders-svc INFO auth-3413 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:54Z auth-svc INFO auth-3414 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:55Z api-gateway INFO auth-3415 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:56Z orders-svc INFO auth-3416 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:57Z auth-svc INFO auth-3417 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:58Z api-gateway INFO auth-3418 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:06:59Z orders-svc INFO auth-3419 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:00Z auth-svc INFO auth-3420 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:01Z api-gateway INFO auth-3421 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:02Z orders-svc INFO auth-3422 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:03Z auth-svc INFO auth-3423 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:04Z api-gateway INFO auth-3424 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:05Z orders-svc INFO auth-3425 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:06Z auth-svc INFO auth-3426 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:07Z api-gateway INFO auth-3427 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:08Z orders-svc INFO auth-3428 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:09Z auth-svc INFO auth-3429 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:10Z api-gateway INFO auth-3430 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:11Z orders-svc INFO auth-3431 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:12Z auth-svc INFO auth-3432 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:13Z api-gateway INFO auth-3433 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:14Z orders-svc INFO auth-3434 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:15Z auth-svc INFO auth-3435 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:16Z api-gateway INFO auth-3436 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:17Z orders-svc INFO auth-3437 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:18Z auth-svc INFO auth-3438 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:19Z api-gateway INFO auth-3439 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:20Z orders-svc INFO auth-3440 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:21Z auth-svc INFO auth-3441 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:22Z api-gateway INFO auth-3442 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:23Z orders-svc INFO auth-3443 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:24Z auth-svc INFO auth-3444 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:25Z api-gateway INFO auth-3445 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:26Z orders-svc INFO auth-3446 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:27Z auth-svc INFO auth-3447 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:28Z api-gateway INFO auth-3448 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:29Z orders-svc INFO auth-3449 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:30Z auth-svc INFO auth-3450 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:31Z api-gateway INFO auth-3451 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:32Z orders-svc INFO auth-3452 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:33Z auth-svc INFO auth-3453 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:34Z api-gateway INFO auth-3454 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:35Z orders-svc INFO auth-3455 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:36Z auth-svc INFO auth-3456 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:37Z api-gateway INFO auth-3457 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:38Z orders-svc INFO auth-3458 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:39Z auth-svc INFO auth-3459 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:40Z api-gateway INFO auth-3460 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:41Z orders-svc INFO auth-3461 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:42Z auth-svc INFO auth-3462 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:43Z api-gateway INFO auth-3463 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:44Z orders-svc INFO auth-3464 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:45Z auth-svc INFO auth-3465 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:46Z api-gateway INFO auth-3466 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:47Z orders-svc INFO auth-3467 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:48Z auth-svc INFO auth-3468 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:49Z api-gateway INFO auth-3469 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:50Z orders-svc INFO auth-3470 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:51Z auth-svc INFO auth-3471 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:52Z api-gateway INFO auth-3472 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:53Z orders-svc INFO auth-3473 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:54Z auth-svc INFO auth-3474 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:55Z api-gateway INFO auth-3475 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:56Z orders-svc INFO auth-3476 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:57Z auth-svc INFO auth-3477 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:58Z api-gateway INFO auth-3478 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:07:59Z orders-svc INFO auth-3479 jwt verified kid=key-2026-11a status=200
+2026-11-23T18:08:00Z auth-svc INFO jwks_rotate activated kid=key-2026-11b cache_ttl_sec=3600
+2026-11-23T18:08:02Z api-gateway ERROR auth-3482 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:04Z api-gateway ERROR auth-3484 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:05Z orders-svc ERROR auth-3485 upstream auth rejected status=401
+2026-11-23T18:08:06Z api-gateway ERROR auth-3486 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:08Z api-gateway ERROR auth-3488 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:10Z api-gateway ERROR auth-3490 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:10Z orders-svc ERROR auth-3490 upstream auth rejected status=401
+2026-11-23T18:08:12Z api-gateway ERROR auth-3492 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:14Z api-gateway ERROR auth-3494 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:15Z orders-svc ERROR auth-3495 upstream auth rejected status=401
+2026-11-23T18:08:16Z api-gateway ERROR auth-3496 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:18Z api-gateway ERROR auth-3498 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:20Z api-gateway ERROR auth-3500 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:20Z orders-svc ERROR auth-3500 upstream auth rejected status=401
+2026-11-23T18:08:22Z api-gateway ERROR auth-3502 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:24Z api-gateway ERROR auth-3504 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:25Z orders-svc ERROR auth-3505 upstream auth rejected status=401
+2026-11-23T18:08:26Z api-gateway ERROR auth-3506 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:28Z api-gateway ERROR auth-3508 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:30Z api-gateway ERROR auth-3510 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:30Z orders-svc ERROR auth-3510 upstream auth rejected status=401
+2026-11-23T18:08:32Z api-gateway ERROR auth-3512 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:34Z api-gateway ERROR auth-3514 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:35Z orders-svc ERROR auth-3515 upstream auth rejected status=401
+2026-11-23T18:08:36Z api-gateway ERROR auth-3516 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:38Z api-gateway ERROR auth-3518 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:40Z api-gateway ERROR auth-3520 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:40Z orders-svc ERROR auth-3520 upstream auth rejected status=401
+2026-11-23T18:08:42Z api-gateway ERROR auth-3522 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:44Z api-gateway ERROR auth-3524 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:45Z orders-svc ERROR auth-3525 upstream auth rejected status=401
+2026-11-23T18:08:46Z api-gateway ERROR auth-3526 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:48Z api-gateway ERROR auth-3528 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:50Z api-gateway ERROR auth-3530 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:50Z orders-svc ERROR auth-3530 upstream auth rejected status=401
+2026-11-23T18:08:52Z api-gateway ERROR auth-3532 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:54Z api-gateway ERROR auth-3534 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:55Z orders-svc ERROR auth-3535 upstream auth rejected status=401
+2026-11-23T18:08:56Z api-gateway ERROR auth-3536 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:08:58Z api-gateway ERROR auth-3538 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:00Z api-gateway ERROR auth-3540 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:00Z orders-svc ERROR auth-3540 upstream auth rejected status=401
+2026-11-23T18:09:02Z api-gateway ERROR auth-3542 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:04Z api-gateway ERROR auth-3544 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:05Z orders-svc ERROR auth-3545 upstream auth rejected status=401
+2026-11-23T18:09:06Z api-gateway ERROR auth-3546 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:08Z api-gateway ERROR auth-3548 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:10Z api-gateway ERROR auth-3550 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:10Z orders-svc ERROR auth-3550 upstream auth rejected status=401
+2026-11-23T18:09:12Z api-gateway ERROR auth-3552 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:14Z api-gateway ERROR auth-3554 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:15Z orders-svc ERROR auth-3555 upstream auth rejected status=401
+2026-11-23T18:09:16Z api-gateway ERROR auth-3556 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:18Z api-gateway ERROR auth-3558 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:20Z api-gateway ERROR auth-3560 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:20Z orders-svc ERROR auth-3560 upstream auth rejected status=401
+2026-11-23T18:09:22Z api-gateway ERROR auth-3562 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:24Z api-gateway ERROR auth-3564 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:25Z orders-svc ERROR auth-3565 upstream auth rejected status=401
+2026-11-23T18:09:26Z api-gateway ERROR auth-3566 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:28Z api-gateway ERROR auth-3568 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:30Z api-gateway ERROR auth-3570 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:30Z orders-svc ERROR auth-3570 upstream auth rejected status=401
+2026-11-23T18:09:32Z api-gateway ERROR auth-3572 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:34Z api-gateway ERROR auth-3574 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:35Z orders-svc ERROR auth-3575 upstream auth rejected status=401
+2026-11-23T18:09:36Z api-gateway ERROR auth-3576 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:38Z api-gateway ERROR auth-3578 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:40Z api-gateway ERROR auth-3580 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:40Z orders-svc ERROR auth-3580 upstream auth rejected status=401
+2026-11-23T18:09:42Z api-gateway ERROR auth-3582 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:44Z api-gateway ERROR auth-3584 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:45Z orders-svc ERROR auth-3585 upstream auth rejected status=401
+2026-11-23T18:09:46Z api-gateway ERROR auth-3586 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:48Z api-gateway ERROR auth-3588 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:50Z api-gateway ERROR auth-3590 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:50Z orders-svc ERROR auth-3590 upstream auth rejected status=401
+2026-11-23T18:09:52Z api-gateway ERROR auth-3592 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:54Z api-gateway ERROR auth-3594 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:55Z orders-svc ERROR auth-3595 upstream auth rejected status=401
+2026-11-23T18:09:56Z api-gateway ERROR auth-3596 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:09:58Z api-gateway ERROR auth-3598 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:00Z api-gateway ERROR auth-3600 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:00Z orders-svc ERROR auth-3600 upstream auth rejected status=401
+2026-11-23T18:10:02Z api-gateway ERROR auth-3602 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:04Z api-gateway ERROR auth-3604 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:05Z orders-svc ERROR auth-3605 upstream auth rejected status=401
+2026-11-23T18:10:06Z api-gateway ERROR auth-3606 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:08Z api-gateway ERROR auth-3608 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:10Z api-gateway ERROR auth-3610 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:10Z orders-svc ERROR auth-3610 upstream auth rejected status=401
+2026-11-23T18:10:12Z api-gateway ERROR auth-3612 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:14Z api-gateway ERROR auth-3614 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:15Z orders-svc ERROR auth-3615 upstream auth rejected status=401
+2026-11-23T18:10:16Z api-gateway ERROR auth-3616 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:18Z api-gateway ERROR auth-3618 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:20Z api-gateway ERROR auth-3620 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:20Z orders-svc ERROR auth-3620 upstream auth rejected status=401
+2026-11-23T18:10:22Z api-gateway ERROR auth-3622 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:24Z api-gateway ERROR auth-3624 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:25Z orders-svc ERROR auth-3625 upstream auth rejected status=401
+2026-11-23T18:10:26Z api-gateway ERROR auth-3626 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:28Z api-gateway ERROR auth-3628 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:30Z api-gateway ERROR auth-3630 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:30Z orders-svc ERROR auth-3630 upstream auth rejected status=401
+2026-11-23T18:10:32Z api-gateway ERROR auth-3632 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:34Z api-gateway ERROR auth-3634 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:35Z orders-svc ERROR auth-3635 upstream auth rejected status=401
+2026-11-23T18:10:36Z api-gateway ERROR auth-3636 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:38Z api-gateway ERROR auth-3638 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:40Z api-gateway ERROR auth-3640 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:40Z orders-svc ERROR auth-3640 upstream auth rejected status=401
+2026-11-23T18:10:42Z api-gateway ERROR auth-3642 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:44Z api-gateway ERROR auth-3644 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:45Z orders-svc ERROR auth-3645 upstream auth rejected status=401
+2026-11-23T18:10:46Z api-gateway ERROR auth-3646 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:48Z api-gateway ERROR auth-3648 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:50Z api-gateway ERROR auth-3650 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:50Z orders-svc ERROR auth-3650 upstream auth rejected status=401
+2026-11-23T18:10:52Z api-gateway ERROR auth-3652 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:54Z api-gateway ERROR auth-3654 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:55Z orders-svc ERROR auth-3655 upstream auth rejected status=401
+2026-11-23T18:10:56Z api-gateway ERROR auth-3656 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:10:58Z api-gateway ERROR auth-3658 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:00Z api-gateway ERROR auth-3660 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:00Z orders-svc ERROR auth-3660 upstream auth rejected status=401
+2026-11-23T18:11:02Z api-gateway ERROR auth-3662 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:04Z api-gateway ERROR auth-3664 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:05Z orders-svc ERROR auth-3665 upstream auth rejected status=401
+2026-11-23T18:11:06Z api-gateway ERROR auth-3666 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:08Z api-gateway ERROR auth-3668 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:10Z api-gateway ERROR auth-3670 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:10Z orders-svc ERROR auth-3670 upstream auth rejected status=401
+2026-11-23T18:11:12Z api-gateway ERROR auth-3672 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:14Z api-gateway ERROR auth-3674 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:15Z orders-svc ERROR auth-3675 upstream auth rejected status=401
+2026-11-23T18:11:16Z api-gateway ERROR auth-3676 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:18Z api-gateway ERROR auth-3678 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:20Z api-gateway ERROR auth-3680 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:20Z orders-svc ERROR auth-3680 upstream auth rejected status=401
+2026-11-23T18:11:22Z api-gateway ERROR auth-3682 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:24Z api-gateway ERROR auth-3684 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:25Z orders-svc ERROR auth-3685 upstream auth rejected status=401
+2026-11-23T18:11:26Z api-gateway ERROR auth-3686 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:28Z api-gateway ERROR auth-3688 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:30Z api-gateway ERROR auth-3690 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:30Z orders-svc ERROR auth-3690 upstream auth rejected status=401
+2026-11-23T18:11:32Z api-gateway ERROR auth-3692 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:34Z api-gateway ERROR auth-3694 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:35Z orders-svc ERROR auth-3695 upstream auth rejected status=401
+2026-11-23T18:11:36Z api-gateway ERROR auth-3696 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:38Z api-gateway ERROR auth-3698 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:40Z api-gateway ERROR auth-3700 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:40Z orders-svc ERROR auth-3700 upstream auth rejected status=401
+2026-11-23T18:11:42Z api-gateway ERROR auth-3702 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:44Z api-gateway ERROR auth-3704 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:45Z orders-svc ERROR auth-3705 upstream auth rejected status=401
+2026-11-23T18:11:46Z api-gateway ERROR auth-3706 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:48Z api-gateway ERROR auth-3708 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:50Z api-gateway ERROR auth-3710 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:50Z orders-svc ERROR auth-3710 upstream auth rejected status=401
+2026-11-23T18:11:52Z api-gateway ERROR auth-3712 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:54Z api-gateway ERROR auth-3714 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:55Z orders-svc ERROR auth-3715 upstream auth rejected status=401
+2026-11-23T18:11:56Z api-gateway ERROR auth-3716 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:11:58Z api-gateway ERROR auth-3718 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:00Z api-gateway ERROR auth-3720 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:00Z orders-svc ERROR auth-3720 upstream auth rejected status=401
+2026-11-23T18:12:02Z api-gateway ERROR auth-3722 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:04Z api-gateway ERROR auth-3724 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:05Z orders-svc ERROR auth-3725 upstream auth rejected status=401
+2026-11-23T18:12:06Z api-gateway ERROR auth-3726 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:08Z api-gateway ERROR auth-3728 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:10Z api-gateway ERROR auth-3730 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:10Z orders-svc ERROR auth-3730 upstream auth rejected status=401
+2026-11-23T18:12:12Z api-gateway ERROR auth-3732 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:14Z api-gateway ERROR auth-3734 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:15Z orders-svc ERROR auth-3735 upstream auth rejected status=401
+2026-11-23T18:12:16Z api-gateway ERROR auth-3736 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:18Z api-gateway ERROR auth-3738 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:20Z api-gateway ERROR auth-3740 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:20Z orders-svc ERROR auth-3740 upstream auth rejected status=401
+2026-11-23T18:12:22Z api-gateway ERROR auth-3742 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:24Z api-gateway ERROR auth-3744 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:25Z orders-svc ERROR auth-3745 upstream auth rejected status=401
+2026-11-23T18:12:26Z api-gateway ERROR auth-3746 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:28Z api-gateway ERROR auth-3748 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:30Z api-gateway ERROR auth-3750 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:30Z orders-svc ERROR auth-3750 upstream auth rejected status=401
+2026-11-23T18:12:32Z api-gateway ERROR auth-3752 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:34Z api-gateway ERROR auth-3754 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:35Z orders-svc ERROR auth-3755 upstream auth rejected status=401
+2026-11-23T18:12:36Z api-gateway ERROR auth-3756 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:38Z api-gateway ERROR auth-3758 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:40Z api-gateway ERROR auth-3760 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:40Z orders-svc ERROR auth-3760 upstream auth rejected status=401
+2026-11-23T18:12:42Z api-gateway ERROR auth-3762 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:44Z api-gateway ERROR auth-3764 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:45Z orders-svc ERROR auth-3765 upstream auth rejected status=401
+2026-11-23T18:12:46Z api-gateway ERROR auth-3766 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:48Z api-gateway ERROR auth-3768 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:50Z api-gateway ERROR auth-3770 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:50Z orders-svc ERROR auth-3770 upstream auth rejected status=401
+2026-11-23T18:12:52Z api-gateway ERROR auth-3772 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:54Z api-gateway ERROR auth-3774 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:55Z orders-svc ERROR auth-3775 upstream auth rejected status=401
+2026-11-23T18:12:56Z api-gateway ERROR auth-3776 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:12:58Z api-gateway ERROR auth-3778 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:00Z api-gateway ERROR auth-3780 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:00Z orders-svc ERROR auth-3780 upstream auth rejected status=401
+2026-11-23T18:13:02Z api-gateway ERROR auth-3782 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:04Z api-gateway ERROR auth-3784 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:05Z orders-svc ERROR auth-3785 upstream auth rejected status=401
+2026-11-23T18:13:06Z api-gateway ERROR auth-3786 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:08Z api-gateway ERROR auth-3788 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:10Z api-gateway ERROR auth-3790 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:10Z orders-svc ERROR auth-3790 upstream auth rejected status=401
+2026-11-23T18:13:12Z api-gateway ERROR auth-3792 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:14Z api-gateway ERROR auth-3794 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:15Z orders-svc ERROR auth-3795 upstream auth rejected status=401
+2026-11-23T18:13:16Z api-gateway ERROR auth-3796 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:18Z api-gateway ERROR auth-3798 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:20Z api-gateway ERROR auth-3800 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:20Z orders-svc ERROR auth-3800 upstream auth rejected status=401
+2026-11-23T18:13:22Z api-gateway ERROR auth-3802 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:24Z api-gateway ERROR auth-3804 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:25Z orders-svc ERROR auth-3805 upstream auth rejected status=401
+2026-11-23T18:13:26Z api-gateway ERROR auth-3806 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:28Z api-gateway ERROR auth-3808 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:30Z api-gateway ERROR auth-3810 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:30Z orders-svc ERROR auth-3810 upstream auth rejected status=401
+2026-11-23T18:13:32Z api-gateway ERROR auth-3812 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:34Z api-gateway ERROR auth-3814 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:35Z orders-svc ERROR auth-3815 upstream auth rejected status=401
+2026-11-23T18:13:36Z api-gateway ERROR auth-3816 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:38Z api-gateway ERROR auth-3818 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:40Z api-gateway ERROR auth-3820 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:40Z orders-svc ERROR auth-3820 upstream auth rejected status=401
+2026-11-23T18:13:42Z api-gateway ERROR auth-3822 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:44Z api-gateway ERROR auth-3824 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:45Z orders-svc ERROR auth-3825 upstream auth rejected status=401
+2026-11-23T18:13:46Z api-gateway ERROR auth-3826 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:48Z api-gateway ERROR auth-3828 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:50Z api-gateway ERROR auth-3830 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:50Z orders-svc ERROR auth-3830 upstream auth rejected status=401
+2026-11-23T18:13:52Z api-gateway ERROR auth-3832 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:54Z api-gateway ERROR auth-3834 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:55Z orders-svc ERROR auth-3835 upstream auth rejected status=401
+2026-11-23T18:13:56Z api-gateway ERROR auth-3836 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:13:58Z api-gateway ERROR auth-3838 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:00Z api-gateway ERROR auth-3840 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:00Z orders-svc ERROR auth-3840 upstream auth rejected status=401
+2026-11-23T18:14:02Z api-gateway ERROR auth-3842 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:04Z api-gateway ERROR auth-3844 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:05Z orders-svc ERROR auth-3845 upstream auth rejected status=401
+2026-11-23T18:14:06Z api-gateway ERROR auth-3846 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:08Z api-gateway ERROR auth-3848 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:10Z api-gateway ERROR auth-3850 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:10Z orders-svc ERROR auth-3850 upstream auth rejected status=401
+2026-11-23T18:14:12Z api-gateway ERROR auth-3852 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:14Z api-gateway ERROR auth-3854 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:15Z orders-svc ERROR auth-3855 upstream auth rejected status=401
+2026-11-23T18:14:16Z api-gateway ERROR auth-3856 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:18Z api-gateway ERROR auth-3858 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:20Z api-gateway ERROR auth-3860 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:20Z orders-svc ERROR auth-3860 upstream auth rejected status=401
+2026-11-23T18:14:22Z api-gateway ERROR auth-3862 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:24Z api-gateway ERROR auth-3864 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:25Z orders-svc ERROR auth-3865 upstream auth rejected status=401
+2026-11-23T18:14:26Z api-gateway ERROR auth-3866 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:28Z api-gateway ERROR auth-3868 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:30Z api-gateway ERROR auth-3870 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:30Z orders-svc ERROR auth-3870 upstream auth rejected status=401
+2026-11-23T18:14:32Z api-gateway ERROR auth-3872 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:34Z api-gateway ERROR auth-3874 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:35Z orders-svc ERROR auth-3875 upstream auth rejected status=401
+2026-11-23T18:14:36Z api-gateway ERROR auth-3876 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:38Z api-gateway ERROR auth-3878 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:40Z api-gateway ERROR auth-3880 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:40Z orders-svc ERROR auth-3880 upstream auth rejected status=401
+2026-11-23T18:14:42Z api-gateway ERROR auth-3882 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:44Z api-gateway ERROR auth-3884 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:45Z orders-svc ERROR auth-3885 upstream auth rejected status=401
+2026-11-23T18:14:46Z api-gateway ERROR auth-3886 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:48Z api-gateway ERROR auth-3888 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:50Z api-gateway ERROR auth-3890 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:50Z orders-svc ERROR auth-3890 upstream auth rejected status=401
+2026-11-23T18:14:52Z api-gateway ERROR auth-3892 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:54Z api-gateway ERROR auth-3894 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:55Z orders-svc ERROR auth-3895 upstream auth rejected status=401
+2026-11-23T18:14:56Z api-gateway ERROR auth-3896 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T18:14:58Z api-gateway ERROR auth-3898 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache

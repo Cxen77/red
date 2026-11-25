@@ -1,0 +1,12 @@
+{
+  "id": "auth-jwks-rotation",
+  "title": "JWKS Key Rotation Cache Mismatch (401 Spike)",
+  "opened_at": "2026-11-23T18:08:30Z",
+  "severity": "medium",
+  "services": [
+    "auth-svc",
+    "api-gateway",
+    "orders-svc"
+  ],
+  "has_image": false
+}

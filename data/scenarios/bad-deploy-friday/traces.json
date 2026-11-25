@@ -1,0 +1,1132 @@
+[
+  {
+    "trace_id": "tr-0001",
+    "span_id": "sp-0001",
+    "ts": "2026-11-25T13:45:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 50.7,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0002",
+    "span_id": "sp-0002",
+    "ts": "2026-11-25T13:45:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 50.6,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0003",
+    "span_id": "sp-0003",
+    "ts": "2026-11-25T13:45:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 61.8,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0004",
+    "span_id": "sp-0004",
+    "ts": "2026-11-25T13:45:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 94.8,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0005",
+    "span_id": "sp-0005",
+    "ts": "2026-11-25T13:46:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 52.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0006",
+    "span_id": "sp-0006",
+    "ts": "2026-11-25T13:46:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 90.0,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0007",
+    "span_id": "sp-0007",
+    "ts": "2026-11-25T13:46:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 64.5,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0008",
+    "span_id": "sp-0008",
+    "ts": "2026-11-25T13:46:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 42.4,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0009",
+    "span_id": "sp-0009",
+    "ts": "2026-11-25T13:47:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 86.2,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0010",
+    "span_id": "sp-0010",
+    "ts": "2026-11-25T13:47:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 62.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0011",
+    "span_id": "sp-0011",
+    "ts": "2026-11-25T13:47:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 88.9,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0012",
+    "span_id": "sp-0012",
+    "ts": "2026-11-25T13:47:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 61.7,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0013",
+    "span_id": "sp-0013",
+    "ts": "2026-11-25T13:48:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 40.3,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0014",
+    "span_id": "sp-0014",
+    "ts": "2026-11-25T13:48:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 75.9,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0015",
+    "span_id": "sp-0015",
+    "ts": "2026-11-25T13:48:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 85.7,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0016",
+    "span_id": "sp-0016",
+    "ts": "2026-11-25T13:48:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 54.2,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0017",
+    "span_id": "sp-0017",
+    "ts": "2026-11-25T13:49:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 55.8,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0018",
+    "span_id": "sp-0018",
+    "ts": "2026-11-25T13:49:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 38.9,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0019",
+    "span_id": "sp-0019",
+    "ts": "2026-11-25T13:49:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 67.5,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0020",
+    "span_id": "sp-0020",
+    "ts": "2026-11-25T13:49:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 88.5,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0021",
+    "span_id": "sp-0021",
+    "ts": "2026-11-25T13:50:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 86.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0022",
+    "span_id": "sp-0022",
+    "ts": "2026-11-25T13:50:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 77.7,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0023",
+    "span_id": "sp-0023",
+    "ts": "2026-11-25T13:50:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 90.6,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0024",
+    "span_id": "sp-0024",
+    "ts": "2026-11-25T13:50:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 73.3,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0025",
+    "span_id": "sp-0025",
+    "ts": "2026-11-25T13:51:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 82.6,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0026",
+    "span_id": "sp-0026",
+    "ts": "2026-11-25T13:51:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 65.5,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0027",
+    "span_id": "sp-0027",
+    "ts": "2026-11-25T13:51:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 42.3,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0028",
+    "span_id": "sp-0028",
+    "ts": "2026-11-25T13:51:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 47.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0029",
+    "span_id": "sp-0029",
+    "ts": "2026-11-25T13:52:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 43.3,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0030",
+    "span_id": "sp-0030",
+    "ts": "2026-11-25T13:52:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 82.4,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0031",
+    "span_id": "sp-0031",
+    "ts": "2026-11-25T13:52:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 36.6,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0032",
+    "span_id": "sp-0032",
+    "ts": "2026-11-25T13:52:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 68.2,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0033",
+    "span_id": "sp-0033",
+    "ts": "2026-11-25T13:53:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 57.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0034",
+    "span_id": "sp-0034",
+    "ts": "2026-11-25T13:53:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 83.2,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0035",
+    "span_id": "sp-0035",
+    "ts": "2026-11-25T13:53:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 68.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0036",
+    "span_id": "sp-0036",
+    "ts": "2026-11-25T13:53:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 71.7,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0037",
+    "span_id": "sp-0037",
+    "ts": "2026-11-25T13:54:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 40.2,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0038",
+    "span_id": "sp-0038",
+    "ts": "2026-11-25T13:54:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 53.6,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0039",
+    "span_id": "sp-0039",
+    "ts": "2026-11-25T13:54:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 95.0,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0040",
+    "span_id": "sp-0040",
+    "ts": "2026-11-25T13:54:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 78.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0041",
+    "span_id": "sp-0041",
+    "ts": "2026-11-25T13:55:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 66.5,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0042",
+    "span_id": "sp-0042",
+    "ts": "2026-11-25T13:55:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 81.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0043",
+    "span_id": "sp-0043",
+    "ts": "2026-11-25T13:55:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 84.4,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0044",
+    "span_id": "sp-0044",
+    "ts": "2026-11-25T13:55:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 39.4,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0045",
+    "span_id": "sp-0045",
+    "ts": "2026-11-25T13:56:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 93.3,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0046",
+    "span_id": "sp-0046",
+    "ts": "2026-11-25T13:56:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 73.5,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0047",
+    "span_id": "sp-0047",
+    "ts": "2026-11-25T13:56:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 62.0,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0048",
+    "span_id": "sp-0048",
+    "ts": "2026-11-25T13:56:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 75.8,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0049",
+    "span_id": "sp-0049",
+    "ts": "2026-11-25T13:57:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 55.7,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0050",
+    "span_id": "sp-0050",
+    "ts": "2026-11-25T13:57:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 87.7,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0051",
+    "span_id": "sp-0051",
+    "ts": "2026-11-25T13:57:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 81.8,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0052",
+    "span_id": "sp-0052",
+    "ts": "2026-11-25T13:57:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 73.4,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0053",
+    "span_id": "sp-0053",
+    "ts": "2026-11-25T13:58:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 45.9,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0054",
+    "span_id": "sp-0054",
+    "ts": "2026-11-25T13:58:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 93.0,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0055",
+    "span_id": "sp-0055",
+    "ts": "2026-11-25T13:58:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 61.0,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0056",
+    "span_id": "sp-0056",
+    "ts": "2026-11-25T13:58:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 89.6,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0057",
+    "span_id": "sp-0057",
+    "ts": "2026-11-25T13:59:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 38.3,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0058",
+    "span_id": "sp-0058",
+    "ts": "2026-11-25T13:59:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 42.4,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0059",
+    "span_id": "sp-0059",
+    "ts": "2026-11-25T13:59:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 44.2,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0060",
+    "span_id": "sp-0060",
+    "ts": "2026-11-25T13:59:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 44.9,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0061",
+    "span_id": "sp-0061",
+    "ts": "2026-11-25T14:00:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 54.4,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0062",
+    "span_id": "sp-0062",
+    "ts": "2026-11-25T14:00:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 77.6,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0063",
+    "span_id": "sp-0063",
+    "ts": "2026-11-25T14:00:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 55.8,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0064",
+    "span_id": "sp-0064",
+    "ts": "2026-11-25T14:00:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 91.5,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0065",
+    "span_id": "sp-0065",
+    "ts": "2026-11-25T14:01:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 88.7,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0066",
+    "span_id": "sp-0066",
+    "ts": "2026-11-25T14:01:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 85.8,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0067",
+    "span_id": "sp-0067",
+    "ts": "2026-11-25T14:01:30Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 50.0,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0068",
+    "span_id": "sp-0068",
+    "ts": "2026-11-25T14:01:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 73.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0069",
+    "span_id": "sp-0069",
+    "ts": "2026-11-25T14:02:00Z",
+    "service": "checkout-svc",
+    "operation": "POST /checkout/confirm",
+    "duration_ms": 68.1,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0070",
+    "span_id": "sp-0070",
+    "ts": "2026-11-25T14:02:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 42.5,
+    "status": "OK"
+  },
+  {
+    "trace_id": "tr-0071",
+    "span_id": "sp-0071",
+    "ts": "2026-11-25T14:02:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3485.9,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0072",
+    "span_id": "sp-0072",
+    "ts": "2026-11-25T14:02:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3970.3,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0073",
+    "span_id": "sp-0073",
+    "ts": "2026-11-25T14:03:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3905.4,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0074",
+    "span_id": "sp-0074",
+    "ts": "2026-11-25T14:03:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3204.1,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0075",
+    "span_id": "sp-0075",
+    "ts": "2026-11-25T14:03:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4827.4,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0076",
+    "span_id": "sp-0076",
+    "ts": "2026-11-25T14:03:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3173.8,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0077",
+    "span_id": "sp-0077",
+    "ts": "2026-11-25T14:04:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4233.3,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0078",
+    "span_id": "sp-0078",
+    "ts": "2026-11-25T14:04:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4363.3,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0079",
+    "span_id": "sp-0079",
+    "ts": "2026-11-25T14:04:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4120.8,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0080",
+    "span_id": "sp-0080",
+    "ts": "2026-11-25T14:04:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4619.3,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0081",
+    "span_id": "sp-0081",
+    "ts": "2026-11-25T14:05:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4033.6,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0082",
+    "span_id": "sp-0082",
+    "ts": "2026-11-25T14:05:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4583.0,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0083",
+    "span_id": "sp-0083",
+    "ts": "2026-11-25T14:05:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 2909.6,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0084",
+    "span_id": "sp-0084",
+    "ts": "2026-11-25T14:05:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 2945.5,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0085",
+    "span_id": "sp-0085",
+    "ts": "2026-11-25T14:06:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4197.1,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0086",
+    "span_id": "sp-0086",
+    "ts": "2026-11-25T14:06:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4061.2,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0087",
+    "span_id": "sp-0087",
+    "ts": "2026-11-25T14:06:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4217.4,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0088",
+    "span_id": "sp-0088",
+    "ts": "2026-11-25T14:06:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4460.6,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0089",
+    "span_id": "sp-0089",
+    "ts": "2026-11-25T14:07:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3724.8,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0090",
+    "span_id": "sp-0090",
+    "ts": "2026-11-25T14:07:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4191.9,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0091",
+    "span_id": "sp-0091",
+    "ts": "2026-11-25T14:07:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3895.9,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0092",
+    "span_id": "sp-0092",
+    "ts": "2026-11-25T14:07:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4167.0,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0093",
+    "span_id": "sp-0093",
+    "ts": "2026-11-25T14:08:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3458.3,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0094",
+    "span_id": "sp-0094",
+    "ts": "2026-11-25T14:08:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4859.0,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0095",
+    "span_id": "sp-0095",
+    "ts": "2026-11-25T14:08:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3864.2,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0096",
+    "span_id": "sp-0096",
+    "ts": "2026-11-25T14:08:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4539.8,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0097",
+    "span_id": "sp-0097",
+    "ts": "2026-11-25T14:09:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4288.5,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0098",
+    "span_id": "sp-0098",
+    "ts": "2026-11-25T14:09:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3474.6,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0099",
+    "span_id": "sp-0099",
+    "ts": "2026-11-25T14:09:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3003.2,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0100",
+    "span_id": "sp-0100",
+    "ts": "2026-11-25T14:09:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 2975.8,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0101",
+    "span_id": "sp-0101",
+    "ts": "2026-11-25T14:10:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3773.2,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0102",
+    "span_id": "sp-0102",
+    "ts": "2026-11-25T14:10:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3866.9,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0103",
+    "span_id": "sp-0103",
+    "ts": "2026-11-25T14:10:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3278.4,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0104",
+    "span_id": "sp-0104",
+    "ts": "2026-11-25T14:10:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4124.0,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0105",
+    "span_id": "sp-0105",
+    "ts": "2026-11-25T14:11:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3506.4,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0106",
+    "span_id": "sp-0106",
+    "ts": "2026-11-25T14:11:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4358.6,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0107",
+    "span_id": "sp-0107",
+    "ts": "2026-11-25T14:11:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4391.8,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0108",
+    "span_id": "sp-0108",
+    "ts": "2026-11-25T14:11:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4657.6,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0109",
+    "span_id": "sp-0109",
+    "ts": "2026-11-25T14:12:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 4898.3,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0110",
+    "span_id": "sp-0110",
+    "ts": "2026-11-25T14:12:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3124.6,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0111",
+    "span_id": "sp-0111",
+    "ts": "2026-11-25T14:12:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3628.1,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0112",
+    "span_id": "sp-0112",
+    "ts": "2026-11-25T14:12:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4029.5,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0113",
+    "span_id": "sp-0113",
+    "ts": "2026-11-25T14:13:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3520.1,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0114",
+    "span_id": "sp-0114",
+    "ts": "2026-11-25T14:13:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3829.6,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0115",
+    "span_id": "sp-0115",
+    "ts": "2026-11-25T14:13:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3411.7,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0116",
+    "span_id": "sp-0116",
+    "ts": "2026-11-25T14:13:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3370.6,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0117",
+    "span_id": "sp-0117",
+    "ts": "2026-11-25T14:14:00Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3053.3,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0118",
+    "span_id": "sp-0118",
+    "ts": "2026-11-25T14:14:15Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 3459.4,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  },
+  {
+    "trace_id": "tr-0119",
+    "span_id": "sp-0119",
+    "ts": "2026-11-25T14:14:30Z",
+    "service": "checkout-svc",
+    "operation": "db.pool.acquire",
+    "duration_ms": 3656.7,
+    "status": "TIMEOUT",
+    "error": "HikariPool-1 pool_max=5 exhausted"
+  },
+  {
+    "trace_id": "tr-0120",
+    "span_id": "sp-0120",
+    "ts": "2026-11-25T14:14:45Z",
+    "service": "payment-svc",
+    "operation": "POST /payment/charge",
+    "duration_ms": 4142.3,
+    "status": "TIMEOUT",
+    "error": "upstream_checkout_timeout"
+  }
+]

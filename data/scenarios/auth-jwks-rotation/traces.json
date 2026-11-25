@@ -1,0 +1,452 @@
+[
+  {
+    "trace_id": "tr-au-0001",
+    "span_id": "sp-au-0001",
+    "ts": "2026-11-23T18:00:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 73.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0002",
+    "span_id": "sp-au-0002",
+    "ts": "2026-11-23T18:00:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 56.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0003",
+    "span_id": "sp-au-0003",
+    "ts": "2026-11-23T18:00:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 53.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0004",
+    "span_id": "sp-au-0004",
+    "ts": "2026-11-23T18:01:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 73.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0005",
+    "span_id": "sp-au-0005",
+    "ts": "2026-11-23T18:01:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 49.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0006",
+    "span_id": "sp-au-0006",
+    "ts": "2026-11-23T18:01:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 61.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0007",
+    "span_id": "sp-au-0007",
+    "ts": "2026-11-23T18:02:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 64.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0008",
+    "span_id": "sp-au-0008",
+    "ts": "2026-11-23T18:02:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 66.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0009",
+    "span_id": "sp-au-0009",
+    "ts": "2026-11-23T18:02:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 50.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0010",
+    "span_id": "sp-au-0010",
+    "ts": "2026-11-23T18:03:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 67.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0011",
+    "span_id": "sp-au-0011",
+    "ts": "2026-11-23T18:03:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 62.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0012",
+    "span_id": "sp-au-0012",
+    "ts": "2026-11-23T18:03:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 74.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0013",
+    "span_id": "sp-au-0013",
+    "ts": "2026-11-23T18:04:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 46.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0014",
+    "span_id": "sp-au-0014",
+    "ts": "2026-11-23T18:04:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 78.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0015",
+    "span_id": "sp-au-0015",
+    "ts": "2026-11-23T18:04:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 51.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0016",
+    "span_id": "sp-au-0016",
+    "ts": "2026-11-23T18:05:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 73.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0017",
+    "span_id": "sp-au-0017",
+    "ts": "2026-11-23T18:05:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 62.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0018",
+    "span_id": "sp-au-0018",
+    "ts": "2026-11-23T18:05:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 74.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0019",
+    "span_id": "sp-au-0019",
+    "ts": "2026-11-23T18:06:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 51.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0020",
+    "span_id": "sp-au-0020",
+    "ts": "2026-11-23T18:06:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 56.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0021",
+    "span_id": "sp-au-0021",
+    "ts": "2026-11-23T18:06:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 48.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0022",
+    "span_id": "sp-au-0022",
+    "ts": "2026-11-23T18:07:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 72.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0023",
+    "span_id": "sp-au-0023",
+    "ts": "2026-11-23T18:07:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 63.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0024",
+    "span_id": "sp-au-0024",
+    "ts": "2026-11-23T18:07:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 52.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0025",
+    "span_id": "sp-au-0025",
+    "ts": "2026-11-23T18:08:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 51.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-au-0026",
+    "span_id": "sp-au-0026",
+    "ts": "2026-11-23T18:08:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 47.8,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0027",
+    "span_id": "sp-au-0027",
+    "ts": "2026-11-23T18:08:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 52.0,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0028",
+    "span_id": "sp-au-0028",
+    "ts": "2026-11-23T18:09:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 64.6,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0029",
+    "span_id": "sp-au-0029",
+    "ts": "2026-11-23T18:09:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 60.3,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0030",
+    "span_id": "sp-au-0030",
+    "ts": "2026-11-23T18:09:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 69.6,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0031",
+    "span_id": "sp-au-0031",
+    "ts": "2026-11-23T18:10:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 47.7,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0032",
+    "span_id": "sp-au-0032",
+    "ts": "2026-11-23T18:10:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 74.4,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0033",
+    "span_id": "sp-au-0033",
+    "ts": "2026-11-23T18:10:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 79.4,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0034",
+    "span_id": "sp-au-0034",
+    "ts": "2026-11-23T18:11:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 70.9,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0035",
+    "span_id": "sp-au-0035",
+    "ts": "2026-11-23T18:11:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 71.0,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0036",
+    "span_id": "sp-au-0036",
+    "ts": "2026-11-23T18:11:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 74.7,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0037",
+    "span_id": "sp-au-0037",
+    "ts": "2026-11-23T18:12:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 48.3,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0038",
+    "span_id": "sp-au-0038",
+    "ts": "2026-11-23T18:12:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 61.1,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0039",
+    "span_id": "sp-au-0039",
+    "ts": "2026-11-23T18:12:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 47.8,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0040",
+    "span_id": "sp-au-0040",
+    "ts": "2026-11-23T18:13:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 72.4,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0041",
+    "span_id": "sp-au-0041",
+    "ts": "2026-11-23T18:13:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 63.8,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0042",
+    "span_id": "sp-au-0042",
+    "ts": "2026-11-23T18:13:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 48.7,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0043",
+    "span_id": "sp-au-0043",
+    "ts": "2026-11-23T18:14:00Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 60.6,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0044",
+    "span_id": "sp-au-0044",
+    "ts": "2026-11-23T18:14:20Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 72.2,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  },
+  {
+    "trace_id": "tr-au-0045",
+    "span_id": "sp-au-0045",
+    "ts": "2026-11-23T18:14:40Z",
+    "service": "api-gateway",
+    "operation": "middleware.jwt.verify",
+    "duration_ms": 64.3,
+    "status": "ERROR",
+    "error": "jwks_kid_not_found"
+  }
+]

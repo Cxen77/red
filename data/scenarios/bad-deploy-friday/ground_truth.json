@@ -1,0 +1,25 @@
+{
+  "scenario_id": "bad-deploy-friday",
+  "root_cause_service": "checkout-svc",
+  "root_cause_category": "connection_pool_exhaustion",
+  "root_cause_summary": "Deploy v2.4.1 on checkout-svc reduced db_pool_max from 50 to 5 at 14:02:00Z, exhausting connections and cascading into retry storms and payment/gateway 504 timeouts.",
+  "required_keywords": [
+    "db_pool_max=5",
+    "checkout-svc",
+    "HikariPool-1"
+  ],
+  "milestones": [
+    {
+      "ts": "2026-11-25T14:02:00Z",
+      "event": "Deploy v2.4.1 applied db_pool_max=5"
+    },
+    {
+      "ts": "2026-11-25T14:03:00Z",
+      "event": "HikariPool-1 connection timeouts begin"
+    },
+    {
+      "ts": "2026-11-25T14:03:30Z",
+      "event": "Payment and API Gateway 504 cascade"
+    }
+  ]
+}

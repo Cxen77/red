@@ -1,0 +1,11 @@
+{
+  "scenario_id": "cache-stampede-rcaeval",
+  "root_cause_service": "redis-proxy",
+  "root_cause_category": "cache_stampede",
+  "root_cause_summary": "Redis ttl_flush evicted 48,210 product_catalog keys, triggering a DB query stampede on catalog-svc and 503 responses in cart-svc.",
+  "required_keywords": [
+    "ttl_flush",
+    "redis-proxy",
+    "catalog-svc"
+  ]
+}

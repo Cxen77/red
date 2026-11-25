@@ -1,0 +1,24 @@
+# Environment & secrets (never commit real API keys)
+.env
+.env.local
+*.key
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+scripts/node_modules/
+package-lock.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Runtime generated incident uploads
+data/uploads/

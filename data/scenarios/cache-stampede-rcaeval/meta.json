@@ -1,0 +1,13 @@
+{
+  "id": "cache-stampede-rcaeval",
+  "title": "Catalog Cache Stampede After Redis TTL Flush",
+  "opened_at": "2026-11-24T09:22:00Z",
+  "severity": "high",
+  "services": [
+    "api-gateway",
+    "catalog-svc",
+    "redis-proxy",
+    "cart-svc"
+  ],
+  "has_image": true
+}

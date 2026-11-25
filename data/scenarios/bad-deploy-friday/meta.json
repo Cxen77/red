@@ -1,0 +1,13 @@
+{
+  "id": "bad-deploy-friday",
+  "title": "Bad Deploy Friday \u2014 Checkout DB Pool Exhaustion",
+  "opened_at": "2026-11-25T14:04:00Z",
+  "severity": "critical",
+  "services": [
+    "api-gateway",
+    "checkout-svc",
+    "payment-svc",
+    "auth-svc"
+  ],
+  "has_image": true
+}
