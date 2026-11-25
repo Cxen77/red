@@ -36,7 +36,7 @@ def test_ingest_assigns_stable_ids_and_drain3_templates() -> None:
 
 
 def test_timeline_flags_deterministic_anomalies() -> None:
-    items = ingest_incident_dir(SCENARIOS_DIR / "bad-deploy-friday")
+    items, _ = ingest_incident_dir_with_stats(SCENARIOS_DIR / "bad-deploy-friday")
     tl = build_timeline("bad-deploy-friday", items)
     codes = {flag.code for item in tl.items for flag in item.flags}
     assert "CONFIG_OR_DEPLOY_EVENT" in codes
