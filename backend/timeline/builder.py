@@ -4,7 +4,7 @@ from __future__ import annotations
 import math
 import statistics
 from collections import defaultdict
-from backend.models import AnomalyFlag, EvidenceItem, MetricPoint, TimelineSummary
+from backend.models import AnomalyFlag, EvidenceItem, MetricPoint, ServiceImpactNode, TimelineSummary
 
 
 def _minute_bucket(ts: str) -> str:
@@ -60,14 +60,18 @@ def build_timeline(
             error_counts_by_bucket[b] += 1
             bucket_error_items[b].append(item)
 
-        if item.kind == "log" and any(
-            kw in item.raw.lower() for kw in ("deploy", "pool_max=", "config applied", "ttl_flush", "jwks_rotate")
+        if item.kind == "event" or (
+            item.kind == "log"
+            and any(
+                kw in item.raw.lower()
+                for kw in ("deploy", "pool_max=", "config applied", "ttl_flush", "jwks_rotate")
+            )
         ):
             item.flags.append(
                 AnomalyFlag(
                     code="CONFIG_OR_DEPLOY_EVENT",
                     severity="info",
-                    label="Deploy / config event",
+                    label="Deploy / change event" if item.kind == "event" else "Deploy / config event",
                     detail=f"Deployment or configuration change recorded on {item.service}.",
                 )
             )
@@ -177,6 +181,38 @@ def build_timeline(
     for key in metric_series:
         metric_series[key].sort(key=lambda p: p.ts)
 
+    # 5. Deterministic service blast-radius map (origin -> cascade -> healthy)
+    svc_anomalies: dict[str, int] = defaultdict(int)
+    svc_errors: dict[str, int] = defaultdict(int)
+    svc_first_ts: dict[str, str] = {}
+    for item in cloned:
+        if item.level in {"ERROR", "CRITICAL", "FATAL"}:
+            svc_errors[item.service] += 1
+        if item.flags:
+            svc_anomalies[item.service] += 1
+            if item.service not in svc_first_ts:
+                svc_first_ts[item.service] = item.ts
+
+    anomalous_svcs = [s for s in services if svc_anomalies[s] > 0 or svc_errors[s] > 0]
+    anomalous_svcs.sort(key=lambda s: (svc_first_ts.get(s, "9999"), -svc_anomalies[s]))
+    origin_svc = anomalous_svcs[0] if anomalous_svcs else None
+
+    service_map: list[ServiceImpactNode] = []
+    for s in anomalous_svcs:
+        role = "origin" if s == origin_svc else "cascade"
+        service_map.append(
+            ServiceImpactNode(
+                service=s,
+                role=role,
+                anomaly_count=svc_anomalies[s],
+                error_count=svc_errors[s],
+                first_anomaly_ts=svc_first_ts.get(s),
+            )
+        )
+    for s in services:
+        if s not in anomalous_svcs:
+            service_map.append(ServiceImpactNode(service=s, role="healthy"))
+
     return TimelineSummary(
         incident_id=incident_id,
         services=services,
@@ -184,6 +220,7 @@ def build_timeline(
         anomaly_count=len(flagged_items),
         redacted_secrets_count=redacted_secrets_count,
         anomaly_window=anomaly_window,
+        service_map=service_map,
         items=cloned,
         metric_series=dict(metric_series),
     )

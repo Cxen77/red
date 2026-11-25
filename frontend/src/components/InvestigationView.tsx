@@ -252,6 +252,47 @@ export function InvestigationView({
         />
       )}
 
+      {/* Service Blast-Radius Strip */}
+      {timeline?.service_map && timeline.service_map.length > 0 && (
+        <div className="bg-[#FAFAF9] border-b border-[#E7E5E4] px-6 py-2 flex flex-wrap items-center gap-2 text-[12px]">
+          <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C] mr-1">
+            Blast radius
+          </span>
+          {timeline.service_map.map((node, idx) => {
+            const dotColor =
+              node.role === "origin"
+                ? "bg-[#C81E1E]"
+                : node.role === "cascade"
+                ? "bg-[#B45309]"
+                : "bg-[#15803D]";
+            const isActive = selectedServices.includes(node.service);
+            return (
+              <div key={node.service} className="flex items-center gap-2">
+                {idx > 0 && node.role !== "healthy" && (
+                  <ChevronRight className="w-3.5 h-3.5 text-stone-400" strokeWidth={1.5} />
+                )}
+                <button
+                  type="button"
+                  onClick={() => toggleService(node.service)}
+                  className={`px-2 py-0.5 rounded border font-mono text-[11px] flex items-center gap-1.5 transition-colors ${
+                    isActive
+                      ? "bg-[#1C1917] text-white border-[#1C1917]"
+                      : "bg-white text-[#1C1917] border-[#E7E5E4] hover:border-stone-400"
+                  }`}
+                >
+                  <span className={`w-1.5 h-1.5 rounded-full ${dotColor}`} />
+                  <span>{node.service}</span>
+                  <span className="text-[10px] opacity-75">
+                    {node.role}
+                    {node.anomaly_count > 0 ? ` (${node.anomaly_count})` : ""}
+                  </span>
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
       {/* Optional Multimodal Image + Decider Visual Assessment */}
       {showImagePanel && meta.has_image && (
         <div className="bg-white border-b border-[#E7E5E4] px-6 py-3 flex flex-wrap items-center gap-6">

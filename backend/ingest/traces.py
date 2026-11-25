@@ -1,4 +1,4 @@
-"""Trace span JSON ingest adapter."""
+"""Trace span JSON ingest adapter (supports simple spans + OpenTelemetry resourceSpans)."""
 from __future__ import annotations
 
 import json
@@ -7,8 +7,36 @@ from .base import FormatAdapter
 from .logs import _normalize_ts
 
 
+def _extract_otel_spans(payload: dict) -> list[dict]:
+    """Flatten standard OTLP resourceSpans JSON into normalized span dicts."""
+    flattened: list[dict] = []
+    for res_span in payload.get("resourceSpans", []):
+        attrs = {
+            a.get("key"): a.get("value", {}).get("stringValue")
+            for a in res_span.get("resource", {}).get("attributes", [])
+        }
+        svc = attrs.get("service.name") or "unknown-svc"
+        for scope_span in res_span.get("scopeSpans", []):
+            for sp in scope_span.get("spans", []):
+                start_ns = int(sp.get("startTimeUnixNano") or 0)
+                end_ns = int(sp.get("endTimeUnixNano") or start_ns)
+                dur_ms = round(max(0.0, (end_ns - start_ns) / 1_000_000.0), 2)
+                status_code = sp.get("status", {}).get("code", "STATUS_CODE_OK")
+                flattened.append({
+                    "trace_id": sp.get("traceId", "otel-tr"),
+                    "span_id": sp.get("spanId", "otel-sp"),
+                    "ts": sp.get("ts") or "2026-11-25T14:00:00Z",
+                    "service": svc,
+                    "operation": sp.get("name", "otel.span"),
+                    "duration_ms": float(sp.get("duration_ms") or dur_ms),
+                    "status": "ERROR" if "ERROR" in str(status_code).upper() else "OK",
+                    "error": sp.get("status", {}).get("message", ""),
+                })
+    return flattened
+
+
 class TraceAdapter(FormatAdapter):
-    """Parses JSON array or JSON-lines trace spans into EvidenceItems."""
+    """Parses JSON array, JSONL, or OTLP resourceSpans trace spans into EvidenceItems."""
 
     source_name = "traces.json"
 
@@ -24,7 +52,9 @@ class TraceAdapter(FormatAdapter):
         elif stripped.startswith("{"):
             try:
                 parsed = json.loads(stripped)
-                if isinstance(parsed, dict) and "spans" in parsed:
+                if isinstance(parsed, dict) and "resourceSpans" in parsed:
+                    records = _extract_otel_spans(parsed)
+                elif isinstance(parsed, dict) and "spans" in parsed:
                     records = parsed["spans"]
                 else:
                     records = [parsed]

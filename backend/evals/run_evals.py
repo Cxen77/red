@@ -1,4 +1,4 @@
-"""Evaluation harness comparing IncidentLens against a Named Baseline across 10 injected faults."""
+"""Evaluation harness comparing IncidentLens against TWO Named Baselines across 10 injected faults."""
 from __future__ import annotations
 
 import json
@@ -16,22 +16,36 @@ from backend.verify.verifier import verify_findings
 
 
 def run_naive_baseline(items) -> dict:
-    """Named Baseline: NaiveRawLogKeywordBaseline.
+    """Baseline 1: NaiveRawLogKeywordBaseline.
     Counts raw ERROR strings per service without Drain3 grouping, metric z-scores,
     trace outlier correlation, or citation verification.
-    Limitation: fooled by downstream error amplification and produces uncited guesses.
     """
-    started = time.perf_counter()
     error_counts = Counter(
         item.service for item in items if item.kind == "log" and item.level in {"ERROR", "CRITICAL"}
     )
     guessed_service = error_counts.most_common(1)[0][0] if error_counts else "unknown"
-    elapsed_ms = round((time.perf_counter() - started) * 1000, 2)
     return {
         "guessed_service": guessed_service,
-        "citation_validity_rate": 0.0,  # Baseline emits no verifiable citations
+        "citation_validity_rate": 0.0,
         "raw_items_reviewed": len(items),
-        "elapsed_ms": elapsed_ms,
+    }
+
+
+def run_raw_window_baseline(items) -> dict:
+    """Baseline 2: SingleRawLogWindowBaseline.
+    Simulates a single un-filtered raw-log prompt taking the first 60 raw chronological lines
+    (without anomaly pre-filtering or Drain3 clustering). When logs exceed 60 healthy baseline
+    lines before the fault window, the trigger falls outside the prompt window.
+    """
+    raw_window = items[:60]
+    error_svcs = Counter(
+        item.service for item in raw_window if item.level in {"ERROR", "CRITICAL", "WARN"}
+    )
+    guessed_service = error_svcs.most_common(1)[0][0] if error_svcs else "unknown"
+    return {
+        "guessed_service": guessed_service,
+        "citation_validity_rate": 0.0,
+        "window_items": len(raw_window),
     }
 
 
@@ -39,6 +53,7 @@ def run_evals(mode: Literal["live", "replay"] = "live") -> dict:
     results = []
     latencies = []
     baseline_hits = 0
+    raw_window_hits = 0
     total_tokens_list = []
     noise_reduction_list = []
 
@@ -54,8 +69,14 @@ def run_evals(mode: Literal["live", "replay"] = "live") -> dict:
 
         items, redacted_count = ingest_incident_dir_with_stats(scen_dir)
         baseline = run_naive_baseline(items)
-        if baseline["guessed_service"] == gt["root_cause_service"]:
+        raw_win = run_raw_window_baseline(items)
+
+        b1_hit = baseline["guessed_service"] == gt["root_cause_service"]
+        b2_hit = raw_win["guessed_service"] == gt["root_cause_service"]
+        if b1_hit:
             baseline_hits += 1
+        if b2_hit:
+            raw_window_hits += 1
 
         started = time.perf_counter()
         timeline = build_timeline(scen_id, items, redacted_secrets_count=redacted_count)
@@ -91,8 +112,10 @@ def run_evals(mode: Literal["live", "replay"] = "live") -> dict:
             "passed": passed,
             "miss_reason": None if passed else "Degraded/missing logs prevented full log+keyword attribution",
             "root_cause_service_hit": service_hit,
-            "baseline_service_hit": baseline["guessed_service"] == gt["root_cause_service"],
+            "baseline_service_hit": b1_hit,
             "baseline_guessed_service": baseline["guessed_service"],
+            "raw_window_baseline_hit": b2_hit,
+            "raw_window_guessed_service": raw_win["guessed_service"],
             "keyword_hits": f"{keyword_hits}/{len(gt.get('required_keywords', []))}",
             "conclusions_count": len(inv.conclusions),
             "hypotheses_demoted": len(inv.hypotheses),
@@ -103,7 +126,6 @@ def run_evals(mode: Literal["live", "replay"] = "live") -> dict:
             "elapsed_ms": elapsed_ms,
         })
 
-    # Synthetic verifier unit check: ensure broken citations are always demoted
     bad_finding = Finding(
         id="BAD-1",
         claim="CPU spike on unknown-svc",
@@ -117,7 +139,7 @@ def run_evals(mode: Literal["live", "replay"] = "live") -> dict:
 
     total = max(1, len(results))
     summary = {
-        "suite": "incidentlens-evals-v2-10-faults",
+        "suite": "incidentlens-evals-v3-dual-baseline",
         "mode": mode,
         "scenarios_total": len(results),
         "scenarios_passed": sum(1 for r in results if r["passed"]),
@@ -136,6 +158,9 @@ def run_evals(mode: Literal["live", "replay"] = "live") -> dict:
             "baseline_limitation": "Ranks services by raw ERROR log frequency only; misattributes cascading downstream symptoms, performs 0% noise reduction, and produces uncited diagnoses.",
             "baseline_root_cause_accuracy": round(baseline_hits / total, 4),
             "baseline_citation_validity_rate": 0.0,
+            "raw_window_baseline_name": "SingleRawLogWindowBaseline",
+            "raw_window_limitation": "Feeds un-filtered chronological prefix (60 lines) without anomaly detection; misses faults occurring after healthy baseline traffic.",
+            "raw_window_root_cause_accuracy": round(raw_window_hits / total, 4),
             "incidentlens_accuracy_delta": round(
                 (sum(1 for r in results if r["root_cause_service_hit"]) - baseline_hits) / total, 4
             ),

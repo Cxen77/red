@@ -63,13 +63,13 @@
       "stage": "triage_root_cause",
       "model": "perplexity/pplx-decider-flash-v1.3-20261112",
       "mode": "live",
-      "latency_ms": 418.83,
+      "latency_ms": 1416.09,
       "retries": 0,
       "context_items_sent": 12,
       "input_tokens": 1285,
       "output_tokens": 6,
       "cost": 0.0,
-      "request_id": "gen-dec-1795626705-8ZKIIjykV2DvzpioWHeq",
+      "request_id": "gen-dec-1795627167-MlfdPUcKLi93Xx86PuEk",
       "error": null,
       "questions": [
         {
@@ -149,56 +149,56 @@
         "type": "choice",
         "choice": "LOG-0481",
         "probabilities": {
-          "LOG-0481": 0.9937699343701036,
-          "LOG-0482": 0.002181501365761363,
-          "LOG-0483": 0.00023076815808187513,
-          "LOG-0485": 0.00017199286451533808,
-          "MET-0029": 0.00028095130678989306,
-          "MET-0026": 0.002512806674465756,
-          "MET-0038": 0.00010312237526667293,
-          "MET-0035": 9.961424408265314e-05,
-          "TRACE-0024": 0.00021332777753031533,
-          "TRACE-0025": 9.49608829928572e-05,
-          "MET-0001": 0.00016456246759374694,
-          "MET-0002": 0.00017645751281620707
+          "LOG-0481": 0.9934626883987534,
+          "LOG-0482": 0.0022154466943532704,
+          "LOG-0483": 0.00024211739891465527,
+          "LOG-0485": 0.00018289946332407383,
+          "MET-0029": 0.00028784540290382224,
+          "MET-0026": 0.0026941511185898923,
+          "MET-0038": 0.00010126902760305908,
+          "MET-0035": 0.00010266703829795611,
+          "TRACE-0024": 0.0002257179432073693,
+          "TRACE-0025": 0.00010263434125921389,
+          "MET-0001": 0.00018016452735731045,
+          "MET-0002": 0.0002023986454363048
         },
-        "confidence": 0.9932035647673858
+        "confidence": 0.9928683873440947
       },
       "trigger_is_causal": {
         "type": "noul",
-        "noul": 0.987961128548957
+        "noul": 0.9876872213423412
       },
       "metric_corroboration": {
         "type": "noul",
-        "noul": 0.9988838757011615
+        "noul": 0.9988290433916802
       },
       "evidence_strength": {
         "type": "score",
-        "score": 1.8152848101707106,
+        "score": 1.8289794607105267,
         "legend": {
           "0": "Weak",
           "1": "Moderate",
           "2": "Strong"
         },
         "probabilities": {
-          "0": 0.0230642306540208,
-          "1": 0.1385867285212477,
-          "2": 0.8383490408247315
+          "0": 0.020434018741840067,
+          "1": 0.1301525018057931,
+          "2": 0.8494134794523668
         },
-        "confidence": 0.8152848101707106
+        "confidence": 0.8289794607105267
       }
     },
     "trace": {
       "stage": "evidence_attribution",
       "model": "perplexity/pplx-decider-flash-v1.3-20261112",
       "mode": "live",
-      "latency_ms": 433.76,
+      "latency_ms": 590.79,
       "retries": 0,
       "context_items_sent": 14,
       "input_tokens": 2022,
       "output_tokens": 4,
       "cost": 0.0,
-      "request_id": "gen-dec-1795626706-eZm4OI2an0KrRPIWERcz",
+      "request_id": "gen-dec-1795627168-sUtZ6UYMEupqocXa8FWx",
       "error": null,
       "questions": [
         {
@@ -206,48 +206,48 @@
           "question_type": "choice",
           "instructions": "Select the exact evidence item that captures the initial trigger or config change on redis-proxy.",
           "answer": "LOG-0481",
-          "confidence": 0.9932035647673858,
+          "confidence": 0.9928683873440947,
           "probabilities": {
-            "LOG-0481": 0.9937699343701036,
-            "LOG-0482": 0.002181501365761363,
-            "LOG-0483": 0.00023076815808187513,
-            "LOG-0485": 0.00017199286451533808,
-            "MET-0029": 0.00028095130678989306,
-            "MET-0026": 0.002512806674465756,
-            "MET-0038": 0.00010312237526667293,
-            "MET-0035": 9.961424408265314e-05,
-            "TRACE-0024": 0.00021332777753031533,
-            "TRACE-0025": 9.49608829928572e-05,
-            "MET-0001": 0.00016456246759374694,
-            "MET-0002": 0.00017645751281620707
+            "LOG-0481": 0.9934626883987534,
+            "LOG-0482": 0.0022154466943532704,
+            "LOG-0483": 0.00024211739891465527,
+            "LOG-0485": 0.00018289946332407383,
+            "MET-0029": 0.00028784540290382224,
+            "MET-0026": 0.0026941511185898923,
+            "MET-0038": 0.00010126902760305908,
+            "MET-0035": 0.00010266703829795611,
+            "TRACE-0024": 0.0002257179432073693,
+            "TRACE-0025": 0.00010263434125921389,
+            "MET-0001": 0.00018016452735731045,
+            "MET-0002": 0.0002023986454363048
           }
         },
         {
           "question_key": "trigger_is_causal",
           "question_type": "noul",
           "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
-          "answer": 0.987961128548957,
-          "confidence": 0.987961128548957,
+          "answer": 0.9876872213423412,
+          "confidence": 0.9876872213423412,
           "probabilities": null
         },
         {
           "question_key": "metric_corroboration",
           "question_type": "noul",
           "instructions": "Do the metric spikes corroborate the log/trace failure?",
-          "answer": 0.9988838757011615,
-          "confidence": 0.9988838757011615,
+          "answer": 0.9988290433916802,
+          "confidence": 0.9988290433916802,
           "probabilities": null
         },
         {
           "question_key": "evidence_strength",
           "question_type": "score",
           "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
-          "answer": 1.8152848101707106,
-          "confidence": 0.8152848101707106,
+          "answer": 1.8289794607105267,
+          "confidence": 0.8289794607105267,
           "probabilities": {
-            "0": 0.0230642306540208,
-            "1": 0.1385867285212477,
-            "2": 0.8383490408247315
+            "0": 0.020434018741840067,
+            "1": 0.1301525018057931,
+            "2": 0.8494134794523668
           }
         }
       ]

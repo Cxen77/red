@@ -1,4 +1,4 @@
-export type EvidenceKind = "log" | "trace" | "metric";
+export type EvidenceKind = "log" | "trace" | "metric" | "event";
 export type SeverityLevel = "critical" | "high" | "medium" | "low";
 export type IncidentStatus = "open" | "investigated" | "verified";
 export type FindingKind = "conclusion" | "hypothesis";
@@ -43,6 +43,14 @@ export interface MetricPoint {
   evidence_id: string;
 }
 
+export interface ServiceImpactNode {
+  service: string;
+  role: "origin" | "cascade" | "healthy";
+  anomaly_count: number;
+  error_count: number;
+  first_anomaly_ts?: string | null;
+}
+
 export interface TimelineSummary {
   incident_id: string;
   services: string[];
@@ -50,6 +58,7 @@ export interface TimelineSummary {
   anomaly_count: number;
   redacted_secrets_count: number;
   anomaly_window?: [string, string] | null;
+  service_map?: ServiceImpactNode[];
   items: EvidenceItem[];
   metric_series: Record<string, MetricPoint[]>;
 }

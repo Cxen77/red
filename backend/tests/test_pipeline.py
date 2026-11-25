@@ -5,11 +5,19 @@ from fastapi.testclient import TestClient
 
 from backend.api.main import app
 from backend.config import SCENARIOS_DIR
-from backend.ingest.pipeline import ingest_incident_dir_with_stats
+from backend.ingest.pipeline import ingest_incident_dir_with_stats, ingest_incident_payloads
 from backend.ingest.redact import redact_text
 from backend.models import Finding
 from backend.timeline.builder import build_timeline
 from backend.verify.verifier import verify_findings
+
+
+def test_otel_and_event_adapters() -> None:
+    otel_json = '{"resourceSpans":[{"resource":{"attributes":[{"key":"service.name","value":{"stringValue":"checkout-svc"}}]},"scopeSpans":[{"spans":[{"traceId":"tr-otel","spanId":"sp-otel","name":"db.query","startTimeUnixNano":1000000000,"endTimeUnixNano":3500000000,"status":{"code":"STATUS_CODE_ERROR","message":"pool exhausted"}}]}]}]}'
+    events_json = '[{"ts":"2026-11-25T14:01:58Z","service":"checkout-svc","event_type":"ConfigMapUpdated","commit":"a91f4c2","message":"db_pool_max 50->5"}]'
+    items = ingest_incident_payloads(traces_text=otel_json, events_text=events_json)
+    assert any(i.id == "EVENT-0001" and i.kind == "event" for i in items)
+    assert any(i.id == "TRACE-0001" and i.duration_ms == 2500.0 for i in items)
 
 
 def test_secret_redaction_strips_tokens_and_keys() -> None:

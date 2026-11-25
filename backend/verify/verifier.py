@@ -59,7 +59,7 @@ def verify_findings(
                     failures.append("No flagged latency trace outlier or latency metric cited")
             elif f.claim_type in {"error", "root_cause"}:
                 has_log_or_flag = any(
-                    item.kind == "log"
+                    item.kind in {"log", "event"}
                     and (
                         (item.level in {"ERROR", "CRITICAL", "WARN"})
                         or any(
@@ -70,7 +70,7 @@ def verify_findings(
                     for item in cited_items
                 )
                 if not has_log_or_flag:
-                    failures.append("No supporting error or deploy/config log cited")
+                    failures.append("No supporting error, deploy/config log, or change event cited")
 
         passed = len(failures) == 0
         f.verification_passed = passed

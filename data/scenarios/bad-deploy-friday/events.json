@@ -1,0 +1,18 @@
+[
+  {
+    "ts": "2026-11-25T14:01:58Z",
+    "service": "checkout-svc",
+    "event_type": "ConfigMapUpdated",
+    "actor": "ci-cd-bot",
+    "commit": "a91f4c2",
+    "message": "Updated checkout-config: db_pool_max changed from 50 -> 5"
+  },
+  {
+    "ts": "2026-11-25T14:02:00Z",
+    "service": "checkout-svc",
+    "event_type": "DeploymentRollout",
+    "actor": "argocd",
+    "commit": "a91f4c2",
+    "message": "Rolled out checkout-svc:v2.4.1 (replicas=4)"
+  }
+]

@@ -4,7 +4,7 @@ from __future__ import annotations
 from typing import Any, Literal
 from pydantic import BaseModel, Field
 
-EvidenceKind = Literal["log", "trace", "metric"]
+EvidenceKind = Literal["log", "trace", "metric", "event"]
 SeverityLevel = Literal["critical", "high", "medium", "low"]
 IncidentStatus = Literal["open", "investigated", "verified"]
 FindingKind = Literal["conclusion", "hypothesis"]
@@ -51,6 +51,14 @@ class MetricPoint(BaseModel):
     evidence_id: str
 
 
+class ServiceImpactNode(BaseModel):
+    service: str
+    role: Literal["origin", "cascade", "healthy"] = "healthy"
+    anomaly_count: int = 0
+    error_count: int = 0
+    first_anomaly_ts: str | None = None
+
+
 class TimelineSummary(BaseModel):
     incident_id: str
     services: list[str]
@@ -58,6 +66,7 @@ class TimelineSummary(BaseModel):
     anomaly_count: int
     redacted_secrets_count: int = 0
     anomaly_window: list[str] | None = None
+    service_map: list[ServiceImpactNode] = Field(default_factory=list)
     items: list[EvidenceItem]
     metric_series: dict[str, list[MetricPoint]]
 

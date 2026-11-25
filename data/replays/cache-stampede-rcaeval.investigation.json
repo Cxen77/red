@@ -1,0 +1,595 @@
+{
+  "incident_id": "cache-stampede-rcaeval",
+  "title": "Catalog Cache Stampede After Redis TTL Flush",
+  "mode": "live",
+  "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+  "opened_at": "2026-11-24T09:22:00Z",
+  "investigated_at": "2026-11-25T17:19:19Z",
+  "severity": "high",
+  "status": "verified",
+  "root_cause_summary": "Cache flush or eviction triggering downstream DB stampede in redis-proxy (verified by 5/6 findings).",
+  "root_cause_chain": [
+    "Root cause on redis-proxy (cache stampede): admin_op ttl_flush executed namespace=product_catalog evicted_keys=48210",
+    "Error burst triggered on redis-proxy: req-108-482 cache miss storm namespace=product_catalog evicted_keys=48210",
+    "Anomalous metric spike on redis-proxy for latency_ms=2796.52 (z=579.05).",
+    "Trace span sp-108-024 on catalog-svc breached latency/error threshold (3863.5ms).",
+    "Downstream cascade impacted catalog-svc: req-108-483 db overload from catalog-svc cache miss stampede"
+  ],
+  "raw_items_total": 997,
+  "filtered_items_sent": 11,
+  "noise_reduction_pct": 98.9,
+  "redacted_secrets_count": 0,
+  "tool_trace": [
+    {
+      "tool": "get_timeline_window",
+      "arguments": {
+        "start_ts": null,
+        "end_ts": null,
+        "flagged_only": true,
+        "limit": 40
+      },
+      "returned": 40,
+      "elapsed_ms": 0.106
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "deploy",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 0,
+      "elapsed_ms": 0.356
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "ttl_flush",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 1,
+      "elapsed_ms": 0.343
+    },
+    {
+      "tool": "get_metric_series",
+      "arguments": {
+        "metric_name": null,
+        "anomalies_only": true
+      },
+      "returned": 21,
+      "elapsed_ms": 0.026
+    },
+    {
+      "tool": "get_trace",
+      "arguments": {
+        "trace_id": null,
+        "outliers_only": true,
+        "limit": 15
+      },
+      "returned": 15,
+      "elapsed_ms": 0.148
+    },
+    {
+      "tool": "get_service_events",
+      "arguments": {
+        "service": "redis-proxy",
+        "level": null,
+        "limit": 20
+      },
+      "returned": 20,
+      "elapsed_ms": 0.137
+    }
+  ],
+  "decision_traces": [
+    {
+      "stage": "triage_root_cause",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 1416.09,
+      "retries": 0,
+      "context_items_sent": 12,
+      "input_tokens": 1285,
+      "output_tokens": 6,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795627167-MlfdPUcKLi93Xx86PuEk",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "is_incident_confirmed",
+          "question_type": "noul",
+          "instructions": "Does the telemetry state confirm an active production incident or service outage?",
+          "answer": 0.9968579212906094,
+          "confidence": 0.9968579212906094,
+          "probabilities": null
+        },
+        {
+          "question_key": "root_cause_service",
+          "question_type": "choice",
+          "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
+          "answer": "redis-proxy",
+          "confidence": 0.9917530065879854,
+          "probabilities": {
+            "api-gateway": 0.0010598106564791323,
+            "cart-svc": 0.0010201935944594892,
+            "catalog-svc": 0.00410524080807246,
+            "redis-proxy": 0.993814754940989
+          }
+        },
+        {
+          "question_key": "failure_mechanism",
+          "question_type": "choice",
+          "instructions": "Which failure mechanism caused this incident?",
+          "answer": "cache_stampede",
+          "confidence": 0.9924535154024289,
+          "probabilities": {
+            "connection_pool_exhaustion": 0.0014056417075290798,
+            "cache_stampede": 0.9939628123219432,
+            "auth_token_mismatch": 0.00031262036093702305,
+            "upstream_timeout": 0.0037815867719873807,
+            "memory_exhaustion": 0.0005373388376033629
+          }
+        },
+        {
+          "question_key": "operational_severity",
+          "question_type": "score",
+          "instructions": "Rate the severity of this incident based on error volume and latency impact.",
+          "answer": 1.9088417362992094,
+          "confidence": 0.9088417362992094,
+          "probabilities": {
+            "0": 0.0061136294795856305,
+            "1": 0.0789310047416194,
+            "2": 0.914955365778795
+          }
+        },
+        {
+          "question_key": "image_matches_telemetry",
+          "question_type": "noul",
+          "instructions": "Does the attached dashboard chart image show an anomaly consistent with the telemetry?",
+          "answer": 0.9696835017925026,
+          "confidence": 0.9696835017925026,
+          "probabilities": null
+        },
+        {
+          "question_key": "visual_pattern",
+          "question_type": "choice",
+          "instructions": "What visual pattern appears in the attached dashboard chart?",
+          "answer": "sharp_spike",
+          "confidence": 0.983237151039047,
+          "probabilities": {
+            "sharp_spike": 0.9888247673593646,
+            "gradual_drift": 0.007794593986663176,
+            "flat_baseline": 0.003380638653972096
+          }
+        }
+      ]
+    },
+    {
+      "stage": "evidence_attribution",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 590.79,
+      "retries": 0,
+      "context_items_sent": 14,
+      "input_tokens": 2022,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795627168-sUtZ6UYMEupqocXa8FWx",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "primary_trigger_evidence",
+          "question_type": "choice",
+          "instructions": "Select the exact evidence item that captures the initial trigger or config change on redis-proxy.",
+          "answer": "LOG-0481",
+          "confidence": 0.9928683873440947,
+          "probabilities": {
+            "LOG-0481": 0.9934626883987534,
+            "LOG-0482": 0.0022154466943532704,
+            "LOG-0483": 0.00024211739891465527,
+            "LOG-0485": 0.00018289946332407383,
+            "MET-0029": 0.00028784540290382224,
+            "MET-0026": 0.0026941511185898923,
+            "MET-0038": 0.00010126902760305908,
+            "MET-0035": 0.00010266703829795611,
+            "TRACE-0024": 0.0002257179432073693,
+            "TRACE-0025": 0.00010263434125921389,
+            "MET-0001": 0.00018016452735731045,
+            "MET-0002": 0.0002023986454363048
+          }
+        },
+        {
+          "question_key": "trigger_is_causal",
+          "question_type": "noul",
+          "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
+          "answer": 0.9876872213423412,
+          "confidence": 0.9876872213423412,
+          "probabilities": null
+        },
+        {
+          "question_key": "metric_corroboration",
+          "question_type": "noul",
+          "instructions": "Do the metric spikes corroborate the log/trace failure?",
+          "answer": 0.9988290433916802,
+          "confidence": 0.9988290433916802,
+          "probabilities": null
+        },
+        {
+          "question_key": "evidence_strength",
+          "question_type": "score",
+          "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
+          "answer": 1.8289794607105267,
+          "confidence": 0.8289794607105267,
+          "probabilities": {
+            "0": 0.020434018741840067,
+            "1": 0.1301525018057931,
+            "2": 0.8494134794523668
+          }
+        }
+      ]
+    }
+  ],
+  "image_assessment": {
+    "matches_telemetry": 0.9696835017925026,
+    "visual_pattern": "sharp_spike",
+    "visual_probabilities": {
+      "sharp_spike": 0.9888247673593646,
+      "gradual_drift": 0.007794593986663176,
+      "flat_baseline": 0.003380638653972096
+    }
+  },
+  "conclusions": [
+    {
+      "id": "F-01",
+      "claim": "Root cause on redis-proxy (cache stampede): admin_op ttl_flush executed namespace=product_catalog evicted_keys=48210",
+      "claim_type": "root_cause",
+      "evidence_ids": [
+        "LOG-0481"
+      ],
+      "quote": "admin_op ttl_flush executed namespace=product_catalog evicted_keys=48210",
+      "confidence": 0.99,
+      "kind": "conclusion",
+      "service": "redis-proxy",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "root_cause_service": "redis-proxy",
+        "service_confidence": 0.992,
+        "trigger_is_causal": 0.988,
+        "failure_mechanism": "cache_stampede"
+      }
+    },
+    {
+      "id": "F-02",
+      "claim": "Error burst triggered on redis-proxy: req-108-482 cache miss storm namespace=product_catalog evicted_keys=48210",
+      "claim_type": "error",
+      "evidence_ids": [
+        "LOG-0482"
+      ],
+      "quote": "req-108-482 cache miss storm namespace=product_catalog evicted_keys=48210",
+      "confidence": 0.98,
+      "kind": "conclusion",
+      "service": "redis-proxy",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "is_incident_confirmed": 0.997
+      }
+    },
+    {
+      "id": "F-03",
+      "claim": "Anomalous metric spike on redis-proxy for latency_ms=2796.52 (z=579.05).",
+      "claim_type": "spike",
+      "evidence_ids": [
+        "MET-0029"
+      ],
+      "quote": "2026-11-24T09:19:00Z redis-proxy latency_ms=2796.52",
+      "confidence": 0.99,
+      "kind": "conclusion",
+      "service": "redis-proxy",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "metric_corroboration": 0.999
+      }
+    },
+    {
+      "id": "F-04",
+      "claim": "Trace span sp-108-024 on catalog-svc breached latency/error threshold (3863.5ms).",
+      "claim_type": "latency",
+      "evidence_ids": [
+        "TRACE-0024"
+      ],
+      "quote": "span=sp-108-024 op=redis-proxy.handle duration_ms=3863.5 status=ERROR error=cache_stampede",
+      "confidence": 0.957,
+      "kind": "conclusion",
+      "service": "catalog-svc",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "trace_id": "tr-108-024"
+      }
+    },
+    {
+      "id": "F-05",
+      "claim": "Downstream cascade impacted catalog-svc: req-108-483 db overload from catalog-svc cache miss stampede",
+      "claim_type": "error",
+      "evidence_ids": [
+        "LOG-0483"
+      ],
+      "quote": "req-108-483 db overload from catalog-svc cache miss stampede",
+      "confidence": 0.927,
+      "kind": "conclusion",
+      "service": "catalog-svc",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "cascade_from": "redis-proxy"
+      }
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "F-06",
+      "claim": "Alternative hypothesis (upstream timeout): Transient network packet loss or noisy-neighbor CPU contention coincided with the error window.",
+      "claim_type": "correlation",
+      "evidence_ids": [],
+      "quote": "",
+      "confidence": 0.12,
+      "kind": "hypothesis",
+      "service": "redis-proxy",
+      "demotion_reason": "No supporting evidence cited",
+      "verification_passed": false,
+      "decider_signals": {
+        "runner_up_probability": 0.0038
+      }
+    }
+  ],
+  "proposed_actions": [
+    {
+      "id": "ACT-01",
+      "title": "Enable single-flight request coalescing & warm keys on redis-proxy",
+      "target_service": "redis-proxy",
+      "command": "redis-cli --cluster call redis-proxy CONFIG SET singleflight-lock on",
+      "risk_level": "medium",
+      "dry_run_preview": "Dry-run: enables single-flight cache rebuild and staggers TTL jitter (+15%) for product_catalog (LOG-0481).",
+      "status": "approved",
+      "decided_at": "2026-11-25T17:19:29Z",
+      "decided_note": null
+    },
+    {
+      "id": "ACT-02",
+      "title": "Temporarily rate-limit uncached catalog burst queries",
+      "target_service": "api-gateway",
+      "command": "istioctl apply -f rate-limit-catalog-safe.yaml --dry-run",
+      "risk_level": "low",
+      "dry_run_preview": "Dry-run: caps uncached fallback RPS at 120 req/s per pod until cache hit ratio > 85%.",
+      "status": "dry_run_passed",
+      "decided_at": "2026-11-25T17:19:31Z",
+      "decided_note": null
+    }
+  ],
+  "human_review": {
+    "decision": "pending",
+    "corrected_root_cause": null,
+    "note": null,
+    "reviewed_at": null
+  },
+  "verification": {
+    "total_findings": 6,
+    "conclusions_count": 5,
+    "hypotheses_count": 1,
+    "citation_validity_rate": 1.0,
+    "checks": [
+      {
+        "finding_id": "F-01",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0481"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-02",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0482"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-03",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "MET-0029"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-04",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "TRACE-0024"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-05",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0483"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-06",
+        "passed": false,
+        "kind": "hypothesis",
+        "evidence_ids": [],
+        "failures": [
+          "No supporting evidence cited"
+        ]
+      }
+    ]
+  },
+  "evidence_map": {
+    "LOG-0481": {
+      "id": "LOG-0481",
+      "ts": "2026-11-24T09:18:00Z",
+      "source": "app.log",
+      "service": "redis-proxy",
+      "kind": "log",
+      "raw": "2026-11-24T09:18:00Z redis-proxy WARN admin_op ttl_flush executed namespace=product_catalog evicted_keys=48210",
+      "template_id": "TPL-002",
+      "template": "admin_op ttl_flush executed namespace=product_catalog evicted_keys=48210",
+      "level": "WARN",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "CONFIG_OR_DEPLOY_EVENT",
+          "severity": "info",
+          "label": "Deploy / config event",
+          "detail": "Deployment or configuration change recorded on redis-proxy.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        }
+      ]
+    },
+    "LOG-0482": {
+      "id": "LOG-0482",
+      "ts": "2026-11-24T09:18:02Z",
+      "source": "app.log",
+      "service": "redis-proxy",
+      "kind": "log",
+      "raw": "2026-11-24T09:18:02Z redis-proxy ERROR req-108-482 cache miss storm namespace=product_catalog evicted_keys=48210",
+      "template_id": "TPL-003",
+      "template": "req-108-482 cache miss storm namespace=product_catalog evicted_keys=48210",
+      "level": "ERROR",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "FIRST_ERROR_OCCURRENCE",
+          "severity": "warning",
+          "label": "First error occurrence",
+          "detail": "First appearance of error template TPL-003 on redis-proxy.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        },
+        {
+          "code": "ERROR_BURST",
+          "severity": "critical",
+          "label": "Error burst",
+          "detail": "29 errors/min on redis-proxy (baseline mean=0.0, threshold=4.0).",
+          "metric_name": null,
+          "z_score": null,
+          "value": 29.0
+        }
+      ]
+    },
+    "MET-0029": {
+      "id": "MET-0029",
+      "ts": "2026-11-24T09:19:00Z",
+      "source": "metrics.csv",
+      "service": "redis-proxy",
+      "kind": "metric",
+      "raw": "2026-11-24T09:19:00Z redis-proxy latency_ms=2796.52",
+      "template_id": null,
+      "template": null,
+      "level": null,
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": "latency_ms",
+      "metric_value": 2796.52,
+      "flags": [
+        {
+          "code": "METRIC_SPIKE",
+          "severity": "critical",
+          "label": "Metric spike (latency_ms)",
+          "detail": "latency_ms=2796.52 on redis-proxy (z=579.05, baseline=27.06).",
+          "metric_name": "latency_ms",
+          "z_score": 579.05,
+          "value": 2796.52
+        }
+      ]
+    },
+    "TRACE-0024": {
+      "id": "TRACE-0024",
+      "ts": "2026-11-24T09:18:26Z",
+      "source": "traces.json",
+      "service": "catalog-svc",
+      "kind": "trace",
+      "raw": "2026-11-24T09:18:26Z catalog-svc trace=tr-108-024 span=sp-108-024 op=redis-proxy.handle duration_ms=3863.5 status=ERROR error=cache_stampede",
+      "template_id": null,
+      "template": null,
+      "level": "ERROR",
+      "duration_ms": 3863.5,
+      "trace_id": "tr-108-024",
+      "span_id": "sp-108-024",
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "TRACE_P99_OUTLIER",
+          "severity": "critical",
+          "label": "Latency outlier",
+          "detail": "Trace span sp-108-024 duration=3863.5ms on catalog-svc (threshold=500.0ms).",
+          "metric_name": null,
+          "z_score": null,
+          "value": 3863.5
+        }
+      ]
+    },
+    "LOG-0483": {
+      "id": "LOG-0483",
+      "ts": "2026-11-24T09:18:03Z",
+      "source": "app.log",
+      "service": "catalog-svc",
+      "kind": "log",
+      "raw": "2026-11-24T09:18:03Z catalog-svc ERROR req-108-483 db overload from catalog-svc cache miss stampede",
+      "template_id": "TPL-004",
+      "template": "req-108-483 db overload from catalog-svc cache miss stampede",
+      "level": "ERROR",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "FIRST_ERROR_OCCURRENCE",
+          "severity": "warning",
+          "label": "First error occurrence",
+          "detail": "First appearance of error template TPL-004 on catalog-svc.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        },
+        {
+          "code": "ERROR_BURST",
+          "severity": "critical",
+          "label": "Error burst",
+          "detail": "19 errors/min on catalog-svc (baseline mean=0.0, threshold=4.0).",
+          "metric_name": null,
+          "z_score": null,
+          "value": 19.0
+        }
+      ]
+    }
+  }
+}

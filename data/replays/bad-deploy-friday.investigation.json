@@ -4,7 +4,7 @@
   "mode": "replay",
   "model": "perplexity/pplx-decider-flash-v1.3-20261112",
   "opened_at": "2026-11-25T14:04:00Z",
-  "investigated_at": "2026-11-25T17:18:06Z",
+  "investigated_at": "2026-11-25T17:23:16Z",
   "severity": "critical",
   "status": "verified",
   "root_cause_summary": "Database connection pool exhaustion / misconfiguration in checkout-svc (verified by 5/6 findings).",
@@ -15,7 +15,7 @@
     "Trace span sp-0072 on payment-svc breached latency/error threshold (4558.4ms).",
     "Downstream cascade impacted payment-svc: req-11110 downstream checkout callback timed out after 4500ms retry_storm=true"
   ],
-  "raw_items_total": 2439,
+  "raw_items_total": 2441,
   "filtered_items_sent": 12,
   "noise_reduction_pct": 99.51,
   "redacted_secrets_count": 255,
@@ -39,7 +39,7 @@
         "limit": 10
       },
       "returned": 1,
-      "elapsed_ms": 0.292
+      "elapsed_ms": 0.311
     },
     {
       "tool": "get_metric_series",
@@ -48,7 +48,7 @@
         "anomalies_only": true
       },
       "returned": 38,
-      "elapsed_ms": 0.011
+      "elapsed_ms": 0.012
     },
     {
       "tool": "get_trace",
@@ -58,7 +58,7 @@
         "limit": 15
       },
       "returned": 15,
-      "elapsed_ms": 0.087
+      "elapsed_ms": 0.098
     },
     {
       "tool": "get_service_events",

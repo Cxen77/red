@@ -91,6 +91,10 @@ def _write_bundle(
     if with_image:
         _write_synthetic_chart_png(out_dir / "dashboard.png", title_seed=seed)
 
+    events_list = meta.pop("_events", None)
+    if events_list:
+        (out_dir / "events.json").write_text(json.dumps(events_list, indent=2), encoding="utf-8")
+
     (out_dir / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
     (out_dir / "ground_truth.json").write_text(json.dumps(ground_truth, indent=2), encoding="utf-8")
     return meta
@@ -173,7 +177,32 @@ def generate_bad_deploy_friday(out_dir: Path) -> dict:
 
     return _write_bundle(
         out_dir,
-        meta={"id": "bad-deploy-friday", "title": "Bad Deploy Friday — Checkout DB Pool Exhaustion", "opened_at": "2026-11-25T14:04:00Z", "severity": "critical", "services": services, "has_image": True},
+        meta={
+            "id": "bad-deploy-friday",
+            "title": "Bad Deploy Friday — Checkout DB Pool Exhaustion",
+            "opened_at": "2026-11-25T14:04:00Z",
+            "severity": "critical",
+            "services": services,
+            "has_image": True,
+            "_events": [
+                {
+                    "ts": "2026-11-25T14:01:58Z",
+                    "service": "checkout-svc",
+                    "event_type": "ConfigMapUpdated",
+                    "actor": "ci-cd-bot",
+                    "commit": "a91f4c2",
+                    "message": "Updated checkout-config: db_pool_max changed from 50 -> 5",
+                },
+                {
+                    "ts": "2026-11-25T14:02:00Z",
+                    "service": "checkout-svc",
+                    "event_type": "DeploymentRollout",
+                    "actor": "argocd",
+                    "commit": "a91f4c2",
+                    "message": "Rolled out checkout-svc:v2.4.1 (replicas=4)",
+                },
+            ],
+        },
         ground_truth={"scenario_id": "bad-deploy-friday", "root_cause_service": "checkout-svc", "root_cause_category": "connection_pool_exhaustion", "required_keywords": ["db_pool_max=5", "checkout-svc", "HikariPool-1"]},
         logs=logs, traces=traces, metrics=metrics, with_image=True, seed=1,
     )
