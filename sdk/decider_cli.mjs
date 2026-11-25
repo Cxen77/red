@@ -21,8 +21,12 @@ async function main() {
   const state = [];
   if (inputPath && fs.existsSync(inputPath)) {
     const content = fs.readFileSync(inputPath, "utf-8");
-    const lines = content.split(/\r?\n/).filter(Boolean).slice(0, 60);
-    state.push(...lines);
+    const lines = content.split(/\r?\n/).filter(Boolean);
+    const prioritized = lines.filter((l) =>
+      /\b(ERROR|WARN|CRITICAL|deploy|pool_max|ttl_flush|jwks_rotate)\b/i.test(l)
+    );
+    const sample = prioritized.length > 0 ? prioritized.slice(0, 40) : lines.slice(-40);
+    state.push(...sample);
   } else {
     state.push(
       "[LOG-0042] 2026-11-25T14:02:01Z checkout-svc INFO deploy v2.4.1 applied config db_pool_max=5 (prev=50)",

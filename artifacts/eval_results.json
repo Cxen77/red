@@ -1,0 +1,48 @@
+{
+  "suite": "incidentlens-evals-v1",
+  "mode": "live",
+  "scenarios_total": 3,
+  "scenarios_passed": 3,
+  "root_cause_accuracy": 1.0,
+  "avg_citation_validity_rate": 1.0,
+  "verifier_demotion_guard_passed": true,
+  "median_latency_ms": 1410.97,
+  "results": [
+    {
+      "scenario_id": "auth-jwks-rotation",
+      "mode": "live",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "passed": true,
+      "root_cause_service_hit": true,
+      "keyword_hits": "3/3",
+      "conclusions_count": 5,
+      "hypotheses_demoted": 1,
+      "citation_validity_rate": 1.0,
+      "elapsed_ms": 1674.02
+    },
+    {
+      "scenario_id": "bad-deploy-friday",
+      "mode": "live",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "passed": true,
+      "root_cause_service_hit": true,
+      "keyword_hits": "3/3",
+      "conclusions_count": 5,
+      "hypotheses_demoted": 1,
+      "citation_validity_rate": 1.0,
+      "elapsed_ms": 996.82
+    },
+    {
+      "scenario_id": "cache-stampede-rcaeval",
+      "mode": "live",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "passed": true,
+      "root_cause_service_hit": true,
+      "keyword_hits": "3/3",
+      "conclusions_count": 5,
+      "hypotheses_demoted": 1,
+      "citation_validity_rate": 1.0,
+      "elapsed_ms": 1410.97
+    }
+  ]
+}

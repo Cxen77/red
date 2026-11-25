@@ -1,0 +1,250 @@
+[
+  {
+    "stage": "triage_root_cause",
+    "answers": {
+      "is_incident_confirmed": {
+        "type": "noul",
+        "noul": 0.9978236280537607
+      },
+      "root_cause_service": {
+        "type": "choice",
+        "choice": "redis-proxy",
+        "probabilities": {
+          "api-gateway": 0.001199100151976735,
+          "cart-svc": 0.00333804280874457,
+          "catalog-svc": 0.05281407462445346,
+          "redis-proxy": 0.9426487824148252
+        },
+        "confidence": 0.9235317098864336
+      },
+      "failure_mechanism": {
+        "type": "choice",
+        "choice": "cache_stampede",
+        "probabilities": {
+          "connection_pool_exhaustion": 0.004498160151894035,
+          "cache_stampede": 0.9874171920573659,
+          "auth_token_mismatch": 0.00044584627123754546,
+          "upstream_timeout": 0.006575301821053511,
+          "memory_exhaustion": 0.0010634996984489973
+        },
+        "confidence": 0.9842714900717072
+      },
+      "operational_severity": {
+        "type": "score",
+        "score": 1.935960333429806,
+        "legend": {
+          "0": "Low",
+          "1": "Medium",
+          "2": "High"
+        },
+        "probabilities": {
+          "0": 0.004263297750320716,
+          "1": 0.05551307106955257,
+          "2": 0.9402236311801266
+        },
+        "confidence": 0.935960333429806
+      },
+      "image_matches_telemetry": {
+        "type": "noul",
+        "noul": 0.9737251868795674
+      },
+      "visual_pattern": {
+        "type": "choice",
+        "choice": "sharp_spike",
+        "probabilities": {
+          "sharp_spike": 0.9848864202141087,
+          "gradual_drift": 0.009921041270384085,
+          "flat_baseline": 0.005192538515507218
+        },
+        "confidence": 0.9773296303211628
+      }
+    },
+    "trace": {
+      "stage": "triage_root_cause",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 921.94,
+      "input_tokens": 1283,
+      "output_tokens": 6,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795624968-O5hbXWhkbz7ALlARWVNI",
+      "questions": [
+        {
+          "question_key": "is_incident_confirmed",
+          "question_type": "noul",
+          "instructions": "Does the telemetry state confirm an active production incident or service outage?",
+          "answer": 0.9978236280537607,
+          "confidence": 0.9978236280537607,
+          "probabilities": null
+        },
+        {
+          "question_key": "root_cause_service",
+          "question_type": "choice",
+          "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
+          "answer": "redis-proxy",
+          "confidence": 0.9235317098864336,
+          "probabilities": {
+            "api-gateway": 0.001199100151976735,
+            "cart-svc": 0.00333804280874457,
+            "catalog-svc": 0.05281407462445346,
+            "redis-proxy": 0.9426487824148252
+          }
+        },
+        {
+          "question_key": "failure_mechanism",
+          "question_type": "choice",
+          "instructions": "Which failure mechanism caused this incident?",
+          "answer": "cache_stampede",
+          "confidence": 0.9842714900717072,
+          "probabilities": {
+            "connection_pool_exhaustion": 0.004498160151894035,
+            "cache_stampede": 0.9874171920573659,
+            "auth_token_mismatch": 0.00044584627123754546,
+            "upstream_timeout": 0.006575301821053511,
+            "memory_exhaustion": 0.0010634996984489973
+          }
+        },
+        {
+          "question_key": "operational_severity",
+          "question_type": "score",
+          "instructions": "Rate the severity of this incident based on error volume and latency impact.",
+          "answer": 1.935960333429806,
+          "confidence": 0.935960333429806,
+          "probabilities": {
+            "0": 0.004263297750320716,
+            "1": 0.05551307106955257,
+            "2": 0.9402236311801266
+          }
+        },
+        {
+          "question_key": "image_matches_telemetry",
+          "question_type": "noul",
+          "instructions": "Does the attached dashboard chart image show an anomaly consistent with the telemetry?",
+          "answer": 0.9737251868795674,
+          "confidence": 0.9737251868795674,
+          "probabilities": null
+        },
+        {
+          "question_key": "visual_pattern",
+          "question_type": "choice",
+          "instructions": "What visual pattern appears in the attached dashboard chart?",
+          "answer": "sharp_spike",
+          "confidence": 0.9773296303211628,
+          "probabilities": {
+            "sharp_spike": 0.9848864202141087,
+            "gradual_drift": 0.009921041270384085,
+            "flat_baseline": 0.005192538515507218
+          }
+        }
+      ]
+    }
+  },
+  {
+    "stage": "evidence_attribution",
+    "answers": {
+      "primary_trigger_evidence": {
+        "type": "choice",
+        "choice": "LOG-0661",
+        "probabilities": {
+          "LOG-0661": 0.9978939773794536,
+          "LOG-0662": 0.0004053652600792183,
+          "LOG-0663": 0.00024196902551557484,
+          "LOG-0725": 0.00018288371659247048,
+          "MET-0038": 0.00013263601759769394,
+          "MET-0035": 0.00030394727051707895,
+          "MET-0059": 7.053024785911632e-05,
+          "MET-0050": 7.455139602391422e-05,
+          "TRACE-0035": 0.0001299031898574014,
+          "TRACE-0036": 5.763841911179442e-05,
+          "LOG-0003": 0.0003732827741955656,
+          "LOG-0007": 0.00013331530319643124
+        },
+        "confidence": 0.9977025207775858
+      },
+      "trigger_is_causal": {
+        "type": "noul",
+        "noul": 0.975566693956158
+      },
+      "metric_corroboration": {
+        "type": "noul",
+        "noul": 0.998309329620273
+      },
+      "evidence_strength": {
+        "type": "score",
+        "score": 1.5945585716493929,
+        "legend": {
+          "0": "Weak",
+          "1": "Moderate",
+          "2": "Strong"
+        },
+        "probabilities": {
+          "0": 0.061633193187633384,
+          "1": 0.28217504197534043,
+          "2": 0.6561917648370262
+        },
+        "confidence": 0.5945585716493929
+      }
+    },
+    "trace": {
+      "stage": "evidence_attribution",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 462.96,
+      "input_tokens": 2033,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795624969-Y69FmV5mmtmp9exk9dnp",
+      "questions": [
+        {
+          "question_key": "primary_trigger_evidence",
+          "question_type": "choice",
+          "instructions": "Select the exact evidence item that captures the initial trigger or config change on redis-proxy.",
+          "answer": "LOG-0661",
+          "confidence": 0.9977025207775858,
+          "probabilities": {
+            "LOG-0661": 0.9978939773794536,
+            "LOG-0662": 0.0004053652600792183,
+            "LOG-0663": 0.00024196902551557484,
+            "LOG-0725": 0.00018288371659247048,
+            "MET-0038": 0.00013263601759769394,
+            "MET-0035": 0.00030394727051707895,
+            "MET-0059": 7.053024785911632e-05,
+            "MET-0050": 7.455139602391422e-05,
+            "TRACE-0035": 0.0001299031898574014,
+            "TRACE-0036": 5.763841911179442e-05,
+            "LOG-0003": 0.0003732827741955656,
+            "LOG-0007": 0.00013331530319643124
+          }
+        },
+        {
+          "question_key": "trigger_is_causal",
+          "question_type": "noul",
+          "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
+          "answer": 0.975566693956158,
+          "confidence": 0.975566693956158,
+          "probabilities": null
+        },
+        {
+          "question_key": "metric_corroboration",
+          "question_type": "noul",
+          "instructions": "Do the metric spikes corroborate the log/trace failure?",
+          "answer": 0.998309329620273,
+          "confidence": 0.998309329620273,
+          "probabilities": null
+        },
+        {
+          "question_key": "evidence_strength",
+          "question_type": "score",
+          "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
+          "answer": 1.5945585716493929,
+          "confidence": 0.5945585716493929,
+          "probabilities": {
+            "0": 0.061633193187633384,
+            "1": 0.28217504197534043,
+            "2": 0.6561917648370262
+          }
+        }
+      ]
+    }
+  }
+]
