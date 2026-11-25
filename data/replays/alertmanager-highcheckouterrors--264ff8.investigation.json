@@ -1,0 +1,407 @@
+{
+  "incident_id": "alertmanager-highcheckouterrors--264ff8",
+  "title": "[Alertmanager] HighCheckoutErrors (checkout-svc)",
+  "mode": "live",
+  "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+  "opened_at": "2026-11-25T16:05:00Z",
+  "investigated_at": "2026-11-25T18:27:40Z",
+  "severity": "critical",
+  "status": "verified",
+  "root_cause_summary": "Database connection pool exhaustion / misconfiguration in checkout-svc (verified by 2/3 findings).",
+  "root_cause_chain": [
+    "Root cause on checkout-svc (connection pool exhaustion): actor=prometheus-alertmanager HikariPool-1 connection timeout rate > 20%",
+    "Error burst triggered on checkout-svc: alert=HighCheckoutErrors HikariPool-1 connection timeout rate > 20%"
+  ],
+  "raw_items_total": 2,
+  "filtered_items_sent": 2,
+  "noise_reduction_pct": 0.0,
+  "redacted_secrets_count": 0,
+  "tool_trace": [
+    {
+      "tool": "get_timeline_window",
+      "arguments": {
+        "start_ts": null,
+        "end_ts": null,
+        "flagged_only": true,
+        "limit": 40
+      },
+      "returned": 2,
+      "elapsed_ms": 0.002
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "deploy",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 0,
+      "elapsed_ms": 0.002
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "ttl_flush",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 0,
+      "elapsed_ms": 0.001
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "jwks_rotate",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 0,
+      "elapsed_ms": 0.001
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "oom",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 0,
+      "elapsed_ms": 0.001
+    },
+    {
+      "tool": "search_logs",
+      "arguments": {
+        "keyword": "timeout",
+        "template_id": null,
+        "limit": 10
+      },
+      "returned": 1,
+      "elapsed_ms": 0.001
+    },
+    {
+      "tool": "get_metric_series",
+      "arguments": {
+        "metric_name": null,
+        "anomalies_only": true
+      },
+      "returned": 0,
+      "elapsed_ms": 0.003
+    },
+    {
+      "tool": "get_trace",
+      "arguments": {
+        "trace_id": null,
+        "outliers_only": true,
+        "limit": 15
+      },
+      "returned": 0,
+      "elapsed_ms": 0.001
+    },
+    {
+      "tool": "get_service_events",
+      "arguments": {
+        "service": "checkout-svc",
+        "level": null,
+        "limit": 20
+      },
+      "returned": 2,
+      "elapsed_ms": 0.01
+    }
+  ],
+  "decision_traces": [
+    {
+      "stage": "triage_root_cause",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 384.69,
+      "retries": 0,
+      "context_items_sent": 2,
+      "input_tokens": 390,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795631269-Yn1Zw4YNDxpjjma04rZg",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "is_incident_confirmed",
+          "question_type": "noul",
+          "instructions": "Does the telemetry state confirm an active production incident or service outage?",
+          "answer": 0.99179080748609,
+          "confidence": 0.99179080748609,
+          "probabilities": null
+        },
+        {
+          "question_key": "root_cause_service",
+          "question_type": "choice",
+          "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
+          "answer": "checkout-svc",
+          "confidence": 1.0,
+          "probabilities": {
+            "checkout-svc": 1.0
+          }
+        },
+        {
+          "question_key": "failure_mechanism",
+          "question_type": "choice",
+          "instructions": "Which failure mechanism caused this incident?",
+          "answer": "connection_pool_exhaustion",
+          "confidence": 0.9653207902061045,
+          "probabilities": {
+            "connection_pool_exhaustion": 0.9722566321648836,
+            "cache_stampede": 0.004208050671495934,
+            "auth_token_mismatch": 0.0005506149437822806,
+            "upstream_timeout": 0.021253196480716528,
+            "memory_exhaustion": 0.001731505739121833
+          }
+        },
+        {
+          "question_key": "operational_severity",
+          "question_type": "score",
+          "instructions": "Rate the severity of this incident based on error volume and latency impact.",
+          "answer": 1.8172542957401672,
+          "confidence": 0.817254295740167,
+          "probabilities": {
+            "0": 0.014825930187013406,
+            "1": 0.15309384388580619,
+            "2": 0.8320802259271805
+          }
+        }
+      ]
+    },
+    {
+      "stage": "evidence_attribution",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 487.12,
+      "retries": 0,
+      "context_items_sent": 2,
+      "input_tokens": 477,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795631269-o56nIvgd4F6CVhcP3Pm7",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "primary_trigger_evidence",
+          "question_type": "choice",
+          "instructions": "Select the exact evidence item that captures the initial trigger or config change on checkout-svc.",
+          "answer": "EVENT-0001",
+          "confidence": 0.935954439694378,
+          "probabilities": {
+            "EVENT-0001": 0.967977219847189,
+            "LOG-0001": 0.032022780152811084
+          }
+        },
+        {
+          "question_key": "trigger_is_causal",
+          "question_type": "noul",
+          "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
+          "answer": 0.6803080834667857,
+          "confidence": 0.6803080834667857,
+          "probabilities": null
+        },
+        {
+          "question_key": "metric_corroboration",
+          "question_type": "noul",
+          "instructions": "Do the metric spikes corroborate the log/trace failure?",
+          "answer": 0.9882280110891758,
+          "confidence": 0.9882280110891758,
+          "probabilities": null
+        },
+        {
+          "question_key": "evidence_strength",
+          "question_type": "score",
+          "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
+          "answer": 1.563237115149224,
+          "confidence": 0.5632371151492239,
+          "probabilities": {
+            "0": 0.08002726097457294,
+            "1": 0.2767083629016302,
+            "2": 0.6432643761237968
+          }
+        }
+      ]
+    }
+  ],
+  "image_assessment": null,
+  "conclusions": [
+    {
+      "id": "F-01",
+      "claim": "Root cause on checkout-svc (connection pool exhaustion): actor=prometheus-alertmanager HikariPool-1 connection timeout rate > 20%",
+      "claim_type": "root_cause",
+      "evidence_ids": [
+        "EVENT-0001"
+      ],
+      "quote": "actor=prometheus-alertmanager HikariPool-1 connection timeout rate > 20%",
+      "confidence": 0.84,
+      "kind": "conclusion",
+      "service": "checkout-svc",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "root_cause_service": "checkout-svc",
+        "service_confidence": 1.0,
+        "trigger_is_causal": 0.68,
+        "failure_mechanism": "connection_pool_exhaustion"
+      }
+    },
+    {
+      "id": "F-02",
+      "claim": "Error burst triggered on checkout-svc: alert=HighCheckoutErrors HikariPool-1 connection timeout rate > 20%",
+      "claim_type": "error",
+      "evidence_ids": [
+        "LOG-0001"
+      ],
+      "quote": "alert=HighCheckoutErrors HikariPool-1 connection timeout rate > 20%",
+      "confidence": 0.98,
+      "kind": "conclusion",
+      "service": "checkout-svc",
+      "demotion_reason": null,
+      "verification_passed": true,
+      "decider_signals": {
+        "is_incident_confirmed": 0.992
+      }
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "F-06",
+      "claim": "Alternative hypothesis (upstream timeout): Transient network packet loss or noisy-neighbor CPU contention coincided with the error window.",
+      "claim_type": "correlation",
+      "evidence_ids": [],
+      "quote": "",
+      "confidence": 0.12,
+      "kind": "hypothesis",
+      "service": "checkout-svc",
+      "demotion_reason": "No supporting evidence cited",
+      "verification_passed": false,
+      "decider_signals": {
+        "runner_up_probability": 0.0213
+      }
+    }
+  ],
+  "proposed_actions": [
+    {
+      "id": "ACT-01",
+      "title": "Restore checkout-svc DB pool configuration (db_pool_max=50)",
+      "target_service": "checkout-svc",
+      "command": "kubectl set env deployment/checkout-svc DB_POOL_MAX=50 --dry-run=server",
+      "risk_level": "medium",
+      "dry_run_preview": "Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in EVENT-0001). Estimated recovery: ~25s.",
+      "status": "pending_approval",
+      "execution_result": null,
+      "decided_at": null,
+      "decided_note": null
+    },
+    {
+      "id": "ACT-02",
+      "title": "Roll back checkout-svc to previous stable deployment",
+      "target_service": "checkout-svc",
+      "command": "kubectl rollout undo deployment/checkout-svc --dry-run=server",
+      "risk_level": "high",
+      "dry_run_preview": "Dry-run: deployment/checkout-svc would roll back revision 14 -> 13. Zero pod eviction conflicts.",
+      "status": "pending_approval",
+      "execution_result": null,
+      "decided_at": null,
+      "decided_note": null
+    }
+  ],
+  "human_review": {
+    "decision": "pending",
+    "corrected_root_cause": null,
+    "note": null,
+    "reviewed_at": null
+  },
+  "recovery_check": null,
+  "verification": {
+    "total_findings": 3,
+    "conclusions_count": 2,
+    "hypotheses_count": 1,
+    "citation_validity_rate": 1.0,
+    "checks": [
+      {
+        "finding_id": "F-01",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "EVENT-0001"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-02",
+        "passed": true,
+        "kind": "conclusion",
+        "evidence_ids": [
+          "LOG-0001"
+        ],
+        "failures": []
+      },
+      {
+        "finding_id": "F-06",
+        "passed": false,
+        "kind": "hypothesis",
+        "evidence_ids": [],
+        "failures": [
+          "No supporting evidence cited"
+        ]
+      }
+    ]
+  },
+  "evidence_map": {
+    "EVENT-0001": {
+      "id": "EVENT-0001",
+      "ts": "2026-11-25T16:05:00Z",
+      "source": "events.json",
+      "service": "checkout-svc",
+      "kind": "event",
+      "raw": "2026-11-25T16:05:00Z checkout-svc AlertmanagerFiring actor=prometheus-alertmanager HikariPool-1 connection timeout rate > 20%",
+      "template_id": null,
+      "template": null,
+      "level": "INFO",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "CONFIG_OR_DEPLOY_EVENT",
+          "severity": "info",
+          "label": "Deploy / change event",
+          "detail": "Deployment or configuration change recorded on checkout-svc.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        }
+      ]
+    },
+    "LOG-0001": {
+      "id": "LOG-0001",
+      "ts": "2026-11-25T16:05:00Z",
+      "source": "app.log",
+      "service": "checkout-svc",
+      "kind": "log",
+      "raw": "2026-11-25T16:05:00Z checkout-svc ERROR alert=HighCheckoutErrors HikariPool-1 connection timeout rate > 20%",
+      "template_id": "TPL-001",
+      "template": "alert=HighCheckoutErrors HikariPool-1 connection timeout rate > 20%",
+      "level": "ERROR",
+      "duration_ms": null,
+      "trace_id": null,
+      "span_id": null,
+      "metric_name": null,
+      "metric_value": null,
+      "flags": [
+        {
+          "code": "FIRST_ERROR_OCCURRENCE",
+          "severity": "warning",
+          "label": "First error occurrence",
+          "detail": "First appearance of error template TPL-001 on checkout-svc.",
+          "metric_name": null,
+          "z_score": null,
+          "value": null
+        }
+      ]
+    }
+  }
+}

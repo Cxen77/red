@@ -173,6 +173,8 @@ export interface InvestigationResult {
   evidence_map: Record<string, EvidenceItem>;
 }
 
+export type SourceType = "connected" | "manual" | "benchmark";
+
 export interface IncidentMetadata {
   id: string;
   title: string;
@@ -180,6 +182,8 @@ export interface IncidentMetadata {
   opened_at: string;
   severity: SeverityLevel;
   status: IncidentStatus;
+  source_type?: SourceType;
+  source_label?: string;
   root_cause?: string | null;
   review_decision: ReviewDecision;
   has_image: boolean;

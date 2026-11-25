@@ -9,7 +9,7 @@ import {
 import { Plus, RefreshCw, Radio, Search, Upload, X } from "lucide-react";
 import { createIncident, scanDropzone, simulateLiveAlert } from "../api";
 import { ConnectSystemModal } from "./ConnectSystemModal";
-import type { IncidentMetadata, SeverityLevel } from "../types";
+import type { IncidentMetadata, SeverityLevel, SourceType } from "../types";
 
 interface IncidentListViewProps {
   incidents: IncidentMetadata[];
@@ -31,6 +31,12 @@ const STATUS_STYLE: Record<string, string> = {
   verified: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
   investigated: "text-[#1D4ED8] bg-[#EFF6FF] border-[#BFDBFE]",
   open: "text-[#78716C] bg-[#F5F5F4] border-[#E7E5E4]",
+};
+
+const SOURCE_STYLE: Record<SourceType, string> = {
+  connected: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
+  manual: "text-[#1D4ED8] bg-[#EFF6FF] border-[#BFDBFE]",
+  benchmark: "text-[#57534E] bg-[#F5F5F4] border-[#E7E5E4]",
 };
 
 const columnHelper = createColumnHelper<IncidentMetadata>();
@@ -61,6 +67,7 @@ export function IncidentListView({
   const [simulating, setSimulating] = useState(false);
   const [scanningDropzone, setScanningDropzone] = useState(false);
   const [autoMsg, setAutoMsg] = useState<string | null>(null);
+  const [sourceFilter, setSourceFilter] = useState<"all" | SourceType>("all");
   const [title, setTitle] = useState("");
   const [severity, setSeverity] = useState<SeverityLevel>("high");
   const [logsText, setLogsText] = useState("");
@@ -88,6 +95,19 @@ export function IncidentListView({
             </div>
           </div>
         ),
+      }),
+      columnHelper.accessor("source_label", {
+        header: "Source",
+        cell: (info) => {
+          const stype = info.row.original.source_type || "benchmark";
+          return (
+            <span
+              className={`inline-block text-[11px] font-medium px-2 py-0.5 rounded border whitespace-nowrap ${SOURCE_STYLE[stype]}`}
+            >
+              {info.getValue() || "Built-in Fault"}
+            </span>
+          );
+        },
       }),
       columnHelper.accessor("services", {
         header: "Service(s)",
@@ -151,8 +171,23 @@ export function IncidentListView({
     []
   );
 
+  const filteredIncidents = useMemo(() => {
+    if (sourceFilter === "all") return incidents;
+    return incidents.filter((inc) => (inc.source_type || "benchmark") === sourceFilter);
+  }, [incidents, sourceFilter]);
+
+  const counts = useMemo(
+    () => ({
+      all: incidents.length,
+      connected: incidents.filter((i) => i.source_type === "connected").length,
+      manual: incidents.filter((i) => i.source_type === "manual").length,
+      benchmark: incidents.filter((i) => (i.source_type || "benchmark") === "benchmark").length,
+    }),
+    [incidents]
+  );
+
   const table = useReactTable({
-    data: incidents,
+    data: filteredIncidents,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
@@ -460,14 +495,51 @@ export function IncidentListView({
         {autoMsg && <span className="font-mono text-[11px] text-[#15803D]">{autoMsg}</span>}
       </div>
 
+      {/* Source filter tabs */}
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-1.5">
+          {[
+            { id: "all" as const, label: `All (${counts.all})` },
+            { id: "connected" as const, label: `Live Connected (${counts.connected})` },
+            { id: "manual" as const, label: `Manual Uploads (${counts.manual})` },
+            { id: "benchmark" as const, label: `Built-in Faults (${counts.benchmark})` },
+          ].map((tab) => {
+            const active = sourceFilter === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setSourceFilter(tab.id)}
+                className={`px-3 py-1.5 rounded text-[12px] font-medium border transition-colors ${
+                  active
+                    ? "bg-[#1C1917] text-white border-[#1C1917]"
+                    : "bg-white text-[#57534E] border-[#E7E5E4] hover:border-stone-400"
+                }`}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+        <span className="text-[12px] text-[#78716C]">
+          {sourceFilter === "connected"
+            ? "Auto-ingested from connected apps, webhooks, OTel, or dropzone"
+            : sourceFilter === "manual"
+            ? "Uploaded or pasted manually via New investigation"
+            : sourceFilter === "benchmark"
+            ? "10 documented faults used for baseline accuracy evaluation"
+            : "Showing live connected, manual uploads, and benchmark faults"}
+        </span>
+      </div>
+
       <div className="bg-white border border-[#E7E5E4] rounded-md overflow-x-auto">
         {loading ? (
           <div className="p-8 text-[13px] text-[#78716C]">Loading incidents...</div>
-        ) : incidents.length === 0 ? (
+        ) : filteredIncidents.length === 0 ? (
           <div className="p-12 text-center">
             <Search className="w-6 h-6 text-stone-300 mx-auto mb-2" strokeWidth={1.5} />
             <p className="text-[13px] text-[#78716C]">
-              No incidents loaded yet. Click New investigation to ingest telemetry.
+              No incidents in this category yet.
             </p>
           </div>
         ) : (

@@ -198,6 +198,8 @@ def webhook_auto_ingest(payload: WebhookAlertPayload) -> dict[str, Any]:
         traces_text=payload.traces,
         metrics_text=payload.metrics,
         events_text=payload.events,
+        source_type="connected",
+        source_label=f"Webhook ({payload.source})",
     )
     investigation = None
     if payload.auto_investigate:
@@ -248,6 +250,8 @@ def simulate_live_alert() -> dict[str, Any]:
         logs_text=logs,
         metrics_text=metrics,
         events_text=events,
+        source_type="connected",
+        source_label="Simulated Webhook",
     )
     inv = store.investigate(rec.meta.id, mode="live")
     return {"meta": rec.meta, "investigation": inv}
@@ -297,6 +301,8 @@ def alertmanager_webhook(payload: dict[str, Any]) -> dict[str, Any]:
         severity=severity,
         logs_text="\n".join(log_lines),
         events_text=json.dumps(event_list),
+        source_type="connected",
+        source_label="Alertmanager",
     )
     inv = store.investigate(rec.meta.id, mode="live")
     return {"meta": rec.meta, "investigation": inv}
@@ -312,6 +318,8 @@ def ingest_otel_payload(payload: dict[str, Any]) -> dict[str, Any]:
         title="OTLP Live Trace Anomaly",
         severity="high",
         traces_text=json.dumps(payload),
+        source_type="connected",
+        source_label="OTLP Collector",
     )
     inv = store.investigate(rec.meta.id, mode="live")
     return {"meta": rec.meta, "investigation": inv}
@@ -346,6 +354,8 @@ def _run_connector_sync(cfg: ConnectorConfig) -> dict[str, Any]:
         logs_text=logs_text or None,
         metrics_text=metrics_csv or None,
         events_text=json.dumps(k8s_events) if k8s_events else None,
+        source_type="connected",
+        source_label="Live Sync",
     )
     inv = store.investigate(rec.meta.id, mode="live")
     return {"ingested": True, "incident_id": rec.meta.id, "meta": rec.meta, "investigation": inv}

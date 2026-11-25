@@ -17,12 +17,13 @@ from backend.ingest.pipeline import (
 from backend.models import (
     EvidenceItem,
     HumanReviewState,
-    IncidentMetadata,
+        IncidentMetadata,
     InvestigationResult,
     RecoveryCheckResult,
     RemediationAction,
     ReviewDecision,
     SeverityLevel,
+    SourceType,
     TimelineSummary,
 )
 from backend.timeline.builder import build_timeline
@@ -68,6 +69,7 @@ class IncidentStore:
                 inv_path.read_text(encoding="utf-8")
             )
 
+        is_benchmark = inc_dir.parent == SCENARIOS_DIR
         meta = IncidentMetadata(
             id=inc_id,
             title=raw_meta["title"],
@@ -75,6 +77,8 @@ class IncidentStore:
             opened_at=raw_meta["opened_at"],
             severity=raw_meta.get("severity", "medium"),
             status=investigation.status if investigation else "open",
+            source_type=raw_meta.get("source_type") or ("benchmark" if is_benchmark else "manual"),
+            source_label=raw_meta.get("source_label") or ("Built-in Fault" if is_benchmark else "Manual Upload"),
             root_cause=investigation.root_cause_summary if investigation else None,
             review_decision=investigation.human_review.decision if investigation else "pending",
             has_image=image_bytes is not None,
@@ -125,6 +129,8 @@ class IncidentStore:
         metrics_text: str | None = None,
         events_text: str | None = None,
         image_bytes: bytes | None = None,
+        source_type: SourceType = "manual",
+        source_label: str = "Manual Upload",
     ) -> IncidentRecord:
         slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:32] or "incident"
         inc_id = f"{slug}-{uuid.uuid4().hex[:6]}"
@@ -158,6 +164,8 @@ class IncidentStore:
             opened_at=opened_at,
             severity=severity,
             status="open",
+            source_type=source_type,
+            source_label=source_label,
             has_image=image_bytes is not None,
             log_count=sum(1 for i in items if i.kind == "log"),
             trace_count=sum(1 for i in items if i.kind == "trace"),
@@ -200,6 +208,8 @@ class IncidentStore:
                 traces_text=traces_p.read_text(encoding="utf-8") if traces_p.exists() else None,
                 metrics_text=metrics_p.read_text(encoding="utf-8") if metrics_p.exists() else None,
                 events_text=events_p.read_text(encoding="utf-8") if events_p.exists() else None,
+                source_type="connected",
+                source_label="Dropzone Auto",
             )
             if auto_investigate:
                 try:

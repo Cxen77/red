@@ -11,6 +11,7 @@ FindingKind = Literal["conclusion", "hypothesis"]
 ClaimType = Literal["root_cause", "error", "spike", "latency", "correlation", "visual"]
 ReviewDecision = Literal["pending", "confirmed", "corrected", "rejected"]
 ActionStatus = Literal["pending_approval", "dry_run_passed", "approved", "blocked"]
+SourceType = Literal["connected", "manual", "benchmark"]
 
 
 class AnomalyFlag(BaseModel):
@@ -178,6 +179,8 @@ class IncidentMetadata(BaseModel):
     opened_at: str
     severity: SeverityLevel
     status: IncidentStatus
+    source_type: SourceType = "benchmark"
+    source_label: str = "Built-in Fault"
     root_cause: str | None = None
     review_decision: ReviewDecision = "pending"
     has_image: bool = False
