@@ -87,7 +87,7 @@ export function IncidentListView({
     if (!connectorCfg) return;
     const updated = await saveConnectorConfig({ ...connectorCfg, enabled: false });
     setConnectorCfg(updated);
-    setAutoMsg("Background polling stopped.");
+    setAutoMsg("Live tracking stopped.");
   }
   const [title, setTitle] = useState("");
   const [severity, setSeverity] = useState<SeverityLevel>("high");
@@ -297,7 +297,7 @@ export function IncidentListView({
               className="px-3 py-2 rounded border border-[#FECACA] bg-[#FEF2F2] hover:bg-[#FEE2E2] text-[#B91C1C] text-[13px] font-medium flex items-center gap-1.5"
             >
               <PauseCircle className="w-3.5 h-3.5" strokeWidth={1.75} />
-              Stop taking ({connectorCfg.poll_interval_sec}s)
+              Stop tracking ({connectorCfg.poll_interval_sec}s)
             </button>
           )}
           <ConnectSystemModal
