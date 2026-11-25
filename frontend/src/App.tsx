@@ -40,8 +40,8 @@ export default function App() {
     void loadIncidents();
   }, []);
 
-  async function openIncident(id: string) {
-    setScreen("investigation");
+  async function openIncident(id: string, targetScreen: Screen = "investigation") {
+    setScreen(targetScreen);
     const [detail, tl] = await Promise.all([
       fetchIncidentDetail(id),
       fetchTimeline(id),
@@ -49,6 +49,14 @@ export default function App() {
     setActiveMeta(detail.meta);
     setInvestigation(detail.investigation);
     setTimeline(tl);
+  }
+
+  function handleNavigate(target: Screen) {
+    if ((target === "investigation" || target === "report") && !activeMeta && incidents.length > 0) {
+      void openIncident(incidents[0].id, target);
+      return;
+    }
+    setScreen(target);
   }
 
   async function handleRunInvestigation(mode: "live" | "replay") {
@@ -81,8 +89,8 @@ export default function App() {
     <div className="min-h-screen bg-[#FAFAF9] text-[#1C1917]">
       <TopBar
         activeScreen={screen}
-        onNavigate={setScreen}
-        hasActiveIncident={activeMeta !== null}
+        onNavigate={handleNavigate}
+        hasAnyIncident={incidents.length > 0}
         activeTitle={activeMeta?.title}
       />
 

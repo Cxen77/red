@@ -189,11 +189,11 @@ export function IncidentListView({
 
   return (
     <main className="max-w-[1360px] mx-auto px-6 py-6">
-      <div className="flex items-center justify-between mb-4">
-        <div>
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+        <div className="min-w-0">
           <h1 className="text-[20px] font-semibold text-[#1C1917]">Incidents</h1>
           <p className="text-[13px] text-[#78716C] mt-0.5">
-            Select an incident to inspect its deterministic timeline, verified conclusions, and evidence citations.
+            Select an incident row to inspect its deterministic timeline, verified conclusions, and evidence citations.
           </p>
         </div>
 
@@ -201,7 +201,7 @@ export function IncidentListView({
           <Dialog.Trigger asChild>
             <button
               type="button"
-              className="bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium px-3.5 py-2 rounded flex items-center gap-1.5 transition-colors duration-150"
+              className="shrink-0 bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium px-3.5 py-2 rounded flex items-center gap-1.5 transition-colors duration-150"
             >
               <Plus className="w-4 h-4" strokeWidth={1.75} />
               New investigation
@@ -389,7 +389,7 @@ export function IncidentListView({
         </Dialog.Root>
       </div>
 
-      <div className="bg-white border border-[#E7E5E4] rounded-md overflow-hidden">
+      <div className="bg-white border border-[#E7E5E4] rounded-md overflow-x-auto">
         {loading ? (
           <div className="p-8 text-[13px] text-[#78716C]">Loading incidents...</div>
         ) : incidents.length === 0 ? (

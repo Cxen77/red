@@ -5,14 +5,14 @@ export type Screen = "incidents" | "investigation" | "report" | "probe";
 interface TopBarProps {
   activeScreen: Screen;
   onNavigate: (screen: Screen) => void;
-  hasActiveIncident: boolean;
+  hasAnyIncident: boolean;
   activeTitle?: string;
 }
 
 export function TopBar({
   activeScreen,
   onNavigate,
-  hasActiveIncident,
+  hasAnyIncident,
   activeTitle,
 }: TopBarProps) {
   const navItems: Array<{
@@ -26,24 +26,24 @@ export function TopBar({
       id: "investigation",
       label: "Timeline & Findings",
       icon: GitBranch,
-      disabled: !hasActiveIncident,
+      disabled: !hasAnyIncident,
     },
     {
       id: "report",
       label: "Report",
       icon: FileText,
-      disabled: !hasActiveIncident,
+      disabled: !hasAnyIncident,
     },
     { id: "probe", label: "Decider Probe", icon: SlidersHorizontal },
   ];
 
   return (
-    <header className="no-print h-12 bg-[#1C1917] text-[#E7E5E4] border-b border-stone-800 px-4 flex items-center justify-between select-none">
-      <div className="flex items-center gap-6">
+    <header className="no-print h-12 bg-[#1C1917] text-[#E7E5E4] border-b border-stone-800 px-4 flex items-center justify-between gap-3 select-none overflow-hidden">
+      <div className="flex items-center gap-4 min-w-0">
         <button
           type="button"
           onClick={() => onNavigate("incidents")}
-          className="flex items-center gap-2.5 text-left focus:outline-none"
+          className="flex items-center gap-2.5 text-left focus:outline-none shrink-0"
         >
           <span className="w-6 h-6 rounded bg-[#C81E1E] flex items-center justify-center">
             <Activity className="w-3.5 h-3.5 text-white" strokeWidth={1.75} />
@@ -53,7 +53,7 @@ export function TopBar({
           </span>
         </button>
 
-        <nav className="flex items-center gap-1">
+        <nav className="flex items-center gap-1 overflow-x-auto">
           {navItems.map((item) => {
             const Icon = item.icon;
             const active = activeScreen === item.id;
@@ -63,7 +63,7 @@ export function TopBar({
                 type="button"
                 disabled={item.disabled}
                 onClick={() => onNavigate(item.id)}
-                className={`px-3 py-1.5 rounded text-[13px] font-medium flex items-center gap-1.5 transition-colors duration-150 ${
+                className={`px-2.5 py-1.5 rounded text-[13px] font-medium flex items-center gap-1.5 whitespace-nowrap transition-colors duration-150 ${
                   active
                     ? "bg-stone-800 text-white border-b-2 border-[#C81E1E]"
                     : item.disabled
@@ -71,7 +71,7 @@ export function TopBar({
                     : "text-stone-300 hover:text-white hover:bg-stone-800/60"
                 }`}
               >
-                <Icon className="w-4 h-4" strokeWidth={1.5} />
+                <Icon className="w-4 h-4 shrink-0" strokeWidth={1.5} />
                 {item.label}
               </button>
             );
@@ -79,9 +79,9 @@ export function TopBar({
         </nav>
       </div>
 
-      <div className="flex items-center gap-3 text-[12px] text-stone-400">
+      <div className="hidden lg:flex items-center gap-3 text-[12px] text-stone-400 shrink-0">
         {activeTitle && activeScreen !== "incidents" && (
-          <span className="hidden md:inline truncate max-w-[280px] text-stone-300">
+          <span className="truncate max-w-[220px] text-stone-300">
             {activeTitle}
           </span>
         )}
