@@ -1,6 +1,6 @@
 export type EvidenceKind = "log" | "trace" | "metric" | "event";
 export type SeverityLevel = "critical" | "high" | "medium" | "low";
-export type IncidentStatus = "open" | "investigated" | "verified";
+export type IncidentStatus = "open" | "investigated" | "verified" | "resolved";
 export type FindingKind = "conclusion" | "hypothesis";
 export type ReviewDecision = "pending" | "confirmed" | "corrected" | "rejected";
 export type ActionStatus = "pending_approval" | "dry_run_passed" | "approved" | "blocked";
@@ -135,6 +135,13 @@ export interface VerificationSummary {
   }>;
 }
 
+export interface RecoveryCheckResult {
+  verified: boolean;
+  checked_at: string;
+  target: string;
+  detail: string;
+}
+
 export interface InvestigationResult {
   incident_id: string;
   title: string;
@@ -161,6 +168,7 @@ export interface InvestigationResult {
   hypotheses: Finding[];
   proposed_actions: RemediationAction[];
   human_review: HumanReviewState;
+  recovery_check?: RecoveryCheckResult | null;
   verification: VerificationSummary;
   evidence_map: Record<string, EvidenceItem>;
 }

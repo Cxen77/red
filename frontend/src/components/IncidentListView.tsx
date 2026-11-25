@@ -27,6 +27,7 @@ const SEVERITY_DOT: Record<SeverityLevel, string> = {
 };
 
 const STATUS_STYLE: Record<string, string> = {
+  resolved: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
   verified: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
   investigated: "text-[#1D4ED8] bg-[#EFF6FF] border-[#BFDBFE]",
   open: "text-[#78716C] bg-[#F5F5F4] border-[#E7E5E4]",

@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 
 EvidenceKind = Literal["log", "trace", "metric", "event"]
 SeverityLevel = Literal["critical", "high", "medium", "low"]
-IncidentStatus = Literal["open", "investigated", "verified"]
+IncidentStatus = Literal["open", "investigated", "verified", "resolved"]
 FindingKind = Literal["conclusion", "hypothesis"]
 ClaimType = Literal["root_cause", "error", "spike", "latency", "correlation", "visual"]
 ReviewDecision = Literal["pending", "confirmed", "corrected", "rejected"]
@@ -129,6 +129,13 @@ class HumanReviewState(BaseModel):
     reviewed_at: str | None = None
 
 
+class RecoveryCheckResult(BaseModel):
+    verified: bool
+    checked_at: str
+    target: str
+    detail: str
+
+
 class VerificationSummary(BaseModel):
     total_findings: int
     conclusions_count: int
@@ -159,6 +166,7 @@ class InvestigationResult(BaseModel):
     hypotheses: list[Finding] = Field(default_factory=list)
     proposed_actions: list[RemediationAction] = Field(default_factory=list)
     human_review: HumanReviewState = Field(default_factory=HumanReviewState)
+    recovery_check: RecoveryCheckResult | None = None
     verification: VerificationSummary
     evidence_map: dict[str, EvidenceItem] = Field(default_factory=dict)
 

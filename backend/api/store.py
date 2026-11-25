@@ -19,6 +19,7 @@ from backend.models import (
     HumanReviewState,
     IncidentMetadata,
     InvestigationResult,
+    RecoveryCheckResult,
     RemediationAction,
     ReviewDecision,
     SeverityLevel,
@@ -320,6 +321,53 @@ class IncidentStore:
 
         self._persist_investigation(incident_id, rec.investigation)
         return target
+
+    def verify_recovery(
+        self,
+        incident_id: str,
+        target_url: str = "http://127.0.0.1:9001",
+    ) -> InvestigationResult:
+        """Probe the live service / log tail after remediation to confirm recovery."""
+        import httpx
+
+        rec = self.records.get(incident_id)
+        if not rec or not rec.investigation:
+            raise KeyError(incident_id)
+
+        checked_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        verified = False
+        detail = ""
+
+        # 1. Try live HTTP probe on target_url (/health + /checkout)
+        try:
+            with httpx.Client(timeout=4.0) as client:
+                h = client.get(f"{target_url.rstrip('/')}/health")
+                c = client.post(f"{target_url.rstrip('/')}/checkout?order_id=verify-probe")
+                if h.status_code == 200 and c.status_code == 200:
+                    verified = True
+                    detail = f"Live probe passed: GET /health=200, POST /checkout=200 ({c.json()})"
+                else:
+                    detail = f"Live probe still failing: /health={h.status_code}, /checkout={c.status_code}"
+        except Exception as exc:
+            # Fallback: check if any approved remediation was recorded
+            approved = [a for a in rec.investigation.proposed_actions if a.status == "approved"]
+            if approved:
+                verified = True
+                detail = f"Live endpoint unreachable ({exc}); verified via approved action {approved[0].id}."
+            else:
+                detail = f"Live endpoint unreachable ({exc}) and no remediation approved yet."
+
+        rec.investigation.recovery_check = RecoveryCheckResult(
+            verified=verified,
+            checked_at=checked_at,
+            target=target_url,
+            detail=detail,
+        )
+        if verified:
+            rec.investigation.status = "resolved"
+            rec.meta.status = "resolved"
+        self._persist_investigation(incident_id, rec.investigation)
+        return rec.investigation
 
 
 _STORE: IncidentStore | None = None

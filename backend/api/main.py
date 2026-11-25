@@ -445,6 +445,18 @@ def decide_action(
         raise HTTPException(status_code=404, detail="Incident or action not found")
 
 
+@app.post("/incidents/{incident_id}/verify-recovery", response_model=InvestigationResult)
+@app.post("/api/incidents/{incident_id}/verify-recovery", response_model=InvestigationResult)
+def verify_recovery(
+    incident_id: str,
+    target_url: str = Query("http://127.0.0.1:9001"),
+) -> InvestigationResult:
+    try:
+        return get_store().verify_recovery(incident_id, target_url=target_url)
+    except KeyError:
+        raise HTTPException(status_code=404, detail="Incident or investigation not found")
+
+
 @app.get("/incidents/{incident_id}/report")
 @app.get("/api/incidents/{incident_id}/report")
 def get_report(

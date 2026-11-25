@@ -36,6 +36,7 @@ interface InvestigationViewProps {
   onRunInvestigation: (mode: "live" | "replay") => void;
   onSubmitReview: (decision: ReviewDecision, corrected?: string, note?: string) => void;
   onDecideAction: (actionId: string, decision: "dry_run" | "approve" | "block") => void;
+  onVerifyRecovery: () => void;
   onOpenReport: () => void;
 }
 
@@ -83,6 +84,7 @@ export function InvestigationView({
   onRunInvestigation,
   onSubmitReview,
   onDecideAction,
+  onVerifyRecovery,
   onOpenReport,
 }: InvestigationViewProps) {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -168,7 +170,13 @@ export function InvestigationView({
             <h1 className="text-[20px] font-semibold text-[#1C1917]">
               {meta.title}
             </h1>
-            <span className="font-mono text-[11px] px-2 py-0.5 rounded bg-[#F5F5F4] text-[#57534E] border border-[#E7E5E4]">
+            <span
+              className={`font-mono text-[11px] px-2 py-0.5 rounded border ${
+                meta.status === "resolved"
+                  ? "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]"
+                  : "bg-[#F5F5F4] text-[#57534E] border-[#E7E5E4]"
+              }`}
+            >
               {meta.status}
             </span>
           </div>
@@ -231,6 +239,16 @@ export function InvestigationView({
             <MessageSquare className="w-3.5 h-3.5" strokeWidth={1.5} />
             Ask incident
           </button>
+          {investigation && (
+            <button
+              type="button"
+              onClick={onVerifyRecovery}
+              className="px-3 py-1.5 rounded border border-[#15803D] text-[13px] text-[#15803D] bg-[#F0FDF4] hover:bg-[#DCFCE7] font-medium flex items-center gap-1.5"
+            >
+              <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={1.75} />
+              Verify live health
+            </button>
+          )}
           {investigation && (
             <button
               type="button"
@@ -657,10 +675,29 @@ export function InvestigationView({
                       <ShieldAlert className="w-4 h-4 text-[#C81E1E]" strokeWidth={1.75} />
                       Proposed Remediation Actions ({investigation.proposed_actions.length})
                     </h2>
-                    <span className="text-[12px] text-[#78716C]">
-                      Dry-run first — explicit human approval required before changes
-                    </span>
+                    <button
+                      type="button"
+                      onClick={onVerifyRecovery}
+                      className="px-2.5 py-1 rounded border border-[#15803D] bg-[#F0FDF4] hover:bg-[#DCFCE7] text-[12px] text-[#15803D] font-medium flex items-center gap-1"
+                    >
+                      <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={1.75} />
+                      Verify live health
+                    </button>
                   </div>
+
+                  {investigation.recovery_check && (
+                    <div
+                      className={`mb-2 rounded border px-3 py-2 text-[12px] font-mono ${
+                        investigation.recovery_check.verified
+                          ? "bg-[#F0FDF4] border-[#BBF7D0] text-[#15803D]"
+                          : "bg-[#FEF2F2] border-[#FECACA] text-[#B91C1C]"
+                      }`}
+                    >
+                      [{investigation.recovery_check.verified ? "RESOLVED" : "STILL FAILING"}]{" "}
+                      {investigation.recovery_check.detail} (checked{" "}
+                      {investigation.recovery_check.checked_at})
+                    </div>
+                  )}
 
                   <div className="bg-white border border-[#E7E5E4] rounded-md divide-y divide-[#E7E5E4]">
                     {investigation.proposed_actions.map((act) => (

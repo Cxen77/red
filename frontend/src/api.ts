@@ -72,6 +72,16 @@ export function decideRemediationAction(
   );
 }
 
+export function verifyLiveRecovery(
+  id: string,
+  targetUrl = "http://127.0.0.1:9001"
+): Promise<InvestigationResult> {
+  return jsonFetch<InvestigationResult>(
+    `${BASE}/incidents/${encodeURIComponent(id)}/verify-recovery?target_url=${encodeURIComponent(targetUrl)}`,
+    { method: "POST" }
+  );
+}
+
 export function fetchReportJson(id: string): Promise<Record<string, unknown>> {
   return jsonFetch<Record<string, unknown>>(
     `${BASE}/incidents/${encodeURIComponent(id)}/report?format=json`

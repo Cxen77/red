@@ -1,0 +1,206 @@
+[
+  {
+    "stage": "triage_root_cause",
+    "answers": {
+      "is_incident_confirmed": {
+        "type": "noul",
+        "noul": 0.899631272984193
+      },
+      "root_cause_service": {
+        "type": "choice",
+        "choice": "test-shop-checkout",
+        "probabilities": {
+          "test-shop-checkout": 0.9963089500322535,
+          "test-shop-payment": 0.0036910499677464998
+        },
+        "confidence": 0.992617900064507
+      },
+      "failure_mechanism": {
+        "type": "choice",
+        "choice": "connection_pool_exhaustion",
+        "probabilities": {
+          "connection_pool_exhaustion": 0.9422108143779101,
+          "cache_stampede": 0.0022578664885791583,
+          "auth_token_mismatch": 0.0007719303506880303,
+          "upstream_timeout": 0.053139525294988055,
+          "memory_exhaustion": 0.001619863487834658
+        },
+        "confidence": 0.9277635179723875
+      },
+      "operational_severity": {
+        "type": "score",
+        "score": 1.4529749825081515,
+        "legend": {
+          "0": "Low",
+          "1": "Medium",
+          "2": "High"
+        },
+        "probabilities": {
+          "0": 0.04430076281689843,
+          "1": 0.4584234918580518,
+          "2": 0.4972757453250498
+        },
+        "confidence": 0.45297498250815127
+      }
+    },
+    "trace": {
+      "stage": "triage_root_cause",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 355.52,
+      "retries": 0,
+      "context_items_sent": 4,
+      "input_tokens": 549,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795630258-0Rz7rUpQRQJhSNqIrtfJ",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "is_incident_confirmed",
+          "question_type": "noul",
+          "instructions": "Does the telemetry state confirm an active production incident or service outage?",
+          "answer": 0.899631272984193,
+          "confidence": 0.899631272984193,
+          "probabilities": null
+        },
+        {
+          "question_key": "root_cause_service",
+          "question_type": "choice",
+          "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
+          "answer": "test-shop-checkout",
+          "confidence": 0.992617900064507,
+          "probabilities": {
+            "test-shop-checkout": 0.9963089500322535,
+            "test-shop-payment": 0.0036910499677464998
+          }
+        },
+        {
+          "question_key": "failure_mechanism",
+          "question_type": "choice",
+          "instructions": "Which failure mechanism caused this incident?",
+          "answer": "connection_pool_exhaustion",
+          "confidence": 0.9277635179723875,
+          "probabilities": {
+            "connection_pool_exhaustion": 0.9422108143779101,
+            "cache_stampede": 0.0022578664885791583,
+            "auth_token_mismatch": 0.0007719303506880303,
+            "upstream_timeout": 0.053139525294988055,
+            "memory_exhaustion": 0.001619863487834658
+          }
+        },
+        {
+          "question_key": "operational_severity",
+          "question_type": "score",
+          "instructions": "Rate the severity of this incident based on error volume and latency impact.",
+          "answer": 1.4529749825081515,
+          "confidence": 0.45297498250815127,
+          "probabilities": {
+            "0": 0.04430076281689843,
+            "1": 0.4584234918580518,
+            "2": 0.4972757453250498
+          }
+        }
+      ]
+    }
+  },
+  {
+    "stage": "evidence_attribution",
+    "answers": {
+      "primary_trigger_evidence": {
+        "type": "choice",
+        "choice": "LOG-0001",
+        "probabilities": {
+          "LOG-0001": 0.7018208051132478,
+          "LOG-0006": 0.291339870098803,
+          "LOG-0002": 0.003951597118299994,
+          "LOG-0007": 0.0010188960583844982,
+          "LOG-0003": 0.0008874163992686586,
+          "LOG-0004": 0.0009814152119958731
+        },
+        "confidence": 0.6421849661358975
+      },
+      "trigger_is_causal": {
+        "type": "noul",
+        "noul": 0.8971645438154209
+      },
+      "metric_corroboration": {
+        "type": "noul",
+        "noul": 0.929490296704865
+      },
+      "evidence_strength": {
+        "type": "score",
+        "score": 1.5415494905928415,
+        "legend": {
+          "0": "Weak",
+          "1": "Moderate",
+          "2": "Strong"
+        },
+        "probabilities": {
+          "0": 0.06779133645855825,
+          "1": 0.32286783649004175,
+          "2": 0.6093408270513999
+        },
+        "confidence": 0.5415494905928417
+      }
+    },
+    "trace": {
+      "stage": "evidence_attribution",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 495.93,
+      "retries": 0,
+      "context_items_sent": 6,
+      "input_tokens": 1081,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795630259-4d751snxzrbKiscZ375B",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "primary_trigger_evidence",
+          "question_type": "choice",
+          "instructions": "Select the exact evidence item that captures the initial trigger or config change on test-shop-checkout.",
+          "answer": "LOG-0001",
+          "confidence": 0.6421849661358975,
+          "probabilities": {
+            "LOG-0001": 0.7018208051132478,
+            "LOG-0006": 0.291339870098803,
+            "LOG-0002": 0.003951597118299994,
+            "LOG-0007": 0.0010188960583844982,
+            "LOG-0003": 0.0008874163992686586,
+            "LOG-0004": 0.0009814152119958731
+          }
+        },
+        {
+          "question_key": "trigger_is_causal",
+          "question_type": "noul",
+          "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
+          "answer": 0.8971645438154209,
+          "confidence": 0.8971645438154209,
+          "probabilities": null
+        },
+        {
+          "question_key": "metric_corroboration",
+          "question_type": "noul",
+          "instructions": "Do the metric spikes corroborate the log/trace failure?",
+          "answer": 0.929490296704865,
+          "confidence": 0.929490296704865,
+          "probabilities": null
+        },
+        {
+          "question_key": "evidence_strength",
+          "question_type": "score",
+          "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
+          "answer": 1.5415494905928415,
+          "confidence": 0.5415494905928417,
+          "probabilities": {
+            "0": 0.06779133645855825,
+            "1": 0.32286783649004175,
+            "2": 0.6093408270513999
+          }
+        }
+      ]
+    }
+  }
+]

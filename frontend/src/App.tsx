@@ -6,6 +6,7 @@ import {
   fetchTimeline,
   runInvestigation,
   submitHumanReview,
+  verifyLiveRecovery,
 } from "./api";
 import { DeciderProbeView } from "./components/DeciderProbeView";
 import { IncidentListView } from "./components/IncidentListView";
@@ -128,6 +129,16 @@ export default function App() {
     );
   }
 
+  async function handleVerifyRecovery() {
+    if (!activeMeta) return;
+    const updated = await verifyLiveRecovery(activeMeta.id);
+    setInvestigation(updated);
+    setActiveMeta((prev) =>
+      prev ? { ...prev, status: updated.status } : prev
+    );
+    void loadIncidents();
+  }
+
   async function handleIncidentCreated(created: IncidentMetadata) {
     await loadIncidents();
     await openIncident(created.id);
@@ -163,6 +174,7 @@ export default function App() {
           onRunInvestigation={(mode) => void handleRunInvestigation(mode)}
           onSubmitReview={(d, c, n) => void handleSubmitReview(d, c, n)}
           onDecideAction={(aid, d) => void handleDecideAction(aid, d)}
+          onVerifyRecovery={() => void handleVerifyRecovery()}
           onOpenReport={() => setScreen("report")}
         />
       )}

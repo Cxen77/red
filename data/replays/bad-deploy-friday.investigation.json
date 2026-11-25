@@ -4,7 +4,7 @@
   "mode": "replay",
   "model": "perplexity/pplx-decider-flash-v1.3-20261112",
   "opened_at": "2026-11-25T14:04:00Z",
-  "investigated_at": "2026-11-25T18:05:53Z",
+  "investigated_at": "2026-11-25T18:14:01Z",
   "severity": "critical",
   "status": "verified",
   "root_cause_summary": "Database connection pool exhaustion / misconfiguration in checkout-svc (verified by 5/6 findings).",
@@ -29,7 +29,7 @@
         "limit": 40
       },
       "returned": 40,
-      "elapsed_ms": 0.178
+      "elapsed_ms": 0.169
     },
     {
       "tool": "search_logs",
@@ -39,7 +39,7 @@
         "limit": 10
       },
       "returned": 1,
-      "elapsed_ms": 0.422
+      "elapsed_ms": 0.357
     },
     {
       "tool": "get_metric_series",
@@ -48,7 +48,7 @@
         "anomalies_only": true
       },
       "returned": 38,
-      "elapsed_ms": 0.012
+      "elapsed_ms": 0.013
     },
     {
       "tool": "get_trace",
@@ -58,7 +58,7 @@
         "limit": 15
       },
       "returned": 15,
-      "elapsed_ms": 0.198
+      "elapsed_ms": 0.108
     },
     {
       "tool": "get_service_events",
@@ -68,7 +68,7 @@
         "limit": 20
       },
       "returned": 20,
-      "elapsed_ms": 0.138
+      "elapsed_ms": 0.158
     }
   ],
   "decision_traces": [
@@ -345,7 +345,7 @@
       "dry_run_preview": "Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in LOG-1021). Estimated recovery: ~25s.",
       "status": "dry_run_passed",
       "execution_result": "Dry-run validated: Dry-run diff for deployment/checkout-svc: DB_POOL_MAX 5 -> 50 (referenced in LOG-1021). Estimated recovery: ~25s.",
-      "decided_at": "2026-11-25T18:05:53Z",
+      "decided_at": "2026-11-25T18:14:01Z",
       "decided_note": null
     },
     {
@@ -365,8 +365,9 @@
     "decision": "confirmed",
     "corrected_root_cause": null,
     "note": "Verified in test",
-    "reviewed_at": "2026-11-25T18:05:53Z"
+    "reviewed_at": "2026-11-25T18:14:01Z"
   },
+  "recovery_check": null,
   "verification": {
     "total_findings": 6,
     "conclusions_count": 5,
