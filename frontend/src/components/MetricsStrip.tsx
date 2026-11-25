@@ -75,7 +75,7 @@ export function MetricsStrip({ metricSeries, anomalyWindow }: MetricsStripProps)
             </div>
             <div className="h-[72px] w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={data} margin={{ top: 4, right: 4, left: -24, bottom: 0 }}>
+                <LineChart data={data} margin={{ top: 4, right: 6, left: -4, bottom: 0 }}>
                   <XAxis
                     dataKey="label"
                     tick={{ fontSize: 10, fill: "#78716C" }}
@@ -87,7 +87,7 @@ export function MetricsStrip({ metricSeries, anomalyWindow }: MetricsStripProps)
                     tick={{ fontSize: 10, fill: "#78716C" }}
                     axisLine={false}
                     tickLine={false}
-                    width={46}
+                    width={42}
                   />
                   <Tooltip
                     contentStyle={{
