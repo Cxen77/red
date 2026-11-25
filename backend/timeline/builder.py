@@ -24,7 +24,11 @@ def _percentile(values: list[float], pct: float) -> float:
     return ordered[low] + (ordered[high] - ordered[low]) * (pos - low)
 
 
-def build_timeline(incident_id: str, items: list[EvidenceItem]) -> TimelineSummary:
+def build_timeline(
+    incident_id: str,
+    items: list[EvidenceItem],
+    redacted_secrets_count: int = 0,
+) -> TimelineSummary:
     """Merge evidence items chronologically and attach deterministic statistical anomaly flags."""
     # Clone items so repeated calls don't accumulate duplicate flags
     cloned = [item.model_copy(deep=True) for item in items]
@@ -178,6 +182,7 @@ def build_timeline(incident_id: str, items: list[EvidenceItem]) -> TimelineSumma
         services=services,
         total_items=len(cloned),
         anomaly_count=len(flagged_items),
+        redacted_secrets_count=redacted_secrets_count,
         anomaly_window=anomaly_window,
         items=cloned,
         metric_series=dict(metric_series),

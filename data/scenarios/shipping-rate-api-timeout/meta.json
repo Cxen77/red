@@ -1,0 +1,12 @@
+{
+  "id": "shipping-rate-api-timeout",
+  "title": "Carrier Rate Calculator Upstream Timeout Storm",
+  "opened_at": "2026-11-17T10:05:00Z",
+  "severity": "medium",
+  "services": [
+    "api-gateway",
+    "shipping-svc",
+    "checkout-svc"
+  ],
+  "has_image": false
+}

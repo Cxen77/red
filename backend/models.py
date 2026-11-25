@@ -9,6 +9,8 @@ SeverityLevel = Literal["critical", "high", "medium", "low"]
 IncidentStatus = Literal["open", "investigated", "verified"]
 FindingKind = Literal["conclusion", "hypothesis"]
 ClaimType = Literal["root_cause", "error", "spike", "latency", "correlation", "visual"]
+ReviewDecision = Literal["pending", "confirmed", "corrected", "rejected"]
+ActionStatus = Literal["pending_approval", "dry_run_passed", "approved", "blocked"]
 
 
 class AnomalyFlag(BaseModel):
@@ -54,6 +56,7 @@ class TimelineSummary(BaseModel):
     services: list[str]
     total_items: int
     anomaly_count: int
+    redacted_secrets_count: int = 0
     anomaly_window: list[str] | None = None
     items: list[EvidenceItem]
     metric_series: dict[str, list[MetricPoint]]
@@ -73,10 +76,13 @@ class DecisionTraceRecord(BaseModel):
     model: str
     mode: Literal["live", "replay"]
     latency_ms: float
+    retries: int = 0
+    context_items_sent: int = 0
     input_tokens: int = 0
     output_tokens: int = 0
     cost: float = 0.0
     request_id: str | None = None
+    error: str | None = None
     questions: list[DeciderQuestionResult] = Field(default_factory=list)
 
 
@@ -92,6 +98,25 @@ class Finding(BaseModel):
     demotion_reason: str | None = None
     verification_passed: bool = False
     decider_signals: dict[str, Any] = Field(default_factory=dict)
+
+
+class RemediationAction(BaseModel):
+    id: str
+    title: str
+    target_service: str
+    command: str
+    risk_level: Literal["low", "medium", "high"] = "medium"
+    dry_run_preview: str
+    status: ActionStatus = "pending_approval"
+    decided_at: str | None = None
+    decided_note: str | None = None
+
+
+class HumanReviewState(BaseModel):
+    decision: ReviewDecision = "pending"
+    corrected_root_cause: str | None = None
+    note: str | None = None
+    reviewed_at: str | None = None
 
 
 class VerificationSummary(BaseModel):
@@ -113,11 +138,17 @@ class InvestigationResult(BaseModel):
     status: IncidentStatus
     root_cause_summary: str
     root_cause_chain: list[str] = Field(default_factory=list)
+    raw_items_total: int = 0
+    filtered_items_sent: int = 0
+    noise_reduction_pct: float = 0.0
+    redacted_secrets_count: int = 0
     tool_trace: list[dict[str, Any]] = Field(default_factory=list)
     decision_traces: list[DecisionTraceRecord] = Field(default_factory=list)
     image_assessment: dict[str, Any] | None = None
     conclusions: list[Finding] = Field(default_factory=list)
     hypotheses: list[Finding] = Field(default_factory=list)
+    proposed_actions: list[RemediationAction] = Field(default_factory=list)
+    human_review: HumanReviewState = Field(default_factory=HumanReviewState)
     verification: VerificationSummary
     evidence_map: dict[str, EvidenceItem] = Field(default_factory=dict)
 
@@ -130,9 +161,11 @@ class IncidentMetadata(BaseModel):
     severity: SeverityLevel
     status: IncidentStatus
     root_cause: str | None = None
+    review_decision: ReviewDecision = "pending"
     has_image: bool = False
     log_count: int = 0
     trace_count: int = 0
     metric_count: int = 0
     anomaly_count: int = 0
+    redacted_secrets_count: int = 0
     model: str = "perplexity/pplx-decider-flash-v1.3:free"

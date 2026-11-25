@@ -1,0 +1,402 @@
+[
+  {
+    "trace_id": "tr-305-001",
+    "span_id": "sp-305-001",
+    "ts": "2026-11-21T16:28:00Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 41.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-002",
+    "span_id": "sp-305-002",
+    "ts": "2026-11-21T16:28:22Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 41.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-003",
+    "span_id": "sp-305-003",
+    "ts": "2026-11-21T16:28:44Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 46.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-004",
+    "span_id": "sp-305-004",
+    "ts": "2026-11-21T16:29:06Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 29.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-005",
+    "span_id": "sp-305-005",
+    "ts": "2026-11-21T16:29:28Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 24.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-006",
+    "span_id": "sp-305-006",
+    "ts": "2026-11-21T16:29:50Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 26.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-007",
+    "span_id": "sp-305-007",
+    "ts": "2026-11-21T16:30:12Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 20.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-008",
+    "span_id": "sp-305-008",
+    "ts": "2026-11-21T16:30:34Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 18.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-009",
+    "span_id": "sp-305-009",
+    "ts": "2026-11-21T16:30:56Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 44.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-010",
+    "span_id": "sp-305-010",
+    "ts": "2026-11-21T16:31:18Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 28.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-011",
+    "span_id": "sp-305-011",
+    "ts": "2026-11-21T16:31:40Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 36.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-012",
+    "span_id": "sp-305-012",
+    "ts": "2026-11-21T16:32:02Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 36.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-013",
+    "span_id": "sp-305-013",
+    "ts": "2026-11-21T16:32:24Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 32.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-014",
+    "span_id": "sp-305-014",
+    "ts": "2026-11-21T16:32:46Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 32.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-015",
+    "span_id": "sp-305-015",
+    "ts": "2026-11-21T16:33:08Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 49.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-016",
+    "span_id": "sp-305-016",
+    "ts": "2026-11-21T16:33:30Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 19.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-017",
+    "span_id": "sp-305-017",
+    "ts": "2026-11-21T16:33:52Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 32.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-018",
+    "span_id": "sp-305-018",
+    "ts": "2026-11-21T16:34:14Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 23.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-019",
+    "span_id": "sp-305-019",
+    "ts": "2026-11-21T16:34:36Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 46.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-020",
+    "span_id": "sp-305-020",
+    "ts": "2026-11-21T16:34:58Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 41.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-021",
+    "span_id": "sp-305-021",
+    "ts": "2026-11-21T16:35:20Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 50.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-022",
+    "span_id": "sp-305-022",
+    "ts": "2026-11-21T16:35:42Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 38.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-023",
+    "span_id": "sp-305-023",
+    "ts": "2026-11-21T16:36:04Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 20.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-305-024",
+    "span_id": "sp-305-024",
+    "ts": "2026-11-21T16:36:26Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3855.9,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-025",
+    "span_id": "sp-305-025",
+    "ts": "2026-11-21T16:36:48Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3612.1,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-026",
+    "span_id": "sp-305-026",
+    "ts": "2026-11-21T16:37:10Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3014.0,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-027",
+    "span_id": "sp-305-027",
+    "ts": "2026-11-21T16:37:32Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 2808.6,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-028",
+    "span_id": "sp-305-028",
+    "ts": "2026-11-21T16:37:54Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3436.1,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-029",
+    "span_id": "sp-305-029",
+    "ts": "2026-11-21T16:38:16Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3235.8,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-030",
+    "span_id": "sp-305-030",
+    "ts": "2026-11-21T16:38:38Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3268.1,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-031",
+    "span_id": "sp-305-031",
+    "ts": "2026-11-21T16:39:00Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3028.1,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-032",
+    "span_id": "sp-305-032",
+    "ts": "2026-11-21T16:39:22Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3452.5,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-033",
+    "span_id": "sp-305-033",
+    "ts": "2026-11-21T16:39:44Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 2867.6,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-034",
+    "span_id": "sp-305-034",
+    "ts": "2026-11-21T16:40:06Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3865.8,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-035",
+    "span_id": "sp-305-035",
+    "ts": "2026-11-21T16:40:28Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3602.0,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-036",
+    "span_id": "sp-305-036",
+    "ts": "2026-11-21T16:40:50Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3623.9,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-037",
+    "span_id": "sp-305-037",
+    "ts": "2026-11-21T16:41:12Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 2799.7,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-038",
+    "span_id": "sp-305-038",
+    "ts": "2026-11-21T16:41:34Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 2616.3,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-039",
+    "span_id": "sp-305-039",
+    "ts": "2026-11-21T16:41:56Z",
+    "service": "payment-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 3492.4,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-305-040",
+    "span_id": "sp-305-040",
+    "ts": "2026-11-21T16:42:18Z",
+    "service": "checkout-svc",
+    "operation": "payment-svc.handle",
+    "duration_ms": 2213.2,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  }
+]

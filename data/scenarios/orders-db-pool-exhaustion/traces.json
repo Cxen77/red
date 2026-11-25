@@ -1,0 +1,402 @@
+[
+  {
+    "trace_id": "tr-412-001",
+    "span_id": "sp-412-001",
+    "ts": "2026-11-20T08:18:00Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 34.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-002",
+    "span_id": "sp-412-002",
+    "ts": "2026-11-20T08:18:22Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 54.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-003",
+    "span_id": "sp-412-003",
+    "ts": "2026-11-20T08:18:44Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 21.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-004",
+    "span_id": "sp-412-004",
+    "ts": "2026-11-20T08:19:06Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 22.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-005",
+    "span_id": "sp-412-005",
+    "ts": "2026-11-20T08:19:28Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 45.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-006",
+    "span_id": "sp-412-006",
+    "ts": "2026-11-20T08:19:50Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 19.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-007",
+    "span_id": "sp-412-007",
+    "ts": "2026-11-20T08:20:12Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 51.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-008",
+    "span_id": "sp-412-008",
+    "ts": "2026-11-20T08:20:34Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 43.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-009",
+    "span_id": "sp-412-009",
+    "ts": "2026-11-20T08:20:56Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 34.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-010",
+    "span_id": "sp-412-010",
+    "ts": "2026-11-20T08:21:18Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 40.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-011",
+    "span_id": "sp-412-011",
+    "ts": "2026-11-20T08:21:40Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 29.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-012",
+    "span_id": "sp-412-012",
+    "ts": "2026-11-20T08:22:02Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 42.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-013",
+    "span_id": "sp-412-013",
+    "ts": "2026-11-20T08:22:24Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 44.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-014",
+    "span_id": "sp-412-014",
+    "ts": "2026-11-20T08:22:46Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 27.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-015",
+    "span_id": "sp-412-015",
+    "ts": "2026-11-20T08:23:08Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 25.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-016",
+    "span_id": "sp-412-016",
+    "ts": "2026-11-20T08:23:30Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 26.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-017",
+    "span_id": "sp-412-017",
+    "ts": "2026-11-20T08:23:52Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 19.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-018",
+    "span_id": "sp-412-018",
+    "ts": "2026-11-20T08:24:14Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 26.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-019",
+    "span_id": "sp-412-019",
+    "ts": "2026-11-20T08:24:36Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 46.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-020",
+    "span_id": "sp-412-020",
+    "ts": "2026-11-20T08:24:58Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 46.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-021",
+    "span_id": "sp-412-021",
+    "ts": "2026-11-20T08:25:20Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 48.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-022",
+    "span_id": "sp-412-022",
+    "ts": "2026-11-20T08:25:42Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 34.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-023",
+    "span_id": "sp-412-023",
+    "ts": "2026-11-20T08:26:04Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 36.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-412-024",
+    "span_id": "sp-412-024",
+    "ts": "2026-11-20T08:26:26Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3677.1,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-025",
+    "span_id": "sp-412-025",
+    "ts": "2026-11-20T08:26:48Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3356.9,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-026",
+    "span_id": "sp-412-026",
+    "ts": "2026-11-20T08:27:10Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 2939.1,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-027",
+    "span_id": "sp-412-027",
+    "ts": "2026-11-20T08:27:32Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3638.8,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-028",
+    "span_id": "sp-412-028",
+    "ts": "2026-11-20T08:27:54Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 2146.7,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-029",
+    "span_id": "sp-412-029",
+    "ts": "2026-11-20T08:28:16Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 2806.7,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-030",
+    "span_id": "sp-412-030",
+    "ts": "2026-11-20T08:28:38Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 2650.1,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-031",
+    "span_id": "sp-412-031",
+    "ts": "2026-11-20T08:29:00Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3876.8,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-032",
+    "span_id": "sp-412-032",
+    "ts": "2026-11-20T08:29:22Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3469.7,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-033",
+    "span_id": "sp-412-033",
+    "ts": "2026-11-20T08:29:44Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 2300.6,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-034",
+    "span_id": "sp-412-034",
+    "ts": "2026-11-20T08:30:06Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 2891.5,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-035",
+    "span_id": "sp-412-035",
+    "ts": "2026-11-20T08:30:28Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3170.3,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-036",
+    "span_id": "sp-412-036",
+    "ts": "2026-11-20T08:30:50Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3642.8,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-037",
+    "span_id": "sp-412-037",
+    "ts": "2026-11-20T08:31:12Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3401.8,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-038",
+    "span_id": "sp-412-038",
+    "ts": "2026-11-20T08:31:34Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 2207.7,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-039",
+    "span_id": "sp-412-039",
+    "ts": "2026-11-20T08:31:56Z",
+    "service": "orders-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 2207.7,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  },
+  {
+    "trace_id": "tr-412-040",
+    "span_id": "sp-412-040",
+    "ts": "2026-11-20T08:32:18Z",
+    "service": "billing-svc",
+    "operation": "orders-svc.handle",
+    "duration_ms": 3826.6,
+    "status": "ERROR",
+    "error": "connection_pool_exhaustion"
+  }
+]

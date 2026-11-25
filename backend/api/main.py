@@ -1,6 +1,7 @@
 """M5 FastAPI service for IncidentLens."""
 from __future__ import annotations
 
+import json
 from typing import Any, Literal
 
 from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
@@ -9,15 +10,22 @@ from fastapi.responses import HTMLResponse, JSONResponse, PlainTextResponse, Res
 from pydantic import BaseModel, Field
 
 from backend.agent.llm import DeciderGateway
-from backend.config import OPENROUTER_MODEL
-from backend.models import IncidentMetadata, InvestigationResult, SeverityLevel, TimelineSummary
+from backend.config import ARTIFACTS_DIR, OPENROUTER_MODEL
+from backend.models import (
+    IncidentMetadata,
+    InvestigationResult,
+    RemediationAction,
+    ReviewDecision,
+    SeverityLevel,
+    TimelineSummary,
+)
 from backend.verify.report import build_html_report, build_json_report, build_markdown_report
 from .store import get_store
 
 app = FastAPI(
     title="IncidentLens API",
-    version="1.0.0",
-    description="AI Incident Investigation with deterministic citation verification and OpenRouter pplx-decider-flash-v1.3:free.",
+    version="1.1.0",
+    description="Incident investigation with deterministic citation verification, human review controls, and guarded remediation.",
 )
 
 app.add_middleware(
@@ -42,6 +50,17 @@ class CreateIncidentJson(BaseModel):
     logs: str | None = None
     traces: str | None = None
     metrics: str | None = None
+
+
+class ReviewSubmission(BaseModel):
+    decision: ReviewDecision
+    corrected_root_cause: str | None = None
+    note: str | None = None
+
+
+class ActionDecisionRequest(BaseModel):
+    decision: Literal["dry_run", "approve", "block"]
+    note: str | None = None
 
 
 @app.get("/health")
@@ -146,6 +165,38 @@ def investigate(
         raise HTTPException(status_code=500, detail=f"Investigation failed: {exc}")
 
 
+@app.post("/incidents/{incident_id}/review", response_model=InvestigationResult)
+@app.post("/api/incidents/{incident_id}/review", response_model=InvestigationResult)
+def submit_review(incident_id: str, payload: ReviewSubmission) -> InvestigationResult:
+    try:
+        return get_store().submit_review(
+            incident_id=incident_id,
+            decision=payload.decision,
+            corrected_root_cause=payload.corrected_root_cause,
+            note=payload.note,
+        )
+    except KeyError:
+        raise HTTPException(status_code=404, detail="Incident or investigation not found")
+
+
+@app.post("/incidents/{incident_id}/actions/{action_id}", response_model=RemediationAction)
+@app.post("/api/incidents/{incident_id}/actions/{action_id}", response_model=RemediationAction)
+def decide_action(
+    incident_id: str,
+    action_id: str,
+    payload: ActionDecisionRequest,
+) -> RemediationAction:
+    try:
+        return get_store().decide_action(
+            incident_id=incident_id,
+            action_id=action_id,
+            decision=payload.decision,
+            note=payload.note,
+        )
+    except KeyError:
+        raise HTTPException(status_code=404, detail="Incident or action not found")
+
+
 @app.get("/incidents/{incident_id}/report")
 @app.get("/api/incidents/{incident_id}/report")
 def get_report(
@@ -156,7 +207,7 @@ def get_report(
     if not rec:
         raise HTTPException(status_code=404, detail="Incident not found")
     if not rec.investigation:
-        rec.investigation = get_store().investigate(incident_id, mode="replay" if False else "live")
+        rec.investigation = get_store().investigate(incident_id, mode="live")
 
     if format == "markdown":
         return PlainTextResponse(build_markdown_report(rec.investigation), media_type="text/markdown")
@@ -165,9 +216,17 @@ def get_report(
     return JSONResponse(build_json_report(rec.investigation))
 
 
+@app.get("/api/evals")
+def get_evals() -> JSONResponse:
+    eval_path = ARTIFACTS_DIR / "eval_results.json"
+    if not eval_path.exists():
+        raise HTTPException(status_code=404, detail="Evaluation results not generated yet")
+    return JSONResponse(json.loads(eval_path.read_text(encoding="utf-8")))
+
+
 @app.post("/api/decider/evaluate")
 def evaluate_decider(payload: DeciderEvaluateRequest) -> dict[str, Any]:
-    """Direct OpenRouter perplexity/pplx-decider-flash-v1.3:free decision endpoint."""
+    """Direct structured decision endpoint."""
     gw = DeciderGateway()
     state = list(payload.state)
     if payload.image_base64:

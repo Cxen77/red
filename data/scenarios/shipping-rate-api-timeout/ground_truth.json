@@ -1,0 +1,10 @@
+{
+  "scenario_id": "shipping-rate-api-timeout",
+  "root_cause_service": "shipping-svc",
+  "root_cause_category": "upstream_timeout",
+  "required_keywords": [
+    "shipping-svc",
+    "timed out",
+    "retry_storm"
+  ]
+}

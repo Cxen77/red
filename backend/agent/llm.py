@@ -1,4 +1,4 @@
-"""OpenRouter Decisions API gateway (perplexity/pplx-decider-flash-v1.3:free) + replay cache."""
+"""OpenRouter Decisions API gateway (perplexity/pplx-decider-flash-v1.3:free) + bounded retries + replay cache."""
 from __future__ import annotations
 
 import base64
@@ -19,7 +19,10 @@ from backend.models import DeciderQuestionResult, DecisionTraceRecord
 
 
 class DeciderGateway:
-    """Single gateway for all OpenRouter alpha/decisions calls with deterministic replay caching."""
+    """Single gateway for all OpenRouter alpha/decisions calls with bounded retries & replay caching."""
+
+    MAX_RETRIES = 3
+    RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 
     def __init__(
         self,
@@ -46,7 +49,7 @@ class DeciderGateway:
         questions: dict[str, dict[str, Any]],
         timeout_s: float = 30.0,
     ) -> tuple[dict[str, Any], DecisionTraceRecord]:
-        """Call OpenRouter POST /api/alpha/decisions synchronously."""
+        """Call OpenRouter POST /api/alpha/decisions with bounded exponential backoff on 429/5xx."""
         if not self.api_key:
             raise RuntimeError("OPENROUTER_API_KEY is not configured.")
 
@@ -61,13 +64,41 @@ class DeciderGateway:
             "HTTP-Referer": "https://github.com/Cxen77/red",
             "X-Title": "IncidentLens",
         }
-        started = time.perf_counter()
-        with httpx.Client(timeout=timeout_s) as client:
-            resp = client.post(self.endpoint, json=payload, headers=headers)
-            resp.raise_for_status()
-            data = resp.json()
-        elapsed_ms = round((time.perf_counter() - started) * 1000, 2)
 
+        last_exc: Exception | None = None
+        retries = 0
+        data: dict[str, Any] = {}
+        started = time.perf_counter()
+
+        with httpx.Client(timeout=timeout_s) as client:
+            for attempt in range(self.MAX_RETRIES):
+                try:
+                    resp = client.post(self.endpoint, json=payload, headers=headers)
+                    if resp.status_code in self.RETRYABLE_STATUS_CODES and attempt < self.MAX_RETRIES - 1:
+                        retries += 1
+                        retry_after = resp.headers.get("Retry-After")
+                        delay = float(retry_after) if retry_after and retry_after.isdigit() else 0.5 * (2**attempt)
+                        time.sleep(min(delay, 4.0))
+                        continue
+                    resp.raise_for_status()
+                    data = resp.json()
+                    last_exc = None
+                    break
+                except httpx.TimeoutException as exc:
+                    last_exc = exc
+                    if attempt < self.MAX_RETRIES - 1:
+                        retries += 1
+                        time.sleep(0.5 * (2**attempt))
+                        continue
+                    raise
+                except httpx.HTTPStatusError as exc:
+                    last_exc = exc
+                    raise
+
+        if last_exc is not None:
+            raise last_exc
+
+        elapsed_ms = round((time.perf_counter() - started) * 1000, 2)
         answers = data.get("answers", {})
         usage = data.get("usage", {})
         q_results: list[DeciderQuestionResult] = []
@@ -90,6 +121,8 @@ class DeciderGateway:
             model=data.get("model", self.model),
             mode="live",
             latency_ms=elapsed_ms,
+            retries=retries,
+            context_items_sent=len(state),
             input_tokens=int(usage.get("input_tokens", 0)),
             output_tokens=int(usage.get("output_tokens", 0)),
             cost=float(usage.get("cost", 0.0)),
@@ -123,19 +156,33 @@ class DeciderGateway:
         mode: Literal["live", "replay"] = "live",
         replay_cache: dict[str, dict[str, Any]] | None = None,
     ) -> tuple[dict[str, Any], DecisionTraceRecord]:
-        """Run a stage in live or replay mode; falls back to replay if live fails without network."""
+        """Run a stage in live or replay mode; falls back cleanly to replay or degraded empty state."""
         if mode == "replay" and replay_cache and stage in replay_cache:
             cached = replay_cache[stage]
-            trace = DecisionTraceRecord.model_validate({**cached["trace"], "mode": "replay", "latency_ms": 0.5})
+            trace = DecisionTraceRecord.model_validate(
+                {
+                    **cached["trace"],
+                    "mode": "replay",
+                    "latency_ms": 0.5,
+                    "context_items_sent": cached["trace"].get("context_items_sent") or len(state),
+                }
+            )
             return cached["answers"], trace
 
         if mode == "live":
             try:
                 return self.decide_live(stage, state, questions)
-            except Exception:
+            except Exception as exc:
                 if replay_cache and stage in replay_cache:
                     cached = replay_cache[stage]
-                    trace = DecisionTraceRecord.model_validate({**cached["trace"], "mode": "replay", "latency_ms": 0.5})
+                    trace = DecisionTraceRecord.model_validate(
+                        {
+                            **cached["trace"],
+                            "mode": "replay",
+                            "latency_ms": 0.5,
+                            "error": f"Live API fallback to replay: {exc}",
+                        }
+                    )
                     return cached["answers"], trace
                 raise
 

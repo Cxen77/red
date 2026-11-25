@@ -1,0 +1,9 @@
+{
+  "scenario_id": "partial-telemetry-missing-logs",
+  "root_cause_service": "metrics-collector",
+  "root_cause_category": "upstream_timeout",
+  "required_keywords": [
+    "metrics-collector",
+    "missing-logs"
+  ]
+}

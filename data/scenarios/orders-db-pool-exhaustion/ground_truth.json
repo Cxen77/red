@@ -1,0 +1,10 @@
+{
+  "scenario_id": "orders-db-pool-exhaustion",
+  "root_cause_service": "orders-svc",
+  "root_cause_category": "connection_pool_exhaustion",
+  "required_keywords": [
+    "orders-svc",
+    "db_pool_max=3",
+    "exhausted"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "payment-webhook-timeout",
+  "title": "Payment Provider TLS Handshake Timeout Cascade",
+  "opened_at": "2026-11-21T16:40:00Z",
+  "severity": "high",
+  "services": [
+    "api-gateway",
+    "checkout-svc",
+    "payment-svc"
+  ],
+  "has_image": false
+}

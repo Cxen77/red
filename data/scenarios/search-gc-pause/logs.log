@@ -1,0 +1,912 @@
+2026-11-18T14:38:00Z api-gateway INFO req-624-0 request ok latency_ms=16
+2026-11-18T14:38:01Z search-svc INFO req-624-1 request ok latency_ms=38
+2026-11-18T14:38:02Z catalog-svc INFO req-624-2 request ok latency_ms=11
+2026-11-18T14:38:03Z api-gateway INFO req-624-3 request ok latency_ms=17
+2026-11-18T14:38:04Z search-svc INFO req-624-4 request ok latency_ms=16
+2026-11-18T14:38:05Z catalog-svc INFO req-624-5 request ok latency_ms=19
+2026-11-18T14:38:06Z api-gateway INFO req-624-6 request ok latency_ms=28
+2026-11-18T14:38:07Z search-svc INFO req-624-7 request ok latency_ms=35
+2026-11-18T14:38:08Z catalog-svc INFO req-624-8 request ok latency_ms=18
+2026-11-18T14:38:09Z api-gateway INFO req-624-9 request ok latency_ms=20
+2026-11-18T14:38:10Z search-svc INFO req-624-10 request ok latency_ms=19
+2026-11-18T14:38:11Z catalog-svc INFO req-624-11 request ok latency_ms=26
+2026-11-18T14:38:12Z api-gateway INFO req-624-12 request ok latency_ms=28
+2026-11-18T14:38:13Z search-svc INFO req-624-13 request ok latency_ms=37
+2026-11-18T14:38:14Z catalog-svc INFO req-624-14 request ok latency_ms=30
+2026-11-18T14:38:15Z api-gateway INFO req-624-15 request ok latency_ms=11
+2026-11-18T14:38:16Z search-svc INFO req-624-16 request ok latency_ms=38
+2026-11-18T14:38:17Z catalog-svc INFO req-624-17 request ok latency_ms=35
+2026-11-18T14:38:18Z api-gateway INFO req-624-18 request ok latency_ms=20
+2026-11-18T14:38:19Z search-svc INFO req-624-19 request ok latency_ms=22
+2026-11-18T14:38:20Z catalog-svc INFO req-624-20 request ok latency_ms=29
+2026-11-18T14:38:21Z api-gateway INFO req-624-21 request ok latency_ms=25
+2026-11-18T14:38:22Z search-svc INFO req-624-22 request ok latency_ms=31
+2026-11-18T14:38:23Z catalog-svc INFO req-624-23 request ok latency_ms=20
+2026-11-18T14:38:24Z api-gateway INFO req-624-24 request ok latency_ms=40
+2026-11-18T14:38:25Z search-svc INFO req-624-25 request ok latency_ms=19
+2026-11-18T14:38:26Z catalog-svc INFO req-624-26 request ok latency_ms=34
+2026-11-18T14:38:27Z api-gateway INFO req-624-27 request ok latency_ms=39
+2026-11-18T14:38:28Z search-svc INFO req-624-28 request ok latency_ms=36
+2026-11-18T14:38:29Z catalog-svc INFO req-624-29 request ok latency_ms=17
+2026-11-18T14:38:30Z api-gateway INFO req-624-30 request ok latency_ms=33
+2026-11-18T14:38:31Z search-svc INFO req-624-31 request ok latency_ms=22
+2026-11-18T14:38:32Z catalog-svc INFO req-624-32 request ok latency_ms=11
+2026-11-18T14:38:33Z api-gateway INFO req-624-33 request ok latency_ms=38
+2026-11-18T14:38:34Z search-svc INFO req-624-34 request ok latency_ms=26
+2026-11-18T14:38:35Z catalog-svc INFO req-624-35 request ok latency_ms=39
+2026-11-18T14:38:36Z api-gateway INFO req-624-36 request ok latency_ms=39
+2026-11-18T14:38:37Z search-svc INFO req-624-37 request ok latency_ms=30
+2026-11-18T14:38:38Z catalog-svc INFO req-624-38 request ok latency_ms=28
+2026-11-18T14:38:39Z api-gateway INFO req-624-39 request ok latency_ms=31
+2026-11-18T14:38:40Z search-svc INFO req-624-40 request ok latency_ms=36
+2026-11-18T14:38:41Z catalog-svc INFO req-624-41 request ok latency_ms=22
+2026-11-18T14:38:42Z api-gateway INFO req-624-42 request ok latency_ms=19
+2026-11-18T14:38:43Z search-svc INFO req-624-43 request ok latency_ms=11
+2026-11-18T14:38:44Z catalog-svc INFO req-624-44 request ok latency_ms=29
+2026-11-18T14:38:45Z api-gateway INFO req-624-45 request ok latency_ms=40
+2026-11-18T14:38:46Z search-svc INFO req-624-46 request ok latency_ms=30
+2026-11-18T14:38:47Z catalog-svc INFO req-624-47 request ok latency_ms=34
+2026-11-18T14:38:48Z api-gateway INFO req-624-48 request ok latency_ms=17
+2026-11-18T14:38:49Z search-svc INFO req-624-49 request ok latency_ms=38
+2026-11-18T14:38:50Z catalog-svc INFO req-624-50 request ok latency_ms=12
+2026-11-18T14:38:51Z api-gateway INFO req-624-51 request ok latency_ms=17
+2026-11-18T14:38:52Z search-svc INFO req-624-52 request ok latency_ms=38
+2026-11-18T14:38:53Z catalog-svc INFO req-624-53 request ok latency_ms=10
+2026-11-18T14:38:54Z api-gateway INFO req-624-54 request ok latency_ms=15
+2026-11-18T14:38:55Z search-svc INFO req-624-55 request ok latency_ms=36
+2026-11-18T14:38:56Z catalog-svc INFO req-624-56 request ok latency_ms=29
+2026-11-18T14:38:57Z api-gateway INFO req-624-57 request ok latency_ms=35
+2026-11-18T14:38:58Z search-svc INFO req-624-58 request ok latency_ms=20
+2026-11-18T14:38:59Z catalog-svc INFO req-624-59 request ok latency_ms=21
+2026-11-18T14:39:00Z api-gateway INFO req-624-60 request ok latency_ms=40
+2026-11-18T14:39:01Z search-svc INFO req-624-61 request ok latency_ms=23
+2026-11-18T14:39:02Z catalog-svc INFO req-624-62 request ok latency_ms=37
+2026-11-18T14:39:03Z api-gateway INFO req-624-63 request ok latency_ms=28
+2026-11-18T14:39:04Z search-svc INFO req-624-64 request ok latency_ms=34
+2026-11-18T14:39:05Z catalog-svc INFO req-624-65 request ok latency_ms=37
+2026-11-18T14:39:06Z api-gateway INFO req-624-66 request ok latency_ms=40
+2026-11-18T14:39:07Z search-svc INFO req-624-67 request ok latency_ms=40
+2026-11-18T14:39:08Z catalog-svc INFO req-624-68 request ok latency_ms=28
+2026-11-18T14:39:09Z api-gateway INFO req-624-69 request ok latency_ms=11
+2026-11-18T14:39:10Z search-svc INFO req-624-70 request ok latency_ms=23
+2026-11-18T14:39:11Z catalog-svc INFO req-624-71 request ok latency_ms=15
+2026-11-18T14:39:12Z api-gateway INFO req-624-72 request ok latency_ms=16
+2026-11-18T14:39:13Z search-svc INFO req-624-73 request ok latency_ms=15
+2026-11-18T14:39:14Z catalog-svc INFO req-624-74 request ok latency_ms=18
+2026-11-18T14:39:15Z api-gateway INFO req-624-75 request ok latency_ms=35
+2026-11-18T14:39:16Z search-svc INFO req-624-76 request ok latency_ms=24
+2026-11-18T14:39:17Z catalog-svc INFO req-624-77 request ok latency_ms=13
+2026-11-18T14:39:18Z api-gateway INFO req-624-78 request ok latency_ms=18
+2026-11-18T14:39:19Z search-svc INFO req-624-79 request ok latency_ms=23
+2026-11-18T14:39:20Z catalog-svc INFO req-624-80 request ok latency_ms=20
+2026-11-18T14:39:21Z api-gateway INFO req-624-81 request ok latency_ms=21
+2026-11-18T14:39:22Z search-svc INFO req-624-82 request ok latency_ms=19
+2026-11-18T14:39:23Z catalog-svc INFO req-624-83 request ok latency_ms=19
+2026-11-18T14:39:24Z api-gateway INFO req-624-84 request ok latency_ms=24
+2026-11-18T14:39:25Z search-svc INFO req-624-85 request ok latency_ms=15
+2026-11-18T14:39:26Z catalog-svc INFO req-624-86 request ok latency_ms=10
+2026-11-18T14:39:27Z api-gateway INFO req-624-87 request ok latency_ms=32
+2026-11-18T14:39:28Z search-svc INFO req-624-88 request ok latency_ms=35
+2026-11-18T14:39:29Z catalog-svc INFO req-624-89 request ok latency_ms=11
+2026-11-18T14:39:30Z api-gateway INFO req-624-90 request ok latency_ms=38
+2026-11-18T14:39:31Z search-svc INFO req-624-91 request ok latency_ms=12
+2026-11-18T14:39:32Z catalog-svc INFO req-624-92 request ok latency_ms=23
+2026-11-18T14:39:33Z api-gateway INFO req-624-93 request ok latency_ms=40
+2026-11-18T14:39:34Z search-svc INFO req-624-94 request ok latency_ms=38
+2026-11-18T14:39:35Z catalog-svc INFO req-624-95 request ok latency_ms=33
+2026-11-18T14:39:36Z api-gateway INFO req-624-96 request ok latency_ms=27
+2026-11-18T14:39:37Z search-svc INFO req-624-97 request ok latency_ms=25
+2026-11-18T14:39:38Z catalog-svc INFO req-624-98 request ok latency_ms=40
+2026-11-18T14:39:39Z api-gateway INFO req-624-99 request ok latency_ms=10
+2026-11-18T14:39:40Z search-svc INFO req-624-100 request ok latency_ms=38
+2026-11-18T14:39:41Z catalog-svc INFO req-624-101 request ok latency_ms=15
+2026-11-18T14:39:42Z api-gateway INFO req-624-102 request ok latency_ms=25
+2026-11-18T14:39:43Z search-svc INFO req-624-103 request ok latency_ms=20
+2026-11-18T14:39:44Z catalog-svc INFO req-624-104 request ok latency_ms=24
+2026-11-18T14:39:45Z api-gateway INFO req-624-105 request ok latency_ms=36
+2026-11-18T14:39:46Z search-svc INFO req-624-106 request ok latency_ms=40
+2026-11-18T14:39:47Z catalog-svc INFO req-624-107 request ok latency_ms=22
+2026-11-18T14:39:48Z api-gateway INFO req-624-108 request ok latency_ms=20
+2026-11-18T14:39:49Z search-svc INFO req-624-109 request ok latency_ms=20
+2026-11-18T14:39:50Z catalog-svc INFO req-624-110 request ok latency_ms=36
+2026-11-18T14:39:51Z api-gateway INFO req-624-111 request ok latency_ms=38
+2026-11-18T14:39:52Z search-svc INFO req-624-112 request ok latency_ms=34
+2026-11-18T14:39:53Z catalog-svc INFO req-624-113 request ok latency_ms=33
+2026-11-18T14:39:54Z api-gateway INFO req-624-114 request ok latency_ms=40
+2026-11-18T14:39:55Z search-svc INFO req-624-115 request ok latency_ms=16
+2026-11-18T14:39:56Z catalog-svc INFO req-624-116 request ok latency_ms=13
+2026-11-18T14:39:57Z api-gateway INFO req-624-117 request ok latency_ms=13
+2026-11-18T14:39:58Z search-svc INFO req-624-118 request ok latency_ms=27
+2026-11-18T14:39:59Z catalog-svc INFO req-624-119 request ok latency_ms=36
+2026-11-18T14:40:00Z api-gateway INFO req-624-120 request ok latency_ms=31
+2026-11-18T14:40:01Z search-svc INFO req-624-121 request ok latency_ms=32
+2026-11-18T14:40:02Z catalog-svc INFO req-624-122 request ok latency_ms=38
+2026-11-18T14:40:03Z api-gateway INFO req-624-123 request ok latency_ms=18
+2026-11-18T14:40:04Z search-svc INFO req-624-124 request ok latency_ms=37
+2026-11-18T14:40:05Z catalog-svc INFO req-624-125 request ok latency_ms=35
+2026-11-18T14:40:06Z api-gateway INFO req-624-126 request ok latency_ms=34
+2026-11-18T14:40:07Z search-svc INFO req-624-127 request ok latency_ms=27
+2026-11-18T14:40:08Z catalog-svc INFO req-624-128 request ok latency_ms=38
+2026-11-18T14:40:09Z api-gateway INFO req-624-129 request ok latency_ms=22
+2026-11-18T14:40:10Z search-svc INFO req-624-130 request ok latency_ms=34
+2026-11-18T14:40:11Z catalog-svc INFO req-624-131 request ok latency_ms=19
+2026-11-18T14:40:12Z api-gateway INFO req-624-132 request ok latency_ms=12
+2026-11-18T14:40:13Z search-svc INFO req-624-133 request ok latency_ms=11
+2026-11-18T14:40:14Z catalog-svc INFO req-624-134 request ok latency_ms=18
+2026-11-18T14:40:15Z api-gateway INFO req-624-135 request ok latency_ms=29
+2026-11-18T14:40:16Z search-svc INFO req-624-136 request ok latency_ms=27
+2026-11-18T14:40:17Z catalog-svc INFO req-624-137 request ok latency_ms=36
+2026-11-18T14:40:18Z api-gateway INFO req-624-138 request ok latency_ms=15
+2026-11-18T14:40:19Z search-svc INFO req-624-139 request ok latency_ms=13
+2026-11-18T14:40:20Z catalog-svc INFO req-624-140 request ok latency_ms=35
+2026-11-18T14:40:21Z api-gateway INFO req-624-141 request ok latency_ms=28
+2026-11-18T14:40:22Z search-svc INFO req-624-142 request ok latency_ms=25
+2026-11-18T14:40:23Z catalog-svc INFO req-624-143 request ok latency_ms=36
+2026-11-18T14:40:24Z api-gateway INFO req-624-144 request ok latency_ms=16
+2026-11-18T14:40:25Z search-svc INFO req-624-145 request ok latency_ms=35
+2026-11-18T14:40:26Z catalog-svc INFO req-624-146 request ok latency_ms=10
+2026-11-18T14:40:27Z api-gateway INFO req-624-147 request ok latency_ms=22
+2026-11-18T14:40:28Z search-svc INFO req-624-148 request ok latency_ms=17
+2026-11-18T14:40:29Z catalog-svc INFO req-624-149 request ok latency_ms=39
+2026-11-18T14:40:30Z api-gateway INFO req-624-150 request ok latency_ms=28
+2026-11-18T14:40:31Z search-svc INFO req-624-151 request ok latency_ms=24
+2026-11-18T14:40:32Z catalog-svc INFO req-624-152 request ok latency_ms=40
+2026-11-18T14:40:33Z api-gateway INFO req-624-153 request ok latency_ms=13
+2026-11-18T14:40:34Z search-svc INFO req-624-154 request ok latency_ms=18
+2026-11-18T14:40:35Z catalog-svc INFO req-624-155 request ok latency_ms=12
+2026-11-18T14:40:36Z api-gateway INFO req-624-156 request ok latency_ms=34
+2026-11-18T14:40:37Z search-svc INFO req-624-157 request ok latency_ms=19
+2026-11-18T14:40:38Z catalog-svc INFO req-624-158 request ok latency_ms=39
+2026-11-18T14:40:39Z api-gateway INFO req-624-159 request ok latency_ms=14
+2026-11-18T14:40:40Z search-svc INFO req-624-160 request ok latency_ms=23
+2026-11-18T14:40:41Z catalog-svc INFO req-624-161 request ok latency_ms=38
+2026-11-18T14:40:42Z api-gateway INFO req-624-162 request ok latency_ms=32
+2026-11-18T14:40:43Z search-svc INFO req-624-163 request ok latency_ms=39
+2026-11-18T14:40:44Z catalog-svc INFO req-624-164 request ok latency_ms=10
+2026-11-18T14:40:45Z api-gateway INFO req-624-165 request ok latency_ms=11
+2026-11-18T14:40:46Z search-svc INFO req-624-166 request ok latency_ms=35
+2026-11-18T14:40:47Z catalog-svc INFO req-624-167 request ok latency_ms=23
+2026-11-18T14:40:48Z api-gateway INFO req-624-168 request ok latency_ms=17
+2026-11-18T14:40:49Z search-svc INFO req-624-169 request ok latency_ms=11
+2026-11-18T14:40:50Z catalog-svc INFO req-624-170 request ok latency_ms=24
+2026-11-18T14:40:51Z api-gateway INFO req-624-171 request ok latency_ms=21
+2026-11-18T14:40:52Z search-svc INFO req-624-172 request ok latency_ms=14
+2026-11-18T14:40:53Z catalog-svc INFO req-624-173 request ok latency_ms=13
+2026-11-18T14:40:54Z api-gateway INFO req-624-174 request ok latency_ms=31
+2026-11-18T14:40:55Z search-svc INFO req-624-175 request ok latency_ms=33
+2026-11-18T14:40:56Z catalog-svc INFO req-624-176 request ok latency_ms=33
+2026-11-18T14:40:57Z api-gateway INFO req-624-177 request ok latency_ms=38
+2026-11-18T14:40:58Z search-svc INFO req-624-178 request ok latency_ms=38
+2026-11-18T14:40:59Z catalog-svc INFO req-624-179 request ok latency_ms=33
+2026-11-18T14:41:00Z api-gateway INFO req-624-180 request ok latency_ms=27
+2026-11-18T14:41:01Z search-svc INFO req-624-181 request ok latency_ms=40
+2026-11-18T14:41:02Z catalog-svc INFO req-624-182 request ok latency_ms=29
+2026-11-18T14:41:03Z api-gateway INFO req-624-183 request ok latency_ms=24
+2026-11-18T14:41:04Z search-svc INFO req-624-184 request ok latency_ms=36
+2026-11-18T14:41:05Z catalog-svc INFO req-624-185 request ok latency_ms=29
+2026-11-18T14:41:06Z api-gateway INFO req-624-186 request ok latency_ms=23
+2026-11-18T14:41:07Z search-svc INFO req-624-187 request ok latency_ms=38
+2026-11-18T14:41:08Z catalog-svc INFO req-624-188 request ok latency_ms=36
+2026-11-18T14:41:09Z api-gateway INFO req-624-189 request ok latency_ms=24
+2026-11-18T14:41:10Z search-svc INFO req-624-190 request ok latency_ms=10
+2026-11-18T14:41:11Z catalog-svc INFO req-624-191 request ok latency_ms=32
+2026-11-18T14:41:12Z api-gateway INFO req-624-192 request ok latency_ms=35
+2026-11-18T14:41:13Z search-svc INFO req-624-193 request ok latency_ms=39
+2026-11-18T14:41:14Z catalog-svc INFO req-624-194 request ok latency_ms=40
+2026-11-18T14:41:15Z api-gateway INFO req-624-195 request ok latency_ms=14
+2026-11-18T14:41:16Z search-svc INFO req-624-196 request ok latency_ms=11
+2026-11-18T14:41:17Z catalog-svc INFO req-624-197 request ok latency_ms=20
+2026-11-18T14:41:18Z api-gateway INFO req-624-198 request ok latency_ms=33
+2026-11-18T14:41:19Z search-svc INFO req-624-199 request ok latency_ms=25
+2026-11-18T14:41:20Z catalog-svc INFO req-624-200 request ok latency_ms=31
+2026-11-18T14:41:21Z api-gateway INFO req-624-201 request ok latency_ms=16
+2026-11-18T14:41:22Z search-svc INFO req-624-202 request ok latency_ms=24
+2026-11-18T14:41:23Z catalog-svc INFO req-624-203 request ok latency_ms=19
+2026-11-18T14:41:24Z api-gateway INFO req-624-204 request ok latency_ms=30
+2026-11-18T14:41:25Z search-svc INFO req-624-205 request ok latency_ms=35
+2026-11-18T14:41:26Z catalog-svc INFO req-624-206 request ok latency_ms=26
+2026-11-18T14:41:27Z api-gateway INFO req-624-207 request ok latency_ms=38
+2026-11-18T14:41:28Z search-svc INFO req-624-208 request ok latency_ms=40
+2026-11-18T14:41:29Z catalog-svc INFO req-624-209 request ok latency_ms=26
+2026-11-18T14:41:30Z api-gateway INFO req-624-210 request ok latency_ms=11
+2026-11-18T14:41:31Z search-svc INFO req-624-211 request ok latency_ms=12
+2026-11-18T14:41:32Z catalog-svc INFO req-624-212 request ok latency_ms=22
+2026-11-18T14:41:33Z api-gateway INFO req-624-213 request ok latency_ms=17
+2026-11-18T14:41:34Z search-svc INFO req-624-214 request ok latency_ms=39
+2026-11-18T14:41:35Z catalog-svc INFO req-624-215 request ok latency_ms=30
+2026-11-18T14:41:36Z api-gateway INFO req-624-216 request ok latency_ms=15
+2026-11-18T14:41:37Z search-svc INFO req-624-217 request ok latency_ms=30
+2026-11-18T14:41:38Z catalog-svc INFO req-624-218 request ok latency_ms=40
+2026-11-18T14:41:39Z api-gateway INFO req-624-219 request ok latency_ms=14
+2026-11-18T14:41:40Z search-svc INFO req-624-220 request ok latency_ms=18
+2026-11-18T14:41:41Z catalog-svc INFO req-624-221 request ok latency_ms=33
+2026-11-18T14:41:42Z api-gateway INFO req-624-222 request ok latency_ms=14
+2026-11-18T14:41:43Z search-svc INFO req-624-223 request ok latency_ms=15
+2026-11-18T14:41:44Z catalog-svc INFO req-624-224 request ok latency_ms=39
+2026-11-18T14:41:45Z api-gateway INFO req-624-225 request ok latency_ms=25
+2026-11-18T14:41:46Z search-svc INFO req-624-226 request ok latency_ms=15
+2026-11-18T14:41:47Z catalog-svc INFO req-624-227 request ok latency_ms=22
+2026-11-18T14:41:48Z api-gateway INFO req-624-228 request ok latency_ms=13
+2026-11-18T14:41:49Z search-svc INFO req-624-229 request ok latency_ms=32
+2026-11-18T14:41:50Z catalog-svc INFO req-624-230 request ok latency_ms=24
+2026-11-18T14:41:51Z api-gateway INFO req-624-231 request ok latency_ms=28
+2026-11-18T14:41:52Z search-svc INFO req-624-232 request ok latency_ms=15
+2026-11-18T14:41:53Z catalog-svc INFO req-624-233 request ok latency_ms=24
+2026-11-18T14:41:54Z api-gateway INFO req-624-234 request ok latency_ms=15
+2026-11-18T14:41:55Z search-svc INFO req-624-235 request ok latency_ms=22
+2026-11-18T14:41:56Z catalog-svc INFO req-624-236 request ok latency_ms=32
+2026-11-18T14:41:57Z api-gateway INFO req-624-237 request ok latency_ms=19
+2026-11-18T14:41:58Z search-svc INFO req-624-238 request ok latency_ms=19
+2026-11-18T14:41:59Z catalog-svc INFO req-624-239 request ok latency_ms=30
+2026-11-18T14:42:00Z api-gateway INFO req-624-240 request ok latency_ms=15
+2026-11-18T14:42:01Z search-svc INFO req-624-241 request ok latency_ms=40
+2026-11-18T14:42:02Z catalog-svc INFO req-624-242 request ok latency_ms=32
+2026-11-18T14:42:03Z api-gateway INFO req-624-243 request ok latency_ms=33
+2026-11-18T14:42:04Z search-svc INFO req-624-244 request ok latency_ms=36
+2026-11-18T14:42:05Z catalog-svc INFO req-624-245 request ok latency_ms=40
+2026-11-18T14:42:06Z api-gateway INFO req-624-246 request ok latency_ms=37
+2026-11-18T14:42:07Z search-svc INFO req-624-247 request ok latency_ms=15
+2026-11-18T14:42:08Z catalog-svc INFO req-624-248 request ok latency_ms=34
+2026-11-18T14:42:09Z api-gateway INFO req-624-249 request ok latency_ms=35
+2026-11-18T14:42:10Z search-svc INFO req-624-250 request ok latency_ms=38
+2026-11-18T14:42:11Z catalog-svc INFO req-624-251 request ok latency_ms=22
+2026-11-18T14:42:12Z api-gateway INFO req-624-252 request ok latency_ms=39
+2026-11-18T14:42:13Z search-svc INFO req-624-253 request ok latency_ms=11
+2026-11-18T14:42:14Z catalog-svc INFO req-624-254 request ok latency_ms=38
+2026-11-18T14:42:15Z api-gateway INFO req-624-255 request ok latency_ms=33
+2026-11-18T14:42:16Z search-svc INFO req-624-256 request ok latency_ms=10
+2026-11-18T14:42:17Z catalog-svc INFO req-624-257 request ok latency_ms=33
+2026-11-18T14:42:18Z api-gateway INFO req-624-258 request ok latency_ms=21
+2026-11-18T14:42:19Z search-svc INFO req-624-259 request ok latency_ms=38
+2026-11-18T14:42:20Z catalog-svc INFO req-624-260 request ok latency_ms=38
+2026-11-18T14:42:21Z api-gateway INFO req-624-261 request ok latency_ms=21
+2026-11-18T14:42:22Z search-svc INFO req-624-262 request ok latency_ms=39
+2026-11-18T14:42:23Z catalog-svc INFO req-624-263 request ok latency_ms=10
+2026-11-18T14:42:24Z api-gateway INFO req-624-264 request ok latency_ms=36
+2026-11-18T14:42:25Z search-svc INFO req-624-265 request ok latency_ms=40
+2026-11-18T14:42:26Z catalog-svc INFO req-624-266 request ok latency_ms=30
+2026-11-18T14:42:27Z api-gateway INFO req-624-267 request ok latency_ms=23
+2026-11-18T14:42:28Z search-svc INFO req-624-268 request ok latency_ms=25
+2026-11-18T14:42:29Z catalog-svc INFO req-624-269 request ok latency_ms=22
+2026-11-18T14:42:30Z api-gateway INFO req-624-270 request ok latency_ms=13
+2026-11-18T14:42:31Z search-svc INFO req-624-271 request ok latency_ms=33
+2026-11-18T14:42:32Z catalog-svc INFO req-624-272 request ok latency_ms=34
+2026-11-18T14:42:33Z api-gateway INFO req-624-273 request ok latency_ms=27
+2026-11-18T14:42:34Z search-svc INFO req-624-274 request ok latency_ms=22
+2026-11-18T14:42:35Z catalog-svc INFO req-624-275 request ok latency_ms=17
+2026-11-18T14:42:36Z api-gateway INFO req-624-276 request ok latency_ms=39
+2026-11-18T14:42:37Z search-svc INFO req-624-277 request ok latency_ms=11
+2026-11-18T14:42:38Z catalog-svc INFO req-624-278 request ok latency_ms=32
+2026-11-18T14:42:39Z api-gateway INFO req-624-279 request ok latency_ms=20
+2026-11-18T14:42:40Z search-svc INFO req-624-280 request ok latency_ms=26
+2026-11-18T14:42:41Z catalog-svc INFO req-624-281 request ok latency_ms=14
+2026-11-18T14:42:42Z api-gateway INFO req-624-282 request ok latency_ms=32
+2026-11-18T14:42:43Z search-svc INFO req-624-283 request ok latency_ms=28
+2026-11-18T14:42:44Z catalog-svc INFO req-624-284 request ok latency_ms=35
+2026-11-18T14:42:45Z api-gateway INFO req-624-285 request ok latency_ms=21
+2026-11-18T14:42:46Z search-svc INFO req-624-286 request ok latency_ms=29
+2026-11-18T14:42:47Z catalog-svc INFO req-624-287 request ok latency_ms=16
+2026-11-18T14:42:48Z api-gateway INFO req-624-288 request ok latency_ms=33
+2026-11-18T14:42:49Z search-svc INFO req-624-289 request ok latency_ms=13
+2026-11-18T14:42:50Z catalog-svc INFO req-624-290 request ok latency_ms=21
+2026-11-18T14:42:51Z api-gateway INFO req-624-291 request ok latency_ms=19
+2026-11-18T14:42:52Z search-svc INFO req-624-292 request ok latency_ms=28
+2026-11-18T14:42:53Z catalog-svc INFO req-624-293 request ok latency_ms=21
+2026-11-18T14:42:54Z api-gateway INFO req-624-294 request ok latency_ms=27
+2026-11-18T14:42:55Z search-svc INFO req-624-295 request ok latency_ms=40
+2026-11-18T14:42:56Z catalog-svc INFO req-624-296 request ok latency_ms=23
+2026-11-18T14:42:57Z api-gateway INFO req-624-297 request ok latency_ms=31
+2026-11-18T14:42:58Z search-svc INFO req-624-298 request ok latency_ms=39
+2026-11-18T14:42:59Z catalog-svc INFO req-624-299 request ok latency_ms=17
+2026-11-18T14:43:00Z api-gateway INFO req-624-300 request ok latency_ms=16
+2026-11-18T14:43:01Z search-svc INFO req-624-301 request ok latency_ms=34
+2026-11-18T14:43:02Z catalog-svc INFO req-624-302 request ok latency_ms=22
+2026-11-18T14:43:03Z api-gateway INFO req-624-303 request ok latency_ms=34
+2026-11-18T14:43:04Z search-svc INFO req-624-304 request ok latency_ms=10
+2026-11-18T14:43:05Z catalog-svc INFO req-624-305 request ok latency_ms=15
+2026-11-18T14:43:06Z api-gateway INFO req-624-306 request ok latency_ms=36
+2026-11-18T14:43:07Z search-svc INFO req-624-307 request ok latency_ms=22
+2026-11-18T14:43:08Z catalog-svc INFO req-624-308 request ok latency_ms=25
+2026-11-18T14:43:09Z api-gateway INFO req-624-309 request ok latency_ms=17
+2026-11-18T14:43:10Z search-svc INFO req-624-310 request ok latency_ms=30
+2026-11-18T14:43:11Z catalog-svc INFO req-624-311 request ok latency_ms=15
+2026-11-18T14:43:12Z api-gateway INFO req-624-312 request ok latency_ms=14
+2026-11-18T14:43:13Z search-svc INFO req-624-313 request ok latency_ms=30
+2026-11-18T14:43:14Z catalog-svc INFO req-624-314 request ok latency_ms=14
+2026-11-18T14:43:15Z api-gateway INFO req-624-315 request ok latency_ms=35
+2026-11-18T14:43:16Z search-svc INFO req-624-316 request ok latency_ms=13
+2026-11-18T14:43:17Z catalog-svc INFO req-624-317 request ok latency_ms=16
+2026-11-18T14:43:18Z api-gateway INFO req-624-318 request ok latency_ms=32
+2026-11-18T14:43:19Z search-svc INFO req-624-319 request ok latency_ms=37
+2026-11-18T14:43:20Z catalog-svc INFO req-624-320 request ok latency_ms=29
+2026-11-18T14:43:21Z api-gateway INFO req-624-321 request ok latency_ms=25
+2026-11-18T14:43:22Z search-svc INFO req-624-322 request ok latency_ms=40
+2026-11-18T14:43:23Z catalog-svc INFO req-624-323 request ok latency_ms=32
+2026-11-18T14:43:24Z api-gateway INFO req-624-324 request ok latency_ms=12
+2026-11-18T14:43:25Z search-svc INFO req-624-325 request ok latency_ms=32
+2026-11-18T14:43:26Z catalog-svc INFO req-624-326 request ok latency_ms=20
+2026-11-18T14:43:27Z api-gateway INFO req-624-327 request ok latency_ms=13
+2026-11-18T14:43:28Z search-svc INFO req-624-328 request ok latency_ms=22
+2026-11-18T14:43:29Z catalog-svc INFO req-624-329 request ok latency_ms=39
+2026-11-18T14:43:30Z api-gateway INFO req-624-330 request ok latency_ms=25
+2026-11-18T14:43:31Z search-svc INFO req-624-331 request ok latency_ms=18
+2026-11-18T14:43:32Z catalog-svc INFO req-624-332 request ok latency_ms=22
+2026-11-18T14:43:33Z api-gateway INFO req-624-333 request ok latency_ms=25
+2026-11-18T14:43:34Z search-svc INFO req-624-334 request ok latency_ms=37
+2026-11-18T14:43:35Z catalog-svc INFO req-624-335 request ok latency_ms=39
+2026-11-18T14:43:36Z api-gateway INFO req-624-336 request ok latency_ms=23
+2026-11-18T14:43:37Z search-svc INFO req-624-337 request ok latency_ms=22
+2026-11-18T14:43:38Z catalog-svc INFO req-624-338 request ok latency_ms=29
+2026-11-18T14:43:39Z api-gateway INFO req-624-339 request ok latency_ms=36
+2026-11-18T14:43:40Z search-svc INFO req-624-340 request ok latency_ms=21
+2026-11-18T14:43:41Z catalog-svc INFO req-624-341 request ok latency_ms=20
+2026-11-18T14:43:42Z api-gateway INFO req-624-342 request ok latency_ms=38
+2026-11-18T14:43:43Z search-svc INFO req-624-343 request ok latency_ms=20
+2026-11-18T14:43:44Z catalog-svc INFO req-624-344 request ok latency_ms=32
+2026-11-18T14:43:45Z api-gateway INFO req-624-345 request ok latency_ms=37
+2026-11-18T14:43:46Z search-svc INFO req-624-346 request ok latency_ms=29
+2026-11-18T14:43:47Z catalog-svc INFO req-624-347 request ok latency_ms=27
+2026-11-18T14:43:48Z api-gateway INFO req-624-348 request ok latency_ms=17
+2026-11-18T14:43:49Z search-svc INFO req-624-349 request ok latency_ms=31
+2026-11-18T14:43:50Z catalog-svc INFO req-624-350 request ok latency_ms=14
+2026-11-18T14:43:51Z api-gateway INFO req-624-351 request ok latency_ms=33
+2026-11-18T14:43:52Z search-svc INFO req-624-352 request ok latency_ms=16
+2026-11-18T14:43:53Z catalog-svc INFO req-624-353 request ok latency_ms=17
+2026-11-18T14:43:54Z api-gateway INFO req-624-354 request ok latency_ms=19
+2026-11-18T14:43:55Z search-svc INFO req-624-355 request ok latency_ms=36
+2026-11-18T14:43:56Z catalog-svc INFO req-624-356 request ok latency_ms=29
+2026-11-18T14:43:57Z api-gateway INFO req-624-357 request ok latency_ms=30
+2026-11-18T14:43:58Z search-svc INFO req-624-358 request ok latency_ms=30
+2026-11-18T14:43:59Z catalog-svc INFO req-624-359 request ok latency_ms=26
+2026-11-18T14:44:00Z api-gateway INFO req-624-360 request ok latency_ms=16
+2026-11-18T14:44:01Z search-svc INFO req-624-361 request ok latency_ms=22
+2026-11-18T14:44:02Z catalog-svc INFO req-624-362 request ok latency_ms=23
+2026-11-18T14:44:03Z api-gateway INFO req-624-363 request ok latency_ms=39
+2026-11-18T14:44:04Z search-svc INFO req-624-364 request ok latency_ms=34
+2026-11-18T14:44:05Z catalog-svc INFO req-624-365 request ok latency_ms=19
+2026-11-18T14:44:06Z api-gateway INFO req-624-366 request ok latency_ms=36
+2026-11-18T14:44:07Z search-svc INFO req-624-367 request ok latency_ms=21
+2026-11-18T14:44:08Z catalog-svc INFO req-624-368 request ok latency_ms=23
+2026-11-18T14:44:09Z api-gateway INFO req-624-369 request ok latency_ms=25
+2026-11-18T14:44:10Z search-svc INFO req-624-370 request ok latency_ms=30
+2026-11-18T14:44:11Z catalog-svc INFO req-624-371 request ok latency_ms=10
+2026-11-18T14:44:12Z api-gateway INFO req-624-372 request ok latency_ms=36
+2026-11-18T14:44:13Z search-svc INFO req-624-373 request ok latency_ms=21
+2026-11-18T14:44:14Z catalog-svc INFO req-624-374 request ok latency_ms=19
+2026-11-18T14:44:15Z api-gateway INFO req-624-375 request ok latency_ms=29
+2026-11-18T14:44:16Z search-svc INFO req-624-376 request ok latency_ms=40
+2026-11-18T14:44:17Z catalog-svc INFO req-624-377 request ok latency_ms=31
+2026-11-18T14:44:18Z api-gateway INFO req-624-378 request ok latency_ms=36
+2026-11-18T14:44:19Z search-svc INFO req-624-379 request ok latency_ms=18
+2026-11-18T14:44:20Z catalog-svc INFO req-624-380 request ok latency_ms=22
+2026-11-18T14:44:21Z api-gateway INFO req-624-381 request ok latency_ms=22
+2026-11-18T14:44:22Z search-svc INFO req-624-382 request ok latency_ms=20
+2026-11-18T14:44:23Z catalog-svc INFO req-624-383 request ok latency_ms=35
+2026-11-18T14:44:24Z api-gateway INFO req-624-384 request ok latency_ms=30
+2026-11-18T14:44:25Z search-svc INFO req-624-385 request ok latency_ms=15
+2026-11-18T14:44:26Z catalog-svc INFO req-624-386 request ok latency_ms=14
+2026-11-18T14:44:27Z api-gateway INFO req-624-387 request ok latency_ms=31
+2026-11-18T14:44:28Z search-svc INFO req-624-388 request ok latency_ms=18
+2026-11-18T14:44:29Z catalog-svc INFO req-624-389 request ok latency_ms=29
+2026-11-18T14:44:30Z api-gateway INFO req-624-390 request ok latency_ms=23
+2026-11-18T14:44:31Z search-svc INFO req-624-391 request ok latency_ms=35
+2026-11-18T14:44:32Z catalog-svc INFO req-624-392 request ok latency_ms=38
+2026-11-18T14:44:33Z api-gateway INFO req-624-393 request ok latency_ms=15
+2026-11-18T14:44:34Z search-svc INFO req-624-394 request ok latency_ms=19
+2026-11-18T14:44:35Z catalog-svc INFO req-624-395 request ok latency_ms=40
+2026-11-18T14:44:36Z api-gateway INFO req-624-396 request ok latency_ms=34
+2026-11-18T14:44:37Z search-svc INFO req-624-397 request ok latency_ms=17
+2026-11-18T14:44:38Z catalog-svc INFO req-624-398 request ok latency_ms=16
+2026-11-18T14:44:39Z api-gateway INFO req-624-399 request ok latency_ms=35
+2026-11-18T14:44:40Z search-svc INFO req-624-400 request ok latency_ms=18
+2026-11-18T14:44:41Z catalog-svc INFO req-624-401 request ok latency_ms=18
+2026-11-18T14:44:42Z api-gateway INFO req-624-402 request ok latency_ms=10
+2026-11-18T14:44:43Z search-svc INFO req-624-403 request ok latency_ms=12
+2026-11-18T14:44:44Z catalog-svc INFO req-624-404 request ok latency_ms=16
+2026-11-18T14:44:45Z api-gateway INFO req-624-405 request ok latency_ms=15
+2026-11-18T14:44:46Z search-svc INFO req-624-406 request ok latency_ms=35
+2026-11-18T14:44:47Z catalog-svc INFO req-624-407 request ok latency_ms=34
+2026-11-18T14:44:48Z api-gateway INFO req-624-408 request ok latency_ms=16
+2026-11-18T14:44:49Z search-svc INFO req-624-409 request ok latency_ms=26
+2026-11-18T14:44:50Z catalog-svc INFO req-624-410 request ok latency_ms=40
+2026-11-18T14:44:51Z api-gateway INFO req-624-411 request ok latency_ms=31
+2026-11-18T14:44:52Z search-svc INFO req-624-412 request ok latency_ms=19
+2026-11-18T14:44:53Z catalog-svc INFO req-624-413 request ok latency_ms=29
+2026-11-18T14:44:54Z api-gateway INFO req-624-414 request ok latency_ms=35
+2026-11-18T14:44:55Z search-svc INFO req-624-415 request ok latency_ms=19
+2026-11-18T14:44:56Z catalog-svc INFO req-624-416 request ok latency_ms=24
+2026-11-18T14:44:57Z api-gateway INFO req-624-417 request ok latency_ms=27
+2026-11-18T14:44:58Z search-svc INFO req-624-418 request ok latency_ms=36
+2026-11-18T14:44:59Z catalog-svc INFO req-624-419 request ok latency_ms=25
+2026-11-18T14:45:00Z api-gateway INFO req-624-420 request ok latency_ms=34
+2026-11-18T14:45:01Z search-svc INFO req-624-421 request ok latency_ms=33
+2026-11-18T14:45:02Z catalog-svc INFO req-624-422 request ok latency_ms=22
+2026-11-18T14:45:03Z api-gateway INFO req-624-423 request ok latency_ms=26
+2026-11-18T14:45:04Z search-svc INFO req-624-424 request ok latency_ms=39
+2026-11-18T14:45:05Z catalog-svc INFO req-624-425 request ok latency_ms=40
+2026-11-18T14:45:06Z api-gateway INFO req-624-426 request ok latency_ms=40
+2026-11-18T14:45:07Z search-svc INFO req-624-427 request ok latency_ms=17
+2026-11-18T14:45:08Z catalog-svc INFO req-624-428 request ok latency_ms=21
+2026-11-18T14:45:09Z api-gateway INFO req-624-429 request ok latency_ms=31
+2026-11-18T14:45:10Z search-svc INFO req-624-430 request ok latency_ms=32
+2026-11-18T14:45:11Z catalog-svc INFO req-624-431 request ok latency_ms=33
+2026-11-18T14:45:12Z api-gateway INFO req-624-432 request ok latency_ms=14
+2026-11-18T14:45:13Z search-svc INFO req-624-433 request ok latency_ms=16
+2026-11-18T14:45:14Z catalog-svc INFO req-624-434 request ok latency_ms=38
+2026-11-18T14:45:15Z api-gateway INFO req-624-435 request ok latency_ms=10
+2026-11-18T14:45:16Z search-svc INFO req-624-436 request ok latency_ms=25
+2026-11-18T14:45:17Z catalog-svc INFO req-624-437 request ok latency_ms=18
+2026-11-18T14:45:18Z api-gateway INFO req-624-438 request ok latency_ms=34
+2026-11-18T14:45:19Z search-svc INFO req-624-439 request ok latency_ms=28
+2026-11-18T14:45:20Z catalog-svc INFO req-624-440 request ok latency_ms=29
+2026-11-18T14:45:21Z api-gateway INFO req-624-441 request ok latency_ms=40
+2026-11-18T14:45:22Z search-svc INFO req-624-442 request ok latency_ms=35
+2026-11-18T14:45:23Z catalog-svc INFO req-624-443 request ok latency_ms=40
+2026-11-18T14:45:24Z api-gateway INFO req-624-444 request ok latency_ms=25
+2026-11-18T14:45:25Z search-svc INFO req-624-445 request ok latency_ms=20
+2026-11-18T14:45:26Z catalog-svc INFO req-624-446 request ok latency_ms=18
+2026-11-18T14:45:27Z api-gateway INFO req-624-447 request ok latency_ms=12
+2026-11-18T14:45:28Z search-svc INFO req-624-448 request ok latency_ms=14
+2026-11-18T14:45:29Z catalog-svc INFO req-624-449 request ok latency_ms=23
+2026-11-18T14:45:30Z api-gateway INFO req-624-450 request ok latency_ms=14
+2026-11-18T14:45:31Z search-svc INFO req-624-451 request ok latency_ms=22
+2026-11-18T14:45:32Z catalog-svc INFO req-624-452 request ok latency_ms=40
+2026-11-18T14:45:33Z api-gateway INFO req-624-453 request ok latency_ms=20
+2026-11-18T14:45:34Z search-svc INFO req-624-454 request ok latency_ms=35
+2026-11-18T14:45:35Z catalog-svc INFO req-624-455 request ok latency_ms=38
+2026-11-18T14:45:36Z api-gateway INFO req-624-456 request ok latency_ms=33
+2026-11-18T14:45:37Z search-svc INFO req-624-457 request ok latency_ms=18
+2026-11-18T14:45:38Z catalog-svc INFO req-624-458 request ok latency_ms=19
+2026-11-18T14:45:39Z api-gateway INFO req-624-459 request ok latency_ms=16
+2026-11-18T14:45:40Z search-svc INFO req-624-460 request ok latency_ms=30
+2026-11-18T14:45:41Z catalog-svc INFO req-624-461 request ok latency_ms=16
+2026-11-18T14:45:42Z api-gateway INFO req-624-462 request ok latency_ms=20
+2026-11-18T14:45:43Z search-svc INFO req-624-463 request ok latency_ms=19
+2026-11-18T14:45:44Z catalog-svc INFO req-624-464 request ok latency_ms=38
+2026-11-18T14:45:45Z api-gateway INFO req-624-465 request ok latency_ms=26
+2026-11-18T14:45:46Z search-svc INFO req-624-466 request ok latency_ms=24
+2026-11-18T14:45:47Z catalog-svc INFO req-624-467 request ok latency_ms=25
+2026-11-18T14:45:48Z api-gateway INFO req-624-468 request ok latency_ms=34
+2026-11-18T14:45:49Z search-svc INFO req-624-469 request ok latency_ms=35
+2026-11-18T14:45:50Z catalog-svc INFO req-624-470 request ok latency_ms=29
+2026-11-18T14:45:51Z api-gateway INFO req-624-471 request ok latency_ms=24
+2026-11-18T14:45:52Z search-svc INFO req-624-472 request ok latency_ms=17
+2026-11-18T14:45:53Z catalog-svc INFO req-624-473 request ok latency_ms=12
+2026-11-18T14:45:54Z api-gateway INFO req-624-474 request ok latency_ms=32
+2026-11-18T14:45:55Z search-svc INFO req-624-475 request ok latency_ms=17
+2026-11-18T14:45:56Z catalog-svc INFO req-624-476 request ok latency_ms=10
+2026-11-18T14:45:57Z api-gateway INFO req-624-477 request ok latency_ms=14
+2026-11-18T14:45:58Z search-svc INFO req-624-478 request ok latency_ms=16
+2026-11-18T14:45:59Z catalog-svc INFO req-624-479 request ok latency_ms=39
+2026-11-18T14:46:00Z search-svc WARN config heap_ratio=0.95 triggered continuous Full GC pause_ms=4200
+2026-11-18T14:46:02Z search-svc ERROR req-624-482 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:03Z catalog-svc ERROR req-624-483 catalog-svc fallback search query timed out
+2026-11-18T14:46:04Z search-svc ERROR req-624-484 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:05Z api-gateway ERROR req-624-485 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:06Z catalog-svc ERROR req-624-486 catalog-svc fallback search query timed out
+2026-11-18T14:46:06Z search-svc ERROR req-624-486 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:08Z search-svc ERROR req-624-488 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:09Z catalog-svc ERROR req-624-489 catalog-svc fallback search query timed out
+2026-11-18T14:46:10Z api-gateway ERROR req-624-490 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:10Z search-svc ERROR req-624-490 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:12Z catalog-svc ERROR req-624-492 catalog-svc fallback search query timed out
+2026-11-18T14:46:12Z search-svc ERROR req-624-492 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:14Z search-svc ERROR req-624-494 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:15Z api-gateway ERROR req-624-495 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:15Z catalog-svc ERROR req-624-495 catalog-svc fallback search query timed out
+2026-11-18T14:46:16Z search-svc ERROR req-624-496 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:18Z catalog-svc ERROR req-624-498 catalog-svc fallback search query timed out
+2026-11-18T14:46:18Z search-svc ERROR req-624-498 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:20Z api-gateway ERROR req-624-500 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:20Z search-svc ERROR req-624-500 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:21Z catalog-svc ERROR req-624-501 catalog-svc fallback search query timed out
+2026-11-18T14:46:22Z search-svc ERROR req-624-502 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:24Z catalog-svc ERROR req-624-504 catalog-svc fallback search query timed out
+2026-11-18T14:46:24Z search-svc ERROR req-624-504 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:25Z api-gateway ERROR req-624-505 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:26Z search-svc ERROR req-624-506 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:27Z catalog-svc ERROR req-624-507 catalog-svc fallback search query timed out
+2026-11-18T14:46:28Z search-svc ERROR req-624-508 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:30Z api-gateway ERROR req-624-510 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:30Z catalog-svc ERROR req-624-510 catalog-svc fallback search query timed out
+2026-11-18T14:46:30Z search-svc ERROR req-624-510 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:32Z search-svc ERROR req-624-512 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:33Z catalog-svc ERROR req-624-513 catalog-svc fallback search query timed out
+2026-11-18T14:46:34Z search-svc ERROR req-624-514 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:35Z api-gateway ERROR req-624-515 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:36Z catalog-svc ERROR req-624-516 catalog-svc fallback search query timed out
+2026-11-18T14:46:36Z search-svc ERROR req-624-516 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:38Z search-svc ERROR req-624-518 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:39Z catalog-svc ERROR req-624-519 catalog-svc fallback search query timed out
+2026-11-18T14:46:40Z api-gateway ERROR req-624-520 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:40Z search-svc ERROR req-624-520 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:42Z catalog-svc ERROR req-624-522 catalog-svc fallback search query timed out
+2026-11-18T14:46:42Z search-svc ERROR req-624-522 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:44Z search-svc ERROR req-624-524 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:45Z api-gateway ERROR req-624-525 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:45Z catalog-svc ERROR req-624-525 catalog-svc fallback search query timed out
+2026-11-18T14:46:46Z search-svc ERROR req-624-526 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:48Z catalog-svc ERROR req-624-528 catalog-svc fallback search query timed out
+2026-11-18T14:46:48Z search-svc ERROR req-624-528 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:50Z api-gateway ERROR req-624-530 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:50Z search-svc ERROR req-624-530 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:51Z catalog-svc ERROR req-624-531 catalog-svc fallback search query timed out
+2026-11-18T14:46:52Z search-svc ERROR req-624-532 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:54Z catalog-svc ERROR req-624-534 catalog-svc fallback search query timed out
+2026-11-18T14:46:54Z search-svc ERROR req-624-534 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:55Z api-gateway ERROR req-624-535 HTTP 503 upstream=catalog-svc
+2026-11-18T14:46:56Z search-svc ERROR req-624-536 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:46:57Z catalog-svc ERROR req-624-537 catalog-svc fallback search query timed out
+2026-11-18T14:46:58Z search-svc ERROR req-624-538 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:00Z api-gateway ERROR req-624-540 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:00Z catalog-svc ERROR req-624-540 catalog-svc fallback search query timed out
+2026-11-18T14:47:00Z search-svc ERROR req-624-540 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:02Z search-svc ERROR req-624-542 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:03Z catalog-svc ERROR req-624-543 catalog-svc fallback search query timed out
+2026-11-18T14:47:04Z search-svc ERROR req-624-544 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:05Z api-gateway ERROR req-624-545 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:06Z catalog-svc ERROR req-624-546 catalog-svc fallback search query timed out
+2026-11-18T14:47:06Z search-svc ERROR req-624-546 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:08Z search-svc ERROR req-624-548 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:09Z catalog-svc ERROR req-624-549 catalog-svc fallback search query timed out
+2026-11-18T14:47:10Z api-gateway ERROR req-624-550 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:10Z search-svc ERROR req-624-550 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:12Z catalog-svc ERROR req-624-552 catalog-svc fallback search query timed out
+2026-11-18T14:47:12Z search-svc ERROR req-624-552 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:14Z search-svc ERROR req-624-554 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:15Z api-gateway ERROR req-624-555 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:15Z catalog-svc ERROR req-624-555 catalog-svc fallback search query timed out
+2026-11-18T14:47:16Z search-svc ERROR req-624-556 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:18Z catalog-svc ERROR req-624-558 catalog-svc fallback search query timed out
+2026-11-18T14:47:18Z search-svc ERROR req-624-558 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:20Z api-gateway ERROR req-624-560 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:20Z search-svc ERROR req-624-560 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:21Z catalog-svc ERROR req-624-561 catalog-svc fallback search query timed out
+2026-11-18T14:47:22Z search-svc ERROR req-624-562 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:24Z catalog-svc ERROR req-624-564 catalog-svc fallback search query timed out
+2026-11-18T14:47:24Z search-svc ERROR req-624-564 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:25Z api-gateway ERROR req-624-565 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:26Z search-svc ERROR req-624-566 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:27Z catalog-svc ERROR req-624-567 catalog-svc fallback search query timed out
+2026-11-18T14:47:28Z search-svc ERROR req-624-568 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:30Z api-gateway ERROR req-624-570 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:30Z catalog-svc ERROR req-624-570 catalog-svc fallback search query timed out
+2026-11-18T14:47:30Z search-svc ERROR req-624-570 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:32Z search-svc ERROR req-624-572 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:33Z catalog-svc ERROR req-624-573 catalog-svc fallback search query timed out
+2026-11-18T14:47:34Z search-svc ERROR req-624-574 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:35Z api-gateway ERROR req-624-575 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:36Z catalog-svc ERROR req-624-576 catalog-svc fallback search query timed out
+2026-11-18T14:47:36Z search-svc ERROR req-624-576 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:38Z search-svc ERROR req-624-578 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:39Z catalog-svc ERROR req-624-579 catalog-svc fallback search query timed out
+2026-11-18T14:47:40Z api-gateway ERROR req-624-580 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:40Z search-svc ERROR req-624-580 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:42Z catalog-svc ERROR req-624-582 catalog-svc fallback search query timed out
+2026-11-18T14:47:42Z search-svc ERROR req-624-582 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:44Z search-svc ERROR req-624-584 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:45Z api-gateway ERROR req-624-585 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:45Z catalog-svc ERROR req-624-585 catalog-svc fallback search query timed out
+2026-11-18T14:47:46Z search-svc ERROR req-624-586 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:48Z catalog-svc ERROR req-624-588 catalog-svc fallback search query timed out
+2026-11-18T14:47:48Z search-svc ERROR req-624-588 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:50Z api-gateway ERROR req-624-590 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:50Z search-svc ERROR req-624-590 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:51Z catalog-svc ERROR req-624-591 catalog-svc fallback search query timed out
+2026-11-18T14:47:52Z search-svc ERROR req-624-592 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:54Z catalog-svc ERROR req-624-594 catalog-svc fallback search query timed out
+2026-11-18T14:47:54Z search-svc ERROR req-624-594 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:55Z api-gateway ERROR req-624-595 HTTP 503 upstream=catalog-svc
+2026-11-18T14:47:56Z search-svc ERROR req-624-596 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:47:57Z catalog-svc ERROR req-624-597 catalog-svc fallback search query timed out
+2026-11-18T14:47:58Z search-svc ERROR req-624-598 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:00Z api-gateway ERROR req-624-600 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:00Z catalog-svc ERROR req-624-600 catalog-svc fallback search query timed out
+2026-11-18T14:48:00Z search-svc ERROR req-624-600 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:02Z search-svc ERROR req-624-602 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:03Z catalog-svc ERROR req-624-603 catalog-svc fallback search query timed out
+2026-11-18T14:48:04Z search-svc ERROR req-624-604 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:05Z api-gateway ERROR req-624-605 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:06Z catalog-svc ERROR req-624-606 catalog-svc fallback search query timed out
+2026-11-18T14:48:06Z search-svc ERROR req-624-606 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:08Z search-svc ERROR req-624-608 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:09Z catalog-svc ERROR req-624-609 catalog-svc fallback search query timed out
+2026-11-18T14:48:10Z api-gateway ERROR req-624-610 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:10Z search-svc ERROR req-624-610 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:12Z catalog-svc ERROR req-624-612 catalog-svc fallback search query timed out
+2026-11-18T14:48:12Z search-svc ERROR req-624-612 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:14Z search-svc ERROR req-624-614 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:15Z api-gateway ERROR req-624-615 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:15Z catalog-svc ERROR req-624-615 catalog-svc fallback search query timed out
+2026-11-18T14:48:16Z search-svc ERROR req-624-616 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:18Z catalog-svc ERROR req-624-618 catalog-svc fallback search query timed out
+2026-11-18T14:48:18Z search-svc ERROR req-624-618 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:20Z api-gateway ERROR req-624-620 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:20Z search-svc ERROR req-624-620 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:21Z catalog-svc ERROR req-624-621 catalog-svc fallback search query timed out
+2026-11-18T14:48:22Z search-svc ERROR req-624-622 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:24Z catalog-svc ERROR req-624-624 catalog-svc fallback search query timed out
+2026-11-18T14:48:24Z search-svc ERROR req-624-624 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:25Z api-gateway ERROR req-624-625 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:26Z search-svc ERROR req-624-626 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:27Z catalog-svc ERROR req-624-627 catalog-svc fallback search query timed out
+2026-11-18T14:48:28Z search-svc ERROR req-624-628 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:30Z api-gateway ERROR req-624-630 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:30Z catalog-svc ERROR req-624-630 catalog-svc fallback search query timed out
+2026-11-18T14:48:30Z search-svc ERROR req-624-630 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:32Z search-svc ERROR req-624-632 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:33Z catalog-svc ERROR req-624-633 catalog-svc fallback search query timed out
+2026-11-18T14:48:34Z search-svc ERROR req-624-634 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:35Z api-gateway ERROR req-624-635 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:36Z catalog-svc ERROR req-624-636 catalog-svc fallback search query timed out
+2026-11-18T14:48:36Z search-svc ERROR req-624-636 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:38Z search-svc ERROR req-624-638 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:39Z catalog-svc ERROR req-624-639 catalog-svc fallback search query timed out
+2026-11-18T14:48:40Z api-gateway ERROR req-624-640 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:40Z search-svc ERROR req-624-640 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:42Z catalog-svc ERROR req-624-642 catalog-svc fallback search query timed out
+2026-11-18T14:48:42Z search-svc ERROR req-624-642 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:44Z search-svc ERROR req-624-644 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:45Z api-gateway ERROR req-624-645 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:45Z catalog-svc ERROR req-624-645 catalog-svc fallback search query timed out
+2026-11-18T14:48:46Z search-svc ERROR req-624-646 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:48Z catalog-svc ERROR req-624-648 catalog-svc fallback search query timed out
+2026-11-18T14:48:48Z search-svc ERROR req-624-648 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:50Z api-gateway ERROR req-624-650 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:50Z search-svc ERROR req-624-650 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:51Z catalog-svc ERROR req-624-651 catalog-svc fallback search query timed out
+2026-11-18T14:48:52Z search-svc ERROR req-624-652 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:54Z catalog-svc ERROR req-624-654 catalog-svc fallback search query timed out
+2026-11-18T14:48:54Z search-svc ERROR req-624-654 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:55Z api-gateway ERROR req-624-655 HTTP 503 upstream=catalog-svc
+2026-11-18T14:48:56Z search-svc ERROR req-624-656 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:48:57Z catalog-svc ERROR req-624-657 catalog-svc fallback search query timed out
+2026-11-18T14:48:58Z search-svc ERROR req-624-658 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:00Z api-gateway ERROR req-624-660 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:00Z catalog-svc ERROR req-624-660 catalog-svc fallback search query timed out
+2026-11-18T14:49:00Z search-svc ERROR req-624-660 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:02Z search-svc ERROR req-624-662 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:03Z catalog-svc ERROR req-624-663 catalog-svc fallback search query timed out
+2026-11-18T14:49:04Z search-svc ERROR req-624-664 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:05Z api-gateway ERROR req-624-665 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:06Z catalog-svc ERROR req-624-666 catalog-svc fallback search query timed out
+2026-11-18T14:49:06Z search-svc ERROR req-624-666 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:08Z search-svc ERROR req-624-668 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:09Z catalog-svc ERROR req-624-669 catalog-svc fallback search query timed out
+2026-11-18T14:49:10Z api-gateway ERROR req-624-670 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:10Z search-svc ERROR req-624-670 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:12Z catalog-svc ERROR req-624-672 catalog-svc fallback search query timed out
+2026-11-18T14:49:12Z search-svc ERROR req-624-672 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:14Z search-svc ERROR req-624-674 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:15Z api-gateway ERROR req-624-675 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:15Z catalog-svc ERROR req-624-675 catalog-svc fallback search query timed out
+2026-11-18T14:49:16Z search-svc ERROR req-624-676 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:18Z catalog-svc ERROR req-624-678 catalog-svc fallback search query timed out
+2026-11-18T14:49:18Z search-svc ERROR req-624-678 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:20Z api-gateway ERROR req-624-680 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:20Z search-svc ERROR req-624-680 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:21Z catalog-svc ERROR req-624-681 catalog-svc fallback search query timed out
+2026-11-18T14:49:22Z search-svc ERROR req-624-682 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:24Z catalog-svc ERROR req-624-684 catalog-svc fallback search query timed out
+2026-11-18T14:49:24Z search-svc ERROR req-624-684 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:25Z api-gateway ERROR req-624-685 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:26Z search-svc ERROR req-624-686 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:27Z catalog-svc ERROR req-624-687 catalog-svc fallback search query timed out
+2026-11-18T14:49:28Z search-svc ERROR req-624-688 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:30Z api-gateway ERROR req-624-690 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:30Z catalog-svc ERROR req-624-690 catalog-svc fallback search query timed out
+2026-11-18T14:49:30Z search-svc ERROR req-624-690 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:32Z search-svc ERROR req-624-692 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:33Z catalog-svc ERROR req-624-693 catalog-svc fallback search query timed out
+2026-11-18T14:49:34Z search-svc ERROR req-624-694 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:35Z api-gateway ERROR req-624-695 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:36Z catalog-svc ERROR req-624-696 catalog-svc fallback search query timed out
+2026-11-18T14:49:36Z search-svc ERROR req-624-696 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:38Z search-svc ERROR req-624-698 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:39Z catalog-svc ERROR req-624-699 catalog-svc fallback search query timed out
+2026-11-18T14:49:40Z api-gateway ERROR req-624-700 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:40Z search-svc ERROR req-624-700 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:42Z catalog-svc ERROR req-624-702 catalog-svc fallback search query timed out
+2026-11-18T14:49:42Z search-svc ERROR req-624-702 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:44Z search-svc ERROR req-624-704 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:45Z api-gateway ERROR req-624-705 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:45Z catalog-svc ERROR req-624-705 catalog-svc fallback search query timed out
+2026-11-18T14:49:46Z search-svc ERROR req-624-706 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:48Z catalog-svc ERROR req-624-708 catalog-svc fallback search query timed out
+2026-11-18T14:49:48Z search-svc ERROR req-624-708 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:50Z api-gateway ERROR req-624-710 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:50Z search-svc ERROR req-624-710 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:51Z catalog-svc ERROR req-624-711 catalog-svc fallback search query timed out
+2026-11-18T14:49:52Z search-svc ERROR req-624-712 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:54Z catalog-svc ERROR req-624-714 catalog-svc fallback search query timed out
+2026-11-18T14:49:54Z search-svc ERROR req-624-714 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:55Z api-gateway ERROR req-624-715 HTTP 503 upstream=catalog-svc
+2026-11-18T14:49:56Z search-svc ERROR req-624-716 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:49:57Z catalog-svc ERROR req-624-717 catalog-svc fallback search query timed out
+2026-11-18T14:49:58Z search-svc ERROR req-624-718 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:00Z api-gateway ERROR req-624-720 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:00Z catalog-svc ERROR req-624-720 catalog-svc fallback search query timed out
+2026-11-18T14:50:00Z search-svc ERROR req-624-720 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:02Z search-svc ERROR req-624-722 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:03Z catalog-svc ERROR req-624-723 catalog-svc fallback search query timed out
+2026-11-18T14:50:04Z search-svc ERROR req-624-724 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:05Z api-gateway ERROR req-624-725 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:06Z catalog-svc ERROR req-624-726 catalog-svc fallback search query timed out
+2026-11-18T14:50:06Z search-svc ERROR req-624-726 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:08Z search-svc ERROR req-624-728 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:09Z catalog-svc ERROR req-624-729 catalog-svc fallback search query timed out
+2026-11-18T14:50:10Z api-gateway ERROR req-624-730 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:10Z search-svc ERROR req-624-730 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:12Z catalog-svc ERROR req-624-732 catalog-svc fallback search query timed out
+2026-11-18T14:50:12Z search-svc ERROR req-624-732 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:14Z search-svc ERROR req-624-734 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:15Z api-gateway ERROR req-624-735 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:15Z catalog-svc ERROR req-624-735 catalog-svc fallback search query timed out
+2026-11-18T14:50:16Z search-svc ERROR req-624-736 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:18Z catalog-svc ERROR req-624-738 catalog-svc fallback search query timed out
+2026-11-18T14:50:18Z search-svc ERROR req-624-738 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:20Z api-gateway ERROR req-624-740 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:20Z search-svc ERROR req-624-740 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:21Z catalog-svc ERROR req-624-741 catalog-svc fallback search query timed out
+2026-11-18T14:50:22Z search-svc ERROR req-624-742 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:24Z catalog-svc ERROR req-624-744 catalog-svc fallback search query timed out
+2026-11-18T14:50:24Z search-svc ERROR req-624-744 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:25Z api-gateway ERROR req-624-745 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:26Z search-svc ERROR req-624-746 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:27Z catalog-svc ERROR req-624-747 catalog-svc fallback search query timed out
+2026-11-18T14:50:28Z search-svc ERROR req-624-748 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:30Z api-gateway ERROR req-624-750 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:30Z catalog-svc ERROR req-624-750 catalog-svc fallback search query timed out
+2026-11-18T14:50:30Z search-svc ERROR req-624-750 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:32Z search-svc ERROR req-624-752 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:33Z catalog-svc ERROR req-624-753 catalog-svc fallback search query timed out
+2026-11-18T14:50:34Z search-svc ERROR req-624-754 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:35Z api-gateway ERROR req-624-755 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:36Z catalog-svc ERROR req-624-756 catalog-svc fallback search query timed out
+2026-11-18T14:50:36Z search-svc ERROR req-624-756 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:38Z search-svc ERROR req-624-758 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:39Z catalog-svc ERROR req-624-759 catalog-svc fallback search query timed out
+2026-11-18T14:50:40Z api-gateway ERROR req-624-760 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:40Z search-svc ERROR req-624-760 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:42Z catalog-svc ERROR req-624-762 catalog-svc fallback search query timed out
+2026-11-18T14:50:42Z search-svc ERROR req-624-762 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:44Z search-svc ERROR req-624-764 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:45Z api-gateway ERROR req-624-765 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:45Z catalog-svc ERROR req-624-765 catalog-svc fallback search query timed out
+2026-11-18T14:50:46Z search-svc ERROR req-624-766 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:48Z catalog-svc ERROR req-624-768 catalog-svc fallback search query timed out
+2026-11-18T14:50:48Z search-svc ERROR req-624-768 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:50Z api-gateway ERROR req-624-770 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:50Z search-svc ERROR req-624-770 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:51Z catalog-svc ERROR req-624-771 catalog-svc fallback search query timed out
+2026-11-18T14:50:52Z search-svc ERROR req-624-772 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:54Z catalog-svc ERROR req-624-774 catalog-svc fallback search query timed out
+2026-11-18T14:50:54Z search-svc ERROR req-624-774 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:55Z api-gateway ERROR req-624-775 HTTP 503 upstream=catalog-svc
+2026-11-18T14:50:56Z search-svc ERROR req-624-776 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:50:57Z catalog-svc ERROR req-624-777 catalog-svc fallback search query timed out
+2026-11-18T14:50:58Z search-svc ERROR req-624-778 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:00Z api-gateway ERROR req-624-780 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:00Z catalog-svc ERROR req-624-780 catalog-svc fallback search query timed out
+2026-11-18T14:51:00Z search-svc ERROR req-624-780 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:02Z search-svc ERROR req-624-782 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:03Z catalog-svc ERROR req-624-783 catalog-svc fallback search query timed out
+2026-11-18T14:51:04Z search-svc ERROR req-624-784 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:05Z api-gateway ERROR req-624-785 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:06Z catalog-svc ERROR req-624-786 catalog-svc fallback search query timed out
+2026-11-18T14:51:06Z search-svc ERROR req-624-786 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:08Z search-svc ERROR req-624-788 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:09Z catalog-svc ERROR req-624-789 catalog-svc fallback search query timed out
+2026-11-18T14:51:10Z api-gateway ERROR req-624-790 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:10Z search-svc ERROR req-624-790 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:12Z catalog-svc ERROR req-624-792 catalog-svc fallback search query timed out
+2026-11-18T14:51:12Z search-svc ERROR req-624-792 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:14Z search-svc ERROR req-624-794 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:15Z api-gateway ERROR req-624-795 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:15Z catalog-svc ERROR req-624-795 catalog-svc fallback search query timed out
+2026-11-18T14:51:16Z search-svc ERROR req-624-796 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:18Z catalog-svc ERROR req-624-798 catalog-svc fallback search query timed out
+2026-11-18T14:51:18Z search-svc ERROR req-624-798 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:20Z api-gateway ERROR req-624-800 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:20Z search-svc ERROR req-624-800 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:21Z catalog-svc ERROR req-624-801 catalog-svc fallback search query timed out
+2026-11-18T14:51:22Z search-svc ERROR req-624-802 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:24Z catalog-svc ERROR req-624-804 catalog-svc fallback search query timed out
+2026-11-18T14:51:24Z search-svc ERROR req-624-804 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:25Z api-gateway ERROR req-624-805 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:26Z search-svc ERROR req-624-806 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:27Z catalog-svc ERROR req-624-807 catalog-svc fallback search query timed out
+2026-11-18T14:51:28Z search-svc ERROR req-624-808 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:30Z api-gateway ERROR req-624-810 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:30Z catalog-svc ERROR req-624-810 catalog-svc fallback search query timed out
+2026-11-18T14:51:30Z search-svc ERROR req-624-810 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:32Z search-svc ERROR req-624-812 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:33Z catalog-svc ERROR req-624-813 catalog-svc fallback search query timed out
+2026-11-18T14:51:34Z search-svc ERROR req-624-814 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:35Z api-gateway ERROR req-624-815 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:36Z catalog-svc ERROR req-624-816 catalog-svc fallback search query timed out
+2026-11-18T14:51:36Z search-svc ERROR req-624-816 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:38Z search-svc ERROR req-624-818 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:39Z catalog-svc ERROR req-624-819 catalog-svc fallback search query timed out
+2026-11-18T14:51:40Z api-gateway ERROR req-624-820 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:40Z search-svc ERROR req-624-820 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:42Z catalog-svc ERROR req-624-822 catalog-svc fallback search query timed out
+2026-11-18T14:51:42Z search-svc ERROR req-624-822 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:44Z search-svc ERROR req-624-824 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:45Z api-gateway ERROR req-624-825 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:45Z catalog-svc ERROR req-624-825 catalog-svc fallback search query timed out
+2026-11-18T14:51:46Z search-svc ERROR req-624-826 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:48Z catalog-svc ERROR req-624-828 catalog-svc fallback search query timed out
+2026-11-18T14:51:48Z search-svc ERROR req-624-828 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:50Z api-gateway ERROR req-624-830 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:50Z search-svc ERROR req-624-830 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:51Z catalog-svc ERROR req-624-831 catalog-svc fallback search query timed out
+2026-11-18T14:51:52Z search-svc ERROR req-624-832 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:54Z catalog-svc ERROR req-624-834 catalog-svc fallback search query timed out
+2026-11-18T14:51:54Z search-svc ERROR req-624-834 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:55Z api-gateway ERROR req-624-835 HTTP 503 upstream=catalog-svc
+2026-11-18T14:51:56Z search-svc ERROR req-624-836 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:51:57Z catalog-svc ERROR req-624-837 catalog-svc fallback search query timed out
+2026-11-18T14:51:58Z search-svc ERROR req-624-838 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:00Z api-gateway ERROR req-624-840 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:00Z catalog-svc ERROR req-624-840 catalog-svc fallback search query timed out
+2026-11-18T14:52:00Z search-svc ERROR req-624-840 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:02Z search-svc ERROR req-624-842 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:03Z catalog-svc ERROR req-624-843 catalog-svc fallback search query timed out
+2026-11-18T14:52:04Z search-svc ERROR req-624-844 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:05Z api-gateway ERROR req-624-845 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:06Z catalog-svc ERROR req-624-846 catalog-svc fallback search query timed out
+2026-11-18T14:52:06Z search-svc ERROR req-624-846 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:08Z search-svc ERROR req-624-848 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:09Z catalog-svc ERROR req-624-849 catalog-svc fallback search query timed out
+2026-11-18T14:52:10Z api-gateway ERROR req-624-850 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:10Z search-svc ERROR req-624-850 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:12Z catalog-svc ERROR req-624-852 catalog-svc fallback search query timed out
+2026-11-18T14:52:12Z search-svc ERROR req-624-852 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:14Z search-svc ERROR req-624-854 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:15Z api-gateway ERROR req-624-855 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:15Z catalog-svc ERROR req-624-855 catalog-svc fallback search query timed out
+2026-11-18T14:52:16Z search-svc ERROR req-624-856 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:18Z catalog-svc ERROR req-624-858 catalog-svc fallback search query timed out
+2026-11-18T14:52:18Z search-svc ERROR req-624-858 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:20Z api-gateway ERROR req-624-860 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:20Z search-svc ERROR req-624-860 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:21Z catalog-svc ERROR req-624-861 catalog-svc fallback search query timed out
+2026-11-18T14:52:22Z search-svc ERROR req-624-862 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:24Z catalog-svc ERROR req-624-864 catalog-svc fallback search query timed out
+2026-11-18T14:52:24Z search-svc ERROR req-624-864 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:25Z api-gateway ERROR req-624-865 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:26Z search-svc ERROR req-624-866 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:27Z catalog-svc ERROR req-624-867 catalog-svc fallback search query timed out
+2026-11-18T14:52:28Z search-svc ERROR req-624-868 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:30Z api-gateway ERROR req-624-870 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:30Z catalog-svc ERROR req-624-870 catalog-svc fallback search query timed out
+2026-11-18T14:52:30Z search-svc ERROR req-624-870 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:32Z search-svc ERROR req-624-872 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:33Z catalog-svc ERROR req-624-873 catalog-svc fallback search query timed out
+2026-11-18T14:52:34Z search-svc ERROR req-624-874 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:35Z api-gateway ERROR req-624-875 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:36Z catalog-svc ERROR req-624-876 catalog-svc fallback search query timed out
+2026-11-18T14:52:36Z search-svc ERROR req-624-876 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:38Z search-svc ERROR req-624-878 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:39Z catalog-svc ERROR req-624-879 catalog-svc fallback search query timed out
+2026-11-18T14:52:40Z api-gateway ERROR req-624-880 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:40Z search-svc ERROR req-624-880 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:42Z catalog-svc ERROR req-624-882 catalog-svc fallback search query timed out
+2026-11-18T14:52:42Z search-svc ERROR req-624-882 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:44Z search-svc ERROR req-624-884 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:45Z api-gateway ERROR req-624-885 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:45Z catalog-svc ERROR req-624-885 catalog-svc fallback search query timed out
+2026-11-18T14:52:46Z search-svc ERROR req-624-886 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:48Z catalog-svc ERROR req-624-888 catalog-svc fallback search query timed out
+2026-11-18T14:52:48Z search-svc ERROR req-624-888 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:50Z api-gateway ERROR req-624-890 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:50Z search-svc ERROR req-624-890 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:51Z catalog-svc ERROR req-624-891 catalog-svc fallback search query timed out
+2026-11-18T14:52:52Z search-svc ERROR req-624-892 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:54Z catalog-svc ERROR req-624-894 catalog-svc fallback search query timed out
+2026-11-18T14:52:54Z search-svc ERROR req-624-894 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:55Z api-gateway ERROR req-624-895 HTTP 503 upstream=catalog-svc
+2026-11-18T14:52:56Z search-svc ERROR req-624-896 JVM Full GC pause exceeded 4000ms oom_pressure=high
+2026-11-18T14:52:57Z catalog-svc ERROR req-624-897 catalog-svc fallback search query timed out
+2026-11-18T14:52:58Z search-svc ERROR req-624-898 JVM Full GC pause exceeded 4000ms oom_pressure=high

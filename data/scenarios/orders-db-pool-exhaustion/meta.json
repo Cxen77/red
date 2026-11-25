@@ -1,0 +1,12 @@
+{
+  "id": "orders-db-pool-exhaustion",
+  "title": "Orders Service Connection Pool Saturation on Bulk Import",
+  "opened_at": "2026-11-20T08:30:00Z",
+  "severity": "high",
+  "services": [
+    "api-gateway",
+    "orders-svc",
+    "billing-svc"
+  ],
+  "has_image": false
+}

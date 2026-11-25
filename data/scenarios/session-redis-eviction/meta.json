@@ -1,0 +1,12 @@
+{
+  "id": "session-redis-eviction",
+  "title": "Session Store Memory Eviction Causing Login Failures",
+  "opened_at": "2026-11-19T21:10:00Z",
+  "severity": "high",
+  "services": [
+    "api-gateway",
+    "session-svc",
+    "auth-svc"
+  ],
+  "has_image": false
+}

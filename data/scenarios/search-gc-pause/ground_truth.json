@@ -1,0 +1,10 @@
+{
+  "scenario_id": "search-gc-pause",
+  "root_cause_service": "search-svc",
+  "root_cause_category": "memory_exhaustion",
+  "required_keywords": [
+    "search-svc",
+    "GC",
+    "oom_pressure"
+  ]
+}

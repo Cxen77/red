@@ -1,0 +1,402 @@
+[
+  {
+    "trace_id": "tr-899-001",
+    "span_id": "sp-899-001",
+    "ts": "2026-11-16T04:03:00Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 48.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-002",
+    "span_id": "sp-899-002",
+    "ts": "2026-11-16T04:03:22Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 20.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-003",
+    "span_id": "sp-899-003",
+    "ts": "2026-11-16T04:03:44Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 39.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-004",
+    "span_id": "sp-899-004",
+    "ts": "2026-11-16T04:04:06Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 26.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-005",
+    "span_id": "sp-899-005",
+    "ts": "2026-11-16T04:04:28Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 50.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-006",
+    "span_id": "sp-899-006",
+    "ts": "2026-11-16T04:04:50Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 21.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-007",
+    "span_id": "sp-899-007",
+    "ts": "2026-11-16T04:05:12Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 32.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-008",
+    "span_id": "sp-899-008",
+    "ts": "2026-11-16T04:05:34Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 34.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-009",
+    "span_id": "sp-899-009",
+    "ts": "2026-11-16T04:05:56Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 38.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-010",
+    "span_id": "sp-899-010",
+    "ts": "2026-11-16T04:06:18Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 30.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-011",
+    "span_id": "sp-899-011",
+    "ts": "2026-11-16T04:06:40Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 45.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-012",
+    "span_id": "sp-899-012",
+    "ts": "2026-11-16T04:07:02Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 23.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-013",
+    "span_id": "sp-899-013",
+    "ts": "2026-11-16T04:07:24Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 18.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-014",
+    "span_id": "sp-899-014",
+    "ts": "2026-11-16T04:07:46Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 36.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-015",
+    "span_id": "sp-899-015",
+    "ts": "2026-11-16T04:08:08Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 18.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-016",
+    "span_id": "sp-899-016",
+    "ts": "2026-11-16T04:08:30Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 23.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-017",
+    "span_id": "sp-899-017",
+    "ts": "2026-11-16T04:08:52Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 41.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-018",
+    "span_id": "sp-899-018",
+    "ts": "2026-11-16T04:09:14Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 54.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-019",
+    "span_id": "sp-899-019",
+    "ts": "2026-11-16T04:09:36Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 24.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-020",
+    "span_id": "sp-899-020",
+    "ts": "2026-11-16T04:09:58Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 31.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-021",
+    "span_id": "sp-899-021",
+    "ts": "2026-11-16T04:10:20Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 29.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-022",
+    "span_id": "sp-899-022",
+    "ts": "2026-11-16T04:10:42Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 38.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-023",
+    "span_id": "sp-899-023",
+    "ts": "2026-11-16T04:11:04Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 44.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-899-024",
+    "span_id": "sp-899-024",
+    "ts": "2026-11-16T04:11:26Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2113.5,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-025",
+    "span_id": "sp-899-025",
+    "ts": "2026-11-16T04:11:48Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2330.1,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-026",
+    "span_id": "sp-899-026",
+    "ts": "2026-11-16T04:12:10Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2179.4,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-027",
+    "span_id": "sp-899-027",
+    "ts": "2026-11-16T04:12:32Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 3424.4,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-028",
+    "span_id": "sp-899-028",
+    "ts": "2026-11-16T04:12:54Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2710.4,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-029",
+    "span_id": "sp-899-029",
+    "ts": "2026-11-16T04:13:16Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2148.0,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-030",
+    "span_id": "sp-899-030",
+    "ts": "2026-11-16T04:13:38Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 3478.0,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-031",
+    "span_id": "sp-899-031",
+    "ts": "2026-11-16T04:14:00Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2203.3,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-032",
+    "span_id": "sp-899-032",
+    "ts": "2026-11-16T04:14:22Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 3683.8,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-033",
+    "span_id": "sp-899-033",
+    "ts": "2026-11-16T04:14:44Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 3591.5,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-034",
+    "span_id": "sp-899-034",
+    "ts": "2026-11-16T04:15:06Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2605.4,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-035",
+    "span_id": "sp-899-035",
+    "ts": "2026-11-16T04:15:28Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 3821.3,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-036",
+    "span_id": "sp-899-036",
+    "ts": "2026-11-16T04:15:50Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 3592.6,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-037",
+    "span_id": "sp-899-037",
+    "ts": "2026-11-16T04:16:12Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 3130.8,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-038",
+    "span_id": "sp-899-038",
+    "ts": "2026-11-16T04:16:34Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2768.9,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-039",
+    "span_id": "sp-899-039",
+    "ts": "2026-11-16T04:16:56Z",
+    "service": "metrics-collector",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 2657.2,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-899-040",
+    "span_id": "sp-899-040",
+    "ts": "2026-11-16T04:17:18Z",
+    "service": "api-gateway",
+    "operation": "metrics-collector.handle",
+    "duration_ms": 3613.6,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  }
+]

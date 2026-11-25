@@ -1,0 +1,912 @@
+2026-11-20T08:18:00Z api-gateway INFO req-412-0 request ok latency_ms=19
+2026-11-20T08:18:01Z orders-svc INFO req-412-1 request ok latency_ms=37
+2026-11-20T08:18:02Z billing-svc INFO req-412-2 request ok latency_ms=32
+2026-11-20T08:18:03Z api-gateway INFO req-412-3 request ok latency_ms=35
+2026-11-20T08:18:04Z orders-svc INFO req-412-4 request ok latency_ms=11
+2026-11-20T08:18:05Z billing-svc INFO req-412-5 request ok latency_ms=13
+2026-11-20T08:18:06Z api-gateway INFO req-412-6 request ok latency_ms=16
+2026-11-20T08:18:07Z orders-svc INFO req-412-7 request ok latency_ms=13
+2026-11-20T08:18:08Z billing-svc INFO req-412-8 request ok latency_ms=19
+2026-11-20T08:18:09Z api-gateway INFO req-412-9 request ok latency_ms=16
+2026-11-20T08:18:10Z orders-svc INFO req-412-10 request ok latency_ms=28
+2026-11-20T08:18:11Z billing-svc INFO req-412-11 request ok latency_ms=16
+2026-11-20T08:18:12Z api-gateway INFO req-412-12 request ok latency_ms=24
+2026-11-20T08:18:13Z orders-svc INFO req-412-13 request ok latency_ms=25
+2026-11-20T08:18:14Z billing-svc INFO req-412-14 request ok latency_ms=10
+2026-11-20T08:18:15Z api-gateway INFO req-412-15 request ok latency_ms=12
+2026-11-20T08:18:16Z orders-svc INFO req-412-16 request ok latency_ms=29
+2026-11-20T08:18:17Z billing-svc INFO req-412-17 request ok latency_ms=32
+2026-11-20T08:18:18Z api-gateway INFO req-412-18 request ok latency_ms=15
+2026-11-20T08:18:19Z orders-svc INFO req-412-19 request ok latency_ms=21
+2026-11-20T08:18:20Z billing-svc INFO req-412-20 request ok latency_ms=39
+2026-11-20T08:18:21Z api-gateway INFO req-412-21 request ok latency_ms=39
+2026-11-20T08:18:22Z orders-svc INFO req-412-22 request ok latency_ms=39
+2026-11-20T08:18:23Z billing-svc INFO req-412-23 request ok latency_ms=26
+2026-11-20T08:18:24Z api-gateway INFO req-412-24 request ok latency_ms=18
+2026-11-20T08:18:25Z orders-svc INFO req-412-25 request ok latency_ms=30
+2026-11-20T08:18:26Z billing-svc INFO req-412-26 request ok latency_ms=18
+2026-11-20T08:18:27Z api-gateway INFO req-412-27 request ok latency_ms=19
+2026-11-20T08:18:28Z orders-svc INFO req-412-28 request ok latency_ms=19
+2026-11-20T08:18:29Z billing-svc INFO req-412-29 request ok latency_ms=34
+2026-11-20T08:18:30Z api-gateway INFO req-412-30 request ok latency_ms=26
+2026-11-20T08:18:31Z orders-svc INFO req-412-31 request ok latency_ms=22
+2026-11-20T08:18:32Z billing-svc INFO req-412-32 request ok latency_ms=24
+2026-11-20T08:18:33Z api-gateway INFO req-412-33 request ok latency_ms=39
+2026-11-20T08:18:34Z orders-svc INFO req-412-34 request ok latency_ms=39
+2026-11-20T08:18:35Z billing-svc INFO req-412-35 request ok latency_ms=20
+2026-11-20T08:18:36Z api-gateway INFO req-412-36 request ok latency_ms=24
+2026-11-20T08:18:37Z orders-svc INFO req-412-37 request ok latency_ms=30
+2026-11-20T08:18:38Z billing-svc INFO req-412-38 request ok latency_ms=27
+2026-11-20T08:18:39Z api-gateway INFO req-412-39 request ok latency_ms=17
+2026-11-20T08:18:40Z orders-svc INFO req-412-40 request ok latency_ms=24
+2026-11-20T08:18:41Z billing-svc INFO req-412-41 request ok latency_ms=40
+2026-11-20T08:18:42Z api-gateway INFO req-412-42 request ok latency_ms=13
+2026-11-20T08:18:43Z orders-svc INFO req-412-43 request ok latency_ms=32
+2026-11-20T08:18:44Z billing-svc INFO req-412-44 request ok latency_ms=38
+2026-11-20T08:18:45Z api-gateway INFO req-412-45 request ok latency_ms=23
+2026-11-20T08:18:46Z orders-svc INFO req-412-46 request ok latency_ms=29
+2026-11-20T08:18:47Z billing-svc INFO req-412-47 request ok latency_ms=40
+2026-11-20T08:18:48Z api-gateway INFO req-412-48 request ok latency_ms=32
+2026-11-20T08:18:49Z orders-svc INFO req-412-49 request ok latency_ms=37
+2026-11-20T08:18:50Z billing-svc INFO req-412-50 request ok latency_ms=22
+2026-11-20T08:18:51Z api-gateway INFO req-412-51 request ok latency_ms=11
+2026-11-20T08:18:52Z orders-svc INFO req-412-52 request ok latency_ms=28
+2026-11-20T08:18:53Z billing-svc INFO req-412-53 request ok latency_ms=18
+2026-11-20T08:18:54Z api-gateway INFO req-412-54 request ok latency_ms=40
+2026-11-20T08:18:55Z orders-svc INFO req-412-55 request ok latency_ms=14
+2026-11-20T08:18:56Z billing-svc INFO req-412-56 request ok latency_ms=31
+2026-11-20T08:18:57Z api-gateway INFO req-412-57 request ok latency_ms=16
+2026-11-20T08:18:58Z orders-svc INFO req-412-58 request ok latency_ms=38
+2026-11-20T08:18:59Z billing-svc INFO req-412-59 request ok latency_ms=22
+2026-11-20T08:19:00Z api-gateway INFO req-412-60 request ok latency_ms=38
+2026-11-20T08:19:01Z orders-svc INFO req-412-61 request ok latency_ms=10
+2026-11-20T08:19:02Z billing-svc INFO req-412-62 request ok latency_ms=23
+2026-11-20T08:19:03Z api-gateway INFO req-412-63 request ok latency_ms=30
+2026-11-20T08:19:04Z orders-svc INFO req-412-64 request ok latency_ms=28
+2026-11-20T08:19:05Z billing-svc INFO req-412-65 request ok latency_ms=30
+2026-11-20T08:19:06Z api-gateway INFO req-412-66 request ok latency_ms=11
+2026-11-20T08:19:07Z orders-svc INFO req-412-67 request ok latency_ms=30
+2026-11-20T08:19:08Z billing-svc INFO req-412-68 request ok latency_ms=17
+2026-11-20T08:19:09Z api-gateway INFO req-412-69 request ok latency_ms=32
+2026-11-20T08:19:10Z orders-svc INFO req-412-70 request ok latency_ms=37
+2026-11-20T08:19:11Z billing-svc INFO req-412-71 request ok latency_ms=27
+2026-11-20T08:19:12Z api-gateway INFO req-412-72 request ok latency_ms=14
+2026-11-20T08:19:13Z orders-svc INFO req-412-73 request ok latency_ms=24
+2026-11-20T08:19:14Z billing-svc INFO req-412-74 request ok latency_ms=36
+2026-11-20T08:19:15Z api-gateway INFO req-412-75 request ok latency_ms=13
+2026-11-20T08:19:16Z orders-svc INFO req-412-76 request ok latency_ms=25
+2026-11-20T08:19:17Z billing-svc INFO req-412-77 request ok latency_ms=31
+2026-11-20T08:19:18Z api-gateway INFO req-412-78 request ok latency_ms=10
+2026-11-20T08:19:19Z orders-svc INFO req-412-79 request ok latency_ms=32
+2026-11-20T08:19:20Z billing-svc INFO req-412-80 request ok latency_ms=34
+2026-11-20T08:19:21Z api-gateway INFO req-412-81 request ok latency_ms=25
+2026-11-20T08:19:22Z orders-svc INFO req-412-82 request ok latency_ms=17
+2026-11-20T08:19:23Z billing-svc INFO req-412-83 request ok latency_ms=10
+2026-11-20T08:19:24Z api-gateway INFO req-412-84 request ok latency_ms=34
+2026-11-20T08:19:25Z orders-svc INFO req-412-85 request ok latency_ms=27
+2026-11-20T08:19:26Z billing-svc INFO req-412-86 request ok latency_ms=27
+2026-11-20T08:19:27Z api-gateway INFO req-412-87 request ok latency_ms=25
+2026-11-20T08:19:28Z orders-svc INFO req-412-88 request ok latency_ms=16
+2026-11-20T08:19:29Z billing-svc INFO req-412-89 request ok latency_ms=18
+2026-11-20T08:19:30Z api-gateway INFO req-412-90 request ok latency_ms=26
+2026-11-20T08:19:31Z orders-svc INFO req-412-91 request ok latency_ms=31
+2026-11-20T08:19:32Z billing-svc INFO req-412-92 request ok latency_ms=32
+2026-11-20T08:19:33Z api-gateway INFO req-412-93 request ok latency_ms=35
+2026-11-20T08:19:34Z orders-svc INFO req-412-94 request ok latency_ms=32
+2026-11-20T08:19:35Z billing-svc INFO req-412-95 request ok latency_ms=25
+2026-11-20T08:19:36Z api-gateway INFO req-412-96 request ok latency_ms=40
+2026-11-20T08:19:37Z orders-svc INFO req-412-97 request ok latency_ms=23
+2026-11-20T08:19:38Z billing-svc INFO req-412-98 request ok latency_ms=32
+2026-11-20T08:19:39Z api-gateway INFO req-412-99 request ok latency_ms=16
+2026-11-20T08:19:40Z orders-svc INFO req-412-100 request ok latency_ms=23
+2026-11-20T08:19:41Z billing-svc INFO req-412-101 request ok latency_ms=10
+2026-11-20T08:19:42Z api-gateway INFO req-412-102 request ok latency_ms=24
+2026-11-20T08:19:43Z orders-svc INFO req-412-103 request ok latency_ms=12
+2026-11-20T08:19:44Z billing-svc INFO req-412-104 request ok latency_ms=20
+2026-11-20T08:19:45Z api-gateway INFO req-412-105 request ok latency_ms=22
+2026-11-20T08:19:46Z orders-svc INFO req-412-106 request ok latency_ms=10
+2026-11-20T08:19:47Z billing-svc INFO req-412-107 request ok latency_ms=27
+2026-11-20T08:19:48Z api-gateway INFO req-412-108 request ok latency_ms=33
+2026-11-20T08:19:49Z orders-svc INFO req-412-109 request ok latency_ms=11
+2026-11-20T08:19:50Z billing-svc INFO req-412-110 request ok latency_ms=37
+2026-11-20T08:19:51Z api-gateway INFO req-412-111 request ok latency_ms=14
+2026-11-20T08:19:52Z orders-svc INFO req-412-112 request ok latency_ms=18
+2026-11-20T08:19:53Z billing-svc INFO req-412-113 request ok latency_ms=35
+2026-11-20T08:19:54Z api-gateway INFO req-412-114 request ok latency_ms=40
+2026-11-20T08:19:55Z orders-svc INFO req-412-115 request ok latency_ms=30
+2026-11-20T08:19:56Z billing-svc INFO req-412-116 request ok latency_ms=33
+2026-11-20T08:19:57Z api-gateway INFO req-412-117 request ok latency_ms=26
+2026-11-20T08:19:58Z orders-svc INFO req-412-118 request ok latency_ms=20
+2026-11-20T08:19:59Z billing-svc INFO req-412-119 request ok latency_ms=28
+2026-11-20T08:20:00Z api-gateway INFO req-412-120 request ok latency_ms=21
+2026-11-20T08:20:01Z orders-svc INFO req-412-121 request ok latency_ms=25
+2026-11-20T08:20:02Z billing-svc INFO req-412-122 request ok latency_ms=22
+2026-11-20T08:20:03Z api-gateway INFO req-412-123 request ok latency_ms=22
+2026-11-20T08:20:04Z orders-svc INFO req-412-124 request ok latency_ms=12
+2026-11-20T08:20:05Z billing-svc INFO req-412-125 request ok latency_ms=14
+2026-11-20T08:20:06Z api-gateway INFO req-412-126 request ok latency_ms=35
+2026-11-20T08:20:07Z orders-svc INFO req-412-127 request ok latency_ms=31
+2026-11-20T08:20:08Z billing-svc INFO req-412-128 request ok latency_ms=37
+2026-11-20T08:20:09Z api-gateway INFO req-412-129 request ok latency_ms=28
+2026-11-20T08:20:10Z orders-svc INFO req-412-130 request ok latency_ms=21
+2026-11-20T08:20:11Z billing-svc INFO req-412-131 request ok latency_ms=19
+2026-11-20T08:20:12Z api-gateway INFO req-412-132 request ok latency_ms=14
+2026-11-20T08:20:13Z orders-svc INFO req-412-133 request ok latency_ms=38
+2026-11-20T08:20:14Z billing-svc INFO req-412-134 request ok latency_ms=38
+2026-11-20T08:20:15Z api-gateway INFO req-412-135 request ok latency_ms=26
+2026-11-20T08:20:16Z orders-svc INFO req-412-136 request ok latency_ms=25
+2026-11-20T08:20:17Z billing-svc INFO req-412-137 request ok latency_ms=15
+2026-11-20T08:20:18Z api-gateway INFO req-412-138 request ok latency_ms=31
+2026-11-20T08:20:19Z orders-svc INFO req-412-139 request ok latency_ms=32
+2026-11-20T08:20:20Z billing-svc INFO req-412-140 request ok latency_ms=13
+2026-11-20T08:20:21Z api-gateway INFO req-412-141 request ok latency_ms=18
+2026-11-20T08:20:22Z orders-svc INFO req-412-142 request ok latency_ms=33
+2026-11-20T08:20:23Z billing-svc INFO req-412-143 request ok latency_ms=18
+2026-11-20T08:20:24Z api-gateway INFO req-412-144 request ok latency_ms=13
+2026-11-20T08:20:25Z orders-svc INFO req-412-145 request ok latency_ms=18
+2026-11-20T08:20:26Z billing-svc INFO req-412-146 request ok latency_ms=25
+2026-11-20T08:20:27Z api-gateway INFO req-412-147 request ok latency_ms=30
+2026-11-20T08:20:28Z orders-svc INFO req-412-148 request ok latency_ms=16
+2026-11-20T08:20:29Z billing-svc INFO req-412-149 request ok latency_ms=10
+2026-11-20T08:20:30Z api-gateway INFO req-412-150 request ok latency_ms=21
+2026-11-20T08:20:31Z orders-svc INFO req-412-151 request ok latency_ms=13
+2026-11-20T08:20:32Z billing-svc INFO req-412-152 request ok latency_ms=29
+2026-11-20T08:20:33Z api-gateway INFO req-412-153 request ok latency_ms=25
+2026-11-20T08:20:34Z orders-svc INFO req-412-154 request ok latency_ms=24
+2026-11-20T08:20:35Z billing-svc INFO req-412-155 request ok latency_ms=20
+2026-11-20T08:20:36Z api-gateway INFO req-412-156 request ok latency_ms=25
+2026-11-20T08:20:37Z orders-svc INFO req-412-157 request ok latency_ms=40
+2026-11-20T08:20:38Z billing-svc INFO req-412-158 request ok latency_ms=23
+2026-11-20T08:20:39Z api-gateway INFO req-412-159 request ok latency_ms=21
+2026-11-20T08:20:40Z orders-svc INFO req-412-160 request ok latency_ms=34
+2026-11-20T08:20:41Z billing-svc INFO req-412-161 request ok latency_ms=29
+2026-11-20T08:20:42Z api-gateway INFO req-412-162 request ok latency_ms=10
+2026-11-20T08:20:43Z orders-svc INFO req-412-163 request ok latency_ms=26
+2026-11-20T08:20:44Z billing-svc INFO req-412-164 request ok latency_ms=31
+2026-11-20T08:20:45Z api-gateway INFO req-412-165 request ok latency_ms=32
+2026-11-20T08:20:46Z orders-svc INFO req-412-166 request ok latency_ms=13
+2026-11-20T08:20:47Z billing-svc INFO req-412-167 request ok latency_ms=13
+2026-11-20T08:20:48Z api-gateway INFO req-412-168 request ok latency_ms=17
+2026-11-20T08:20:49Z orders-svc INFO req-412-169 request ok latency_ms=17
+2026-11-20T08:20:50Z billing-svc INFO req-412-170 request ok latency_ms=17
+2026-11-20T08:20:51Z api-gateway INFO req-412-171 request ok latency_ms=13
+2026-11-20T08:20:52Z orders-svc INFO req-412-172 request ok latency_ms=25
+2026-11-20T08:20:53Z billing-svc INFO req-412-173 request ok latency_ms=27
+2026-11-20T08:20:54Z api-gateway INFO req-412-174 request ok latency_ms=28
+2026-11-20T08:20:55Z orders-svc INFO req-412-175 request ok latency_ms=36
+2026-11-20T08:20:56Z billing-svc INFO req-412-176 request ok latency_ms=15
+2026-11-20T08:20:57Z api-gateway INFO req-412-177 request ok latency_ms=14
+2026-11-20T08:20:58Z orders-svc INFO req-412-178 request ok latency_ms=23
+2026-11-20T08:20:59Z billing-svc INFO req-412-179 request ok latency_ms=29
+2026-11-20T08:21:00Z api-gateway INFO req-412-180 request ok latency_ms=25
+2026-11-20T08:21:01Z orders-svc INFO req-412-181 request ok latency_ms=17
+2026-11-20T08:21:02Z billing-svc INFO req-412-182 request ok latency_ms=40
+2026-11-20T08:21:03Z api-gateway INFO req-412-183 request ok latency_ms=18
+2026-11-20T08:21:04Z orders-svc INFO req-412-184 request ok latency_ms=32
+2026-11-20T08:21:05Z billing-svc INFO req-412-185 request ok latency_ms=35
+2026-11-20T08:21:06Z api-gateway INFO req-412-186 request ok latency_ms=18
+2026-11-20T08:21:07Z orders-svc INFO req-412-187 request ok latency_ms=24
+2026-11-20T08:21:08Z billing-svc INFO req-412-188 request ok latency_ms=17
+2026-11-20T08:21:09Z api-gateway INFO req-412-189 request ok latency_ms=10
+2026-11-20T08:21:10Z orders-svc INFO req-412-190 request ok latency_ms=16
+2026-11-20T08:21:11Z billing-svc INFO req-412-191 request ok latency_ms=35
+2026-11-20T08:21:12Z api-gateway INFO req-412-192 request ok latency_ms=25
+2026-11-20T08:21:13Z orders-svc INFO req-412-193 request ok latency_ms=39
+2026-11-20T08:21:14Z billing-svc INFO req-412-194 request ok latency_ms=18
+2026-11-20T08:21:15Z api-gateway INFO req-412-195 request ok latency_ms=29
+2026-11-20T08:21:16Z orders-svc INFO req-412-196 request ok latency_ms=19
+2026-11-20T08:21:17Z billing-svc INFO req-412-197 request ok latency_ms=20
+2026-11-20T08:21:18Z api-gateway INFO req-412-198 request ok latency_ms=12
+2026-11-20T08:21:19Z orders-svc INFO req-412-199 request ok latency_ms=11
+2026-11-20T08:21:20Z billing-svc INFO req-412-200 request ok latency_ms=29
+2026-11-20T08:21:21Z api-gateway INFO req-412-201 request ok latency_ms=26
+2026-11-20T08:21:22Z orders-svc INFO req-412-202 request ok latency_ms=11
+2026-11-20T08:21:23Z billing-svc INFO req-412-203 request ok latency_ms=11
+2026-11-20T08:21:24Z api-gateway INFO req-412-204 request ok latency_ms=37
+2026-11-20T08:21:25Z orders-svc INFO req-412-205 request ok latency_ms=24
+2026-11-20T08:21:26Z billing-svc INFO req-412-206 request ok latency_ms=19
+2026-11-20T08:21:27Z api-gateway INFO req-412-207 request ok latency_ms=10
+2026-11-20T08:21:28Z orders-svc INFO req-412-208 request ok latency_ms=21
+2026-11-20T08:21:29Z billing-svc INFO req-412-209 request ok latency_ms=10
+2026-11-20T08:21:30Z api-gateway INFO req-412-210 request ok latency_ms=14
+2026-11-20T08:21:31Z orders-svc INFO req-412-211 request ok latency_ms=31
+2026-11-20T08:21:32Z billing-svc INFO req-412-212 request ok latency_ms=37
+2026-11-20T08:21:33Z api-gateway INFO req-412-213 request ok latency_ms=10
+2026-11-20T08:21:34Z orders-svc INFO req-412-214 request ok latency_ms=33
+2026-11-20T08:21:35Z billing-svc INFO req-412-215 request ok latency_ms=39
+2026-11-20T08:21:36Z api-gateway INFO req-412-216 request ok latency_ms=32
+2026-11-20T08:21:37Z orders-svc INFO req-412-217 request ok latency_ms=22
+2026-11-20T08:21:38Z billing-svc INFO req-412-218 request ok latency_ms=12
+2026-11-20T08:21:39Z api-gateway INFO req-412-219 request ok latency_ms=28
+2026-11-20T08:21:40Z orders-svc INFO req-412-220 request ok latency_ms=18
+2026-11-20T08:21:41Z billing-svc INFO req-412-221 request ok latency_ms=33
+2026-11-20T08:21:42Z api-gateway INFO req-412-222 request ok latency_ms=25
+2026-11-20T08:21:43Z orders-svc INFO req-412-223 request ok latency_ms=37
+2026-11-20T08:21:44Z billing-svc INFO req-412-224 request ok latency_ms=14
+2026-11-20T08:21:45Z api-gateway INFO req-412-225 request ok latency_ms=11
+2026-11-20T08:21:46Z orders-svc INFO req-412-226 request ok latency_ms=19
+2026-11-20T08:21:47Z billing-svc INFO req-412-227 request ok latency_ms=12
+2026-11-20T08:21:48Z api-gateway INFO req-412-228 request ok latency_ms=11
+2026-11-20T08:21:49Z orders-svc INFO req-412-229 request ok latency_ms=39
+2026-11-20T08:21:50Z billing-svc INFO req-412-230 request ok latency_ms=18
+2026-11-20T08:21:51Z api-gateway INFO req-412-231 request ok latency_ms=20
+2026-11-20T08:21:52Z orders-svc INFO req-412-232 request ok latency_ms=33
+2026-11-20T08:21:53Z billing-svc INFO req-412-233 request ok latency_ms=22
+2026-11-20T08:21:54Z api-gateway INFO req-412-234 request ok latency_ms=19
+2026-11-20T08:21:55Z orders-svc INFO req-412-235 request ok latency_ms=31
+2026-11-20T08:21:56Z billing-svc INFO req-412-236 request ok latency_ms=14
+2026-11-20T08:21:57Z api-gateway INFO req-412-237 request ok latency_ms=28
+2026-11-20T08:21:58Z orders-svc INFO req-412-238 request ok latency_ms=28
+2026-11-20T08:21:59Z billing-svc INFO req-412-239 request ok latency_ms=28
+2026-11-20T08:22:00Z api-gateway INFO req-412-240 request ok latency_ms=13
+2026-11-20T08:22:01Z orders-svc INFO req-412-241 request ok latency_ms=39
+2026-11-20T08:22:02Z billing-svc INFO req-412-242 request ok latency_ms=34
+2026-11-20T08:22:03Z api-gateway INFO req-412-243 request ok latency_ms=37
+2026-11-20T08:22:04Z orders-svc INFO req-412-244 request ok latency_ms=17
+2026-11-20T08:22:05Z billing-svc INFO req-412-245 request ok latency_ms=29
+2026-11-20T08:22:06Z api-gateway INFO req-412-246 request ok latency_ms=39
+2026-11-20T08:22:07Z orders-svc INFO req-412-247 request ok latency_ms=20
+2026-11-20T08:22:08Z billing-svc INFO req-412-248 request ok latency_ms=18
+2026-11-20T08:22:09Z api-gateway INFO req-412-249 request ok latency_ms=16
+2026-11-20T08:22:10Z orders-svc INFO req-412-250 request ok latency_ms=13
+2026-11-20T08:22:11Z billing-svc INFO req-412-251 request ok latency_ms=39
+2026-11-20T08:22:12Z api-gateway INFO req-412-252 request ok latency_ms=36
+2026-11-20T08:22:13Z orders-svc INFO req-412-253 request ok latency_ms=30
+2026-11-20T08:22:14Z billing-svc INFO req-412-254 request ok latency_ms=16
+2026-11-20T08:22:15Z api-gateway INFO req-412-255 request ok latency_ms=35
+2026-11-20T08:22:16Z orders-svc INFO req-412-256 request ok latency_ms=13
+2026-11-20T08:22:17Z billing-svc INFO req-412-257 request ok latency_ms=17
+2026-11-20T08:22:18Z api-gateway INFO req-412-258 request ok latency_ms=16
+2026-11-20T08:22:19Z orders-svc INFO req-412-259 request ok latency_ms=15
+2026-11-20T08:22:20Z billing-svc INFO req-412-260 request ok latency_ms=16
+2026-11-20T08:22:21Z api-gateway INFO req-412-261 request ok latency_ms=21
+2026-11-20T08:22:22Z orders-svc INFO req-412-262 request ok latency_ms=16
+2026-11-20T08:22:23Z billing-svc INFO req-412-263 request ok latency_ms=38
+2026-11-20T08:22:24Z api-gateway INFO req-412-264 request ok latency_ms=28
+2026-11-20T08:22:25Z orders-svc INFO req-412-265 request ok latency_ms=39
+2026-11-20T08:22:26Z billing-svc INFO req-412-266 request ok latency_ms=23
+2026-11-20T08:22:27Z api-gateway INFO req-412-267 request ok latency_ms=13
+2026-11-20T08:22:28Z orders-svc INFO req-412-268 request ok latency_ms=15
+2026-11-20T08:22:29Z billing-svc INFO req-412-269 request ok latency_ms=33
+2026-11-20T08:22:30Z api-gateway INFO req-412-270 request ok latency_ms=28
+2026-11-20T08:22:31Z orders-svc INFO req-412-271 request ok latency_ms=34
+2026-11-20T08:22:32Z billing-svc INFO req-412-272 request ok latency_ms=29
+2026-11-20T08:22:33Z api-gateway INFO req-412-273 request ok latency_ms=28
+2026-11-20T08:22:34Z orders-svc INFO req-412-274 request ok latency_ms=39
+2026-11-20T08:22:35Z billing-svc INFO req-412-275 request ok latency_ms=17
+2026-11-20T08:22:36Z api-gateway INFO req-412-276 request ok latency_ms=33
+2026-11-20T08:22:37Z orders-svc INFO req-412-277 request ok latency_ms=25
+2026-11-20T08:22:38Z billing-svc INFO req-412-278 request ok latency_ms=22
+2026-11-20T08:22:39Z api-gateway INFO req-412-279 request ok latency_ms=37
+2026-11-20T08:22:40Z orders-svc INFO req-412-280 request ok latency_ms=24
+2026-11-20T08:22:41Z billing-svc INFO req-412-281 request ok latency_ms=14
+2026-11-20T08:22:42Z api-gateway INFO req-412-282 request ok latency_ms=34
+2026-11-20T08:22:43Z orders-svc INFO req-412-283 request ok latency_ms=25
+2026-11-20T08:22:44Z billing-svc INFO req-412-284 request ok latency_ms=40
+2026-11-20T08:22:45Z api-gateway INFO req-412-285 request ok latency_ms=22
+2026-11-20T08:22:46Z orders-svc INFO req-412-286 request ok latency_ms=15
+2026-11-20T08:22:47Z billing-svc INFO req-412-287 request ok latency_ms=32
+2026-11-20T08:22:48Z api-gateway INFO req-412-288 request ok latency_ms=25
+2026-11-20T08:22:49Z orders-svc INFO req-412-289 request ok latency_ms=39
+2026-11-20T08:22:50Z billing-svc INFO req-412-290 request ok latency_ms=15
+2026-11-20T08:22:51Z api-gateway INFO req-412-291 request ok latency_ms=19
+2026-11-20T08:22:52Z orders-svc INFO req-412-292 request ok latency_ms=10
+2026-11-20T08:22:53Z billing-svc INFO req-412-293 request ok latency_ms=39
+2026-11-20T08:22:54Z api-gateway INFO req-412-294 request ok latency_ms=35
+2026-11-20T08:22:55Z orders-svc INFO req-412-295 request ok latency_ms=32
+2026-11-20T08:22:56Z billing-svc INFO req-412-296 request ok latency_ms=18
+2026-11-20T08:22:57Z api-gateway INFO req-412-297 request ok latency_ms=20
+2026-11-20T08:22:58Z orders-svc INFO req-412-298 request ok latency_ms=12
+2026-11-20T08:22:59Z billing-svc INFO req-412-299 request ok latency_ms=40
+2026-11-20T08:23:00Z api-gateway INFO req-412-300 request ok latency_ms=37
+2026-11-20T08:23:01Z orders-svc INFO req-412-301 request ok latency_ms=20
+2026-11-20T08:23:02Z billing-svc INFO req-412-302 request ok latency_ms=22
+2026-11-20T08:23:03Z api-gateway INFO req-412-303 request ok latency_ms=35
+2026-11-20T08:23:04Z orders-svc INFO req-412-304 request ok latency_ms=24
+2026-11-20T08:23:05Z billing-svc INFO req-412-305 request ok latency_ms=19
+2026-11-20T08:23:06Z api-gateway INFO req-412-306 request ok latency_ms=39
+2026-11-20T08:23:07Z orders-svc INFO req-412-307 request ok latency_ms=18
+2026-11-20T08:23:08Z billing-svc INFO req-412-308 request ok latency_ms=18
+2026-11-20T08:23:09Z api-gateway INFO req-412-309 request ok latency_ms=30
+2026-11-20T08:23:10Z orders-svc INFO req-412-310 request ok latency_ms=39
+2026-11-20T08:23:11Z billing-svc INFO req-412-311 request ok latency_ms=30
+2026-11-20T08:23:12Z api-gateway INFO req-412-312 request ok latency_ms=25
+2026-11-20T08:23:13Z orders-svc INFO req-412-313 request ok latency_ms=12
+2026-11-20T08:23:14Z billing-svc INFO req-412-314 request ok latency_ms=27
+2026-11-20T08:23:15Z api-gateway INFO req-412-315 request ok latency_ms=21
+2026-11-20T08:23:16Z orders-svc INFO req-412-316 request ok latency_ms=24
+2026-11-20T08:23:17Z billing-svc INFO req-412-317 request ok latency_ms=37
+2026-11-20T08:23:18Z api-gateway INFO req-412-318 request ok latency_ms=30
+2026-11-20T08:23:19Z orders-svc INFO req-412-319 request ok latency_ms=22
+2026-11-20T08:23:20Z billing-svc INFO req-412-320 request ok latency_ms=25
+2026-11-20T08:23:21Z api-gateway INFO req-412-321 request ok latency_ms=34
+2026-11-20T08:23:22Z orders-svc INFO req-412-322 request ok latency_ms=35
+2026-11-20T08:23:23Z billing-svc INFO req-412-323 request ok latency_ms=10
+2026-11-20T08:23:24Z api-gateway INFO req-412-324 request ok latency_ms=24
+2026-11-20T08:23:25Z orders-svc INFO req-412-325 request ok latency_ms=21
+2026-11-20T08:23:26Z billing-svc INFO req-412-326 request ok latency_ms=23
+2026-11-20T08:23:27Z api-gateway INFO req-412-327 request ok latency_ms=36
+2026-11-20T08:23:28Z orders-svc INFO req-412-328 request ok latency_ms=13
+2026-11-20T08:23:29Z billing-svc INFO req-412-329 request ok latency_ms=17
+2026-11-20T08:23:30Z api-gateway INFO req-412-330 request ok latency_ms=34
+2026-11-20T08:23:31Z orders-svc INFO req-412-331 request ok latency_ms=28
+2026-11-20T08:23:32Z billing-svc INFO req-412-332 request ok latency_ms=33
+2026-11-20T08:23:33Z api-gateway INFO req-412-333 request ok latency_ms=37
+2026-11-20T08:23:34Z orders-svc INFO req-412-334 request ok latency_ms=37
+2026-11-20T08:23:35Z billing-svc INFO req-412-335 request ok latency_ms=23
+2026-11-20T08:23:36Z api-gateway INFO req-412-336 request ok latency_ms=31
+2026-11-20T08:23:37Z orders-svc INFO req-412-337 request ok latency_ms=31
+2026-11-20T08:23:38Z billing-svc INFO req-412-338 request ok latency_ms=39
+2026-11-20T08:23:39Z api-gateway INFO req-412-339 request ok latency_ms=18
+2026-11-20T08:23:40Z orders-svc INFO req-412-340 request ok latency_ms=21
+2026-11-20T08:23:41Z billing-svc INFO req-412-341 request ok latency_ms=24
+2026-11-20T08:23:42Z api-gateway INFO req-412-342 request ok latency_ms=39
+2026-11-20T08:23:43Z orders-svc INFO req-412-343 request ok latency_ms=20
+2026-11-20T08:23:44Z billing-svc INFO req-412-344 request ok latency_ms=24
+2026-11-20T08:23:45Z api-gateway INFO req-412-345 request ok latency_ms=35
+2026-11-20T08:23:46Z orders-svc INFO req-412-346 request ok latency_ms=36
+2026-11-20T08:23:47Z billing-svc INFO req-412-347 request ok latency_ms=33
+2026-11-20T08:23:48Z api-gateway INFO req-412-348 request ok latency_ms=17
+2026-11-20T08:23:49Z orders-svc INFO req-412-349 request ok latency_ms=21
+2026-11-20T08:23:50Z billing-svc INFO req-412-350 request ok latency_ms=33
+2026-11-20T08:23:51Z api-gateway INFO req-412-351 request ok latency_ms=30
+2026-11-20T08:23:52Z orders-svc INFO req-412-352 request ok latency_ms=36
+2026-11-20T08:23:53Z billing-svc INFO req-412-353 request ok latency_ms=34
+2026-11-20T08:23:54Z api-gateway INFO req-412-354 request ok latency_ms=14
+2026-11-20T08:23:55Z orders-svc INFO req-412-355 request ok latency_ms=10
+2026-11-20T08:23:56Z billing-svc INFO req-412-356 request ok latency_ms=27
+2026-11-20T08:23:57Z api-gateway INFO req-412-357 request ok latency_ms=38
+2026-11-20T08:23:58Z orders-svc INFO req-412-358 request ok latency_ms=30
+2026-11-20T08:23:59Z billing-svc INFO req-412-359 request ok latency_ms=26
+2026-11-20T08:24:00Z api-gateway INFO req-412-360 request ok latency_ms=39
+2026-11-20T08:24:01Z orders-svc INFO req-412-361 request ok latency_ms=18
+2026-11-20T08:24:02Z billing-svc INFO req-412-362 request ok latency_ms=37
+2026-11-20T08:24:03Z api-gateway INFO req-412-363 request ok latency_ms=39
+2026-11-20T08:24:04Z orders-svc INFO req-412-364 request ok latency_ms=20
+2026-11-20T08:24:05Z billing-svc INFO req-412-365 request ok latency_ms=31
+2026-11-20T08:24:06Z api-gateway INFO req-412-366 request ok latency_ms=30
+2026-11-20T08:24:07Z orders-svc INFO req-412-367 request ok latency_ms=21
+2026-11-20T08:24:08Z billing-svc INFO req-412-368 request ok latency_ms=31
+2026-11-20T08:24:09Z api-gateway INFO req-412-369 request ok latency_ms=25
+2026-11-20T08:24:10Z orders-svc INFO req-412-370 request ok latency_ms=12
+2026-11-20T08:24:11Z billing-svc INFO req-412-371 request ok latency_ms=35
+2026-11-20T08:24:12Z api-gateway INFO req-412-372 request ok latency_ms=21
+2026-11-20T08:24:13Z orders-svc INFO req-412-373 request ok latency_ms=13
+2026-11-20T08:24:14Z billing-svc INFO req-412-374 request ok latency_ms=33
+2026-11-20T08:24:15Z api-gateway INFO req-412-375 request ok latency_ms=14
+2026-11-20T08:24:16Z orders-svc INFO req-412-376 request ok latency_ms=32
+2026-11-20T08:24:17Z billing-svc INFO req-412-377 request ok latency_ms=23
+2026-11-20T08:24:18Z api-gateway INFO req-412-378 request ok latency_ms=23
+2026-11-20T08:24:19Z orders-svc INFO req-412-379 request ok latency_ms=12
+2026-11-20T08:24:20Z billing-svc INFO req-412-380 request ok latency_ms=27
+2026-11-20T08:24:21Z api-gateway INFO req-412-381 request ok latency_ms=40
+2026-11-20T08:24:22Z orders-svc INFO req-412-382 request ok latency_ms=20
+2026-11-20T08:24:23Z billing-svc INFO req-412-383 request ok latency_ms=27
+2026-11-20T08:24:24Z api-gateway INFO req-412-384 request ok latency_ms=30
+2026-11-20T08:24:25Z orders-svc INFO req-412-385 request ok latency_ms=40
+2026-11-20T08:24:26Z billing-svc INFO req-412-386 request ok latency_ms=24
+2026-11-20T08:24:27Z api-gateway INFO req-412-387 request ok latency_ms=30
+2026-11-20T08:24:28Z orders-svc INFO req-412-388 request ok latency_ms=28
+2026-11-20T08:24:29Z billing-svc INFO req-412-389 request ok latency_ms=33
+2026-11-20T08:24:30Z api-gateway INFO req-412-390 request ok latency_ms=18
+2026-11-20T08:24:31Z orders-svc INFO req-412-391 request ok latency_ms=24
+2026-11-20T08:24:32Z billing-svc INFO req-412-392 request ok latency_ms=12
+2026-11-20T08:24:33Z api-gateway INFO req-412-393 request ok latency_ms=10
+2026-11-20T08:24:34Z orders-svc INFO req-412-394 request ok latency_ms=16
+2026-11-20T08:24:35Z billing-svc INFO req-412-395 request ok latency_ms=13
+2026-11-20T08:24:36Z api-gateway INFO req-412-396 request ok latency_ms=12
+2026-11-20T08:24:37Z orders-svc INFO req-412-397 request ok latency_ms=19
+2026-11-20T08:24:38Z billing-svc INFO req-412-398 request ok latency_ms=16
+2026-11-20T08:24:39Z api-gateway INFO req-412-399 request ok latency_ms=31
+2026-11-20T08:24:40Z orders-svc INFO req-412-400 request ok latency_ms=13
+2026-11-20T08:24:41Z billing-svc INFO req-412-401 request ok latency_ms=33
+2026-11-20T08:24:42Z api-gateway INFO req-412-402 request ok latency_ms=33
+2026-11-20T08:24:43Z orders-svc INFO req-412-403 request ok latency_ms=14
+2026-11-20T08:24:44Z billing-svc INFO req-412-404 request ok latency_ms=20
+2026-11-20T08:24:45Z api-gateway INFO req-412-405 request ok latency_ms=38
+2026-11-20T08:24:46Z orders-svc INFO req-412-406 request ok latency_ms=12
+2026-11-20T08:24:47Z billing-svc INFO req-412-407 request ok latency_ms=37
+2026-11-20T08:24:48Z api-gateway INFO req-412-408 request ok latency_ms=15
+2026-11-20T08:24:49Z orders-svc INFO req-412-409 request ok latency_ms=24
+2026-11-20T08:24:50Z billing-svc INFO req-412-410 request ok latency_ms=23
+2026-11-20T08:24:51Z api-gateway INFO req-412-411 request ok latency_ms=19
+2026-11-20T08:24:52Z orders-svc INFO req-412-412 request ok latency_ms=38
+2026-11-20T08:24:53Z billing-svc INFO req-412-413 request ok latency_ms=37
+2026-11-20T08:24:54Z api-gateway INFO req-412-414 request ok latency_ms=14
+2026-11-20T08:24:55Z orders-svc INFO req-412-415 request ok latency_ms=37
+2026-11-20T08:24:56Z billing-svc INFO req-412-416 request ok latency_ms=16
+2026-11-20T08:24:57Z api-gateway INFO req-412-417 request ok latency_ms=26
+2026-11-20T08:24:58Z orders-svc INFO req-412-418 request ok latency_ms=25
+2026-11-20T08:24:59Z billing-svc INFO req-412-419 request ok latency_ms=15
+2026-11-20T08:25:00Z api-gateway INFO req-412-420 request ok latency_ms=16
+2026-11-20T08:25:01Z orders-svc INFO req-412-421 request ok latency_ms=27
+2026-11-20T08:25:02Z billing-svc INFO req-412-422 request ok latency_ms=25
+2026-11-20T08:25:03Z api-gateway INFO req-412-423 request ok latency_ms=19
+2026-11-20T08:25:04Z orders-svc INFO req-412-424 request ok latency_ms=33
+2026-11-20T08:25:05Z billing-svc INFO req-412-425 request ok latency_ms=39
+2026-11-20T08:25:06Z api-gateway INFO req-412-426 request ok latency_ms=32
+2026-11-20T08:25:07Z orders-svc INFO req-412-427 request ok latency_ms=22
+2026-11-20T08:25:08Z billing-svc INFO req-412-428 request ok latency_ms=30
+2026-11-20T08:25:09Z api-gateway INFO req-412-429 request ok latency_ms=18
+2026-11-20T08:25:10Z orders-svc INFO req-412-430 request ok latency_ms=30
+2026-11-20T08:25:11Z billing-svc INFO req-412-431 request ok latency_ms=38
+2026-11-20T08:25:12Z api-gateway INFO req-412-432 request ok latency_ms=31
+2026-11-20T08:25:13Z orders-svc INFO req-412-433 request ok latency_ms=26
+2026-11-20T08:25:14Z billing-svc INFO req-412-434 request ok latency_ms=24
+2026-11-20T08:25:15Z api-gateway INFO req-412-435 request ok latency_ms=37
+2026-11-20T08:25:16Z orders-svc INFO req-412-436 request ok latency_ms=36
+2026-11-20T08:25:17Z billing-svc INFO req-412-437 request ok latency_ms=16
+2026-11-20T08:25:18Z api-gateway INFO req-412-438 request ok latency_ms=11
+2026-11-20T08:25:19Z orders-svc INFO req-412-439 request ok latency_ms=27
+2026-11-20T08:25:20Z billing-svc INFO req-412-440 request ok latency_ms=10
+2026-11-20T08:25:21Z api-gateway INFO req-412-441 request ok latency_ms=16
+2026-11-20T08:25:22Z orders-svc INFO req-412-442 request ok latency_ms=15
+2026-11-20T08:25:23Z billing-svc INFO req-412-443 request ok latency_ms=21
+2026-11-20T08:25:24Z api-gateway INFO req-412-444 request ok latency_ms=10
+2026-11-20T08:25:25Z orders-svc INFO req-412-445 request ok latency_ms=13
+2026-11-20T08:25:26Z billing-svc INFO req-412-446 request ok latency_ms=11
+2026-11-20T08:25:27Z api-gateway INFO req-412-447 request ok latency_ms=22
+2026-11-20T08:25:28Z orders-svc INFO req-412-448 request ok latency_ms=39
+2026-11-20T08:25:29Z billing-svc INFO req-412-449 request ok latency_ms=14
+2026-11-20T08:25:30Z api-gateway INFO req-412-450 request ok latency_ms=36
+2026-11-20T08:25:31Z orders-svc INFO req-412-451 request ok latency_ms=22
+2026-11-20T08:25:32Z billing-svc INFO req-412-452 request ok latency_ms=29
+2026-11-20T08:25:33Z api-gateway INFO req-412-453 request ok latency_ms=10
+2026-11-20T08:25:34Z orders-svc INFO req-412-454 request ok latency_ms=37
+2026-11-20T08:25:35Z billing-svc INFO req-412-455 request ok latency_ms=32
+2026-11-20T08:25:36Z api-gateway INFO req-412-456 request ok latency_ms=39
+2026-11-20T08:25:37Z orders-svc INFO req-412-457 request ok latency_ms=31
+2026-11-20T08:25:38Z billing-svc INFO req-412-458 request ok latency_ms=10
+2026-11-20T08:25:39Z api-gateway INFO req-412-459 request ok latency_ms=28
+2026-11-20T08:25:40Z orders-svc INFO req-412-460 request ok latency_ms=13
+2026-11-20T08:25:41Z billing-svc INFO req-412-461 request ok latency_ms=25
+2026-11-20T08:25:42Z api-gateway INFO req-412-462 request ok latency_ms=16
+2026-11-20T08:25:43Z orders-svc INFO req-412-463 request ok latency_ms=14
+2026-11-20T08:25:44Z billing-svc INFO req-412-464 request ok latency_ms=25
+2026-11-20T08:25:45Z api-gateway INFO req-412-465 request ok latency_ms=39
+2026-11-20T08:25:46Z orders-svc INFO req-412-466 request ok latency_ms=24
+2026-11-20T08:25:47Z billing-svc INFO req-412-467 request ok latency_ms=15
+2026-11-20T08:25:48Z api-gateway INFO req-412-468 request ok latency_ms=26
+2026-11-20T08:25:49Z orders-svc INFO req-412-469 request ok latency_ms=12
+2026-11-20T08:25:50Z billing-svc INFO req-412-470 request ok latency_ms=39
+2026-11-20T08:25:51Z api-gateway INFO req-412-471 request ok latency_ms=39
+2026-11-20T08:25:52Z orders-svc INFO req-412-472 request ok latency_ms=26
+2026-11-20T08:25:53Z billing-svc INFO req-412-473 request ok latency_ms=33
+2026-11-20T08:25:54Z api-gateway INFO req-412-474 request ok latency_ms=15
+2026-11-20T08:25:55Z orders-svc INFO req-412-475 request ok latency_ms=36
+2026-11-20T08:25:56Z billing-svc INFO req-412-476 request ok latency_ms=21
+2026-11-20T08:25:57Z api-gateway INFO req-412-477 request ok latency_ms=14
+2026-11-20T08:25:58Z orders-svc INFO req-412-478 request ok latency_ms=27
+2026-11-20T08:25:59Z billing-svc INFO req-412-479 request ok latency_ms=15
+2026-11-20T08:26:00Z orders-svc WARN deploy v1.9.4 applied config db_pool_max=3 max_wait_ms=1500
+2026-11-20T08:26:02Z orders-svc ERROR req-412-482 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:03Z billing-svc ERROR req-412-483 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:04Z orders-svc ERROR req-412-484 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:05Z api-gateway ERROR req-412-485 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:06Z billing-svc ERROR req-412-486 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:06Z orders-svc ERROR req-412-486 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:08Z orders-svc ERROR req-412-488 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:09Z billing-svc ERROR req-412-489 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:10Z api-gateway ERROR req-412-490 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:10Z orders-svc ERROR req-412-490 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:12Z billing-svc ERROR req-412-492 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:12Z orders-svc ERROR req-412-492 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:14Z orders-svc ERROR req-412-494 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:15Z api-gateway ERROR req-412-495 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:15Z billing-svc ERROR req-412-495 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:16Z orders-svc ERROR req-412-496 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:18Z billing-svc ERROR req-412-498 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:18Z orders-svc ERROR req-412-498 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:20Z api-gateway ERROR req-412-500 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:20Z orders-svc ERROR req-412-500 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:21Z billing-svc ERROR req-412-501 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:22Z orders-svc ERROR req-412-502 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:24Z billing-svc ERROR req-412-504 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:24Z orders-svc ERROR req-412-504 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:25Z api-gateway ERROR req-412-505 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:26Z orders-svc ERROR req-412-506 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:27Z billing-svc ERROR req-412-507 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:28Z orders-svc ERROR req-412-508 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:30Z api-gateway ERROR req-412-510 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:30Z billing-svc ERROR req-412-510 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:30Z orders-svc ERROR req-412-510 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:32Z orders-svc ERROR req-412-512 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:33Z billing-svc ERROR req-412-513 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:34Z orders-svc ERROR req-412-514 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:35Z api-gateway ERROR req-412-515 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:36Z billing-svc ERROR req-412-516 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:36Z orders-svc ERROR req-412-516 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:38Z orders-svc ERROR req-412-518 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:39Z billing-svc ERROR req-412-519 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:40Z api-gateway ERROR req-412-520 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:40Z orders-svc ERROR req-412-520 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:42Z billing-svc ERROR req-412-522 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:42Z orders-svc ERROR req-412-522 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:44Z orders-svc ERROR req-412-524 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:45Z api-gateway ERROR req-412-525 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:45Z billing-svc ERROR req-412-525 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:46Z orders-svc ERROR req-412-526 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:48Z billing-svc ERROR req-412-528 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:48Z orders-svc ERROR req-412-528 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:50Z api-gateway ERROR req-412-530 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:50Z orders-svc ERROR req-412-530 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:51Z billing-svc ERROR req-412-531 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:52Z orders-svc ERROR req-412-532 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:54Z billing-svc ERROR req-412-534 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:54Z orders-svc ERROR req-412-534 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:55Z api-gateway ERROR req-412-535 HTTP 503 upstream=billing-svc
+2026-11-20T08:26:56Z orders-svc ERROR req-412-536 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:26:57Z billing-svc ERROR req-412-537 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:26:58Z orders-svc ERROR req-412-538 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:00Z api-gateway ERROR req-412-540 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:00Z billing-svc ERROR req-412-540 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:00Z orders-svc ERROR req-412-540 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:02Z orders-svc ERROR req-412-542 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:03Z billing-svc ERROR req-412-543 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:04Z orders-svc ERROR req-412-544 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:05Z api-gateway ERROR req-412-545 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:06Z billing-svc ERROR req-412-546 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:06Z orders-svc ERROR req-412-546 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:08Z orders-svc ERROR req-412-548 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:09Z billing-svc ERROR req-412-549 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:10Z api-gateway ERROR req-412-550 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:10Z orders-svc ERROR req-412-550 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:12Z billing-svc ERROR req-412-552 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:12Z orders-svc ERROR req-412-552 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:14Z orders-svc ERROR req-412-554 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:15Z api-gateway ERROR req-412-555 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:15Z billing-svc ERROR req-412-555 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:16Z orders-svc ERROR req-412-556 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:18Z billing-svc ERROR req-412-558 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:18Z orders-svc ERROR req-412-558 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:20Z api-gateway ERROR req-412-560 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:20Z orders-svc ERROR req-412-560 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:21Z billing-svc ERROR req-412-561 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:22Z orders-svc ERROR req-412-562 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:24Z billing-svc ERROR req-412-564 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:24Z orders-svc ERROR req-412-564 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:25Z api-gateway ERROR req-412-565 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:26Z orders-svc ERROR req-412-566 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:27Z billing-svc ERROR req-412-567 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:28Z orders-svc ERROR req-412-568 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:30Z api-gateway ERROR req-412-570 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:30Z billing-svc ERROR req-412-570 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:30Z orders-svc ERROR req-412-570 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:32Z orders-svc ERROR req-412-572 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:33Z billing-svc ERROR req-412-573 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:34Z orders-svc ERROR req-412-574 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:35Z api-gateway ERROR req-412-575 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:36Z billing-svc ERROR req-412-576 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:36Z orders-svc ERROR req-412-576 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:38Z orders-svc ERROR req-412-578 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:39Z billing-svc ERROR req-412-579 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:40Z api-gateway ERROR req-412-580 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:40Z orders-svc ERROR req-412-580 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:42Z billing-svc ERROR req-412-582 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:42Z orders-svc ERROR req-412-582 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:44Z orders-svc ERROR req-412-584 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:45Z api-gateway ERROR req-412-585 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:45Z billing-svc ERROR req-412-585 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:46Z orders-svc ERROR req-412-586 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:48Z billing-svc ERROR req-412-588 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:48Z orders-svc ERROR req-412-588 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:50Z api-gateway ERROR req-412-590 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:50Z orders-svc ERROR req-412-590 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:51Z billing-svc ERROR req-412-591 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:52Z orders-svc ERROR req-412-592 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:54Z billing-svc ERROR req-412-594 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:54Z orders-svc ERROR req-412-594 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:55Z api-gateway ERROR req-412-595 HTTP 503 upstream=billing-svc
+2026-11-20T08:27:56Z orders-svc ERROR req-412-596 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:27:57Z billing-svc ERROR req-412-597 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:27:58Z orders-svc ERROR req-412-598 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:00Z api-gateway ERROR req-412-600 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:00Z billing-svc ERROR req-412-600 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:00Z orders-svc ERROR req-412-600 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:02Z orders-svc ERROR req-412-602 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:03Z billing-svc ERROR req-412-603 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:04Z orders-svc ERROR req-412-604 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:05Z api-gateway ERROR req-412-605 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:06Z billing-svc ERROR req-412-606 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:06Z orders-svc ERROR req-412-606 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:08Z orders-svc ERROR req-412-608 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:09Z billing-svc ERROR req-412-609 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:10Z api-gateway ERROR req-412-610 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:10Z orders-svc ERROR req-412-610 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:12Z billing-svc ERROR req-412-612 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:12Z orders-svc ERROR req-412-612 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:14Z orders-svc ERROR req-412-614 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:15Z api-gateway ERROR req-412-615 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:15Z billing-svc ERROR req-412-615 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:16Z orders-svc ERROR req-412-616 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:18Z billing-svc ERROR req-412-618 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:18Z orders-svc ERROR req-412-618 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:20Z api-gateway ERROR req-412-620 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:20Z orders-svc ERROR req-412-620 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:21Z billing-svc ERROR req-412-621 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:22Z orders-svc ERROR req-412-622 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:24Z billing-svc ERROR req-412-624 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:24Z orders-svc ERROR req-412-624 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:25Z api-gateway ERROR req-412-625 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:26Z orders-svc ERROR req-412-626 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:27Z billing-svc ERROR req-412-627 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:28Z orders-svc ERROR req-412-628 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:30Z api-gateway ERROR req-412-630 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:30Z billing-svc ERROR req-412-630 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:30Z orders-svc ERROR req-412-630 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:32Z orders-svc ERROR req-412-632 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:33Z billing-svc ERROR req-412-633 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:34Z orders-svc ERROR req-412-634 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:35Z api-gateway ERROR req-412-635 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:36Z billing-svc ERROR req-412-636 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:36Z orders-svc ERROR req-412-636 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:38Z orders-svc ERROR req-412-638 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:39Z billing-svc ERROR req-412-639 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:40Z api-gateway ERROR req-412-640 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:40Z orders-svc ERROR req-412-640 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:42Z billing-svc ERROR req-412-642 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:42Z orders-svc ERROR req-412-642 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:44Z orders-svc ERROR req-412-644 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:45Z api-gateway ERROR req-412-645 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:45Z billing-svc ERROR req-412-645 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:46Z orders-svc ERROR req-412-646 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:48Z billing-svc ERROR req-412-648 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:48Z orders-svc ERROR req-412-648 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:50Z api-gateway ERROR req-412-650 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:50Z orders-svc ERROR req-412-650 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:51Z billing-svc ERROR req-412-651 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:52Z orders-svc ERROR req-412-652 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:54Z billing-svc ERROR req-412-654 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:54Z orders-svc ERROR req-412-654 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:55Z api-gateway ERROR req-412-655 HTTP 503 upstream=billing-svc
+2026-11-20T08:28:56Z orders-svc ERROR req-412-656 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:28:57Z billing-svc ERROR req-412-657 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:28:58Z orders-svc ERROR req-412-658 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:00Z api-gateway ERROR req-412-660 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:00Z billing-svc ERROR req-412-660 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:00Z orders-svc ERROR req-412-660 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:02Z orders-svc ERROR req-412-662 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:03Z billing-svc ERROR req-412-663 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:04Z orders-svc ERROR req-412-664 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:05Z api-gateway ERROR req-412-665 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:06Z billing-svc ERROR req-412-666 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:06Z orders-svc ERROR req-412-666 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:08Z orders-svc ERROR req-412-668 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:09Z billing-svc ERROR req-412-669 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:10Z api-gateway ERROR req-412-670 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:10Z orders-svc ERROR req-412-670 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:12Z billing-svc ERROR req-412-672 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:12Z orders-svc ERROR req-412-672 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:14Z orders-svc ERROR req-412-674 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:15Z api-gateway ERROR req-412-675 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:15Z billing-svc ERROR req-412-675 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:16Z orders-svc ERROR req-412-676 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:18Z billing-svc ERROR req-412-678 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:18Z orders-svc ERROR req-412-678 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:20Z api-gateway ERROR req-412-680 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:20Z orders-svc ERROR req-412-680 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:21Z billing-svc ERROR req-412-681 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:22Z orders-svc ERROR req-412-682 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:24Z billing-svc ERROR req-412-684 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:24Z orders-svc ERROR req-412-684 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:25Z api-gateway ERROR req-412-685 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:26Z orders-svc ERROR req-412-686 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:27Z billing-svc ERROR req-412-687 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:28Z orders-svc ERROR req-412-688 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:30Z api-gateway ERROR req-412-690 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:30Z billing-svc ERROR req-412-690 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:30Z orders-svc ERROR req-412-690 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:32Z orders-svc ERROR req-412-692 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:33Z billing-svc ERROR req-412-693 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:34Z orders-svc ERROR req-412-694 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:35Z api-gateway ERROR req-412-695 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:36Z billing-svc ERROR req-412-696 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:36Z orders-svc ERROR req-412-696 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:38Z orders-svc ERROR req-412-698 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:39Z billing-svc ERROR req-412-699 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:40Z api-gateway ERROR req-412-700 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:40Z orders-svc ERROR req-412-700 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:42Z billing-svc ERROR req-412-702 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:42Z orders-svc ERROR req-412-702 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:44Z orders-svc ERROR req-412-704 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:45Z api-gateway ERROR req-412-705 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:45Z billing-svc ERROR req-412-705 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:46Z orders-svc ERROR req-412-706 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:48Z billing-svc ERROR req-412-708 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:48Z orders-svc ERROR req-412-708 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:50Z api-gateway ERROR req-412-710 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:50Z orders-svc ERROR req-412-710 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:51Z billing-svc ERROR req-412-711 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:52Z orders-svc ERROR req-412-712 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:54Z billing-svc ERROR req-412-714 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:54Z orders-svc ERROR req-412-714 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:55Z api-gateway ERROR req-412-715 HTTP 503 upstream=billing-svc
+2026-11-20T08:29:56Z orders-svc ERROR req-412-716 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:29:57Z billing-svc ERROR req-412-717 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:29:58Z orders-svc ERROR req-412-718 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:00Z api-gateway ERROR req-412-720 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:00Z billing-svc ERROR req-412-720 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:00Z orders-svc ERROR req-412-720 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:02Z orders-svc ERROR req-412-722 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:03Z billing-svc ERROR req-412-723 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:04Z orders-svc ERROR req-412-724 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:05Z api-gateway ERROR req-412-725 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:06Z billing-svc ERROR req-412-726 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:06Z orders-svc ERROR req-412-726 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:08Z orders-svc ERROR req-412-728 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:09Z billing-svc ERROR req-412-729 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:10Z api-gateway ERROR req-412-730 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:10Z orders-svc ERROR req-412-730 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:12Z billing-svc ERROR req-412-732 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:12Z orders-svc ERROR req-412-732 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:14Z orders-svc ERROR req-412-734 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:15Z api-gateway ERROR req-412-735 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:15Z billing-svc ERROR req-412-735 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:16Z orders-svc ERROR req-412-736 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:18Z billing-svc ERROR req-412-738 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:18Z orders-svc ERROR req-412-738 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:20Z api-gateway ERROR req-412-740 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:20Z orders-svc ERROR req-412-740 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:21Z billing-svc ERROR req-412-741 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:22Z orders-svc ERROR req-412-742 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:24Z billing-svc ERROR req-412-744 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:24Z orders-svc ERROR req-412-744 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:25Z api-gateway ERROR req-412-745 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:26Z orders-svc ERROR req-412-746 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:27Z billing-svc ERROR req-412-747 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:28Z orders-svc ERROR req-412-748 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:30Z api-gateway ERROR req-412-750 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:30Z billing-svc ERROR req-412-750 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:30Z orders-svc ERROR req-412-750 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:32Z orders-svc ERROR req-412-752 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:33Z billing-svc ERROR req-412-753 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:34Z orders-svc ERROR req-412-754 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:35Z api-gateway ERROR req-412-755 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:36Z billing-svc ERROR req-412-756 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:36Z orders-svc ERROR req-412-756 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:38Z orders-svc ERROR req-412-758 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:39Z billing-svc ERROR req-412-759 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:40Z api-gateway ERROR req-412-760 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:40Z orders-svc ERROR req-412-760 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:42Z billing-svc ERROR req-412-762 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:42Z orders-svc ERROR req-412-762 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:44Z orders-svc ERROR req-412-764 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:45Z api-gateway ERROR req-412-765 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:45Z billing-svc ERROR req-412-765 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:46Z orders-svc ERROR req-412-766 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:48Z billing-svc ERROR req-412-768 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:48Z orders-svc ERROR req-412-768 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:50Z api-gateway ERROR req-412-770 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:50Z orders-svc ERROR req-412-770 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:51Z billing-svc ERROR req-412-771 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:52Z orders-svc ERROR req-412-772 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:54Z billing-svc ERROR req-412-774 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:54Z orders-svc ERROR req-412-774 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:55Z api-gateway ERROR req-412-775 HTTP 503 upstream=billing-svc
+2026-11-20T08:30:56Z orders-svc ERROR req-412-776 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:30:57Z billing-svc ERROR req-412-777 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:30:58Z orders-svc ERROR req-412-778 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:00Z api-gateway ERROR req-412-780 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:00Z billing-svc ERROR req-412-780 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:00Z orders-svc ERROR req-412-780 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:02Z orders-svc ERROR req-412-782 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:03Z billing-svc ERROR req-412-783 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:04Z orders-svc ERROR req-412-784 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:05Z api-gateway ERROR req-412-785 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:06Z billing-svc ERROR req-412-786 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:06Z orders-svc ERROR req-412-786 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:08Z orders-svc ERROR req-412-788 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:09Z billing-svc ERROR req-412-789 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:10Z api-gateway ERROR req-412-790 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:10Z orders-svc ERROR req-412-790 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:12Z billing-svc ERROR req-412-792 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:12Z orders-svc ERROR req-412-792 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:14Z orders-svc ERROR req-412-794 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:15Z api-gateway ERROR req-412-795 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:15Z billing-svc ERROR req-412-795 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:16Z orders-svc ERROR req-412-796 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:18Z billing-svc ERROR req-412-798 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:18Z orders-svc ERROR req-412-798 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:20Z api-gateway ERROR req-412-800 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:20Z orders-svc ERROR req-412-800 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:21Z billing-svc ERROR req-412-801 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:22Z orders-svc ERROR req-412-802 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:24Z billing-svc ERROR req-412-804 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:24Z orders-svc ERROR req-412-804 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:25Z api-gateway ERROR req-412-805 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:26Z orders-svc ERROR req-412-806 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:27Z billing-svc ERROR req-412-807 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:28Z orders-svc ERROR req-412-808 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:30Z api-gateway ERROR req-412-810 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:30Z billing-svc ERROR req-412-810 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:30Z orders-svc ERROR req-412-810 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:32Z orders-svc ERROR req-412-812 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:33Z billing-svc ERROR req-412-813 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:34Z orders-svc ERROR req-412-814 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:35Z api-gateway ERROR req-412-815 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:36Z billing-svc ERROR req-412-816 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:36Z orders-svc ERROR req-412-816 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:38Z orders-svc ERROR req-412-818 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:39Z billing-svc ERROR req-412-819 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:40Z api-gateway ERROR req-412-820 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:40Z orders-svc ERROR req-412-820 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:42Z billing-svc ERROR req-412-822 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:42Z orders-svc ERROR req-412-822 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:44Z orders-svc ERROR req-412-824 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:45Z api-gateway ERROR req-412-825 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:45Z billing-svc ERROR req-412-825 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:46Z orders-svc ERROR req-412-826 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:48Z billing-svc ERROR req-412-828 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:48Z orders-svc ERROR req-412-828 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:50Z api-gateway ERROR req-412-830 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:50Z orders-svc ERROR req-412-830 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:51Z billing-svc ERROR req-412-831 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:52Z orders-svc ERROR req-412-832 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:54Z billing-svc ERROR req-412-834 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:54Z orders-svc ERROR req-412-834 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:55Z api-gateway ERROR req-412-835 HTTP 503 upstream=billing-svc
+2026-11-20T08:31:56Z orders-svc ERROR req-412-836 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:31:57Z billing-svc ERROR req-412-837 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:31:58Z orders-svc ERROR req-412-838 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:00Z api-gateway ERROR req-412-840 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:00Z billing-svc ERROR req-412-840 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:00Z orders-svc ERROR req-412-840 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:02Z orders-svc ERROR req-412-842 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:03Z billing-svc ERROR req-412-843 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:04Z orders-svc ERROR req-412-844 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:05Z api-gateway ERROR req-412-845 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:06Z billing-svc ERROR req-412-846 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:06Z orders-svc ERROR req-412-846 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:08Z orders-svc ERROR req-412-848 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:09Z billing-svc ERROR req-412-849 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:10Z api-gateway ERROR req-412-850 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:10Z orders-svc ERROR req-412-850 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:12Z billing-svc ERROR req-412-852 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:12Z orders-svc ERROR req-412-852 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:14Z orders-svc ERROR req-412-854 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:15Z api-gateway ERROR req-412-855 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:15Z billing-svc ERROR req-412-855 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:16Z orders-svc ERROR req-412-856 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:18Z billing-svc ERROR req-412-858 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:18Z orders-svc ERROR req-412-858 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:20Z api-gateway ERROR req-412-860 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:20Z orders-svc ERROR req-412-860 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:21Z billing-svc ERROR req-412-861 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:22Z orders-svc ERROR req-412-862 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:24Z billing-svc ERROR req-412-864 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:24Z orders-svc ERROR req-412-864 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:25Z api-gateway ERROR req-412-865 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:26Z orders-svc ERROR req-412-866 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:27Z billing-svc ERROR req-412-867 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:28Z orders-svc ERROR req-412-868 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:30Z api-gateway ERROR req-412-870 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:30Z billing-svc ERROR req-412-870 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:30Z orders-svc ERROR req-412-870 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:32Z orders-svc ERROR req-412-872 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:33Z billing-svc ERROR req-412-873 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:34Z orders-svc ERROR req-412-874 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:35Z api-gateway ERROR req-412-875 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:36Z billing-svc ERROR req-412-876 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:36Z orders-svc ERROR req-412-876 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:38Z orders-svc ERROR req-412-878 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:39Z billing-svc ERROR req-412-879 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:40Z api-gateway ERROR req-412-880 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:40Z orders-svc ERROR req-412-880 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:42Z billing-svc ERROR req-412-882 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:42Z orders-svc ERROR req-412-882 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:44Z orders-svc ERROR req-412-884 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:45Z api-gateway ERROR req-412-885 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:45Z billing-svc ERROR req-412-885 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:46Z orders-svc ERROR req-412-886 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:48Z billing-svc ERROR req-412-888 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:48Z orders-svc ERROR req-412-888 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:50Z api-gateway ERROR req-412-890 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:50Z orders-svc ERROR req-412-890 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:51Z billing-svc ERROR req-412-891 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:52Z orders-svc ERROR req-412-892 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:54Z billing-svc ERROR req-412-894 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:54Z orders-svc ERROR req-412-894 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:55Z api-gateway ERROR req-412-895 HTTP 503 upstream=billing-svc
+2026-11-20T08:32:56Z orders-svc ERROR req-412-896 pgpool connection pool exhausted active=3/3 queued=48
+2026-11-20T08:32:57Z billing-svc ERROR req-412-897 billing-svc failed reading orders-svc ledger timeout
+2026-11-20T08:32:58Z orders-svc ERROR req-412-898 pgpool connection pool exhausted active=3/3 queued=48

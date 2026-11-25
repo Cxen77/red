@@ -1,0 +1,912 @@
+2026-11-19T20:58:00Z api-gateway INFO req-518-0 request ok latency_ms=40
+2026-11-19T20:58:01Z session-svc INFO req-518-1 request ok latency_ms=36
+2026-11-19T20:58:02Z auth-svc INFO req-518-2 request ok latency_ms=21
+2026-11-19T20:58:03Z api-gateway INFO req-518-3 request ok latency_ms=26
+2026-11-19T20:58:04Z session-svc INFO req-518-4 request ok latency_ms=21
+2026-11-19T20:58:05Z auth-svc INFO req-518-5 request ok latency_ms=18
+2026-11-19T20:58:06Z api-gateway INFO req-518-6 request ok latency_ms=28
+2026-11-19T20:58:07Z session-svc INFO req-518-7 request ok latency_ms=18
+2026-11-19T20:58:08Z auth-svc INFO req-518-8 request ok latency_ms=26
+2026-11-19T20:58:09Z api-gateway INFO req-518-9 request ok latency_ms=35
+2026-11-19T20:58:10Z session-svc INFO req-518-10 request ok latency_ms=34
+2026-11-19T20:58:11Z auth-svc INFO req-518-11 request ok latency_ms=38
+2026-11-19T20:58:12Z api-gateway INFO req-518-12 request ok latency_ms=25
+2026-11-19T20:58:13Z session-svc INFO req-518-13 request ok latency_ms=33
+2026-11-19T20:58:14Z auth-svc INFO req-518-14 request ok latency_ms=17
+2026-11-19T20:58:15Z api-gateway INFO req-518-15 request ok latency_ms=35
+2026-11-19T20:58:16Z session-svc INFO req-518-16 request ok latency_ms=28
+2026-11-19T20:58:17Z auth-svc INFO req-518-17 request ok latency_ms=35
+2026-11-19T20:58:18Z api-gateway INFO req-518-18 request ok latency_ms=24
+2026-11-19T20:58:19Z session-svc INFO req-518-19 request ok latency_ms=10
+2026-11-19T20:58:20Z auth-svc INFO req-518-20 request ok latency_ms=37
+2026-11-19T20:58:21Z api-gateway INFO req-518-21 request ok latency_ms=24
+2026-11-19T20:58:22Z session-svc INFO req-518-22 request ok latency_ms=28
+2026-11-19T20:58:23Z auth-svc INFO req-518-23 request ok latency_ms=40
+2026-11-19T20:58:24Z api-gateway INFO req-518-24 request ok latency_ms=13
+2026-11-19T20:58:25Z session-svc INFO req-518-25 request ok latency_ms=21
+2026-11-19T20:58:26Z auth-svc INFO req-518-26 request ok latency_ms=16
+2026-11-19T20:58:27Z api-gateway INFO req-518-27 request ok latency_ms=14
+2026-11-19T20:58:28Z session-svc INFO req-518-28 request ok latency_ms=21
+2026-11-19T20:58:29Z auth-svc INFO req-518-29 request ok latency_ms=16
+2026-11-19T20:58:30Z api-gateway INFO req-518-30 request ok latency_ms=28
+2026-11-19T20:58:31Z session-svc INFO req-518-31 request ok latency_ms=27
+2026-11-19T20:58:32Z auth-svc INFO req-518-32 request ok latency_ms=31
+2026-11-19T20:58:33Z api-gateway INFO req-518-33 request ok latency_ms=24
+2026-11-19T20:58:34Z session-svc INFO req-518-34 request ok latency_ms=13
+2026-11-19T20:58:35Z auth-svc INFO req-518-35 request ok latency_ms=34
+2026-11-19T20:58:36Z api-gateway INFO req-518-36 request ok latency_ms=23
+2026-11-19T20:58:37Z session-svc INFO req-518-37 request ok latency_ms=30
+2026-11-19T20:58:38Z auth-svc INFO req-518-38 request ok latency_ms=26
+2026-11-19T20:58:39Z api-gateway INFO req-518-39 request ok latency_ms=33
+2026-11-19T20:58:40Z session-svc INFO req-518-40 request ok latency_ms=14
+2026-11-19T20:58:41Z auth-svc INFO req-518-41 request ok latency_ms=36
+2026-11-19T20:58:42Z api-gateway INFO req-518-42 request ok latency_ms=16
+2026-11-19T20:58:43Z session-svc INFO req-518-43 request ok latency_ms=32
+2026-11-19T20:58:44Z auth-svc INFO req-518-44 request ok latency_ms=25
+2026-11-19T20:58:45Z api-gateway INFO req-518-45 request ok latency_ms=29
+2026-11-19T20:58:46Z session-svc INFO req-518-46 request ok latency_ms=15
+2026-11-19T20:58:47Z auth-svc INFO req-518-47 request ok latency_ms=28
+2026-11-19T20:58:48Z api-gateway INFO req-518-48 request ok latency_ms=32
+2026-11-19T20:58:49Z session-svc INFO req-518-49 request ok latency_ms=40
+2026-11-19T20:58:50Z auth-svc INFO req-518-50 request ok latency_ms=37
+2026-11-19T20:58:51Z api-gateway INFO req-518-51 request ok latency_ms=21
+2026-11-19T20:58:52Z session-svc INFO req-518-52 request ok latency_ms=13
+2026-11-19T20:58:53Z auth-svc INFO req-518-53 request ok latency_ms=36
+2026-11-19T20:58:54Z api-gateway INFO req-518-54 request ok latency_ms=40
+2026-11-19T20:58:55Z session-svc INFO req-518-55 request ok latency_ms=29
+2026-11-19T20:58:56Z auth-svc INFO req-518-56 request ok latency_ms=15
+2026-11-19T20:58:57Z api-gateway INFO req-518-57 request ok latency_ms=22
+2026-11-19T20:58:58Z session-svc INFO req-518-58 request ok latency_ms=21
+2026-11-19T20:58:59Z auth-svc INFO req-518-59 request ok latency_ms=27
+2026-11-19T20:59:00Z api-gateway INFO req-518-60 request ok latency_ms=33
+2026-11-19T20:59:01Z session-svc INFO req-518-61 request ok latency_ms=15
+2026-11-19T20:59:02Z auth-svc INFO req-518-62 request ok latency_ms=20
+2026-11-19T20:59:03Z api-gateway INFO req-518-63 request ok latency_ms=17
+2026-11-19T20:59:04Z session-svc INFO req-518-64 request ok latency_ms=40
+2026-11-19T20:59:05Z auth-svc INFO req-518-65 request ok latency_ms=15
+2026-11-19T20:59:06Z api-gateway INFO req-518-66 request ok latency_ms=13
+2026-11-19T20:59:07Z session-svc INFO req-518-67 request ok latency_ms=37
+2026-11-19T20:59:08Z auth-svc INFO req-518-68 request ok latency_ms=36
+2026-11-19T20:59:09Z api-gateway INFO req-518-69 request ok latency_ms=11
+2026-11-19T20:59:10Z session-svc INFO req-518-70 request ok latency_ms=23
+2026-11-19T20:59:11Z auth-svc INFO req-518-71 request ok latency_ms=28
+2026-11-19T20:59:12Z api-gateway INFO req-518-72 request ok latency_ms=12
+2026-11-19T20:59:13Z session-svc INFO req-518-73 request ok latency_ms=31
+2026-11-19T20:59:14Z auth-svc INFO req-518-74 request ok latency_ms=36
+2026-11-19T20:59:15Z api-gateway INFO req-518-75 request ok latency_ms=18
+2026-11-19T20:59:16Z session-svc INFO req-518-76 request ok latency_ms=11
+2026-11-19T20:59:17Z auth-svc INFO req-518-77 request ok latency_ms=26
+2026-11-19T20:59:18Z api-gateway INFO req-518-78 request ok latency_ms=16
+2026-11-19T20:59:19Z session-svc INFO req-518-79 request ok latency_ms=39
+2026-11-19T20:59:20Z auth-svc INFO req-518-80 request ok latency_ms=40
+2026-11-19T20:59:21Z api-gateway INFO req-518-81 request ok latency_ms=23
+2026-11-19T20:59:22Z session-svc INFO req-518-82 request ok latency_ms=37
+2026-11-19T20:59:23Z auth-svc INFO req-518-83 request ok latency_ms=31
+2026-11-19T20:59:24Z api-gateway INFO req-518-84 request ok latency_ms=16
+2026-11-19T20:59:25Z session-svc INFO req-518-85 request ok latency_ms=32
+2026-11-19T20:59:26Z auth-svc INFO req-518-86 request ok latency_ms=15
+2026-11-19T20:59:27Z api-gateway INFO req-518-87 request ok latency_ms=19
+2026-11-19T20:59:28Z session-svc INFO req-518-88 request ok latency_ms=36
+2026-11-19T20:59:29Z auth-svc INFO req-518-89 request ok latency_ms=26
+2026-11-19T20:59:30Z api-gateway INFO req-518-90 request ok latency_ms=22
+2026-11-19T20:59:31Z session-svc INFO req-518-91 request ok latency_ms=12
+2026-11-19T20:59:32Z auth-svc INFO req-518-92 request ok latency_ms=33
+2026-11-19T20:59:33Z api-gateway INFO req-518-93 request ok latency_ms=17
+2026-11-19T20:59:34Z session-svc INFO req-518-94 request ok latency_ms=38
+2026-11-19T20:59:35Z auth-svc INFO req-518-95 request ok latency_ms=12
+2026-11-19T20:59:36Z api-gateway INFO req-518-96 request ok latency_ms=29
+2026-11-19T20:59:37Z session-svc INFO req-518-97 request ok latency_ms=12
+2026-11-19T20:59:38Z auth-svc INFO req-518-98 request ok latency_ms=29
+2026-11-19T20:59:39Z api-gateway INFO req-518-99 request ok latency_ms=15
+2026-11-19T20:59:40Z session-svc INFO req-518-100 request ok latency_ms=22
+2026-11-19T20:59:41Z auth-svc INFO req-518-101 request ok latency_ms=28
+2026-11-19T20:59:42Z api-gateway INFO req-518-102 request ok latency_ms=39
+2026-11-19T20:59:43Z session-svc INFO req-518-103 request ok latency_ms=28
+2026-11-19T20:59:44Z auth-svc INFO req-518-104 request ok latency_ms=14
+2026-11-19T20:59:45Z api-gateway INFO req-518-105 request ok latency_ms=39
+2026-11-19T20:59:46Z session-svc INFO req-518-106 request ok latency_ms=22
+2026-11-19T20:59:47Z auth-svc INFO req-518-107 request ok latency_ms=30
+2026-11-19T20:59:48Z api-gateway INFO req-518-108 request ok latency_ms=32
+2026-11-19T20:59:49Z session-svc INFO req-518-109 request ok latency_ms=24
+2026-11-19T20:59:50Z auth-svc INFO req-518-110 request ok latency_ms=25
+2026-11-19T20:59:51Z api-gateway INFO req-518-111 request ok latency_ms=39
+2026-11-19T20:59:52Z session-svc INFO req-518-112 request ok latency_ms=39
+2026-11-19T20:59:53Z auth-svc INFO req-518-113 request ok latency_ms=38
+2026-11-19T20:59:54Z api-gateway INFO req-518-114 request ok latency_ms=33
+2026-11-19T20:59:55Z session-svc INFO req-518-115 request ok latency_ms=21
+2026-11-19T20:59:56Z auth-svc INFO req-518-116 request ok latency_ms=18
+2026-11-19T20:59:57Z api-gateway INFO req-518-117 request ok latency_ms=23
+2026-11-19T20:59:58Z session-svc INFO req-518-118 request ok latency_ms=23
+2026-11-19T20:59:59Z auth-svc INFO req-518-119 request ok latency_ms=31
+2026-11-19T21:00:00Z api-gateway INFO req-518-120 request ok latency_ms=10
+2026-11-19T21:00:01Z session-svc INFO req-518-121 request ok latency_ms=24
+2026-11-19T21:00:02Z auth-svc INFO req-518-122 request ok latency_ms=36
+2026-11-19T21:00:03Z api-gateway INFO req-518-123 request ok latency_ms=22
+2026-11-19T21:00:04Z session-svc INFO req-518-124 request ok latency_ms=26
+2026-11-19T21:00:05Z auth-svc INFO req-518-125 request ok latency_ms=31
+2026-11-19T21:00:06Z api-gateway INFO req-518-126 request ok latency_ms=31
+2026-11-19T21:00:07Z session-svc INFO req-518-127 request ok latency_ms=28
+2026-11-19T21:00:08Z auth-svc INFO req-518-128 request ok latency_ms=16
+2026-11-19T21:00:09Z api-gateway INFO req-518-129 request ok latency_ms=34
+2026-11-19T21:00:10Z session-svc INFO req-518-130 request ok latency_ms=18
+2026-11-19T21:00:11Z auth-svc INFO req-518-131 request ok latency_ms=34
+2026-11-19T21:00:12Z api-gateway INFO req-518-132 request ok latency_ms=13
+2026-11-19T21:00:13Z session-svc INFO req-518-133 request ok latency_ms=16
+2026-11-19T21:00:14Z auth-svc INFO req-518-134 request ok latency_ms=17
+2026-11-19T21:00:15Z api-gateway INFO req-518-135 request ok latency_ms=17
+2026-11-19T21:00:16Z session-svc INFO req-518-136 request ok latency_ms=37
+2026-11-19T21:00:17Z auth-svc INFO req-518-137 request ok latency_ms=12
+2026-11-19T21:00:18Z api-gateway INFO req-518-138 request ok latency_ms=35
+2026-11-19T21:00:19Z session-svc INFO req-518-139 request ok latency_ms=35
+2026-11-19T21:00:20Z auth-svc INFO req-518-140 request ok latency_ms=13
+2026-11-19T21:00:21Z api-gateway INFO req-518-141 request ok latency_ms=39
+2026-11-19T21:00:22Z session-svc INFO req-518-142 request ok latency_ms=14
+2026-11-19T21:00:23Z auth-svc INFO req-518-143 request ok latency_ms=13
+2026-11-19T21:00:24Z api-gateway INFO req-518-144 request ok latency_ms=35
+2026-11-19T21:00:25Z session-svc INFO req-518-145 request ok latency_ms=12
+2026-11-19T21:00:26Z auth-svc INFO req-518-146 request ok latency_ms=35
+2026-11-19T21:00:27Z api-gateway INFO req-518-147 request ok latency_ms=34
+2026-11-19T21:00:28Z session-svc INFO req-518-148 request ok latency_ms=15
+2026-11-19T21:00:29Z auth-svc INFO req-518-149 request ok latency_ms=17
+2026-11-19T21:00:30Z api-gateway INFO req-518-150 request ok latency_ms=16
+2026-11-19T21:00:31Z session-svc INFO req-518-151 request ok latency_ms=12
+2026-11-19T21:00:32Z auth-svc INFO req-518-152 request ok latency_ms=35
+2026-11-19T21:00:33Z api-gateway INFO req-518-153 request ok latency_ms=11
+2026-11-19T21:00:34Z session-svc INFO req-518-154 request ok latency_ms=14
+2026-11-19T21:00:35Z auth-svc INFO req-518-155 request ok latency_ms=26
+2026-11-19T21:00:36Z api-gateway INFO req-518-156 request ok latency_ms=39
+2026-11-19T21:00:37Z session-svc INFO req-518-157 request ok latency_ms=20
+2026-11-19T21:00:38Z auth-svc INFO req-518-158 request ok latency_ms=20
+2026-11-19T21:00:39Z api-gateway INFO req-518-159 request ok latency_ms=23
+2026-11-19T21:00:40Z session-svc INFO req-518-160 request ok latency_ms=18
+2026-11-19T21:00:41Z auth-svc INFO req-518-161 request ok latency_ms=31
+2026-11-19T21:00:42Z api-gateway INFO req-518-162 request ok latency_ms=23
+2026-11-19T21:00:43Z session-svc INFO req-518-163 request ok latency_ms=27
+2026-11-19T21:00:44Z auth-svc INFO req-518-164 request ok latency_ms=13
+2026-11-19T21:00:45Z api-gateway INFO req-518-165 request ok latency_ms=28
+2026-11-19T21:00:46Z session-svc INFO req-518-166 request ok latency_ms=28
+2026-11-19T21:00:47Z auth-svc INFO req-518-167 request ok latency_ms=27
+2026-11-19T21:00:48Z api-gateway INFO req-518-168 request ok latency_ms=27
+2026-11-19T21:00:49Z session-svc INFO req-518-169 request ok latency_ms=33
+2026-11-19T21:00:50Z auth-svc INFO req-518-170 request ok latency_ms=25
+2026-11-19T21:00:51Z api-gateway INFO req-518-171 request ok latency_ms=22
+2026-11-19T21:00:52Z session-svc INFO req-518-172 request ok latency_ms=16
+2026-11-19T21:00:53Z auth-svc INFO req-518-173 request ok latency_ms=29
+2026-11-19T21:00:54Z api-gateway INFO req-518-174 request ok latency_ms=39
+2026-11-19T21:00:55Z session-svc INFO req-518-175 request ok latency_ms=38
+2026-11-19T21:00:56Z auth-svc INFO req-518-176 request ok latency_ms=29
+2026-11-19T21:00:57Z api-gateway INFO req-518-177 request ok latency_ms=37
+2026-11-19T21:00:58Z session-svc INFO req-518-178 request ok latency_ms=23
+2026-11-19T21:00:59Z auth-svc INFO req-518-179 request ok latency_ms=31
+2026-11-19T21:01:00Z api-gateway INFO req-518-180 request ok latency_ms=21
+2026-11-19T21:01:01Z session-svc INFO req-518-181 request ok latency_ms=32
+2026-11-19T21:01:02Z auth-svc INFO req-518-182 request ok latency_ms=27
+2026-11-19T21:01:03Z api-gateway INFO req-518-183 request ok latency_ms=16
+2026-11-19T21:01:04Z session-svc INFO req-518-184 request ok latency_ms=19
+2026-11-19T21:01:05Z auth-svc INFO req-518-185 request ok latency_ms=25
+2026-11-19T21:01:06Z api-gateway INFO req-518-186 request ok latency_ms=26
+2026-11-19T21:01:07Z session-svc INFO req-518-187 request ok latency_ms=29
+2026-11-19T21:01:08Z auth-svc INFO req-518-188 request ok latency_ms=38
+2026-11-19T21:01:09Z api-gateway INFO req-518-189 request ok latency_ms=34
+2026-11-19T21:01:10Z session-svc INFO req-518-190 request ok latency_ms=20
+2026-11-19T21:01:11Z auth-svc INFO req-518-191 request ok latency_ms=40
+2026-11-19T21:01:12Z api-gateway INFO req-518-192 request ok latency_ms=17
+2026-11-19T21:01:13Z session-svc INFO req-518-193 request ok latency_ms=28
+2026-11-19T21:01:14Z auth-svc INFO req-518-194 request ok latency_ms=31
+2026-11-19T21:01:15Z api-gateway INFO req-518-195 request ok latency_ms=29
+2026-11-19T21:01:16Z session-svc INFO req-518-196 request ok latency_ms=37
+2026-11-19T21:01:17Z auth-svc INFO req-518-197 request ok latency_ms=13
+2026-11-19T21:01:18Z api-gateway INFO req-518-198 request ok latency_ms=25
+2026-11-19T21:01:19Z session-svc INFO req-518-199 request ok latency_ms=21
+2026-11-19T21:01:20Z auth-svc INFO req-518-200 request ok latency_ms=34
+2026-11-19T21:01:21Z api-gateway INFO req-518-201 request ok latency_ms=26
+2026-11-19T21:01:22Z session-svc INFO req-518-202 request ok latency_ms=33
+2026-11-19T21:01:23Z auth-svc INFO req-518-203 request ok latency_ms=27
+2026-11-19T21:01:24Z api-gateway INFO req-518-204 request ok latency_ms=34
+2026-11-19T21:01:25Z session-svc INFO req-518-205 request ok latency_ms=16
+2026-11-19T21:01:26Z auth-svc INFO req-518-206 request ok latency_ms=37
+2026-11-19T21:01:27Z api-gateway INFO req-518-207 request ok latency_ms=31
+2026-11-19T21:01:28Z session-svc INFO req-518-208 request ok latency_ms=34
+2026-11-19T21:01:29Z auth-svc INFO req-518-209 request ok latency_ms=23
+2026-11-19T21:01:30Z api-gateway INFO req-518-210 request ok latency_ms=40
+2026-11-19T21:01:31Z session-svc INFO req-518-211 request ok latency_ms=31
+2026-11-19T21:01:32Z auth-svc INFO req-518-212 request ok latency_ms=28
+2026-11-19T21:01:33Z api-gateway INFO req-518-213 request ok latency_ms=19
+2026-11-19T21:01:34Z session-svc INFO req-518-214 request ok latency_ms=19
+2026-11-19T21:01:35Z auth-svc INFO req-518-215 request ok latency_ms=22
+2026-11-19T21:01:36Z api-gateway INFO req-518-216 request ok latency_ms=30
+2026-11-19T21:01:37Z session-svc INFO req-518-217 request ok latency_ms=37
+2026-11-19T21:01:38Z auth-svc INFO req-518-218 request ok latency_ms=38
+2026-11-19T21:01:39Z api-gateway INFO req-518-219 request ok latency_ms=30
+2026-11-19T21:01:40Z session-svc INFO req-518-220 request ok latency_ms=15
+2026-11-19T21:01:41Z auth-svc INFO req-518-221 request ok latency_ms=24
+2026-11-19T21:01:42Z api-gateway INFO req-518-222 request ok latency_ms=13
+2026-11-19T21:01:43Z session-svc INFO req-518-223 request ok latency_ms=37
+2026-11-19T21:01:44Z auth-svc INFO req-518-224 request ok latency_ms=23
+2026-11-19T21:01:45Z api-gateway INFO req-518-225 request ok latency_ms=22
+2026-11-19T21:01:46Z session-svc INFO req-518-226 request ok latency_ms=36
+2026-11-19T21:01:47Z auth-svc INFO req-518-227 request ok latency_ms=10
+2026-11-19T21:01:48Z api-gateway INFO req-518-228 request ok latency_ms=18
+2026-11-19T21:01:49Z session-svc INFO req-518-229 request ok latency_ms=22
+2026-11-19T21:01:50Z auth-svc INFO req-518-230 request ok latency_ms=13
+2026-11-19T21:01:51Z api-gateway INFO req-518-231 request ok latency_ms=18
+2026-11-19T21:01:52Z session-svc INFO req-518-232 request ok latency_ms=37
+2026-11-19T21:01:53Z auth-svc INFO req-518-233 request ok latency_ms=28
+2026-11-19T21:01:54Z api-gateway INFO req-518-234 request ok latency_ms=28
+2026-11-19T21:01:55Z session-svc INFO req-518-235 request ok latency_ms=32
+2026-11-19T21:01:56Z auth-svc INFO req-518-236 request ok latency_ms=18
+2026-11-19T21:01:57Z api-gateway INFO req-518-237 request ok latency_ms=24
+2026-11-19T21:01:58Z session-svc INFO req-518-238 request ok latency_ms=31
+2026-11-19T21:01:59Z auth-svc INFO req-518-239 request ok latency_ms=26
+2026-11-19T21:02:00Z api-gateway INFO req-518-240 request ok latency_ms=37
+2026-11-19T21:02:01Z session-svc INFO req-518-241 request ok latency_ms=26
+2026-11-19T21:02:02Z auth-svc INFO req-518-242 request ok latency_ms=30
+2026-11-19T21:02:03Z api-gateway INFO req-518-243 request ok latency_ms=18
+2026-11-19T21:02:04Z session-svc INFO req-518-244 request ok latency_ms=39
+2026-11-19T21:02:05Z auth-svc INFO req-518-245 request ok latency_ms=16
+2026-11-19T21:02:06Z api-gateway INFO req-518-246 request ok latency_ms=39
+2026-11-19T21:02:07Z session-svc INFO req-518-247 request ok latency_ms=12
+2026-11-19T21:02:08Z auth-svc INFO req-518-248 request ok latency_ms=35
+2026-11-19T21:02:09Z api-gateway INFO req-518-249 request ok latency_ms=15
+2026-11-19T21:02:10Z session-svc INFO req-518-250 request ok latency_ms=12
+2026-11-19T21:02:11Z auth-svc INFO req-518-251 request ok latency_ms=23
+2026-11-19T21:02:12Z api-gateway INFO req-518-252 request ok latency_ms=30
+2026-11-19T21:02:13Z session-svc INFO req-518-253 request ok latency_ms=14
+2026-11-19T21:02:14Z auth-svc INFO req-518-254 request ok latency_ms=32
+2026-11-19T21:02:15Z api-gateway INFO req-518-255 request ok latency_ms=28
+2026-11-19T21:02:16Z session-svc INFO req-518-256 request ok latency_ms=20
+2026-11-19T21:02:17Z auth-svc INFO req-518-257 request ok latency_ms=22
+2026-11-19T21:02:18Z api-gateway INFO req-518-258 request ok latency_ms=39
+2026-11-19T21:02:19Z session-svc INFO req-518-259 request ok latency_ms=17
+2026-11-19T21:02:20Z auth-svc INFO req-518-260 request ok latency_ms=24
+2026-11-19T21:02:21Z api-gateway INFO req-518-261 request ok latency_ms=40
+2026-11-19T21:02:22Z session-svc INFO req-518-262 request ok latency_ms=25
+2026-11-19T21:02:23Z auth-svc INFO req-518-263 request ok latency_ms=31
+2026-11-19T21:02:24Z api-gateway INFO req-518-264 request ok latency_ms=39
+2026-11-19T21:02:25Z session-svc INFO req-518-265 request ok latency_ms=17
+2026-11-19T21:02:26Z auth-svc INFO req-518-266 request ok latency_ms=15
+2026-11-19T21:02:27Z api-gateway INFO req-518-267 request ok latency_ms=26
+2026-11-19T21:02:28Z session-svc INFO req-518-268 request ok latency_ms=39
+2026-11-19T21:02:29Z auth-svc INFO req-518-269 request ok latency_ms=40
+2026-11-19T21:02:30Z api-gateway INFO req-518-270 request ok latency_ms=28
+2026-11-19T21:02:31Z session-svc INFO req-518-271 request ok latency_ms=39
+2026-11-19T21:02:32Z auth-svc INFO req-518-272 request ok latency_ms=32
+2026-11-19T21:02:33Z api-gateway INFO req-518-273 request ok latency_ms=13
+2026-11-19T21:02:34Z session-svc INFO req-518-274 request ok latency_ms=15
+2026-11-19T21:02:35Z auth-svc INFO req-518-275 request ok latency_ms=31
+2026-11-19T21:02:36Z api-gateway INFO req-518-276 request ok latency_ms=18
+2026-11-19T21:02:37Z session-svc INFO req-518-277 request ok latency_ms=17
+2026-11-19T21:02:38Z auth-svc INFO req-518-278 request ok latency_ms=12
+2026-11-19T21:02:39Z api-gateway INFO req-518-279 request ok latency_ms=33
+2026-11-19T21:02:40Z session-svc INFO req-518-280 request ok latency_ms=10
+2026-11-19T21:02:41Z auth-svc INFO req-518-281 request ok latency_ms=14
+2026-11-19T21:02:42Z api-gateway INFO req-518-282 request ok latency_ms=28
+2026-11-19T21:02:43Z session-svc INFO req-518-283 request ok latency_ms=21
+2026-11-19T21:02:44Z auth-svc INFO req-518-284 request ok latency_ms=26
+2026-11-19T21:02:45Z api-gateway INFO req-518-285 request ok latency_ms=18
+2026-11-19T21:02:46Z session-svc INFO req-518-286 request ok latency_ms=32
+2026-11-19T21:02:47Z auth-svc INFO req-518-287 request ok latency_ms=16
+2026-11-19T21:02:48Z api-gateway INFO req-518-288 request ok latency_ms=22
+2026-11-19T21:02:49Z session-svc INFO req-518-289 request ok latency_ms=39
+2026-11-19T21:02:50Z auth-svc INFO req-518-290 request ok latency_ms=26
+2026-11-19T21:02:51Z api-gateway INFO req-518-291 request ok latency_ms=13
+2026-11-19T21:02:52Z session-svc INFO req-518-292 request ok latency_ms=25
+2026-11-19T21:02:53Z auth-svc INFO req-518-293 request ok latency_ms=30
+2026-11-19T21:02:54Z api-gateway INFO req-518-294 request ok latency_ms=17
+2026-11-19T21:02:55Z session-svc INFO req-518-295 request ok latency_ms=22
+2026-11-19T21:02:56Z auth-svc INFO req-518-296 request ok latency_ms=10
+2026-11-19T21:02:57Z api-gateway INFO req-518-297 request ok latency_ms=13
+2026-11-19T21:02:58Z session-svc INFO req-518-298 request ok latency_ms=40
+2026-11-19T21:02:59Z auth-svc INFO req-518-299 request ok latency_ms=39
+2026-11-19T21:03:00Z api-gateway INFO req-518-300 request ok latency_ms=18
+2026-11-19T21:03:01Z session-svc INFO req-518-301 request ok latency_ms=10
+2026-11-19T21:03:02Z auth-svc INFO req-518-302 request ok latency_ms=40
+2026-11-19T21:03:03Z api-gateway INFO req-518-303 request ok latency_ms=39
+2026-11-19T21:03:04Z session-svc INFO req-518-304 request ok latency_ms=40
+2026-11-19T21:03:05Z auth-svc INFO req-518-305 request ok latency_ms=34
+2026-11-19T21:03:06Z api-gateway INFO req-518-306 request ok latency_ms=23
+2026-11-19T21:03:07Z session-svc INFO req-518-307 request ok latency_ms=34
+2026-11-19T21:03:08Z auth-svc INFO req-518-308 request ok latency_ms=24
+2026-11-19T21:03:09Z api-gateway INFO req-518-309 request ok latency_ms=11
+2026-11-19T21:03:10Z session-svc INFO req-518-310 request ok latency_ms=15
+2026-11-19T21:03:11Z auth-svc INFO req-518-311 request ok latency_ms=29
+2026-11-19T21:03:12Z api-gateway INFO req-518-312 request ok latency_ms=23
+2026-11-19T21:03:13Z session-svc INFO req-518-313 request ok latency_ms=22
+2026-11-19T21:03:14Z auth-svc INFO req-518-314 request ok latency_ms=24
+2026-11-19T21:03:15Z api-gateway INFO req-518-315 request ok latency_ms=35
+2026-11-19T21:03:16Z session-svc INFO req-518-316 request ok latency_ms=10
+2026-11-19T21:03:17Z auth-svc INFO req-518-317 request ok latency_ms=16
+2026-11-19T21:03:18Z api-gateway INFO req-518-318 request ok latency_ms=12
+2026-11-19T21:03:19Z session-svc INFO req-518-319 request ok latency_ms=19
+2026-11-19T21:03:20Z auth-svc INFO req-518-320 request ok latency_ms=38
+2026-11-19T21:03:21Z api-gateway INFO req-518-321 request ok latency_ms=12
+2026-11-19T21:03:22Z session-svc INFO req-518-322 request ok latency_ms=23
+2026-11-19T21:03:23Z auth-svc INFO req-518-323 request ok latency_ms=18
+2026-11-19T21:03:24Z api-gateway INFO req-518-324 request ok latency_ms=37
+2026-11-19T21:03:25Z session-svc INFO req-518-325 request ok latency_ms=32
+2026-11-19T21:03:26Z auth-svc INFO req-518-326 request ok latency_ms=16
+2026-11-19T21:03:27Z api-gateway INFO req-518-327 request ok latency_ms=12
+2026-11-19T21:03:28Z session-svc INFO req-518-328 request ok latency_ms=26
+2026-11-19T21:03:29Z auth-svc INFO req-518-329 request ok latency_ms=34
+2026-11-19T21:03:30Z api-gateway INFO req-518-330 request ok latency_ms=26
+2026-11-19T21:03:31Z session-svc INFO req-518-331 request ok latency_ms=30
+2026-11-19T21:03:32Z auth-svc INFO req-518-332 request ok latency_ms=13
+2026-11-19T21:03:33Z api-gateway INFO req-518-333 request ok latency_ms=25
+2026-11-19T21:03:34Z session-svc INFO req-518-334 request ok latency_ms=32
+2026-11-19T21:03:35Z auth-svc INFO req-518-335 request ok latency_ms=29
+2026-11-19T21:03:36Z api-gateway INFO req-518-336 request ok latency_ms=34
+2026-11-19T21:03:37Z session-svc INFO req-518-337 request ok latency_ms=40
+2026-11-19T21:03:38Z auth-svc INFO req-518-338 request ok latency_ms=29
+2026-11-19T21:03:39Z api-gateway INFO req-518-339 request ok latency_ms=32
+2026-11-19T21:03:40Z session-svc INFO req-518-340 request ok latency_ms=20
+2026-11-19T21:03:41Z auth-svc INFO req-518-341 request ok latency_ms=24
+2026-11-19T21:03:42Z api-gateway INFO req-518-342 request ok latency_ms=23
+2026-11-19T21:03:43Z session-svc INFO req-518-343 request ok latency_ms=22
+2026-11-19T21:03:44Z auth-svc INFO req-518-344 request ok latency_ms=23
+2026-11-19T21:03:45Z api-gateway INFO req-518-345 request ok latency_ms=11
+2026-11-19T21:03:46Z session-svc INFO req-518-346 request ok latency_ms=38
+2026-11-19T21:03:47Z auth-svc INFO req-518-347 request ok latency_ms=14
+2026-11-19T21:03:48Z api-gateway INFO req-518-348 request ok latency_ms=31
+2026-11-19T21:03:49Z session-svc INFO req-518-349 request ok latency_ms=17
+2026-11-19T21:03:50Z auth-svc INFO req-518-350 request ok latency_ms=31
+2026-11-19T21:03:51Z api-gateway INFO req-518-351 request ok latency_ms=34
+2026-11-19T21:03:52Z session-svc INFO req-518-352 request ok latency_ms=39
+2026-11-19T21:03:53Z auth-svc INFO req-518-353 request ok latency_ms=33
+2026-11-19T21:03:54Z api-gateway INFO req-518-354 request ok latency_ms=36
+2026-11-19T21:03:55Z session-svc INFO req-518-355 request ok latency_ms=12
+2026-11-19T21:03:56Z auth-svc INFO req-518-356 request ok latency_ms=19
+2026-11-19T21:03:57Z api-gateway INFO req-518-357 request ok latency_ms=11
+2026-11-19T21:03:58Z session-svc INFO req-518-358 request ok latency_ms=36
+2026-11-19T21:03:59Z auth-svc INFO req-518-359 request ok latency_ms=18
+2026-11-19T21:04:00Z api-gateway INFO req-518-360 request ok latency_ms=25
+2026-11-19T21:04:01Z session-svc INFO req-518-361 request ok latency_ms=35
+2026-11-19T21:04:02Z auth-svc INFO req-518-362 request ok latency_ms=15
+2026-11-19T21:04:03Z api-gateway INFO req-518-363 request ok latency_ms=15
+2026-11-19T21:04:04Z session-svc INFO req-518-364 request ok latency_ms=20
+2026-11-19T21:04:05Z auth-svc INFO req-518-365 request ok latency_ms=22
+2026-11-19T21:04:06Z api-gateway INFO req-518-366 request ok latency_ms=16
+2026-11-19T21:04:07Z session-svc INFO req-518-367 request ok latency_ms=14
+2026-11-19T21:04:08Z auth-svc INFO req-518-368 request ok latency_ms=38
+2026-11-19T21:04:09Z api-gateway INFO req-518-369 request ok latency_ms=22
+2026-11-19T21:04:10Z session-svc INFO req-518-370 request ok latency_ms=14
+2026-11-19T21:04:11Z auth-svc INFO req-518-371 request ok latency_ms=31
+2026-11-19T21:04:12Z api-gateway INFO req-518-372 request ok latency_ms=32
+2026-11-19T21:04:13Z session-svc INFO req-518-373 request ok latency_ms=18
+2026-11-19T21:04:14Z auth-svc INFO req-518-374 request ok latency_ms=10
+2026-11-19T21:04:15Z api-gateway INFO req-518-375 request ok latency_ms=37
+2026-11-19T21:04:16Z session-svc INFO req-518-376 request ok latency_ms=29
+2026-11-19T21:04:17Z auth-svc INFO req-518-377 request ok latency_ms=32
+2026-11-19T21:04:18Z api-gateway INFO req-518-378 request ok latency_ms=12
+2026-11-19T21:04:19Z session-svc INFO req-518-379 request ok latency_ms=32
+2026-11-19T21:04:20Z auth-svc INFO req-518-380 request ok latency_ms=10
+2026-11-19T21:04:21Z api-gateway INFO req-518-381 request ok latency_ms=37
+2026-11-19T21:04:22Z session-svc INFO req-518-382 request ok latency_ms=15
+2026-11-19T21:04:23Z auth-svc INFO req-518-383 request ok latency_ms=18
+2026-11-19T21:04:24Z api-gateway INFO req-518-384 request ok latency_ms=28
+2026-11-19T21:04:25Z session-svc INFO req-518-385 request ok latency_ms=25
+2026-11-19T21:04:26Z auth-svc INFO req-518-386 request ok latency_ms=35
+2026-11-19T21:04:27Z api-gateway INFO req-518-387 request ok latency_ms=38
+2026-11-19T21:04:28Z session-svc INFO req-518-388 request ok latency_ms=24
+2026-11-19T21:04:29Z auth-svc INFO req-518-389 request ok latency_ms=33
+2026-11-19T21:04:30Z api-gateway INFO req-518-390 request ok latency_ms=36
+2026-11-19T21:04:31Z session-svc INFO req-518-391 request ok latency_ms=28
+2026-11-19T21:04:32Z auth-svc INFO req-518-392 request ok latency_ms=25
+2026-11-19T21:04:33Z api-gateway INFO req-518-393 request ok latency_ms=25
+2026-11-19T21:04:34Z session-svc INFO req-518-394 request ok latency_ms=12
+2026-11-19T21:04:35Z auth-svc INFO req-518-395 request ok latency_ms=16
+2026-11-19T21:04:36Z api-gateway INFO req-518-396 request ok latency_ms=29
+2026-11-19T21:04:37Z session-svc INFO req-518-397 request ok latency_ms=25
+2026-11-19T21:04:38Z auth-svc INFO req-518-398 request ok latency_ms=19
+2026-11-19T21:04:39Z api-gateway INFO req-518-399 request ok latency_ms=23
+2026-11-19T21:04:40Z session-svc INFO req-518-400 request ok latency_ms=20
+2026-11-19T21:04:41Z auth-svc INFO req-518-401 request ok latency_ms=37
+2026-11-19T21:04:42Z api-gateway INFO req-518-402 request ok latency_ms=17
+2026-11-19T21:04:43Z session-svc INFO req-518-403 request ok latency_ms=29
+2026-11-19T21:04:44Z auth-svc INFO req-518-404 request ok latency_ms=38
+2026-11-19T21:04:45Z api-gateway INFO req-518-405 request ok latency_ms=34
+2026-11-19T21:04:46Z session-svc INFO req-518-406 request ok latency_ms=30
+2026-11-19T21:04:47Z auth-svc INFO req-518-407 request ok latency_ms=29
+2026-11-19T21:04:48Z api-gateway INFO req-518-408 request ok latency_ms=28
+2026-11-19T21:04:49Z session-svc INFO req-518-409 request ok latency_ms=10
+2026-11-19T21:04:50Z auth-svc INFO req-518-410 request ok latency_ms=34
+2026-11-19T21:04:51Z api-gateway INFO req-518-411 request ok latency_ms=34
+2026-11-19T21:04:52Z session-svc INFO req-518-412 request ok latency_ms=37
+2026-11-19T21:04:53Z auth-svc INFO req-518-413 request ok latency_ms=26
+2026-11-19T21:04:54Z api-gateway INFO req-518-414 request ok latency_ms=16
+2026-11-19T21:04:55Z session-svc INFO req-518-415 request ok latency_ms=38
+2026-11-19T21:04:56Z auth-svc INFO req-518-416 request ok latency_ms=25
+2026-11-19T21:04:57Z api-gateway INFO req-518-417 request ok latency_ms=13
+2026-11-19T21:04:58Z session-svc INFO req-518-418 request ok latency_ms=30
+2026-11-19T21:04:59Z auth-svc INFO req-518-419 request ok latency_ms=27
+2026-11-19T21:05:00Z api-gateway INFO req-518-420 request ok latency_ms=13
+2026-11-19T21:05:01Z session-svc INFO req-518-421 request ok latency_ms=23
+2026-11-19T21:05:02Z auth-svc INFO req-518-422 request ok latency_ms=21
+2026-11-19T21:05:03Z api-gateway INFO req-518-423 request ok latency_ms=36
+2026-11-19T21:05:04Z session-svc INFO req-518-424 request ok latency_ms=33
+2026-11-19T21:05:05Z auth-svc INFO req-518-425 request ok latency_ms=38
+2026-11-19T21:05:06Z api-gateway INFO req-518-426 request ok latency_ms=25
+2026-11-19T21:05:07Z session-svc INFO req-518-427 request ok latency_ms=12
+2026-11-19T21:05:08Z auth-svc INFO req-518-428 request ok latency_ms=19
+2026-11-19T21:05:09Z api-gateway INFO req-518-429 request ok latency_ms=28
+2026-11-19T21:05:10Z session-svc INFO req-518-430 request ok latency_ms=26
+2026-11-19T21:05:11Z auth-svc INFO req-518-431 request ok latency_ms=29
+2026-11-19T21:05:12Z api-gateway INFO req-518-432 request ok latency_ms=14
+2026-11-19T21:05:13Z session-svc INFO req-518-433 request ok latency_ms=17
+2026-11-19T21:05:14Z auth-svc INFO req-518-434 request ok latency_ms=15
+2026-11-19T21:05:15Z api-gateway INFO req-518-435 request ok latency_ms=19
+2026-11-19T21:05:16Z session-svc INFO req-518-436 request ok latency_ms=30
+2026-11-19T21:05:17Z auth-svc INFO req-518-437 request ok latency_ms=38
+2026-11-19T21:05:18Z api-gateway INFO req-518-438 request ok latency_ms=38
+2026-11-19T21:05:19Z session-svc INFO req-518-439 request ok latency_ms=38
+2026-11-19T21:05:20Z auth-svc INFO req-518-440 request ok latency_ms=36
+2026-11-19T21:05:21Z api-gateway INFO req-518-441 request ok latency_ms=36
+2026-11-19T21:05:22Z session-svc INFO req-518-442 request ok latency_ms=32
+2026-11-19T21:05:23Z auth-svc INFO req-518-443 request ok latency_ms=39
+2026-11-19T21:05:24Z api-gateway INFO req-518-444 request ok latency_ms=16
+2026-11-19T21:05:25Z session-svc INFO req-518-445 request ok latency_ms=31
+2026-11-19T21:05:26Z auth-svc INFO req-518-446 request ok latency_ms=25
+2026-11-19T21:05:27Z api-gateway INFO req-518-447 request ok latency_ms=30
+2026-11-19T21:05:28Z session-svc INFO req-518-448 request ok latency_ms=32
+2026-11-19T21:05:29Z auth-svc INFO req-518-449 request ok latency_ms=33
+2026-11-19T21:05:30Z api-gateway INFO req-518-450 request ok latency_ms=33
+2026-11-19T21:05:31Z session-svc INFO req-518-451 request ok latency_ms=34
+2026-11-19T21:05:32Z auth-svc INFO req-518-452 request ok latency_ms=21
+2026-11-19T21:05:33Z api-gateway INFO req-518-453 request ok latency_ms=24
+2026-11-19T21:05:34Z session-svc INFO req-518-454 request ok latency_ms=40
+2026-11-19T21:05:35Z auth-svc INFO req-518-455 request ok latency_ms=13
+2026-11-19T21:05:36Z api-gateway INFO req-518-456 request ok latency_ms=24
+2026-11-19T21:05:37Z session-svc INFO req-518-457 request ok latency_ms=14
+2026-11-19T21:05:38Z auth-svc INFO req-518-458 request ok latency_ms=17
+2026-11-19T21:05:39Z api-gateway INFO req-518-459 request ok latency_ms=28
+2026-11-19T21:05:40Z session-svc INFO req-518-460 request ok latency_ms=26
+2026-11-19T21:05:41Z auth-svc INFO req-518-461 request ok latency_ms=24
+2026-11-19T21:05:42Z api-gateway INFO req-518-462 request ok latency_ms=12
+2026-11-19T21:05:43Z session-svc INFO req-518-463 request ok latency_ms=30
+2026-11-19T21:05:44Z auth-svc INFO req-518-464 request ok latency_ms=31
+2026-11-19T21:05:45Z api-gateway INFO req-518-465 request ok latency_ms=11
+2026-11-19T21:05:46Z session-svc INFO req-518-466 request ok latency_ms=28
+2026-11-19T21:05:47Z auth-svc INFO req-518-467 request ok latency_ms=13
+2026-11-19T21:05:48Z api-gateway INFO req-518-468 request ok latency_ms=34
+2026-11-19T21:05:49Z session-svc INFO req-518-469 request ok latency_ms=27
+2026-11-19T21:05:50Z auth-svc INFO req-518-470 request ok latency_ms=35
+2026-11-19T21:05:51Z api-gateway INFO req-518-471 request ok latency_ms=19
+2026-11-19T21:05:52Z session-svc INFO req-518-472 request ok latency_ms=31
+2026-11-19T21:05:53Z auth-svc INFO req-518-473 request ok latency_ms=30
+2026-11-19T21:05:54Z api-gateway INFO req-518-474 request ok latency_ms=29
+2026-11-19T21:05:55Z session-svc INFO req-518-475 request ok latency_ms=37
+2026-11-19T21:05:56Z auth-svc INFO req-518-476 request ok latency_ms=40
+2026-11-19T21:05:57Z api-gateway INFO req-518-477 request ok latency_ms=14
+2026-11-19T21:05:58Z session-svc INFO req-518-478 request ok latency_ms=23
+2026-11-19T21:05:59Z auth-svc INFO req-518-479 request ok latency_ms=17
+2026-11-19T21:06:00Z session-svc WARN redis maxmemory-policy volatile-lru triggered mass eviction keys=19400
+2026-11-19T21:06:02Z session-svc ERROR req-518-482 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:03Z auth-svc ERROR req-518-483 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:04Z session-svc ERROR req-518-484 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:05Z api-gateway ERROR req-518-485 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:06Z auth-svc ERROR req-518-486 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:06Z session-svc ERROR req-518-486 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:08Z session-svc ERROR req-518-488 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:09Z auth-svc ERROR req-518-489 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:10Z api-gateway ERROR req-518-490 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:10Z session-svc ERROR req-518-490 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:12Z auth-svc ERROR req-518-492 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:12Z session-svc ERROR req-518-492 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:14Z session-svc ERROR req-518-494 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:15Z api-gateway ERROR req-518-495 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:15Z auth-svc ERROR req-518-495 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:16Z session-svc ERROR req-518-496 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:18Z auth-svc ERROR req-518-498 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:18Z session-svc ERROR req-518-498 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:20Z api-gateway ERROR req-518-500 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:20Z session-svc ERROR req-518-500 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:21Z auth-svc ERROR req-518-501 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:22Z session-svc ERROR req-518-502 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:24Z auth-svc ERROR req-518-504 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:24Z session-svc ERROR req-518-504 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:25Z api-gateway ERROR req-518-505 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:26Z session-svc ERROR req-518-506 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:27Z auth-svc ERROR req-518-507 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:28Z session-svc ERROR req-518-508 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:30Z api-gateway ERROR req-518-510 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:30Z auth-svc ERROR req-518-510 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:30Z session-svc ERROR req-518-510 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:32Z session-svc ERROR req-518-512 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:33Z auth-svc ERROR req-518-513 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:34Z session-svc ERROR req-518-514 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:35Z api-gateway ERROR req-518-515 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:36Z auth-svc ERROR req-518-516 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:36Z session-svc ERROR req-518-516 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:38Z session-svc ERROR req-518-518 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:39Z auth-svc ERROR req-518-519 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:40Z api-gateway ERROR req-518-520 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:40Z session-svc ERROR req-518-520 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:42Z auth-svc ERROR req-518-522 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:42Z session-svc ERROR req-518-522 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:44Z session-svc ERROR req-518-524 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:45Z api-gateway ERROR req-518-525 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:45Z auth-svc ERROR req-518-525 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:46Z session-svc ERROR req-518-526 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:48Z auth-svc ERROR req-518-528 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:48Z session-svc ERROR req-518-528 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:50Z api-gateway ERROR req-518-530 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:50Z session-svc ERROR req-518-530 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:51Z auth-svc ERROR req-518-531 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:52Z session-svc ERROR req-518-532 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:54Z auth-svc ERROR req-518-534 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:54Z session-svc ERROR req-518-534 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:55Z api-gateway ERROR req-518-535 HTTP 503 upstream=auth-svc
+2026-11-19T21:06:56Z session-svc ERROR req-518-536 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:06:57Z auth-svc ERROR req-518-537 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:06:58Z session-svc ERROR req-518-538 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:00Z api-gateway ERROR req-518-540 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:00Z auth-svc ERROR req-518-540 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:00Z session-svc ERROR req-518-540 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:02Z session-svc ERROR req-518-542 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:03Z auth-svc ERROR req-518-543 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:04Z session-svc ERROR req-518-544 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:05Z api-gateway ERROR req-518-545 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:06Z auth-svc ERROR req-518-546 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:06Z session-svc ERROR req-518-546 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:08Z session-svc ERROR req-518-548 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:09Z auth-svc ERROR req-518-549 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:10Z api-gateway ERROR req-518-550 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:10Z session-svc ERROR req-518-550 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:12Z auth-svc ERROR req-518-552 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:12Z session-svc ERROR req-518-552 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:14Z session-svc ERROR req-518-554 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:15Z api-gateway ERROR req-518-555 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:15Z auth-svc ERROR req-518-555 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:16Z session-svc ERROR req-518-556 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:18Z auth-svc ERROR req-518-558 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:18Z session-svc ERROR req-518-558 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:20Z api-gateway ERROR req-518-560 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:20Z session-svc ERROR req-518-560 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:21Z auth-svc ERROR req-518-561 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:22Z session-svc ERROR req-518-562 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:24Z auth-svc ERROR req-518-564 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:24Z session-svc ERROR req-518-564 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:25Z api-gateway ERROR req-518-565 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:26Z session-svc ERROR req-518-566 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:27Z auth-svc ERROR req-518-567 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:28Z session-svc ERROR req-518-568 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:30Z api-gateway ERROR req-518-570 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:30Z auth-svc ERROR req-518-570 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:30Z session-svc ERROR req-518-570 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:32Z session-svc ERROR req-518-572 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:33Z auth-svc ERROR req-518-573 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:34Z session-svc ERROR req-518-574 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:35Z api-gateway ERROR req-518-575 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:36Z auth-svc ERROR req-518-576 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:36Z session-svc ERROR req-518-576 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:38Z session-svc ERROR req-518-578 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:39Z auth-svc ERROR req-518-579 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:40Z api-gateway ERROR req-518-580 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:40Z session-svc ERROR req-518-580 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:42Z auth-svc ERROR req-518-582 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:42Z session-svc ERROR req-518-582 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:44Z session-svc ERROR req-518-584 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:45Z api-gateway ERROR req-518-585 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:45Z auth-svc ERROR req-518-585 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:46Z session-svc ERROR req-518-586 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:48Z auth-svc ERROR req-518-588 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:48Z session-svc ERROR req-518-588 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:50Z api-gateway ERROR req-518-590 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:50Z session-svc ERROR req-518-590 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:51Z auth-svc ERROR req-518-591 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:52Z session-svc ERROR req-518-592 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:54Z auth-svc ERROR req-518-594 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:54Z session-svc ERROR req-518-594 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:55Z api-gateway ERROR req-518-595 HTTP 503 upstream=auth-svc
+2026-11-19T21:07:56Z session-svc ERROR req-518-596 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:07:57Z auth-svc ERROR req-518-597 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:07:58Z session-svc ERROR req-518-598 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:00Z api-gateway ERROR req-518-600 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:00Z auth-svc ERROR req-518-600 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:00Z session-svc ERROR req-518-600 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:02Z session-svc ERROR req-518-602 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:03Z auth-svc ERROR req-518-603 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:04Z session-svc ERROR req-518-604 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:05Z api-gateway ERROR req-518-605 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:06Z auth-svc ERROR req-518-606 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:06Z session-svc ERROR req-518-606 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:08Z session-svc ERROR req-518-608 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:09Z auth-svc ERROR req-518-609 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:10Z api-gateway ERROR req-518-610 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:10Z session-svc ERROR req-518-610 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:12Z auth-svc ERROR req-518-612 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:12Z session-svc ERROR req-518-612 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:14Z session-svc ERROR req-518-614 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:15Z api-gateway ERROR req-518-615 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:15Z auth-svc ERROR req-518-615 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:16Z session-svc ERROR req-518-616 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:18Z auth-svc ERROR req-518-618 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:18Z session-svc ERROR req-518-618 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:20Z api-gateway ERROR req-518-620 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:20Z session-svc ERROR req-518-620 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:21Z auth-svc ERROR req-518-621 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:22Z session-svc ERROR req-518-622 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:24Z auth-svc ERROR req-518-624 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:24Z session-svc ERROR req-518-624 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:25Z api-gateway ERROR req-518-625 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:26Z session-svc ERROR req-518-626 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:27Z auth-svc ERROR req-518-627 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:28Z session-svc ERROR req-518-628 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:30Z api-gateway ERROR req-518-630 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:30Z auth-svc ERROR req-518-630 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:30Z session-svc ERROR req-518-630 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:32Z session-svc ERROR req-518-632 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:33Z auth-svc ERROR req-518-633 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:34Z session-svc ERROR req-518-634 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:35Z api-gateway ERROR req-518-635 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:36Z auth-svc ERROR req-518-636 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:36Z session-svc ERROR req-518-636 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:38Z session-svc ERROR req-518-638 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:39Z auth-svc ERROR req-518-639 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:40Z api-gateway ERROR req-518-640 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:40Z session-svc ERROR req-518-640 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:42Z auth-svc ERROR req-518-642 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:42Z session-svc ERROR req-518-642 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:44Z session-svc ERROR req-518-644 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:45Z api-gateway ERROR req-518-645 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:45Z auth-svc ERROR req-518-645 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:46Z session-svc ERROR req-518-646 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:48Z auth-svc ERROR req-518-648 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:48Z session-svc ERROR req-518-648 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:50Z api-gateway ERROR req-518-650 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:50Z session-svc ERROR req-518-650 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:51Z auth-svc ERROR req-518-651 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:52Z session-svc ERROR req-518-652 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:54Z auth-svc ERROR req-518-654 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:54Z session-svc ERROR req-518-654 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:55Z api-gateway ERROR req-518-655 HTTP 503 upstream=auth-svc
+2026-11-19T21:08:56Z session-svc ERROR req-518-656 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:08:57Z auth-svc ERROR req-518-657 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:08:58Z session-svc ERROR req-518-658 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:00Z api-gateway ERROR req-518-660 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:00Z auth-svc ERROR req-518-660 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:00Z session-svc ERROR req-518-660 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:02Z session-svc ERROR req-518-662 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:03Z auth-svc ERROR req-518-663 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:04Z session-svc ERROR req-518-664 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:05Z api-gateway ERROR req-518-665 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:06Z auth-svc ERROR req-518-666 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:06Z session-svc ERROR req-518-666 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:08Z session-svc ERROR req-518-668 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:09Z auth-svc ERROR req-518-669 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:10Z api-gateway ERROR req-518-670 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:10Z session-svc ERROR req-518-670 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:12Z auth-svc ERROR req-518-672 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:12Z session-svc ERROR req-518-672 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:14Z session-svc ERROR req-518-674 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:15Z api-gateway ERROR req-518-675 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:15Z auth-svc ERROR req-518-675 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:16Z session-svc ERROR req-518-676 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:18Z auth-svc ERROR req-518-678 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:18Z session-svc ERROR req-518-678 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:20Z api-gateway ERROR req-518-680 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:20Z session-svc ERROR req-518-680 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:21Z auth-svc ERROR req-518-681 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:22Z session-svc ERROR req-518-682 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:24Z auth-svc ERROR req-518-684 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:24Z session-svc ERROR req-518-684 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:25Z api-gateway ERROR req-518-685 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:26Z session-svc ERROR req-518-686 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:27Z auth-svc ERROR req-518-687 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:28Z session-svc ERROR req-518-688 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:30Z api-gateway ERROR req-518-690 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:30Z auth-svc ERROR req-518-690 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:30Z session-svc ERROR req-518-690 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:32Z session-svc ERROR req-518-692 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:33Z auth-svc ERROR req-518-693 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:34Z session-svc ERROR req-518-694 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:35Z api-gateway ERROR req-518-695 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:36Z auth-svc ERROR req-518-696 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:36Z session-svc ERROR req-518-696 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:38Z session-svc ERROR req-518-698 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:39Z auth-svc ERROR req-518-699 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:40Z api-gateway ERROR req-518-700 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:40Z session-svc ERROR req-518-700 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:42Z auth-svc ERROR req-518-702 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:42Z session-svc ERROR req-518-702 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:44Z session-svc ERROR req-518-704 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:45Z api-gateway ERROR req-518-705 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:45Z auth-svc ERROR req-518-705 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:46Z session-svc ERROR req-518-706 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:48Z auth-svc ERROR req-518-708 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:48Z session-svc ERROR req-518-708 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:50Z api-gateway ERROR req-518-710 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:50Z session-svc ERROR req-518-710 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:51Z auth-svc ERROR req-518-711 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:52Z session-svc ERROR req-518-712 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:54Z auth-svc ERROR req-518-714 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:54Z session-svc ERROR req-518-714 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:55Z api-gateway ERROR req-518-715 HTTP 503 upstream=auth-svc
+2026-11-19T21:09:56Z session-svc ERROR req-518-716 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:09:57Z auth-svc ERROR req-518-717 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:09:58Z session-svc ERROR req-518-718 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:00Z api-gateway ERROR req-518-720 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:00Z auth-svc ERROR req-518-720 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:00Z session-svc ERROR req-518-720 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:02Z session-svc ERROR req-518-722 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:03Z auth-svc ERROR req-518-723 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:04Z session-svc ERROR req-518-724 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:05Z api-gateway ERROR req-518-725 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:06Z auth-svc ERROR req-518-726 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:06Z session-svc ERROR req-518-726 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:08Z session-svc ERROR req-518-728 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:09Z auth-svc ERROR req-518-729 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:10Z api-gateway ERROR req-518-730 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:10Z session-svc ERROR req-518-730 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:12Z auth-svc ERROR req-518-732 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:12Z session-svc ERROR req-518-732 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:14Z session-svc ERROR req-518-734 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:15Z api-gateway ERROR req-518-735 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:15Z auth-svc ERROR req-518-735 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:16Z session-svc ERROR req-518-736 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:18Z auth-svc ERROR req-518-738 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:18Z session-svc ERROR req-518-738 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:20Z api-gateway ERROR req-518-740 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:20Z session-svc ERROR req-518-740 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:21Z auth-svc ERROR req-518-741 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:22Z session-svc ERROR req-518-742 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:24Z auth-svc ERROR req-518-744 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:24Z session-svc ERROR req-518-744 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:25Z api-gateway ERROR req-518-745 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:26Z session-svc ERROR req-518-746 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:27Z auth-svc ERROR req-518-747 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:28Z session-svc ERROR req-518-748 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:30Z api-gateway ERROR req-518-750 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:30Z auth-svc ERROR req-518-750 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:30Z session-svc ERROR req-518-750 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:32Z session-svc ERROR req-518-752 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:33Z auth-svc ERROR req-518-753 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:34Z session-svc ERROR req-518-754 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:35Z api-gateway ERROR req-518-755 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:36Z auth-svc ERROR req-518-756 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:36Z session-svc ERROR req-518-756 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:38Z session-svc ERROR req-518-758 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:39Z auth-svc ERROR req-518-759 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:40Z api-gateway ERROR req-518-760 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:40Z session-svc ERROR req-518-760 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:42Z auth-svc ERROR req-518-762 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:42Z session-svc ERROR req-518-762 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:44Z session-svc ERROR req-518-764 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:45Z api-gateway ERROR req-518-765 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:45Z auth-svc ERROR req-518-765 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:46Z session-svc ERROR req-518-766 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:48Z auth-svc ERROR req-518-768 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:48Z session-svc ERROR req-518-768 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:50Z api-gateway ERROR req-518-770 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:50Z session-svc ERROR req-518-770 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:51Z auth-svc ERROR req-518-771 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:52Z session-svc ERROR req-518-772 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:54Z auth-svc ERROR req-518-774 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:54Z session-svc ERROR req-518-774 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:55Z api-gateway ERROR req-518-775 HTTP 503 upstream=auth-svc
+2026-11-19T21:10:56Z session-svc ERROR req-518-776 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:10:57Z auth-svc ERROR req-518-777 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:10:58Z session-svc ERROR req-518-778 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:00Z api-gateway ERROR req-518-780 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:00Z auth-svc ERROR req-518-780 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:00Z session-svc ERROR req-518-780 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:02Z session-svc ERROR req-518-782 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:03Z auth-svc ERROR req-518-783 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:04Z session-svc ERROR req-518-784 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:05Z api-gateway ERROR req-518-785 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:06Z auth-svc ERROR req-518-786 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:06Z session-svc ERROR req-518-786 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:08Z session-svc ERROR req-518-788 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:09Z auth-svc ERROR req-518-789 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:10Z api-gateway ERROR req-518-790 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:10Z session-svc ERROR req-518-790 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:12Z auth-svc ERROR req-518-792 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:12Z session-svc ERROR req-518-792 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:14Z session-svc ERROR req-518-794 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:15Z api-gateway ERROR req-518-795 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:15Z auth-svc ERROR req-518-795 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:16Z session-svc ERROR req-518-796 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:18Z auth-svc ERROR req-518-798 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:18Z session-svc ERROR req-518-798 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:20Z api-gateway ERROR req-518-800 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:20Z session-svc ERROR req-518-800 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:21Z auth-svc ERROR req-518-801 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:22Z session-svc ERROR req-518-802 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:24Z auth-svc ERROR req-518-804 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:24Z session-svc ERROR req-518-804 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:25Z api-gateway ERROR req-518-805 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:26Z session-svc ERROR req-518-806 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:27Z auth-svc ERROR req-518-807 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:28Z session-svc ERROR req-518-808 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:30Z api-gateway ERROR req-518-810 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:30Z auth-svc ERROR req-518-810 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:30Z session-svc ERROR req-518-810 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:32Z session-svc ERROR req-518-812 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:33Z auth-svc ERROR req-518-813 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:34Z session-svc ERROR req-518-814 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:35Z api-gateway ERROR req-518-815 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:36Z auth-svc ERROR req-518-816 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:36Z session-svc ERROR req-518-816 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:38Z session-svc ERROR req-518-818 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:39Z auth-svc ERROR req-518-819 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:40Z api-gateway ERROR req-518-820 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:40Z session-svc ERROR req-518-820 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:42Z auth-svc ERROR req-518-822 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:42Z session-svc ERROR req-518-822 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:44Z session-svc ERROR req-518-824 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:45Z api-gateway ERROR req-518-825 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:45Z auth-svc ERROR req-518-825 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:46Z session-svc ERROR req-518-826 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:48Z auth-svc ERROR req-518-828 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:48Z session-svc ERROR req-518-828 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:50Z api-gateway ERROR req-518-830 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:50Z session-svc ERROR req-518-830 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:51Z auth-svc ERROR req-518-831 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:52Z session-svc ERROR req-518-832 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:54Z auth-svc ERROR req-518-834 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:54Z session-svc ERROR req-518-834 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:55Z api-gateway ERROR req-518-835 HTTP 503 upstream=auth-svc
+2026-11-19T21:11:56Z session-svc ERROR req-518-836 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:11:57Z auth-svc ERROR req-518-837 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:11:58Z session-svc ERROR req-518-838 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:00Z api-gateway ERROR req-518-840 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:00Z auth-svc ERROR req-518-840 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:00Z session-svc ERROR req-518-840 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:02Z session-svc ERROR req-518-842 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:03Z auth-svc ERROR req-518-843 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:04Z session-svc ERROR req-518-844 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:05Z api-gateway ERROR req-518-845 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:06Z auth-svc ERROR req-518-846 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:06Z session-svc ERROR req-518-846 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:08Z session-svc ERROR req-518-848 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:09Z auth-svc ERROR req-518-849 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:10Z api-gateway ERROR req-518-850 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:10Z session-svc ERROR req-518-850 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:12Z auth-svc ERROR req-518-852 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:12Z session-svc ERROR req-518-852 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:14Z session-svc ERROR req-518-854 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:15Z api-gateway ERROR req-518-855 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:15Z auth-svc ERROR req-518-855 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:16Z session-svc ERROR req-518-856 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:18Z auth-svc ERROR req-518-858 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:18Z session-svc ERROR req-518-858 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:20Z api-gateway ERROR req-518-860 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:20Z session-svc ERROR req-518-860 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:21Z auth-svc ERROR req-518-861 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:22Z session-svc ERROR req-518-862 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:24Z auth-svc ERROR req-518-864 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:24Z session-svc ERROR req-518-864 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:25Z api-gateway ERROR req-518-865 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:26Z session-svc ERROR req-518-866 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:27Z auth-svc ERROR req-518-867 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:28Z session-svc ERROR req-518-868 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:30Z api-gateway ERROR req-518-870 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:30Z auth-svc ERROR req-518-870 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:30Z session-svc ERROR req-518-870 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:32Z session-svc ERROR req-518-872 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:33Z auth-svc ERROR req-518-873 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:34Z session-svc ERROR req-518-874 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:35Z api-gateway ERROR req-518-875 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:36Z auth-svc ERROR req-518-876 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:36Z session-svc ERROR req-518-876 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:38Z session-svc ERROR req-518-878 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:39Z auth-svc ERROR req-518-879 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:40Z api-gateway ERROR req-518-880 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:40Z session-svc ERROR req-518-880 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:42Z auth-svc ERROR req-518-882 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:42Z session-svc ERROR req-518-882 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:44Z session-svc ERROR req-518-884 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:45Z api-gateway ERROR req-518-885 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:45Z auth-svc ERROR req-518-885 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:46Z session-svc ERROR req-518-886 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:48Z auth-svc ERROR req-518-888 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:48Z session-svc ERROR req-518-888 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:50Z api-gateway ERROR req-518-890 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:50Z session-svc ERROR req-518-890 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:51Z auth-svc ERROR req-518-891 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:52Z session-svc ERROR req-518-892 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:54Z auth-svc ERROR req-518-894 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:54Z session-svc ERROR req-518-894 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:55Z api-gateway ERROR req-518-895 HTTP 503 upstream=auth-svc
+2026-11-19T21:12:56Z session-svc ERROR req-518-896 session lookup miss after mass eviction redis_oom=true
+2026-11-19T21:12:57Z auth-svc ERROR req-518-897 auth-svc session validation failed unexpected cache miss
+2026-11-19T21:12:58Z session-svc ERROR req-518-898 session lookup miss after mass eviction redis_oom=true

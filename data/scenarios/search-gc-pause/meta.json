@@ -1,0 +1,12 @@
+{
+  "id": "search-gc-pause",
+  "title": "Search Indexer Stop-The-World GC Pause Outage",
+  "opened_at": "2026-11-18T14:50:00Z",
+  "severity": "medium",
+  "services": [
+    "api-gateway",
+    "search-svc",
+    "catalog-svc"
+  ],
+  "has_image": false
+}

@@ -1,0 +1,10 @@
+{
+  "scenario_id": "session-redis-eviction",
+  "root_cause_service": "session-svc",
+  "root_cause_category": "cache_stampede",
+  "required_keywords": [
+    "session-svc",
+    "eviction",
+    "redis"
+  ]
+}

@@ -1,4 +1,4 @@
-"""Deterministic fixed-seed scenario generator for IncidentLens."""
+"""Deterministic fixed-seed 10-scenario fault-injection generator for IncidentLens (5 fault types)."""
 from __future__ import annotations
 
 import csv
@@ -20,7 +20,6 @@ def _ts(base: datetime, seconds: int) -> str:
 def _write_synthetic_chart_png(path: Path, title_seed: int = 1) -> None:
     """Create a valid, lightweight 320x160 PNG chart image using stdlib zlib+struct."""
     width, height = 320, 160
-    # Warm off-white background (#FAFAF9) with a flat crimson (#C81E1E) spike curve
     bg = (250, 250, 249)
     axis = (214, 211, 209)
     line_base = (120, 113, 108)
@@ -29,14 +28,13 @@ def _write_synthetic_chart_png(path: Path, title_seed: int = 1) -> None:
 
     rows = []
     for y in range(height):
-        row = bytearray([0])  # filter type 0
+        row = bytearray([0])
         for x in range(width):
             r, g, b = bg
             if 180 <= x <= 290 and 20 <= y <= 135:
                 r, g, b = band_bg
             if x == 30 or y == 135:
                 r, g, b = axis
-            # Flat baseline until x=180, then sharp spike to top
             curve_y = 115
             if x > 180:
                 progress = min(1.0, (x - 180) / 45.0)
@@ -60,30 +58,57 @@ def _write_synthetic_chart_png(path: Path, title_seed: int = 1) -> None:
     path.write_bytes(png)
 
 
-def generate_bad_deploy_friday(out_dir: Path) -> dict:
-    """Scenario 1: Bad Deploy Friday (~2,000 log lines, 4 services, traces, 3 metrics, ground truth)."""
-    rng = random.Random(42)
+def _write_bundle(
+    out_dir: Path,
+    meta: dict,
+    ground_truth: dict,
+    logs: list[str],
+    traces: list[dict],
+    metrics: list[tuple[str, str, str, float]],
+    with_image: bool = False,
+    seed: int = 1,
+) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
-    base = datetime(2026, 11, 25, 13, 45, 0, tzinfo=timezone.utc)
+    if logs:
+        (out_dir / "logs.log").write_text("\n".join(sorted(logs)) + "\n", encoding="utf-8")
+    elif (out_dir / "logs.log").exists():
+        (out_dir / "logs.log").unlink()
 
+    if traces:
+        (out_dir / "traces.json").write_text(json.dumps(traces, indent=2), encoding="utf-8")
+    elif (out_dir / "traces.json").exists():
+        (out_dir / "traces.json").unlink()
+
+    if metrics:
+        buf = io.StringIO()
+        w = csv.writer(buf)
+        w.writerow(["ts", "service", "metric", "value"])
+        w.writerows(metrics)
+        (out_dir / "metrics.csv").write_text(buf.getvalue(), encoding="utf-8")
+    elif (out_dir / "metrics.csv").exists():
+        (out_dir / "metrics.csv").unlink()
+
+    if with_image:
+        _write_synthetic_chart_png(out_dir / "dashboard.png", title_seed=seed)
+
+    (out_dir / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+    (out_dir / "ground_truth.json").write_text(json.dumps(ground_truth, indent=2), encoding="utf-8")
+    return meta
+
+
+def generate_bad_deploy_friday(out_dir: Path) -> dict:
+    rng = random.Random(42)
+    base = datetime(2026, 11, 25, 13, 45, 0, tzinfo=timezone.utc)
     services = ["api-gateway", "checkout-svc", "payment-svc", "auth-svc"]
     logs: list[str] = []
     traces: list[dict] = []
     metrics: list[tuple[str, str, str, float]] = []
 
-    # Generate ~2,000 logs across 30 minutes (13:45:00Z to 14:15:00Z)
-    # 0..1020s (13:45..14:02): healthy baseline
-    # 1020s (14:02:00Z): deploy v2.4.1 on checkout-svc sets db_pool_max=5 (prev=50)
-    # 1080..1800s (14:03..14:15): checkout-svc pool exhaustion -> retries -> payment-svc timeouts -> api-gateway 504s
     for sec in range(0, 1800):
         ts = _ts(base, sec)
         if sec == 1020:
-            logs.append(
-                f"{ts} checkout-svc INFO deploy v2.4.1 applied config db_pool_max=5 (prev=50) commit=a91f4c2"
-            )
+            logs.append(f"{ts} checkout-svc INFO deploy v2.4.1 applied config db_pool_max=5 (prev=50) commit=a91f4c2")
             continue
-
-        # Healthy traffic logs (~1 per second across services)
         svc = services[sec % 4]
         req_id = f"req-{10000 + sec}"
         if sec < 1020:
@@ -92,279 +117,249 @@ def generate_bad_deploy_friday(out_dir: Path) -> dict:
             elif svc == "payment-svc":
                 logs.append(f"{ts} payment-svc INFO {req_id} payment authorized provider=stripe latency_ms={rng.randint(40, 90)}")
             elif svc == "auth-svc":
-                logs.append(f"{ts} auth-svc INFO {req_id} token verified user_tier=standard latency_ms={rng.randint(6, 18)}")
+                logs.append(f"{ts} auth-svc INFO {req_id} token verified Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjMifQ.sig123456 user_tier=standard")
             else:
                 logs.append(f"{ts} api-gateway INFO {req_id} HTTP 200 POST /v1/checkout latency_ms={rng.randint(65, 140)}")
         else:
-            # Post-deploy degradation
             if sec % 5 == 0:
                 logs.append(f"{ts} auth-svc INFO {req_id} token verified user_tier=standard latency_ms={rng.randint(7, 19)}")
             if sec >= 1080 and sec % 2 == 0:
-                logs.append(
-                    f"{ts} checkout-svc ERROR {req_id} HikariPool-1 connection acquisition timeout after 3000ms active=5/5 waiting={rng.randint(18, 64)}"
-                )
+                logs.append(f"{ts} checkout-svc ERROR {req_id} HikariPool-1 connection acquisition timeout after 3000ms active=5/5 waiting={rng.randint(18, 64)}")
             elif sec >= 1060 and sec % 3 == 0:
-                logs.append(
-                    f"{ts} checkout-svc WARN {req_id} retry attempt={rng.randint(1, 3)} waiting for db connection pool_max=5"
-                )
+                logs.append(f"{ts} checkout-svc WARN {req_id} retry attempt={rng.randint(1, 3)} waiting for db connection pool_max=5")
             if sec >= 1110 and sec % 3 == 0:
-                logs.append(
-                    f"{ts} payment-svc ERROR {req_id} downstream checkout callback timed out after 4500ms retry_storm=true"
-                )
+                logs.append(f"{ts} payment-svc ERROR {req_id} downstream checkout callback timed out after 4500ms retry_storm=true")
             if sec >= 1125 and sec % 2 == 0:
-                logs.append(
-                    f"{ts} api-gateway ERROR {req_id} HTTP 504 upstream timeout service=checkout-svc latency_ms={rng.randint(3200, 5100)}"
-                )
+                logs.append(f"{ts} api-gateway ERROR {req_id} HTTP 504 upstream timeout service=checkout-svc latency_ms={rng.randint(3200, 5100)}")
 
-    # Pad to ~2000 lines with background healthcheck/worker info logs
     while len(logs) < 2000:
         sec = rng.randint(0, 1799)
         svc = rng.choice(services)
         logs.append(f"{_ts(base, sec)} {svc} INFO worker heartbeat queue_depth={rng.randint(0, 4)} status=ok")
 
-    logs.sort()
-
-    # Traces (120 spans)
     for i in range(120):
         sec = i * 15
         ts = _ts(base, sec)
         if sec < 1050:
-            dur = round(rng.uniform(35.0, 95.0), 1)
             traces.append({
-                "trace_id": f"tr-{i+1:04d}",
-                "span_id": f"sp-{i+1:04d}",
-                "ts": ts,
+                "trace_id": f"tr-{i+1:04d}", "span_id": f"sp-{i+1:04d}", "ts": ts,
                 "service": "checkout-svc" if i % 2 == 0 else "payment-svc",
                 "operation": "POST /checkout/confirm" if i % 2 == 0 else "POST /payment/charge",
-                "duration_ms": dur,
-                "status": "OK",
+                "duration_ms": round(rng.uniform(35.0, 95.0), 1), "status": "OK",
             })
         else:
             is_checkout = i % 2 == 0
-            dur = round(rng.uniform(2850.0, 4950.0), 1)
             traces.append({
-                "trace_id": f"tr-{i+1:04d}",
-                "span_id": f"sp-{i+1:04d}",
-                "ts": ts,
+                "trace_id": f"tr-{i+1:04d}", "span_id": f"sp-{i+1:04d}", "ts": ts,
                 "service": "checkout-svc" if is_checkout else "payment-svc",
                 "operation": "db.pool.acquire" if is_checkout else "POST /payment/charge",
-                "duration_ms": dur,
-                "status": "TIMEOUT",
+                "duration_ms": round(rng.uniform(2850.0, 4950.0), 1), "status": "TIMEOUT",
                 "error": "HikariPool-1 pool_max=5 exhausted" if is_checkout else "upstream_checkout_timeout",
             })
 
-    # Metrics (30 1-minute buckets for 3 series: latency_ms, error_rate_pct, pool_usage_pct)
     for minute in range(30):
-        sec = minute * 60
-        ts = _ts(base, sec)
-        if minute < 17:  # before 14:02
-            lat = round(rng.uniform(42.0, 62.0), 2)
-            err = round(rng.uniform(0.1, 0.4), 2)
-            pool = round(rng.uniform(22.0, 32.0), 2)
-        elif minute == 17:  # 14:02 deploy
-            lat = 185.4
-            err = 1.8
-            pool = 88.0
-        else:
-            lat = round(rng.uniform(2450.0, 4120.0), 2)
-            err = round(rng.uniform(28.0, 46.5), 2)
-            pool = 100.0
-        metrics.append((ts, "checkout-svc", "latency_ms", lat))
-        metrics.append((ts, "checkout-svc", "error_rate_pct", err))
-        metrics.append((ts, "checkout-svc", "pool_usage_pct", pool))
-
-    (out_dir / "logs.log").write_text("\n".join(logs) + "\n", encoding="utf-8")
-    (out_dir / "traces.json").write_text(json.dumps(traces, indent=2), encoding="utf-8")
-
-    csv_buf = io.StringIO()
-    writer = csv.writer(csv_buf)
-    writer.writerow(["ts", "service", "metric", "value"])
-    writer.writerows(metrics)
-    (out_dir / "metrics.csv").write_text(csv_buf.getvalue(), encoding="utf-8")
-    _write_synthetic_chart_png(out_dir / "dashboard.png", title_seed=1)
-
-    meta = {
-        "id": "bad-deploy-friday",
-        "title": "Bad Deploy Friday — Checkout DB Pool Exhaustion",
-        "opened_at": "2026-11-25T14:04:00Z",
-        "severity": "critical",
-        "services": services,
-        "has_image": True,
-    }
-    ground_truth = {
-        "scenario_id": "bad-deploy-friday",
-        "root_cause_service": "checkout-svc",
-        "root_cause_category": "connection_pool_exhaustion",
-        "root_cause_summary": "Deploy v2.4.1 on checkout-svc reduced db_pool_max from 50 to 5 at 14:02:00Z, exhausting connections and cascading into retry storms and payment/gateway 504 timeouts.",
-        "required_keywords": ["db_pool_max=5", "checkout-svc", "HikariPool-1"],
-        "milestones": [
-            {"ts": "2026-11-25T14:02:00Z", "event": "Deploy v2.4.1 applied db_pool_max=5"},
-            {"ts": "2026-11-25T14:03:00Z", "event": "HikariPool-1 connection timeouts begin"},
-            {"ts": "2026-11-25T14:03:30Z", "event": "Payment and API Gateway 504 cascade"},
-        ],
-    }
-    (out_dir / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
-    (out_dir / "ground_truth.json").write_text(json.dumps(ground_truth, indent=2), encoding="utf-8")
-    return meta
-
-
-def generate_cache_stampede(out_dir: Path) -> dict:
-    """Scenario 2: RCAEval-style Redis cache flush causing catalog-svc DB overload."""
-    rng = random.Random(108)
-    out_dir.mkdir(parents=True, exist_ok=True)
-    base = datetime(2026, 11, 24, 9, 10, 0, tzinfo=timezone.utc)
-    services = ["api-gateway", "catalog-svc", "redis-proxy", "cart-svc"]
-    logs: list[str] = []
-    traces: list[dict] = []
-    metrics: list[tuple[str, str, str, float]] = []
-
-    for sec in range(0, 1200):
-        ts = _ts(base, sec)
-        req_id = f"cat-{2000 + sec}"
-        if sec == 660:
-            logs.append(f"{ts} redis-proxy WARN admin_op ttl_flush executed namespace=product_catalog evicted_keys=48210")
-            continue
-        if sec < 660:
-            svc = services[sec % 4]
-            logs.append(f"{ts} {svc} INFO {req_id} cache_hit=true latency_ms={rng.randint(8, 28)}")
-        else:
-            if sec % 2 == 0:
-                logs.append(f"{ts} catalog-svc ERROR {req_id} cache miss stampede db_cpu=98% query_timeout=2000ms")
-            if sec % 3 == 0:
-                logs.append(f"{ts} cart-svc ERROR {req_id} failed fetching item metadata from catalog-svc status=503")
-            if sec % 4 == 0:
-                logs.append(f"{ts} api-gateway INFO {req_id} health probe ok")
-
-    for i in range(60):
-        sec = i * 20
-        ts = _ts(base, sec)
-        bad = sec >= 680
-        traces.append({
-            "trace_id": f"tr-cs-{i+1:04d}",
-            "span_id": f"sp-cs-{i+1:04d}",
-            "ts": ts,
-            "service": "catalog-svc",
-            "operation": "SELECT * FROM products",
-            "duration_ms": round(rng.uniform(1900.0, 3200.0), 1) if bad else round(rng.uniform(12.0, 35.0), 1),
-            "status": "ERROR" if bad else "OK",
-            "error": "db_query_timeout" if bad else "",
-        })
-
-    for minute in range(20):
         ts = _ts(base, minute * 60)
-        bad = minute >= 11
-        metrics.append((ts, "catalog-svc", "latency_ms", round(rng.uniform(1750, 2600), 2) if bad else round(rng.uniform(18, 32), 2)))
-        metrics.append((ts, "catalog-svc", "error_rate_pct", round(rng.uniform(18, 34), 2) if bad else round(rng.uniform(0.1, 0.3), 2)))
-        metrics.append((ts, "catalog-svc", "pool_usage_pct", round(rng.uniform(92, 99), 2) if bad else round(rng.uniform(18, 28), 2)))
+        if minute < 17:
+            lat, err, pool = round(rng.uniform(42, 62), 2), round(rng.uniform(0.1, 0.4), 2), round(rng.uniform(22, 32), 2)
+        elif minute == 17:
+            lat, err, pool = 185.4, 1.8, 88.0
+        else:
+            lat, err, pool = round(rng.uniform(2450, 4120), 2), round(rng.uniform(28, 46.5), 2), 100.0
+        metrics.extend([
+            (ts, "checkout-svc", "latency_ms", lat),
+            (ts, "checkout-svc", "error_rate_pct", err),
+            (ts, "checkout-svc", "pool_usage_pct", pool),
+        ])
 
-    (out_dir / "logs.log").write_text("\n".join(sorted(logs)) + "\n", encoding="utf-8")
-    (out_dir / "traces.json").write_text(json.dumps(traces, indent=2), encoding="utf-8")
-    csv_buf = io.StringIO()
-    w = csv.writer(csv_buf)
-    w.writerow(["ts", "service", "metric", "value"])
-    w.writerows(metrics)
-    (out_dir / "metrics.csv").write_text(csv_buf.getvalue(), encoding="utf-8")
-    _write_synthetic_chart_png(out_dir / "dashboard.png", title_seed=2)
-
-    meta = {
-        "id": "cache-stampede-rcaeval",
-        "title": "Catalog Cache Stampede After Redis TTL Flush",
-        "opened_at": "2026-11-24T09:22:00Z",
-        "severity": "high",
-        "services": services,
-        "has_image": True,
-    }
-    ground_truth = {
-        "scenario_id": "cache-stampede-rcaeval",
-        "root_cause_service": "redis-proxy",
-        "root_cause_category": "cache_stampede",
-        "root_cause_summary": "Redis ttl_flush evicted 48,210 product_catalog keys, triggering a DB query stampede on catalog-svc and 503 responses in cart-svc.",
-        "required_keywords": ["ttl_flush", "redis-proxy", "catalog-svc"],
-    }
-    (out_dir / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
-    (out_dir / "ground_truth.json").write_text(json.dumps(ground_truth, indent=2), encoding="utf-8")
-    return meta
+    return _write_bundle(
+        out_dir,
+        meta={"id": "bad-deploy-friday", "title": "Bad Deploy Friday — Checkout DB Pool Exhaustion", "opened_at": "2026-11-25T14:04:00Z", "severity": "critical", "services": services, "has_image": True},
+        ground_truth={"scenario_id": "bad-deploy-friday", "root_cause_service": "checkout-svc", "root_cause_category": "connection_pool_exhaustion", "required_keywords": ["db_pool_max=5", "checkout-svc", "HikariPool-1"]},
+        logs=logs, traces=traces, metrics=metrics, with_image=True, seed=1,
+    )
 
 
-def generate_auth_jwks_rotation(out_dir: Path) -> dict:
-    """Scenario 3: JWKS key rotation mismatch causing 401/503 bursts."""
-    rng = random.Random(77)
-    out_dir.mkdir(parents=True, exist_ok=True)
-    base = datetime(2026, 11, 23, 18, 0, 0, tzinfo=timezone.utc)
-    services = ["auth-svc", "api-gateway", "orders-svc"]
+def _gen_simple_fault(
+    scen_id: str,
+    title: str,
+    opened_at: str,
+    severity: str,
+    services: list[str],
+    root_svc: str,
+    downstream_svc: str,
+    category: str,
+    trigger_log: str,
+    error_log_tpl: str,
+    downstream_log_tpl: str,
+    required_keywords: list[str],
+    seed: int,
+    with_image: bool = False,
+    omit_logs: bool = False,
+) -> dict:
+    rng = random.Random(seed)
+    base = datetime.fromisoformat(opened_at.replace("Z", "+00:00")) - timedelta(minutes=12)
     logs: list[str] = []
     traces: list[dict] = []
     metrics: list[tuple[str, str, str, float]] = []
 
-    for sec in range(0, 900):
-        ts = _ts(base, sec)
-        req_id = f"auth-{3000 + sec}"
-        if sec == 480:
-            logs.append(f"{ts} auth-svc INFO jwks_rotate activated kid=key-2026-11b cache_ttl_sec=3600")
-            continue
-        if sec < 480:
-            logs.append(f"{ts} {services[sec % 3]} INFO {req_id} jwt verified kid=key-2026-11a status=200")
-        else:
-            if sec % 2 == 0:
-                logs.append(f"{ts} api-gateway ERROR {req_id} jwt signature invalid kid=key-2026-11b not found in stale JWKS cache")
-            if sec % 5 == 0:
-                logs.append(f"{ts} orders-svc ERROR {req_id} upstream auth rejected status=401")
+    if not omit_logs:
+        for sec in range(0, 900):
+            ts = _ts(base, sec)
+            req = f"req-{seed}-{sec}"
+            if sec == 480:
+                logs.append(f"{ts} {root_svc} WARN {trigger_log}")
+                continue
+            if sec < 480:
+                logs.append(f"{ts} {services[sec % len(services)]} INFO {req} request ok latency_ms={rng.randint(10, 40)}")
+            else:
+                if sec % 2 == 0:
+                    logs.append(f"{ts} {root_svc} ERROR {req} {error_log_tpl}")
+                if sec % 3 == 0:
+                    logs.append(f"{ts} {downstream_svc} ERROR {req} {downstream_log_tpl}")
+                if sec % 5 == 0:
+                    logs.append(f"{ts} api-gateway ERROR {req} HTTP 503 upstream={downstream_svc}")
 
-    for i in range(45):
-        sec = i * 20
-        ts = _ts(base, sec)
+    for i in range(40):
+        sec = i * 22
         bad = sec >= 500
         traces.append({
-            "trace_id": f"tr-au-{i+1:04d}",
-            "span_id": f"sp-au-{i+1:04d}",
-            "ts": ts,
-            "service": "api-gateway",
-            "operation": "middleware.jwt.verify",
-            "duration_ms": round(rng.uniform(45.0, 80.0), 1),
+            "trace_id": f"tr-{seed}-{i+1:03d}", "span_id": f"sp-{seed}-{i+1:03d}",
+            "ts": _ts(base, sec), "service": root_svc if i % 2 == 0 else downstream_svc,
+            "operation": f"{root_svc}.handle",
+            "duration_ms": round(rng.uniform(2100, 3900), 1) if bad else round(rng.uniform(18, 55), 1),
             "status": "ERROR" if bad else "OK",
-            "error": "jwks_kid_not_found" if bad else "",
+            "error": category if bad else "",
         })
 
     for minute in range(15):
         ts = _ts(base, minute * 60)
         bad = minute >= 8
-        metrics.append((ts, "api-gateway", "latency_ms", round(rng.uniform(35, 65), 2)))
-        metrics.append((ts, "api-gateway", "error_rate_pct", round(rng.uniform(32, 51), 2) if bad else round(rng.uniform(0.1, 0.2), 2)))
-        metrics.append((ts, "api-gateway", "pool_usage_pct", round(rng.uniform(15, 25), 2)))
+        metrics.extend([
+            (ts, root_svc, "latency_ms", round(rng.uniform(1850, 2900), 2) if bad else round(rng.uniform(22, 42), 2)),
+            (ts, root_svc, "error_rate_pct", round(rng.uniform(22, 45), 2) if bad else round(rng.uniform(0.1, 0.3), 2)),
+            (ts, root_svc, "pool_usage_pct", round(rng.uniform(90, 99), 2) if bad else round(rng.uniform(20, 35), 2)),
+        ])
 
-    (out_dir / "logs.log").write_text("\n".join(sorted(logs)) + "\n", encoding="utf-8")
-    (out_dir / "traces.json").write_text(json.dumps(traces, indent=2), encoding="utf-8")
-    csv_buf = io.StringIO()
-    w = csv.writer(csv_buf)
-    w.writerow(["ts", "service", "metric", "value"])
-    w.writerows(metrics)
-    (out_dir / "metrics.csv").write_text(csv_buf.getvalue(), encoding="utf-8")
-
-    meta = {
-        "id": "auth-jwks-rotation",
-        "title": "JWKS Key Rotation Cache Mismatch (401 Spike)",
-        "opened_at": "2026-11-23T18:08:30Z",
-        "severity": "medium",
-        "services": services,
-        "has_image": False,
-    }
-    ground_truth = {
-        "scenario_id": "auth-jwks-rotation",
-        "root_cause_service": "auth-svc",
-        "root_cause_category": "auth_failure",
-        "root_cause_summary": "auth-svc rotated active signing key to kid=key-2026-11b while api-gateway held a 3600s stale JWKS cache, rejecting valid tokens with 401.",
-        "required_keywords": ["jwks_rotate", "key-2026-11b", "api-gateway"],
-    }
-    (out_dir / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
-    (out_dir / "ground_truth.json").write_text(json.dumps(ground_truth, indent=2), encoding="utf-8")
-    return meta
+    return _write_bundle(
+        SCENARIOS_DIR / scen_id,
+        meta={"id": scen_id, "title": title, "opened_at": opened_at, "severity": severity, "services": services, "has_image": with_image},
+        ground_truth={"scenario_id": scen_id, "root_cause_service": root_svc, "root_cause_category": category, "required_keywords": required_keywords},
+        logs=logs, traces=traces, metrics=metrics, with_image=with_image, seed=seed,
+    )
 
 
 def generate_all() -> list[dict]:
     return [
         generate_bad_deploy_friday(SCENARIOS_DIR / "bad-deploy-friday"),
-        generate_cache_stampede(SCENARIOS_DIR / "cache-stampede-rcaeval"),
-        generate_auth_jwks_rotation(SCENARIOS_DIR / "auth-jwks-rotation"),
+        _gen_simple_fault(
+            "cache-stampede-rcaeval",
+            "Catalog Cache Stampede After Redis TTL Flush",
+            "2026-11-24T09:22:00Z", "high",
+            ["api-gateway", "catalog-svc", "redis-proxy", "cart-svc"],
+            "redis-proxy", "catalog-svc", "cache_stampede",
+            "admin_op ttl_flush executed namespace=product_catalog evicted_keys=48210",
+            "cache miss storm namespace=product_catalog evicted_keys=48210",
+            "db overload from catalog-svc cache miss stampede",
+            ["ttl_flush", "redis-proxy", "catalog-svc"],
+            seed=108, with_image=True,
+        ),
+        _gen_simple_fault(
+            "auth-jwks-rotation",
+            "JWKS Key Rotation Cache Mismatch (401 Spike)",
+            "2026-11-23T18:08:30Z", "medium",
+            ["auth-svc", "api-gateway", "orders-svc"],
+            "auth-svc", "api-gateway", "auth_token_mismatch",
+            "jwks_rotate activated kid=key-2026-11b cache_ttl_sec=3600",
+            "signing key rotated kid=key-2026-11b missing in consumer cache",
+            "jwt signature invalid kid=key-2026-11b rejected 401",
+            ["jwks_rotate", "auth-svc", "key-2026-11b"],
+            seed=77,
+        ),
+        _gen_simple_fault(
+            "inventory-oom-kill",
+            "Inventory Worker OOMKill After Batch Export Deploy",
+            "2026-11-22T11:15:00Z", "critical",
+            ["api-gateway", "inventory-svc", "warehouse-sync"],
+            "inventory-svc", "warehouse-sync", "memory_exhaustion",
+            "deploy v3.8.0 enabled unbounded_csv_buffer=true heap_limit=512Mi",
+            "OutOfMemoryError Java heap space oom_kill container=inventory-svc",
+            "warehouse-sync failed calling inventory-svc connection reset",
+            ["OutOfMemoryError", "inventory-svc", "oom_kill"],
+            seed=201,
+        ),
+        _gen_simple_fault(
+            "payment-webhook-timeout",
+            "Payment Provider TLS Handshake Timeout Cascade",
+            "2026-11-21T16:40:00Z", "high",
+            ["api-gateway", "checkout-svc", "payment-svc"],
+            "payment-svc", "checkout-svc", "upstream_timeout",
+            "deploy egress_proxy_pool=2 upstream=stripe-webhook timeout_ms=5000",
+            "upstream TLS handshake timeout after 5000ms partner=stripe-webhook",
+            "checkout-svc payment authorization timed out status=504",
+            ["payment-svc", "timeout", "stripe-webhook"],
+            seed=305,
+        ),
+        _gen_simple_fault(
+            "orders-db-pool-exhaustion",
+            "Orders Service Connection Pool Saturation on Bulk Import",
+            "2026-11-20T08:30:00Z", "high",
+            ["api-gateway", "orders-svc", "billing-svc"],
+            "orders-svc", "billing-svc", "connection_pool_exhaustion",
+            "deploy v1.9.4 applied config db_pool_max=3 max_wait_ms=1500",
+            "pgpool connection pool exhausted active=3/3 queued=48",
+            "billing-svc failed reading orders-svc ledger timeout",
+            ["orders-svc", "db_pool_max=3", "exhausted"],
+            seed=412,
+        ),
+        _gen_simple_fault(
+            "session-redis-eviction",
+            "Session Store Memory Eviction Causing Login Failures",
+            "2026-11-19T21:10:00Z", "high",
+            ["api-gateway", "session-svc", "auth-svc"],
+            "session-svc", "auth-svc", "cache_stampede",
+            "redis maxmemory-policy volatile-lru triggered mass eviction keys=19400",
+            "session lookup miss after mass eviction redis_oom=true",
+            "auth-svc session validation failed unexpected cache miss",
+            ["session-svc", "eviction", "redis"],
+            seed=518,
+        ),
+        _gen_simple_fault(
+            "search-gc-pause",
+            "Search Indexer Stop-The-World GC Pause Outage",
+            "2026-11-18T14:50:00Z", "medium",
+            ["api-gateway", "search-svc", "catalog-svc"],
+            "search-svc", "catalog-svc", "memory_exhaustion",
+            "config heap_ratio=0.95 triggered continuous Full GC pause_ms=4200",
+            "JVM Full GC pause exceeded 4000ms oom_pressure=high",
+            "catalog-svc fallback search query timed out",
+            ["search-svc", "GC", "oom_pressure"],
+            seed=624,
+        ),
+        _gen_simple_fault(
+            "shipping-rate-api-timeout",
+            "Carrier Rate Calculator Upstream Timeout Storm",
+            "2026-11-17T10:05:00Z", "medium",
+            ["api-gateway", "shipping-svc", "checkout-svc"],
+            "shipping-svc", "checkout-svc", "upstream_timeout",
+            "config retry_attempts=8 backoff=0ms partner=fedex-rates",
+            "carrier rate endpoint timed out retry_storm=8x",
+            "checkout-svc shipping quote call failed status=504",
+            ["shipping-svc", "timed out", "retry_storm"],
+            seed=731,
+        ),
+        # Scenario 10: Deliberate degraded/missing-logs edge case for honest miss/partial-telemetry reporting
+        _gen_simple_fault(
+            "partial-telemetry-missing-logs",
+            "Partial Telemetry Edge Case (Logs Dropped, Metrics/Traces Only)",
+            "2026-11-16T04:15:00Z", "low",
+            ["api-gateway", "metrics-collector"],
+            "metrics-collector", "api-gateway", "upstream_timeout",
+            "log forwarder dropped buffer",
+            "unused",
+            "unused",
+            ["metrics-collector", "missing-logs"],
+            seed=899, omit_logs=True,
+        ),
     ]
 
 

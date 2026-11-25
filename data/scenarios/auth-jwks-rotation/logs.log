@@ -1,773 +1,912 @@
-2026-11-23T18:00:00Z auth-svc INFO auth-3000 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:01Z api-gateway INFO auth-3001 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:02Z orders-svc INFO auth-3002 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:03Z auth-svc INFO auth-3003 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:04Z api-gateway INFO auth-3004 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:05Z orders-svc INFO auth-3005 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:06Z auth-svc INFO auth-3006 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:07Z api-gateway INFO auth-3007 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:08Z orders-svc INFO auth-3008 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:09Z auth-svc INFO auth-3009 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:10Z api-gateway INFO auth-3010 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:11Z orders-svc INFO auth-3011 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:12Z auth-svc INFO auth-3012 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:13Z api-gateway INFO auth-3013 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:14Z orders-svc INFO auth-3014 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:15Z auth-svc INFO auth-3015 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:16Z api-gateway INFO auth-3016 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:17Z orders-svc INFO auth-3017 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:18Z auth-svc INFO auth-3018 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:19Z api-gateway INFO auth-3019 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:20Z orders-svc INFO auth-3020 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:21Z auth-svc INFO auth-3021 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:22Z api-gateway INFO auth-3022 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:23Z orders-svc INFO auth-3023 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:24Z auth-svc INFO auth-3024 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:25Z api-gateway INFO auth-3025 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:26Z orders-svc INFO auth-3026 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:27Z auth-svc INFO auth-3027 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:28Z api-gateway INFO auth-3028 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:29Z orders-svc INFO auth-3029 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:30Z auth-svc INFO auth-3030 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:31Z api-gateway INFO auth-3031 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:32Z orders-svc INFO auth-3032 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:33Z auth-svc INFO auth-3033 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:34Z api-gateway INFO auth-3034 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:35Z orders-svc INFO auth-3035 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:36Z auth-svc INFO auth-3036 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:37Z api-gateway INFO auth-3037 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:38Z orders-svc INFO auth-3038 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:39Z auth-svc INFO auth-3039 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:40Z api-gateway INFO auth-3040 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:41Z orders-svc INFO auth-3041 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:42Z auth-svc INFO auth-3042 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:43Z api-gateway INFO auth-3043 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:44Z orders-svc INFO auth-3044 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:45Z auth-svc INFO auth-3045 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:46Z api-gateway INFO auth-3046 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:47Z orders-svc INFO auth-3047 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:48Z auth-svc INFO auth-3048 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:49Z api-gateway INFO auth-3049 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:50Z orders-svc INFO auth-3050 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:51Z auth-svc INFO auth-3051 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:52Z api-gateway INFO auth-3052 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:53Z orders-svc INFO auth-3053 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:54Z auth-svc INFO auth-3054 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:55Z api-gateway INFO auth-3055 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:56Z orders-svc INFO auth-3056 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:57Z auth-svc INFO auth-3057 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:58Z api-gateway INFO auth-3058 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:00:59Z orders-svc INFO auth-3059 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:00Z auth-svc INFO auth-3060 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:01Z api-gateway INFO auth-3061 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:02Z orders-svc INFO auth-3062 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:03Z auth-svc INFO auth-3063 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:04Z api-gateway INFO auth-3064 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:05Z orders-svc INFO auth-3065 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:06Z auth-svc INFO auth-3066 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:07Z api-gateway INFO auth-3067 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:08Z orders-svc INFO auth-3068 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:09Z auth-svc INFO auth-3069 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:10Z api-gateway INFO auth-3070 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:11Z orders-svc INFO auth-3071 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:12Z auth-svc INFO auth-3072 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:13Z api-gateway INFO auth-3073 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:14Z orders-svc INFO auth-3074 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:15Z auth-svc INFO auth-3075 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:16Z api-gateway INFO auth-3076 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:17Z orders-svc INFO auth-3077 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:18Z auth-svc INFO auth-3078 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:19Z api-gateway INFO auth-3079 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:20Z orders-svc INFO auth-3080 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:21Z auth-svc INFO auth-3081 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:22Z api-gateway INFO auth-3082 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:23Z orders-svc INFO auth-3083 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:24Z auth-svc INFO auth-3084 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:25Z api-gateway INFO auth-3085 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:26Z orders-svc INFO auth-3086 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:27Z auth-svc INFO auth-3087 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:28Z api-gateway INFO auth-3088 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:29Z orders-svc INFO auth-3089 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:30Z auth-svc INFO auth-3090 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:31Z api-gateway INFO auth-3091 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:32Z orders-svc INFO auth-3092 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:33Z auth-svc INFO auth-3093 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:34Z api-gateway INFO auth-3094 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:35Z orders-svc INFO auth-3095 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:36Z auth-svc INFO auth-3096 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:37Z api-gateway INFO auth-3097 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:38Z orders-svc INFO auth-3098 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:39Z auth-svc INFO auth-3099 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:40Z api-gateway INFO auth-3100 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:41Z orders-svc INFO auth-3101 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:42Z auth-svc INFO auth-3102 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:43Z api-gateway INFO auth-3103 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:44Z orders-svc INFO auth-3104 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:45Z auth-svc INFO auth-3105 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:46Z api-gateway INFO auth-3106 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:47Z orders-svc INFO auth-3107 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:48Z auth-svc INFO auth-3108 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:49Z api-gateway INFO auth-3109 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:50Z orders-svc INFO auth-3110 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:51Z auth-svc INFO auth-3111 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:52Z api-gateway INFO auth-3112 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:53Z orders-svc INFO auth-3113 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:54Z auth-svc INFO auth-3114 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:55Z api-gateway INFO auth-3115 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:56Z orders-svc INFO auth-3116 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:57Z auth-svc INFO auth-3117 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:58Z api-gateway INFO auth-3118 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:01:59Z orders-svc INFO auth-3119 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:00Z auth-svc INFO auth-3120 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:01Z api-gateway INFO auth-3121 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:02Z orders-svc INFO auth-3122 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:03Z auth-svc INFO auth-3123 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:04Z api-gateway INFO auth-3124 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:05Z orders-svc INFO auth-3125 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:06Z auth-svc INFO auth-3126 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:07Z api-gateway INFO auth-3127 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:08Z orders-svc INFO auth-3128 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:09Z auth-svc INFO auth-3129 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:10Z api-gateway INFO auth-3130 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:11Z orders-svc INFO auth-3131 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:12Z auth-svc INFO auth-3132 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:13Z api-gateway INFO auth-3133 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:14Z orders-svc INFO auth-3134 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:15Z auth-svc INFO auth-3135 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:16Z api-gateway INFO auth-3136 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:17Z orders-svc INFO auth-3137 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:18Z auth-svc INFO auth-3138 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:19Z api-gateway INFO auth-3139 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:20Z orders-svc INFO auth-3140 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:21Z auth-svc INFO auth-3141 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:22Z api-gateway INFO auth-3142 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:23Z orders-svc INFO auth-3143 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:24Z auth-svc INFO auth-3144 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:25Z api-gateway INFO auth-3145 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:26Z orders-svc INFO auth-3146 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:27Z auth-svc INFO auth-3147 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:28Z api-gateway INFO auth-3148 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:29Z orders-svc INFO auth-3149 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:30Z auth-svc INFO auth-3150 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:31Z api-gateway INFO auth-3151 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:32Z orders-svc INFO auth-3152 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:33Z auth-svc INFO auth-3153 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:34Z api-gateway INFO auth-3154 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:35Z orders-svc INFO auth-3155 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:36Z auth-svc INFO auth-3156 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:37Z api-gateway INFO auth-3157 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:38Z orders-svc INFO auth-3158 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:39Z auth-svc INFO auth-3159 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:40Z api-gateway INFO auth-3160 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:41Z orders-svc INFO auth-3161 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:42Z auth-svc INFO auth-3162 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:43Z api-gateway INFO auth-3163 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:44Z orders-svc INFO auth-3164 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:45Z auth-svc INFO auth-3165 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:46Z api-gateway INFO auth-3166 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:47Z orders-svc INFO auth-3167 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:48Z auth-svc INFO auth-3168 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:49Z api-gateway INFO auth-3169 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:50Z orders-svc INFO auth-3170 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:51Z auth-svc INFO auth-3171 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:52Z api-gateway INFO auth-3172 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:53Z orders-svc INFO auth-3173 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:54Z auth-svc INFO auth-3174 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:55Z api-gateway INFO auth-3175 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:56Z orders-svc INFO auth-3176 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:57Z auth-svc INFO auth-3177 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:58Z api-gateway INFO auth-3178 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:02:59Z orders-svc INFO auth-3179 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:00Z auth-svc INFO auth-3180 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:01Z api-gateway INFO auth-3181 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:02Z orders-svc INFO auth-3182 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:03Z auth-svc INFO auth-3183 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:04Z api-gateway INFO auth-3184 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:05Z orders-svc INFO auth-3185 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:06Z auth-svc INFO auth-3186 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:07Z api-gateway INFO auth-3187 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:08Z orders-svc INFO auth-3188 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:09Z auth-svc INFO auth-3189 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:10Z api-gateway INFO auth-3190 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:11Z orders-svc INFO auth-3191 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:12Z auth-svc INFO auth-3192 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:13Z api-gateway INFO auth-3193 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:14Z orders-svc INFO auth-3194 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:15Z auth-svc INFO auth-3195 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:16Z api-gateway INFO auth-3196 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:17Z orders-svc INFO auth-3197 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:18Z auth-svc INFO auth-3198 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:19Z api-gateway INFO auth-3199 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:20Z orders-svc INFO auth-3200 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:21Z auth-svc INFO auth-3201 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:22Z api-gateway INFO auth-3202 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:23Z orders-svc INFO auth-3203 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:24Z auth-svc INFO auth-3204 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:25Z api-gateway INFO auth-3205 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:26Z orders-svc INFO auth-3206 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:27Z auth-svc INFO auth-3207 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:28Z api-gateway INFO auth-3208 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:29Z orders-svc INFO auth-3209 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:30Z auth-svc INFO auth-3210 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:31Z api-gateway INFO auth-3211 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:32Z orders-svc INFO auth-3212 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:33Z auth-svc INFO auth-3213 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:34Z api-gateway INFO auth-3214 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:35Z orders-svc INFO auth-3215 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:36Z auth-svc INFO auth-3216 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:37Z api-gateway INFO auth-3217 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:38Z orders-svc INFO auth-3218 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:39Z auth-svc INFO auth-3219 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:40Z api-gateway INFO auth-3220 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:41Z orders-svc INFO auth-3221 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:42Z auth-svc INFO auth-3222 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:43Z api-gateway INFO auth-3223 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:44Z orders-svc INFO auth-3224 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:45Z auth-svc INFO auth-3225 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:46Z api-gateway INFO auth-3226 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:47Z orders-svc INFO auth-3227 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:48Z auth-svc INFO auth-3228 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:49Z api-gateway INFO auth-3229 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:50Z orders-svc INFO auth-3230 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:51Z auth-svc INFO auth-3231 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:52Z api-gateway INFO auth-3232 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:53Z orders-svc INFO auth-3233 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:54Z auth-svc INFO auth-3234 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:55Z api-gateway INFO auth-3235 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:56Z orders-svc INFO auth-3236 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:57Z auth-svc INFO auth-3237 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:58Z api-gateway INFO auth-3238 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:03:59Z orders-svc INFO auth-3239 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:00Z auth-svc INFO auth-3240 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:01Z api-gateway INFO auth-3241 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:02Z orders-svc INFO auth-3242 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:03Z auth-svc INFO auth-3243 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:04Z api-gateway INFO auth-3244 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:05Z orders-svc INFO auth-3245 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:06Z auth-svc INFO auth-3246 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:07Z api-gateway INFO auth-3247 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:08Z orders-svc INFO auth-3248 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:09Z auth-svc INFO auth-3249 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:10Z api-gateway INFO auth-3250 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:11Z orders-svc INFO auth-3251 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:12Z auth-svc INFO auth-3252 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:13Z api-gateway INFO auth-3253 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:14Z orders-svc INFO auth-3254 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:15Z auth-svc INFO auth-3255 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:16Z api-gateway INFO auth-3256 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:17Z orders-svc INFO auth-3257 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:18Z auth-svc INFO auth-3258 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:19Z api-gateway INFO auth-3259 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:20Z orders-svc INFO auth-3260 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:21Z auth-svc INFO auth-3261 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:22Z api-gateway INFO auth-3262 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:23Z orders-svc INFO auth-3263 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:24Z auth-svc INFO auth-3264 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:25Z api-gateway INFO auth-3265 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:26Z orders-svc INFO auth-3266 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:27Z auth-svc INFO auth-3267 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:28Z api-gateway INFO auth-3268 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:29Z orders-svc INFO auth-3269 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:30Z auth-svc INFO auth-3270 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:31Z api-gateway INFO auth-3271 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:32Z orders-svc INFO auth-3272 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:33Z auth-svc INFO auth-3273 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:34Z api-gateway INFO auth-3274 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:35Z orders-svc INFO auth-3275 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:36Z auth-svc INFO auth-3276 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:37Z api-gateway INFO auth-3277 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:38Z orders-svc INFO auth-3278 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:39Z auth-svc INFO auth-3279 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:40Z api-gateway INFO auth-3280 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:41Z orders-svc INFO auth-3281 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:42Z auth-svc INFO auth-3282 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:43Z api-gateway INFO auth-3283 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:44Z orders-svc INFO auth-3284 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:45Z auth-svc INFO auth-3285 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:46Z api-gateway INFO auth-3286 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:47Z orders-svc INFO auth-3287 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:48Z auth-svc INFO auth-3288 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:49Z api-gateway INFO auth-3289 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:50Z orders-svc INFO auth-3290 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:51Z auth-svc INFO auth-3291 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:52Z api-gateway INFO auth-3292 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:53Z orders-svc INFO auth-3293 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:54Z auth-svc INFO auth-3294 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:55Z api-gateway INFO auth-3295 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:56Z orders-svc INFO auth-3296 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:57Z auth-svc INFO auth-3297 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:58Z api-gateway INFO auth-3298 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:04:59Z orders-svc INFO auth-3299 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:00Z auth-svc INFO auth-3300 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:01Z api-gateway INFO auth-3301 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:02Z orders-svc INFO auth-3302 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:03Z auth-svc INFO auth-3303 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:04Z api-gateway INFO auth-3304 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:05Z orders-svc INFO auth-3305 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:06Z auth-svc INFO auth-3306 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:07Z api-gateway INFO auth-3307 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:08Z orders-svc INFO auth-3308 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:09Z auth-svc INFO auth-3309 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:10Z api-gateway INFO auth-3310 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:11Z orders-svc INFO auth-3311 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:12Z auth-svc INFO auth-3312 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:13Z api-gateway INFO auth-3313 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:14Z orders-svc INFO auth-3314 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:15Z auth-svc INFO auth-3315 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:16Z api-gateway INFO auth-3316 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:17Z orders-svc INFO auth-3317 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:18Z auth-svc INFO auth-3318 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:19Z api-gateway INFO auth-3319 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:20Z orders-svc INFO auth-3320 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:21Z auth-svc INFO auth-3321 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:22Z api-gateway INFO auth-3322 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:23Z orders-svc INFO auth-3323 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:24Z auth-svc INFO auth-3324 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:25Z api-gateway INFO auth-3325 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:26Z orders-svc INFO auth-3326 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:27Z auth-svc INFO auth-3327 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:28Z api-gateway INFO auth-3328 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:29Z orders-svc INFO auth-3329 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:30Z auth-svc INFO auth-3330 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:31Z api-gateway INFO auth-3331 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:32Z orders-svc INFO auth-3332 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:33Z auth-svc INFO auth-3333 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:34Z api-gateway INFO auth-3334 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:35Z orders-svc INFO auth-3335 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:36Z auth-svc INFO auth-3336 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:37Z api-gateway INFO auth-3337 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:38Z orders-svc INFO auth-3338 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:39Z auth-svc INFO auth-3339 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:40Z api-gateway INFO auth-3340 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:41Z orders-svc INFO auth-3341 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:42Z auth-svc INFO auth-3342 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:43Z api-gateway INFO auth-3343 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:44Z orders-svc INFO auth-3344 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:45Z auth-svc INFO auth-3345 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:46Z api-gateway INFO auth-3346 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:47Z orders-svc INFO auth-3347 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:48Z auth-svc INFO auth-3348 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:49Z api-gateway INFO auth-3349 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:50Z orders-svc INFO auth-3350 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:51Z auth-svc INFO auth-3351 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:52Z api-gateway INFO auth-3352 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:53Z orders-svc INFO auth-3353 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:54Z auth-svc INFO auth-3354 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:55Z api-gateway INFO auth-3355 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:56Z orders-svc INFO auth-3356 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:57Z auth-svc INFO auth-3357 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:58Z api-gateway INFO auth-3358 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:05:59Z orders-svc INFO auth-3359 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:00Z auth-svc INFO auth-3360 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:01Z api-gateway INFO auth-3361 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:02Z orders-svc INFO auth-3362 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:03Z auth-svc INFO auth-3363 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:04Z api-gateway INFO auth-3364 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:05Z orders-svc INFO auth-3365 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:06Z auth-svc INFO auth-3366 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:07Z api-gateway INFO auth-3367 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:08Z orders-svc INFO auth-3368 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:09Z auth-svc INFO auth-3369 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:10Z api-gateway INFO auth-3370 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:11Z orders-svc INFO auth-3371 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:12Z auth-svc INFO auth-3372 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:13Z api-gateway INFO auth-3373 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:14Z orders-svc INFO auth-3374 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:15Z auth-svc INFO auth-3375 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:16Z api-gateway INFO auth-3376 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:17Z orders-svc INFO auth-3377 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:18Z auth-svc INFO auth-3378 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:19Z api-gateway INFO auth-3379 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:20Z orders-svc INFO auth-3380 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:21Z auth-svc INFO auth-3381 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:22Z api-gateway INFO auth-3382 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:23Z orders-svc INFO auth-3383 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:24Z auth-svc INFO auth-3384 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:25Z api-gateway INFO auth-3385 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:26Z orders-svc INFO auth-3386 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:27Z auth-svc INFO auth-3387 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:28Z api-gateway INFO auth-3388 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:29Z orders-svc INFO auth-3389 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:30Z auth-svc INFO auth-3390 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:31Z api-gateway INFO auth-3391 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:32Z orders-svc INFO auth-3392 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:33Z auth-svc INFO auth-3393 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:34Z api-gateway INFO auth-3394 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:35Z orders-svc INFO auth-3395 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:36Z auth-svc INFO auth-3396 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:37Z api-gateway INFO auth-3397 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:38Z orders-svc INFO auth-3398 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:39Z auth-svc INFO auth-3399 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:40Z api-gateway INFO auth-3400 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:41Z orders-svc INFO auth-3401 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:42Z auth-svc INFO auth-3402 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:43Z api-gateway INFO auth-3403 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:44Z orders-svc INFO auth-3404 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:45Z auth-svc INFO auth-3405 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:46Z api-gateway INFO auth-3406 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:47Z orders-svc INFO auth-3407 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:48Z auth-svc INFO auth-3408 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:49Z api-gateway INFO auth-3409 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:50Z orders-svc INFO auth-3410 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:51Z auth-svc INFO auth-3411 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:52Z api-gateway INFO auth-3412 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:53Z orders-svc INFO auth-3413 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:54Z auth-svc INFO auth-3414 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:55Z api-gateway INFO auth-3415 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:56Z orders-svc INFO auth-3416 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:57Z auth-svc INFO auth-3417 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:58Z api-gateway INFO auth-3418 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:06:59Z orders-svc INFO auth-3419 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:00Z auth-svc INFO auth-3420 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:01Z api-gateway INFO auth-3421 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:02Z orders-svc INFO auth-3422 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:03Z auth-svc INFO auth-3423 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:04Z api-gateway INFO auth-3424 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:05Z orders-svc INFO auth-3425 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:06Z auth-svc INFO auth-3426 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:07Z api-gateway INFO auth-3427 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:08Z orders-svc INFO auth-3428 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:09Z auth-svc INFO auth-3429 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:10Z api-gateway INFO auth-3430 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:11Z orders-svc INFO auth-3431 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:12Z auth-svc INFO auth-3432 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:13Z api-gateway INFO auth-3433 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:14Z orders-svc INFO auth-3434 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:15Z auth-svc INFO auth-3435 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:16Z api-gateway INFO auth-3436 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:17Z orders-svc INFO auth-3437 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:18Z auth-svc INFO auth-3438 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:19Z api-gateway INFO auth-3439 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:20Z orders-svc INFO auth-3440 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:21Z auth-svc INFO auth-3441 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:22Z api-gateway INFO auth-3442 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:23Z orders-svc INFO auth-3443 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:24Z auth-svc INFO auth-3444 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:25Z api-gateway INFO auth-3445 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:26Z orders-svc INFO auth-3446 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:27Z auth-svc INFO auth-3447 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:28Z api-gateway INFO auth-3448 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:29Z orders-svc INFO auth-3449 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:30Z auth-svc INFO auth-3450 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:31Z api-gateway INFO auth-3451 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:32Z orders-svc INFO auth-3452 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:33Z auth-svc INFO auth-3453 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:34Z api-gateway INFO auth-3454 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:35Z orders-svc INFO auth-3455 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:36Z auth-svc INFO auth-3456 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:37Z api-gateway INFO auth-3457 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:38Z orders-svc INFO auth-3458 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:39Z auth-svc INFO auth-3459 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:40Z api-gateway INFO auth-3460 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:41Z orders-svc INFO auth-3461 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:42Z auth-svc INFO auth-3462 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:43Z api-gateway INFO auth-3463 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:44Z orders-svc INFO auth-3464 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:45Z auth-svc INFO auth-3465 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:46Z api-gateway INFO auth-3466 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:47Z orders-svc INFO auth-3467 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:48Z auth-svc INFO auth-3468 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:49Z api-gateway INFO auth-3469 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:50Z orders-svc INFO auth-3470 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:51Z auth-svc INFO auth-3471 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:52Z api-gateway INFO auth-3472 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:53Z orders-svc INFO auth-3473 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:54Z auth-svc INFO auth-3474 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:55Z api-gateway INFO auth-3475 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:56Z orders-svc INFO auth-3476 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:57Z auth-svc INFO auth-3477 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:58Z api-gateway INFO auth-3478 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:07:59Z orders-svc INFO auth-3479 jwt verified kid=key-2026-11a status=200
-2026-11-23T18:08:00Z auth-svc INFO jwks_rotate activated kid=key-2026-11b cache_ttl_sec=3600
-2026-11-23T18:08:02Z api-gateway ERROR auth-3482 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:04Z api-gateway ERROR auth-3484 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:05Z orders-svc ERROR auth-3485 upstream auth rejected status=401
-2026-11-23T18:08:06Z api-gateway ERROR auth-3486 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:08Z api-gateway ERROR auth-3488 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:10Z api-gateway ERROR auth-3490 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:10Z orders-svc ERROR auth-3490 upstream auth rejected status=401
-2026-11-23T18:08:12Z api-gateway ERROR auth-3492 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:14Z api-gateway ERROR auth-3494 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:15Z orders-svc ERROR auth-3495 upstream auth rejected status=401
-2026-11-23T18:08:16Z api-gateway ERROR auth-3496 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:18Z api-gateway ERROR auth-3498 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:20Z api-gateway ERROR auth-3500 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:20Z orders-svc ERROR auth-3500 upstream auth rejected status=401
-2026-11-23T18:08:22Z api-gateway ERROR auth-3502 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:24Z api-gateway ERROR auth-3504 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:25Z orders-svc ERROR auth-3505 upstream auth rejected status=401
-2026-11-23T18:08:26Z api-gateway ERROR auth-3506 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:28Z api-gateway ERROR auth-3508 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:30Z api-gateway ERROR auth-3510 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:30Z orders-svc ERROR auth-3510 upstream auth rejected status=401
-2026-11-23T18:08:32Z api-gateway ERROR auth-3512 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:34Z api-gateway ERROR auth-3514 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:35Z orders-svc ERROR auth-3515 upstream auth rejected status=401
-2026-11-23T18:08:36Z api-gateway ERROR auth-3516 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:38Z api-gateway ERROR auth-3518 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:40Z api-gateway ERROR auth-3520 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:40Z orders-svc ERROR auth-3520 upstream auth rejected status=401
-2026-11-23T18:08:42Z api-gateway ERROR auth-3522 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:44Z api-gateway ERROR auth-3524 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:45Z orders-svc ERROR auth-3525 upstream auth rejected status=401
-2026-11-23T18:08:46Z api-gateway ERROR auth-3526 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:48Z api-gateway ERROR auth-3528 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:50Z api-gateway ERROR auth-3530 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:50Z orders-svc ERROR auth-3530 upstream auth rejected status=401
-2026-11-23T18:08:52Z api-gateway ERROR auth-3532 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:54Z api-gateway ERROR auth-3534 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:55Z orders-svc ERROR auth-3535 upstream auth rejected status=401
-2026-11-23T18:08:56Z api-gateway ERROR auth-3536 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:08:58Z api-gateway ERROR auth-3538 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:00Z api-gateway ERROR auth-3540 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:00Z orders-svc ERROR auth-3540 upstream auth rejected status=401
-2026-11-23T18:09:02Z api-gateway ERROR auth-3542 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:04Z api-gateway ERROR auth-3544 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:05Z orders-svc ERROR auth-3545 upstream auth rejected status=401
-2026-11-23T18:09:06Z api-gateway ERROR auth-3546 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:08Z api-gateway ERROR auth-3548 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:10Z api-gateway ERROR auth-3550 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:10Z orders-svc ERROR auth-3550 upstream auth rejected status=401
-2026-11-23T18:09:12Z api-gateway ERROR auth-3552 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:14Z api-gateway ERROR auth-3554 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:15Z orders-svc ERROR auth-3555 upstream auth rejected status=401
-2026-11-23T18:09:16Z api-gateway ERROR auth-3556 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:18Z api-gateway ERROR auth-3558 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:20Z api-gateway ERROR auth-3560 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:20Z orders-svc ERROR auth-3560 upstream auth rejected status=401
-2026-11-23T18:09:22Z api-gateway ERROR auth-3562 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:24Z api-gateway ERROR auth-3564 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:25Z orders-svc ERROR auth-3565 upstream auth rejected status=401
-2026-11-23T18:09:26Z api-gateway ERROR auth-3566 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:28Z api-gateway ERROR auth-3568 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:30Z api-gateway ERROR auth-3570 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:30Z orders-svc ERROR auth-3570 upstream auth rejected status=401
-2026-11-23T18:09:32Z api-gateway ERROR auth-3572 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:34Z api-gateway ERROR auth-3574 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:35Z orders-svc ERROR auth-3575 upstream auth rejected status=401
-2026-11-23T18:09:36Z api-gateway ERROR auth-3576 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:38Z api-gateway ERROR auth-3578 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:40Z api-gateway ERROR auth-3580 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:40Z orders-svc ERROR auth-3580 upstream auth rejected status=401
-2026-11-23T18:09:42Z api-gateway ERROR auth-3582 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:44Z api-gateway ERROR auth-3584 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:45Z orders-svc ERROR auth-3585 upstream auth rejected status=401
-2026-11-23T18:09:46Z api-gateway ERROR auth-3586 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:48Z api-gateway ERROR auth-3588 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:50Z api-gateway ERROR auth-3590 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:50Z orders-svc ERROR auth-3590 upstream auth rejected status=401
-2026-11-23T18:09:52Z api-gateway ERROR auth-3592 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:54Z api-gateway ERROR auth-3594 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:55Z orders-svc ERROR auth-3595 upstream auth rejected status=401
-2026-11-23T18:09:56Z api-gateway ERROR auth-3596 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:09:58Z api-gateway ERROR auth-3598 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:00Z api-gateway ERROR auth-3600 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:00Z orders-svc ERROR auth-3600 upstream auth rejected status=401
-2026-11-23T18:10:02Z api-gateway ERROR auth-3602 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:04Z api-gateway ERROR auth-3604 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:05Z orders-svc ERROR auth-3605 upstream auth rejected status=401
-2026-11-23T18:10:06Z api-gateway ERROR auth-3606 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:08Z api-gateway ERROR auth-3608 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:10Z api-gateway ERROR auth-3610 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:10Z orders-svc ERROR auth-3610 upstream auth rejected status=401
-2026-11-23T18:10:12Z api-gateway ERROR auth-3612 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:14Z api-gateway ERROR auth-3614 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:15Z orders-svc ERROR auth-3615 upstream auth rejected status=401
-2026-11-23T18:10:16Z api-gateway ERROR auth-3616 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:18Z api-gateway ERROR auth-3618 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:20Z api-gateway ERROR auth-3620 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:20Z orders-svc ERROR auth-3620 upstream auth rejected status=401
-2026-11-23T18:10:22Z api-gateway ERROR auth-3622 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:24Z api-gateway ERROR auth-3624 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:25Z orders-svc ERROR auth-3625 upstream auth rejected status=401
-2026-11-23T18:10:26Z api-gateway ERROR auth-3626 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:28Z api-gateway ERROR auth-3628 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:30Z api-gateway ERROR auth-3630 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:30Z orders-svc ERROR auth-3630 upstream auth rejected status=401
-2026-11-23T18:10:32Z api-gateway ERROR auth-3632 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:34Z api-gateway ERROR auth-3634 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:35Z orders-svc ERROR auth-3635 upstream auth rejected status=401
-2026-11-23T18:10:36Z api-gateway ERROR auth-3636 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:38Z api-gateway ERROR auth-3638 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:40Z api-gateway ERROR auth-3640 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:40Z orders-svc ERROR auth-3640 upstream auth rejected status=401
-2026-11-23T18:10:42Z api-gateway ERROR auth-3642 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:44Z api-gateway ERROR auth-3644 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:45Z orders-svc ERROR auth-3645 upstream auth rejected status=401
-2026-11-23T18:10:46Z api-gateway ERROR auth-3646 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:48Z api-gateway ERROR auth-3648 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:50Z api-gateway ERROR auth-3650 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:50Z orders-svc ERROR auth-3650 upstream auth rejected status=401
-2026-11-23T18:10:52Z api-gateway ERROR auth-3652 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:54Z api-gateway ERROR auth-3654 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:55Z orders-svc ERROR auth-3655 upstream auth rejected status=401
-2026-11-23T18:10:56Z api-gateway ERROR auth-3656 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:10:58Z api-gateway ERROR auth-3658 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:00Z api-gateway ERROR auth-3660 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:00Z orders-svc ERROR auth-3660 upstream auth rejected status=401
-2026-11-23T18:11:02Z api-gateway ERROR auth-3662 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:04Z api-gateway ERROR auth-3664 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:05Z orders-svc ERROR auth-3665 upstream auth rejected status=401
-2026-11-23T18:11:06Z api-gateway ERROR auth-3666 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:08Z api-gateway ERROR auth-3668 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:10Z api-gateway ERROR auth-3670 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:10Z orders-svc ERROR auth-3670 upstream auth rejected status=401
-2026-11-23T18:11:12Z api-gateway ERROR auth-3672 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:14Z api-gateway ERROR auth-3674 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:15Z orders-svc ERROR auth-3675 upstream auth rejected status=401
-2026-11-23T18:11:16Z api-gateway ERROR auth-3676 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:18Z api-gateway ERROR auth-3678 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:20Z api-gateway ERROR auth-3680 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:20Z orders-svc ERROR auth-3680 upstream auth rejected status=401
-2026-11-23T18:11:22Z api-gateway ERROR auth-3682 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:24Z api-gateway ERROR auth-3684 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:25Z orders-svc ERROR auth-3685 upstream auth rejected status=401
-2026-11-23T18:11:26Z api-gateway ERROR auth-3686 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:28Z api-gateway ERROR auth-3688 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:30Z api-gateway ERROR auth-3690 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:30Z orders-svc ERROR auth-3690 upstream auth rejected status=401
-2026-11-23T18:11:32Z api-gateway ERROR auth-3692 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:34Z api-gateway ERROR auth-3694 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:35Z orders-svc ERROR auth-3695 upstream auth rejected status=401
-2026-11-23T18:11:36Z api-gateway ERROR auth-3696 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:38Z api-gateway ERROR auth-3698 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:40Z api-gateway ERROR auth-3700 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:40Z orders-svc ERROR auth-3700 upstream auth rejected status=401
-2026-11-23T18:11:42Z api-gateway ERROR auth-3702 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:44Z api-gateway ERROR auth-3704 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:45Z orders-svc ERROR auth-3705 upstream auth rejected status=401
-2026-11-23T18:11:46Z api-gateway ERROR auth-3706 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:48Z api-gateway ERROR auth-3708 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:50Z api-gateway ERROR auth-3710 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:50Z orders-svc ERROR auth-3710 upstream auth rejected status=401
-2026-11-23T18:11:52Z api-gateway ERROR auth-3712 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:54Z api-gateway ERROR auth-3714 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:55Z orders-svc ERROR auth-3715 upstream auth rejected status=401
-2026-11-23T18:11:56Z api-gateway ERROR auth-3716 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:11:58Z api-gateway ERROR auth-3718 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:00Z api-gateway ERROR auth-3720 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:00Z orders-svc ERROR auth-3720 upstream auth rejected status=401
-2026-11-23T18:12:02Z api-gateway ERROR auth-3722 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:04Z api-gateway ERROR auth-3724 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:05Z orders-svc ERROR auth-3725 upstream auth rejected status=401
-2026-11-23T18:12:06Z api-gateway ERROR auth-3726 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:08Z api-gateway ERROR auth-3728 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:10Z api-gateway ERROR auth-3730 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:10Z orders-svc ERROR auth-3730 upstream auth rejected status=401
-2026-11-23T18:12:12Z api-gateway ERROR auth-3732 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:14Z api-gateway ERROR auth-3734 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:15Z orders-svc ERROR auth-3735 upstream auth rejected status=401
-2026-11-23T18:12:16Z api-gateway ERROR auth-3736 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:18Z api-gateway ERROR auth-3738 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:20Z api-gateway ERROR auth-3740 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:20Z orders-svc ERROR auth-3740 upstream auth rejected status=401
-2026-11-23T18:12:22Z api-gateway ERROR auth-3742 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:24Z api-gateway ERROR auth-3744 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:25Z orders-svc ERROR auth-3745 upstream auth rejected status=401
-2026-11-23T18:12:26Z api-gateway ERROR auth-3746 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:28Z api-gateway ERROR auth-3748 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:30Z api-gateway ERROR auth-3750 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:30Z orders-svc ERROR auth-3750 upstream auth rejected status=401
-2026-11-23T18:12:32Z api-gateway ERROR auth-3752 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:34Z api-gateway ERROR auth-3754 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:35Z orders-svc ERROR auth-3755 upstream auth rejected status=401
-2026-11-23T18:12:36Z api-gateway ERROR auth-3756 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:38Z api-gateway ERROR auth-3758 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:40Z api-gateway ERROR auth-3760 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:40Z orders-svc ERROR auth-3760 upstream auth rejected status=401
-2026-11-23T18:12:42Z api-gateway ERROR auth-3762 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:44Z api-gateway ERROR auth-3764 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:45Z orders-svc ERROR auth-3765 upstream auth rejected status=401
-2026-11-23T18:12:46Z api-gateway ERROR auth-3766 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:48Z api-gateway ERROR auth-3768 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:50Z api-gateway ERROR auth-3770 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:50Z orders-svc ERROR auth-3770 upstream auth rejected status=401
-2026-11-23T18:12:52Z api-gateway ERROR auth-3772 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:54Z api-gateway ERROR auth-3774 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:55Z orders-svc ERROR auth-3775 upstream auth rejected status=401
-2026-11-23T18:12:56Z api-gateway ERROR auth-3776 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:12:58Z api-gateway ERROR auth-3778 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:00Z api-gateway ERROR auth-3780 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:00Z orders-svc ERROR auth-3780 upstream auth rejected status=401
-2026-11-23T18:13:02Z api-gateway ERROR auth-3782 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:04Z api-gateway ERROR auth-3784 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:05Z orders-svc ERROR auth-3785 upstream auth rejected status=401
-2026-11-23T18:13:06Z api-gateway ERROR auth-3786 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:08Z api-gateway ERROR auth-3788 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:10Z api-gateway ERROR auth-3790 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:10Z orders-svc ERROR auth-3790 upstream auth rejected status=401
-2026-11-23T18:13:12Z api-gateway ERROR auth-3792 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:14Z api-gateway ERROR auth-3794 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:15Z orders-svc ERROR auth-3795 upstream auth rejected status=401
-2026-11-23T18:13:16Z api-gateway ERROR auth-3796 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:18Z api-gateway ERROR auth-3798 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:20Z api-gateway ERROR auth-3800 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:20Z orders-svc ERROR auth-3800 upstream auth rejected status=401
-2026-11-23T18:13:22Z api-gateway ERROR auth-3802 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:24Z api-gateway ERROR auth-3804 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:25Z orders-svc ERROR auth-3805 upstream auth rejected status=401
-2026-11-23T18:13:26Z api-gateway ERROR auth-3806 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:28Z api-gateway ERROR auth-3808 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:30Z api-gateway ERROR auth-3810 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:30Z orders-svc ERROR auth-3810 upstream auth rejected status=401
-2026-11-23T18:13:32Z api-gateway ERROR auth-3812 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:34Z api-gateway ERROR auth-3814 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:35Z orders-svc ERROR auth-3815 upstream auth rejected status=401
-2026-11-23T18:13:36Z api-gateway ERROR auth-3816 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:38Z api-gateway ERROR auth-3818 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:40Z api-gateway ERROR auth-3820 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:40Z orders-svc ERROR auth-3820 upstream auth rejected status=401
-2026-11-23T18:13:42Z api-gateway ERROR auth-3822 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:44Z api-gateway ERROR auth-3824 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:45Z orders-svc ERROR auth-3825 upstream auth rejected status=401
-2026-11-23T18:13:46Z api-gateway ERROR auth-3826 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:48Z api-gateway ERROR auth-3828 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:50Z api-gateway ERROR auth-3830 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:50Z orders-svc ERROR auth-3830 upstream auth rejected status=401
-2026-11-23T18:13:52Z api-gateway ERROR auth-3832 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:54Z api-gateway ERROR auth-3834 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:55Z orders-svc ERROR auth-3835 upstream auth rejected status=401
-2026-11-23T18:13:56Z api-gateway ERROR auth-3836 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:13:58Z api-gateway ERROR auth-3838 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:00Z api-gateway ERROR auth-3840 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:00Z orders-svc ERROR auth-3840 upstream auth rejected status=401
-2026-11-23T18:14:02Z api-gateway ERROR auth-3842 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:04Z api-gateway ERROR auth-3844 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:05Z orders-svc ERROR auth-3845 upstream auth rejected status=401
-2026-11-23T18:14:06Z api-gateway ERROR auth-3846 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:08Z api-gateway ERROR auth-3848 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:10Z api-gateway ERROR auth-3850 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:10Z orders-svc ERROR auth-3850 upstream auth rejected status=401
-2026-11-23T18:14:12Z api-gateway ERROR auth-3852 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:14Z api-gateway ERROR auth-3854 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:15Z orders-svc ERROR auth-3855 upstream auth rejected status=401
-2026-11-23T18:14:16Z api-gateway ERROR auth-3856 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:18Z api-gateway ERROR auth-3858 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:20Z api-gateway ERROR auth-3860 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:20Z orders-svc ERROR auth-3860 upstream auth rejected status=401
-2026-11-23T18:14:22Z api-gateway ERROR auth-3862 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:24Z api-gateway ERROR auth-3864 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:25Z orders-svc ERROR auth-3865 upstream auth rejected status=401
-2026-11-23T18:14:26Z api-gateway ERROR auth-3866 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:28Z api-gateway ERROR auth-3868 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:30Z api-gateway ERROR auth-3870 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:30Z orders-svc ERROR auth-3870 upstream auth rejected status=401
-2026-11-23T18:14:32Z api-gateway ERROR auth-3872 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:34Z api-gateway ERROR auth-3874 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:35Z orders-svc ERROR auth-3875 upstream auth rejected status=401
-2026-11-23T18:14:36Z api-gateway ERROR auth-3876 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:38Z api-gateway ERROR auth-3878 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:40Z api-gateway ERROR auth-3880 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:40Z orders-svc ERROR auth-3880 upstream auth rejected status=401
-2026-11-23T18:14:42Z api-gateway ERROR auth-3882 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:44Z api-gateway ERROR auth-3884 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:45Z orders-svc ERROR auth-3885 upstream auth rejected status=401
-2026-11-23T18:14:46Z api-gateway ERROR auth-3886 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:48Z api-gateway ERROR auth-3888 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:50Z api-gateway ERROR auth-3890 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:50Z orders-svc ERROR auth-3890 upstream auth rejected status=401
-2026-11-23T18:14:52Z api-gateway ERROR auth-3892 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:54Z api-gateway ERROR auth-3894 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:55Z orders-svc ERROR auth-3895 upstream auth rejected status=401
-2026-11-23T18:14:56Z api-gateway ERROR auth-3896 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
-2026-11-23T18:14:58Z api-gateway ERROR auth-3898 jwt signature invalid kid=key-2026-11b not found in stale JWKS cache
+2026-11-23T17:56:30Z auth-svc INFO req-77-0 request ok latency_ms=35
+2026-11-23T17:56:31Z api-gateway INFO req-77-1 request ok latency_ms=18
+2026-11-23T17:56:32Z orders-svc INFO req-77-2 request ok latency_ms=20
+2026-11-23T17:56:33Z auth-svc INFO req-77-3 request ok latency_ms=16
+2026-11-23T17:56:34Z api-gateway INFO req-77-4 request ok latency_ms=17
+2026-11-23T17:56:35Z orders-svc INFO req-77-5 request ok latency_ms=16
+2026-11-23T17:56:36Z auth-svc INFO req-77-6 request ok latency_ms=36
+2026-11-23T17:56:37Z api-gateway INFO req-77-7 request ok latency_ms=40
+2026-11-23T17:56:38Z orders-svc INFO req-77-8 request ok latency_ms=13
+2026-11-23T17:56:39Z auth-svc INFO req-77-9 request ok latency_ms=19
+2026-11-23T17:56:40Z api-gateway INFO req-77-10 request ok latency_ms=25
+2026-11-23T17:56:41Z orders-svc INFO req-77-11 request ok latency_ms=40
+2026-11-23T17:56:42Z auth-svc INFO req-77-12 request ok latency_ms=27
+2026-11-23T17:56:43Z api-gateway INFO req-77-13 request ok latency_ms=29
+2026-11-23T17:56:44Z orders-svc INFO req-77-14 request ok latency_ms=17
+2026-11-23T17:56:45Z auth-svc INFO req-77-15 request ok latency_ms=14
+2026-11-23T17:56:46Z api-gateway INFO req-77-16 request ok latency_ms=27
+2026-11-23T17:56:47Z orders-svc INFO req-77-17 request ok latency_ms=30
+2026-11-23T17:56:48Z auth-svc INFO req-77-18 request ok latency_ms=31
+2026-11-23T17:56:49Z api-gateway INFO req-77-19 request ok latency_ms=26
+2026-11-23T17:56:50Z orders-svc INFO req-77-20 request ok latency_ms=10
+2026-11-23T17:56:51Z auth-svc INFO req-77-21 request ok latency_ms=37
+2026-11-23T17:56:52Z api-gateway INFO req-77-22 request ok latency_ms=18
+2026-11-23T17:56:53Z orders-svc INFO req-77-23 request ok latency_ms=10
+2026-11-23T17:56:54Z auth-svc INFO req-77-24 request ok latency_ms=36
+2026-11-23T17:56:55Z api-gateway INFO req-77-25 request ok latency_ms=40
+2026-11-23T17:56:56Z orders-svc INFO req-77-26 request ok latency_ms=25
+2026-11-23T17:56:57Z auth-svc INFO req-77-27 request ok latency_ms=15
+2026-11-23T17:56:58Z api-gateway INFO req-77-28 request ok latency_ms=35
+2026-11-23T17:56:59Z orders-svc INFO req-77-29 request ok latency_ms=36
+2026-11-23T17:57:00Z auth-svc INFO req-77-30 request ok latency_ms=16
+2026-11-23T17:57:01Z api-gateway INFO req-77-31 request ok latency_ms=26
+2026-11-23T17:57:02Z orders-svc INFO req-77-32 request ok latency_ms=36
+2026-11-23T17:57:03Z auth-svc INFO req-77-33 request ok latency_ms=22
+2026-11-23T17:57:04Z api-gateway INFO req-77-34 request ok latency_ms=15
+2026-11-23T17:57:05Z orders-svc INFO req-77-35 request ok latency_ms=20
+2026-11-23T17:57:06Z auth-svc INFO req-77-36 request ok latency_ms=20
+2026-11-23T17:57:07Z api-gateway INFO req-77-37 request ok latency_ms=13
+2026-11-23T17:57:08Z orders-svc INFO req-77-38 request ok latency_ms=12
+2026-11-23T17:57:09Z auth-svc INFO req-77-39 request ok latency_ms=27
+2026-11-23T17:57:10Z api-gateway INFO req-77-40 request ok latency_ms=34
+2026-11-23T17:57:11Z orders-svc INFO req-77-41 request ok latency_ms=18
+2026-11-23T17:57:12Z auth-svc INFO req-77-42 request ok latency_ms=27
+2026-11-23T17:57:13Z api-gateway INFO req-77-43 request ok latency_ms=25
+2026-11-23T17:57:14Z orders-svc INFO req-77-44 request ok latency_ms=16
+2026-11-23T17:57:15Z auth-svc INFO req-77-45 request ok latency_ms=17
+2026-11-23T17:57:16Z api-gateway INFO req-77-46 request ok latency_ms=16
+2026-11-23T17:57:17Z orders-svc INFO req-77-47 request ok latency_ms=12
+2026-11-23T17:57:18Z auth-svc INFO req-77-48 request ok latency_ms=12
+2026-11-23T17:57:19Z api-gateway INFO req-77-49 request ok latency_ms=37
+2026-11-23T17:57:20Z orders-svc INFO req-77-50 request ok latency_ms=16
+2026-11-23T17:57:21Z auth-svc INFO req-77-51 request ok latency_ms=32
+2026-11-23T17:57:22Z api-gateway INFO req-77-52 request ok latency_ms=27
+2026-11-23T17:57:23Z orders-svc INFO req-77-53 request ok latency_ms=38
+2026-11-23T17:57:24Z auth-svc INFO req-77-54 request ok latency_ms=24
+2026-11-23T17:57:25Z api-gateway INFO req-77-55 request ok latency_ms=29
+2026-11-23T17:57:26Z orders-svc INFO req-77-56 request ok latency_ms=32
+2026-11-23T17:57:27Z auth-svc INFO req-77-57 request ok latency_ms=27
+2026-11-23T17:57:28Z api-gateway INFO req-77-58 request ok latency_ms=12
+2026-11-23T17:57:29Z orders-svc INFO req-77-59 request ok latency_ms=13
+2026-11-23T17:57:30Z auth-svc INFO req-77-60 request ok latency_ms=36
+2026-11-23T17:57:31Z api-gateway INFO req-77-61 request ok latency_ms=35
+2026-11-23T17:57:32Z orders-svc INFO req-77-62 request ok latency_ms=32
+2026-11-23T17:57:33Z auth-svc INFO req-77-63 request ok latency_ms=33
+2026-11-23T17:57:34Z api-gateway INFO req-77-64 request ok latency_ms=16
+2026-11-23T17:57:35Z orders-svc INFO req-77-65 request ok latency_ms=33
+2026-11-23T17:57:36Z auth-svc INFO req-77-66 request ok latency_ms=20
+2026-11-23T17:57:37Z api-gateway INFO req-77-67 request ok latency_ms=37
+2026-11-23T17:57:38Z orders-svc INFO req-77-68 request ok latency_ms=12
+2026-11-23T17:57:39Z auth-svc INFO req-77-69 request ok latency_ms=13
+2026-11-23T17:57:40Z api-gateway INFO req-77-70 request ok latency_ms=28
+2026-11-23T17:57:41Z orders-svc INFO req-77-71 request ok latency_ms=24
+2026-11-23T17:57:42Z auth-svc INFO req-77-72 request ok latency_ms=36
+2026-11-23T17:57:43Z api-gateway INFO req-77-73 request ok latency_ms=12
+2026-11-23T17:57:44Z orders-svc INFO req-77-74 request ok latency_ms=39
+2026-11-23T17:57:45Z auth-svc INFO req-77-75 request ok latency_ms=35
+2026-11-23T17:57:46Z api-gateway INFO req-77-76 request ok latency_ms=35
+2026-11-23T17:57:47Z orders-svc INFO req-77-77 request ok latency_ms=27
+2026-11-23T17:57:48Z auth-svc INFO req-77-78 request ok latency_ms=13
+2026-11-23T17:57:49Z api-gateway INFO req-77-79 request ok latency_ms=18
+2026-11-23T17:57:50Z orders-svc INFO req-77-80 request ok latency_ms=24
+2026-11-23T17:57:51Z auth-svc INFO req-77-81 request ok latency_ms=30
+2026-11-23T17:57:52Z api-gateway INFO req-77-82 request ok latency_ms=34
+2026-11-23T17:57:53Z orders-svc INFO req-77-83 request ok latency_ms=39
+2026-11-23T17:57:54Z auth-svc INFO req-77-84 request ok latency_ms=27
+2026-11-23T17:57:55Z api-gateway INFO req-77-85 request ok latency_ms=13
+2026-11-23T17:57:56Z orders-svc INFO req-77-86 request ok latency_ms=21
+2026-11-23T17:57:57Z auth-svc INFO req-77-87 request ok latency_ms=39
+2026-11-23T17:57:58Z api-gateway INFO req-77-88 request ok latency_ms=26
+2026-11-23T17:57:59Z orders-svc INFO req-77-89 request ok latency_ms=11
+2026-11-23T17:58:00Z auth-svc INFO req-77-90 request ok latency_ms=36
+2026-11-23T17:58:01Z api-gateway INFO req-77-91 request ok latency_ms=36
+2026-11-23T17:58:02Z orders-svc INFO req-77-92 request ok latency_ms=34
+2026-11-23T17:58:03Z auth-svc INFO req-77-93 request ok latency_ms=22
+2026-11-23T17:58:04Z api-gateway INFO req-77-94 request ok latency_ms=34
+2026-11-23T17:58:05Z orders-svc INFO req-77-95 request ok latency_ms=28
+2026-11-23T17:58:06Z auth-svc INFO req-77-96 request ok latency_ms=40
+2026-11-23T17:58:07Z api-gateway INFO req-77-97 request ok latency_ms=29
+2026-11-23T17:58:08Z orders-svc INFO req-77-98 request ok latency_ms=26
+2026-11-23T17:58:09Z auth-svc INFO req-77-99 request ok latency_ms=17
+2026-11-23T17:58:10Z api-gateway INFO req-77-100 request ok latency_ms=17
+2026-11-23T17:58:11Z orders-svc INFO req-77-101 request ok latency_ms=28
+2026-11-23T17:58:12Z auth-svc INFO req-77-102 request ok latency_ms=25
+2026-11-23T17:58:13Z api-gateway INFO req-77-103 request ok latency_ms=22
+2026-11-23T17:58:14Z orders-svc INFO req-77-104 request ok latency_ms=33
+2026-11-23T17:58:15Z auth-svc INFO req-77-105 request ok latency_ms=14
+2026-11-23T17:58:16Z api-gateway INFO req-77-106 request ok latency_ms=34
+2026-11-23T17:58:17Z orders-svc INFO req-77-107 request ok latency_ms=35
+2026-11-23T17:58:18Z auth-svc INFO req-77-108 request ok latency_ms=22
+2026-11-23T17:58:19Z api-gateway INFO req-77-109 request ok latency_ms=10
+2026-11-23T17:58:20Z orders-svc INFO req-77-110 request ok latency_ms=40
+2026-11-23T17:58:21Z auth-svc INFO req-77-111 request ok latency_ms=11
+2026-11-23T17:58:22Z api-gateway INFO req-77-112 request ok latency_ms=11
+2026-11-23T17:58:23Z orders-svc INFO req-77-113 request ok latency_ms=25
+2026-11-23T17:58:24Z auth-svc INFO req-77-114 request ok latency_ms=30
+2026-11-23T17:58:25Z api-gateway INFO req-77-115 request ok latency_ms=11
+2026-11-23T17:58:26Z orders-svc INFO req-77-116 request ok latency_ms=33
+2026-11-23T17:58:27Z auth-svc INFO req-77-117 request ok latency_ms=21
+2026-11-23T17:58:28Z api-gateway INFO req-77-118 request ok latency_ms=34
+2026-11-23T17:58:29Z orders-svc INFO req-77-119 request ok latency_ms=23
+2026-11-23T17:58:30Z auth-svc INFO req-77-120 request ok latency_ms=13
+2026-11-23T17:58:31Z api-gateway INFO req-77-121 request ok latency_ms=18
+2026-11-23T17:58:32Z orders-svc INFO req-77-122 request ok latency_ms=26
+2026-11-23T17:58:33Z auth-svc INFO req-77-123 request ok latency_ms=38
+2026-11-23T17:58:34Z api-gateway INFO req-77-124 request ok latency_ms=28
+2026-11-23T17:58:35Z orders-svc INFO req-77-125 request ok latency_ms=32
+2026-11-23T17:58:36Z auth-svc INFO req-77-126 request ok latency_ms=25
+2026-11-23T17:58:37Z api-gateway INFO req-77-127 request ok latency_ms=11
+2026-11-23T17:58:38Z orders-svc INFO req-77-128 request ok latency_ms=30
+2026-11-23T17:58:39Z auth-svc INFO req-77-129 request ok latency_ms=25
+2026-11-23T17:58:40Z api-gateway INFO req-77-130 request ok latency_ms=36
+2026-11-23T17:58:41Z orders-svc INFO req-77-131 request ok latency_ms=32
+2026-11-23T17:58:42Z auth-svc INFO req-77-132 request ok latency_ms=30
+2026-11-23T17:58:43Z api-gateway INFO req-77-133 request ok latency_ms=13
+2026-11-23T17:58:44Z orders-svc INFO req-77-134 request ok latency_ms=14
+2026-11-23T17:58:45Z auth-svc INFO req-77-135 request ok latency_ms=19
+2026-11-23T17:58:46Z api-gateway INFO req-77-136 request ok latency_ms=26
+2026-11-23T17:58:47Z orders-svc INFO req-77-137 request ok latency_ms=12
+2026-11-23T17:58:48Z auth-svc INFO req-77-138 request ok latency_ms=10
+2026-11-23T17:58:49Z api-gateway INFO req-77-139 request ok latency_ms=36
+2026-11-23T17:58:50Z orders-svc INFO req-77-140 request ok latency_ms=25
+2026-11-23T17:58:51Z auth-svc INFO req-77-141 request ok latency_ms=39
+2026-11-23T17:58:52Z api-gateway INFO req-77-142 request ok latency_ms=21
+2026-11-23T17:58:53Z orders-svc INFO req-77-143 request ok latency_ms=39
+2026-11-23T17:58:54Z auth-svc INFO req-77-144 request ok latency_ms=36
+2026-11-23T17:58:55Z api-gateway INFO req-77-145 request ok latency_ms=34
+2026-11-23T17:58:56Z orders-svc INFO req-77-146 request ok latency_ms=23
+2026-11-23T17:58:57Z auth-svc INFO req-77-147 request ok latency_ms=28
+2026-11-23T17:58:58Z api-gateway INFO req-77-148 request ok latency_ms=10
+2026-11-23T17:58:59Z orders-svc INFO req-77-149 request ok latency_ms=11
+2026-11-23T17:59:00Z auth-svc INFO req-77-150 request ok latency_ms=35
+2026-11-23T17:59:01Z api-gateway INFO req-77-151 request ok latency_ms=25
+2026-11-23T17:59:02Z orders-svc INFO req-77-152 request ok latency_ms=14
+2026-11-23T17:59:03Z auth-svc INFO req-77-153 request ok latency_ms=34
+2026-11-23T17:59:04Z api-gateway INFO req-77-154 request ok latency_ms=36
+2026-11-23T17:59:05Z orders-svc INFO req-77-155 request ok latency_ms=34
+2026-11-23T17:59:06Z auth-svc INFO req-77-156 request ok latency_ms=38
+2026-11-23T17:59:07Z api-gateway INFO req-77-157 request ok latency_ms=10
+2026-11-23T17:59:08Z orders-svc INFO req-77-158 request ok latency_ms=32
+2026-11-23T17:59:09Z auth-svc INFO req-77-159 request ok latency_ms=10
+2026-11-23T17:59:10Z api-gateway INFO req-77-160 request ok latency_ms=17
+2026-11-23T17:59:11Z orders-svc INFO req-77-161 request ok latency_ms=12
+2026-11-23T17:59:12Z auth-svc INFO req-77-162 request ok latency_ms=31
+2026-11-23T17:59:13Z api-gateway INFO req-77-163 request ok latency_ms=39
+2026-11-23T17:59:14Z orders-svc INFO req-77-164 request ok latency_ms=24
+2026-11-23T17:59:15Z auth-svc INFO req-77-165 request ok latency_ms=13
+2026-11-23T17:59:16Z api-gateway INFO req-77-166 request ok latency_ms=37
+2026-11-23T17:59:17Z orders-svc INFO req-77-167 request ok latency_ms=22
+2026-11-23T17:59:18Z auth-svc INFO req-77-168 request ok latency_ms=25
+2026-11-23T17:59:19Z api-gateway INFO req-77-169 request ok latency_ms=13
+2026-11-23T17:59:20Z orders-svc INFO req-77-170 request ok latency_ms=38
+2026-11-23T17:59:21Z auth-svc INFO req-77-171 request ok latency_ms=37
+2026-11-23T17:59:22Z api-gateway INFO req-77-172 request ok latency_ms=14
+2026-11-23T17:59:23Z orders-svc INFO req-77-173 request ok latency_ms=17
+2026-11-23T17:59:24Z auth-svc INFO req-77-174 request ok latency_ms=18
+2026-11-23T17:59:25Z api-gateway INFO req-77-175 request ok latency_ms=16
+2026-11-23T17:59:26Z orders-svc INFO req-77-176 request ok latency_ms=34
+2026-11-23T17:59:27Z auth-svc INFO req-77-177 request ok latency_ms=36
+2026-11-23T17:59:28Z api-gateway INFO req-77-178 request ok latency_ms=12
+2026-11-23T17:59:29Z orders-svc INFO req-77-179 request ok latency_ms=15
+2026-11-23T17:59:30Z auth-svc INFO req-77-180 request ok latency_ms=15
+2026-11-23T17:59:31Z api-gateway INFO req-77-181 request ok latency_ms=14
+2026-11-23T17:59:32Z orders-svc INFO req-77-182 request ok latency_ms=10
+2026-11-23T17:59:33Z auth-svc INFO req-77-183 request ok latency_ms=11
+2026-11-23T17:59:34Z api-gateway INFO req-77-184 request ok latency_ms=40
+2026-11-23T17:59:35Z orders-svc INFO req-77-185 request ok latency_ms=37
+2026-11-23T17:59:36Z auth-svc INFO req-77-186 request ok latency_ms=17
+2026-11-23T17:59:37Z api-gateway INFO req-77-187 request ok latency_ms=31
+2026-11-23T17:59:38Z orders-svc INFO req-77-188 request ok latency_ms=26
+2026-11-23T17:59:39Z auth-svc INFO req-77-189 request ok latency_ms=34
+2026-11-23T17:59:40Z api-gateway INFO req-77-190 request ok latency_ms=22
+2026-11-23T17:59:41Z orders-svc INFO req-77-191 request ok latency_ms=40
+2026-11-23T17:59:42Z auth-svc INFO req-77-192 request ok latency_ms=28
+2026-11-23T17:59:43Z api-gateway INFO req-77-193 request ok latency_ms=32
+2026-11-23T17:59:44Z orders-svc INFO req-77-194 request ok latency_ms=33
+2026-11-23T17:59:45Z auth-svc INFO req-77-195 request ok latency_ms=29
+2026-11-23T17:59:46Z api-gateway INFO req-77-196 request ok latency_ms=23
+2026-11-23T17:59:47Z orders-svc INFO req-77-197 request ok latency_ms=25
+2026-11-23T17:59:48Z auth-svc INFO req-77-198 request ok latency_ms=26
+2026-11-23T17:59:49Z api-gateway INFO req-77-199 request ok latency_ms=18
+2026-11-23T17:59:50Z orders-svc INFO req-77-200 request ok latency_ms=29
+2026-11-23T17:59:51Z auth-svc INFO req-77-201 request ok latency_ms=36
+2026-11-23T17:59:52Z api-gateway INFO req-77-202 request ok latency_ms=38
+2026-11-23T17:59:53Z orders-svc INFO req-77-203 request ok latency_ms=13
+2026-11-23T17:59:54Z auth-svc INFO req-77-204 request ok latency_ms=25
+2026-11-23T17:59:55Z api-gateway INFO req-77-205 request ok latency_ms=29
+2026-11-23T17:59:56Z orders-svc INFO req-77-206 request ok latency_ms=23
+2026-11-23T17:59:57Z auth-svc INFO req-77-207 request ok latency_ms=19
+2026-11-23T17:59:58Z api-gateway INFO req-77-208 request ok latency_ms=27
+2026-11-23T17:59:59Z orders-svc INFO req-77-209 request ok latency_ms=18
+2026-11-23T18:00:00Z auth-svc INFO req-77-210 request ok latency_ms=19
+2026-11-23T18:00:01Z api-gateway INFO req-77-211 request ok latency_ms=24
+2026-11-23T18:00:02Z orders-svc INFO req-77-212 request ok latency_ms=37
+2026-11-23T18:00:03Z auth-svc INFO req-77-213 request ok latency_ms=16
+2026-11-23T18:00:04Z api-gateway INFO req-77-214 request ok latency_ms=10
+2026-11-23T18:00:05Z orders-svc INFO req-77-215 request ok latency_ms=28
+2026-11-23T18:00:06Z auth-svc INFO req-77-216 request ok latency_ms=25
+2026-11-23T18:00:07Z api-gateway INFO req-77-217 request ok latency_ms=12
+2026-11-23T18:00:08Z orders-svc INFO req-77-218 request ok latency_ms=11
+2026-11-23T18:00:09Z auth-svc INFO req-77-219 request ok latency_ms=10
+2026-11-23T18:00:10Z api-gateway INFO req-77-220 request ok latency_ms=33
+2026-11-23T18:00:11Z orders-svc INFO req-77-221 request ok latency_ms=14
+2026-11-23T18:00:12Z auth-svc INFO req-77-222 request ok latency_ms=10
+2026-11-23T18:00:13Z api-gateway INFO req-77-223 request ok latency_ms=12
+2026-11-23T18:00:14Z orders-svc INFO req-77-224 request ok latency_ms=31
+2026-11-23T18:00:15Z auth-svc INFO req-77-225 request ok latency_ms=38
+2026-11-23T18:00:16Z api-gateway INFO req-77-226 request ok latency_ms=13
+2026-11-23T18:00:17Z orders-svc INFO req-77-227 request ok latency_ms=26
+2026-11-23T18:00:18Z auth-svc INFO req-77-228 request ok latency_ms=16
+2026-11-23T18:00:19Z api-gateway INFO req-77-229 request ok latency_ms=31
+2026-11-23T18:00:20Z orders-svc INFO req-77-230 request ok latency_ms=12
+2026-11-23T18:00:21Z auth-svc INFO req-77-231 request ok latency_ms=34
+2026-11-23T18:00:22Z api-gateway INFO req-77-232 request ok latency_ms=23
+2026-11-23T18:00:23Z orders-svc INFO req-77-233 request ok latency_ms=15
+2026-11-23T18:00:24Z auth-svc INFO req-77-234 request ok latency_ms=13
+2026-11-23T18:00:25Z api-gateway INFO req-77-235 request ok latency_ms=40
+2026-11-23T18:00:26Z orders-svc INFO req-77-236 request ok latency_ms=31
+2026-11-23T18:00:27Z auth-svc INFO req-77-237 request ok latency_ms=22
+2026-11-23T18:00:28Z api-gateway INFO req-77-238 request ok latency_ms=19
+2026-11-23T18:00:29Z orders-svc INFO req-77-239 request ok latency_ms=24
+2026-11-23T18:00:30Z auth-svc INFO req-77-240 request ok latency_ms=38
+2026-11-23T18:00:31Z api-gateway INFO req-77-241 request ok latency_ms=25
+2026-11-23T18:00:32Z orders-svc INFO req-77-242 request ok latency_ms=27
+2026-11-23T18:00:33Z auth-svc INFO req-77-243 request ok latency_ms=32
+2026-11-23T18:00:34Z api-gateway INFO req-77-244 request ok latency_ms=36
+2026-11-23T18:00:35Z orders-svc INFO req-77-245 request ok latency_ms=34
+2026-11-23T18:00:36Z auth-svc INFO req-77-246 request ok latency_ms=22
+2026-11-23T18:00:37Z api-gateway INFO req-77-247 request ok latency_ms=16
+2026-11-23T18:00:38Z orders-svc INFO req-77-248 request ok latency_ms=38
+2026-11-23T18:00:39Z auth-svc INFO req-77-249 request ok latency_ms=36
+2026-11-23T18:00:40Z api-gateway INFO req-77-250 request ok latency_ms=30
+2026-11-23T18:00:41Z orders-svc INFO req-77-251 request ok latency_ms=23
+2026-11-23T18:00:42Z auth-svc INFO req-77-252 request ok latency_ms=37
+2026-11-23T18:00:43Z api-gateway INFO req-77-253 request ok latency_ms=18
+2026-11-23T18:00:44Z orders-svc INFO req-77-254 request ok latency_ms=19
+2026-11-23T18:00:45Z auth-svc INFO req-77-255 request ok latency_ms=37
+2026-11-23T18:00:46Z api-gateway INFO req-77-256 request ok latency_ms=38
+2026-11-23T18:00:47Z orders-svc INFO req-77-257 request ok latency_ms=37
+2026-11-23T18:00:48Z auth-svc INFO req-77-258 request ok latency_ms=12
+2026-11-23T18:00:49Z api-gateway INFO req-77-259 request ok latency_ms=37
+2026-11-23T18:00:50Z orders-svc INFO req-77-260 request ok latency_ms=26
+2026-11-23T18:00:51Z auth-svc INFO req-77-261 request ok latency_ms=20
+2026-11-23T18:00:52Z api-gateway INFO req-77-262 request ok latency_ms=20
+2026-11-23T18:00:53Z orders-svc INFO req-77-263 request ok latency_ms=39
+2026-11-23T18:00:54Z auth-svc INFO req-77-264 request ok latency_ms=16
+2026-11-23T18:00:55Z api-gateway INFO req-77-265 request ok latency_ms=34
+2026-11-23T18:00:56Z orders-svc INFO req-77-266 request ok latency_ms=18
+2026-11-23T18:00:57Z auth-svc INFO req-77-267 request ok latency_ms=21
+2026-11-23T18:00:58Z api-gateway INFO req-77-268 request ok latency_ms=34
+2026-11-23T18:00:59Z orders-svc INFO req-77-269 request ok latency_ms=33
+2026-11-23T18:01:00Z auth-svc INFO req-77-270 request ok latency_ms=31
+2026-11-23T18:01:01Z api-gateway INFO req-77-271 request ok latency_ms=25
+2026-11-23T18:01:02Z orders-svc INFO req-77-272 request ok latency_ms=33
+2026-11-23T18:01:03Z auth-svc INFO req-77-273 request ok latency_ms=34
+2026-11-23T18:01:04Z api-gateway INFO req-77-274 request ok latency_ms=34
+2026-11-23T18:01:05Z orders-svc INFO req-77-275 request ok latency_ms=30
+2026-11-23T18:01:06Z auth-svc INFO req-77-276 request ok latency_ms=26
+2026-11-23T18:01:07Z api-gateway INFO req-77-277 request ok latency_ms=22
+2026-11-23T18:01:08Z orders-svc INFO req-77-278 request ok latency_ms=26
+2026-11-23T18:01:09Z auth-svc INFO req-77-279 request ok latency_ms=27
+2026-11-23T18:01:10Z api-gateway INFO req-77-280 request ok latency_ms=22
+2026-11-23T18:01:11Z orders-svc INFO req-77-281 request ok latency_ms=37
+2026-11-23T18:01:12Z auth-svc INFO req-77-282 request ok latency_ms=18
+2026-11-23T18:01:13Z api-gateway INFO req-77-283 request ok latency_ms=22
+2026-11-23T18:01:14Z orders-svc INFO req-77-284 request ok latency_ms=33
+2026-11-23T18:01:15Z auth-svc INFO req-77-285 request ok latency_ms=38
+2026-11-23T18:01:16Z api-gateway INFO req-77-286 request ok latency_ms=27
+2026-11-23T18:01:17Z orders-svc INFO req-77-287 request ok latency_ms=36
+2026-11-23T18:01:18Z auth-svc INFO req-77-288 request ok latency_ms=32
+2026-11-23T18:01:19Z api-gateway INFO req-77-289 request ok latency_ms=31
+2026-11-23T18:01:20Z orders-svc INFO req-77-290 request ok latency_ms=19
+2026-11-23T18:01:21Z auth-svc INFO req-77-291 request ok latency_ms=39
+2026-11-23T18:01:22Z api-gateway INFO req-77-292 request ok latency_ms=12
+2026-11-23T18:01:23Z orders-svc INFO req-77-293 request ok latency_ms=18
+2026-11-23T18:01:24Z auth-svc INFO req-77-294 request ok latency_ms=31
+2026-11-23T18:01:25Z api-gateway INFO req-77-295 request ok latency_ms=13
+2026-11-23T18:01:26Z orders-svc INFO req-77-296 request ok latency_ms=14
+2026-11-23T18:01:27Z auth-svc INFO req-77-297 request ok latency_ms=14
+2026-11-23T18:01:28Z api-gateway INFO req-77-298 request ok latency_ms=21
+2026-11-23T18:01:29Z orders-svc INFO req-77-299 request ok latency_ms=39
+2026-11-23T18:01:30Z auth-svc INFO req-77-300 request ok latency_ms=35
+2026-11-23T18:01:31Z api-gateway INFO req-77-301 request ok latency_ms=32
+2026-11-23T18:01:32Z orders-svc INFO req-77-302 request ok latency_ms=11
+2026-11-23T18:01:33Z auth-svc INFO req-77-303 request ok latency_ms=16
+2026-11-23T18:01:34Z api-gateway INFO req-77-304 request ok latency_ms=39
+2026-11-23T18:01:35Z orders-svc INFO req-77-305 request ok latency_ms=36
+2026-11-23T18:01:36Z auth-svc INFO req-77-306 request ok latency_ms=28
+2026-11-23T18:01:37Z api-gateway INFO req-77-307 request ok latency_ms=29
+2026-11-23T18:01:38Z orders-svc INFO req-77-308 request ok latency_ms=27
+2026-11-23T18:01:39Z auth-svc INFO req-77-309 request ok latency_ms=29
+2026-11-23T18:01:40Z api-gateway INFO req-77-310 request ok latency_ms=31
+2026-11-23T18:01:41Z orders-svc INFO req-77-311 request ok latency_ms=28
+2026-11-23T18:01:42Z auth-svc INFO req-77-312 request ok latency_ms=11
+2026-11-23T18:01:43Z api-gateway INFO req-77-313 request ok latency_ms=26
+2026-11-23T18:01:44Z orders-svc INFO req-77-314 request ok latency_ms=10
+2026-11-23T18:01:45Z auth-svc INFO req-77-315 request ok latency_ms=37
+2026-11-23T18:01:46Z api-gateway INFO req-77-316 request ok latency_ms=33
+2026-11-23T18:01:47Z orders-svc INFO req-77-317 request ok latency_ms=40
+2026-11-23T18:01:48Z auth-svc INFO req-77-318 request ok latency_ms=28
+2026-11-23T18:01:49Z api-gateway INFO req-77-319 request ok latency_ms=13
+2026-11-23T18:01:50Z orders-svc INFO req-77-320 request ok latency_ms=30
+2026-11-23T18:01:51Z auth-svc INFO req-77-321 request ok latency_ms=32
+2026-11-23T18:01:52Z api-gateway INFO req-77-322 request ok latency_ms=36
+2026-11-23T18:01:53Z orders-svc INFO req-77-323 request ok latency_ms=14
+2026-11-23T18:01:54Z auth-svc INFO req-77-324 request ok latency_ms=18
+2026-11-23T18:01:55Z api-gateway INFO req-77-325 request ok latency_ms=35
+2026-11-23T18:01:56Z orders-svc INFO req-77-326 request ok latency_ms=15
+2026-11-23T18:01:57Z auth-svc INFO req-77-327 request ok latency_ms=30
+2026-11-23T18:01:58Z api-gateway INFO req-77-328 request ok latency_ms=20
+2026-11-23T18:01:59Z orders-svc INFO req-77-329 request ok latency_ms=11
+2026-11-23T18:02:00Z auth-svc INFO req-77-330 request ok latency_ms=31
+2026-11-23T18:02:01Z api-gateway INFO req-77-331 request ok latency_ms=26
+2026-11-23T18:02:02Z orders-svc INFO req-77-332 request ok latency_ms=33
+2026-11-23T18:02:03Z auth-svc INFO req-77-333 request ok latency_ms=29
+2026-11-23T18:02:04Z api-gateway INFO req-77-334 request ok latency_ms=28
+2026-11-23T18:02:05Z orders-svc INFO req-77-335 request ok latency_ms=40
+2026-11-23T18:02:06Z auth-svc INFO req-77-336 request ok latency_ms=22
+2026-11-23T18:02:07Z api-gateway INFO req-77-337 request ok latency_ms=12
+2026-11-23T18:02:08Z orders-svc INFO req-77-338 request ok latency_ms=38
+2026-11-23T18:02:09Z auth-svc INFO req-77-339 request ok latency_ms=32
+2026-11-23T18:02:10Z api-gateway INFO req-77-340 request ok latency_ms=19
+2026-11-23T18:02:11Z orders-svc INFO req-77-341 request ok latency_ms=12
+2026-11-23T18:02:12Z auth-svc INFO req-77-342 request ok latency_ms=21
+2026-11-23T18:02:13Z api-gateway INFO req-77-343 request ok latency_ms=24
+2026-11-23T18:02:14Z orders-svc INFO req-77-344 request ok latency_ms=30
+2026-11-23T18:02:15Z auth-svc INFO req-77-345 request ok latency_ms=29
+2026-11-23T18:02:16Z api-gateway INFO req-77-346 request ok latency_ms=33
+2026-11-23T18:02:17Z orders-svc INFO req-77-347 request ok latency_ms=37
+2026-11-23T18:02:18Z auth-svc INFO req-77-348 request ok latency_ms=10
+2026-11-23T18:02:19Z api-gateway INFO req-77-349 request ok latency_ms=11
+2026-11-23T18:02:20Z orders-svc INFO req-77-350 request ok latency_ms=24
+2026-11-23T18:02:21Z auth-svc INFO req-77-351 request ok latency_ms=33
+2026-11-23T18:02:22Z api-gateway INFO req-77-352 request ok latency_ms=36
+2026-11-23T18:02:23Z orders-svc INFO req-77-353 request ok latency_ms=14
+2026-11-23T18:02:24Z auth-svc INFO req-77-354 request ok latency_ms=25
+2026-11-23T18:02:25Z api-gateway INFO req-77-355 request ok latency_ms=22
+2026-11-23T18:02:26Z orders-svc INFO req-77-356 request ok latency_ms=35
+2026-11-23T18:02:27Z auth-svc INFO req-77-357 request ok latency_ms=27
+2026-11-23T18:02:28Z api-gateway INFO req-77-358 request ok latency_ms=37
+2026-11-23T18:02:29Z orders-svc INFO req-77-359 request ok latency_ms=36
+2026-11-23T18:02:30Z auth-svc INFO req-77-360 request ok latency_ms=12
+2026-11-23T18:02:31Z api-gateway INFO req-77-361 request ok latency_ms=23
+2026-11-23T18:02:32Z orders-svc INFO req-77-362 request ok latency_ms=10
+2026-11-23T18:02:33Z auth-svc INFO req-77-363 request ok latency_ms=13
+2026-11-23T18:02:34Z api-gateway INFO req-77-364 request ok latency_ms=11
+2026-11-23T18:02:35Z orders-svc INFO req-77-365 request ok latency_ms=22
+2026-11-23T18:02:36Z auth-svc INFO req-77-366 request ok latency_ms=34
+2026-11-23T18:02:37Z api-gateway INFO req-77-367 request ok latency_ms=14
+2026-11-23T18:02:38Z orders-svc INFO req-77-368 request ok latency_ms=11
+2026-11-23T18:02:39Z auth-svc INFO req-77-369 request ok latency_ms=39
+2026-11-23T18:02:40Z api-gateway INFO req-77-370 request ok latency_ms=35
+2026-11-23T18:02:41Z orders-svc INFO req-77-371 request ok latency_ms=30
+2026-11-23T18:02:42Z auth-svc INFO req-77-372 request ok latency_ms=35
+2026-11-23T18:02:43Z api-gateway INFO req-77-373 request ok latency_ms=18
+2026-11-23T18:02:44Z orders-svc INFO req-77-374 request ok latency_ms=36
+2026-11-23T18:02:45Z auth-svc INFO req-77-375 request ok latency_ms=29
+2026-11-23T18:02:46Z api-gateway INFO req-77-376 request ok latency_ms=39
+2026-11-23T18:02:47Z orders-svc INFO req-77-377 request ok latency_ms=18
+2026-11-23T18:02:48Z auth-svc INFO req-77-378 request ok latency_ms=30
+2026-11-23T18:02:49Z api-gateway INFO req-77-379 request ok latency_ms=39
+2026-11-23T18:02:50Z orders-svc INFO req-77-380 request ok latency_ms=36
+2026-11-23T18:02:51Z auth-svc INFO req-77-381 request ok latency_ms=15
+2026-11-23T18:02:52Z api-gateway INFO req-77-382 request ok latency_ms=27
+2026-11-23T18:02:53Z orders-svc INFO req-77-383 request ok latency_ms=38
+2026-11-23T18:02:54Z auth-svc INFO req-77-384 request ok latency_ms=31
+2026-11-23T18:02:55Z api-gateway INFO req-77-385 request ok latency_ms=12
+2026-11-23T18:02:56Z orders-svc INFO req-77-386 request ok latency_ms=12
+2026-11-23T18:02:57Z auth-svc INFO req-77-387 request ok latency_ms=11
+2026-11-23T18:02:58Z api-gateway INFO req-77-388 request ok latency_ms=27
+2026-11-23T18:02:59Z orders-svc INFO req-77-389 request ok latency_ms=33
+2026-11-23T18:03:00Z auth-svc INFO req-77-390 request ok latency_ms=22
+2026-11-23T18:03:01Z api-gateway INFO req-77-391 request ok latency_ms=26
+2026-11-23T18:03:02Z orders-svc INFO req-77-392 request ok latency_ms=32
+2026-11-23T18:03:03Z auth-svc INFO req-77-393 request ok latency_ms=12
+2026-11-23T18:03:04Z api-gateway INFO req-77-394 request ok latency_ms=15
+2026-11-23T18:03:05Z orders-svc INFO req-77-395 request ok latency_ms=33
+2026-11-23T18:03:06Z auth-svc INFO req-77-396 request ok latency_ms=25
+2026-11-23T18:03:07Z api-gateway INFO req-77-397 request ok latency_ms=16
+2026-11-23T18:03:08Z orders-svc INFO req-77-398 request ok latency_ms=27
+2026-11-23T18:03:09Z auth-svc INFO req-77-399 request ok latency_ms=28
+2026-11-23T18:03:10Z api-gateway INFO req-77-400 request ok latency_ms=34
+2026-11-23T18:03:11Z orders-svc INFO req-77-401 request ok latency_ms=33
+2026-11-23T18:03:12Z auth-svc INFO req-77-402 request ok latency_ms=20
+2026-11-23T18:03:13Z api-gateway INFO req-77-403 request ok latency_ms=20
+2026-11-23T18:03:14Z orders-svc INFO req-77-404 request ok latency_ms=25
+2026-11-23T18:03:15Z auth-svc INFO req-77-405 request ok latency_ms=17
+2026-11-23T18:03:16Z api-gateway INFO req-77-406 request ok latency_ms=16
+2026-11-23T18:03:17Z orders-svc INFO req-77-407 request ok latency_ms=25
+2026-11-23T18:03:18Z auth-svc INFO req-77-408 request ok latency_ms=28
+2026-11-23T18:03:19Z api-gateway INFO req-77-409 request ok latency_ms=23
+2026-11-23T18:03:20Z orders-svc INFO req-77-410 request ok latency_ms=40
+2026-11-23T18:03:21Z auth-svc INFO req-77-411 request ok latency_ms=28
+2026-11-23T18:03:22Z api-gateway INFO req-77-412 request ok latency_ms=22
+2026-11-23T18:03:23Z orders-svc INFO req-77-413 request ok latency_ms=33
+2026-11-23T18:03:24Z auth-svc INFO req-77-414 request ok latency_ms=31
+2026-11-23T18:03:25Z api-gateway INFO req-77-415 request ok latency_ms=37
+2026-11-23T18:03:26Z orders-svc INFO req-77-416 request ok latency_ms=27
+2026-11-23T18:03:27Z auth-svc INFO req-77-417 request ok latency_ms=35
+2026-11-23T18:03:28Z api-gateway INFO req-77-418 request ok latency_ms=16
+2026-11-23T18:03:29Z orders-svc INFO req-77-419 request ok latency_ms=22
+2026-11-23T18:03:30Z auth-svc INFO req-77-420 request ok latency_ms=32
+2026-11-23T18:03:31Z api-gateway INFO req-77-421 request ok latency_ms=13
+2026-11-23T18:03:32Z orders-svc INFO req-77-422 request ok latency_ms=16
+2026-11-23T18:03:33Z auth-svc INFO req-77-423 request ok latency_ms=35
+2026-11-23T18:03:34Z api-gateway INFO req-77-424 request ok latency_ms=29
+2026-11-23T18:03:35Z orders-svc INFO req-77-425 request ok latency_ms=30
+2026-11-23T18:03:36Z auth-svc INFO req-77-426 request ok latency_ms=30
+2026-11-23T18:03:37Z api-gateway INFO req-77-427 request ok latency_ms=19
+2026-11-23T18:03:38Z orders-svc INFO req-77-428 request ok latency_ms=30
+2026-11-23T18:03:39Z auth-svc INFO req-77-429 request ok latency_ms=31
+2026-11-23T18:03:40Z api-gateway INFO req-77-430 request ok latency_ms=20
+2026-11-23T18:03:41Z orders-svc INFO req-77-431 request ok latency_ms=20
+2026-11-23T18:03:42Z auth-svc INFO req-77-432 request ok latency_ms=40
+2026-11-23T18:03:43Z api-gateway INFO req-77-433 request ok latency_ms=30
+2026-11-23T18:03:44Z orders-svc INFO req-77-434 request ok latency_ms=23
+2026-11-23T18:03:45Z auth-svc INFO req-77-435 request ok latency_ms=16
+2026-11-23T18:03:46Z api-gateway INFO req-77-436 request ok latency_ms=26
+2026-11-23T18:03:47Z orders-svc INFO req-77-437 request ok latency_ms=26
+2026-11-23T18:03:48Z auth-svc INFO req-77-438 request ok latency_ms=21
+2026-11-23T18:03:49Z api-gateway INFO req-77-439 request ok latency_ms=35
+2026-11-23T18:03:50Z orders-svc INFO req-77-440 request ok latency_ms=30
+2026-11-23T18:03:51Z auth-svc INFO req-77-441 request ok latency_ms=16
+2026-11-23T18:03:52Z api-gateway INFO req-77-442 request ok latency_ms=18
+2026-11-23T18:03:53Z orders-svc INFO req-77-443 request ok latency_ms=21
+2026-11-23T18:03:54Z auth-svc INFO req-77-444 request ok latency_ms=35
+2026-11-23T18:03:55Z api-gateway INFO req-77-445 request ok latency_ms=17
+2026-11-23T18:03:56Z orders-svc INFO req-77-446 request ok latency_ms=40
+2026-11-23T18:03:57Z auth-svc INFO req-77-447 request ok latency_ms=15
+2026-11-23T18:03:58Z api-gateway INFO req-77-448 request ok latency_ms=21
+2026-11-23T18:03:59Z orders-svc INFO req-77-449 request ok latency_ms=31
+2026-11-23T18:04:00Z auth-svc INFO req-77-450 request ok latency_ms=14
+2026-11-23T18:04:01Z api-gateway INFO req-77-451 request ok latency_ms=36
+2026-11-23T18:04:02Z orders-svc INFO req-77-452 request ok latency_ms=18
+2026-11-23T18:04:03Z auth-svc INFO req-77-453 request ok latency_ms=26
+2026-11-23T18:04:04Z api-gateway INFO req-77-454 request ok latency_ms=40
+2026-11-23T18:04:05Z orders-svc INFO req-77-455 request ok latency_ms=24
+2026-11-23T18:04:06Z auth-svc INFO req-77-456 request ok latency_ms=19
+2026-11-23T18:04:07Z api-gateway INFO req-77-457 request ok latency_ms=19
+2026-11-23T18:04:08Z orders-svc INFO req-77-458 request ok latency_ms=25
+2026-11-23T18:04:09Z auth-svc INFO req-77-459 request ok latency_ms=17
+2026-11-23T18:04:10Z api-gateway INFO req-77-460 request ok latency_ms=32
+2026-11-23T18:04:11Z orders-svc INFO req-77-461 request ok latency_ms=40
+2026-11-23T18:04:12Z auth-svc INFO req-77-462 request ok latency_ms=13
+2026-11-23T18:04:13Z api-gateway INFO req-77-463 request ok latency_ms=25
+2026-11-23T18:04:14Z orders-svc INFO req-77-464 request ok latency_ms=28
+2026-11-23T18:04:15Z auth-svc INFO req-77-465 request ok latency_ms=31
+2026-11-23T18:04:16Z api-gateway INFO req-77-466 request ok latency_ms=12
+2026-11-23T18:04:17Z orders-svc INFO req-77-467 request ok latency_ms=18
+2026-11-23T18:04:18Z auth-svc INFO req-77-468 request ok latency_ms=19
+2026-11-23T18:04:19Z api-gateway INFO req-77-469 request ok latency_ms=15
+2026-11-23T18:04:20Z orders-svc INFO req-77-470 request ok latency_ms=40
+2026-11-23T18:04:21Z auth-svc INFO req-77-471 request ok latency_ms=10
+2026-11-23T18:04:22Z api-gateway INFO req-77-472 request ok latency_ms=39
+2026-11-23T18:04:23Z orders-svc INFO req-77-473 request ok latency_ms=19
+2026-11-23T18:04:24Z auth-svc INFO req-77-474 request ok latency_ms=28
+2026-11-23T18:04:25Z api-gateway INFO req-77-475 request ok latency_ms=23
+2026-11-23T18:04:26Z orders-svc INFO req-77-476 request ok latency_ms=23
+2026-11-23T18:04:27Z auth-svc INFO req-77-477 request ok latency_ms=26
+2026-11-23T18:04:28Z api-gateway INFO req-77-478 request ok latency_ms=26
+2026-11-23T18:04:29Z orders-svc INFO req-77-479 request ok latency_ms=29
+2026-11-23T18:04:30Z auth-svc WARN jwks_rotate activated kid=key-2026-11b cache_ttl_sec=3600
+2026-11-23T18:04:32Z auth-svc ERROR req-77-482 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:33Z api-gateway ERROR req-77-483 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:34Z auth-svc ERROR req-77-484 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:35Z api-gateway ERROR req-77-485 HTTP 503 upstream=api-gateway
+2026-11-23T18:04:36Z api-gateway ERROR req-77-486 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:36Z auth-svc ERROR req-77-486 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:38Z auth-svc ERROR req-77-488 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:39Z api-gateway ERROR req-77-489 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:40Z api-gateway ERROR req-77-490 HTTP 503 upstream=api-gateway
+2026-11-23T18:04:40Z auth-svc ERROR req-77-490 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:42Z api-gateway ERROR req-77-492 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:42Z auth-svc ERROR req-77-492 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:44Z auth-svc ERROR req-77-494 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:45Z api-gateway ERROR req-77-495 HTTP 503 upstream=api-gateway
+2026-11-23T18:04:45Z api-gateway ERROR req-77-495 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:46Z auth-svc ERROR req-77-496 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:48Z api-gateway ERROR req-77-498 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:48Z auth-svc ERROR req-77-498 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:50Z api-gateway ERROR req-77-500 HTTP 503 upstream=api-gateway
+2026-11-23T18:04:50Z auth-svc ERROR req-77-500 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:51Z api-gateway ERROR req-77-501 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:52Z auth-svc ERROR req-77-502 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:54Z api-gateway ERROR req-77-504 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:54Z auth-svc ERROR req-77-504 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:55Z api-gateway ERROR req-77-505 HTTP 503 upstream=api-gateway
+2026-11-23T18:04:56Z auth-svc ERROR req-77-506 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:04:57Z api-gateway ERROR req-77-507 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:04:58Z auth-svc ERROR req-77-508 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:00Z api-gateway ERROR req-77-510 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:00Z api-gateway ERROR req-77-510 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:00Z auth-svc ERROR req-77-510 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:02Z auth-svc ERROR req-77-512 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:03Z api-gateway ERROR req-77-513 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:04Z auth-svc ERROR req-77-514 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:05Z api-gateway ERROR req-77-515 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:06Z api-gateway ERROR req-77-516 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:06Z auth-svc ERROR req-77-516 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:08Z auth-svc ERROR req-77-518 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:09Z api-gateway ERROR req-77-519 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:10Z api-gateway ERROR req-77-520 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:10Z auth-svc ERROR req-77-520 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:12Z api-gateway ERROR req-77-522 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:12Z auth-svc ERROR req-77-522 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:14Z auth-svc ERROR req-77-524 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:15Z api-gateway ERROR req-77-525 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:15Z api-gateway ERROR req-77-525 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:16Z auth-svc ERROR req-77-526 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:18Z api-gateway ERROR req-77-528 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:18Z auth-svc ERROR req-77-528 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:20Z api-gateway ERROR req-77-530 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:20Z auth-svc ERROR req-77-530 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:21Z api-gateway ERROR req-77-531 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:22Z auth-svc ERROR req-77-532 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:24Z api-gateway ERROR req-77-534 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:24Z auth-svc ERROR req-77-534 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:25Z api-gateway ERROR req-77-535 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:26Z auth-svc ERROR req-77-536 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:27Z api-gateway ERROR req-77-537 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:28Z auth-svc ERROR req-77-538 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:30Z api-gateway ERROR req-77-540 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:30Z api-gateway ERROR req-77-540 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:30Z auth-svc ERROR req-77-540 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:32Z auth-svc ERROR req-77-542 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:33Z api-gateway ERROR req-77-543 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:34Z auth-svc ERROR req-77-544 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:35Z api-gateway ERROR req-77-545 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:36Z api-gateway ERROR req-77-546 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:36Z auth-svc ERROR req-77-546 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:38Z auth-svc ERROR req-77-548 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:39Z api-gateway ERROR req-77-549 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:40Z api-gateway ERROR req-77-550 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:40Z auth-svc ERROR req-77-550 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:42Z api-gateway ERROR req-77-552 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:42Z auth-svc ERROR req-77-552 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:44Z auth-svc ERROR req-77-554 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:45Z api-gateway ERROR req-77-555 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:45Z api-gateway ERROR req-77-555 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:46Z auth-svc ERROR req-77-556 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:48Z api-gateway ERROR req-77-558 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:48Z auth-svc ERROR req-77-558 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:50Z api-gateway ERROR req-77-560 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:50Z auth-svc ERROR req-77-560 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:51Z api-gateway ERROR req-77-561 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:52Z auth-svc ERROR req-77-562 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:54Z api-gateway ERROR req-77-564 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:54Z auth-svc ERROR req-77-564 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:55Z api-gateway ERROR req-77-565 HTTP 503 upstream=api-gateway
+2026-11-23T18:05:56Z auth-svc ERROR req-77-566 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:05:57Z api-gateway ERROR req-77-567 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:05:58Z auth-svc ERROR req-77-568 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:00Z api-gateway ERROR req-77-570 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:00Z api-gateway ERROR req-77-570 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:00Z auth-svc ERROR req-77-570 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:02Z auth-svc ERROR req-77-572 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:03Z api-gateway ERROR req-77-573 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:04Z auth-svc ERROR req-77-574 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:05Z api-gateway ERROR req-77-575 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:06Z api-gateway ERROR req-77-576 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:06Z auth-svc ERROR req-77-576 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:08Z auth-svc ERROR req-77-578 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:09Z api-gateway ERROR req-77-579 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:10Z api-gateway ERROR req-77-580 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:10Z auth-svc ERROR req-77-580 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:12Z api-gateway ERROR req-77-582 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:12Z auth-svc ERROR req-77-582 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:14Z auth-svc ERROR req-77-584 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:15Z api-gateway ERROR req-77-585 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:15Z api-gateway ERROR req-77-585 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:16Z auth-svc ERROR req-77-586 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:18Z api-gateway ERROR req-77-588 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:18Z auth-svc ERROR req-77-588 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:20Z api-gateway ERROR req-77-590 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:20Z auth-svc ERROR req-77-590 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:21Z api-gateway ERROR req-77-591 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:22Z auth-svc ERROR req-77-592 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:24Z api-gateway ERROR req-77-594 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:24Z auth-svc ERROR req-77-594 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:25Z api-gateway ERROR req-77-595 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:26Z auth-svc ERROR req-77-596 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:27Z api-gateway ERROR req-77-597 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:28Z auth-svc ERROR req-77-598 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:30Z api-gateway ERROR req-77-600 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:30Z api-gateway ERROR req-77-600 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:30Z auth-svc ERROR req-77-600 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:32Z auth-svc ERROR req-77-602 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:33Z api-gateway ERROR req-77-603 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:34Z auth-svc ERROR req-77-604 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:35Z api-gateway ERROR req-77-605 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:36Z api-gateway ERROR req-77-606 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:36Z auth-svc ERROR req-77-606 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:38Z auth-svc ERROR req-77-608 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:39Z api-gateway ERROR req-77-609 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:40Z api-gateway ERROR req-77-610 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:40Z auth-svc ERROR req-77-610 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:42Z api-gateway ERROR req-77-612 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:42Z auth-svc ERROR req-77-612 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:44Z auth-svc ERROR req-77-614 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:45Z api-gateway ERROR req-77-615 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:45Z api-gateway ERROR req-77-615 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:46Z auth-svc ERROR req-77-616 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:48Z api-gateway ERROR req-77-618 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:48Z auth-svc ERROR req-77-618 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:50Z api-gateway ERROR req-77-620 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:50Z auth-svc ERROR req-77-620 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:51Z api-gateway ERROR req-77-621 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:52Z auth-svc ERROR req-77-622 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:54Z api-gateway ERROR req-77-624 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:54Z auth-svc ERROR req-77-624 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:55Z api-gateway ERROR req-77-625 HTTP 503 upstream=api-gateway
+2026-11-23T18:06:56Z auth-svc ERROR req-77-626 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:06:57Z api-gateway ERROR req-77-627 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:06:58Z auth-svc ERROR req-77-628 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:00Z api-gateway ERROR req-77-630 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:00Z api-gateway ERROR req-77-630 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:00Z auth-svc ERROR req-77-630 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:02Z auth-svc ERROR req-77-632 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:03Z api-gateway ERROR req-77-633 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:04Z auth-svc ERROR req-77-634 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:05Z api-gateway ERROR req-77-635 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:06Z api-gateway ERROR req-77-636 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:06Z auth-svc ERROR req-77-636 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:08Z auth-svc ERROR req-77-638 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:09Z api-gateway ERROR req-77-639 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:10Z api-gateway ERROR req-77-640 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:10Z auth-svc ERROR req-77-640 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:12Z api-gateway ERROR req-77-642 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:12Z auth-svc ERROR req-77-642 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:14Z auth-svc ERROR req-77-644 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:15Z api-gateway ERROR req-77-645 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:15Z api-gateway ERROR req-77-645 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:16Z auth-svc ERROR req-77-646 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:18Z api-gateway ERROR req-77-648 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:18Z auth-svc ERROR req-77-648 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:20Z api-gateway ERROR req-77-650 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:20Z auth-svc ERROR req-77-650 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:21Z api-gateway ERROR req-77-651 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:22Z auth-svc ERROR req-77-652 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:24Z api-gateway ERROR req-77-654 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:24Z auth-svc ERROR req-77-654 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:25Z api-gateway ERROR req-77-655 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:26Z auth-svc ERROR req-77-656 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:27Z api-gateway ERROR req-77-657 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:28Z auth-svc ERROR req-77-658 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:30Z api-gateway ERROR req-77-660 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:30Z api-gateway ERROR req-77-660 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:30Z auth-svc ERROR req-77-660 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:32Z auth-svc ERROR req-77-662 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:33Z api-gateway ERROR req-77-663 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:34Z auth-svc ERROR req-77-664 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:35Z api-gateway ERROR req-77-665 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:36Z api-gateway ERROR req-77-666 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:36Z auth-svc ERROR req-77-666 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:38Z auth-svc ERROR req-77-668 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:39Z api-gateway ERROR req-77-669 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:40Z api-gateway ERROR req-77-670 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:40Z auth-svc ERROR req-77-670 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:42Z api-gateway ERROR req-77-672 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:42Z auth-svc ERROR req-77-672 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:44Z auth-svc ERROR req-77-674 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:45Z api-gateway ERROR req-77-675 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:45Z api-gateway ERROR req-77-675 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:46Z auth-svc ERROR req-77-676 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:48Z api-gateway ERROR req-77-678 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:48Z auth-svc ERROR req-77-678 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:50Z api-gateway ERROR req-77-680 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:50Z auth-svc ERROR req-77-680 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:51Z api-gateway ERROR req-77-681 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:52Z auth-svc ERROR req-77-682 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:54Z api-gateway ERROR req-77-684 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:54Z auth-svc ERROR req-77-684 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:55Z api-gateway ERROR req-77-685 HTTP 503 upstream=api-gateway
+2026-11-23T18:07:56Z auth-svc ERROR req-77-686 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:07:57Z api-gateway ERROR req-77-687 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:07:58Z auth-svc ERROR req-77-688 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:00Z api-gateway ERROR req-77-690 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:00Z api-gateway ERROR req-77-690 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:00Z auth-svc ERROR req-77-690 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:02Z auth-svc ERROR req-77-692 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:03Z api-gateway ERROR req-77-693 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:04Z auth-svc ERROR req-77-694 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:05Z api-gateway ERROR req-77-695 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:06Z api-gateway ERROR req-77-696 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:06Z auth-svc ERROR req-77-696 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:08Z auth-svc ERROR req-77-698 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:09Z api-gateway ERROR req-77-699 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:10Z api-gateway ERROR req-77-700 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:10Z auth-svc ERROR req-77-700 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:12Z api-gateway ERROR req-77-702 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:12Z auth-svc ERROR req-77-702 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:14Z auth-svc ERROR req-77-704 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:15Z api-gateway ERROR req-77-705 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:15Z api-gateway ERROR req-77-705 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:16Z auth-svc ERROR req-77-706 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:18Z api-gateway ERROR req-77-708 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:18Z auth-svc ERROR req-77-708 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:20Z api-gateway ERROR req-77-710 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:20Z auth-svc ERROR req-77-710 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:21Z api-gateway ERROR req-77-711 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:22Z auth-svc ERROR req-77-712 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:24Z api-gateway ERROR req-77-714 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:24Z auth-svc ERROR req-77-714 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:25Z api-gateway ERROR req-77-715 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:26Z auth-svc ERROR req-77-716 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:27Z api-gateway ERROR req-77-717 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:28Z auth-svc ERROR req-77-718 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:30Z api-gateway ERROR req-77-720 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:30Z api-gateway ERROR req-77-720 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:30Z auth-svc ERROR req-77-720 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:32Z auth-svc ERROR req-77-722 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:33Z api-gateway ERROR req-77-723 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:34Z auth-svc ERROR req-77-724 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:35Z api-gateway ERROR req-77-725 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:36Z api-gateway ERROR req-77-726 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:36Z auth-svc ERROR req-77-726 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:38Z auth-svc ERROR req-77-728 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:39Z api-gateway ERROR req-77-729 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:40Z api-gateway ERROR req-77-730 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:40Z auth-svc ERROR req-77-730 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:42Z api-gateway ERROR req-77-732 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:42Z auth-svc ERROR req-77-732 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:44Z auth-svc ERROR req-77-734 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:45Z api-gateway ERROR req-77-735 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:45Z api-gateway ERROR req-77-735 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:46Z auth-svc ERROR req-77-736 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:48Z api-gateway ERROR req-77-738 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:48Z auth-svc ERROR req-77-738 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:50Z api-gateway ERROR req-77-740 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:50Z auth-svc ERROR req-77-740 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:51Z api-gateway ERROR req-77-741 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:52Z auth-svc ERROR req-77-742 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:54Z api-gateway ERROR req-77-744 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:54Z auth-svc ERROR req-77-744 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:55Z api-gateway ERROR req-77-745 HTTP 503 upstream=api-gateway
+2026-11-23T18:08:56Z auth-svc ERROR req-77-746 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:08:57Z api-gateway ERROR req-77-747 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:08:58Z auth-svc ERROR req-77-748 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:00Z api-gateway ERROR req-77-750 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:00Z api-gateway ERROR req-77-750 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:00Z auth-svc ERROR req-77-750 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:02Z auth-svc ERROR req-77-752 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:03Z api-gateway ERROR req-77-753 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:04Z auth-svc ERROR req-77-754 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:05Z api-gateway ERROR req-77-755 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:06Z api-gateway ERROR req-77-756 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:06Z auth-svc ERROR req-77-756 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:08Z auth-svc ERROR req-77-758 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:09Z api-gateway ERROR req-77-759 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:10Z api-gateway ERROR req-77-760 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:10Z auth-svc ERROR req-77-760 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:12Z api-gateway ERROR req-77-762 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:12Z auth-svc ERROR req-77-762 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:14Z auth-svc ERROR req-77-764 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:15Z api-gateway ERROR req-77-765 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:15Z api-gateway ERROR req-77-765 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:16Z auth-svc ERROR req-77-766 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:18Z api-gateway ERROR req-77-768 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:18Z auth-svc ERROR req-77-768 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:20Z api-gateway ERROR req-77-770 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:20Z auth-svc ERROR req-77-770 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:21Z api-gateway ERROR req-77-771 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:22Z auth-svc ERROR req-77-772 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:24Z api-gateway ERROR req-77-774 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:24Z auth-svc ERROR req-77-774 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:25Z api-gateway ERROR req-77-775 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:26Z auth-svc ERROR req-77-776 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:27Z api-gateway ERROR req-77-777 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:28Z auth-svc ERROR req-77-778 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:30Z api-gateway ERROR req-77-780 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:30Z api-gateway ERROR req-77-780 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:30Z auth-svc ERROR req-77-780 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:32Z auth-svc ERROR req-77-782 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:33Z api-gateway ERROR req-77-783 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:34Z auth-svc ERROR req-77-784 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:35Z api-gateway ERROR req-77-785 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:36Z api-gateway ERROR req-77-786 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:36Z auth-svc ERROR req-77-786 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:38Z auth-svc ERROR req-77-788 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:39Z api-gateway ERROR req-77-789 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:40Z api-gateway ERROR req-77-790 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:40Z auth-svc ERROR req-77-790 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:42Z api-gateway ERROR req-77-792 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:42Z auth-svc ERROR req-77-792 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:44Z auth-svc ERROR req-77-794 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:45Z api-gateway ERROR req-77-795 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:45Z api-gateway ERROR req-77-795 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:46Z auth-svc ERROR req-77-796 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:48Z api-gateway ERROR req-77-798 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:48Z auth-svc ERROR req-77-798 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:50Z api-gateway ERROR req-77-800 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:50Z auth-svc ERROR req-77-800 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:51Z api-gateway ERROR req-77-801 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:52Z auth-svc ERROR req-77-802 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:54Z api-gateway ERROR req-77-804 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:54Z auth-svc ERROR req-77-804 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:55Z api-gateway ERROR req-77-805 HTTP 503 upstream=api-gateway
+2026-11-23T18:09:56Z auth-svc ERROR req-77-806 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:09:57Z api-gateway ERROR req-77-807 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:09:58Z auth-svc ERROR req-77-808 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:00Z api-gateway ERROR req-77-810 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:00Z api-gateway ERROR req-77-810 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:00Z auth-svc ERROR req-77-810 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:02Z auth-svc ERROR req-77-812 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:03Z api-gateway ERROR req-77-813 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:04Z auth-svc ERROR req-77-814 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:05Z api-gateway ERROR req-77-815 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:06Z api-gateway ERROR req-77-816 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:06Z auth-svc ERROR req-77-816 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:08Z auth-svc ERROR req-77-818 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:09Z api-gateway ERROR req-77-819 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:10Z api-gateway ERROR req-77-820 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:10Z auth-svc ERROR req-77-820 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:12Z api-gateway ERROR req-77-822 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:12Z auth-svc ERROR req-77-822 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:14Z auth-svc ERROR req-77-824 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:15Z api-gateway ERROR req-77-825 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:15Z api-gateway ERROR req-77-825 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:16Z auth-svc ERROR req-77-826 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:18Z api-gateway ERROR req-77-828 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:18Z auth-svc ERROR req-77-828 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:20Z api-gateway ERROR req-77-830 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:20Z auth-svc ERROR req-77-830 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:21Z api-gateway ERROR req-77-831 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:22Z auth-svc ERROR req-77-832 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:24Z api-gateway ERROR req-77-834 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:24Z auth-svc ERROR req-77-834 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:25Z api-gateway ERROR req-77-835 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:26Z auth-svc ERROR req-77-836 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:27Z api-gateway ERROR req-77-837 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:28Z auth-svc ERROR req-77-838 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:30Z api-gateway ERROR req-77-840 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:30Z api-gateway ERROR req-77-840 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:30Z auth-svc ERROR req-77-840 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:32Z auth-svc ERROR req-77-842 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:33Z api-gateway ERROR req-77-843 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:34Z auth-svc ERROR req-77-844 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:35Z api-gateway ERROR req-77-845 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:36Z api-gateway ERROR req-77-846 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:36Z auth-svc ERROR req-77-846 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:38Z auth-svc ERROR req-77-848 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:39Z api-gateway ERROR req-77-849 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:40Z api-gateway ERROR req-77-850 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:40Z auth-svc ERROR req-77-850 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:42Z api-gateway ERROR req-77-852 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:42Z auth-svc ERROR req-77-852 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:44Z auth-svc ERROR req-77-854 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:45Z api-gateway ERROR req-77-855 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:45Z api-gateway ERROR req-77-855 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:46Z auth-svc ERROR req-77-856 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:48Z api-gateway ERROR req-77-858 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:48Z auth-svc ERROR req-77-858 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:50Z api-gateway ERROR req-77-860 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:50Z auth-svc ERROR req-77-860 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:51Z api-gateway ERROR req-77-861 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:52Z auth-svc ERROR req-77-862 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:54Z api-gateway ERROR req-77-864 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:54Z auth-svc ERROR req-77-864 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:55Z api-gateway ERROR req-77-865 HTTP 503 upstream=api-gateway
+2026-11-23T18:10:56Z auth-svc ERROR req-77-866 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:10:57Z api-gateway ERROR req-77-867 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:10:58Z auth-svc ERROR req-77-868 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:00Z api-gateway ERROR req-77-870 HTTP 503 upstream=api-gateway
+2026-11-23T18:11:00Z api-gateway ERROR req-77-870 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:00Z auth-svc ERROR req-77-870 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:02Z auth-svc ERROR req-77-872 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:03Z api-gateway ERROR req-77-873 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:04Z auth-svc ERROR req-77-874 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:05Z api-gateway ERROR req-77-875 HTTP 503 upstream=api-gateway
+2026-11-23T18:11:06Z api-gateway ERROR req-77-876 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:06Z auth-svc ERROR req-77-876 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:08Z auth-svc ERROR req-77-878 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:09Z api-gateway ERROR req-77-879 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:10Z api-gateway ERROR req-77-880 HTTP 503 upstream=api-gateway
+2026-11-23T18:11:10Z auth-svc ERROR req-77-880 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:12Z api-gateway ERROR req-77-882 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:12Z auth-svc ERROR req-77-882 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:14Z auth-svc ERROR req-77-884 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:15Z api-gateway ERROR req-77-885 HTTP 503 upstream=api-gateway
+2026-11-23T18:11:15Z api-gateway ERROR req-77-885 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:16Z auth-svc ERROR req-77-886 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:18Z api-gateway ERROR req-77-888 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:18Z auth-svc ERROR req-77-888 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:20Z api-gateway ERROR req-77-890 HTTP 503 upstream=api-gateway
+2026-11-23T18:11:20Z auth-svc ERROR req-77-890 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:21Z api-gateway ERROR req-77-891 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:22Z auth-svc ERROR req-77-892 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:24Z api-gateway ERROR req-77-894 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:24Z auth-svc ERROR req-77-894 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:25Z api-gateway ERROR req-77-895 HTTP 503 upstream=api-gateway
+2026-11-23T18:11:26Z auth-svc ERROR req-77-896 signing key rotated kid=key-2026-11b missing in consumer cache
+2026-11-23T18:11:27Z api-gateway ERROR req-77-897 jwt signature invalid kid=key-2026-11b rejected 401
+2026-11-23T18:11:28Z auth-svc ERROR req-77-898 signing key rotated kid=key-2026-11b missing in consumer cache

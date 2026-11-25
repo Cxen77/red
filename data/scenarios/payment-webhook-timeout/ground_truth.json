@@ -1,0 +1,10 @@
+{
+  "scenario_id": "payment-webhook-timeout",
+  "root_cause_service": "payment-svc",
+  "root_cause_category": "upstream_timeout",
+  "required_keywords": [
+    "payment-svc",
+    "timeout",
+    "stripe-webhook"
+  ]
+}

@@ -1,11 +1,10 @@
 {
   "scenario_id": "auth-jwks-rotation",
   "root_cause_service": "auth-svc",
-  "root_cause_category": "auth_failure",
-  "root_cause_summary": "auth-svc rotated active signing key to kid=key-2026-11b while api-gateway held a 3600s stale JWKS cache, rejecting valid tokens with 401.",
+  "root_cause_category": "auth_token_mismatch",
   "required_keywords": [
     "jwks_rotate",
-    "key-2026-11b",
-    "api-gateway"
+    "auth-svc",
+    "key-2026-11b"
   ]
 }

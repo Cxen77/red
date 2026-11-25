@@ -1,0 +1,402 @@
+[
+  {
+    "trace_id": "tr-624-001",
+    "span_id": "sp-624-001",
+    "ts": "2026-11-18T14:38:00Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 40.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-002",
+    "span_id": "sp-624-002",
+    "ts": "2026-11-18T14:38:22Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 49.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-003",
+    "span_id": "sp-624-003",
+    "ts": "2026-11-18T14:38:44Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 27.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-004",
+    "span_id": "sp-624-004",
+    "ts": "2026-11-18T14:39:06Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 34.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-005",
+    "span_id": "sp-624-005",
+    "ts": "2026-11-18T14:39:28Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 25.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-006",
+    "span_id": "sp-624-006",
+    "ts": "2026-11-18T14:39:50Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 23.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-007",
+    "span_id": "sp-624-007",
+    "ts": "2026-11-18T14:40:12Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 50.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-008",
+    "span_id": "sp-624-008",
+    "ts": "2026-11-18T14:40:34Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 46.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-009",
+    "span_id": "sp-624-009",
+    "ts": "2026-11-18T14:40:56Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 53.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-010",
+    "span_id": "sp-624-010",
+    "ts": "2026-11-18T14:41:18Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 46.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-011",
+    "span_id": "sp-624-011",
+    "ts": "2026-11-18T14:41:40Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 47.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-012",
+    "span_id": "sp-624-012",
+    "ts": "2026-11-18T14:42:02Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 40.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-013",
+    "span_id": "sp-624-013",
+    "ts": "2026-11-18T14:42:24Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 29.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-014",
+    "span_id": "sp-624-014",
+    "ts": "2026-11-18T14:42:46Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 30.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-015",
+    "span_id": "sp-624-015",
+    "ts": "2026-11-18T14:43:08Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 36.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-016",
+    "span_id": "sp-624-016",
+    "ts": "2026-11-18T14:43:30Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 54.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-017",
+    "span_id": "sp-624-017",
+    "ts": "2026-11-18T14:43:52Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 54.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-018",
+    "span_id": "sp-624-018",
+    "ts": "2026-11-18T14:44:14Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 53.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-019",
+    "span_id": "sp-624-019",
+    "ts": "2026-11-18T14:44:36Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 37.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-020",
+    "span_id": "sp-624-020",
+    "ts": "2026-11-18T14:44:58Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 49.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-021",
+    "span_id": "sp-624-021",
+    "ts": "2026-11-18T14:45:20Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 41.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-022",
+    "span_id": "sp-624-022",
+    "ts": "2026-11-18T14:45:42Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 18.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-023",
+    "span_id": "sp-624-023",
+    "ts": "2026-11-18T14:46:04Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 41.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-624-024",
+    "span_id": "sp-624-024",
+    "ts": "2026-11-18T14:46:26Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2236.7,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-025",
+    "span_id": "sp-624-025",
+    "ts": "2026-11-18T14:46:48Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 3765.2,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-026",
+    "span_id": "sp-624-026",
+    "ts": "2026-11-18T14:47:10Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 3563.2,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-027",
+    "span_id": "sp-624-027",
+    "ts": "2026-11-18T14:47:32Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2113.9,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-028",
+    "span_id": "sp-624-028",
+    "ts": "2026-11-18T14:47:54Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2812.9,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-029",
+    "span_id": "sp-624-029",
+    "ts": "2026-11-18T14:48:16Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 3154.7,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-030",
+    "span_id": "sp-624-030",
+    "ts": "2026-11-18T14:48:38Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2847.9,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-031",
+    "span_id": "sp-624-031",
+    "ts": "2026-11-18T14:49:00Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2192.3,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-032",
+    "span_id": "sp-624-032",
+    "ts": "2026-11-18T14:49:22Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 3594.7,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-033",
+    "span_id": "sp-624-033",
+    "ts": "2026-11-18T14:49:44Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2480.5,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-034",
+    "span_id": "sp-624-034",
+    "ts": "2026-11-18T14:50:06Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2251.7,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-035",
+    "span_id": "sp-624-035",
+    "ts": "2026-11-18T14:50:28Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2330.9,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-036",
+    "span_id": "sp-624-036",
+    "ts": "2026-11-18T14:50:50Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 3498.7,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-037",
+    "span_id": "sp-624-037",
+    "ts": "2026-11-18T14:51:12Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 3234.4,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-038",
+    "span_id": "sp-624-038",
+    "ts": "2026-11-18T14:51:34Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2550.1,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-039",
+    "span_id": "sp-624-039",
+    "ts": "2026-11-18T14:51:56Z",
+    "service": "search-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2669.7,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  },
+  {
+    "trace_id": "tr-624-040",
+    "span_id": "sp-624-040",
+    "ts": "2026-11-18T14:52:18Z",
+    "service": "catalog-svc",
+    "operation": "search-svc.handle",
+    "duration_ms": 2100.7,
+    "status": "ERROR",
+    "error": "memory_exhaustion"
+  }
+]

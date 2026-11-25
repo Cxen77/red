@@ -1,0 +1,10 @@
+{
+  "scenario_id": "inventory-oom-kill",
+  "root_cause_service": "inventory-svc",
+  "root_cause_category": "memory_exhaustion",
+  "required_keywords": [
+    "OutOfMemoryError",
+    "inventory-svc",
+    "oom_kill"
+  ]
+}

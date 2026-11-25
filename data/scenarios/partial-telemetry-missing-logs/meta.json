@@ -1,0 +1,11 @@
+{
+  "id": "partial-telemetry-missing-logs",
+  "title": "Partial Telemetry Edge Case (Logs Dropped, Metrics/Traces Only)",
+  "opened_at": "2026-11-16T04:15:00Z",
+  "severity": "low",
+  "services": [
+    "api-gateway",
+    "metrics-collector"
+  ],
+  "has_image": false
+}

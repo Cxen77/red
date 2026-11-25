@@ -1,0 +1,912 @@
+2026-11-22T11:03:00Z api-gateway INFO req-201-0 request ok latency_ms=12
+2026-11-22T11:03:01Z inventory-svc INFO req-201-1 request ok latency_ms=32
+2026-11-22T11:03:02Z warehouse-sync INFO req-201-2 request ok latency_ms=20
+2026-11-22T11:03:03Z api-gateway INFO req-201-3 request ok latency_ms=23
+2026-11-22T11:03:04Z inventory-svc INFO req-201-4 request ok latency_ms=10
+2026-11-22T11:03:05Z warehouse-sync INFO req-201-5 request ok latency_ms=34
+2026-11-22T11:03:06Z api-gateway INFO req-201-6 request ok latency_ms=19
+2026-11-22T11:03:07Z inventory-svc INFO req-201-7 request ok latency_ms=20
+2026-11-22T11:03:08Z warehouse-sync INFO req-201-8 request ok latency_ms=34
+2026-11-22T11:03:09Z api-gateway INFO req-201-9 request ok latency_ms=32
+2026-11-22T11:03:10Z inventory-svc INFO req-201-10 request ok latency_ms=32
+2026-11-22T11:03:11Z warehouse-sync INFO req-201-11 request ok latency_ms=31
+2026-11-22T11:03:12Z api-gateway INFO req-201-12 request ok latency_ms=25
+2026-11-22T11:03:13Z inventory-svc INFO req-201-13 request ok latency_ms=29
+2026-11-22T11:03:14Z warehouse-sync INFO req-201-14 request ok latency_ms=34
+2026-11-22T11:03:15Z api-gateway INFO req-201-15 request ok latency_ms=18
+2026-11-22T11:03:16Z inventory-svc INFO req-201-16 request ok latency_ms=24
+2026-11-22T11:03:17Z warehouse-sync INFO req-201-17 request ok latency_ms=25
+2026-11-22T11:03:18Z api-gateway INFO req-201-18 request ok latency_ms=37
+2026-11-22T11:03:19Z inventory-svc INFO req-201-19 request ok latency_ms=27
+2026-11-22T11:03:20Z warehouse-sync INFO req-201-20 request ok latency_ms=29
+2026-11-22T11:03:21Z api-gateway INFO req-201-21 request ok latency_ms=25
+2026-11-22T11:03:22Z inventory-svc INFO req-201-22 request ok latency_ms=14
+2026-11-22T11:03:23Z warehouse-sync INFO req-201-23 request ok latency_ms=39
+2026-11-22T11:03:24Z api-gateway INFO req-201-24 request ok latency_ms=28
+2026-11-22T11:03:25Z inventory-svc INFO req-201-25 request ok latency_ms=25
+2026-11-22T11:03:26Z warehouse-sync INFO req-201-26 request ok latency_ms=11
+2026-11-22T11:03:27Z api-gateway INFO req-201-27 request ok latency_ms=27
+2026-11-22T11:03:28Z inventory-svc INFO req-201-28 request ok latency_ms=17
+2026-11-22T11:03:29Z warehouse-sync INFO req-201-29 request ok latency_ms=16
+2026-11-22T11:03:30Z api-gateway INFO req-201-30 request ok latency_ms=38
+2026-11-22T11:03:31Z inventory-svc INFO req-201-31 request ok latency_ms=32
+2026-11-22T11:03:32Z warehouse-sync INFO req-201-32 request ok latency_ms=39
+2026-11-22T11:03:33Z api-gateway INFO req-201-33 request ok latency_ms=16
+2026-11-22T11:03:34Z inventory-svc INFO req-201-34 request ok latency_ms=10
+2026-11-22T11:03:35Z warehouse-sync INFO req-201-35 request ok latency_ms=19
+2026-11-22T11:03:36Z api-gateway INFO req-201-36 request ok latency_ms=13
+2026-11-22T11:03:37Z inventory-svc INFO req-201-37 request ok latency_ms=17
+2026-11-22T11:03:38Z warehouse-sync INFO req-201-38 request ok latency_ms=27
+2026-11-22T11:03:39Z api-gateway INFO req-201-39 request ok latency_ms=18
+2026-11-22T11:03:40Z inventory-svc INFO req-201-40 request ok latency_ms=40
+2026-11-22T11:03:41Z warehouse-sync INFO req-201-41 request ok latency_ms=15
+2026-11-22T11:03:42Z api-gateway INFO req-201-42 request ok latency_ms=30
+2026-11-22T11:03:43Z inventory-svc INFO req-201-43 request ok latency_ms=34
+2026-11-22T11:03:44Z warehouse-sync INFO req-201-44 request ok latency_ms=25
+2026-11-22T11:03:45Z api-gateway INFO req-201-45 request ok latency_ms=31
+2026-11-22T11:03:46Z inventory-svc INFO req-201-46 request ok latency_ms=32
+2026-11-22T11:03:47Z warehouse-sync INFO req-201-47 request ok latency_ms=10
+2026-11-22T11:03:48Z api-gateway INFO req-201-48 request ok latency_ms=38
+2026-11-22T11:03:49Z inventory-svc INFO req-201-49 request ok latency_ms=28
+2026-11-22T11:03:50Z warehouse-sync INFO req-201-50 request ok latency_ms=38
+2026-11-22T11:03:51Z api-gateway INFO req-201-51 request ok latency_ms=12
+2026-11-22T11:03:52Z inventory-svc INFO req-201-52 request ok latency_ms=34
+2026-11-22T11:03:53Z warehouse-sync INFO req-201-53 request ok latency_ms=30
+2026-11-22T11:03:54Z api-gateway INFO req-201-54 request ok latency_ms=33
+2026-11-22T11:03:55Z inventory-svc INFO req-201-55 request ok latency_ms=23
+2026-11-22T11:03:56Z warehouse-sync INFO req-201-56 request ok latency_ms=26
+2026-11-22T11:03:57Z api-gateway INFO req-201-57 request ok latency_ms=27
+2026-11-22T11:03:58Z inventory-svc INFO req-201-58 request ok latency_ms=36
+2026-11-22T11:03:59Z warehouse-sync INFO req-201-59 request ok latency_ms=34
+2026-11-22T11:04:00Z api-gateway INFO req-201-60 request ok latency_ms=34
+2026-11-22T11:04:01Z inventory-svc INFO req-201-61 request ok latency_ms=27
+2026-11-22T11:04:02Z warehouse-sync INFO req-201-62 request ok latency_ms=31
+2026-11-22T11:04:03Z api-gateway INFO req-201-63 request ok latency_ms=33
+2026-11-22T11:04:04Z inventory-svc INFO req-201-64 request ok latency_ms=19
+2026-11-22T11:04:05Z warehouse-sync INFO req-201-65 request ok latency_ms=25
+2026-11-22T11:04:06Z api-gateway INFO req-201-66 request ok latency_ms=13
+2026-11-22T11:04:07Z inventory-svc INFO req-201-67 request ok latency_ms=34
+2026-11-22T11:04:08Z warehouse-sync INFO req-201-68 request ok latency_ms=28
+2026-11-22T11:04:09Z api-gateway INFO req-201-69 request ok latency_ms=19
+2026-11-22T11:04:10Z inventory-svc INFO req-201-70 request ok latency_ms=27
+2026-11-22T11:04:11Z warehouse-sync INFO req-201-71 request ok latency_ms=21
+2026-11-22T11:04:12Z api-gateway INFO req-201-72 request ok latency_ms=38
+2026-11-22T11:04:13Z inventory-svc INFO req-201-73 request ok latency_ms=27
+2026-11-22T11:04:14Z warehouse-sync INFO req-201-74 request ok latency_ms=38
+2026-11-22T11:04:15Z api-gateway INFO req-201-75 request ok latency_ms=22
+2026-11-22T11:04:16Z inventory-svc INFO req-201-76 request ok latency_ms=16
+2026-11-22T11:04:17Z warehouse-sync INFO req-201-77 request ok latency_ms=10
+2026-11-22T11:04:18Z api-gateway INFO req-201-78 request ok latency_ms=23
+2026-11-22T11:04:19Z inventory-svc INFO req-201-79 request ok latency_ms=24
+2026-11-22T11:04:20Z warehouse-sync INFO req-201-80 request ok latency_ms=32
+2026-11-22T11:04:21Z api-gateway INFO req-201-81 request ok latency_ms=11
+2026-11-22T11:04:22Z inventory-svc INFO req-201-82 request ok latency_ms=23
+2026-11-22T11:04:23Z warehouse-sync INFO req-201-83 request ok latency_ms=38
+2026-11-22T11:04:24Z api-gateway INFO req-201-84 request ok latency_ms=40
+2026-11-22T11:04:25Z inventory-svc INFO req-201-85 request ok latency_ms=18
+2026-11-22T11:04:26Z warehouse-sync INFO req-201-86 request ok latency_ms=10
+2026-11-22T11:04:27Z api-gateway INFO req-201-87 request ok latency_ms=16
+2026-11-22T11:04:28Z inventory-svc INFO req-201-88 request ok latency_ms=23
+2026-11-22T11:04:29Z warehouse-sync INFO req-201-89 request ok latency_ms=14
+2026-11-22T11:04:30Z api-gateway INFO req-201-90 request ok latency_ms=36
+2026-11-22T11:04:31Z inventory-svc INFO req-201-91 request ok latency_ms=32
+2026-11-22T11:04:32Z warehouse-sync INFO req-201-92 request ok latency_ms=40
+2026-11-22T11:04:33Z api-gateway INFO req-201-93 request ok latency_ms=17
+2026-11-22T11:04:34Z inventory-svc INFO req-201-94 request ok latency_ms=26
+2026-11-22T11:04:35Z warehouse-sync INFO req-201-95 request ok latency_ms=10
+2026-11-22T11:04:36Z api-gateway INFO req-201-96 request ok latency_ms=18
+2026-11-22T11:04:37Z inventory-svc INFO req-201-97 request ok latency_ms=31
+2026-11-22T11:04:38Z warehouse-sync INFO req-201-98 request ok latency_ms=28
+2026-11-22T11:04:39Z api-gateway INFO req-201-99 request ok latency_ms=30
+2026-11-22T11:04:40Z inventory-svc INFO req-201-100 request ok latency_ms=20
+2026-11-22T11:04:41Z warehouse-sync INFO req-201-101 request ok latency_ms=13
+2026-11-22T11:04:42Z api-gateway INFO req-201-102 request ok latency_ms=32
+2026-11-22T11:04:43Z inventory-svc INFO req-201-103 request ok latency_ms=18
+2026-11-22T11:04:44Z warehouse-sync INFO req-201-104 request ok latency_ms=20
+2026-11-22T11:04:45Z api-gateway INFO req-201-105 request ok latency_ms=39
+2026-11-22T11:04:46Z inventory-svc INFO req-201-106 request ok latency_ms=16
+2026-11-22T11:04:47Z warehouse-sync INFO req-201-107 request ok latency_ms=19
+2026-11-22T11:04:48Z api-gateway INFO req-201-108 request ok latency_ms=28
+2026-11-22T11:04:49Z inventory-svc INFO req-201-109 request ok latency_ms=11
+2026-11-22T11:04:50Z warehouse-sync INFO req-201-110 request ok latency_ms=34
+2026-11-22T11:04:51Z api-gateway INFO req-201-111 request ok latency_ms=15
+2026-11-22T11:04:52Z inventory-svc INFO req-201-112 request ok latency_ms=25
+2026-11-22T11:04:53Z warehouse-sync INFO req-201-113 request ok latency_ms=23
+2026-11-22T11:04:54Z api-gateway INFO req-201-114 request ok latency_ms=28
+2026-11-22T11:04:55Z inventory-svc INFO req-201-115 request ok latency_ms=19
+2026-11-22T11:04:56Z warehouse-sync INFO req-201-116 request ok latency_ms=28
+2026-11-22T11:04:57Z api-gateway INFO req-201-117 request ok latency_ms=36
+2026-11-22T11:04:58Z inventory-svc INFO req-201-118 request ok latency_ms=26
+2026-11-22T11:04:59Z warehouse-sync INFO req-201-119 request ok latency_ms=36
+2026-11-22T11:05:00Z api-gateway INFO req-201-120 request ok latency_ms=10
+2026-11-22T11:05:01Z inventory-svc INFO req-201-121 request ok latency_ms=12
+2026-11-22T11:05:02Z warehouse-sync INFO req-201-122 request ok latency_ms=21
+2026-11-22T11:05:03Z api-gateway INFO req-201-123 request ok latency_ms=26
+2026-11-22T11:05:04Z inventory-svc INFO req-201-124 request ok latency_ms=37
+2026-11-22T11:05:05Z warehouse-sync INFO req-201-125 request ok latency_ms=39
+2026-11-22T11:05:06Z api-gateway INFO req-201-126 request ok latency_ms=26
+2026-11-22T11:05:07Z inventory-svc INFO req-201-127 request ok latency_ms=15
+2026-11-22T11:05:08Z warehouse-sync INFO req-201-128 request ok latency_ms=35
+2026-11-22T11:05:09Z api-gateway INFO req-201-129 request ok latency_ms=12
+2026-11-22T11:05:10Z inventory-svc INFO req-201-130 request ok latency_ms=40
+2026-11-22T11:05:11Z warehouse-sync INFO req-201-131 request ok latency_ms=16
+2026-11-22T11:05:12Z api-gateway INFO req-201-132 request ok latency_ms=11
+2026-11-22T11:05:13Z inventory-svc INFO req-201-133 request ok latency_ms=27
+2026-11-22T11:05:14Z warehouse-sync INFO req-201-134 request ok latency_ms=33
+2026-11-22T11:05:15Z api-gateway INFO req-201-135 request ok latency_ms=21
+2026-11-22T11:05:16Z inventory-svc INFO req-201-136 request ok latency_ms=25
+2026-11-22T11:05:17Z warehouse-sync INFO req-201-137 request ok latency_ms=24
+2026-11-22T11:05:18Z api-gateway INFO req-201-138 request ok latency_ms=10
+2026-11-22T11:05:19Z inventory-svc INFO req-201-139 request ok latency_ms=11
+2026-11-22T11:05:20Z warehouse-sync INFO req-201-140 request ok latency_ms=17
+2026-11-22T11:05:21Z api-gateway INFO req-201-141 request ok latency_ms=33
+2026-11-22T11:05:22Z inventory-svc INFO req-201-142 request ok latency_ms=25
+2026-11-22T11:05:23Z warehouse-sync INFO req-201-143 request ok latency_ms=34
+2026-11-22T11:05:24Z api-gateway INFO req-201-144 request ok latency_ms=24
+2026-11-22T11:05:25Z inventory-svc INFO req-201-145 request ok latency_ms=28
+2026-11-22T11:05:26Z warehouse-sync INFO req-201-146 request ok latency_ms=37
+2026-11-22T11:05:27Z api-gateway INFO req-201-147 request ok latency_ms=26
+2026-11-22T11:05:28Z inventory-svc INFO req-201-148 request ok latency_ms=21
+2026-11-22T11:05:29Z warehouse-sync INFO req-201-149 request ok latency_ms=21
+2026-11-22T11:05:30Z api-gateway INFO req-201-150 request ok latency_ms=35
+2026-11-22T11:05:31Z inventory-svc INFO req-201-151 request ok latency_ms=35
+2026-11-22T11:05:32Z warehouse-sync INFO req-201-152 request ok latency_ms=23
+2026-11-22T11:05:33Z api-gateway INFO req-201-153 request ok latency_ms=38
+2026-11-22T11:05:34Z inventory-svc INFO req-201-154 request ok latency_ms=40
+2026-11-22T11:05:35Z warehouse-sync INFO req-201-155 request ok latency_ms=15
+2026-11-22T11:05:36Z api-gateway INFO req-201-156 request ok latency_ms=11
+2026-11-22T11:05:37Z inventory-svc INFO req-201-157 request ok latency_ms=15
+2026-11-22T11:05:38Z warehouse-sync INFO req-201-158 request ok latency_ms=24
+2026-11-22T11:05:39Z api-gateway INFO req-201-159 request ok latency_ms=36
+2026-11-22T11:05:40Z inventory-svc INFO req-201-160 request ok latency_ms=10
+2026-11-22T11:05:41Z warehouse-sync INFO req-201-161 request ok latency_ms=13
+2026-11-22T11:05:42Z api-gateway INFO req-201-162 request ok latency_ms=16
+2026-11-22T11:05:43Z inventory-svc INFO req-201-163 request ok latency_ms=20
+2026-11-22T11:05:44Z warehouse-sync INFO req-201-164 request ok latency_ms=10
+2026-11-22T11:05:45Z api-gateway INFO req-201-165 request ok latency_ms=38
+2026-11-22T11:05:46Z inventory-svc INFO req-201-166 request ok latency_ms=21
+2026-11-22T11:05:47Z warehouse-sync INFO req-201-167 request ok latency_ms=23
+2026-11-22T11:05:48Z api-gateway INFO req-201-168 request ok latency_ms=32
+2026-11-22T11:05:49Z inventory-svc INFO req-201-169 request ok latency_ms=10
+2026-11-22T11:05:50Z warehouse-sync INFO req-201-170 request ok latency_ms=34
+2026-11-22T11:05:51Z api-gateway INFO req-201-171 request ok latency_ms=10
+2026-11-22T11:05:52Z inventory-svc INFO req-201-172 request ok latency_ms=39
+2026-11-22T11:05:53Z warehouse-sync INFO req-201-173 request ok latency_ms=30
+2026-11-22T11:05:54Z api-gateway INFO req-201-174 request ok latency_ms=37
+2026-11-22T11:05:55Z inventory-svc INFO req-201-175 request ok latency_ms=35
+2026-11-22T11:05:56Z warehouse-sync INFO req-201-176 request ok latency_ms=40
+2026-11-22T11:05:57Z api-gateway INFO req-201-177 request ok latency_ms=38
+2026-11-22T11:05:58Z inventory-svc INFO req-201-178 request ok latency_ms=20
+2026-11-22T11:05:59Z warehouse-sync INFO req-201-179 request ok latency_ms=16
+2026-11-22T11:06:00Z api-gateway INFO req-201-180 request ok latency_ms=19
+2026-11-22T11:06:01Z inventory-svc INFO req-201-181 request ok latency_ms=26
+2026-11-22T11:06:02Z warehouse-sync INFO req-201-182 request ok latency_ms=31
+2026-11-22T11:06:03Z api-gateway INFO req-201-183 request ok latency_ms=11
+2026-11-22T11:06:04Z inventory-svc INFO req-201-184 request ok latency_ms=23
+2026-11-22T11:06:05Z warehouse-sync INFO req-201-185 request ok latency_ms=29
+2026-11-22T11:06:06Z api-gateway INFO req-201-186 request ok latency_ms=40
+2026-11-22T11:06:07Z inventory-svc INFO req-201-187 request ok latency_ms=14
+2026-11-22T11:06:08Z warehouse-sync INFO req-201-188 request ok latency_ms=36
+2026-11-22T11:06:09Z api-gateway INFO req-201-189 request ok latency_ms=15
+2026-11-22T11:06:10Z inventory-svc INFO req-201-190 request ok latency_ms=22
+2026-11-22T11:06:11Z warehouse-sync INFO req-201-191 request ok latency_ms=34
+2026-11-22T11:06:12Z api-gateway INFO req-201-192 request ok latency_ms=24
+2026-11-22T11:06:13Z inventory-svc INFO req-201-193 request ok latency_ms=17
+2026-11-22T11:06:14Z warehouse-sync INFO req-201-194 request ok latency_ms=23
+2026-11-22T11:06:15Z api-gateway INFO req-201-195 request ok latency_ms=14
+2026-11-22T11:06:16Z inventory-svc INFO req-201-196 request ok latency_ms=31
+2026-11-22T11:06:17Z warehouse-sync INFO req-201-197 request ok latency_ms=35
+2026-11-22T11:06:18Z api-gateway INFO req-201-198 request ok latency_ms=29
+2026-11-22T11:06:19Z inventory-svc INFO req-201-199 request ok latency_ms=38
+2026-11-22T11:06:20Z warehouse-sync INFO req-201-200 request ok latency_ms=30
+2026-11-22T11:06:21Z api-gateway INFO req-201-201 request ok latency_ms=17
+2026-11-22T11:06:22Z inventory-svc INFO req-201-202 request ok latency_ms=17
+2026-11-22T11:06:23Z warehouse-sync INFO req-201-203 request ok latency_ms=15
+2026-11-22T11:06:24Z api-gateway INFO req-201-204 request ok latency_ms=40
+2026-11-22T11:06:25Z inventory-svc INFO req-201-205 request ok latency_ms=29
+2026-11-22T11:06:26Z warehouse-sync INFO req-201-206 request ok latency_ms=11
+2026-11-22T11:06:27Z api-gateway INFO req-201-207 request ok latency_ms=26
+2026-11-22T11:06:28Z inventory-svc INFO req-201-208 request ok latency_ms=39
+2026-11-22T11:06:29Z warehouse-sync INFO req-201-209 request ok latency_ms=34
+2026-11-22T11:06:30Z api-gateway INFO req-201-210 request ok latency_ms=27
+2026-11-22T11:06:31Z inventory-svc INFO req-201-211 request ok latency_ms=12
+2026-11-22T11:06:32Z warehouse-sync INFO req-201-212 request ok latency_ms=29
+2026-11-22T11:06:33Z api-gateway INFO req-201-213 request ok latency_ms=14
+2026-11-22T11:06:34Z inventory-svc INFO req-201-214 request ok latency_ms=27
+2026-11-22T11:06:35Z warehouse-sync INFO req-201-215 request ok latency_ms=29
+2026-11-22T11:06:36Z api-gateway INFO req-201-216 request ok latency_ms=22
+2026-11-22T11:06:37Z inventory-svc INFO req-201-217 request ok latency_ms=35
+2026-11-22T11:06:38Z warehouse-sync INFO req-201-218 request ok latency_ms=15
+2026-11-22T11:06:39Z api-gateway INFO req-201-219 request ok latency_ms=19
+2026-11-22T11:06:40Z inventory-svc INFO req-201-220 request ok latency_ms=21
+2026-11-22T11:06:41Z warehouse-sync INFO req-201-221 request ok latency_ms=35
+2026-11-22T11:06:42Z api-gateway INFO req-201-222 request ok latency_ms=30
+2026-11-22T11:06:43Z inventory-svc INFO req-201-223 request ok latency_ms=26
+2026-11-22T11:06:44Z warehouse-sync INFO req-201-224 request ok latency_ms=19
+2026-11-22T11:06:45Z api-gateway INFO req-201-225 request ok latency_ms=14
+2026-11-22T11:06:46Z inventory-svc INFO req-201-226 request ok latency_ms=35
+2026-11-22T11:06:47Z warehouse-sync INFO req-201-227 request ok latency_ms=11
+2026-11-22T11:06:48Z api-gateway INFO req-201-228 request ok latency_ms=32
+2026-11-22T11:06:49Z inventory-svc INFO req-201-229 request ok latency_ms=26
+2026-11-22T11:06:50Z warehouse-sync INFO req-201-230 request ok latency_ms=10
+2026-11-22T11:06:51Z api-gateway INFO req-201-231 request ok latency_ms=28
+2026-11-22T11:06:52Z inventory-svc INFO req-201-232 request ok latency_ms=12
+2026-11-22T11:06:53Z warehouse-sync INFO req-201-233 request ok latency_ms=16
+2026-11-22T11:06:54Z api-gateway INFO req-201-234 request ok latency_ms=37
+2026-11-22T11:06:55Z inventory-svc INFO req-201-235 request ok latency_ms=19
+2026-11-22T11:06:56Z warehouse-sync INFO req-201-236 request ok latency_ms=27
+2026-11-22T11:06:57Z api-gateway INFO req-201-237 request ok latency_ms=18
+2026-11-22T11:06:58Z inventory-svc INFO req-201-238 request ok latency_ms=14
+2026-11-22T11:06:59Z warehouse-sync INFO req-201-239 request ok latency_ms=31
+2026-11-22T11:07:00Z api-gateway INFO req-201-240 request ok latency_ms=26
+2026-11-22T11:07:01Z inventory-svc INFO req-201-241 request ok latency_ms=27
+2026-11-22T11:07:02Z warehouse-sync INFO req-201-242 request ok latency_ms=31
+2026-11-22T11:07:03Z api-gateway INFO req-201-243 request ok latency_ms=32
+2026-11-22T11:07:04Z inventory-svc INFO req-201-244 request ok latency_ms=21
+2026-11-22T11:07:05Z warehouse-sync INFO req-201-245 request ok latency_ms=25
+2026-11-22T11:07:06Z api-gateway INFO req-201-246 request ok latency_ms=15
+2026-11-22T11:07:07Z inventory-svc INFO req-201-247 request ok latency_ms=39
+2026-11-22T11:07:08Z warehouse-sync INFO req-201-248 request ok latency_ms=23
+2026-11-22T11:07:09Z api-gateway INFO req-201-249 request ok latency_ms=10
+2026-11-22T11:07:10Z inventory-svc INFO req-201-250 request ok latency_ms=34
+2026-11-22T11:07:11Z warehouse-sync INFO req-201-251 request ok latency_ms=38
+2026-11-22T11:07:12Z api-gateway INFO req-201-252 request ok latency_ms=10
+2026-11-22T11:07:13Z inventory-svc INFO req-201-253 request ok latency_ms=32
+2026-11-22T11:07:14Z warehouse-sync INFO req-201-254 request ok latency_ms=23
+2026-11-22T11:07:15Z api-gateway INFO req-201-255 request ok latency_ms=22
+2026-11-22T11:07:16Z inventory-svc INFO req-201-256 request ok latency_ms=37
+2026-11-22T11:07:17Z warehouse-sync INFO req-201-257 request ok latency_ms=13
+2026-11-22T11:07:18Z api-gateway INFO req-201-258 request ok latency_ms=32
+2026-11-22T11:07:19Z inventory-svc INFO req-201-259 request ok latency_ms=14
+2026-11-22T11:07:20Z warehouse-sync INFO req-201-260 request ok latency_ms=39
+2026-11-22T11:07:21Z api-gateway INFO req-201-261 request ok latency_ms=32
+2026-11-22T11:07:22Z inventory-svc INFO req-201-262 request ok latency_ms=35
+2026-11-22T11:07:23Z warehouse-sync INFO req-201-263 request ok latency_ms=31
+2026-11-22T11:07:24Z api-gateway INFO req-201-264 request ok latency_ms=15
+2026-11-22T11:07:25Z inventory-svc INFO req-201-265 request ok latency_ms=26
+2026-11-22T11:07:26Z warehouse-sync INFO req-201-266 request ok latency_ms=35
+2026-11-22T11:07:27Z api-gateway INFO req-201-267 request ok latency_ms=12
+2026-11-22T11:07:28Z inventory-svc INFO req-201-268 request ok latency_ms=18
+2026-11-22T11:07:29Z warehouse-sync INFO req-201-269 request ok latency_ms=13
+2026-11-22T11:07:30Z api-gateway INFO req-201-270 request ok latency_ms=25
+2026-11-22T11:07:31Z inventory-svc INFO req-201-271 request ok latency_ms=25
+2026-11-22T11:07:32Z warehouse-sync INFO req-201-272 request ok latency_ms=35
+2026-11-22T11:07:33Z api-gateway INFO req-201-273 request ok latency_ms=13
+2026-11-22T11:07:34Z inventory-svc INFO req-201-274 request ok latency_ms=17
+2026-11-22T11:07:35Z warehouse-sync INFO req-201-275 request ok latency_ms=19
+2026-11-22T11:07:36Z api-gateway INFO req-201-276 request ok latency_ms=18
+2026-11-22T11:07:37Z inventory-svc INFO req-201-277 request ok latency_ms=10
+2026-11-22T11:07:38Z warehouse-sync INFO req-201-278 request ok latency_ms=25
+2026-11-22T11:07:39Z api-gateway INFO req-201-279 request ok latency_ms=17
+2026-11-22T11:07:40Z inventory-svc INFO req-201-280 request ok latency_ms=40
+2026-11-22T11:07:41Z warehouse-sync INFO req-201-281 request ok latency_ms=27
+2026-11-22T11:07:42Z api-gateway INFO req-201-282 request ok latency_ms=38
+2026-11-22T11:07:43Z inventory-svc INFO req-201-283 request ok latency_ms=35
+2026-11-22T11:07:44Z warehouse-sync INFO req-201-284 request ok latency_ms=35
+2026-11-22T11:07:45Z api-gateway INFO req-201-285 request ok latency_ms=10
+2026-11-22T11:07:46Z inventory-svc INFO req-201-286 request ok latency_ms=30
+2026-11-22T11:07:47Z warehouse-sync INFO req-201-287 request ok latency_ms=19
+2026-11-22T11:07:48Z api-gateway INFO req-201-288 request ok latency_ms=37
+2026-11-22T11:07:49Z inventory-svc INFO req-201-289 request ok latency_ms=20
+2026-11-22T11:07:50Z warehouse-sync INFO req-201-290 request ok latency_ms=28
+2026-11-22T11:07:51Z api-gateway INFO req-201-291 request ok latency_ms=17
+2026-11-22T11:07:52Z inventory-svc INFO req-201-292 request ok latency_ms=39
+2026-11-22T11:07:53Z warehouse-sync INFO req-201-293 request ok latency_ms=23
+2026-11-22T11:07:54Z api-gateway INFO req-201-294 request ok latency_ms=11
+2026-11-22T11:07:55Z inventory-svc INFO req-201-295 request ok latency_ms=10
+2026-11-22T11:07:56Z warehouse-sync INFO req-201-296 request ok latency_ms=26
+2026-11-22T11:07:57Z api-gateway INFO req-201-297 request ok latency_ms=16
+2026-11-22T11:07:58Z inventory-svc INFO req-201-298 request ok latency_ms=38
+2026-11-22T11:07:59Z warehouse-sync INFO req-201-299 request ok latency_ms=18
+2026-11-22T11:08:00Z api-gateway INFO req-201-300 request ok latency_ms=28
+2026-11-22T11:08:01Z inventory-svc INFO req-201-301 request ok latency_ms=37
+2026-11-22T11:08:02Z warehouse-sync INFO req-201-302 request ok latency_ms=33
+2026-11-22T11:08:03Z api-gateway INFO req-201-303 request ok latency_ms=19
+2026-11-22T11:08:04Z inventory-svc INFO req-201-304 request ok latency_ms=15
+2026-11-22T11:08:05Z warehouse-sync INFO req-201-305 request ok latency_ms=32
+2026-11-22T11:08:06Z api-gateway INFO req-201-306 request ok latency_ms=13
+2026-11-22T11:08:07Z inventory-svc INFO req-201-307 request ok latency_ms=34
+2026-11-22T11:08:08Z warehouse-sync INFO req-201-308 request ok latency_ms=37
+2026-11-22T11:08:09Z api-gateway INFO req-201-309 request ok latency_ms=32
+2026-11-22T11:08:10Z inventory-svc INFO req-201-310 request ok latency_ms=22
+2026-11-22T11:08:11Z warehouse-sync INFO req-201-311 request ok latency_ms=23
+2026-11-22T11:08:12Z api-gateway INFO req-201-312 request ok latency_ms=27
+2026-11-22T11:08:13Z inventory-svc INFO req-201-313 request ok latency_ms=20
+2026-11-22T11:08:14Z warehouse-sync INFO req-201-314 request ok latency_ms=28
+2026-11-22T11:08:15Z api-gateway INFO req-201-315 request ok latency_ms=26
+2026-11-22T11:08:16Z inventory-svc INFO req-201-316 request ok latency_ms=34
+2026-11-22T11:08:17Z warehouse-sync INFO req-201-317 request ok latency_ms=21
+2026-11-22T11:08:18Z api-gateway INFO req-201-318 request ok latency_ms=37
+2026-11-22T11:08:19Z inventory-svc INFO req-201-319 request ok latency_ms=19
+2026-11-22T11:08:20Z warehouse-sync INFO req-201-320 request ok latency_ms=32
+2026-11-22T11:08:21Z api-gateway INFO req-201-321 request ok latency_ms=21
+2026-11-22T11:08:22Z inventory-svc INFO req-201-322 request ok latency_ms=29
+2026-11-22T11:08:23Z warehouse-sync INFO req-201-323 request ok latency_ms=11
+2026-11-22T11:08:24Z api-gateway INFO req-201-324 request ok latency_ms=28
+2026-11-22T11:08:25Z inventory-svc INFO req-201-325 request ok latency_ms=29
+2026-11-22T11:08:26Z warehouse-sync INFO req-201-326 request ok latency_ms=17
+2026-11-22T11:08:27Z api-gateway INFO req-201-327 request ok latency_ms=22
+2026-11-22T11:08:28Z inventory-svc INFO req-201-328 request ok latency_ms=11
+2026-11-22T11:08:29Z warehouse-sync INFO req-201-329 request ok latency_ms=11
+2026-11-22T11:08:30Z api-gateway INFO req-201-330 request ok latency_ms=24
+2026-11-22T11:08:31Z inventory-svc INFO req-201-331 request ok latency_ms=20
+2026-11-22T11:08:32Z warehouse-sync INFO req-201-332 request ok latency_ms=10
+2026-11-22T11:08:33Z api-gateway INFO req-201-333 request ok latency_ms=12
+2026-11-22T11:08:34Z inventory-svc INFO req-201-334 request ok latency_ms=13
+2026-11-22T11:08:35Z warehouse-sync INFO req-201-335 request ok latency_ms=26
+2026-11-22T11:08:36Z api-gateway INFO req-201-336 request ok latency_ms=27
+2026-11-22T11:08:37Z inventory-svc INFO req-201-337 request ok latency_ms=27
+2026-11-22T11:08:38Z warehouse-sync INFO req-201-338 request ok latency_ms=23
+2026-11-22T11:08:39Z api-gateway INFO req-201-339 request ok latency_ms=11
+2026-11-22T11:08:40Z inventory-svc INFO req-201-340 request ok latency_ms=14
+2026-11-22T11:08:41Z warehouse-sync INFO req-201-341 request ok latency_ms=28
+2026-11-22T11:08:42Z api-gateway INFO req-201-342 request ok latency_ms=29
+2026-11-22T11:08:43Z inventory-svc INFO req-201-343 request ok latency_ms=35
+2026-11-22T11:08:44Z warehouse-sync INFO req-201-344 request ok latency_ms=14
+2026-11-22T11:08:45Z api-gateway INFO req-201-345 request ok latency_ms=17
+2026-11-22T11:08:46Z inventory-svc INFO req-201-346 request ok latency_ms=10
+2026-11-22T11:08:47Z warehouse-sync INFO req-201-347 request ok latency_ms=24
+2026-11-22T11:08:48Z api-gateway INFO req-201-348 request ok latency_ms=31
+2026-11-22T11:08:49Z inventory-svc INFO req-201-349 request ok latency_ms=28
+2026-11-22T11:08:50Z warehouse-sync INFO req-201-350 request ok latency_ms=21
+2026-11-22T11:08:51Z api-gateway INFO req-201-351 request ok latency_ms=13
+2026-11-22T11:08:52Z inventory-svc INFO req-201-352 request ok latency_ms=24
+2026-11-22T11:08:53Z warehouse-sync INFO req-201-353 request ok latency_ms=16
+2026-11-22T11:08:54Z api-gateway INFO req-201-354 request ok latency_ms=38
+2026-11-22T11:08:55Z inventory-svc INFO req-201-355 request ok latency_ms=39
+2026-11-22T11:08:56Z warehouse-sync INFO req-201-356 request ok latency_ms=17
+2026-11-22T11:08:57Z api-gateway INFO req-201-357 request ok latency_ms=39
+2026-11-22T11:08:58Z inventory-svc INFO req-201-358 request ok latency_ms=12
+2026-11-22T11:08:59Z warehouse-sync INFO req-201-359 request ok latency_ms=10
+2026-11-22T11:09:00Z api-gateway INFO req-201-360 request ok latency_ms=29
+2026-11-22T11:09:01Z inventory-svc INFO req-201-361 request ok latency_ms=31
+2026-11-22T11:09:02Z warehouse-sync INFO req-201-362 request ok latency_ms=25
+2026-11-22T11:09:03Z api-gateway INFO req-201-363 request ok latency_ms=33
+2026-11-22T11:09:04Z inventory-svc INFO req-201-364 request ok latency_ms=30
+2026-11-22T11:09:05Z warehouse-sync INFO req-201-365 request ok latency_ms=20
+2026-11-22T11:09:06Z api-gateway INFO req-201-366 request ok latency_ms=40
+2026-11-22T11:09:07Z inventory-svc INFO req-201-367 request ok latency_ms=17
+2026-11-22T11:09:08Z warehouse-sync INFO req-201-368 request ok latency_ms=19
+2026-11-22T11:09:09Z api-gateway INFO req-201-369 request ok latency_ms=31
+2026-11-22T11:09:10Z inventory-svc INFO req-201-370 request ok latency_ms=40
+2026-11-22T11:09:11Z warehouse-sync INFO req-201-371 request ok latency_ms=21
+2026-11-22T11:09:12Z api-gateway INFO req-201-372 request ok latency_ms=25
+2026-11-22T11:09:13Z inventory-svc INFO req-201-373 request ok latency_ms=39
+2026-11-22T11:09:14Z warehouse-sync INFO req-201-374 request ok latency_ms=24
+2026-11-22T11:09:15Z api-gateway INFO req-201-375 request ok latency_ms=20
+2026-11-22T11:09:16Z inventory-svc INFO req-201-376 request ok latency_ms=30
+2026-11-22T11:09:17Z warehouse-sync INFO req-201-377 request ok latency_ms=37
+2026-11-22T11:09:18Z api-gateway INFO req-201-378 request ok latency_ms=39
+2026-11-22T11:09:19Z inventory-svc INFO req-201-379 request ok latency_ms=32
+2026-11-22T11:09:20Z warehouse-sync INFO req-201-380 request ok latency_ms=18
+2026-11-22T11:09:21Z api-gateway INFO req-201-381 request ok latency_ms=22
+2026-11-22T11:09:22Z inventory-svc INFO req-201-382 request ok latency_ms=30
+2026-11-22T11:09:23Z warehouse-sync INFO req-201-383 request ok latency_ms=32
+2026-11-22T11:09:24Z api-gateway INFO req-201-384 request ok latency_ms=36
+2026-11-22T11:09:25Z inventory-svc INFO req-201-385 request ok latency_ms=38
+2026-11-22T11:09:26Z warehouse-sync INFO req-201-386 request ok latency_ms=32
+2026-11-22T11:09:27Z api-gateway INFO req-201-387 request ok latency_ms=33
+2026-11-22T11:09:28Z inventory-svc INFO req-201-388 request ok latency_ms=22
+2026-11-22T11:09:29Z warehouse-sync INFO req-201-389 request ok latency_ms=19
+2026-11-22T11:09:30Z api-gateway INFO req-201-390 request ok latency_ms=24
+2026-11-22T11:09:31Z inventory-svc INFO req-201-391 request ok latency_ms=13
+2026-11-22T11:09:32Z warehouse-sync INFO req-201-392 request ok latency_ms=11
+2026-11-22T11:09:33Z api-gateway INFO req-201-393 request ok latency_ms=29
+2026-11-22T11:09:34Z inventory-svc INFO req-201-394 request ok latency_ms=24
+2026-11-22T11:09:35Z warehouse-sync INFO req-201-395 request ok latency_ms=34
+2026-11-22T11:09:36Z api-gateway INFO req-201-396 request ok latency_ms=14
+2026-11-22T11:09:37Z inventory-svc INFO req-201-397 request ok latency_ms=29
+2026-11-22T11:09:38Z warehouse-sync INFO req-201-398 request ok latency_ms=38
+2026-11-22T11:09:39Z api-gateway INFO req-201-399 request ok latency_ms=17
+2026-11-22T11:09:40Z inventory-svc INFO req-201-400 request ok latency_ms=38
+2026-11-22T11:09:41Z warehouse-sync INFO req-201-401 request ok latency_ms=30
+2026-11-22T11:09:42Z api-gateway INFO req-201-402 request ok latency_ms=28
+2026-11-22T11:09:43Z inventory-svc INFO req-201-403 request ok latency_ms=32
+2026-11-22T11:09:44Z warehouse-sync INFO req-201-404 request ok latency_ms=39
+2026-11-22T11:09:45Z api-gateway INFO req-201-405 request ok latency_ms=22
+2026-11-22T11:09:46Z inventory-svc INFO req-201-406 request ok latency_ms=24
+2026-11-22T11:09:47Z warehouse-sync INFO req-201-407 request ok latency_ms=32
+2026-11-22T11:09:48Z api-gateway INFO req-201-408 request ok latency_ms=12
+2026-11-22T11:09:49Z inventory-svc INFO req-201-409 request ok latency_ms=31
+2026-11-22T11:09:50Z warehouse-sync INFO req-201-410 request ok latency_ms=18
+2026-11-22T11:09:51Z api-gateway INFO req-201-411 request ok latency_ms=40
+2026-11-22T11:09:52Z inventory-svc INFO req-201-412 request ok latency_ms=19
+2026-11-22T11:09:53Z warehouse-sync INFO req-201-413 request ok latency_ms=10
+2026-11-22T11:09:54Z api-gateway INFO req-201-414 request ok latency_ms=22
+2026-11-22T11:09:55Z inventory-svc INFO req-201-415 request ok latency_ms=40
+2026-11-22T11:09:56Z warehouse-sync INFO req-201-416 request ok latency_ms=21
+2026-11-22T11:09:57Z api-gateway INFO req-201-417 request ok latency_ms=33
+2026-11-22T11:09:58Z inventory-svc INFO req-201-418 request ok latency_ms=15
+2026-11-22T11:09:59Z warehouse-sync INFO req-201-419 request ok latency_ms=14
+2026-11-22T11:10:00Z api-gateway INFO req-201-420 request ok latency_ms=21
+2026-11-22T11:10:01Z inventory-svc INFO req-201-421 request ok latency_ms=15
+2026-11-22T11:10:02Z warehouse-sync INFO req-201-422 request ok latency_ms=31
+2026-11-22T11:10:03Z api-gateway INFO req-201-423 request ok latency_ms=21
+2026-11-22T11:10:04Z inventory-svc INFO req-201-424 request ok latency_ms=28
+2026-11-22T11:10:05Z warehouse-sync INFO req-201-425 request ok latency_ms=29
+2026-11-22T11:10:06Z api-gateway INFO req-201-426 request ok latency_ms=39
+2026-11-22T11:10:07Z inventory-svc INFO req-201-427 request ok latency_ms=28
+2026-11-22T11:10:08Z warehouse-sync INFO req-201-428 request ok latency_ms=15
+2026-11-22T11:10:09Z api-gateway INFO req-201-429 request ok latency_ms=23
+2026-11-22T11:10:10Z inventory-svc INFO req-201-430 request ok latency_ms=17
+2026-11-22T11:10:11Z warehouse-sync INFO req-201-431 request ok latency_ms=37
+2026-11-22T11:10:12Z api-gateway INFO req-201-432 request ok latency_ms=28
+2026-11-22T11:10:13Z inventory-svc INFO req-201-433 request ok latency_ms=26
+2026-11-22T11:10:14Z warehouse-sync INFO req-201-434 request ok latency_ms=29
+2026-11-22T11:10:15Z api-gateway INFO req-201-435 request ok latency_ms=29
+2026-11-22T11:10:16Z inventory-svc INFO req-201-436 request ok latency_ms=33
+2026-11-22T11:10:17Z warehouse-sync INFO req-201-437 request ok latency_ms=32
+2026-11-22T11:10:18Z api-gateway INFO req-201-438 request ok latency_ms=14
+2026-11-22T11:10:19Z inventory-svc INFO req-201-439 request ok latency_ms=36
+2026-11-22T11:10:20Z warehouse-sync INFO req-201-440 request ok latency_ms=27
+2026-11-22T11:10:21Z api-gateway INFO req-201-441 request ok latency_ms=15
+2026-11-22T11:10:22Z inventory-svc INFO req-201-442 request ok latency_ms=29
+2026-11-22T11:10:23Z warehouse-sync INFO req-201-443 request ok latency_ms=12
+2026-11-22T11:10:24Z api-gateway INFO req-201-444 request ok latency_ms=21
+2026-11-22T11:10:25Z inventory-svc INFO req-201-445 request ok latency_ms=25
+2026-11-22T11:10:26Z warehouse-sync INFO req-201-446 request ok latency_ms=32
+2026-11-22T11:10:27Z api-gateway INFO req-201-447 request ok latency_ms=36
+2026-11-22T11:10:28Z inventory-svc INFO req-201-448 request ok latency_ms=32
+2026-11-22T11:10:29Z warehouse-sync INFO req-201-449 request ok latency_ms=38
+2026-11-22T11:10:30Z api-gateway INFO req-201-450 request ok latency_ms=14
+2026-11-22T11:10:31Z inventory-svc INFO req-201-451 request ok latency_ms=27
+2026-11-22T11:10:32Z warehouse-sync INFO req-201-452 request ok latency_ms=12
+2026-11-22T11:10:33Z api-gateway INFO req-201-453 request ok latency_ms=14
+2026-11-22T11:10:34Z inventory-svc INFO req-201-454 request ok latency_ms=28
+2026-11-22T11:10:35Z warehouse-sync INFO req-201-455 request ok latency_ms=30
+2026-11-22T11:10:36Z api-gateway INFO req-201-456 request ok latency_ms=13
+2026-11-22T11:10:37Z inventory-svc INFO req-201-457 request ok latency_ms=37
+2026-11-22T11:10:38Z warehouse-sync INFO req-201-458 request ok latency_ms=35
+2026-11-22T11:10:39Z api-gateway INFO req-201-459 request ok latency_ms=34
+2026-11-22T11:10:40Z inventory-svc INFO req-201-460 request ok latency_ms=15
+2026-11-22T11:10:41Z warehouse-sync INFO req-201-461 request ok latency_ms=25
+2026-11-22T11:10:42Z api-gateway INFO req-201-462 request ok latency_ms=11
+2026-11-22T11:10:43Z inventory-svc INFO req-201-463 request ok latency_ms=26
+2026-11-22T11:10:44Z warehouse-sync INFO req-201-464 request ok latency_ms=24
+2026-11-22T11:10:45Z api-gateway INFO req-201-465 request ok latency_ms=37
+2026-11-22T11:10:46Z inventory-svc INFO req-201-466 request ok latency_ms=17
+2026-11-22T11:10:47Z warehouse-sync INFO req-201-467 request ok latency_ms=12
+2026-11-22T11:10:48Z api-gateway INFO req-201-468 request ok latency_ms=20
+2026-11-22T11:10:49Z inventory-svc INFO req-201-469 request ok latency_ms=17
+2026-11-22T11:10:50Z warehouse-sync INFO req-201-470 request ok latency_ms=33
+2026-11-22T11:10:51Z api-gateway INFO req-201-471 request ok latency_ms=40
+2026-11-22T11:10:52Z inventory-svc INFO req-201-472 request ok latency_ms=34
+2026-11-22T11:10:53Z warehouse-sync INFO req-201-473 request ok latency_ms=29
+2026-11-22T11:10:54Z api-gateway INFO req-201-474 request ok latency_ms=28
+2026-11-22T11:10:55Z inventory-svc INFO req-201-475 request ok latency_ms=25
+2026-11-22T11:10:56Z warehouse-sync INFO req-201-476 request ok latency_ms=39
+2026-11-22T11:10:57Z api-gateway INFO req-201-477 request ok latency_ms=40
+2026-11-22T11:10:58Z inventory-svc INFO req-201-478 request ok latency_ms=32
+2026-11-22T11:10:59Z warehouse-sync INFO req-201-479 request ok latency_ms=36
+2026-11-22T11:11:00Z inventory-svc WARN deploy v3.8.0 enabled unbounded_csv_buffer=true heap_limit=512Mi
+2026-11-22T11:11:02Z inventory-svc ERROR req-201-482 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:03Z warehouse-sync ERROR req-201-483 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:04Z inventory-svc ERROR req-201-484 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:05Z api-gateway ERROR req-201-485 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:06Z inventory-svc ERROR req-201-486 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:06Z warehouse-sync ERROR req-201-486 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:08Z inventory-svc ERROR req-201-488 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:09Z warehouse-sync ERROR req-201-489 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:10Z api-gateway ERROR req-201-490 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:10Z inventory-svc ERROR req-201-490 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:12Z inventory-svc ERROR req-201-492 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:12Z warehouse-sync ERROR req-201-492 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:14Z inventory-svc ERROR req-201-494 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:15Z api-gateway ERROR req-201-495 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:15Z warehouse-sync ERROR req-201-495 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:16Z inventory-svc ERROR req-201-496 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:18Z inventory-svc ERROR req-201-498 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:18Z warehouse-sync ERROR req-201-498 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:20Z api-gateway ERROR req-201-500 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:20Z inventory-svc ERROR req-201-500 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:21Z warehouse-sync ERROR req-201-501 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:22Z inventory-svc ERROR req-201-502 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:24Z inventory-svc ERROR req-201-504 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:24Z warehouse-sync ERROR req-201-504 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:25Z api-gateway ERROR req-201-505 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:26Z inventory-svc ERROR req-201-506 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:27Z warehouse-sync ERROR req-201-507 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:28Z inventory-svc ERROR req-201-508 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:30Z api-gateway ERROR req-201-510 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:30Z inventory-svc ERROR req-201-510 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:30Z warehouse-sync ERROR req-201-510 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:32Z inventory-svc ERROR req-201-512 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:33Z warehouse-sync ERROR req-201-513 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:34Z inventory-svc ERROR req-201-514 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:35Z api-gateway ERROR req-201-515 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:36Z inventory-svc ERROR req-201-516 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:36Z warehouse-sync ERROR req-201-516 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:38Z inventory-svc ERROR req-201-518 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:39Z warehouse-sync ERROR req-201-519 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:40Z api-gateway ERROR req-201-520 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:40Z inventory-svc ERROR req-201-520 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:42Z inventory-svc ERROR req-201-522 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:42Z warehouse-sync ERROR req-201-522 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:44Z inventory-svc ERROR req-201-524 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:45Z api-gateway ERROR req-201-525 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:45Z warehouse-sync ERROR req-201-525 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:46Z inventory-svc ERROR req-201-526 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:48Z inventory-svc ERROR req-201-528 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:48Z warehouse-sync ERROR req-201-528 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:50Z api-gateway ERROR req-201-530 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:50Z inventory-svc ERROR req-201-530 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:51Z warehouse-sync ERROR req-201-531 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:52Z inventory-svc ERROR req-201-532 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:54Z inventory-svc ERROR req-201-534 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:54Z warehouse-sync ERROR req-201-534 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:55Z api-gateway ERROR req-201-535 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:11:56Z inventory-svc ERROR req-201-536 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:11:57Z warehouse-sync ERROR req-201-537 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:11:58Z inventory-svc ERROR req-201-538 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:00Z api-gateway ERROR req-201-540 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:00Z inventory-svc ERROR req-201-540 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:00Z warehouse-sync ERROR req-201-540 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:02Z inventory-svc ERROR req-201-542 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:03Z warehouse-sync ERROR req-201-543 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:04Z inventory-svc ERROR req-201-544 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:05Z api-gateway ERROR req-201-545 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:06Z inventory-svc ERROR req-201-546 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:06Z warehouse-sync ERROR req-201-546 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:08Z inventory-svc ERROR req-201-548 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:09Z warehouse-sync ERROR req-201-549 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:10Z api-gateway ERROR req-201-550 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:10Z inventory-svc ERROR req-201-550 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:12Z inventory-svc ERROR req-201-552 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:12Z warehouse-sync ERROR req-201-552 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:14Z inventory-svc ERROR req-201-554 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:15Z api-gateway ERROR req-201-555 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:15Z warehouse-sync ERROR req-201-555 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:16Z inventory-svc ERROR req-201-556 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:18Z inventory-svc ERROR req-201-558 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:18Z warehouse-sync ERROR req-201-558 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:20Z api-gateway ERROR req-201-560 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:20Z inventory-svc ERROR req-201-560 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:21Z warehouse-sync ERROR req-201-561 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:22Z inventory-svc ERROR req-201-562 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:24Z inventory-svc ERROR req-201-564 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:24Z warehouse-sync ERROR req-201-564 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:25Z api-gateway ERROR req-201-565 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:26Z inventory-svc ERROR req-201-566 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:27Z warehouse-sync ERROR req-201-567 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:28Z inventory-svc ERROR req-201-568 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:30Z api-gateway ERROR req-201-570 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:30Z inventory-svc ERROR req-201-570 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:30Z warehouse-sync ERROR req-201-570 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:32Z inventory-svc ERROR req-201-572 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:33Z warehouse-sync ERROR req-201-573 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:34Z inventory-svc ERROR req-201-574 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:35Z api-gateway ERROR req-201-575 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:36Z inventory-svc ERROR req-201-576 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:36Z warehouse-sync ERROR req-201-576 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:38Z inventory-svc ERROR req-201-578 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:39Z warehouse-sync ERROR req-201-579 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:40Z api-gateway ERROR req-201-580 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:40Z inventory-svc ERROR req-201-580 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:42Z inventory-svc ERROR req-201-582 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:42Z warehouse-sync ERROR req-201-582 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:44Z inventory-svc ERROR req-201-584 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:45Z api-gateway ERROR req-201-585 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:45Z warehouse-sync ERROR req-201-585 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:46Z inventory-svc ERROR req-201-586 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:48Z inventory-svc ERROR req-201-588 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:48Z warehouse-sync ERROR req-201-588 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:50Z api-gateway ERROR req-201-590 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:50Z inventory-svc ERROR req-201-590 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:51Z warehouse-sync ERROR req-201-591 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:52Z inventory-svc ERROR req-201-592 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:54Z inventory-svc ERROR req-201-594 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:54Z warehouse-sync ERROR req-201-594 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:55Z api-gateway ERROR req-201-595 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:12:56Z inventory-svc ERROR req-201-596 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:12:57Z warehouse-sync ERROR req-201-597 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:12:58Z inventory-svc ERROR req-201-598 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:00Z api-gateway ERROR req-201-600 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:00Z inventory-svc ERROR req-201-600 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:00Z warehouse-sync ERROR req-201-600 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:02Z inventory-svc ERROR req-201-602 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:03Z warehouse-sync ERROR req-201-603 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:04Z inventory-svc ERROR req-201-604 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:05Z api-gateway ERROR req-201-605 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:06Z inventory-svc ERROR req-201-606 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:06Z warehouse-sync ERROR req-201-606 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:08Z inventory-svc ERROR req-201-608 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:09Z warehouse-sync ERROR req-201-609 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:10Z api-gateway ERROR req-201-610 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:10Z inventory-svc ERROR req-201-610 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:12Z inventory-svc ERROR req-201-612 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:12Z warehouse-sync ERROR req-201-612 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:14Z inventory-svc ERROR req-201-614 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:15Z api-gateway ERROR req-201-615 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:15Z warehouse-sync ERROR req-201-615 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:16Z inventory-svc ERROR req-201-616 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:18Z inventory-svc ERROR req-201-618 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:18Z warehouse-sync ERROR req-201-618 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:20Z api-gateway ERROR req-201-620 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:20Z inventory-svc ERROR req-201-620 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:21Z warehouse-sync ERROR req-201-621 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:22Z inventory-svc ERROR req-201-622 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:24Z inventory-svc ERROR req-201-624 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:24Z warehouse-sync ERROR req-201-624 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:25Z api-gateway ERROR req-201-625 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:26Z inventory-svc ERROR req-201-626 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:27Z warehouse-sync ERROR req-201-627 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:28Z inventory-svc ERROR req-201-628 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:30Z api-gateway ERROR req-201-630 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:30Z inventory-svc ERROR req-201-630 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:30Z warehouse-sync ERROR req-201-630 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:32Z inventory-svc ERROR req-201-632 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:33Z warehouse-sync ERROR req-201-633 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:34Z inventory-svc ERROR req-201-634 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:35Z api-gateway ERROR req-201-635 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:36Z inventory-svc ERROR req-201-636 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:36Z warehouse-sync ERROR req-201-636 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:38Z inventory-svc ERROR req-201-638 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:39Z warehouse-sync ERROR req-201-639 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:40Z api-gateway ERROR req-201-640 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:40Z inventory-svc ERROR req-201-640 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:42Z inventory-svc ERROR req-201-642 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:42Z warehouse-sync ERROR req-201-642 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:44Z inventory-svc ERROR req-201-644 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:45Z api-gateway ERROR req-201-645 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:45Z warehouse-sync ERROR req-201-645 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:46Z inventory-svc ERROR req-201-646 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:48Z inventory-svc ERROR req-201-648 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:48Z warehouse-sync ERROR req-201-648 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:50Z api-gateway ERROR req-201-650 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:50Z inventory-svc ERROR req-201-650 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:51Z warehouse-sync ERROR req-201-651 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:52Z inventory-svc ERROR req-201-652 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:54Z inventory-svc ERROR req-201-654 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:54Z warehouse-sync ERROR req-201-654 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:55Z api-gateway ERROR req-201-655 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:13:56Z inventory-svc ERROR req-201-656 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:13:57Z warehouse-sync ERROR req-201-657 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:13:58Z inventory-svc ERROR req-201-658 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:00Z api-gateway ERROR req-201-660 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:00Z inventory-svc ERROR req-201-660 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:00Z warehouse-sync ERROR req-201-660 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:02Z inventory-svc ERROR req-201-662 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:03Z warehouse-sync ERROR req-201-663 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:04Z inventory-svc ERROR req-201-664 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:05Z api-gateway ERROR req-201-665 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:06Z inventory-svc ERROR req-201-666 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:06Z warehouse-sync ERROR req-201-666 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:08Z inventory-svc ERROR req-201-668 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:09Z warehouse-sync ERROR req-201-669 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:10Z api-gateway ERROR req-201-670 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:10Z inventory-svc ERROR req-201-670 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:12Z inventory-svc ERROR req-201-672 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:12Z warehouse-sync ERROR req-201-672 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:14Z inventory-svc ERROR req-201-674 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:15Z api-gateway ERROR req-201-675 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:15Z warehouse-sync ERROR req-201-675 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:16Z inventory-svc ERROR req-201-676 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:18Z inventory-svc ERROR req-201-678 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:18Z warehouse-sync ERROR req-201-678 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:20Z api-gateway ERROR req-201-680 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:20Z inventory-svc ERROR req-201-680 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:21Z warehouse-sync ERROR req-201-681 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:22Z inventory-svc ERROR req-201-682 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:24Z inventory-svc ERROR req-201-684 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:24Z warehouse-sync ERROR req-201-684 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:25Z api-gateway ERROR req-201-685 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:26Z inventory-svc ERROR req-201-686 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:27Z warehouse-sync ERROR req-201-687 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:28Z inventory-svc ERROR req-201-688 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:30Z api-gateway ERROR req-201-690 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:30Z inventory-svc ERROR req-201-690 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:30Z warehouse-sync ERROR req-201-690 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:32Z inventory-svc ERROR req-201-692 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:33Z warehouse-sync ERROR req-201-693 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:34Z inventory-svc ERROR req-201-694 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:35Z api-gateway ERROR req-201-695 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:36Z inventory-svc ERROR req-201-696 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:36Z warehouse-sync ERROR req-201-696 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:38Z inventory-svc ERROR req-201-698 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:39Z warehouse-sync ERROR req-201-699 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:40Z api-gateway ERROR req-201-700 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:40Z inventory-svc ERROR req-201-700 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:42Z inventory-svc ERROR req-201-702 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:42Z warehouse-sync ERROR req-201-702 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:44Z inventory-svc ERROR req-201-704 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:45Z api-gateway ERROR req-201-705 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:45Z warehouse-sync ERROR req-201-705 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:46Z inventory-svc ERROR req-201-706 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:48Z inventory-svc ERROR req-201-708 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:48Z warehouse-sync ERROR req-201-708 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:50Z api-gateway ERROR req-201-710 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:50Z inventory-svc ERROR req-201-710 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:51Z warehouse-sync ERROR req-201-711 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:52Z inventory-svc ERROR req-201-712 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:54Z inventory-svc ERROR req-201-714 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:54Z warehouse-sync ERROR req-201-714 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:55Z api-gateway ERROR req-201-715 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:14:56Z inventory-svc ERROR req-201-716 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:14:57Z warehouse-sync ERROR req-201-717 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:14:58Z inventory-svc ERROR req-201-718 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:00Z api-gateway ERROR req-201-720 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:00Z inventory-svc ERROR req-201-720 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:00Z warehouse-sync ERROR req-201-720 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:02Z inventory-svc ERROR req-201-722 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:03Z warehouse-sync ERROR req-201-723 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:04Z inventory-svc ERROR req-201-724 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:05Z api-gateway ERROR req-201-725 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:06Z inventory-svc ERROR req-201-726 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:06Z warehouse-sync ERROR req-201-726 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:08Z inventory-svc ERROR req-201-728 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:09Z warehouse-sync ERROR req-201-729 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:10Z api-gateway ERROR req-201-730 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:10Z inventory-svc ERROR req-201-730 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:12Z inventory-svc ERROR req-201-732 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:12Z warehouse-sync ERROR req-201-732 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:14Z inventory-svc ERROR req-201-734 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:15Z api-gateway ERROR req-201-735 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:15Z warehouse-sync ERROR req-201-735 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:16Z inventory-svc ERROR req-201-736 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:18Z inventory-svc ERROR req-201-738 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:18Z warehouse-sync ERROR req-201-738 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:20Z api-gateway ERROR req-201-740 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:20Z inventory-svc ERROR req-201-740 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:21Z warehouse-sync ERROR req-201-741 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:22Z inventory-svc ERROR req-201-742 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:24Z inventory-svc ERROR req-201-744 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:24Z warehouse-sync ERROR req-201-744 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:25Z api-gateway ERROR req-201-745 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:26Z inventory-svc ERROR req-201-746 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:27Z warehouse-sync ERROR req-201-747 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:28Z inventory-svc ERROR req-201-748 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:30Z api-gateway ERROR req-201-750 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:30Z inventory-svc ERROR req-201-750 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:30Z warehouse-sync ERROR req-201-750 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:32Z inventory-svc ERROR req-201-752 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:33Z warehouse-sync ERROR req-201-753 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:34Z inventory-svc ERROR req-201-754 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:35Z api-gateway ERROR req-201-755 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:36Z inventory-svc ERROR req-201-756 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:36Z warehouse-sync ERROR req-201-756 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:38Z inventory-svc ERROR req-201-758 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:39Z warehouse-sync ERROR req-201-759 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:40Z api-gateway ERROR req-201-760 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:40Z inventory-svc ERROR req-201-760 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:42Z inventory-svc ERROR req-201-762 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:42Z warehouse-sync ERROR req-201-762 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:44Z inventory-svc ERROR req-201-764 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:45Z api-gateway ERROR req-201-765 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:45Z warehouse-sync ERROR req-201-765 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:46Z inventory-svc ERROR req-201-766 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:48Z inventory-svc ERROR req-201-768 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:48Z warehouse-sync ERROR req-201-768 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:50Z api-gateway ERROR req-201-770 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:50Z inventory-svc ERROR req-201-770 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:51Z warehouse-sync ERROR req-201-771 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:52Z inventory-svc ERROR req-201-772 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:54Z inventory-svc ERROR req-201-774 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:54Z warehouse-sync ERROR req-201-774 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:55Z api-gateway ERROR req-201-775 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:15:56Z inventory-svc ERROR req-201-776 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:15:57Z warehouse-sync ERROR req-201-777 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:15:58Z inventory-svc ERROR req-201-778 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:00Z api-gateway ERROR req-201-780 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:00Z inventory-svc ERROR req-201-780 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:00Z warehouse-sync ERROR req-201-780 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:02Z inventory-svc ERROR req-201-782 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:03Z warehouse-sync ERROR req-201-783 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:04Z inventory-svc ERROR req-201-784 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:05Z api-gateway ERROR req-201-785 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:06Z inventory-svc ERROR req-201-786 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:06Z warehouse-sync ERROR req-201-786 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:08Z inventory-svc ERROR req-201-788 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:09Z warehouse-sync ERROR req-201-789 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:10Z api-gateway ERROR req-201-790 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:10Z inventory-svc ERROR req-201-790 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:12Z inventory-svc ERROR req-201-792 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:12Z warehouse-sync ERROR req-201-792 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:14Z inventory-svc ERROR req-201-794 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:15Z api-gateway ERROR req-201-795 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:15Z warehouse-sync ERROR req-201-795 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:16Z inventory-svc ERROR req-201-796 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:18Z inventory-svc ERROR req-201-798 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:18Z warehouse-sync ERROR req-201-798 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:20Z api-gateway ERROR req-201-800 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:20Z inventory-svc ERROR req-201-800 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:21Z warehouse-sync ERROR req-201-801 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:22Z inventory-svc ERROR req-201-802 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:24Z inventory-svc ERROR req-201-804 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:24Z warehouse-sync ERROR req-201-804 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:25Z api-gateway ERROR req-201-805 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:26Z inventory-svc ERROR req-201-806 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:27Z warehouse-sync ERROR req-201-807 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:28Z inventory-svc ERROR req-201-808 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:30Z api-gateway ERROR req-201-810 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:30Z inventory-svc ERROR req-201-810 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:30Z warehouse-sync ERROR req-201-810 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:32Z inventory-svc ERROR req-201-812 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:33Z warehouse-sync ERROR req-201-813 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:34Z inventory-svc ERROR req-201-814 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:35Z api-gateway ERROR req-201-815 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:36Z inventory-svc ERROR req-201-816 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:36Z warehouse-sync ERROR req-201-816 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:38Z inventory-svc ERROR req-201-818 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:39Z warehouse-sync ERROR req-201-819 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:40Z api-gateway ERROR req-201-820 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:40Z inventory-svc ERROR req-201-820 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:42Z inventory-svc ERROR req-201-822 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:42Z warehouse-sync ERROR req-201-822 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:44Z inventory-svc ERROR req-201-824 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:45Z api-gateway ERROR req-201-825 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:45Z warehouse-sync ERROR req-201-825 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:46Z inventory-svc ERROR req-201-826 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:48Z inventory-svc ERROR req-201-828 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:48Z warehouse-sync ERROR req-201-828 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:50Z api-gateway ERROR req-201-830 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:50Z inventory-svc ERROR req-201-830 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:51Z warehouse-sync ERROR req-201-831 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:52Z inventory-svc ERROR req-201-832 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:54Z inventory-svc ERROR req-201-834 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:54Z warehouse-sync ERROR req-201-834 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:55Z api-gateway ERROR req-201-835 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:16:56Z inventory-svc ERROR req-201-836 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:16:57Z warehouse-sync ERROR req-201-837 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:16:58Z inventory-svc ERROR req-201-838 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:00Z api-gateway ERROR req-201-840 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:00Z inventory-svc ERROR req-201-840 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:00Z warehouse-sync ERROR req-201-840 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:02Z inventory-svc ERROR req-201-842 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:03Z warehouse-sync ERROR req-201-843 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:04Z inventory-svc ERROR req-201-844 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:05Z api-gateway ERROR req-201-845 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:06Z inventory-svc ERROR req-201-846 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:06Z warehouse-sync ERROR req-201-846 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:08Z inventory-svc ERROR req-201-848 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:09Z warehouse-sync ERROR req-201-849 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:10Z api-gateway ERROR req-201-850 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:10Z inventory-svc ERROR req-201-850 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:12Z inventory-svc ERROR req-201-852 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:12Z warehouse-sync ERROR req-201-852 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:14Z inventory-svc ERROR req-201-854 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:15Z api-gateway ERROR req-201-855 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:15Z warehouse-sync ERROR req-201-855 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:16Z inventory-svc ERROR req-201-856 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:18Z inventory-svc ERROR req-201-858 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:18Z warehouse-sync ERROR req-201-858 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:20Z api-gateway ERROR req-201-860 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:20Z inventory-svc ERROR req-201-860 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:21Z warehouse-sync ERROR req-201-861 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:22Z inventory-svc ERROR req-201-862 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:24Z inventory-svc ERROR req-201-864 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:24Z warehouse-sync ERROR req-201-864 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:25Z api-gateway ERROR req-201-865 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:26Z inventory-svc ERROR req-201-866 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:27Z warehouse-sync ERROR req-201-867 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:28Z inventory-svc ERROR req-201-868 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:30Z api-gateway ERROR req-201-870 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:30Z inventory-svc ERROR req-201-870 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:30Z warehouse-sync ERROR req-201-870 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:32Z inventory-svc ERROR req-201-872 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:33Z warehouse-sync ERROR req-201-873 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:34Z inventory-svc ERROR req-201-874 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:35Z api-gateway ERROR req-201-875 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:36Z inventory-svc ERROR req-201-876 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:36Z warehouse-sync ERROR req-201-876 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:38Z inventory-svc ERROR req-201-878 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:39Z warehouse-sync ERROR req-201-879 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:40Z api-gateway ERROR req-201-880 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:40Z inventory-svc ERROR req-201-880 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:42Z inventory-svc ERROR req-201-882 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:42Z warehouse-sync ERROR req-201-882 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:44Z inventory-svc ERROR req-201-884 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:45Z api-gateway ERROR req-201-885 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:45Z warehouse-sync ERROR req-201-885 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:46Z inventory-svc ERROR req-201-886 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:48Z inventory-svc ERROR req-201-888 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:48Z warehouse-sync ERROR req-201-888 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:50Z api-gateway ERROR req-201-890 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:50Z inventory-svc ERROR req-201-890 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:51Z warehouse-sync ERROR req-201-891 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:52Z inventory-svc ERROR req-201-892 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:54Z inventory-svc ERROR req-201-894 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:54Z warehouse-sync ERROR req-201-894 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:55Z api-gateway ERROR req-201-895 HTTP 503 upstream=warehouse-sync
+2026-11-22T11:17:56Z inventory-svc ERROR req-201-896 OutOfMemoryError Java heap space oom_kill container=inventory-svc
+2026-11-22T11:17:57Z warehouse-sync ERROR req-201-897 warehouse-sync failed calling inventory-svc connection reset
+2026-11-22T11:17:58Z inventory-svc ERROR req-201-898 OutOfMemoryError Java heap space oom_kill container=inventory-svc

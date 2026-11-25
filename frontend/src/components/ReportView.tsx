@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import { Download, Printer } from "lucide-react";
-import { fetchReportJson } from "../api";
+import { fetchEvals, fetchReportJson } from "../api";
 import type { InvestigationResult } from "../types";
 
 interface ReportViewProps {
@@ -7,6 +8,14 @@ interface ReportViewProps {
 }
 
 export function ReportView({ investigation }: ReportViewProps) {
+  const [evals, setEvals] = useState<Record<string, unknown> | null>(null);
+
+  useEffect(() => {
+    fetchEvals()
+      .then(setEvals)
+      .catch(() => setEvals(null));
+  }, []);
+
   if (!investigation) {
     return (
       <main className="max-w-4xl mx-auto px-6 py-10 text-[13px] text-[#78716C]">
@@ -29,6 +38,8 @@ export function ReportView({ investigation }: ReportViewProps) {
     URL.revokeObjectURL(url);
   }
 
+  const baseline = evals?.baseline_comparison as Record<string, unknown> | undefined;
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-8 bg-white min-h-[calc(100vh-48px)] border-x border-[#E7E5E4]">
       <div className="flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-[#E7E5E4]">
@@ -37,8 +48,9 @@ export function ReportView({ investigation }: ReportViewProps) {
             Evidence Report — {investigation.title}
           </h1>
           <div className="font-mono text-[12px] text-[#78716C] mt-1">
-            ID: {investigation.incident_id} · Severity: {investigation.severity} · Model:{" "}
-            {investigation.model} ({investigation.mode})
+            ID: {investigation.incident_id} · Severity: {investigation.severity} · Review:{" "}
+            {investigation.human_review.decision} · Noise reduction:{" "}
+            {investigation.noise_reduction_pct.toFixed(1)}%
           </div>
         </div>
 
@@ -69,6 +81,11 @@ export function ReportView({ investigation }: ReportViewProps) {
         <p className="text-[14px] text-[#1C1917] leading-relaxed">
           {investigation.root_cause_summary}
         </p>
+        <div className="mt-2 text-[12px] text-[#57534E] font-mono">
+          Telemetry filtered: {investigation.raw_items_total} raw items →{" "}
+          {investigation.filtered_items_sent} signals · Secrets redacted:{" "}
+          {investigation.redacted_secrets_count}
+        </div>
       </section>
 
       <section className="mt-6">
@@ -155,6 +172,74 @@ export function ReportView({ investigation }: ReportViewProps) {
           </tbody>
         </table>
       </section>
+
+      {investigation.proposed_actions.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-[14px] font-semibold text-[#1C1917] mb-2">
+            Guarded Remediation Actions ({investigation.proposed_actions.length})
+          </h2>
+          <table className="w-full border-collapse text-left border border-[#E7E5E4]">
+            <thead>
+              <tr className="bg-[#FAFAF9] border-b border-[#E7E5E4]">
+                <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
+                  ID
+                </th>
+                <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
+                  Action
+                </th>
+                <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#E7E5E4]">
+              {investigation.proposed_actions.map((a) => (
+                <tr key={a.id}>
+                  <td className="py-2 px-3 font-mono text-[12px] text-[#78716C]">
+                    {a.id}
+                  </td>
+                  <td className="py-2 px-3 text-[13px] text-[#1C1917]">{a.title}</td>
+                  <td className="py-2 px-3 font-mono text-[12px]">{a.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
+
+      {evals && baseline && (
+        <section className="mt-6">
+          <h2 className="text-[14px] font-semibold text-[#1C1917] mb-2">
+            Evaluation Suite vs Named Baseline ({String(evals.scenarios_total)} faults)
+          </h2>
+          <div className="border border-[#E7E5E4] rounded p-3 text-[12px] space-y-1 bg-[#FAFAF9]">
+            <div>
+              <strong>IncidentLens root-cause accuracy:</strong>{" "}
+              <span className="font-mono">
+                {(Number(evals.root_cause_accuracy) * 100).toFixed(1)}%
+              </span>{" "}
+              ({String(evals.scenarios_passed)}/{String(evals.scenarios_total)} passed,{" "}
+              {String(evals.scenarios_missed)} missed) · Citation validity:{" "}
+              <span className="font-mono">
+                {(Number(evals.avg_citation_validity_rate) * 100).toFixed(1)}%
+              </span>{" "}
+              · Avg noise reduction:{" "}
+              <span className="font-mono">{String(evals.avg_noise_reduction_pct)}%</span>
+            </div>
+            <div>
+              <strong>Baseline ({String(baseline.baseline_name)}):</strong>{" "}
+              <span className="font-mono">
+                {(Number(baseline.baseline_root_cause_accuracy) * 100).toFixed(1)}%
+              </span>{" "}
+              accuracy · Citation validity:{" "}
+              <span className="font-mono">0.0%</span>
+            </div>
+            <div className="text-[#57534E]">
+              Limitation: {String(baseline.baseline_limitation)}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="mt-6 pt-4 border-t border-[#E7E5E4] text-[12px] text-[#78716C] flex flex-wrap justify-between gap-4">
         <span>

@@ -1,0 +1,12 @@
+{
+  "id": "inventory-oom-kill",
+  "title": "Inventory Worker OOMKill After Batch Export Deploy",
+  "opened_at": "2026-11-22T11:15:00Z",
+  "severity": "critical",
+  "services": [
+    "api-gateway",
+    "inventory-svc",
+    "warehouse-sync"
+  ],
+  "has_image": false
+}

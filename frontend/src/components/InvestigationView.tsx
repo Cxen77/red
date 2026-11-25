@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import {
   AlertCircle,
+  Check,
   CheckCircle2,
   ChevronRight,
   Download,
@@ -8,14 +9,18 @@ import {
   Image as ImageIcon,
   Play,
   RotateCcw,
+  ShieldAlert,
+  Terminal,
   X,
 } from "lucide-react";
 import { MetricsStrip } from "./MetricsStrip";
 import type {
+  ActionStatus,
   EvidenceItem,
   Finding,
   IncidentMetadata,
   InvestigationResult,
+  ReviewDecision,
   SeverityLevel,
   TimelineSummary,
 } from "../types";
@@ -26,6 +31,8 @@ interface InvestigationViewProps {
   investigation: InvestigationResult | null;
   investigating: boolean;
   onRunInvestigation: (mode: "live" | "replay") => void;
+  onSubmitReview: (decision: ReviewDecision, corrected?: string, note?: string) => void;
+  onDecideAction: (actionId: string, decision: "dry_run" | "approve" | "block") => void;
   onOpenReport: () => void;
 }
 
@@ -34,6 +41,13 @@ const SEV_DOT: Record<SeverityLevel, string> = {
   high: "bg-[#C81E1E]",
   medium: "bg-[#B45309]",
   low: "bg-[#1D4ED8]",
+};
+
+const ACTION_BADGE: Record<ActionStatus, string> = {
+  pending_approval: "text-[#B45309] bg-[#FFFBEB] border-[#FDE68A]",
+  dry_run_passed: "text-[#1D4ED8] bg-[#EFF6FF] border-[#BFDBFE]",
+  approved: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
+  blocked: "text-[#B91C1C] bg-[#FEF2F2] border-[#FECACA]",
 };
 
 function HighlightedRaw({ raw, quote }: { raw: string; quote?: string }) {
@@ -64,6 +78,8 @@ export function InvestigationView({
   investigation,
   investigating,
   onRunInvestigation,
+  onSubmitReview,
+  onDecideAction,
   onOpenReport,
 }: InvestigationViewProps) {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -74,6 +90,9 @@ export function InvestigationView({
     findingId?: string;
   } | null>(null);
   const [showImagePanel, setShowImagePanel] = useState<boolean>(false);
+  const [editingCorrection, setEditingCorrection] = useState<boolean>(false);
+  const [correctedText, setCorrectedText] = useState<string>("");
+  const [reviewNote, setReviewNote] = useState<string>("");
 
   const evidenceLookup = useMemo(() => {
     const map: Record<string, EvidenceItem> = {};
@@ -145,11 +164,14 @@ export function InvestigationView({
               <strong className="font-medium text-[#1C1917]">
                 {meta.anomaly_count} deterministic anomalies
               </strong>
+              {meta.redacted_secrets_count > 0 && (
+                <> · {meta.redacted_secrets_count} secrets redacted</>
+              )}
             </span>
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {meta.has_image && (
             <button
               type="button"
@@ -239,7 +261,7 @@ export function InvestigationView({
 
       {/* 3-Column Investigation Workspace */}
       <div className="flex-1 flex flex-col lg:flex-row min-h-0">
-        {/* LEFT (280px): Timeline */}
+        {/* LEFT (296px): Timeline */}
         <aside className="w-full lg:w-[296px] shrink-0 bg-white border-r border-[#E7E5E4] flex flex-col max-h-[calc(100vh-220px)]">
           <div className="p-3 border-b border-[#E7E5E4] space-y-2">
             <div className="flex items-center justify-between">
@@ -328,7 +350,7 @@ export function InvestigationView({
           </div>
         </aside>
 
-        {/* CENTRE (flex): Findings — Conclusions + Hypotheses */}
+        {/* CENTRE (flex): Findings — Conclusions, Hypotheses, Human Review & Guarded Actions */}
         <section className="flex-1 min-w-0 px-6 py-5 overflow-y-auto bg-[#FAFAF9]">
           {!investigation ? (
             <div className="bg-white border border-[#E7E5E4] rounded-md p-10 text-center max-w-lg mx-auto mt-10">
@@ -350,20 +372,96 @@ export function InvestigationView({
             </div>
           ) : (
             <div className="space-y-6 max-w-4xl">
-              {/* Root cause summary bar */}
-              <div className="bg-white border border-[#E7E5E4] rounded-md px-4 py-3">
+              {/* Root cause summary + Human Review gate */}
+              <div className="bg-white border border-[#E7E5E4] rounded-md p-4 space-y-3">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="text-[12px] font-medium text-[#78716C]">
-                    Verified Root Cause Summary
+                    Verified Root Cause Summary · Noise reduction{" "}
+                    <span className="font-mono text-[#1C1917]">
+                      {investigation.raw_items_total} → {investigation.filtered_items_sent} ({investigation.noise_reduction_pct.toFixed(1)}%)
+                    </span>
                   </span>
                   <span className="font-mono text-[11px] text-[#15803D]">
                     {(investigation.verification.citation_validity_rate * 100).toFixed(0)}% citations verified ·{" "}
                     {investigation.mode} ({investigation.model})
                   </span>
                 </div>
-                <p className="text-[14px] text-[#1C1917] font-medium mt-1">
+                <p className="text-[14px] text-[#1C1917] font-medium">
                   {investigation.root_cause_summary}
                 </p>
+
+                <div className="pt-3 border-t border-[#E7E5E4] flex flex-wrap items-center justify-between gap-2">
+                  <div className="text-[12px] text-[#57534E]">
+                    Operator review:{" "}
+                    <span className="font-mono font-medium uppercase text-[#1C1917]">
+                      {investigation.human_review.decision}
+                    </span>
+                    {investigation.human_review.reviewed_at && (
+                      <span className="text-[#78716C] ml-2 font-mono text-[11px]">
+                        ({investigation.human_review.reviewed_at})
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => onSubmitReview("confirmed")}
+                      className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:border-[#15803D] text-[12px] text-[#15803D] bg-white flex items-center gap-1"
+                    >
+                      <Check className="w-3.5 h-3.5" strokeWidth={1.75} />
+                      Confirm diagnosis
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setCorrectedText(investigation.root_cause_summary);
+                        setEditingCorrection((v) => !v);
+                      }}
+                      className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:border-stone-400 text-[12px] text-[#1C1917] bg-white"
+                    >
+                      Correct
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => onSubmitReview("rejected", undefined, "Diagnosis rejected by operator")}
+                      className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:border-[#B91C1C] text-[12px] text-[#B91C1C] bg-white"
+                    >
+                      Reject
+                    </button>
+                  </div>
+                </div>
+
+                {editingCorrection && (
+                  <div className="pt-2 space-y-2">
+                    <input
+                      type="text"
+                      value={correctedText}
+                      onChange={(e) => setCorrectedText(e.target.value)}
+                      className="w-full border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[13px] focus:outline-none focus:border-[#C81E1E]"
+                      placeholder="Enter corrected root cause summary"
+                    />
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="text"
+                        value={reviewNote}
+                        onChange={(e) => setReviewNote(e.target.value)}
+                        className="flex-1 border border-[#E7E5E4] rounded px-2.5 py-1 text-[12px] focus:outline-none focus:border-[#C81E1E]"
+                        placeholder="Optional review note"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          onSubmitReview("corrected", correctedText, reviewNote);
+                          setEditingCorrection(false);
+                        }}
+                        className="px-3 py-1 rounded bg-[#C81E1E] text-white text-[12px] font-medium"
+                      >
+                        Save correction
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Conclusions */}
@@ -476,6 +574,79 @@ export function InvestigationView({
                 </div>
               </div>
 
+              {/* Guarded Remediation Actions (Human-in-the-Loop) */}
+              {investigation.proposed_actions.length > 0 && (
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <h2 className="text-[16px] font-semibold text-[#1C1917] flex items-center gap-2">
+                      <ShieldAlert className="w-4 h-4 text-[#C81E1E]" strokeWidth={1.75} />
+                      Proposed Remediation Actions ({investigation.proposed_actions.length})
+                    </h2>
+                    <span className="text-[12px] text-[#78716C]">
+                      Dry-run first — explicit human approval required before changes
+                    </span>
+                  </div>
+
+                  <div className="bg-white border border-[#E7E5E4] rounded-md divide-y divide-[#E7E5E4]">
+                    {investigation.proposed_actions.map((act) => (
+                      <div key={act.id} className="p-4 space-y-2">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <div className="flex items-center gap-2">
+                            <span className="font-mono text-[11px] text-[#78716C]">
+                              {act.id}
+                            </span>
+                            <span className="font-medium text-[13px] text-[#1C1917]">
+                              {act.title}
+                            </span>
+                            <span className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-[#F5F5F4] text-[#57534E]">
+                              risk:{act.risk_level}
+                            </span>
+                          </div>
+                          <span
+                            className={`font-mono text-[11px] px-2 py-0.5 rounded border ${ACTION_BADGE[act.status]}`}
+                          >
+                            {act.status.replace(/_/g, " ")}
+                          </span>
+                        </div>
+
+                        <div className="font-mono text-[12px] bg-[#FAFAF9] border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[#1C1917] flex items-center gap-2">
+                          <Terminal className="w-3.5 h-3.5 text-[#78716C] shrink-0" strokeWidth={1.5} />
+                          <span className="truncate">{act.command}</span>
+                        </div>
+
+                        <div className="text-[12px] text-[#57534E]">
+                          {act.dry_run_preview}
+                        </div>
+
+                        <div className="flex items-center gap-2 pt-1">
+                          <button
+                            type="button"
+                            onClick={() => onDecideAction(act.id, "dry_run")}
+                            className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:bg-[#F5F5F4] text-[12px] text-[#1C1917]"
+                          >
+                            Run dry-run
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => onDecideAction(act.id, "approve")}
+                            className="px-2.5 py-1 rounded border border-[#15803D] bg-[#F0FDF4] text-[12px] text-[#15803D] font-medium"
+                          >
+                            Approve change
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => onDecideAction(act.id, "block")}
+                            className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:border-[#B91C1C] text-[12px] text-[#B91C1C]"
+                          >
+                            Block action
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* OpenRouter Decider Audit Strip */}
               {investigation.decision_traces.length > 0 && (
                 <div>
@@ -490,7 +661,8 @@ export function InvestigationView({
                             Stage: <span className="font-mono">{tr.stage}</span>
                           </span>
                           <span className="font-mono text-[11px] text-[#78716C]">
-                            {tr.mode} · {tr.latency_ms}ms · {tr.input_tokens} in / {tr.output_tokens} out · cost ${tr.cost}
+                            {tr.mode} · {tr.latency_ms}ms · {tr.context_items_sent} items ·{" "}
+                            {tr.input_tokens} in / {tr.output_tokens} out · retries {tr.retries} · cost ${tr.cost}
                           </span>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">

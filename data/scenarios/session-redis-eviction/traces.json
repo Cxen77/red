@@ -1,0 +1,402 @@
+[
+  {
+    "trace_id": "tr-518-001",
+    "span_id": "sp-518-001",
+    "ts": "2026-11-19T20:58:00Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 37.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-002",
+    "span_id": "sp-518-002",
+    "ts": "2026-11-19T20:58:22Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 36.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-003",
+    "span_id": "sp-518-003",
+    "ts": "2026-11-19T20:58:44Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 37.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-004",
+    "span_id": "sp-518-004",
+    "ts": "2026-11-19T20:59:06Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 26.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-005",
+    "span_id": "sp-518-005",
+    "ts": "2026-11-19T20:59:28Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 23.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-006",
+    "span_id": "sp-518-006",
+    "ts": "2026-11-19T20:59:50Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 21.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-007",
+    "span_id": "sp-518-007",
+    "ts": "2026-11-19T21:00:12Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 43.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-008",
+    "span_id": "sp-518-008",
+    "ts": "2026-11-19T21:00:34Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 19.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-009",
+    "span_id": "sp-518-009",
+    "ts": "2026-11-19T21:00:56Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 21.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-010",
+    "span_id": "sp-518-010",
+    "ts": "2026-11-19T21:01:18Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 22.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-011",
+    "span_id": "sp-518-011",
+    "ts": "2026-11-19T21:01:40Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 21.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-012",
+    "span_id": "sp-518-012",
+    "ts": "2026-11-19T21:02:02Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 42.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-013",
+    "span_id": "sp-518-013",
+    "ts": "2026-11-19T21:02:24Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 31.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-014",
+    "span_id": "sp-518-014",
+    "ts": "2026-11-19T21:02:46Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 44.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-015",
+    "span_id": "sp-518-015",
+    "ts": "2026-11-19T21:03:08Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 48.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-016",
+    "span_id": "sp-518-016",
+    "ts": "2026-11-19T21:03:30Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 43.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-017",
+    "span_id": "sp-518-017",
+    "ts": "2026-11-19T21:03:52Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 27.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-018",
+    "span_id": "sp-518-018",
+    "ts": "2026-11-19T21:04:14Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 44.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-019",
+    "span_id": "sp-518-019",
+    "ts": "2026-11-19T21:04:36Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 39.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-020",
+    "span_id": "sp-518-020",
+    "ts": "2026-11-19T21:04:58Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 26.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-021",
+    "span_id": "sp-518-021",
+    "ts": "2026-11-19T21:05:20Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 35.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-022",
+    "span_id": "sp-518-022",
+    "ts": "2026-11-19T21:05:42Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 46.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-023",
+    "span_id": "sp-518-023",
+    "ts": "2026-11-19T21:06:04Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 40.1,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-518-024",
+    "span_id": "sp-518-024",
+    "ts": "2026-11-19T21:06:26Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2676.0,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-025",
+    "span_id": "sp-518-025",
+    "ts": "2026-11-19T21:06:48Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2460.0,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-026",
+    "span_id": "sp-518-026",
+    "ts": "2026-11-19T21:07:10Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2239.4,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-027",
+    "span_id": "sp-518-027",
+    "ts": "2026-11-19T21:07:32Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2618.7,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-028",
+    "span_id": "sp-518-028",
+    "ts": "2026-11-19T21:07:54Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 3894.2,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-029",
+    "span_id": "sp-518-029",
+    "ts": "2026-11-19T21:08:16Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 3162.3,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-030",
+    "span_id": "sp-518-030",
+    "ts": "2026-11-19T21:08:38Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2129.5,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-031",
+    "span_id": "sp-518-031",
+    "ts": "2026-11-19T21:09:00Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2148.6,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-032",
+    "span_id": "sp-518-032",
+    "ts": "2026-11-19T21:09:22Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2329.2,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-033",
+    "span_id": "sp-518-033",
+    "ts": "2026-11-19T21:09:44Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2225.8,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-034",
+    "span_id": "sp-518-034",
+    "ts": "2026-11-19T21:10:06Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2590.6,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-035",
+    "span_id": "sp-518-035",
+    "ts": "2026-11-19T21:10:28Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2463.6,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-036",
+    "span_id": "sp-518-036",
+    "ts": "2026-11-19T21:10:50Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 3021.2,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-037",
+    "span_id": "sp-518-037",
+    "ts": "2026-11-19T21:11:12Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 3155.8,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-038",
+    "span_id": "sp-518-038",
+    "ts": "2026-11-19T21:11:34Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 2587.0,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-039",
+    "span_id": "sp-518-039",
+    "ts": "2026-11-19T21:11:56Z",
+    "service": "session-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 3066.2,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  },
+  {
+    "trace_id": "tr-518-040",
+    "span_id": "sp-518-040",
+    "ts": "2026-11-19T21:12:18Z",
+    "service": "auth-svc",
+    "operation": "session-svc.handle",
+    "duration_ms": 3564.5,
+    "status": "ERROR",
+    "error": "cache_stampede"
+  }
+]

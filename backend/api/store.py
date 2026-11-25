@@ -10,11 +10,17 @@ from typing import Literal
 
 from backend.agent.investigator import investigate_incident
 from backend.config import OPENROUTER_MODEL, REPLAYS_DIR, SCENARIOS_DIR, UPLOADS_DIR
-from backend.ingest.pipeline import ingest_incident_dir, ingest_incident_payloads
+from backend.ingest.pipeline import (
+    ingest_incident_dir_with_stats,
+    ingest_incident_payloads_with_stats,
+)
 from backend.models import (
     EvidenceItem,
+    HumanReviewState,
     IncidentMetadata,
     InvestigationResult,
+    RemediationAction,
+    ReviewDecision,
     SeverityLevel,
     TimelineSummary,
 )
@@ -48,8 +54,8 @@ class IncidentStore:
             return
         raw_meta = json.loads(meta_path.read_text(encoding="utf-8"))
         inc_id = raw_meta["id"]
-        items = ingest_incident_dir(inc_dir)
-        timeline = build_timeline(inc_id, items)
+        items, redacted_count = ingest_incident_dir_with_stats(inc_dir)
+        timeline = build_timeline(inc_id, items, redacted_secrets_count=redacted_count)
 
         img_path = inc_dir / "dashboard.png"
         image_bytes = img_path.read_bytes() if img_path.exists() else None
@@ -69,11 +75,13 @@ class IncidentStore:
             severity=raw_meta.get("severity", "medium"),
             status=investigation.status if investigation else "open",
             root_cause=investigation.root_cause_summary if investigation else None,
+            review_decision=investigation.human_review.decision if investigation else "pending",
             has_image=image_bytes is not None,
             log_count=sum(1 for i in items if i.kind == "log"),
             trace_count=sum(1 for i in items if i.kind == "trace"),
             metric_count=sum(1 for i in items if i.kind == "metric"),
             anomaly_count=timeline.anomaly_count,
+            redacted_secrets_count=redacted_count,
             model=OPENROUTER_MODEL,
         )
         self.records[inc_id] = IncidentRecord(
@@ -90,6 +98,12 @@ class IncidentStore:
                 for child in sorted(base_dir.iterdir()):
                     if child.is_dir():
                         self._load_directory(child)
+
+    def _persist_investigation(self, incident_id: str, inv: InvestigationResult) -> None:
+        REPLAYS_DIR.mkdir(parents=True, exist_ok=True)
+        (REPLAYS_DIR / f"{incident_id}.investigation.json").write_text(
+            inv.model_dump_json(indent=2), encoding="utf-8"
+        )
 
     def list_incidents(self) -> list[IncidentMetadata]:
         return sorted(
@@ -115,8 +129,14 @@ class IncidentStore:
         inc_dir = UPLOADS_DIR / inc_id
         inc_dir.mkdir(parents=True, exist_ok=True)
 
+        items, redacted_count = ingest_incident_payloads_with_stats(
+            logs_text, traces_text, metrics_text
+        )
+        # Store redacted telemetry only (never write raw unredacted secrets to disk)
         if logs_text:
-            (inc_dir / "logs.log").write_text(logs_text, encoding="utf-8")
+            (inc_dir / "logs.log").write_text(
+                "\n".join(i.raw for i in items if i.kind == "log") + "\n", encoding="utf-8"
+            )
         if traces_text:
             (inc_dir / "traces.json").write_text(traces_text, encoding="utf-8")
         if metrics_text:
@@ -124,8 +144,7 @@ class IncidentStore:
         if image_bytes:
             (inc_dir / "dashboard.png").write_bytes(image_bytes)
 
-        items = ingest_incident_payloads(logs_text, traces_text, metrics_text)
-        timeline = build_timeline(inc_id, items)
+        timeline = build_timeline(inc_id, items, redacted_secrets_count=redacted_count)
         opened_at = items[0].ts if items else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
         meta = IncidentMetadata(
@@ -140,6 +159,7 @@ class IncidentStore:
             trace_count=sum(1 for i in items if i.kind == "trace"),
             metric_count=sum(1 for i in items if i.kind == "metric"),
             anomaly_count=timeline.anomaly_count,
+            redacted_secrets_count=redacted_count,
             model=OPENROUTER_MODEL,
         )
         (inc_dir / "meta.json").write_text(meta.model_dump_json(indent=2), encoding="utf-8")
@@ -173,12 +193,59 @@ class IncidentStore:
         rec.investigation = result
         rec.meta.status = result.status
         rec.meta.root_cause = result.root_cause_summary
-
-        REPLAYS_DIR.mkdir(parents=True, exist_ok=True)
-        (REPLAYS_DIR / f"{incident_id}.investigation.json").write_text(
-            result.model_dump_json(indent=2), encoding="utf-8"
-        )
+        rec.meta.review_decision = result.human_review.decision
+        self._persist_investigation(incident_id, result)
         return result
+
+    def submit_review(
+        self,
+        incident_id: str,
+        decision: ReviewDecision,
+        corrected_root_cause: str | None = None,
+        note: str | None = None,
+    ) -> InvestigationResult:
+        rec = self.records.get(incident_id)
+        if not rec or not rec.investigation:
+            raise KeyError(incident_id)
+
+        rec.investigation.human_review = HumanReviewState(
+            decision=decision,
+            corrected_root_cause=corrected_root_cause,
+            note=note,
+            reviewed_at=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        )
+        if decision == "corrected" and corrected_root_cause:
+            rec.investigation.root_cause_summary = corrected_root_cause
+            rec.meta.root_cause = corrected_root_cause
+        rec.meta.review_decision = decision
+        self._persist_investigation(incident_id, rec.investigation)
+        return rec.investigation
+
+    def decide_action(
+        self,
+        incident_id: str,
+        action_id: str,
+        decision: Literal["dry_run", "approve", "block"],
+        note: str | None = None,
+    ) -> RemediationAction:
+        rec = self.records.get(incident_id)
+        if not rec or not rec.investigation:
+            raise KeyError(incident_id)
+
+        target = next((a for a in rec.investigation.proposed_actions if a.id == action_id), None)
+        if not target:
+            raise KeyError(action_id)
+
+        status_map = {
+            "dry_run": "dry_run_passed",
+            "approve": "approved",
+            "block": "blocked",
+        }
+        target.status = status_map[decision]  # type: ignore[assignment]
+        target.decided_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        target.decided_note = note
+        self._persist_investigation(incident_id, rec.investigation)
+        return target
 
 
 _STORE: IncidentStore | None = None

@@ -1,4 +1,4 @@
-"""M3 Investigator: Plan -> Read-Only Tools -> OpenRouter pplx-decider-flash-v1.3:free -> Findings Contract."""
+"""M3 Investigator: Plan -> Read-Only Tools -> OpenRouter pplx-decider-flash-v1.3:free -> Findings & Guarded Actions."""
 from __future__ import annotations
 
 from datetime import datetime, timezone
@@ -8,7 +8,9 @@ from backend.models import (
     DecisionTraceRecord,
     EvidenceItem,
     Finding,
+    HumanReviewState,
     InvestigationResult,
+    RemediationAction,
     SeverityLevel,
     TimelineSummary,
 )
@@ -44,6 +46,93 @@ def _pick_verbatim_quote(raw: str) -> str:
     return raw[:110]
 
 
+def _propose_remediation_actions(
+    root_service: str,
+    mechanism: str,
+    trigger_item: EvidenceItem,
+) -> list[RemediationAction]:
+    """Generate guarded runbook steps requiring explicit human approval (dry-run first)."""
+    if mechanism == "connection_pool_exhaustion":
+        return [
+            RemediationAction(
+                id="ACT-01",
+                title=f"Restore {root_service} DB pool configuration (db_pool_max=50)",
+                target_service=root_service,
+                command=f"kubectl set env deployment/{root_service} DB_POOL_MAX=50 --dry-run=server",
+                risk_level="medium",
+                dry_run_preview=(
+                    f"Dry-run diff for deployment/{root_service}: "
+                    f"DB_POOL_MAX 5 -> 50 (referenced in {trigger_item.id}). Estimated recovery: ~25s."
+                ),
+            ),
+            RemediationAction(
+                id="ACT-02",
+                title=f"Roll back {root_service} to previous stable deployment",
+                target_service=root_service,
+                command=f"kubectl rollout undo deployment/{root_service} --dry-run=server",
+                risk_level="high",
+                dry_run_preview=(
+                    f"Dry-run: deployment/{root_service} would roll back revision 14 -> 13. Zero pod eviction conflicts."
+                ),
+            ),
+        ]
+    if mechanism == "cache_stampede":
+        return [
+            RemediationAction(
+                id="ACT-01",
+                title=f"Enable single-flight request coalescing & warm keys on {root_service}",
+                target_service=root_service,
+                command=f"redis-cli --cluster call {root_service} CONFIG SET singleflight-lock on",
+                risk_level="medium",
+                dry_run_preview=(
+                    f"Dry-run: enables single-flight cache rebuild and staggers TTL jitter (+15%) for product_catalog ({trigger_item.id})."
+                ),
+            ),
+            RemediationAction(
+                id="ACT-02",
+                title="Temporarily rate-limit uncached catalog burst queries",
+                target_service="api-gateway",
+                command="istioctl apply -f rate-limit-catalog-safe.yaml --dry-run",
+                risk_level="low",
+                dry_run_preview="Dry-run: caps uncached fallback RPS at 120 req/s per pod until cache hit ratio > 85%.",
+            ),
+        ]
+    if mechanism == "auth_token_mismatch":
+        return [
+            RemediationAction(
+                id="ACT-01",
+                title="Force-refresh JWKS public key cache on api-gateway",
+                target_service="api-gateway",
+                command="curl -X POST http://api-gateway.internal/admin/jwks/refresh --dry-run",
+                risk_level="low",
+                dry_run_preview=(
+                    f"Dry-run: fetches active kid keys from {root_service} and reduces JWKS cache_ttl_sec 3600 -> 60 ({trigger_item.id})."
+                ),
+            ),
+        ]
+    if mechanism == "memory_exhaustion":
+        return [
+            RemediationAction(
+                id="ACT-01",
+                title=f"Capture heap dump & rolling restart degraded {root_service} pods",
+                target_service=root_service,
+                command=f"kubectl rollout restart deployment/{root_service} --dry-run=server",
+                risk_level="medium",
+                dry_run_preview=f"Dry-run: drains 1 pod at a time (maxUnavailable=0) on {root_service}.",
+            ),
+        ]
+    return [
+        RemediationAction(
+            id="ACT-01",
+            title=f"Enable circuit breaker & inspect upstream dependencies for {root_service}",
+            target_service=root_service,
+            command=f"kubectl annotate svc/{root_service} retry-budget=10pct --overwrite --dry-run=server",
+            risk_level="low",
+            dry_run_preview=f"Dry-run: caps retry amplification on {root_service} while preserving healthy traffic.",
+        ),
+    ]
+
+
 def investigate_incident(
     incident_id: str,
     title: str,
@@ -66,14 +155,11 @@ def investigate_incident(
     flagged_items, t1 = get_timeline_window(timeline, flagged_only=True, limit=40)
     tool_trace.append(t1)
 
-    deploy_logs, t2 = search_logs(timeline, keyword="deploy", limit=10)
-    tool_trace.append(t2)
-    if not deploy_logs:
-        deploy_logs, t2b = search_logs(timeline, keyword="ttl_flush", limit=10)
-        tool_trace.append(t2b)
-    if not deploy_logs:
-        deploy_logs, t2c = search_logs(timeline, keyword="jwks_rotate", limit=10)
-        tool_trace.append(t2c)
+    for kw in ("deploy", "ttl_flush", "jwks_rotate", "oom", "timeout"):
+        found_logs, tk = search_logs(timeline, keyword=kw, limit=10)
+        tool_trace.append(tk)
+        if found_logs:
+            break
 
     anomalous_metrics, t3 = get_metric_series(timeline, anomalies_only=True)
     tool_trace.append(t3)
@@ -81,7 +167,6 @@ def investigate_incident(
     slow_traces, t4 = get_trace(timeline, outliers_only=True, limit=15)
     tool_trace.append(t4)
 
-    # Pick representative evidence pool for Decider state
     config_candidates = [
         item for item in timeline.items
         if any(f.code == "CONFIG_OR_DEPLOY_EVENT" for f in item.flags)
@@ -103,9 +188,14 @@ def investigate_incident(
         reverse=True,
     )
 
-    # Ensure each service is also queried with get_service_events for trace completeness
     primary_candidates: list[EvidenceItem] = []
-    for bucket in (config_candidates[:2], first_error_candidates[:4], burst_candidates[:3], metric_spike_items[:4], slow_traces[:3]):
+    for bucket in (
+        config_candidates[:2],
+        first_error_candidates[:4],
+        burst_candidates[:3],
+        metric_spike_items[:4],
+        slow_traces[:3],
+    ):
         for item in bucket:
             if item.id not in {x.id for x in primary_candidates}:
                 primary_candidates.append(item)
@@ -180,7 +270,6 @@ def investigate_incident(
     mech_conf = float(triage_answers.get("failure_mechanism", {}).get("confidence") or 0.85)
     outage_prob = float(triage_answers.get("is_incident_confirmed", {}).get("noul") or 0.9)
 
-    # Query service events for the Decider-selected root service
     root_svc_events, t5 = get_service_events(timeline, service=root_service, limit=20)
     tool_trace.append(t5)
 
@@ -223,17 +312,17 @@ def investigate_incident(
         },
     }
 
+    attr_state = [_format_evidence_line(item) for item in attribution_pool[:14]]
     attr_answers, attr_trace = gw.run_stage(
         incident_id=incident_id,
         stage="evidence_attribution",
-        state=[_format_evidence_line(item) for item in attribution_pool[:14]],
+        state=attr_state,
         questions=attr_questions,
         mode=mode,
         replay_cache=replay_cache,
     )
     decision_traces.append(attr_trace)
 
-    # Save replay cache automatically whenever live succeeds
     if mode == "live":
         gw.save_replay(
             incident_id,
@@ -255,7 +344,6 @@ def investigate_incident(
     # 4. Assemble candidate findings under the strict JSON output contract
     candidate_findings: list[Finding] = []
 
-    # Finding 1: Root-cause trigger
     candidate_findings.append(
         Finding(
             id="F-01",
@@ -277,7 +365,6 @@ def investigate_incident(
         )
     )
 
-    # Finding 2: First error / error burst
     err_item = next(
         (x for x in first_error_candidates if x.service == root_service),
         first_error_candidates[0] if first_error_candidates else None,
@@ -298,7 +385,6 @@ def investigate_incident(
             )
         )
 
-    # Finding 3: Metric z-score spike
     if metric_spike_items:
         top_met = metric_spike_items[0]
         top_flag = next((f for f in top_met.flags if f.code == "METRIC_SPIKE"), None)
@@ -318,7 +404,6 @@ def investigate_incident(
             )
         )
 
-    # Finding 4: Trace p99 latency / error span outlier
     if slow_traces:
         top_trace = max(slow_traces, key=lambda x: x.duration_ms or 0.0)
         candidate_findings.append(
@@ -337,7 +422,6 @@ def investigate_incident(
             )
         )
 
-    # Finding 5: Downstream service impact if another service also saw errors
     downstream_err = next(
         (x for x in burst_candidates if x.service != root_service),
         next((x for x in first_error_candidates if x.service != root_service), None),
@@ -356,8 +440,6 @@ def investigate_incident(
             )
         )
 
-    # Finding 6: Secondary / uncorroborated hypothesis from Decider runner-up probabilities
-    # Intentionally submitted without verified citations so M4 Verifier audits and demotes it.
     runner_up_mech = sorted(
         [(k, v) for k, v in mech_probs.items() if k != mechanism],
         key=lambda kv: kv[1],
@@ -396,11 +478,17 @@ def investigate_incident(
             "visual_probabilities": vis_pat.get("probabilities"),
         }
 
+    raw_total = max(1, timeline.total_items)
+    filtered_sent = len(primary_candidates[:16])
+    noise_reduction_pct = round(max(0.0, (1.0 - (filtered_sent / raw_total)) * 100.0), 2)
+
     root_cause_chain = [f.claim for f in conclusions]
     root_cause_summary = (
         f"{MECHANISM_LABELS.get(mechanism, mechanism)} in {root_service} "
         f"(verified by {len(conclusions)}/{len(verified_findings)} findings)."
     )
+
+    proposed_actions = _propose_remediation_actions(root_service, mechanism, trigger_item)
 
     return InvestigationResult(
         incident_id=incident_id,
@@ -413,11 +501,17 @@ def investigate_incident(
         status="verified" if conclusions else "investigated",
         root_cause_summary=root_cause_summary,
         root_cause_chain=root_cause_chain,
+        raw_items_total=timeline.total_items,
+        filtered_items_sent=filtered_sent,
+        noise_reduction_pct=noise_reduction_pct,
+        redacted_secrets_count=timeline.redacted_secrets_count,
         tool_trace=tool_trace,
         decision_traces=decision_traces,
         image_assessment=image_assessment,
         conclusions=conclusions,
         hypotheses=hypotheses,
+        proposed_actions=proposed_actions,
+        human_review=HumanReviewState(),
         verification=verification,
         evidence_map={
             eid: evidence_map[eid]

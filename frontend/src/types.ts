@@ -2,6 +2,8 @@ export type EvidenceKind = "log" | "trace" | "metric";
 export type SeverityLevel = "critical" | "high" | "medium" | "low";
 export type IncidentStatus = "open" | "investigated" | "verified";
 export type FindingKind = "conclusion" | "hypothesis";
+export type ReviewDecision = "pending" | "confirmed" | "corrected" | "rejected";
+export type ActionStatus = "pending_approval" | "dry_run_passed" | "approved" | "blocked";
 
 export interface AnomalyFlag {
   code: string;
@@ -46,6 +48,7 @@ export interface TimelineSummary {
   services: string[];
   total_items: number;
   anomaly_count: number;
+  redacted_secrets_count: number;
   anomaly_window?: [string, string] | null;
   items: EvidenceItem[];
   metric_series: Record<string, MetricPoint[]>;
@@ -65,10 +68,13 @@ export interface DecisionTraceRecord {
   model: string;
   mode: "live" | "replay";
   latency_ms: number;
+  retries: number;
+  context_items_sent: number;
   input_tokens: number;
   output_tokens: number;
   cost: number;
   request_id?: string | null;
+  error?: string | null;
   questions: DeciderQuestionResult[];
 }
 
@@ -84,6 +90,25 @@ export interface Finding {
   demotion_reason?: string | null;
   verification_passed: boolean;
   decider_signals: Record<string, unknown>;
+}
+
+export interface RemediationAction {
+  id: string;
+  title: string;
+  target_service: string;
+  command: string;
+  risk_level: "low" | "medium" | "high";
+  dry_run_preview: string;
+  status: ActionStatus;
+  decided_at?: string | null;
+  decided_note?: string | null;
+}
+
+export interface HumanReviewState {
+  decision: ReviewDecision;
+  corrected_root_cause?: string | null;
+  note?: string | null;
+  reviewed_at?: string | null;
 }
 
 export interface VerificationSummary {
@@ -111,6 +136,10 @@ export interface InvestigationResult {
   status: IncidentStatus;
   root_cause_summary: string;
   root_cause_chain: string[];
+  raw_items_total: number;
+  filtered_items_sent: number;
+  noise_reduction_pct: number;
+  redacted_secrets_count: number;
   tool_trace: Array<Record<string, unknown>>;
   decision_traces: DecisionTraceRecord[];
   image_assessment?: {
@@ -120,6 +149,8 @@ export interface InvestigationResult {
   } | null;
   conclusions: Finding[];
   hypotheses: Finding[];
+  proposed_actions: RemediationAction[];
+  human_review: HumanReviewState;
   verification: VerificationSummary;
   evidence_map: Record<string, EvidenceItem>;
 }
@@ -132,10 +163,12 @@ export interface IncidentMetadata {
   severity: SeverityLevel;
   status: IncidentStatus;
   root_cause?: string | null;
+  review_decision: ReviewDecision;
   has_image: boolean;
   log_count: number;
   trace_count: number;
   metric_count: number;
   anomaly_count: number;
+  redacted_secrets_count: number;
   model: string;
 }

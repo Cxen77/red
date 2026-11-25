@@ -1,0 +1,220 @@
+[
+  {
+    "stage": "triage_root_cause",
+    "answers": {
+      "is_incident_confirmed": {
+        "type": "noul",
+        "noul": 0.9990416789723685
+      },
+      "root_cause_service": {
+        "type": "choice",
+        "choice": "inventory-svc",
+        "probabilities": {
+          "api-gateway": 0.000392817933715804,
+          "inventory-svc": 0.9986897469690801,
+          "warehouse-sync": 0.0009174350972042098
+        },
+        "confidence": 0.9980346204536201
+      },
+      "failure_mechanism": {
+        "type": "choice",
+        "choice": "memory_exhaustion",
+        "probabilities": {
+          "connection_pool_exhaustion": 0.0005541766224407329,
+          "cache_stampede": 0.0006494198902295761,
+          "auth_token_mismatch": 0.00021596057505590986,
+          "upstream_timeout": 0.0031137020945807173,
+          "memory_exhaustion": 0.995466740817693
+        },
+        "confidence": 0.9943334260221162
+      },
+      "operational_severity": {
+        "type": "score",
+        "score": 1.9422519137697347,
+        "legend": {
+          "0": "Low",
+          "1": "Medium",
+          "2": "High"
+        },
+        "probabilities": {
+          "0": 0.0032325187129567277,
+          "1": 0.0512830488043517,
+          "2": 0.9454844324826915
+        },
+        "confidence": 0.9422519137697348
+      }
+    },
+    "trace": {
+      "stage": "triage_root_cause",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 426.01,
+      "retries": 0,
+      "context_items_sent": 11,
+      "input_tokens": 1106,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795626706-elK9MJ2qtwTidUSwoV1b",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "is_incident_confirmed",
+          "question_type": "noul",
+          "instructions": "Does the telemetry state confirm an active production incident or service outage?",
+          "answer": 0.9990416789723685,
+          "confidence": 0.9990416789723685,
+          "probabilities": null
+        },
+        {
+          "question_key": "root_cause_service",
+          "question_type": "choice",
+          "instructions": "Which microservice originated the root-cause trigger before downstream symptoms?",
+          "answer": "inventory-svc",
+          "confidence": 0.9980346204536201,
+          "probabilities": {
+            "api-gateway": 0.000392817933715804,
+            "inventory-svc": 0.9986897469690801,
+            "warehouse-sync": 0.0009174350972042098
+          }
+        },
+        {
+          "question_key": "failure_mechanism",
+          "question_type": "choice",
+          "instructions": "Which failure mechanism caused this incident?",
+          "answer": "memory_exhaustion",
+          "confidence": 0.9943334260221162,
+          "probabilities": {
+            "connection_pool_exhaustion": 0.0005541766224407329,
+            "cache_stampede": 0.0006494198902295761,
+            "auth_token_mismatch": 0.00021596057505590986,
+            "upstream_timeout": 0.0031137020945807173,
+            "memory_exhaustion": 0.995466740817693
+          }
+        },
+        {
+          "question_key": "operational_severity",
+          "question_type": "score",
+          "instructions": "Rate the severity of this incident based on error volume and latency impact.",
+          "answer": 1.9422519137697347,
+          "confidence": 0.9422519137697348,
+          "probabilities": {
+            "0": 0.0032325187129567277,
+            "1": 0.0512830488043517,
+            "2": 0.9454844324826915
+          }
+        }
+      ]
+    }
+  },
+  {
+    "stage": "evidence_attribution",
+    "answers": {
+      "primary_trigger_evidence": {
+        "type": "choice",
+        "choice": "LOG-0481",
+        "probabilities": {
+          "LOG-0481": 0.9934367788454858,
+          "LOG-0482": 0.0033860555818684772,
+          "LOG-0483": 0.0002937558176599825,
+          "LOG-0485": 0.00018964926466754378,
+          "MET-0026": 0.0015356127704202539,
+          "MET-0038": 0.00012215389871178466,
+          "MET-0029": 0.0001346487458795076,
+          "MET-0035": 0.0001254333209589567,
+          "TRACE-0024": 0.0002240146141525698,
+          "TRACE-0025": 0.00012064173641565628,
+          "MET-0001": 0.0002270333820559061,
+          "MET-0002": 0.00020422202172338874
+        },
+        "confidence": 0.9928401223768936
+      },
+      "trigger_is_causal": {
+        "type": "noul",
+        "noul": 0.9953007736468478
+      },
+      "metric_corroboration": {
+        "type": "noul",
+        "noul": 0.9985784826149781
+      },
+      "evidence_strength": {
+        "type": "score",
+        "score": 1.9049813538920306,
+        "legend": {
+          "0": "Weak",
+          "1": "Moderate",
+          "2": "Strong"
+        },
+        "probabilities": {
+          "0": 0.01159941337500723,
+          "1": 0.07181981935795487,
+          "2": 0.9165807672670379
+        },
+        "confidence": 0.9049813538920307
+      }
+    },
+    "trace": {
+      "stage": "evidence_attribution",
+      "model": "perplexity/pplx-decider-flash-v1.3-20261112",
+      "mode": "live",
+      "latency_ms": 458.6,
+      "retries": 0,
+      "context_items_sent": 14,
+      "input_tokens": 2061,
+      "output_tokens": 4,
+      "cost": 0.0,
+      "request_id": "gen-dec-1795626707-hyKEdpWvAWRfob3YJ1yX",
+      "error": null,
+      "questions": [
+        {
+          "question_key": "primary_trigger_evidence",
+          "question_type": "choice",
+          "instructions": "Select the exact evidence item that captures the initial trigger or config change on inventory-svc.",
+          "answer": "LOG-0481",
+          "confidence": 0.9928401223768936,
+          "probabilities": {
+            "LOG-0481": 0.9934367788454858,
+            "LOG-0482": 0.0033860555818684772,
+            "LOG-0483": 0.0002937558176599825,
+            "LOG-0485": 0.00018964926466754378,
+            "MET-0026": 0.0015356127704202539,
+            "MET-0038": 0.00012215389871178466,
+            "MET-0029": 0.0001346487458795076,
+            "MET-0035": 0.0001254333209589567,
+            "TRACE-0024": 0.0002240146141525698,
+            "TRACE-0025": 0.00012064173641565628,
+            "MET-0001": 0.0002270333820559061,
+            "MET-0002": 0.00020422202172338874
+          }
+        },
+        {
+          "question_key": "trigger_is_causal",
+          "question_type": "noul",
+          "instructions": "Did the selected configuration/deploy or first-error event precede and trigger the error cascade?",
+          "answer": 0.9953007736468478,
+          "confidence": 0.9953007736468478,
+          "probabilities": null
+        },
+        {
+          "question_key": "metric_corroboration",
+          "question_type": "noul",
+          "instructions": "Do the metric spikes corroborate the log/trace failure?",
+          "answer": 0.9985784826149781,
+          "confidence": 0.9985784826149781,
+          "probabilities": null
+        },
+        {
+          "question_key": "evidence_strength",
+          "question_type": "score",
+          "instructions": "How strongly does the combined log, metric, and trace evidence support the root cause?",
+          "answer": 1.9049813538920306,
+          "confidence": 0.9049813538920307,
+          "probabilities": {
+            "0": 0.01159941337500723,
+            "1": 0.07181981935795487,
+            "2": 0.9165807672670379
+          }
+        }
+      ]
+    }
+  }
+]

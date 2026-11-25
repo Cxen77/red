@@ -1,0 +1,402 @@
+[
+  {
+    "trace_id": "tr-731-001",
+    "span_id": "sp-731-001",
+    "ts": "2026-11-17T09:53:00Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 21.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-002",
+    "span_id": "sp-731-002",
+    "ts": "2026-11-17T09:53:22Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 25.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-003",
+    "span_id": "sp-731-003",
+    "ts": "2026-11-17T09:53:44Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 25.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-004",
+    "span_id": "sp-731-004",
+    "ts": "2026-11-17T09:54:06Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 40.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-005",
+    "span_id": "sp-731-005",
+    "ts": "2026-11-17T09:54:28Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 33.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-006",
+    "span_id": "sp-731-006",
+    "ts": "2026-11-17T09:54:50Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 26.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-007",
+    "span_id": "sp-731-007",
+    "ts": "2026-11-17T09:55:12Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 32.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-008",
+    "span_id": "sp-731-008",
+    "ts": "2026-11-17T09:55:34Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 23.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-009",
+    "span_id": "sp-731-009",
+    "ts": "2026-11-17T09:55:56Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 45.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-010",
+    "span_id": "sp-731-010",
+    "ts": "2026-11-17T09:56:18Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 47.9,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-011",
+    "span_id": "sp-731-011",
+    "ts": "2026-11-17T09:56:40Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 18.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-012",
+    "span_id": "sp-731-012",
+    "ts": "2026-11-17T09:57:02Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 51.6,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-013",
+    "span_id": "sp-731-013",
+    "ts": "2026-11-17T09:57:24Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 23.5,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-014",
+    "span_id": "sp-731-014",
+    "ts": "2026-11-17T09:57:46Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 48.0,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-015",
+    "span_id": "sp-731-015",
+    "ts": "2026-11-17T09:58:08Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 52.8,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-016",
+    "span_id": "sp-731-016",
+    "ts": "2026-11-17T09:58:30Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 26.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-017",
+    "span_id": "sp-731-017",
+    "ts": "2026-11-17T09:58:52Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 54.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-018",
+    "span_id": "sp-731-018",
+    "ts": "2026-11-17T09:59:14Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 31.4,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-019",
+    "span_id": "sp-731-019",
+    "ts": "2026-11-17T09:59:36Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 20.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-020",
+    "span_id": "sp-731-020",
+    "ts": "2026-11-17T09:59:58Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 26.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-021",
+    "span_id": "sp-731-021",
+    "ts": "2026-11-17T10:00:20Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 37.3,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-022",
+    "span_id": "sp-731-022",
+    "ts": "2026-11-17T10:00:42Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 46.2,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-023",
+    "span_id": "sp-731-023",
+    "ts": "2026-11-17T10:01:04Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 28.7,
+    "status": "OK",
+    "error": ""
+  },
+  {
+    "trace_id": "tr-731-024",
+    "span_id": "sp-731-024",
+    "ts": "2026-11-17T10:01:26Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3205.0,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-025",
+    "span_id": "sp-731-025",
+    "ts": "2026-11-17T10:01:48Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 2283.1,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-026",
+    "span_id": "sp-731-026",
+    "ts": "2026-11-17T10:02:10Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 2798.3,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-027",
+    "span_id": "sp-731-027",
+    "ts": "2026-11-17T10:02:32Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3009.6,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-028",
+    "span_id": "sp-731-028",
+    "ts": "2026-11-17T10:02:54Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 2134.8,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-029",
+    "span_id": "sp-731-029",
+    "ts": "2026-11-17T10:03:16Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3711.5,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-030",
+    "span_id": "sp-731-030",
+    "ts": "2026-11-17T10:03:38Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 2201.7,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-031",
+    "span_id": "sp-731-031",
+    "ts": "2026-11-17T10:04:00Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3438.6,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-032",
+    "span_id": "sp-731-032",
+    "ts": "2026-11-17T10:04:22Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3766.5,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-033",
+    "span_id": "sp-731-033",
+    "ts": "2026-11-17T10:04:44Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 2968.6,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-034",
+    "span_id": "sp-731-034",
+    "ts": "2026-11-17T10:05:06Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3313.2,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-035",
+    "span_id": "sp-731-035",
+    "ts": "2026-11-17T10:05:28Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3739.1,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-036",
+    "span_id": "sp-731-036",
+    "ts": "2026-11-17T10:05:50Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3751.4,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-037",
+    "span_id": "sp-731-037",
+    "ts": "2026-11-17T10:06:12Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 2342.0,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-038",
+    "span_id": "sp-731-038",
+    "ts": "2026-11-17T10:06:34Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3222.3,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-039",
+    "span_id": "sp-731-039",
+    "ts": "2026-11-17T10:06:56Z",
+    "service": "shipping-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3303.2,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  },
+  {
+    "trace_id": "tr-731-040",
+    "span_id": "sp-731-040",
+    "ts": "2026-11-17T10:07:18Z",
+    "service": "checkout-svc",
+    "operation": "shipping-svc.handle",
+    "duration_ms": 3601.7,
+    "status": "ERROR",
+    "error": "upstream_timeout"
+  }
+]

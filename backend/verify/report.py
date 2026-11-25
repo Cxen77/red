@@ -18,6 +18,14 @@ def build_json_report(result: InvestigationResult) -> dict:
         "status": result.status,
         "root_cause_summary": result.root_cause_summary,
         "root_cause_chain": result.root_cause_chain,
+        "telemetry_filtering": {
+            "raw_items_total": result.raw_items_total,
+            "filtered_items_sent": result.filtered_items_sent,
+            "noise_reduction_pct": result.noise_reduction_pct,
+            "redacted_secrets_count": result.redacted_secrets_count,
+        },
+        "human_review": result.human_review.model_dump(),
+        "proposed_actions": [a.model_dump() for a in result.proposed_actions],
         "findings": {
             "conclusions": [f.model_dump() for f in result.conclusions],
             "hypotheses": [f.model_dump() for f in result.hypotheses],
@@ -39,8 +47,9 @@ def build_markdown_report(result: InvestigationResult) -> str:
         f"- **Incident ID:** `{result.incident_id}`",
         f"- **Severity:** {result.severity}",
         f"- **Mode / Model:** {result.mode} (`{result.model}`)",
-        f"- **Opened:** {result.opened_at}",
-        f"- **Investigated:** {result.investigated_at}",
+        f"- **Human Review:** {result.human_review.decision}",
+        f"- **Noise Reduction:** {result.raw_items_total} raw items -> {result.filtered_items_sent} signals ({result.noise_reduction_pct:.1f}% reduction)",
+        f"- **Redacted Secrets:** {result.redacted_secrets_count}",
         f"- **Summary:** {result.root_cause_summary}",
         "",
         "## Root-Cause Chain",
@@ -56,6 +65,10 @@ def build_markdown_report(result: InvestigationResult) -> str:
     lines.extend(["", "## Demoted Hypotheses"])
     for f in result.hypotheses:
         lines.append(f"- **[{f.id}]** {f.claim} — *Demoted:* {f.demotion_reason}")
+
+    lines.extend(["", "## Guarded Remediation Actions"])
+    for a in result.proposed_actions:
+        lines.append(f"- **[{a.id}]** {a.title} (`{a.target_service}`) — status: `{a.status}`")
 
     lines.extend([
         "",
@@ -82,6 +95,12 @@ def build_html_report(result: InvestigationResult) -> str:
         f"<td>{html.escape(f.demotion_reason or '')}</td></tr>"
         for f in result.hypotheses
     )
+    act_rows = "".join(
+        f"<tr><td><code>{html.escape(a.id)}</code></td>"
+        f"<td>{html.escape(a.title)}</td>"
+        f"<td><code>{html.escape(a.status)}</code></td></tr>"
+        for a in result.proposed_actions
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -100,11 +119,13 @@ def build_html_report(result: InvestigationResult) -> str:
 </head>
 <body>
   <h1>{html.escape(result.title)}</h1>
-  <div class="meta">ID: <code>{html.escape(result.incident_id)}</code> · Severity: {html.escape(result.severity)} · Model: <code>{html.escape(result.model)}</code> ({html.escape(result.mode)})</div>
+  <div class="meta">ID: <code>{html.escape(result.incident_id)}</code> · Severity: {html.escape(result.severity)} · Review: <code>{html.escape(result.human_review.decision)}</code> · Noise reduction: {result.noise_reduction_pct:.1f}%</div>
   <p>{html.escape(result.root_cause_summary)}</p>
   <h2>Verified Conclusions ({len(result.conclusions)})</h2>
   <table><thead><tr><th>ID</th><th>Claim</th><th>Confidence</th><th>Citations</th></tr></thead><tbody>{conclusions_rows}</tbody></table>
   <h2>Demoted Hypotheses ({len(result.hypotheses)})</h2>
   <table><thead><tr><th>ID</th><th>Hypothesis</th><th>Demotion Reason</th></tr></thead><tbody>{hyp_rows}</tbody></table>
+  <h2>Guarded Remediation Actions ({len(result.proposed_actions)})</h2>
+  <table><thead><tr><th>ID</th><th>Action</th><th>Status</th></tr></thead><tbody>{act_rows}</tbody></table>
 </body>
 </html>"""

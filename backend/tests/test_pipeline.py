@@ -5,19 +5,30 @@ from fastapi.testclient import TestClient
 
 from backend.api.main import app
 from backend.config import SCENARIOS_DIR
-from backend.ingest.pipeline import ingest_incident_dir
+from backend.ingest.pipeline import ingest_incident_dir_with_stats
+from backend.ingest.redact import redact_text
 from backend.models import Finding
 from backend.timeline.builder import build_timeline
 from backend.verify.verifier import verify_findings
 
 
+def test_secret_redaction_strips_tokens_and_keys() -> None:
+    sample = "2026-11-25T14:00:00Z auth-svc INFO Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIn0.sig123456789 api_key=secret12345 sk-or-v1-abcdef1234567890abcdef"
+    cleaned, count = redact_text(sample)
+    assert count >= 3
+    assert "secret12345" not in cleaned
+    assert "sk-or-v1-" not in cleaned
+    assert "[REDACTED" in cleaned
+
+
 def test_ingest_assigns_stable_ids_and_drain3_templates() -> None:
-    items = ingest_incident_dir(SCENARIOS_DIR / "bad-deploy-friday")
+    items, redacted = ingest_incident_dir_with_stats(SCENARIOS_DIR / "bad-deploy-friday")
     logs = [i for i in items if i.kind == "log"]
     traces = [i for i in items if i.kind == "trace"]
     metrics = [i for i in items if i.kind == "metric"]
 
     assert len(logs) >= 2000
+    assert redacted > 0
     assert logs[0].id == "LOG-0001"
     assert traces[0].id == "TRACE-0001"
     assert metrics[0].id == "MET-0001"
@@ -37,7 +48,7 @@ def test_timeline_flags_deterministic_anomalies() -> None:
 
 
 def test_verifier_enforces_citations_quotes_and_claim_types() -> None:
-    items = ingest_incident_dir(SCENARIOS_DIR / "bad-deploy-friday")
+    items, _ = ingest_incident_dir_with_stats(SCENARIOS_DIR / "bad-deploy-friday")
     tl = build_timeline("bad-deploy-friday", items)
     emap = {i.id: i for i in tl.items}
 
@@ -120,3 +131,22 @@ def test_api_endpoints_replay_and_report() -> None:
     rep_res = client.get("/api/incidents/bad-deploy-friday/report?format=json")
     assert rep_res.status_code == 200
     assert rep_res.json()["schema"] == "incidentlens.evidence-report.v1"
+
+    rev_res = client.post(
+        "/api/incidents/bad-deploy-friday/review",
+        json={"decision": "confirmed", "note": "Verified in test"},
+    )
+    assert rev_res.status_code == 200
+    assert rev_res.json()["human_review"]["decision"] == "confirmed"
+
+    act_id = rev_res.json()["proposed_actions"][0]["id"]
+    act_res = client.post(
+        f"/api/incidents/bad-deploy-friday/actions/{act_id}",
+        json={"decision": "dry_run"},
+    )
+    assert act_res.status_code == 200
+    assert act_res.json()["status"] == "dry_run_passed"
+
+    eval_res = client.get("/api/evals")
+    assert eval_res.status_code == 200
+    assert eval_res.json()["scenarios_total"] == 10

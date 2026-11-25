@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import {
+  decideRemediationAction,
   fetchIncidentDetail,
   fetchIncidents,
   fetchTimeline,
   runInvestigation,
+  submitHumanReview,
 } from "./api";
 import { DeciderProbeView } from "./components/DeciderProbeView";
 import { IncidentListView } from "./components/IncidentListView";
@@ -13,6 +15,7 @@ import { TopBar, type Screen } from "./components/TopBar";
 import type {
   IncidentMetadata,
   InvestigationResult,
+  ReviewDecision,
   TimelineSummary,
 } from "./types";
 
@@ -71,6 +74,7 @@ export default function App() {
               ...prev,
               status: result.status,
               root_cause: result.root_cause_summary,
+              review_decision: result.human_review.decision,
             }
           : prev
       );
@@ -78,6 +82,50 @@ export default function App() {
     } finally {
       setInvestigating(false);
     }
+  }
+
+  async function handleSubmitReview(
+    decision: ReviewDecision,
+    corrected?: string,
+    note?: string
+  ) {
+    if (!activeMeta) return;
+    const updated = await submitHumanReview(activeMeta.id, {
+      decision,
+      corrected_root_cause: corrected,
+      note,
+    });
+    setInvestigation(updated);
+    setActiveMeta((prev) =>
+      prev
+        ? {
+            ...prev,
+            root_cause: updated.root_cause_summary,
+            review_decision: updated.human_review.decision,
+          }
+        : prev
+    );
+    void loadIncidents();
+  }
+
+  async function handleDecideAction(
+    actionId: string,
+    decision: "dry_run" | "approve" | "block"
+  ) {
+    if (!activeMeta) return;
+    const updatedAction = await decideRemediationAction(activeMeta.id, actionId, {
+      decision,
+    });
+    setInvestigation((prev) =>
+      prev
+        ? {
+            ...prev,
+            proposed_actions: prev.proposed_actions.map((a) =>
+              a.id === updatedAction.id ? updatedAction : a
+            ),
+          }
+        : prev
+    );
   }
 
   async function handleIncidentCreated(created: IncidentMetadata) {
@@ -110,6 +158,8 @@ export default function App() {
           investigation={investigation}
           investigating={investigating}
           onRunInvestigation={(mode) => void handleRunInvestigation(mode)}
+          onSubmitReview={(d, c, n) => void handleSubmitReview(d, c, n)}
+          onDecideAction={(aid, d) => void handleDecideAction(aid, d)}
           onOpenReport={() => setScreen("report")}
         />
       )}

@@ -1,6 +1,8 @@
 import type {
   IncidentMetadata,
   InvestigationResult,
+  RemediationAction,
+  ReviewDecision,
   SeverityLevel,
   TimelineSummary,
 } from "./types";
@@ -40,10 +42,43 @@ export function runInvestigation(
   );
 }
 
+export function submitHumanReview(
+  id: string,
+  payload: { decision: ReviewDecision; corrected_root_cause?: string; note?: string }
+): Promise<InvestigationResult> {
+  return jsonFetch<InvestigationResult>(
+    `${BASE}/incidents/${encodeURIComponent(id)}/review`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }
+  );
+}
+
+export function decideRemediationAction(
+  id: string,
+  actionId: string,
+  payload: { decision: "dry_run" | "approve" | "block"; note?: string }
+): Promise<RemediationAction> {
+  return jsonFetch<RemediationAction>(
+    `${BASE}/incidents/${encodeURIComponent(id)}/actions/${encodeURIComponent(actionId)}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }
+  );
+}
+
 export function fetchReportJson(id: string): Promise<Record<string, unknown>> {
   return jsonFetch<Record<string, unknown>>(
     `${BASE}/incidents/${encodeURIComponent(id)}/report?format=json`
   );
+}
+
+export function fetchEvals(): Promise<Record<string, unknown>> {
+  return jsonFetch<Record<string, unknown>>(`${BASE}/evals`);
 }
 
 export async function createIncident(params: {
