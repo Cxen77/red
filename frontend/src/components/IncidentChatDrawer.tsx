@@ -110,7 +110,7 @@ export function IncidentChatDrawer({
   }
 
   return (
-    <aside className="w-full lg:w-[380px] shrink-0 bg-white border-l border-[#E7E5E4] shadow-md flex flex-col max-h-[calc(100vh-140px)]">
+    <aside className="w-full lg:w-[380px] shrink-0 bg-white border-l border-[#E7E5E4] shadow-md flex flex-col max-h-[560px] lg:max-h-none lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
       <div className="px-4 py-3 border-b border-[#E7E5E4] flex items-center justify-between">
         <div className="min-w-0">
           <div className="text-[13px] font-semibold text-[#1C1917] flex items-center gap-1.5">

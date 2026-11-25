@@ -352,7 +352,7 @@ export function InvestigationView({
       {/* 3-Column Investigation Workspace */}
       <div className="flex-1 flex flex-col lg:flex-row min-h-0">
         {/* LEFT (296px): Timeline */}
-        <aside className="w-full lg:w-[296px] shrink-0 bg-white border-r border-[#E7E5E4] flex flex-col max-h-[calc(100vh-220px)]">
+        <aside className="w-full lg:w-[296px] shrink-0 bg-white border-r border-[#E7E5E4] flex flex-col max-h-[520px] lg:max-h-none lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
           <div className="p-3 border-b border-[#E7E5E4] space-y-2">
             <div className="flex items-center justify-between">
               <h2 className="text-[14px] font-semibold text-[#1C1917]">Timeline</h2>
@@ -813,7 +813,7 @@ export function InvestigationView({
 
         {/* RIGHT (360px, Drawer): Evidence Inspector */}
         {selectedEvidence && (
-          <aside className="w-full lg:w-[360px] shrink-0 bg-white border-l border-[#E7E5E4] shadow-md flex flex-col">
+          <aside className="w-full lg:w-[360px] shrink-0 bg-white border-l border-[#E7E5E4] shadow-md flex flex-col lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
             <div className="px-4 py-3 border-b border-[#E7E5E4] flex items-center justify-between">
               <div>
                 <div className="font-mono text-[13px] font-semibold text-[#1C1917]">
