@@ -41,17 +41,17 @@ interface InvestigationViewProps {
 }
 
 const SEV_DOT: Record<SeverityLevel, string> = {
-  critical: "bg-[#B91C1C]",
-  high: "bg-[#C81E1E]",
-  medium: "bg-[#B45309]",
-  low: "bg-[#1D4ED8]",
+  critical: "bg-[#EF4444]",
+  high: "bg-[#F97316]",
+  medium: "bg-[#F59E0B]",
+  low: "bg-[#3B82F6]",
 };
 
 const ACTION_BADGE: Record<ActionStatus, string> = {
-  pending_approval: "text-[#B45309] bg-[#FFFBEB] border-[#FDE68A]",
-  dry_run_passed: "text-[#1D4ED8] bg-[#EFF6FF] border-[#BFDBFE]",
-  approved: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
-  blocked: "text-[#B91C1C] bg-[#FEF2F2] border-[#FECACA]",
+  pending_approval: "text-[#F59E0B] bg-[#F59E0B]/10 border-[#F59E0B]/30",
+  dry_run_passed: "text-[#3B82F6] bg-[#3B82F6]/10 border-[#3B82F6]/30",
+  approved: "text-[#22C55E] bg-[#22C55E]/10 border-[#22C55E]/30",
+  blocked: "text-[#EF4444] bg-[#EF4444]/10 border-[#EF4444]/30",
 };
 
 function HighlightedRaw({ raw, quote }: { raw: string; quote?: string }) {
@@ -68,7 +68,7 @@ function HighlightedRaw({ raw, quote }: { raw: string; quote?: string }) {
   return (
     <>
       <span>{before}</span>
-      <mark className="bg-amber-100 text-[#1C1917] px-0.5 rounded-sm font-medium">
+      <mark className="bg-[#F97316]/30 text-white px-0.5 font-medium border-b border-[#F97316]">
         {match}
       </mark>
       <span>{after}</span>
@@ -161,31 +161,33 @@ export function InvestigationView({
   }
 
   return (
-    <div className="flex flex-col min-h-[calc(100vh-48px)]">
+    <div className="flex flex-col min-h-[calc(100vh-48px)] bg-[#101010] text-white">
       {/* Top strip */}
-      <div className="bg-white border-b border-[#E7E5E4] px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-[#141414] border-b border-white/10 px-6 py-3 flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2.5">
             <span className={`w-2.5 h-2.5 rounded-full ${SEV_DOT[meta.severity]}`} />
-            <h1 className="text-[20px] font-semibold text-[#1C1917]">
+            <h1 className="text-[20px] font-semibold text-white">
               {meta.title}
             </h1>
             <span
-              className={`font-mono text-[11px] px-2 py-0.5 rounded border ${
+              className={`font-mono text-[11px] px-2 py-0.5 border uppercase ${
                 meta.status === "resolved"
-                  ? "bg-[#F0FDF4] text-[#15803D] border-[#BBF7D0]"
-                  : "bg-[#F5F5F4] text-[#57534E] border-[#E7E5E4]"
+                  ? "bg-[#22C55E]/15 text-[#22C55E] border-[#22C55E]/30"
+                  : meta.status === "verified"
+                  ? "bg-[#F97316]/15 text-[#F97316] border-[#F97316]/30"
+                  : "bg-white/[0.04] text-white/60 border-white/10"
               }`}
             >
               {meta.status}
             </span>
           </div>
-          <div className="text-[12px] text-[#78716C] mt-0.5 flex flex-wrap items-center gap-3">
-            <span className="font-mono">{meta.id}</span>
+          <div className="text-[12px] text-white/50 mt-0.5 flex flex-wrap items-center gap-3">
+            <span className="font-mono text-white/70">{meta.id}</span>
             <span>Opened {meta.opened_at}</span>
             <span>
               {meta.log_count} logs · {meta.trace_count} traces · {meta.metric_count} metrics ·{" "}
-              <strong className="font-medium text-[#1C1917]">
+              <strong className="font-medium text-[#F97316]">
                 {meta.anomaly_count} deterministic anomalies
               </strong>
               {meta.redacted_secrets_count > 0 && (
@@ -200,9 +202,9 @@ export function InvestigationView({
             <button
               type="button"
               onClick={() => setShowImagePanel((v) => !v)}
-              className="px-3 py-1.5 rounded border border-[#E7E5E4] text-[13px] text-[#1C1917] bg-white hover:bg-[#F5F5F4] flex items-center gap-1.5"
+              className="px-3 py-1.5 border border-white/15 font-mono text-[12px] text-white/80 bg-[#101010] hover:bg-white/[0.04] flex items-center gap-1.5"
             >
-              <ImageIcon className="w-4 h-4 text-[#78716C]" strokeWidth={1.5} />
+              <ImageIcon className="w-4 h-4 text-[#F97316]" strokeWidth={1.5} />
               {showImagePanel ? "Hide chart image" : "Dashboard image"}
             </button>
           )}
@@ -210,18 +212,18 @@ export function InvestigationView({
             type="button"
             disabled={investigating}
             onClick={() => onRunInvestigation("replay")}
-            className="px-3 py-1.5 rounded border border-[#E7E5E4] text-[13px] text-[#1C1917] bg-white hover:bg-[#F5F5F4] flex items-center gap-1.5 disabled:opacity-50"
+            className="px-3 py-1.5 border border-white/15 font-mono text-[12px] text-white/80 bg-[#101010] hover:bg-white/[0.04] flex items-center gap-1.5 disabled:opacity-50"
           >
-            <RotateCcw className="w-3.5 h-3.5 text-[#78716C]" strokeWidth={1.5} />
+            <RotateCcw className="w-3.5 h-3.5 text-white/60" strokeWidth={1.5} />
             Replay
           </button>
           <button
             type="button"
             disabled={investigating}
             onClick={() => onRunInvestigation("live")}
-            className="px-3.5 py-1.5 rounded bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium flex items-center gap-1.5 disabled:opacity-50"
+            className="px-3.5 py-1.5 bg-[#F97316] hover:bg-[#EA580C] text-[#101010] font-mono text-[12px] font-bold uppercase flex items-center gap-1.5 disabled:opacity-50"
           >
-            <Play className="w-3.5 h-3.5" strokeWidth={1.75} />
+            <Play className="w-3.5 h-3.5" strokeWidth={2} />
             {investigating ? "Investigating..." : "Investigate live"}
           </button>
           <button
@@ -230,10 +232,10 @@ export function InvestigationView({
               setChatOpen((v) => !v);
               setSelectedEvidence(null);
             }}
-            className={`px-3 py-1.5 rounded border text-[13px] flex items-center gap-1.5 ${
+            className={`px-3 py-1.5 border font-mono text-[12px] flex items-center gap-1.5 ${
               chatOpen
-                ? "bg-[#1C1917] text-white border-[#1C1917]"
-                : "border-[#E7E5E4] text-[#1C1917] bg-white hover:bg-[#F5F5F4]"
+                ? "bg-white text-[#101010] border-white font-semibold"
+                : "border-white/15 text-white/80 bg-[#101010] hover:bg-white/[0.04]"
             }`}
           >
             <MessageSquare className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -243,7 +245,7 @@ export function InvestigationView({
             <button
               type="button"
               onClick={onVerifyRecovery}
-              className="px-3 py-1.5 rounded border border-[#15803D] text-[13px] text-[#15803D] bg-[#F0FDF4] hover:bg-[#DCFCE7] font-medium flex items-center gap-1.5"
+              className="px-3 py-1.5 border border-[#22C55E]/40 font-mono text-[12px] text-[#22C55E] bg-[#22C55E]/10 hover:bg-[#22C55E]/20 font-medium flex items-center gap-1.5"
             >
               <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={1.75} />
               Verify live health
@@ -253,9 +255,9 @@ export function InvestigationView({
             <button
               type="button"
               onClick={onOpenReport}
-              className="px-3 py-1.5 rounded border border-[#E7E5E4] text-[13px] text-[#1C1917] bg-white hover:bg-[#F5F5F4] flex items-center gap-1.5"
+              className="px-3 py-1.5 border border-white/15 font-mono text-[12px] text-white/80 bg-[#101010] hover:bg-white/[0.04] flex items-center gap-1.5"
             >
-              <Download className="w-3.5 h-3.5 text-[#78716C]" strokeWidth={1.5} />
+              <Download className="w-3.5 h-3.5 text-white/60" strokeWidth={1.5} />
               Export report
             </button>
           )}
@@ -272,30 +274,30 @@ export function InvestigationView({
 
       {/* Service Blast-Radius Strip */}
       {timeline?.service_map && timeline.service_map.length > 0 && (
-        <div className="bg-[#FAFAF9] border-b border-[#E7E5E4] px-6 py-2 flex flex-wrap items-center gap-2 text-[12px]">
-          <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C] mr-1">
-            Blast radius
+        <div className="bg-[#0A0A0A] border-b border-white/10 px-6 py-2 flex flex-wrap items-center gap-2 text-[12px]">
+          <span className="font-mono text-[11px] font-medium uppercase tracking-[0.06em] text-[#F97316] mr-1">
+            {"// BLAST RADIUS"}
           </span>
           {timeline.service_map.map((node, idx) => {
             const dotColor =
               node.role === "origin"
-                ? "bg-[#C81E1E]"
+                ? "bg-[#EF4444]"
                 : node.role === "cascade"
-                ? "bg-[#B45309]"
-                : "bg-[#15803D]";
+                ? "bg-[#F97316]"
+                : "bg-[#22C55E]";
             const isActive = selectedServices.includes(node.service);
             return (
               <div key={node.service} className="flex items-center gap-2">
                 {idx > 0 && node.role !== "healthy" && (
-                  <ChevronRight className="w-3.5 h-3.5 text-stone-400" strokeWidth={1.5} />
+                  <ChevronRight className="w-3.5 h-3.5 text-white/30" strokeWidth={1.5} />
                 )}
                 <button
                   type="button"
                   onClick={() => toggleService(node.service)}
-                  className={`px-2 py-0.5 rounded border font-mono text-[11px] flex items-center gap-1.5 transition-colors ${
+                  className={`px-2 py-0.5 border font-mono text-[11px] flex items-center gap-1.5 transition-colors ${
                     isActive
-                      ? "bg-[#1C1917] text-white border-[#1C1917]"
-                      : "bg-white text-[#1C1917] border-[#E7E5E4] hover:border-stone-400"
+                      ? "bg-[#F97316] text-[#101010] border-[#F97316] font-bold"
+                      : "bg-[#141414] text-white/85 border-white/15 hover:border-[#F97316]/60"
                   }`}
                 >
                   <span className={`w-1.5 h-1.5 rounded-full ${dotColor}`} />
@@ -313,21 +315,21 @@ export function InvestigationView({
 
       {/* Optional Multimodal Image + Decider Visual Assessment */}
       {showImagePanel && meta.has_image && (
-        <div className="bg-white border-b border-[#E7E5E4] px-6 py-3 flex flex-wrap items-center gap-6">
+        <div className="bg-[#141414] border-b border-white/10 px-6 py-3 flex flex-wrap items-center gap-6">
           <img
             src={`/api/incidents/${encodeURIComponent(meta.id)}/image`}
             alt="Attached incident dashboard chart"
-            className="h-[110px] border border-[#E7E5E4] rounded"
+            className="h-[110px] border border-white/15"
           />
           <div className="text-[13px]">
-            <div className="font-medium text-[#1C1917]">
+            <div className="font-medium text-white">
               Attached dashboard image (multimodal Decider state)
             </div>
             {investigation?.image_assessment ? (
-              <div className="mt-1 space-y-1 text-[12px] text-[#57534E]">
+              <div className="mt-1 space-y-1 text-[12px] text-white/60">
                 <div>
                   Matches telemetry (noul):{" "}
-                  <span className="font-mono text-[#1C1917]">
+                  <span className="font-mono text-[#F97316]">
                     {typeof investigation.image_assessment.matches_telemetry === "number"
                       ? investigation.image_assessment.matches_telemetry.toFixed(3)
                       : "—"}
@@ -335,13 +337,13 @@ export function InvestigationView({
                 </div>
                 <div>
                   Visual pattern (choice):{" "}
-                  <span className="font-mono text-[#1C1917]">
+                  <span className="font-mono text-white">
                     {investigation.image_assessment.visual_pattern || "—"}
                   </span>
                 </div>
               </div>
             ) : (
-              <p className="text-[12px] text-[#78716C] mt-1">
+              <p className="text-[12px] text-white/50 mt-1">
                 Run Investigate live to evaluate this image alongside logs and metrics.
               </p>
             )}
@@ -352,18 +354,20 @@ export function InvestigationView({
       {/* 3-Column Investigation Workspace */}
       <div className="flex-1 flex flex-col lg:flex-row min-h-0">
         {/* LEFT (296px): Timeline */}
-        <aside className="w-full lg:w-[296px] shrink-0 bg-white border-r border-[#E7E5E4] flex flex-col max-h-[520px] lg:max-h-none lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
-          <div className="p-3 border-b border-[#E7E5E4] space-y-2">
+        <aside className="w-full lg:w-[296px] shrink-0 bg-[#141414] border-r border-white/10 flex flex-col max-h-[520px] lg:max-h-none lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
+          <div className="p-3 border-b border-white/10 space-y-2 bg-[#0A0A0A]">
             <div className="flex items-center justify-between">
-              <h2 className="text-[14px] font-semibold text-[#1C1917]">Timeline</h2>
-              <label className="flex items-center gap-1.5 text-[12px] text-[#57534E] cursor-pointer">
+              <h2 className="font-mono text-[12px] font-bold uppercase tracking-wider text-white">
+                Timeline
+              </h2>
+              <label className="flex items-center gap-1.5 text-[12px] text-white/60 cursor-pointer">
                 <input
                   type="checkbox"
                   checked={errorsOnly}
                   onChange={(e) => setErrorsOnly(e.target.checked)}
-                  className="accent-[#C81E1E]"
+                  className="accent-[#F97316]"
                 />
-                Anomalies & errors
+                Anomalies &amp; errors
               </label>
             </div>
             <div className="flex flex-wrap gap-1">
@@ -374,10 +378,10 @@ export function InvestigationView({
                     key={svc}
                     type="button"
                     onClick={() => toggleService(svc)}
-                    className={`font-mono text-[11px] px-1.5 py-0.5 rounded border transition-colors ${
+                    className={`font-mono text-[11px] px-1.5 py-0.5 border transition-colors ${
                       active
-                        ? "bg-[#C81E1E] text-white border-[#C81E1E]"
-                        : "bg-[#F5F5F4] text-[#57534E] border-[#E7E5E4] hover:border-stone-400"
+                        ? "bg-[#F97316] text-[#101010] border-[#F97316] font-bold"
+                        : "bg-[#141414] text-white/65 border-white/10 hover:border-white/30"
                     }`}
                   >
                     {svc}
@@ -387,9 +391,9 @@ export function InvestigationView({
             </div>
           </div>
 
-          <div className="flex-1 overflow-y-auto divide-y divide-[#E7E5E4]">
+          <div className="flex-1 overflow-y-auto divide-y divide-white/10">
             {filteredTimeline.length === 0 ? (
-              <div className="p-6 text-center text-[12px] text-[#78716C]">
+              <div className="p-6 text-center text-[12px] text-white/45">
                 No events match the current filter.
               </div>
             ) : (
@@ -406,33 +410,33 @@ export function InvestigationView({
                       setChatOpen(false);
                     }}
                     className={`w-full text-left px-3 py-2.5 flex items-start gap-2.5 transition-colors duration-100 ${
-                      isSelected ? "bg-[#FEF2F2]" : "hover:bg-[#FAFAF9]"
+                      isSelected ? "bg-[#F97316]/15 border-l-2 border-[#F97316]" : "hover:bg-white/[0.03]"
                     }`}
                   >
                     <span
                       className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${
                         hasCrit
-                          ? "bg-[#B91C1C]"
+                          ? "bg-[#EF4444]"
                           : hasWarn
-                          ? "bg-[#B45309]"
+                          ? "bg-[#F97316]"
                           : item.flags.length > 0
-                          ? "bg-[#1D4ED8]"
-                          : "bg-stone-300"
+                          ? "bg-[#3B82F6]"
+                          : "bg-white/25"
                       }`}
                     />
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-1">
-                        <span className="font-mono text-[11px] text-[#78716C]">
+                        <span className="font-mono text-[11px] text-white/50">
                           {item.ts.slice(11, 19)}
                         </span>
-                        <span className="font-mono text-[10px] px-1.5 py-0.2 rounded bg-[#F5F5F4] text-[#57534E]">
+                        <span className="font-mono text-[10px] px-1.5 py-0.2 bg-white/[0.04] text-white/65 border border-white/10">
                           {item.service}
                         </span>
                       </div>
-                      <div className="text-[12px] text-[#1C1917] truncate mt-0.5">
+                      <div className="text-[12px] text-white/90 truncate mt-0.5">
                         {item.flags[0]?.label || item.raw}
                       </div>
-                      <div className="font-mono text-[10px] text-[#78716C] mt-0.5">
+                      <div className="font-mono text-[10px] text-[#F97316]/80 mt-0.5">
                         {item.id}
                       </div>
                     </div>
@@ -443,22 +447,22 @@ export function InvestigationView({
           </div>
         </aside>
 
-        {/* CENTRE (flex): Findings — Conclusions, Hypotheses, Human Review & Guarded Actions */}
-        <section className="flex-1 min-w-0 px-6 py-5 overflow-y-auto bg-[#FAFAF9]">
+        {/* CENTRE (flex): Findings */}
+        <section className="flex-1 min-w-0 px-6 py-5 overflow-y-auto bg-[#101010]">
           {!investigation ? (
-            <div className="bg-white border border-[#E7E5E4] rounded-md p-10 text-center max-w-lg mx-auto mt-10">
-              <FileSearch className="w-6 h-6 text-stone-300 mx-auto mb-2" strokeWidth={1.5} />
-              <p className="text-[14px] font-medium text-[#1C1917]">
+            <div className="bg-[#141414] border border-white/10 p-10 text-center max-w-lg mx-auto mt-10">
+              <FileSearch className="w-6 h-6 text-[#F97316] mx-auto mb-2" strokeWidth={1.5} />
+              <p className="text-[14px] font-medium text-white">
                 No investigation run recorded yet
               </p>
-              <p className="text-[13px] text-[#78716C] mt-1 mb-4">
-                Run Investigate live to query OpenRouter perplexity/pplx-decider-flash-v1.3:free and verify every finding against deterministic citations.
+              <p className="text-[13px] text-white/55 mt-1 mb-4">
+                Run Investigate live to evaluate telemetry and verify every finding against deterministic citations.
               </p>
               <button
                 type="button"
                 disabled={investigating}
                 onClick={() => onRunInvestigation("live")}
-                className="px-4 py-2 rounded bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium"
+                className="px-4 py-2 bg-[#F97316] hover:bg-[#EA580C] text-[#101010] font-mono text-[12px] font-bold uppercase"
               >
                 {investigating ? "Investigating..." : "Investigate live"}
               </button>
@@ -466,31 +470,31 @@ export function InvestigationView({
           ) : (
             <div className="space-y-6 max-w-4xl">
               {/* Root cause summary + Human Review gate */}
-              <div className="bg-white border border-[#E7E5E4] rounded-md p-4 space-y-3">
+              <div className="relative bg-[#141414] border border-white/10 p-4 space-y-3">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="text-[12px] font-medium text-[#78716C]">
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-white/55">
                     Verified Root Cause Summary · Noise reduction{" "}
-                    <span className="font-mono text-[#1C1917]">
+                    <span className="text-[#F97316]">
                       {investigation.raw_items_total} → {investigation.filtered_items_sent} ({investigation.noise_reduction_pct.toFixed(1)}%)
                     </span>
                   </span>
-                  <span className="font-mono text-[11px] text-[#15803D]">
+                  <span className="font-mono text-[11px] text-[#22C55E]">
                     {(investigation.verification.citation_validity_rate * 100).toFixed(0)}% citations verified ·{" "}
                     {investigation.mode} ({investigation.model})
                   </span>
                 </div>
-                <p className="text-[14px] text-[#1C1917] font-medium">
+                <p className="text-[14px] text-white font-medium">
                   {investigation.root_cause_summary}
                 </p>
 
-                <div className="pt-3 border-t border-[#E7E5E4] flex flex-wrap items-center justify-between gap-2">
-                  <div className="text-[12px] text-[#57534E]">
+                <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
+                  <div className="text-[12px] text-white/60">
                     Operator review:{" "}
-                    <span className="font-mono font-medium uppercase text-[#1C1917]">
+                    <span className="font-mono font-bold uppercase text-[#F97316]">
                       {investigation.human_review.decision}
                     </span>
                     {investigation.human_review.reviewed_at && (
-                      <span className="text-[#78716C] ml-2 font-mono text-[11px]">
+                      <span className="text-white/40 ml-2 font-mono text-[11px]">
                         ({investigation.human_review.reviewed_at})
                       </span>
                     )}
@@ -500,7 +504,7 @@ export function InvestigationView({
                     <button
                       type="button"
                       onClick={() => onSubmitReview("confirmed")}
-                      className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:border-[#15803D] text-[12px] text-[#15803D] bg-white flex items-center gap-1"
+                      className="px-2.5 py-1 border border-[#22C55E]/40 hover:bg-[#22C55E]/15 font-mono text-[11px] text-[#22C55E] flex items-center gap-1"
                     >
                       <Check className="w-3.5 h-3.5" strokeWidth={1.75} />
                       Confirm diagnosis
@@ -511,14 +515,14 @@ export function InvestigationView({
                         setCorrectedText(investigation.root_cause_summary);
                         setEditingCorrection((v) => !v);
                       }}
-                      className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:border-stone-400 text-[12px] text-[#1C1917] bg-white"
+                      className="px-2.5 py-1 border border-white/15 hover:border-white/40 font-mono text-[11px] text-white bg-[#101010]"
                     >
                       Correct
                     </button>
                     <button
                       type="button"
                       onClick={() => onSubmitReview("rejected", undefined, "Diagnosis rejected by operator")}
-                      className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:border-[#B91C1C] text-[12px] text-[#B91C1C] bg-white"
+                      className="px-2.5 py-1 border border-[#EF4444]/40 hover:bg-[#EF4444]/15 font-mono text-[11px] text-[#EF4444]"
                     >
                       Reject
                     </button>
@@ -531,7 +535,7 @@ export function InvestigationView({
                       type="text"
                       value={correctedText}
                       onChange={(e) => setCorrectedText(e.target.value)}
-                      className="w-full border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[13px] focus:outline-none focus:border-[#C81E1E]"
+                      className="w-full bg-[#101010] border border-white/15 px-2.5 py-1.5 text-[13px] text-white focus:outline-none focus:border-[#F97316]"
                       placeholder="Enter corrected root cause summary"
                     />
                     <div className="flex items-center gap-2">
@@ -539,7 +543,7 @@ export function InvestigationView({
                         type="text"
                         value={reviewNote}
                         onChange={(e) => setReviewNote(e.target.value)}
-                        className="flex-1 border border-[#E7E5E4] rounded px-2.5 py-1 text-[12px] focus:outline-none focus:border-[#C81E1E]"
+                        className="flex-1 bg-[#101010] border border-white/15 px-2.5 py-1 text-[12px] text-white focus:outline-none focus:border-[#F97316]"
                         placeholder="Optional review note"
                       />
                       <button
@@ -548,7 +552,7 @@ export function InvestigationView({
                           onSubmitReview("corrected", correctedText, reviewNote);
                           setEditingCorrection(false);
                         }}
-                        className="px-3 py-1 rounded bg-[#C81E1E] text-white text-[12px] font-medium"
+                        className="px-3 py-1 bg-[#F97316] text-[#101010] font-mono text-[11px] font-bold uppercase"
                       >
                         Save correction
                       </button>
@@ -560,45 +564,45 @@ export function InvestigationView({
               {/* Conclusions */}
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <h2 className="text-[16px] font-semibold text-[#1C1917] flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#15803D]" strokeWidth={1.75} />
+                  <h2 className="text-[15px] font-semibold text-white flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#22C55E]" strokeWidth={1.75} />
                     Conclusions ({investigation.conclusions.length})
                   </h2>
-                  <span className="text-[12px] text-[#78716C]">
+                  <span className="font-mono text-[11px] text-white/45">
                     Passed existence, verbatim quote, and claim-type checks
                   </span>
                 </div>
 
-                <div className="bg-white border border-[#E7E5E4] rounded-md divide-y divide-[#E7E5E4]">
+                <div className="bg-[#141414] border border-white/10 divide-y divide-white/10">
                   {investigation.conclusions.map((finding) => (
                     <div key={finding.id} className="p-4">
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="font-mono text-[11px] text-[#78716C]">
+                            <span className="font-mono text-[11px] text-[#F97316]">
                               {finding.id}
                             </span>
                             {finding.service && (
-                              <span className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-[#F5F5F4] text-[#57534E]">
+                              <span className="font-mono text-[11px] px-1.5 py-0.5 bg-white/[0.04] text-white/75 border border-white/10">
                                 {finding.service}
                               </span>
                             )}
-                            <span className="text-[11px] text-[#78716C] capitalize">
+                            <span className="text-[11px] text-white/45 capitalize">
                               {finding.claim_type.replace("_", " ")}
                             </span>
                           </div>
-                          <p className="text-[14px] text-[#1C1917] leading-snug">
+                          <p className="text-[14px] text-white/95 leading-snug">
                             {finding.claim}
                           </p>
                         </div>
 
                         <div className="w-28 shrink-0 text-right">
-                          <div className="font-mono text-[12px] font-medium text-[#1C1917]">
+                          <div className="font-mono text-[12px] font-medium text-[#22C55E]">
                             {(finding.confidence * 100).toFixed(0)}%
                           </div>
-                          <div className="w-full h-1.5 bg-[#F5F5F4] rounded-sm mt-1 overflow-hidden">
+                          <div className="w-full h-1.5 bg-white/10 mt-1 overflow-hidden">
                             <div
-                              className="h-full bg-[#15803D]"
+                              className="h-full bg-[#F97316]"
                               style={{ width: `${Math.round(finding.confidence * 100)}%` }}
                             />
                           </div>
@@ -611,14 +615,14 @@ export function InvestigationView({
                             key={eid}
                             type="button"
                             onClick={() => handleCitationClick(eid, finding)}
-                            className={`font-mono text-[12px] px-2 py-0.5 rounded border flex items-center gap-1 transition-colors ${
+                            className={`font-mono text-[12px] px-2 py-0.5 border flex items-center gap-1 transition-colors ${
                               selectedEvidence?.item.id === eid
-                                ? "bg-[#FEF2F2] text-[#C81E1E] border-[#C81E1E]"
-                                : "bg-[#F5F5F4] text-[#1C1917] border-[#E7E5E4] hover:border-stone-400"
+                                ? "bg-[#F97316] text-[#101010] border-[#F97316] font-bold"
+                                : "bg-[#101010] text-[#F97316] border-[#F97316]/40 hover:border-[#F97316]"
                             }`}
                           >
                             {eid}
-                            <ChevronRight className="w-3 h-3 text-[#78716C]" strokeWidth={1.5} />
+                            <ChevronRight className="w-3 h-3" strokeWidth={1.5} />
                           </button>
                         ))}
                       </div>
@@ -627,37 +631,37 @@ export function InvestigationView({
                 </div>
               </div>
 
-              {/* Hypotheses (demoted lane) */}
+              {/* Hypotheses */}
               <div>
                 <div className="flex items-center justify-between mb-2">
-                  <h2 className="text-[16px] font-semibold text-[#57534E] flex items-center gap-2">
-                    <AlertCircle className="w-4 h-4 text-[#B45309]" strokeWidth={1.75} />
+                  <h2 className="text-[15px] font-semibold text-white/70 flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 text-[#F59E0B]" strokeWidth={1.75} />
                     Hypotheses ({investigation.hypotheses.length})
                   </h2>
-                  <span className="text-[12px] text-[#78716C]">
+                  <span className="font-mono text-[11px] text-white/45">
                     Demoted by deterministic verifier — unverified guesses
                   </span>
                 </div>
 
-                <div className="bg-[#F5F5F4] border border-dashed border-[#D6D3D1] rounded-md divide-y divide-dashed divide-[#D6D3D1]">
+                <div className="bg-[#141414]/60 border border-dashed border-white/20 divide-y divide-dashed divide-white/15">
                   {investigation.hypotheses.length === 0 ? (
-                    <div className="p-4 text-[13px] text-[#78716C]">
+                    <div className="p-4 text-[13px] text-white/45">
                       No demoted hypotheses in this run.
                     </div>
                   ) : (
                     investigation.hypotheses.map((hyp) => (
-                      <div key={hyp.id} className="p-4 text-[#57534E]">
+                      <div key={hyp.id} className="p-4 text-white/65">
                         <div className="flex items-start justify-between gap-4">
                           <div>
-                            <div className="font-mono text-[11px] text-[#78716C] mb-1">
+                            <div className="font-mono text-[11px] text-white/45 mb-1">
                               {hyp.id} · Unverified
                             </div>
-                            <p className="text-[13px] text-[#57534E]">{hyp.claim}</p>
-                            <div className="mt-2 text-[12px] text-[#B45309] font-medium">
+                            <p className="text-[13px] text-white/70">{hyp.claim}</p>
+                            <div className="mt-2 font-mono text-[12px] text-[#F59E0B]">
                               Demotion reason: {hyp.demotion_reason}
                             </div>
                           </div>
-                          <span className="font-mono text-[12px] text-[#78716C]">
+                          <span className="font-mono text-[12px] text-white/45">
                             {(hyp.confidence * 100).toFixed(0)}%
                           </span>
                         </div>
@@ -667,18 +671,18 @@ export function InvestigationView({
                 </div>
               </div>
 
-              {/* Guarded Remediation Actions (Human-in-the-Loop) */}
+              {/* Guarded Remediation Actions */}
               {investigation.proposed_actions.length > 0 && (
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <h2 className="text-[16px] font-semibold text-[#1C1917] flex items-center gap-2">
-                      <ShieldAlert className="w-4 h-4 text-[#C81E1E]" strokeWidth={1.75} />
+                    <h2 className="text-[15px] font-semibold text-white flex items-center gap-2">
+                      <ShieldAlert className="w-4 h-4 text-[#F97316]" strokeWidth={1.75} />
                       Proposed Remediation Actions ({investigation.proposed_actions.length})
                     </h2>
                     <button
                       type="button"
                       onClick={onVerifyRecovery}
-                      className="px-2.5 py-1 rounded border border-[#15803D] bg-[#F0FDF4] hover:bg-[#DCFCE7] text-[12px] text-[#15803D] font-medium flex items-center gap-1"
+                      className="px-2.5 py-1 border border-[#22C55E]/40 bg-[#22C55E]/10 hover:bg-[#22C55E]/20 font-mono text-[11px] text-[#22C55E] font-medium flex items-center gap-1"
                     >
                       <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={1.75} />
                       Verify live health
@@ -687,10 +691,10 @@ export function InvestigationView({
 
                   {investigation.recovery_check && (
                     <div
-                      className={`mb-2 rounded border px-3 py-2 text-[12px] font-mono ${
+                      className={`mb-2 border px-3 py-2 text-[12px] font-mono ${
                         investigation.recovery_check.verified
-                          ? "bg-[#F0FDF4] border-[#BBF7D0] text-[#15803D]"
-                          : "bg-[#FEF2F2] border-[#FECACA] text-[#B91C1C]"
+                          ? "bg-[#22C55E]/10 border-[#22C55E]/30 text-[#22C55E]"
+                          : "bg-[#EF4444]/10 border-[#EF4444]/30 text-[#EF4444]"
                       }`}
                     >
                       [{investigation.recovery_check.verified ? "RESOLVED" : "STILL FAILING"}]{" "}
@@ -699,39 +703,39 @@ export function InvestigationView({
                     </div>
                   )}
 
-                  <div className="bg-white border border-[#E7E5E4] rounded-md divide-y divide-[#E7E5E4]">
+                  <div className="bg-[#141414] border border-white/10 divide-y divide-white/10">
                     {investigation.proposed_actions.map((act) => (
                       <div key={act.id} className="p-4 space-y-2">
                         <div className="flex flex-wrap items-center justify-between gap-2">
                           <div className="flex items-center gap-2">
-                            <span className="font-mono text-[11px] text-[#78716C]">
+                            <span className="font-mono text-[11px] text-[#F97316]">
                               {act.id}
                             </span>
-                            <span className="font-medium text-[13px] text-[#1C1917]">
+                            <span className="font-medium text-[13px] text-white">
                               {act.title}
                             </span>
-                            <span className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-[#F5F5F4] text-[#57534E]">
+                            <span className="font-mono text-[11px] px-1.5 py-0.5 bg-white/[0.04] text-white/60 border border-white/10">
                               risk:{act.risk_level}
                             </span>
                           </div>
                           <span
-                            className={`font-mono text-[11px] px-2 py-0.5 rounded border ${ACTION_BADGE[act.status]}`}
+                            className={`font-mono text-[11px] px-2 py-0.5 border ${ACTION_BADGE[act.status]}`}
                           >
                             {act.status.replace(/_/g, " ")}
                           </span>
                         </div>
 
-                        <div className="font-mono text-[12px] bg-[#FAFAF9] border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[#1C1917] flex items-center gap-2">
-                          <Terminal className="w-3.5 h-3.5 text-[#78716C] shrink-0" strokeWidth={1.5} />
+                        <div className="font-mono text-[12px] bg-[#101010] border border-white/10 px-2.5 py-1.5 text-white/85 flex items-center gap-2">
+                          <Terminal className="w-3.5 h-3.5 text-[#F97316] shrink-0" strokeWidth={1.5} />
                           <span className="truncate">{act.command}</span>
                         </div>
 
-                        <div className="text-[12px] text-[#57534E]">
+                        <div className="text-[12px] text-white/55">
                           {act.dry_run_preview}
                         </div>
 
                         {act.execution_result && (
-                          <div className="font-mono text-[11px] bg-[#FAFAF9] border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[#1C1917]">
+                          <div className="font-mono text-[11px] bg-[#101010] border border-[#F97316]/30 px-2.5 py-1.5 text-[#F97316]">
                             {act.execution_result}
                           </div>
                         )}
@@ -740,21 +744,21 @@ export function InvestigationView({
                           <button
                             type="button"
                             onClick={() => onDecideAction(act.id, "dry_run")}
-                            className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:bg-[#F5F5F4] text-[12px] text-[#1C1917]"
+                            className="px-2.5 py-1 border border-white/15 hover:bg-white/[0.04] font-mono text-[11px] text-white"
                           >
                             Run dry-run
                           </button>
                           <button
                             type="button"
                             onClick={() => onDecideAction(act.id, "approve")}
-                            className="px-2.5 py-1 rounded border border-[#15803D] bg-[#F0FDF4] text-[12px] text-[#15803D] font-medium"
+                            className="px-2.5 py-1 border border-[#22C55E]/40 bg-[#22C55E]/10 hover:bg-[#22C55E]/20 font-mono text-[11px] text-[#22C55E] font-medium"
                           >
                             Approve change
                           </button>
                           <button
                             type="button"
                             onClick={() => onDecideAction(act.id, "block")}
-                            className="px-2.5 py-1 rounded border border-[#E7E5E4] hover:border-[#B91C1C] text-[12px] text-[#B91C1C]"
+                            className="px-2.5 py-1 border border-[#EF4444]/40 hover:bg-[#EF4444]/10 font-mono text-[11px] text-[#EF4444]"
                           >
                             Block action
                           </button>
@@ -765,20 +769,20 @@ export function InvestigationView({
                 </div>
               )}
 
-              {/* OpenRouter Decider Audit Strip */}
+              {/* Decider Audit Strip */}
               {investigation.decision_traces.length > 0 && (
                 <div>
-                  <h3 className="text-[14px] font-semibold text-[#1C1917] mb-2">
-                    OpenRouter Decider Evaluations
+                  <h3 className="font-mono text-[12px] uppercase tracking-wider text-[#F97316] mb-2">
+                    Decider Evaluations
                   </h3>
-                  <div className="bg-white border border-[#E7E5E4] rounded-md divide-y divide-[#E7E5E4]">
+                  <div className="bg-[#141414] border border-white/10 divide-y divide-white/10">
                     {investigation.decision_traces.map((tr, i) => (
                       <div key={i} className="p-3 text-[12px]">
                         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                          <span className="font-medium text-[#1C1917]">
-                            Stage: <span className="font-mono">{tr.stage}</span>
+                          <span className="font-medium text-white">
+                            Stage: <span className="font-mono text-[#F97316]">{tr.stage}</span>
                           </span>
-                          <span className="font-mono text-[11px] text-[#78716C]">
+                          <span className="font-mono text-[11px] text-white/50">
                             {tr.mode} · {tr.latency_ms}ms · {tr.context_items_sent} items ·{" "}
                             {tr.input_tokens} in / {tr.output_tokens} out · retries {tr.retries} · cost ${tr.cost}
                           </span>
@@ -787,13 +791,13 @@ export function InvestigationView({
                           {tr.questions.map((q) => (
                             <div
                               key={q.question_key}
-                              className="bg-[#FAFAF9] border border-[#E7E5E4] rounded px-2.5 py-1.5"
+                              className="bg-[#101010] border border-white/10 px-2.5 py-1.5"
                             >
                               <div className="flex items-center justify-between">
-                                <span className="font-mono text-[11px] text-[#57534E]">
+                                <span className="font-mono text-[11px] text-white/55">
                                   {q.question_key} ({q.question_type})
                                 </span>
-                                <span className="font-mono text-[11px] font-medium text-[#1C1917]">
+                                <span className="font-mono text-[11px] font-medium text-white">
                                   {typeof q.answer === "number"
                                     ? q.answer.toFixed(3)
                                     : String(q.answer)}
@@ -813,13 +817,13 @@ export function InvestigationView({
 
         {/* RIGHT (360px, Drawer): Evidence Inspector */}
         {selectedEvidence && (
-          <aside className="w-full lg:w-[360px] shrink-0 bg-white border-l border-[#E7E5E4] shadow-md flex flex-col lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
-            <div className="px-4 py-3 border-b border-[#E7E5E4] flex items-center justify-between">
+          <aside className="w-full lg:w-[360px] shrink-0 bg-[#141414] border-l border-white/10 flex flex-col lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
+            <div className="px-4 py-3 border-b border-white/10 flex items-center justify-between bg-[#0A0A0A]">
               <div>
-                <div className="font-mono text-[13px] font-semibold text-[#1C1917]">
+                <div className="font-mono text-[13px] font-semibold text-[#F97316]">
                   {selectedEvidence.item.id}
                 </div>
-                <div className="text-[12px] text-[#78716C]">
+                <div className="text-[12px] text-white/50">
                   {selectedEvidence.item.source} · {selectedEvidence.item.service}
                 </div>
               </div>
@@ -830,14 +834,14 @@ export function InvestigationView({
                     setSelectedEvidence(null);
                     setChatOpen(true);
                   }}
-                  className="text-[11px] px-2 py-1 rounded border border-[#E7E5E4] text-[#57534E] hover:text-[#1C1917]"
+                  className="font-mono text-[11px] px-2 py-1 border border-white/15 text-white/70 hover:text-white"
                 >
                   Back to chat
                 </button>
                 <button
                   type="button"
                   onClick={() => setSelectedEvidence(null)}
-                  className="p-1 rounded text-[#78716C] hover:text-[#1C1917]"
+                  className="p-1 text-white/50 hover:text-white"
                   aria-label="Close evidence drawer"
                 >
                   <X className="w-4 h-4" strokeWidth={1.5} />
@@ -848,23 +852,23 @@ export function InvestigationView({
             <div className="p-4 space-y-4 overflow-y-auto flex-1">
               <div className="grid grid-cols-2 gap-2 text-[12px]">
                 <div>
-                  <span className="text-[#78716C] block text-[11px]">Timestamp</span>
-                  <span className="font-mono text-[#1C1917]">
+                  <span className="text-white/45 block text-[11px]">Timestamp</span>
+                  <span className="font-mono text-white">
                     {selectedEvidence.item.ts}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[#78716C] block text-[11px]">Kind</span>
-                  <span className="font-mono uppercase text-[#1C1917]">
+                  <span className="text-white/45 block text-[11px]">Kind</span>
+                  <span className="font-mono uppercase text-white">
                     {selectedEvidence.item.kind}
                   </span>
                 </div>
                 {selectedEvidence.item.template_id && (
                   <div className="col-span-2">
-                    <span className="text-[#78716C] block text-[11px]">
+                    <span className="text-white/45 block text-[11px]">
                       Drain3 Template ({selectedEvidence.item.template_id})
                     </span>
-                    <span className="font-mono text-[11px] text-[#57534E] break-all">
+                    <span className="font-mono text-[11px] text-white/70 break-all">
                       {selectedEvidence.item.template}
                     </span>
                   </div>
@@ -873,19 +877,19 @@ export function InvestigationView({
 
               {selectedEvidence.item.flags.length > 0 && (
                 <div>
-                  <div className="text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C] mb-1.5">
+                  <div className="font-mono text-[11px] font-medium uppercase tracking-[0.04em] text-[#F97316] mb-1.5">
                     Deterministic Anomaly Flags
                   </div>
                   <div className="space-y-1.5">
                     {selectedEvidence.item.flags.map((fl, idx) => (
                       <div
                         key={idx}
-                        className="border border-[#E7E5E4] rounded px-2.5 py-1.5 bg-[#FAFAF9]"
+                        className="border border-white/10 px-2.5 py-1.5 bg-[#101010]"
                       >
-                        <div className="text-[12px] font-medium text-[#1C1917]">
+                        <div className="text-[12px] font-medium text-white">
                           {fl.label}
                         </div>
-                        <div className="text-[11px] text-[#57534E]">{fl.detail}</div>
+                        <div className="text-[11px] text-white/55">{fl.detail}</div>
                       </div>
                     ))}
                   </div>
@@ -893,19 +897,19 @@ export function InvestigationView({
               )}
 
               <div>
-                <div className="text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C] mb-1.5">
+                <div className="font-mono text-[11px] font-medium uppercase tracking-[0.04em] text-white/50 mb-1.5">
                   Raw Evidence Payload
                 </div>
-                <pre className="p-3 rounded border border-[#E7E5E4] bg-[#FAFAF9] font-mono text-[12px] leading-relaxed whitespace-pre-wrap break-all text-[#1C1917]">
+                <pre className="p-3 border border-white/10 bg-[#101010] font-mono text-[12px] leading-relaxed whitespace-pre-wrap break-all text-white/90">
                   <HighlightedRaw
                     raw={selectedEvidence.item.raw}
                     quote={selectedEvidence.quote}
                   />
                 </pre>
                 {selectedEvidence.quote && (
-                  <p className="text-[11px] text-[#78716C] mt-1.5">
+                  <p className="text-[11px] text-white/50 mt-1.5">
                     Highlighted fragment was verified verbatim for finding{" "}
-                    <span className="font-mono">{selectedEvidence.findingId}</span>.
+                    <span className="font-mono text-[#F97316]">{selectedEvidence.findingId}</span>.
                   </p>
                 )}
               </div>

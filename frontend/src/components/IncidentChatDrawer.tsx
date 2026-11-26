@@ -110,53 +110,51 @@ export function IncidentChatDrawer({
   }
 
   return (
-    <aside className="w-full lg:w-[380px] shrink-0 bg-white border-l border-[#E7E5E4] shadow-md flex flex-col max-h-[560px] lg:max-h-none lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
-      <div className="px-4 py-3 border-b border-[#E7E5E4] flex items-center justify-between">
+    <aside className="w-full lg:w-[380px] shrink-0 bg-[#141414] border-l border-white/10 flex flex-col max-h-[560px] lg:max-h-none lg:sticky lg:top-0 lg:h-[calc(100vh-48px)]">
+      <div className="px-4 py-3 border-b border-white/10 flex items-center justify-between bg-[#0A0A0A]">
         <div className="min-w-0">
-          <div className="text-[13px] font-semibold text-[#1C1917] flex items-center gap-1.5">
-            <MessageSquare className="w-4 h-4 text-[#C81E1E]" strokeWidth={1.75} />
+          <div className="font-mono text-[12px] font-bold uppercase tracking-wider text-white flex items-center gap-1.5">
+            <MessageSquare className="w-4 h-4 text-[#F97316]" strokeWidth={1.75} />
             Incident Chat
           </div>
-          <div className="text-[11px] text-[#78716C] truncate">{incidentTitle}</div>
+          <div className="text-[11px] text-white/45 truncate">{incidentTitle}</div>
         </div>
         <button
           type="button"
           onClick={onClose}
-          className="p-1 rounded text-[#78716C] hover:text-[#1C1917]"
+          className="p-1 text-white/50 hover:text-white"
           aria-label="Close incident chat"
         >
           <X className="w-4 h-4" strokeWidth={1.5} />
         </button>
       </div>
 
-      {/* Quick question chips */}
-      <div className="px-3 py-2 border-b border-[#E7E5E4] bg-[#FAFAF9] flex flex-wrap gap-1.5">
+      <div className="px-3 py-2 border-b border-white/10 bg-[#101010] flex flex-wrap gap-1.5">
         {STARTER_PROMPTS.map((prompt) => (
           <button
             key={prompt}
             type="button"
             disabled={sending}
             onClick={() => void submitQuestion(prompt)}
-            className="text-[11px] px-2 py-1 rounded border border-[#E7E5E4] bg-white text-[#57534E] hover:text-[#1C1917] hover:border-stone-400 text-left disabled:opacity-50"
+            className="text-[11px] px-2 py-1 border border-white/10 bg-[#141414] text-white/70 hover:text-white hover:border-[#F97316]/60 text-left disabled:opacity-50"
           >
             {prompt}
           </button>
         ))}
       </div>
 
-      {/* Messages */}
       <div className="flex-1 overflow-y-auto p-3 space-y-3">
         {turns.map((turn) => (
           <div
             key={turn.id}
-            className={`rounded border p-3 text-[13px] ${
+            className={`border p-3 text-[13px] ${
               turn.role === "user"
-                ? "bg-[#1C1917] text-white border-[#1C1917] ml-6"
-                : "bg-[#FAFAF9] text-[#1C1917] border-[#E7E5E4] mr-2"
+                ? "bg-[#F97316] text-[#101010] border-[#F97316] font-medium ml-6"
+                : "bg-[#101010] text-white/90 border-white/10 mr-2"
             }`}
           >
             {turn.role === "assistant" && turn.intent && (
-              <div className="flex items-center justify-between text-[10px] font-mono text-[#78716C] mb-1.5 pb-1 border-b border-[#E7E5E4]">
+              <div className="flex items-center justify-between text-[10px] font-mono text-[#F97316] mb-1.5 pb-1 border-b border-white/10">
                 <span>
                   intent:{turn.intent} · svc:{turn.focus_service}
                 </span>
@@ -174,17 +172,17 @@ export function IncidentChatDrawer({
             </div>
 
             {turn.citations && turn.citations.length > 0 && (
-              <div className="mt-2.5 pt-2 border-t border-[#E7E5E4] flex flex-wrap gap-1.5">
+              <div className="mt-2.5 pt-2 border-t border-white/10 flex flex-wrap gap-1.5">
                 {turn.citations.map((cit) => (
                   <button
                     key={cit.id}
                     type="button"
                     onClick={() => onSelectCitation(cit)}
-                    className="font-mono text-[11px] px-1.5 py-0.5 rounded border border-[#E7E5E4] bg-white hover:border-[#C81E1E] text-[#1C1917] flex items-center gap-0.5"
+                    className="font-mono text-[11px] px-1.5 py-0.5 border border-[#F97316]/40 bg-[#F97316]/10 hover:bg-[#F97316]/20 text-[#F97316] flex items-center gap-0.5"
                     title={`${cit.service} (${cit.ts})`}
                   >
                     {cit.id}
-                    <ChevronRight className="w-3 h-3 text-[#78716C]" strokeWidth={1.5} />
+                    <ChevronRight className="w-3 h-3" strokeWidth={1.5} />
                   </button>
                 ))}
               </div>
@@ -192,33 +190,32 @@ export function IncidentChatDrawer({
           </div>
         ))}
         {sending && (
-          <div className="text-[12px] text-[#78716C] px-1">
+          <div className="font-mono text-[11px] text-[#F97316] px-1">
             Querying incident evidence...
           </div>
         )}
-        {error && <div className="text-[12px] text-[#B91C1C] px-1">{error}</div>}
+        {error && <div className="text-[12px] text-[#EF4444] px-1">{error}</div>}
         <div ref={endRef} />
       </div>
 
-      {/* Input */}
       <form
         onSubmit={handleFormSubmit}
-        className="p-3 border-t border-[#E7E5E4] bg-white flex items-center gap-2"
+        className="p-3 border-t border-white/10 bg-[#0A0A0A] flex items-center gap-2"
       >
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask what went wrong, where, or paste LOG-ID..."
-          className="flex-1 border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[13px] focus:outline-none focus:border-[#C81E1E]"
+          className="flex-1 bg-[#141414] border border-white/15 px-2.5 py-1.5 text-[13px] text-white focus:outline-none focus:border-[#F97316]"
         />
         <button
           type="submit"
           disabled={sending || !input.trim()}
-          className="p-2 rounded bg-[#C81E1E] hover:bg-[#B91C1C] text-white disabled:opacity-50"
+          className="p-2 bg-[#F97316] hover:bg-[#EA580C] text-[#101010] disabled:opacity-50"
           aria-label="Send message"
         >
-          <Send className="w-4 h-4" strokeWidth={1.75} />
+          <Send className="w-4 h-4" strokeWidth={2} />
         </button>
       </form>
     </aside>

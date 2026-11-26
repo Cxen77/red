@@ -150,7 +150,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] text-[#1C1917]">
+    <div className="min-h-screen bg-[#101010] text-[#FAFAFA]">
       <TopBar
         activeScreen={screen}
         onNavigate={handleNavigate}

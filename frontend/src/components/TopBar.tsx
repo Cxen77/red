@@ -43,18 +43,18 @@ export function TopBar({
   ];
 
   return (
-    <header className="no-print h-12 bg-[#1C1917] text-[#E7E5E4] border-b border-stone-800 px-4 flex items-center justify-between gap-3 select-none overflow-hidden">
+    <header className="no-print h-12 bg-[#0A0A0A] text-[#FAFAFA] border-b border-white/10 px-4 flex items-center justify-between gap-3 select-none overflow-hidden">
       <div className="flex items-center gap-4 min-w-0">
         <button
           type="button"
           onClick={() => onNavigate("landing")}
-          className="flex items-center gap-2.5 text-left focus:outline-none shrink-0"
+          className="flex items-center gap-2.5 text-left focus:outline-none shrink-0 group"
           title="Back to Landing Page"
         >
-          <span className="w-6 h-6 rounded bg-[#C81E1E] flex items-center justify-center">
-            <Activity className="w-3.5 h-3.5 text-white" strokeWidth={1.75} />
+          <span className="w-6 h-6 bg-[#F97316] flex items-center justify-center transition-transform group-hover:scale-105">
+            <Activity className="w-3.5 h-3.5 text-[#101010]" strokeWidth={2} />
           </span>
-          <span className="font-semibold text-[14px] tracking-tight text-white">
+          <span className="font-mono font-bold text-[13px] tracking-widest uppercase text-white">
             IncidentLens
           </span>
         </button>
@@ -69,15 +69,18 @@ export function TopBar({
                 type="button"
                 disabled={item.disabled}
                 onClick={() => onNavigate(item.id)}
-                className={`px-2.5 py-1.5 rounded text-[13px] font-medium flex items-center gap-1.5 whitespace-nowrap transition-colors duration-150 ${
+                className={`px-3 py-1.5 font-mono text-[12px] tracking-wide flex items-center gap-1.5 whitespace-nowrap transition-colors duration-150 ${
                   active
-                    ? "bg-stone-800 text-white border-b-2 border-[#C81E1E]"
+                    ? "bg-white/[0.06] text-white border-b-2 border-[#F97316]"
                     : item.disabled
-                    ? "text-stone-600 cursor-not-allowed"
-                    : "text-stone-300 hover:text-white hover:bg-stone-800/60"
+                    ? "text-white/25 cursor-not-allowed"
+                    : "text-white/60 hover:text-white hover:bg-white/[0.04]"
                 }`}
               >
-                <Icon className="w-4 h-4 shrink-0" strokeWidth={1.5} />
+                <Icon
+                  className={`w-3.5 h-3.5 shrink-0 ${active ? "text-[#F97316]" : ""}`}
+                  strokeWidth={1.75}
+                />
                 {item.label}
               </button>
             );
@@ -91,7 +94,7 @@ export function TopBar({
             aria-label="Active incident selector"
             value={activeIncidentId || incidents[0]?.id}
             onChange={(e) => onSelectIncident(e.target.value)}
-            className="bg-stone-800 text-stone-100 border border-stone-700 rounded px-2 py-1 text-[12px] max-w-[260px] focus:outline-none focus:border-[#C81E1E]"
+            className="bg-[#141414] text-white border border-white/15 px-2.5 py-1 font-mono text-[11px] max-w-[260px] focus:outline-none focus:border-[#F97316]"
           >
             {incidents.map((inc) => (
               <option key={inc.id} value={inc.id}>
@@ -100,7 +103,7 @@ export function TopBar({
             ))}
           </select>
         )}
-        <span className="hidden xl:inline font-mono text-[11px] bg-stone-800 text-stone-300 px-2 py-0.5 rounded border border-stone-700">
+        <span className="hidden xl:inline font-mono text-[11px] bg-[#141414] text-[#F97316] px-2.5 py-1 border border-white/10">
           perplexity/pplx-decider-flash-v1.3:free
         </span>
       </div>

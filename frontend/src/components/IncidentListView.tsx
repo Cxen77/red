@@ -27,23 +27,23 @@ interface IncidentListViewProps {
 }
 
 const SEVERITY_DOT: Record<SeverityLevel, string> = {
-  critical: "bg-[#B91C1C]",
-  high: "bg-[#C81E1E]",
-  medium: "bg-[#B45309]",
-  low: "bg-[#1D4ED8]",
+  critical: "bg-[#EF4444]",
+  high: "bg-[#F97316]",
+  medium: "bg-[#F59E0B]",
+  low: "bg-[#3B82F6]",
 };
 
 const STATUS_STYLE: Record<string, string> = {
-  resolved: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
-  verified: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
-  investigated: "text-[#1D4ED8] bg-[#EFF6FF] border-[#BFDBFE]",
-  open: "text-[#78716C] bg-[#F5F5F4] border-[#E7E5E4]",
+  resolved: "text-[#22C55E] bg-[#22C55E]/10 border-[#22C55E]/30",
+  verified: "text-[#F97316] bg-[#F97316]/10 border-[#F97316]/30",
+  investigated: "text-[#3B82F6] bg-[#3B82F6]/10 border-[#3B82F6]/30",
+  open: "text-white/60 bg-white/[0.04] border-white/10",
 };
 
 const SOURCE_STYLE: Record<SourceType, string> = {
-  connected: "text-[#15803D] bg-[#F0FDF4] border-[#BBF7D0]",
-  manual: "text-[#1D4ED8] bg-[#EFF6FF] border-[#BFDBFE]",
-  benchmark: "text-[#57534E] bg-[#F5F5F4] border-[#E7E5E4]",
+  connected: "text-[#22C55E] bg-[#22C55E]/10 border-[#22C55E]/30",
+  manual: "text-[#3B82F6] bg-[#3B82F6]/10 border-[#3B82F6]/30",
+  benchmark: "text-white/60 bg-white/[0.04] border-white/10",
 };
 
 const columnHelper = createColumnHelper<IncidentMetadata>();
@@ -90,6 +90,7 @@ export function IncidentListView({
     setConnectorCfg(updated);
     setAutoMsg(nextEnabled ? `Live tracking started (${updated.poll_interval_sec}s).` : "Live tracking stopped.");
   }
+
   const [title, setTitle] = useState("");
   const [severity, setSeverity] = useState<SeverityLevel>("high");
   const [logsText, setLogsText] = useState("");
@@ -108,10 +109,10 @@ export function IncidentListView({
         header: "Incident",
         cell: (info) => (
           <div>
-            <div className="font-medium text-[#1C1917] text-[13px]">
+            <div className="font-medium text-white text-[13px]">
               {info.getValue()}
             </div>
-            <div className="font-mono text-[11px] text-[#78716C] mt-0.5">
+            <div className="font-mono text-[11px] text-white/45 mt-0.5">
               {info.row.original.id} · {info.row.original.log_count} logs ·{" "}
               {info.row.original.anomaly_count} anomalies
             </div>
@@ -124,7 +125,7 @@ export function IncidentListView({
           const stype = info.row.original.source_type || "benchmark";
           return (
             <span
-              className={`inline-block text-[11px] font-medium px-2 py-0.5 rounded border whitespace-nowrap ${SOURCE_STYLE[stype]}`}
+              className={`inline-block font-mono text-[11px] font-medium px-2 py-0.5 border whitespace-nowrap ${SOURCE_STYLE[stype]}`}
             >
               {info.getValue() || "Built-in Fault"}
             </span>
@@ -138,7 +139,7 @@ export function IncidentListView({
             {info.getValue().map((svc) => (
               <span
                 key={svc}
-                className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-[#F5F5F4] text-[#57534E] border border-[#E7E5E4]"
+                className="font-mono text-[11px] px-1.5 py-0.5 bg-white/[0.04] text-white/75 border border-white/10"
               >
                 {svc}
               </span>
@@ -149,7 +150,7 @@ export function IncidentListView({
       columnHelper.accessor("opened_at", {
         header: "Opened",
         cell: (info) => (
-          <span className="font-mono text-[12px] text-[#57534E]">
+          <span className="font-mono text-[12px] text-white/60">
             {info.getValue()}
           </span>
         ),
@@ -159,7 +160,7 @@ export function IncidentListView({
         cell: (info) => {
           const sev = info.getValue();
           return (
-            <span className="inline-flex items-center gap-1.5 text-[13px] capitalize text-[#1C1917]">
+            <span className="inline-flex items-center gap-1.5 font-mono text-[12px] capitalize text-white">
               <span className={`w-2 h-2 rounded-full ${SEVERITY_DOT[sev]}`} />
               {sev}
             </span>
@@ -172,7 +173,7 @@ export function IncidentListView({
           const st = info.getValue();
           return (
             <span
-              className={`inline-block text-[11px] font-medium px-2 py-0.5 rounded border capitalize ${
+              className={`inline-block font-mono text-[11px] font-medium px-2 py-0.5 border capitalize ${
                 STATUS_STYLE[st] ?? STATUS_STYLE.open
               }`}
             >
@@ -184,7 +185,7 @@ export function IncidentListView({
       columnHelper.accessor("root_cause", {
         header: "Root cause",
         cell: (info) => (
-          <span className="text-[12px] text-[#57534E] line-clamp-2 max-w-[340px]">
+          <span className="text-[12px] text-white/60 line-clamp-2 max-w-[320px]">
             {info.getValue() || "Pending investigation"}
           </span>
         ),
@@ -284,8 +285,11 @@ export function IncidentListView({
     <main className="max-w-[1360px] mx-auto px-6 py-6">
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
         <div className="min-w-0">
-          <h1 className="text-[20px] font-semibold text-[#1C1917]">Incidents</h1>
-          <p className="text-[13px] text-[#78716C] mt-0.5">
+          <div className="font-mono text-[11px] tracking-widest uppercase text-[#F97316] mb-1">
+            {"// INCIDENT CONSOLE"}
+          </div>
+          <h1 className="text-[22px] font-semibold tracking-tight text-white">Incidents</h1>
+          <p className="text-[13px] text-white/55 mt-0.5">
             Select an incident row to inspect its timeline, findings, and report, or ingest automatically via webhook / dropzone.
           </p>
         </div>
@@ -295,10 +299,10 @@ export function IncidentListView({
             <button
               type="button"
               onClick={() => void handleToggleTracking()}
-              className={`px-3 py-2 rounded border text-[13px] font-medium flex items-center gap-1.5 ${
+              className={`px-3 py-2 border font-mono text-[12px] font-medium flex items-center gap-1.5 transition-colors ${
                 connectorCfg.enabled
-                  ? "border-[#FECACA] bg-[#FEF2F2] hover:bg-[#FEE2E2] text-[#B91C1C]"
-                  : "border-[#E7E5E4] bg-white hover:bg-[#F5F5F4] text-[#57534E]"
+                  ? "border-[#F97316]/50 bg-[#F97316]/15 hover:bg-[#F97316]/25 text-[#F97316]"
+                  : "border-white/15 bg-[#141414] hover:bg-white/[0.04] text-white/70"
               }`}
               title={
                 connectorCfg.enabled
@@ -321,9 +325,9 @@ export function IncidentListView({
             type="button"
             disabled={scanningDropzone}
             onClick={() => void handleScanDropzone()}
-            className="px-3 py-2 rounded border border-[#E7E5E4] bg-white hover:bg-[#F5F5F4] text-[#1C1917] text-[13px] flex items-center gap-1.5 disabled:opacity-50"
+            className="px-3 py-2 border border-white/15 bg-[#141414] hover:bg-white/[0.04] text-white/80 font-mono text-[12px] flex items-center gap-1.5 disabled:opacity-50"
           >
-            <RefreshCw className="w-3.5 h-3.5 text-[#78716C]" strokeWidth={1.5} />
+            <RefreshCw className="w-3.5 h-3.5 text-white/50" strokeWidth={1.5} />
             {scanningDropzone ? "Scanning..." : "Scan dropzone"}
           </button>
 
@@ -331,9 +335,9 @@ export function IncidentListView({
             type="button"
             disabled={simulating}
             onClick={() => void handleSimulateLive()}
-            className="px-3 py-2 rounded border border-[#E7E5E4] bg-white hover:bg-[#F5F5F4] text-[#1C1917] text-[13px] font-medium flex items-center gap-1.5 disabled:opacity-50"
+            className="px-3 py-2 border border-white/15 bg-[#141414] hover:bg-white/[0.04] text-white font-mono text-[12px] font-medium flex items-center gap-1.5 disabled:opacity-50"
           >
-            <Radio className="w-3.5 h-3.5 text-[#C81E1E]" strokeWidth={1.75} />
+            <Radio className="w-3.5 h-3.5 text-[#F97316]" strokeWidth={1.75} />
             {simulating ? "Receiving alert..." : "Simulate live webhook"}
           </button>
 
@@ -341,209 +345,209 @@ export function IncidentListView({
             <Dialog.Trigger asChild>
               <button
                 type="button"
-                className="shrink-0 bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium px-3.5 py-2 rounded flex items-center gap-1.5 transition-colors duration-150"
+                className="shrink-0 bg-[#F97316] hover:bg-[#EA580C] text-[#101010] font-mono text-[12px] font-bold tracking-wider uppercase px-3.5 py-2 flex items-center gap-1.5 transition-colors duration-150"
               >
-                <Plus className="w-4 h-4" strokeWidth={1.75} />
+                <Plus className="w-4 h-4" strokeWidth={2} />
                 New investigation
               </button>
             </Dialog.Trigger>
 
-          <Dialog.Portal>
-            <Dialog.Overlay className="fixed inset-0 bg-stone-900/35 z-40" />
-            <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-[640px] max-h-[88vh] overflow-y-auto bg-white rounded-md border border-[#E7E5E4] shadow-lg p-5 z-50">
-              <div className="flex items-center justify-between pb-3 border-b border-[#E7E5E4]">
-                <Dialog.Title className="text-[16px] font-semibold text-[#1C1917]">
-                  New investigation
-                </Dialog.Title>
-                <Dialog.Close asChild>
-                  <button
-                    type="button"
-                    className="text-[#78716C] hover:text-[#1C1917] p-1 rounded"
-                    aria-label="Close"
-                  >
-                    <X className="w-4 h-4" strokeWidth={1.5} />
-                  </button>
-                </Dialog.Close>
-              </div>
-
-              <form onSubmit={handleCreate} className="mt-4 space-y-4">
-                <div className="grid grid-cols-3 gap-3">
-                  <div className="col-span-2">
-                    <label className="block text-[12px] font-medium text-[#57534E] mb-1">
-                      Incident title
-                    </label>
-                    <input
-                      type="text"
-                      value={title}
-                      onChange={(e) => setTitle(e.target.value)}
-                      placeholder="e.g. Checkout DB Pool Regression"
-                      className="w-full border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[13px] focus:outline-none focus:border-[#C81E1E]"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[12px] font-medium text-[#57534E] mb-1">
-                      Severity
-                    </label>
-                    <select
-                      value={severity}
-                      onChange={(e) => setSeverity(e.target.value as SeverityLevel)}
-                      className="w-full border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[13px] bg-white focus:outline-none focus:border-[#C81E1E]"
-                    >
-                      <option value="critical">Critical</option>
-                      <option value="high">High</option>
-                      <option value="medium">Medium</option>
-                      <option value="low">Low</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-[12px] text-[#78716C]">
-                    Paste telemetry below or attach files (.log, .json, .csv, optional dashboard .png).
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (!title) setTitle("Custom Pool Timeout Check");
-                      setLogsText(SAMPLE_LOGS);
-                      setMetricsText(SAMPLE_METRICS);
-                    }}
-                    className="text-[12px] text-[#C81E1E] hover:underline font-medium"
-                  >
-                    Load sample payload
-                  </button>
-                </div>
-
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <label className="text-[12px] font-medium text-[#57534E]">
-                      Logs (.log / JSONL)
-                    </label>
-                    <label className="text-[11px] text-[#57534E] hover:text-[#1C1917] cursor-pointer flex items-center gap-1">
-                      <Upload className="w-3 h-3" strokeWidth={1.5} />
-                      {logsFile ? logsFile.name : "Upload file"}
-                      <input
-                        type="file"
-                        className="hidden"
-                        accept=".log,.txt,.json,.jsonl"
-                        onChange={(e) => setLogsFile(e.target.files?.[0] ?? null)}
-                      />
-                    </label>
-                  </div>
-                  <textarea
-                    rows={4}
-                    value={logsText}
-                    onChange={(e) => setLogsText(e.target.value)}
-                    placeholder="2026-11-25T14:02:00Z checkout-svc ERROR ..."
-                    className="w-full border border-[#E7E5E4] rounded p-2 font-mono text-[12px] focus:outline-none focus:border-[#C81E1E]"
-                  />
-                </div>
-
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <div className="flex items-center justify-between mb-1">
-                      <label className="text-[12px] font-medium text-[#57534E]">
-                        Metrics (.csv)
-                      </label>
-                      <label className="text-[11px] text-[#57534E] hover:text-[#1C1917] cursor-pointer flex items-center gap-1">
-                        <Upload className="w-3 h-3" strokeWidth={1.5} />
-                        {metricsFile ? metricsFile.name : "Upload CSV"}
-                        <input
-                          type="file"
-                          className="hidden"
-                          accept=".csv"
-                          onChange={(e) => setMetricsFile(e.target.files?.[0] ?? null)}
-                        />
-                      </label>
-                    </div>
-                    <textarea
-                      rows={3}
-                      value={metricsText}
-                      onChange={(e) => setMetricsText(e.target.value)}
-                      placeholder="ts,service,metric,value"
-                      className="w-full border border-[#E7E5E4] rounded p-2 font-mono text-[12px] focus:outline-none focus:border-[#C81E1E]"
-                    />
-                  </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-1">
-                      <label className="text-[12px] font-medium text-[#57534E]">
-                        Traces (.json)
-                      </label>
-                      <label className="text-[11px] text-[#57534E] hover:text-[#1C1917] cursor-pointer flex items-center gap-1">
-                        <Upload className="w-3 h-3" strokeWidth={1.5} />
-                        {tracesFile ? tracesFile.name : "Upload JSON"}
-                        <input
-                          type="file"
-                          className="hidden"
-                          accept=".json,.jsonl"
-                          onChange={(e) => setTracesFile(e.target.files?.[0] ?? null)}
-                        />
-                      </label>
-                    </div>
-                    <textarea
-                      rows={3}
-                      value={tracesText}
-                      onChange={(e) => setTracesText(e.target.value)}
-                      placeholder='[{"ts":"...","service":"...","duration_ms":2400}]'
-                      className="w-full border border-[#E7E5E4] rounded p-2 font-mono text-[12px] focus:outline-none focus:border-[#C81E1E]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[12px] font-medium text-[#57534E] mb-1">
-                    Optional dashboard screenshot (.png / .jpg for multimodal Decider check)
-                  </label>
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => setImageFile(e.target.files?.[0] ?? null)}
-                    className="text-[12px] text-[#57534E]"
-                  />
-                </div>
-
-                {formError && (
-                  <p className="text-[12px] text-[#B91C1C]">{formError}</p>
-                )}
-
-                <div className="flex justify-end gap-2 pt-2 border-t border-[#E7E5E4]">
+            <Dialog.Portal>
+              <Dialog.Overlay className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40" />
+              <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92vw] max-w-[640px] max-h-[88vh] overflow-y-auto bg-[#141414] text-white border border-white/15 shadow-2xl p-5 z-50">
+                <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                  <Dialog.Title className="text-[16px] font-semibold text-white">
+                    New investigation
+                  </Dialog.Title>
                   <Dialog.Close asChild>
                     <button
                       type="button"
-                      className="px-3 py-1.5 rounded border border-[#E7E5E4] text-[13px] text-[#57534E] hover:bg-[#F5F5F4]"
+                      className="text-white/50 hover:text-white p-1"
+                      aria-label="Close"
                     >
-                      Cancel
+                      <X className="w-4 h-4" strokeWidth={1.5} />
                     </button>
                   </Dialog.Close>
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="px-4 py-1.5 rounded bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium disabled:opacity-60"
-                  >
-                    {submitting ? "Ingesting..." : "Ingest & open"}
-                  </button>
                 </div>
-              </form>
-            </Dialog.Content>
-          </Dialog.Portal>
-        </Dialog.Root>
+
+                <form onSubmit={handleCreate} className="mt-4 space-y-4">
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="col-span-2">
+                      <label className="block font-mono text-[11px] uppercase text-white/60 mb-1">
+                        Incident title
+                      </label>
+                      <input
+                        type="text"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        placeholder="e.g. Checkout DB Pool Regression"
+                        className="w-full bg-[#101010] border border-white/15 px-2.5 py-1.5 text-[13px] text-white focus:outline-none focus:border-[#F97316]"
+                      />
+                    </div>
+                    <div>
+                      <label className="block font-mono text-[11px] uppercase text-white/60 mb-1">
+                        Severity
+                      </label>
+                      <select
+                        value={severity}
+                        onChange={(e) => setSeverity(e.target.value as SeverityLevel)}
+                        className="w-full bg-[#101010] border border-white/15 px-2.5 py-1.5 text-[13px] text-white focus:outline-none focus:border-[#F97316]"
+                      >
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-[12px] text-white/50">
+                      Paste telemetry below or attach files (.log, .json, .csv, optional dashboard .png).
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (!title) setTitle("Custom Pool Timeout Check");
+                        setLogsText(SAMPLE_LOGS);
+                        setMetricsText(SAMPLE_METRICS);
+                      }}
+                      className="text-[12px] font-mono text-[#F97316] hover:underline font-medium"
+                    >
+                      Load sample payload
+                    </button>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center justify-between mb-1">
+                      <label className="font-mono text-[11px] uppercase text-white/60">
+                        Logs (.log / JSONL)
+                      </label>
+                      <label className="text-[11px] text-white/60 hover:text-white cursor-pointer flex items-center gap-1">
+                        <Upload className="w-3 h-3" strokeWidth={1.5} />
+                        {logsFile ? logsFile.name : "Upload file"}
+                        <input
+                          type="file"
+                          className="hidden"
+                          accept=".log,.txt,.json,.jsonl"
+                          onChange={(e) => setLogsFile(e.target.files?.[0] ?? null)}
+                        />
+                      </label>
+                    </div>
+                    <textarea
+                      rows={4}
+                      value={logsText}
+                      onChange={(e) => setLogsText(e.target.value)}
+                      placeholder="2026-11-25T14:02:00Z checkout-svc ERROR ..."
+                      className="w-full bg-[#101010] border border-white/15 p-2 font-mono text-[12px] text-white focus:outline-none focus:border-[#F97316]"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <label className="font-mono text-[11px] uppercase text-white/60">
+                          Metrics (.csv)
+                        </label>
+                        <label className="text-[11px] text-white/60 hover:text-white cursor-pointer flex items-center gap-1">
+                          <Upload className="w-3 h-3" strokeWidth={1.5} />
+                          {metricsFile ? metricsFile.name : "Upload CSV"}
+                          <input
+                            type="file"
+                            className="hidden"
+                            accept=".csv"
+                            onChange={(e) => setMetricsFile(e.target.files?.[0] ?? null)}
+                          />
+                        </label>
+                      </div>
+                      <textarea
+                        rows={3}
+                        value={metricsText}
+                        onChange={(e) => setMetricsText(e.target.value)}
+                        placeholder="ts,service,metric,value"
+                        className="w-full bg-[#101010] border border-white/15 p-2 font-mono text-[12px] text-white focus:outline-none focus:border-[#F97316]"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <label className="font-mono text-[11px] uppercase text-white/60">
+                          Traces (.json)
+                        </label>
+                        <label className="text-[11px] text-white/60 hover:text-white cursor-pointer flex items-center gap-1">
+                          <Upload className="w-3 h-3" strokeWidth={1.5} />
+                          {tracesFile ? tracesFile.name : "Upload JSON"}
+                          <input
+                            type="file"
+                            className="hidden"
+                            accept=".json,.jsonl"
+                            onChange={(e) => setTracesFile(e.target.files?.[0] ?? null)}
+                          />
+                        </label>
+                      </div>
+                      <textarea
+                        rows={3}
+                        value={tracesText}
+                        onChange={(e) => setTracesText(e.target.value)}
+                        placeholder='[{"ts":"...","service":"...","duration_ms":2400}]'
+                        className="w-full bg-[#101010] border border-white/15 p-2 font-mono text-[12px] text-white focus:outline-none focus:border-[#F97316]"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block font-mono text-[11px] uppercase text-white/60 mb-1">
+                      Optional dashboard screenshot (.png / .jpg)
+                    </label>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={(e) => setImageFile(e.target.files?.[0] ?? null)}
+                      className="text-[12px] text-white/60"
+                    />
+                  </div>
+
+                  {formError && (
+                    <p className="text-[12px] text-[#EF4444]">{formError}</p>
+                  )}
+
+                  <div className="flex justify-end gap-2 pt-2 border-t border-white/10">
+                    <Dialog.Close asChild>
+                      <button
+                        type="button"
+                        className="px-3 py-1.5 border border-white/15 text-[12px] font-mono text-white/70 hover:bg-white/[0.04]"
+                      >
+                        Cancel
+                      </button>
+                    </Dialog.Close>
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="px-4 py-1.5 bg-[#F97316] hover:bg-[#EA580C] text-[#101010] font-mono text-[12px] font-bold uppercase disabled:opacity-60"
+                    >
+                      {submitting ? "Ingesting..." : "Ingest & open"}
+                    </button>
+                  </div>
+                </form>
+              </Dialog.Content>
+            </Dialog.Portal>
+          </Dialog.Root>
         </div>
       </div>
 
-      <div className="mb-3 px-3.5 py-2 bg-white border border-[#E7E5E4] rounded-md flex flex-wrap items-center justify-between gap-2 text-[12px] text-[#57534E]">
+      <div className="mb-3 px-3.5 py-2 bg-[#141414] border border-white/10 flex flex-wrap items-center justify-between gap-2 text-[12px] text-white/60">
         <div>
-          <strong className="font-medium text-[#1C1917]">Automated cloud-native ingestion:</strong>{" "}
-          Connect Prometheus Alertmanager (<code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">POST /api/webhooks/alertmanager</code>),{" "}
-          OTel Collector (<code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">POST /api/ingest/otel</code>),{" "}
-          custom alerts (<code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">POST /api/webhooks/alert</code>),{" "}
-          or drop files into <code className="font-mono bg-[#F5F5F4] px-1.5 py-0.5 rounded">data/dropzone/</code> (auto-watched every 5s).
+          <strong className="font-medium text-white">Automated cloud-native ingestion:</strong>{" "}
+          Connect Prometheus Alertmanager (<code className="font-mono bg-white/[0.06] text-[#F97316] px-1.5 py-0.5">POST /api/webhooks/alertmanager</code>),{" "}
+          OTel Collector (<code className="font-mono bg-white/[0.06] text-[#F97316] px-1.5 py-0.5">POST /api/ingest/otel</code>),{" "}
+          custom alerts (<code className="font-mono bg-white/[0.06] text-[#F97316] px-1.5 py-0.5">POST /api/webhooks/alert</code>),{" "}
+          or drop files into <code className="font-mono bg-white/[0.06] text-[#F97316] px-1.5 py-0.5">data/dropzone/</code> (auto-watched every 5s).
         </div>
-        {autoMsg && <span className="font-mono text-[11px] text-[#15803D]">{autoMsg}</span>}
+        {autoMsg && <span className="font-mono text-[11px] text-[#22C55E]">{autoMsg}</span>}
       </div>
 
       {/* Source filter tabs */}
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-1.5">
+        <div className="flex flex-wrap items-center gap-1.5">
           {[
             { id: "all" as const, label: `All (${counts.all})` },
             { id: "connected" as const, label: `Live Connected (${counts.connected})` },
@@ -556,10 +560,10 @@ export function IncidentListView({
                 key={tab.id}
                 type="button"
                 onClick={() => setSourceFilter(tab.id)}
-                className={`px-3 py-1.5 rounded text-[12px] font-medium border transition-colors ${
+                className={`px-3 py-1.5 font-mono text-[12px] font-medium border transition-colors ${
                   active
-                    ? "bg-[#1C1917] text-white border-[#1C1917]"
-                    : "bg-white text-[#57534E] border-[#E7E5E4] hover:border-stone-400"
+                    ? "bg-[#F97316] text-[#101010] border-[#F97316] font-bold"
+                    : "bg-[#141414] text-white/65 border-white/10 hover:border-white/30 hover:text-white"
                 }`}
               >
                 {tab.label}
@@ -567,7 +571,7 @@ export function IncidentListView({
             );
           })}
         </div>
-        <span className="text-[12px] text-[#78716C]">
+        <span className="text-[12px] text-white/50">
           {sourceFilter === "connected"
             ? "Auto-ingested from connected apps, webhooks, OTel, or dropzone"
             : sourceFilter === "manual"
@@ -578,13 +582,13 @@ export function IncidentListView({
         </span>
       </div>
 
-      <div className="bg-white border border-[#E7E5E4] rounded-md overflow-x-auto">
+      <div className="relative bg-[#141414] border border-white/10 overflow-x-auto">
         {loading ? (
-          <div className="p-8 text-[13px] text-[#78716C]">Loading incidents...</div>
+          <div className="p-8 text-[13px] text-white/50">Loading incidents...</div>
         ) : filteredIncidents.length === 0 ? (
           <div className="p-12 text-center">
-            <Search className="w-6 h-6 text-stone-300 mx-auto mb-2" strokeWidth={1.5} />
-            <p className="text-[13px] text-[#78716C]">
+            <Search className="w-6 h-6 text-white/25 mx-auto mb-2" strokeWidth={1.5} />
+            <p className="text-[13px] text-white/50">
               No incidents in this category yet.
             </p>
           </div>
@@ -592,11 +596,11 @@ export function IncidentListView({
           <table className="w-full border-collapse text-left">
             <thead>
               {table.getHeaderGroups().map((hg) => (
-                <tr key={hg.id} className="border-b border-[#E7E5E4] bg-[#FAFAF9]">
+                <tr key={hg.id} className="border-b border-white/10 bg-[#0A0A0A]">
                   {hg.headers.map((header) => (
                     <th
                       key={header.id}
-                      className="py-2.5 px-4 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]"
+                      className="py-2.5 px-4 font-mono text-[11px] font-medium uppercase tracking-[0.06em] text-white/50"
                     >
                       {flexRender(header.column.columnDef.header, header.getContext())}
                     </th>
@@ -609,7 +613,7 @@ export function IncidentListView({
                 <tr
                   key={row.id}
                   onClick={() => onSelectIncident(row.original.id)}
-                  className="border-b border-[#E7E5E4] last:border-b-0 hover:bg-[#FAFAF9] cursor-pointer transition-colors duration-100"
+                  className="border-b border-white/10 last:border-b-0 hover:bg-white/[0.03] cursor-pointer transition-colors duration-100"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <td key={cell.id} className="py-3 px-4 align-top">

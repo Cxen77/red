@@ -32,7 +32,7 @@ export function MetricsStrip({ metricSeries, anomalyWindow }: MetricsStripProps)
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-[#E7E5E4] bg-white px-6 py-3">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-b border-white/10 bg-[#101010] px-6 py-3">
       {displayKeys.map((key) => {
         const points = metricSeries[key] || [];
         const meta = METRIC_LABELS[key] || { title: key, unit: "" };
@@ -60,14 +60,16 @@ export function MetricsStrip({ metricSeries, anomalyWindow }: MetricsStripProps)
         const latest = points[points.length - 1];
 
         return (
-          <div key={key} className="border border-[#E7E5E4] rounded-md px-3 py-2 bg-white">
+          <div key={key} className="relative border border-white/10 px-3 py-2 bg-[#141414]">
+            <div className="pointer-events-none absolute top-0 left-0 h-1.5 w-1.5 border-t border-l border-white/30" />
+            <div className="pointer-events-none absolute top-0 right-0 h-1.5 w-1.5 border-t border-r border-white/30" />
             <div className="flex items-baseline justify-between mb-1">
-              <span className="text-[12px] font-medium text-[#57534E]">
+              <span className="font-mono text-[11px] uppercase tracking-wider text-white/60">
                 {meta.title}
               </span>
               <span
                 className={`font-mono text-[12px] font-medium ${
-                  hasAnom ? "text-[#C81E1E]" : "text-[#1C1917]"
+                  hasAnom ? "text-[#F97316]" : "text-white"
                 }`}
               >
                 {latest ? `${latest.value.toFixed(1)}${meta.unit}` : "—"}
@@ -78,22 +80,22 @@ export function MetricsStrip({ metricSeries, anomalyWindow }: MetricsStripProps)
                 <LineChart data={data} margin={{ top: 4, right: 6, left: -4, bottom: 0 }}>
                   <XAxis
                     dataKey="label"
-                    tick={{ fontSize: 10, fill: "#78716C" }}
-                    axisLine={{ stroke: "#E7E5E4" }}
+                    tick={{ fontSize: 10, fill: "#71717A" }}
+                    axisLine={{ stroke: "rgba(255,255,255,0.12)" }}
                     tickLine={false}
                     minTickGap={24}
                   />
                   <YAxis
-                    tick={{ fontSize: 10, fill: "#78716C" }}
+                    tick={{ fontSize: 10, fill: "#71717A" }}
                     axisLine={false}
                     tickLine={false}
                     width={42}
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: "#FFFFFF",
-                      border: "1px solid #E7E5E4",
-                      borderRadius: "4px",
+                      backgroundColor: "#141414",
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      color: "#FAFAFA",
                       fontSize: "11px",
                       fontFamily: "IBM Plex Mono, monospace",
                     }}
@@ -102,14 +104,14 @@ export function MetricsStrip({ metricSeries, anomalyWindow }: MetricsStripProps)
                     <ReferenceArea
                       x1={bandStart}
                       x2={bandEnd}
-                      fill="#FEF2F2"
-                      fillOpacity={1}
+                      fill="#F97316"
+                      fillOpacity={0.12}
                     />
                   )}
                   <Line
                     type="monotone"
                     dataKey="value"
-                    stroke={hasAnom ? "#C81E1E" : "#A8A29E"}
+                    stroke={hasAnom ? "#F97316" : "#71717A"}
                     strokeWidth={1.75}
                     dot={false}
                     isAnimationActive={false}

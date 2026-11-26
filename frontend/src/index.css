@@ -3,12 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: #101010;
+    --foreground: #fafafa;
+    --primary: #f97316;
+    --primary-foreground: #101010;
+    --border: rgba(255, 255, 255, 0.1);
+    --muted: #18181b;
+    --muted-foreground: #a1a1aa;
+  }
+
   html,
   body {
     font-family: "IBM Plex Sans", system-ui, sans-serif;
     font-size: 14px;
-    background-color: #fafaf9;
-    color: #1c1917;
+    background-color: #101010;
+    color: #fafafa;
   }
 
   code,
@@ -24,5 +34,11 @@
   }
   body {
     background-color: #ffffff !important;
+    color: #1c1917 !important;
+  }
+  .print-light {
+    background-color: #ffffff !important;
+    color: #1c1917 !important;
+    border-color: #e7e5e4 !important;
   }
 }

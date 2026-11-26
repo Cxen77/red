@@ -28,14 +28,14 @@ export function ReportView({
 
   if (!investigation) {
     return (
-      <main className="max-w-4xl mx-auto px-6 py-10 bg-white min-h-[calc(100vh-48px)] border-x border-[#E7E5E4] space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#E7E5E4]">
+      <main className="print-light max-w-4xl mx-auto px-6 py-10 bg-[#141414] min-h-[calc(100vh-48px)] border-x border-white/10 space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10">
           <div>
-            <h1 className="text-[18px] font-semibold text-[#1C1917]">
+            <h1 className="text-[18px] font-semibold text-white">
               Report — {activeMeta?.title || "Select an incident"}
             </h1>
             {activeMeta && (
-              <div className="font-mono text-[12px] text-[#78716C]">
+              <div className="font-mono text-[12px] text-white/50">
                 Incident ID: {activeMeta.id} · Status: {activeMeta.status}
               </div>
             )}
@@ -44,7 +44,7 @@ export function ReportView({
             <select
               value={activeMeta?.id || incidents[0]?.id}
               onChange={(e) => onSelectIncident(e.target.value)}
-              className="border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[13px] bg-white"
+              className="border border-white/15 px-2.5 py-1.5 text-[13px] bg-[#101010] text-white"
             >
               {incidents.map((inc) => (
                 <option key={inc.id} value={inc.id}>
@@ -54,17 +54,17 @@ export function ReportView({
             </select>
           )}
         </div>
-        <p className="text-[13px] text-[#78716C]">
+        <p className="text-[13px] text-white/60">
           No investigation has been executed yet for{" "}
-          <span className="font-mono text-[#1C1917]">{activeMeta?.id}</span>. Run an
+          <span className="font-mono text-[#F97316]">{activeMeta?.id}</span>. Run an
           investigation to generate its cited evidence report.
         </p>
         <button
           type="button"
           onClick={() => onRunInvestigation("live")}
-          className="px-3.5 py-2 rounded bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium inline-flex items-center gap-1.5"
+          className="px-4 py-2 bg-[#F97316] hover:bg-[#EA580C] text-[#101010] font-mono text-[12px] font-bold uppercase inline-flex items-center gap-1.5"
         >
-          <Play className="w-3.5 h-3.5" strokeWidth={1.75} />
+          <Play className="w-3.5 h-3.5" strokeWidth={2} />
           Investigate now
         </button>
       </main>
@@ -88,16 +88,16 @@ export function ReportView({
   const baseline = evals?.baseline_comparison as Record<string, unknown> | undefined;
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-8 bg-white min-h-[calc(100vh-48px)] border-x border-[#E7E5E4]">
-      <div className="flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-[#E7E5E4]">
+    <main className="print-light max-w-4xl mx-auto px-6 py-8 bg-[#141414] min-h-[calc(100vh-48px)] border-x border-white/10 text-white">
+      <div className="flex flex-wrap items-start justify-between gap-4 pb-5 border-b border-white/10">
         <div>
-          <div className="text-[12px] font-medium text-[#C81E1E] mb-1">
-            Incident Evidence Report · {investigation.incident_id}
+          <div className="font-mono text-[11px] uppercase tracking-wider text-[#F97316] mb-1">
+            {"// INCIDENT EVIDENCE REPORT · "}{investigation.incident_id}
           </div>
-          <h1 className="text-[20px] font-semibold text-[#1C1917]">
+          <h1 className="text-[20px] font-semibold text-white">
             {investigation.title}
           </h1>
-          <div className="font-mono text-[12px] text-[#78716C] mt-1">
+          <div className="font-mono text-[12px] text-white/55 mt-1">
             Opened: {investigation.opened_at} · Severity: {investigation.severity} · Review:{" "}
             {investigation.human_review.decision} · Noise reduction:{" "}
             {investigation.noise_reduction_pct.toFixed(1)}%
@@ -107,7 +107,7 @@ export function ReportView({
               {activeMeta.services.map((svc) => (
                 <span
                   key={svc}
-                  className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-[#F5F5F4] text-[#57534E] border border-[#E7E5E4]"
+                  className="font-mono text-[11px] px-1.5 py-0.5 bg-white/[0.04] text-white/75 border border-white/10"
                 >
                   {svc}
                 </span>
@@ -122,7 +122,7 @@ export function ReportView({
               aria-label="Switch incident report"
               value={investigation.incident_id}
               onChange={(e) => onSelectIncident(e.target.value)}
-              className="border border-[#E7E5E4] rounded px-2.5 py-1.5 text-[12px] bg-white max-w-[240px]"
+              className="border border-white/15 px-2.5 py-1.5 text-[12px] font-mono bg-[#101010] text-white max-w-[240px]"
             >
               {incidents.map((inc) => (
                 <option key={inc.id} value={inc.id}>
@@ -134,7 +134,7 @@ export function ReportView({
           <button
             type="button"
             onClick={handleExportJson}
-            className="px-3 py-1.5 rounded border border-[#E7E5E4] text-[13px] text-[#1C1917] hover:bg-[#F5F5F4] flex items-center gap-1.5"
+            className="px-3 py-1.5 border border-white/15 font-mono text-[12px] text-white hover:bg-white/[0.04] flex items-center gap-1.5"
           >
             <Download className="w-3.5 h-3.5" strokeWidth={1.5} />
             Export JSON
@@ -142,22 +142,22 @@ export function ReportView({
           <button
             type="button"
             onClick={() => window.print()}
-            className="px-3.5 py-1.5 rounded bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium flex items-center gap-1.5"
+            className="px-3.5 py-1.5 bg-[#F97316] hover:bg-[#EA580C] text-[#101010] font-mono text-[12px] font-bold uppercase flex items-center gap-1.5"
           >
-            <Printer className="w-3.5 h-3.5" strokeWidth={1.5} />
+            <Printer className="w-3.5 h-3.5" strokeWidth={2} />
             Print / PDF
           </button>
         </div>
       </div>
 
       <section className="mt-6">
-        <h2 className="text-[14px] font-semibold text-[#1C1917] mb-1.5">
+        <h2 className="font-mono text-[12px] uppercase tracking-wider text-[#F97316] mb-1.5">
           Executive Summary
         </h2>
-        <p className="text-[14px] text-[#1C1917] leading-relaxed">
+        <p className="text-[14px] text-white/90 leading-relaxed">
           {investigation.root_cause_summary}
         </p>
-        <div className="mt-2 text-[12px] text-[#57534E] font-mono">
+        <div className="mt-2 text-[12px] text-white/50 font-mono">
           Telemetry filtered: {investigation.raw_items_total} raw items →{" "}
           {investigation.filtered_items_sent} signals · Secrets redacted:{" "}
           {investigation.redacted_secrets_count}
@@ -165,10 +165,10 @@ export function ReportView({
       </section>
 
       <section className="mt-6">
-        <h2 className="text-[14px] font-semibold text-[#1C1917] mb-2">
+        <h2 className="font-mono text-[12px] uppercase tracking-wider text-[#F97316] mb-2">
           Root-Cause Chain
         </h2>
-        <ol className="list-decimal list-inside space-y-1.5 text-[13px] text-[#1C1917]">
+        <ol className="list-decimal list-inside space-y-1.5 text-[13px] text-white/85">
           {investigation.root_cause_chain.map((step, i) => (
             <li key={i}>{step}</li>
           ))}
@@ -176,37 +176,27 @@ export function ReportView({
       </section>
 
       <section className="mt-6">
-        <h2 className="text-[14px] font-semibold text-[#1C1917] mb-2">
+        <h2 className="font-mono text-[12px] uppercase tracking-wider text-[#F97316] mb-2">
           Verified Conclusions ({investigation.conclusions.length})
         </h2>
-        <table className="w-full border-collapse text-left border border-[#E7E5E4]">
+        <table className="w-full border-collapse text-left border border-white/10">
           <thead>
-            <tr className="bg-[#FAFAF9] border-b border-[#E7E5E4]">
-              <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                ID
-              </th>
-              <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                Claim
-              </th>
-              <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                Confidence
-              </th>
-              <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                Citations
-              </th>
+            <tr className="bg-[#0A0A0A] border-b border-white/10">
+              <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">ID</th>
+              <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">Claim</th>
+              <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">Confidence</th>
+              <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">Citations</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-[#E7E5E4]">
+          <tbody className="divide-y divide-white/10">
             {investigation.conclusions.map((f) => (
               <tr key={f.id}>
-                <td className="py-2.5 px-3 font-mono text-[12px] text-[#78716C]">
-                  {f.id}
-                </td>
-                <td className="py-2.5 px-3 text-[13px] text-[#1C1917]">{f.claim}</td>
-                <td className="py-2.5 px-3 font-mono text-[12px]">
+                <td className="py-2.5 px-3 font-mono text-[12px] text-white/50">{f.id}</td>
+                <td className="py-2.5 px-3 text-[13px] text-white/90">{f.claim}</td>
+                <td className="py-2.5 px-3 font-mono text-[12px] text-[#22C55E]">
                   {(f.confidence * 100).toFixed(0)}%
                 </td>
-                <td className="py-2.5 px-3 font-mono text-[12px]">
+                <td className="py-2.5 px-3 font-mono text-[12px] text-[#F97316]">
                   {f.evidence_ids.join(", ")}
                 </td>
               </tr>
@@ -216,33 +206,23 @@ export function ReportView({
       </section>
 
       <section className="mt-6">
-        <h2 className="text-[14px] font-semibold text-[#57534E] mb-2">
+        <h2 className="font-mono text-[12px] uppercase tracking-wider text-white/60 mb-2">
           Demoted Hypotheses ({investigation.hypotheses.length})
         </h2>
-        <table className="w-full border-collapse text-left border border-dashed border-[#D6D3D1] bg-[#F5F5F4]">
+        <table className="w-full border-collapse text-left border border-dashed border-white/20 bg-[#101010]">
           <thead>
-            <tr className="border-b border-dashed border-[#D6D3D1]">
-              <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                ID
-              </th>
-              <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                Hypothesis
-              </th>
-              <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                Demotion Reason
-              </th>
+            <tr className="border-b border-dashed border-white/20">
+              <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">ID</th>
+              <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">Hypothesis</th>
+              <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">Demotion Reason</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-dashed divide-[#D6D3D1]">
+          <tbody className="divide-y divide-dashed divide-white/15">
             {investigation.hypotheses.map((h) => (
               <tr key={h.id}>
-                <td className="py-2.5 px-3 font-mono text-[12px] text-[#78716C]">
-                  {h.id}
-                </td>
-                <td className="py-2.5 px-3 text-[13px] text-[#57534E]">{h.claim}</td>
-                <td className="py-2.5 px-3 text-[12px] text-[#B45309]">
-                  {h.demotion_reason}
-                </td>
+                <td className="py-2.5 px-3 font-mono text-[12px] text-white/50">{h.id}</td>
+                <td className="py-2.5 px-3 text-[13px] text-white/65">{h.claim}</td>
+                <td className="py-2.5 px-3 text-[12px] text-[#F59E0B]">{h.demotion_reason}</td>
               </tr>
             ))}
           </tbody>
@@ -251,31 +231,23 @@ export function ReportView({
 
       {investigation.proposed_actions.length > 0 && (
         <section className="mt-6">
-          <h2 className="text-[14px] font-semibold text-[#1C1917] mb-2">
+          <h2 className="font-mono text-[12px] uppercase tracking-wider text-[#F97316] mb-2">
             Guarded Remediation Actions ({investigation.proposed_actions.length})
           </h2>
-          <table className="w-full border-collapse text-left border border-[#E7E5E4]">
+          <table className="w-full border-collapse text-left border border-white/10">
             <thead>
-              <tr className="bg-[#FAFAF9] border-b border-[#E7E5E4]">
-                <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                  ID
-                </th>
-                <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                  Action
-                </th>
-                <th className="py-2 px-3 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                  Status
-                </th>
+              <tr className="bg-[#0A0A0A] border-b border-white/10">
+                <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">ID</th>
+                <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">Action</th>
+                <th className="py-2 px-3 font-mono text-[11px] uppercase text-white/50">Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#E7E5E4]">
+            <tbody className="divide-y divide-white/10">
               {investigation.proposed_actions.map((a) => (
                 <tr key={a.id}>
-                  <td className="py-2 px-3 font-mono text-[12px] text-[#78716C]">
-                    {a.id}
-                  </td>
-                  <td className="py-2 px-3 text-[13px] text-[#1C1917]">{a.title}</td>
-                  <td className="py-2 px-3 font-mono text-[12px]">{a.status}</td>
+                  <td className="py-2 px-3 font-mono text-[12px] text-white/50">{a.id}</td>
+                  <td className="py-2 px-3 text-[13px] text-white/90">{a.title}</td>
+                  <td className="py-2 px-3 font-mono text-[12px] text-[#F97316]">{a.status}</td>
                 </tr>
               ))}
             </tbody>
@@ -285,83 +257,69 @@ export function ReportView({
 
       {evals && baseline && (
         <section className="mt-6">
-          <h2 className="text-[14px] font-semibold text-[#1C1917] mb-2">
+          <h2 className="font-mono text-[12px] uppercase tracking-wider text-[#F97316] mb-2">
             Global Benchmark Suite vs Named Baselines ({String(evals.scenarios_total)} faults)
           </h2>
-          <div className="border border-[#E7E5E4] rounded p-3 text-[12px] space-y-1.5 bg-[#FAFAF9] mb-3">
+          <div className="border border-white/10 p-3 text-[12px] space-y-1.5 bg-[#101010] mb-3">
             <div>
               <strong>IncidentLens:</strong>{" "}
-              <span className="font-mono text-[#15803D]">
+              <span className="font-mono text-[#22C55E]">
                 {(Number(evals.root_cause_accuracy) * 100).toFixed(1)}%
               </span>{" "}
               ({String(evals.scenarios_passed)}/{String(evals.scenarios_total)} passed,{" "}
               {String(evals.scenarios_missed)} missed) · Citation validity:{" "}
-              <span className="font-mono">
+              <span className="font-mono text-[#F97316]">
                 {(Number(evals.avg_citation_validity_rate) * 100).toFixed(1)}%
               </span>{" "}
               · Avg noise reduction:{" "}
               <span className="font-mono">{String(evals.avg_noise_reduction_pct)}%</span> ·
               Median latency: <span className="font-mono">{String(evals.median_latency_ms)}ms</span>
             </div>
-            <div>
+            <div className="text-white/75">
               <strong>Baseline 1 ({String(baseline.baseline_name)}):</strong>{" "}
               <span className="font-mono">
                 {(Number(baseline.baseline_root_cause_accuracy) * 100).toFixed(1)}%
               </span>{" "}
-              accuracy · Citation validity: <span className="font-mono">0.0%</span> —{" "}
-              <span className="text-[#57534E]">{String(baseline.baseline_limitation)}</span>
+              accuracy · Citation validity: <span className="font-mono">0.0%</span>
             </div>
             {Boolean(baseline.raw_window_baseline_name) && (
-              <div>
+              <div className="text-white/75">
                 <strong>Baseline 2 ({String(baseline.raw_window_baseline_name)}):</strong>{" "}
                 <span className="font-mono">
                   {(Number(baseline.raw_window_root_cause_accuracy) * 100).toFixed(1)}%
                 </span>{" "}
-                accuracy · Citation validity: <span className="font-mono">0.0%</span> —{" "}
-                <span className="text-[#57534E]">{String(baseline.raw_window_limitation)}</span>
+                accuracy · Citation validity: <span className="font-mono">0.0%</span>
               </div>
             )}
           </div>
 
           {Array.isArray(evals.results) && (
-            <table className="w-full border-collapse text-left border border-[#E7E5E4] text-[12px]">
+            <table className="w-full border-collapse text-left border border-white/10 text-[12px]">
               <thead>
-                <tr className="bg-[#FAFAF9] border-b border-[#E7E5E4]">
-                  <th className="py-1.5 px-2.5 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                    Scenario
-                  </th>
-                  <th className="py-1.5 px-2.5 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                    Fault Type
-                  </th>
-                  <th className="py-1.5 px-2.5 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                    IncidentLens
-                  </th>
-                  <th className="py-1.5 px-2.5 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                    B1 Keyword
-                  </th>
-                  <th className="py-1.5 px-2.5 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                    B2 Window
-                  </th>
-                  <th className="py-1.5 px-2.5 text-[11px] font-medium uppercase tracking-[0.04em] text-[#78716C]">
-                    Reduction
-                  </th>
+                <tr className="bg-[#0A0A0A] border-b border-white/10">
+                  <th className="py-1.5 px-2.5 font-mono text-[11px] uppercase text-white/50">Scenario</th>
+                  <th className="py-1.5 px-2.5 font-mono text-[11px] uppercase text-white/50">Fault Type</th>
+                  <th className="py-1.5 px-2.5 font-mono text-[11px] uppercase text-white/50">IncidentLens</th>
+                  <th className="py-1.5 px-2.5 font-mono text-[11px] uppercase text-white/50">B1 Keyword</th>
+                  <th className="py-1.5 px-2.5 font-mono text-[11px] uppercase text-white/50">B2 Window</th>
+                  <th className="py-1.5 px-2.5 font-mono text-[11px] uppercase text-white/50">Reduction</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E7E5E4]">
+              <tbody className="divide-y divide-white/10">
                 {(evals.results as Array<Record<string, unknown>>).map((row) => (
                   <tr key={String(row.scenario_id)}>
-                    <td className="py-1.5 px-2.5 font-mono">{String(row.scenario_id)}</td>
-                    <td className="py-1.5 px-2.5 text-[#57534E]">{String(row.fault_type)}</td>
-                    <td className="py-1.5 px-2.5 font-mono text-[#15803D]">
+                    <td className="py-1.5 px-2.5 font-mono text-white/90">{String(row.scenario_id)}</td>
+                    <td className="py-1.5 px-2.5 text-white/60">{String(row.fault_type)}</td>
+                    <td className="py-1.5 px-2.5 font-mono text-[#22C55E]">
                       {row.passed ? "PASS" : "MISS"}
                     </td>
-                    <td className="py-1.5 px-2.5 font-mono">
+                    <td className="py-1.5 px-2.5 font-mono text-white/65">
                       {row.baseline_service_hit ? "PASS" : "MISS"}
                     </td>
-                    <td className="py-1.5 px-2.5 font-mono">
+                    <td className="py-1.5 px-2.5 font-mono text-white/65">
                       {row.raw_window_baseline_hit ? "PASS" : "MISS"}
                     </td>
-                    <td className="py-1.5 px-2.5 font-mono">
+                    <td className="py-1.5 px-2.5 font-mono text-[#F97316]">
                       {String(row.noise_reduction_pct)}%
                     </td>
                   </tr>
@@ -372,14 +330,14 @@ export function ReportView({
         </section>
       )}
 
-      <section className="mt-6 pt-4 border-t border-[#E7E5E4] text-[12px] text-[#78716C] flex flex-wrap justify-between gap-4">
+      <section className="mt-6 pt-4 border-t border-white/10 text-[12px] text-white/50 flex flex-wrap justify-between gap-4">
         <span>
           Verification citation validity rate:{" "}
-          <strong className="font-mono text-[#15803D]">
+          <strong className="font-mono text-[#22C55E]">
             {(investigation.verification.citation_validity_rate * 100).toFixed(1)}%
           </strong>
         </span>
-        <span>Generated at {investigation.investigated_at}</span>
+        <span className="font-mono">Generated at {investigation.investigated_at}</span>
       </section>
     </main>
   );

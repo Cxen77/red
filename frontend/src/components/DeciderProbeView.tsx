@@ -81,12 +81,15 @@ export function DeciderProbeView() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-6 space-y-5">
       <div>
-        <h1 className="text-[20px] font-semibold text-[#1C1917]">
-          OpenRouter Decider Probe
+        <div className="font-mono text-[11px] tracking-widest uppercase text-[#F97316] mb-1">
+          {"// DECISION SANDBOX"}
+        </div>
+        <h1 className="text-[22px] font-semibold text-white">
+          Decider Probe
         </h1>
-        <p className="text-[13px] text-[#78716C] mt-0.5">
+        <p className="text-[13px] text-white/55 mt-0.5">
           Evaluate arbitrary telemetry lines and optional images directly via{" "}
-          <span className="font-mono text-[#1C1917]">
+          <span className="font-mono text-[#F97316]">
             perplexity/pplx-decider-flash-v1.3:free
           </span>{" "}
           (<span className="font-mono">noul</span>, <span className="font-mono">choice</span>,{" "}
@@ -94,21 +97,21 @@ export function DeciderProbeView() {
         </p>
       </div>
 
-      <div className="bg-white border border-[#E7E5E4] rounded-md p-4 space-y-4">
+      <div className="bg-[#141414] border border-white/10 p-4 space-y-4">
         <div>
-          <label className="block text-[12px] font-medium text-[#57534E] mb-1">
+          <label className="block font-mono text-[11px] uppercase text-white/60 mb-1">
             State items (one telemetry line per row)
           </label>
           <textarea
             rows={5}
             value={stateText}
             onChange={(e) => setStateText(e.target.value)}
-            className="w-full border border-[#E7E5E4] rounded p-2.5 font-mono text-[12px] focus:outline-none focus:border-[#C81E1E]"
+            className="w-full bg-[#101010] border border-white/15 p-2.5 font-mono text-[12px] text-white focus:outline-none focus:border-[#F97316]"
           />
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="text-[12px] text-[#57534E]">
+          <div className="text-[12px] text-white/60">
             <label className="font-medium mr-2">Optional image attachment:</label>
             <input
               type="file"
@@ -117,7 +120,7 @@ export function DeciderProbeView() {
               className="text-[12px]"
             />
             {imageName && (
-              <span className="font-mono text-[11px] ml-2 text-[#1C1917]">
+              <span className="font-mono text-[11px] ml-2 text-[#F97316]">
                 ({imageName})
               </span>
             )}
@@ -127,28 +130,28 @@ export function DeciderProbeView() {
             type="button"
             disabled={loading}
             onClick={handleRun}
-            className="px-4 py-1.5 rounded bg-[#C81E1E] hover:bg-[#B91C1C] text-white text-[13px] font-medium flex items-center gap-1.5 disabled:opacity-50"
+            className="px-4 py-2 bg-[#F97316] hover:bg-[#EA580C] text-[#101010] font-mono text-[12px] font-bold uppercase flex items-center gap-1.5 disabled:opacity-50"
           >
-            <Play className="w-3.5 h-3.5" strokeWidth={1.75} />
+            <Play className="w-3.5 h-3.5" strokeWidth={2} />
             {loading ? "Evaluating..." : "Run Decider"}
           </button>
         </div>
 
-        {error && <div className="text-[12px] text-[#B91C1C]">{error}</div>}
+        {error && <div className="text-[12px] text-[#EF4444]">{error}</div>}
       </div>
 
       {result && (
-        <div className="bg-white border border-[#E7E5E4] rounded-md p-4 space-y-3">
-          <div className="flex items-center justify-between border-b border-[#E7E5E4] pb-2">
-            <h2 className="text-[14px] font-semibold text-[#1C1917]">
+        <div className="bg-[#141414] border border-white/10 p-4 space-y-3">
+          <div className="flex items-center justify-between border-b border-white/10 pb-2">
+            <h2 className="font-mono text-[12px] uppercase tracking-wider text-[#F97316]">
               Structured Decision Output
             </h2>
-            <span className="font-mono text-[11px] text-[#78716C]">
+            <span className="font-mono text-[11px] text-white/50">
               {String(result.trace.model)} · {String(result.trace.latency_ms)}ms · cost $
               {String(result.trace.cost)}
             </span>
           </div>
-          <pre className="bg-[#FAFAF9] border border-[#E7E5E4] rounded p-3 font-mono text-[12px] overflow-x-auto text-[#1C1917]">
+          <pre className="bg-[#101010] border border-white/10 p-3 font-mono text-[12px] overflow-x-auto text-white/90">
             {JSON.stringify(result.answers, null, 2)}
           </pre>
         </div>
