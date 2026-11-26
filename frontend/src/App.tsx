@@ -11,6 +11,7 @@ import {
 import { DeciderProbeView } from "./components/DeciderProbeView";
 import { IncidentListView } from "./components/IncidentListView";
 import { InvestigationView } from "./components/InvestigationView";
+import { LandingView } from "./components/LandingView";
 import { ReportView } from "./components/ReportView";
 import { TopBar, type Screen } from "./components/TopBar";
 import type {
@@ -21,7 +22,7 @@ import type {
 } from "./types";
 
 export default function App() {
-  const [screen, setScreen] = useState<Screen>("incidents");
+  const [screen, setScreen] = useState<Screen>("landing");
   const [incidents, setIncidents] = useState<IncidentMetadata[]>([]);
   const [loadingList, setLoadingList] = useState(true);
 
@@ -142,6 +143,10 @@ export default function App() {
   async function handleIncidentCreated(created: IncidentMetadata) {
     await loadIncidents();
     await openIncident(created.id);
+  }
+
+  if (screen === "landing") {
+    return <LandingView onNavigate={handleNavigate} />;
   }
 
   return (

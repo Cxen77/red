@@ -1,7 +1,7 @@
 import { Activity, FileText, GitBranch, LayoutList, SlidersHorizontal } from "lucide-react";
 import type { IncidentMetadata } from "../types";
 
-export type Screen = "incidents" | "investigation" | "report" | "probe";
+export type Screen = "landing" | "incidents" | "investigation" | "report" | "probe";
 
 interface TopBarProps {
   activeScreen: Screen;
@@ -47,8 +47,9 @@ export function TopBar({
       <div className="flex items-center gap-4 min-w-0">
         <button
           type="button"
-          onClick={() => onNavigate("incidents")}
+          onClick={() => onNavigate("landing")}
           className="flex items-center gap-2.5 text-left focus:outline-none shrink-0"
+          title="Back to Landing Page"
         >
           <span className="w-6 h-6 rounded bg-[#C81E1E] flex items-center justify-center">
             <Activity className="w-3.5 h-3.5 text-white" strokeWidth={1.75} />
