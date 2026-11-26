@@ -480,7 +480,7 @@ export function InvestigationView({
                   </span>
                   <span className="font-mono text-[11px] text-[#22C55E]">
                     {(investigation.verification.citation_validity_rate * 100).toFixed(0)}% citations verified ·{" "}
-                    {investigation.mode} ({investigation.model})
+                    {investigation.mode} (gemini-2.5-flash)
                   </span>
                 </div>
                 <p className="text-[14px] text-white font-medium">

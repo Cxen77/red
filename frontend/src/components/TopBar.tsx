@@ -104,7 +104,7 @@ export function TopBar({
           </select>
         )}
         <span className="hidden xl:inline font-mono text-[11px] bg-[#141414] text-[#F97316] px-2.5 py-1 border border-white/10">
-          perplexity/pplx-decider-flash-v1.3:free
+          gemini-2.5-flash
         </span>
       </div>
     </header>

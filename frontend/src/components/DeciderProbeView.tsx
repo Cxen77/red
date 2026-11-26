@@ -90,7 +90,7 @@ export function DeciderProbeView() {
         <p className="text-[13px] text-white/55 mt-0.5">
           Evaluate arbitrary telemetry lines and optional images directly via{" "}
           <span className="font-mono text-[#F97316]">
-            perplexity/pplx-decider-flash-v1.3:free
+            gemini-2.5-flash
           </span>{" "}
           (<span className="font-mono">noul</span>, <span className="font-mono">choice</span>,{" "}
           <span className="font-mono">score</span>).
@@ -147,7 +147,7 @@ export function DeciderProbeView() {
               Structured Decision Output
             </h2>
             <span className="font-mono text-[11px] text-white/50">
-              {String(result.trace.model)} · {String(result.trace.latency_ms)}ms · cost $
+              gemini-2.5-flash · {String(result.trace.latency_ms)}ms · cost $
               {String(result.trace.cost)}
             </span>
           </div>
